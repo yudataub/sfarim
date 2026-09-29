@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>סודות ארבעת המינים – על דרך הדרוש</title>
+<style>
+:root{
+  --leaf:#2f5d34;        /* ירוק לולב עמוק */
+  --leaf-2:#4d7c3a;      /* ירוק סכך */
+  --myrtle:#3f6b4f;      /* הדס */
+  --willow:#9bb59a;      /* ערבה */
+  --etrog:#e6c229;       /* צהוב אתרוג */
+  --etrog-2:#f3dc6b;
+  --etrog-soft:#fdf5cf;
+  --schach:#c9a86a;      /* סכך / קש */
+  --wood:#6b4a2b;        /* קורות הסוכה */
+  --cream:#fbf7e6;
+  --ink:#2a2a1f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;padding:30px 14px 60px;color:var(--ink);
+  font-family:'Segoe UI','Assistant','Noto Sans Hebrew',Arial,sans-serif;
+  background:
+    repeating-linear-gradient(90deg,rgba(107,74,43,.06) 0 2px,transparent 2px 46px),
+    linear-gradient(180deg,#e7efd5 0%,#f6f1d0 55%,#efe3b0 100%);
+  background-attachment:fixed;
+}
+.progress{position:fixed;top:0;right:0;height:5px;width:0;z-index:50;background:linear-gradient(90deg,var(--leaf),var(--etrog))}
+.container{max-width:900px;margin:0 auto;background:var(--cream);border-radius:18px;padding:0 0 40px;
+  box-shadow:0 10px 40px rgba(47,93,52,.25);overflow:hidden;border:1px solid #d8cf9c}
+.inner{padding:10px 80px 0}
+
+/* ===== COVER ===== */
+.cover{position:relative;text-align:center;color:#fff;padding:70px 40px 60px;
+  background:
+   radial-gradient(circle at 50% 108%,rgba(243,220,107,.55) 0,transparent 55%),
+   linear-gradient(180deg,#1f4325 0%,#2f5d34 55%,#4d7c3a 100%);}
+.cover::before{content:"";position:absolute;inset:0 0 auto 0;height:42px;
+  background:repeating-linear-gradient(100deg,#c9a86a 0 7px,#a98a4d 7px 9px,#dcc088 9px 16px);opacity:.9;
+  clip-path:polygon(0 0,100% 0,100% 55%,96% 100%,92% 60%,88% 100%,84% 60%,80% 100%,76% 60%,72% 100%,68% 60%,64% 100%,60% 60%,56% 100%,52% 60%,48% 100%,44% 60%,40% 100%,36% 60%,32% 100%,28% 60%,24% 100%,20% 60%,16% 100%,12% 60%,8% 100%,4% 60%,0 100%)}
+.cover .kicker{margin-top:30px;color:var(--etrog-2);letter-spacing:.3em;font-size:1.05em}
+.main-title{font-size:3.4em;line-height:1.15;margin:18px 0 8px;font-weight:800;color:#fff;text-shadow:0 3px 14px rgba(0,0,0,.35)}
+.main-title span{color:var(--etrog-2)}
+.subtitle{font-size:1.35em;color:#f4f0c8;max-width:640px;margin:0 auto 26px;line-height:1.6}
+.author{display:inline-block;padding:9px 30px;border-radius:40px;background:rgba(243,220,107,.18);border:1px solid var(--etrog-2);color:var(--etrog-2);font-size:1.15em;font-weight:700}
+.species{display:flex;justify-content:center;gap:26px;margin:34px auto 6px;flex-wrap:wrap}
+.species div{font-size:.95em;color:#e9e8bb}
+.species svg{display:block;margin:0 auto 4px;height:96px;width:auto}
+
+/* ===== TOC ===== */
+.toc{margin:44px 0 10px;padding:28px 34px;border-radius:16px;
+  background:linear-gradient(135deg,#fdf5cf 0%,#eef3d3 100%);border:2px solid var(--etrog);box-shadow:0 5px 15px rgba(47,93,52,.15)}
+.toc h3{margin-top:0;color:var(--leaf);font-size:1.8em}
+.toc ol{margin:0;padding-right:26px;counter-reset:c}
+.toc li{margin:11px 0;font-size:1.15em;line-height:1.6}
+.toc a{color:var(--wood);text-decoration:none;font-weight:600;border-bottom:2px solid transparent;transition:.2s}
+.toc a:hover{color:var(--leaf);border-bottom-color:var(--etrog)}
+.toc small{color:#7a7a55;font-weight:400}
+
+/* ===== TYPE ===== */
+h2{font-size:2.2em;color:var(--leaf);border-right:8px solid var(--etrog);padding:6px 20px 6px 0;margin:70px 0 22px;line-height:1.3;
+  background:linear-gradient(270deg,rgba(243,220,107,.28),transparent 70%)}
+h2 .num{display:inline-block;min-width:1.5em;height:1.5em;line-height:1.5em;text-align:center;border-radius:50%;
+  background:var(--leaf);color:var(--etrog-2);font-size:.75em;margin-left:12px;vertical-align:middle}
+h3{font-size:1.7em;color:#7a5a12;margin:38px 0 12px}
+h4{font-size:1.4em;color:var(--myrtle);margin:26px 0 8px}
+p,li{font-size:1.15em;line-height:1.9}
+p{margin:0 0 20px}
+li{margin-bottom:12px}
+.emphasis{color:var(--leaf);font-weight:800}
+em{color:#7a5a12;font-style:italic}
+a{color:var(--leaf)}
+
+/* ===== COMPONENTS ===== */
+.verse-box{margin:30px 0;padding:28px 30px;border-radius:14px;text-align:center;font-size:1.45em;line-height:1.8;color:var(--leaf);font-weight:700;
+  background:linear-gradient(135deg,#e6efd0 0%,#fdf5cf 100%);border:3px solid var(--leaf-2);box-shadow:0 5px 15px rgba(47,93,52,.18)}
+.verse-box .source-tag{display:block;margin-top:8px;font-size:.6em;font-weight:400;color:#5b6b3c}
+.highlight-box{margin:28px 0;padding:26px 30px;border-radius:12px;border-right:7px solid var(--leaf);
+  background:linear-gradient(135deg,#e3eecb 0%,#f3f6dc 100%);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.highlight-box p:last-child{margin-bottom:0}
+.highlight-box .tag{display:block;font-weight:800;color:var(--leaf);margin-bottom:6px}
+.quote-box{margin:28px 0;padding:26px 30px;border-radius:12px;font-style:italic;border:2px solid var(--etrog);border-right:8px solid #c9a20f;
+  background:linear-gradient(135deg,#fdf5cf 0%,#f6e58f 100%);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.quote-box p:last-of-type{margin-bottom:0}
+.source-tag{display:block;margin-top:10px;font-style:normal;font-size:.9em;color:#7a5a12;font-weight:700}
+.story-box{margin:28px 0;padding:26px 30px;border-radius:12px;border-right:7px solid var(--wood);
+  background:linear-gradient(135deg,#f4ead2 0%,#f9f3e0 100%);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.qa-box{margin:28px 0;padding:24px 30px;border:2px dashed var(--wood);border-radius:12px;background:#fffdf1}
+.qa-box .q{color:var(--wood);font-weight:800;font-size:1.2em}
+.two-columns{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:28px 0}
+.two-columns>div{padding:22px 24px;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.two-columns h4{margin-top:0}
+.col-green{background:linear-gradient(135deg,#e3eecb,#f3f6dc);border-top:5px solid var(--leaf)}
+.col-gold{background:linear-gradient(135deg,#fdf5cf,#f6e58f);border-top:5px solid #c9a20f}
+.section-divider{margin:56px -80px;padding:26px 30px;text-align:center;color:#fff;font-size:1.6em;font-weight:800;line-height:1.5;
+  background:linear-gradient(135deg,#2f5d34 0%,#4d7c3a 45%,#c9a20f 100%);text-shadow:0 2px 6px rgba(0,0,0,.3)}
+.section-divider small{display:block;font-size:.6em;font-weight:400;color:#f7f2c0;margin-top:4px}
+
+/* pesul table */
+.rules{width:100%;border-collapse:separate;border-spacing:0;margin:26px 0;border-radius:12px;overflow:hidden;box-shadow:0 3px 10px rgba(0,0,0,.12)}
+.rules th{background:var(--leaf);color:var(--etrog-2);padding:13px 16px;font-size:1.1em;text-align:right}
+.rules td{padding:13px 16px;font-size:1.05em;line-height:1.7;vertical-align:top;border-bottom:1px solid #e3dba8}
+.rules tr:nth-child(even) td{background:#f6f1d0}
+.rules tr:nth-child(odd) td{background:#fffdf1}
+.rules td:first-child{font-weight:800;color:var(--wood);white-space:nowrap}
+
+.orn{text-align:center;margin:34px 0 0;color:var(--leaf-2);letter-spacing:.6em;font-size:1.1em}
+.sources{margin-top:60px;padding:26px 34px;border-radius:14px;background:#f1efdb;border:1px solid #d8cf9c}
+.sources h3{margin-top:0;color:var(--leaf)}
+.sources li{font-size:1.05em}
+.footer{margin:60px 80px 0;padding:34px;border-radius:14px;text-align:center;line-height:1.9;font-size:1.1em;
+  background:linear-gradient(180deg,#eef3d3,#fdf5cf);border:2px solid var(--etrog)}
+.footer h4{margin-top:0}
+.scroll-top{position:fixed;left:24px;bottom:26px;width:50px;height:50px;border-radius:50%;background:var(--leaf);color:var(--etrog-2);
+  display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.3em;box-shadow:0 4px 14px rgba(0,0,0,.3);
+  opacity:0;pointer-events:none;transition:.3s;border:2px solid var(--etrog)}
+.scroll-top.show{opacity:1;pointer-events:auto}
+.scroll-top:hover{background:var(--etrog);color:var(--leaf)}
+
+@media (max-width:768px){
+  body{padding:0}
+  .container{border-radius:0}
+  .inner{padding:6px 20px 0}
+  .cover{padding:64px 20px 46px}
+  .main-title{font-size:2.3em}
+  .two-columns{grid-template-columns:1fr}
+  .section-divider{margin:40px -20px;font-size:1.3em}
+  h2{font-size:1.7em}
+  h3{font-size:1.4em}
+  .footer{margin:40px 16px 0;padding:22px}
+  .rules td:first-child{white-space:normal}
+  .toc{padding:20px}
+}
+
+/* ===== PRINT ===== */
+@media print{
+  @page{size:A4 portrait;margin:20mm 18mm}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  body{background:#fff!important;padding:0!important;font-size:11pt}
+  .container{max-width:100%!important;box-shadow:none!important;border:none!important;border-radius:0!important}
+  .inner{padding:0!important}
+  .scroll-top,.progress{display:none!important}
+  .cover{page-break-after:always;break-after:page;min-height:240mm}
+  .main-title{font-size:30pt!important}
+  h2{page-break-before:always;break-before:page;font-size:16pt!important;margin-top:0}
+  h2:first-of-type{page-break-before:avoid;break-before:avoid}
+  h3,h4{page-break-after:avoid;break-after:avoid}
+  h3{font-size:13pt!important}
+  p,li{font-size:11pt!important}
+  .verse-box,.highlight-box,.quote-box,.story-box,.two-columns,.qa-box,.rules tr{page-break-inside:avoid;break-inside:avoid}
+  .toc{page-break-after:always;break-after:page}
+  .section-divider{margin:24px 0}
+  .footer{page-break-before:always;break-before:page;margin:0}
+  .two-columns{display:grid!important}
+}
+
+/* ===== ILLUSTRATIONS ===== */
+.illus{margin:34px auto 38px;max-width:430px;text-align:center}
+.illus a{display:block;padding:10px;border-radius:18px;background:linear-gradient(135deg,#fdf5cf,#e6efd0);
+  border:2px solid var(--etrog);box-shadow:0 8px 24px rgba(47,93,52,.22);transition:transform .25s,box-shadow .25s;cursor:zoom-in}
+.illus a:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(47,93,52,.3)}
+.illus img{display:block;width:100%;height:auto;border-radius:11px}
+.illus figcaption{margin-top:12px;font-size:1.05em;line-height:1.6;color:var(--wood);font-weight:700}
+.illus figcaption::before,.illus figcaption::after{content:" ❦ ";color:var(--leaf-2);font-weight:400}
+.illus.finale{max-width:560px;margin-top:56px}
+.illus.finale figcaption{font-size:1.25em;color:var(--leaf)}
+.lightbox{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:16px;
+  background:rgba(20,35,20,.88);cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+@media (max-width:768px){.illus{max-width:88%}.illus.finale{max-width:100%}}
+@media print{
+  .illus{page-break-inside:avoid;break-inside:avoid;max-width:95mm}
+  .illus.finale{max-width:120mm}
+  .illus a{box-shadow:none!important;transform:none!important}
+  .lightbox{display:none!important}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="container">
+
+<!-- ================= COVER ================= -->
+<header class="cover" id="top">
+  <div class="kicker">✦ בס"ד ✦</div>
+  <h1 class="main-title">סודות <span>ארבעת המינים</span></h1>
+  <div class="subtitle">על דרך הדרוש – הבית, המשפחה, שלום הבית והאחדות<br>איש ואשה, בן ובת – ארבעה מינים שמעכבים זה את זה</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+  <div class="species" aria-hidden="true">
+    <!-- אתרוג -->
+    <div>
+      <svg viewBox="0 0 70 96"><ellipse cx="35" cy="54" rx="26" ry="34" fill="#f3dc6b" stroke="#c9a20f" stroke-width="3"/><ellipse cx="27" cy="44" rx="7" ry="12" fill="#fff7c2" opacity=".6"/><circle cx="35" cy="17" r="5" fill="#8a6b0a"/><path d="M35 12 q4 -8 12 -9" stroke="#4d7c3a" stroke-width="3" fill="none"/></svg>
+      אתרוג
+    </div>
+    <!-- לולב -->
+    <div>
+      <svg viewBox="0 0 70 96"><path d="M35 94 V8" stroke="#8fd08a" stroke-width="5" stroke-linecap="round"/><path d="M35 40 Q15 30 8 8 M35 40 Q55 30 62 8 M35 62 Q14 54 10 34 M35 62 Q56 54 60 34" stroke="#b9e6a3" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      לולב
+    </div>
+    <!-- הדס -->
+    <div>
+      <svg viewBox="0 0 70 96"><path d="M35 94 V10" stroke="#7cb98f" stroke-width="4" stroke-linecap="round"/><g fill="#8fd0a5"><ellipse cx="24" cy="26" rx="10" ry="5" transform="rotate(-25 24 26)"/><ellipse cx="46" cy="26" rx="10" ry="5" transform="rotate(25 46 26)"/><ellipse cx="24" cy="46" rx="11" ry="5.5" transform="rotate(-25 24 46)"/><ellipse cx="46" cy="46" rx="11" ry="5.5" transform="rotate(25 46 46)"/><ellipse cx="24" cy="66" rx="12" ry="6" transform="rotate(-25 24 66)"/><ellipse cx="46" cy="66" rx="12" ry="6" transform="rotate(25 46 66)"/></g></svg>
+      הדס
+    </div>
+    <!-- ערבה -->
+    <div>
+      <svg viewBox="0 0 70 96"><path d="M35 94 V14" stroke="#cbd9c1" stroke-width="3.5" stroke-linecap="round"/><g fill="#d5e4cb"><ellipse cx="22" cy="30" rx="13" ry="3.6" transform="rotate(-18 22 30)"/><ellipse cx="48" cy="44" rx="13" ry="3.6" transform="rotate(18 48 44)"/><ellipse cx="22" cy="58" rx="13" ry="3.6" transform="rotate(-18 22 58)"/><ellipse cx="48" cy="72" rx="13" ry="3.6" transform="rotate(18 48 72)"/></g></svg>
+      ערבה
+    </div>
+  </div>
+</header>
+
+<div class="inner">
+
+<!-- ================= TOC ================= -->
+<nav class="toc">
+  <h3>📑 תוכן העניינים</h3>
+  <ol>
+    <li><a href="#section1">מעכבין זה את זה</a> <small>– הפתיחה: משפחה שלמה</small></li>
+    <li><a href="#section2">אתרוג – זו האשה</a> <small>– לב, הדר, חזזית, עוקץ ופיטם</small></li>
+    <li><a href="#section3">לולב – זה הבעל</a> <small>– עמוד השדרה וטפח מעל כולם</small></li>
+    <li><a href="#section4">הדס – זו הבת</a> <small>– שלושה מקן אחד, ועבות של צניעות</small></li>
+    <li><a href="#section5">ערבה – זה הבן</a> <small>– גדל על המים</small></li>
+    <li><a href="#section6">אגוד המינים</a> <small>– למה האתרוג ביד שמאל</small></li>
+    <li><a href="#section7">יחוד ארבע אותיות השם</a> <small>– מ"באר מים חיים"</small></li>
+    <li><a href="#section8">רמז על האיחוד</a> <small>– מה מיוחד בארבעת המינים</small></li>
+    <li><a href="#section9">מן המקורות</a> <small>– שיחות הר"ן, בניהו בן יהוידע, האלשיך</small></li>
+  </ol>
+</nav>
+
+<!-- ================= 1 ================= -->
+<h2 id="section1"><span class="num">א</span>מעכבין זה את זה</h2>
+
+<p>ארבעת המינים אינם ארבעה דברים נפרדים שנקנו יחד – הם <span class="emphasis">מצווה אחת</span> שאם חסר בה מין אחד, כל המצווה חסרה. כך אומרת ההלכה: <em>מעכבין זה את זה</em>.</p>
+
+<figure class="illus">
+  <a href="images/01-unity-of-four-species.jpg" data-lightbox><img src="images/01-unity-of-four-species.jpg" alt="אתרוג, לולב, הדס וערבה יחד על רקע סוכה וירושלים" width="1024" height="1536" loading="lazy"></a>
+  <figcaption>ארבעה מינים – מצווה אחת</figcaption>
+</figure>
+
+<div class="highlight-box">
+  <span class="tag">🌿 הרעיון המרכזי</span>
+  <p>ההלכה שארבעת המינים מעכבים זה את זה מלמדת שבשביל שיהיה <span class="emphasis">משפחה</span> צריך שיהיה <strong>איש ואשה, בן ובת</strong> – וזה מעכב, לפי שכך נבנית משפחה – ראשי התיבות ״לפ"ו״ (לפריה ורביה).</p>
+</div>
+
+<p>בפרקים הבאים נעבור מין אחר מין, ונראה כיצד הלכותיו – מה כשר, מה פסול ומה מהודר – רומזות לחיי הבית, למידות ולעבודת ה'. זהו הדרוש: לא במקום הפשט וההלכה, אלא <em>על גביהם</em>.</p>
+
+<div class="orn">❦ ❦ ❦</div>
+
+<!-- ================= 2 ================= -->
+<h2 id="section2"><span class="num">ב</span>אתרוג – זו האשה</h2>
+
+<h3>למה האתרוג רומז לאשה?</h3>
+<ul>
+  <li><strong>הפרי היחיד</strong> שיש בו חדרי זרע וגם בשר – רמז לאשה, שבה מתעברים הדורות הבאים.</li>
+  <li>בספר <em>ברכת מועדיך</em> ראיתי שהאתרוג הוא <strong>האות ה'</strong> שבשם – האות של האשה.</li>
+  <li>בספר החינוך ובזוהר מבואר שהאתרוג <strong>דומה ללב</strong> – כמו האשה שהיא כנגד הלב.</li>
+</ul>
+
+<div class="verse-box">
+  ״כֻּלָּךְ יָפָה רַעְיָתִי וּמוּם אֵין בָּךְ״
+  <span class="source-tag">שיר השירים ד, ז</span>
+</div>
+
+<h3>״לכם״ – לשמוח ולהנות מהאשה</h3>
+<p>הפסוק ״ולקחתם <span class="emphasis">לכם</span>״ מלמד שהאתרוג צריך להיות שלך, לשמחתך ולהנאתך. כך האדם צריך <strong>לשמוח ולהנות מאשתו</strong> – וזה מקשר מאוד.</p>
+
+<h3>דין חזזית – לא לראות את הנקודה השחורה</h3>
+
+<figure class="illus">
+  <a href="images/02-etrog-goodness.jpg" data-lightbox><img src="images/02-etrog-goodness.jpg" alt="אתרוג זוהר בסלסלה בתוך הסוכה" width="1024" height="1536" loading="lazy"></a>
+  <figcaption>״כֻּלָּךְ יָפָה רַעְיָתִי״ – לראות את ההדר</figcaption>
+</figure>
+<div class="two-columns">
+  <div class="col-gold">
+    <h4>ההלכה באתרוג</h4>
+    <ul>
+      <li>חזזית – נקודה שחורה על האתרוג – פוסלת.</li>
+      <li>אם יש מקום שלם שאין בו חזזית ואפשר להתבונן בו – האתרוג כשר.</li>
+      <li>״בלעטלך״ (כתמים קלים) – כשר בדיעבד.</li>
+    </ul>
+  </div>
+  <div class="col-green">
+    <h4>הדרוש לחיי הבית</h4>
+    <ul>
+      <li>אסור לאדם לראות <strong>מראה שחור</strong> באשתו – ״כולך יפה רעיתי ומום אין בך״.</li>
+      <li>הטבע האנושי: גם כשיש שתי נקודות שחורות והכל נקי – מתרכזים בשחור ולא רואים את הטוב כלל.</li>
+      <li>״בלעטלך בדיעבד כשר״ – זה <strong>לדון לכף זכות</strong>. לכתחילה – לא לראות כלל.</li>
+    </ul>
+  </div>
+</div>
+
+<h3>״הדר״ – להתבונן ולשבח</h3>
+<p>התורה אמרה במפורש: ״פרי עץ <span class="emphasis">הדר</span>״. זו חובה גדולה: להקפיד <strong>כל יום</strong> להתבונן בדברים הטובים שבאשתו, במעלותיה הנפלאות – ולפאר אותם, <strong>לומר אותם לאשתו</strong>.</p>
+
+<div class="highlight-box">
+  <span class="tag">💡 מדוע האשה זקוקה למחמאות?</span>
+  <p>מה שה' יצר שהאשה זקוקה למחמאות – הוא כדי לעזור <em>לבעל</em> להתרגל להסתכל כמה דברים טובים יש באשתו, וכך לשבחה. וגם: אתרוג ״הדר״ – רמז לאשה שצריכה להיות יפה בעיני בעלה.</p>
+</div>
+
+<h3>עוקץ ופיטם</h3>
+<div class="two-columns">
+  <div class="col-green">
+    <h4>🌱 העוקץ</h4>
+    <p>מלמד על החיבור של האם בישראל <strong>לגזע עם ישראל</strong>: רק לפי האם קובעים אם הילדים יהיו יהודים, כי היא מחוברת לגזע. ואולי גם לכך רומז שהארון היה מעצי שיטים.</p>
+  </div>
+  <div class="col-gold">
+    <h4>🍋 הפיטם</h4>
+    <p>עץ האתרוג הוא היחיד שיש לו פיטם לפירותיו. מסתבר שזה רומז לכך שלאשה יש האפשרות <strong>להמשיך את זרע ישראל לדורות</strong> – וזה רומז לשדי האשה, משם היא מאכילה וממשיכה את הדורות הבאים.</p>
+  </div>
+</div>
+<p>ובאמת האתרוג דומה מאוד לשדי אשה, ועיין בב"י שמדמה שדי אשה לאתרוג. וחסדי שמים שזיכני לזה.</p>
+
+<div class="quote-box">
+  <p>״וזה שנאמר ׳זממה שדה ותקחהו׳ – שדה אשר ברכו ה' – זה שדה של תפוחים (כמו שאמרו בתענית כט ע"ב: ׳חקל תפוחין קדישין׳), ׳מפרי כפיה נטעה כרם׳ – על דרך מה שנאמר ׳כי כרם ה' צבאות בית ישראל׳ וגו'. תפוחים – זה אתרוג, עיין בספר ברכת מועדיך.״</p>
+  <span class="source-tag">ספר פרי צדיק – פרשת שמיני, אות ו</span>
+</div>
+
+<div class="section-divider">האתרוג – ״הדר״ שנמצא בכל בית<small>הלב של המצווה, והלב של הבית</small></div>
+
+<!-- ================= 3 ================= -->
+<h2 id="section3"><span class="num">ג</span>לולב – זה הבעל</h2>
+
+<p>הלולב <strong>בולט מעל כולם</strong> – הוא ראש המשפחה. והוא כנגד <em>השדרה</em> (חינוך): כמו הבעל שהוא <span class="emphasis">עמוד השדרה</span> – נותן כוח לכולם בבית.</p>
+
+<figure class="illus">
+  <a href="images/03-lulav-guidance.jpg" data-lightbox><img src="images/03-lulav-guidance.jpg" alt="לולב זקוף מול שמי ירושלים" width="1024" height="1536" loading="lazy"></a>
+  <figcaption>הלולב – טפח מעל כולם, מראה את הדרך</figcaption>
+</figure>
+
+<div class="highlight-box">
+  <span class="tag">🎯 חץ לשמים</span>
+  <p>ללולב יש חץ לכיוון השמים – הבעל צריך <strong>להחדיר אמונה בה'</strong> בבית, ולהראות לכולם את הדרך.</p>
+</div>
+
+<h3>הלכות לולב על דרך הדרוש</h3>
+<table class="rules">
+  <thead><tr><th>ההלכה</th><th>הרמז לעבודת ה' ולחיי הבית</th></tr></thead>
+  <tbody>
+    <tr><td>נחלקה התיומת</td><td>צריך להיות <strong>לב אחד</strong> לאביו שבשמים.</td></tr>
+    <tr><td>נסדק כהימנק</td><td>אין חיבור לאביו שבשמים.</td></tr>
+    <tr><td>פסול ביום הראשון</td><td>לפחות בבוקר, כשאדם קם – שיהיה כולו <strong>לאביו שבשמים</strong>.</td></tr>
+    <tr><td>יבש</td><td>צריך תמיד להתרענן ולא להיות יבש – ״לא המתים יהללו י־ה״. כמה צריך האדם <strong>לחדש את עצמו</strong>, ולאהוב את רעייתו ולהתבונן בדברים הטובים שבה.</td></tr>
+    <tr><td>טפח אחד מעל כולם</td><td>כמו הבעל שצריך להיות טפח מעל כולם – <strong>להראות לכולם את הדרך</strong>.</td></tr>
+    <tr><td>כפוף – כשר, ואף מהודר</td><td>לוותר ולהיכנע בפני אחרים – מעולה.</td></tr>
+    <tr><td>עקום</td><td>אין לו לב לכיוון אביו שבשמים.</td></tr>
+  </tbody>
+</table>
+
+<div class="quote-box">
+  <p>ויש לנו מצווה <strong>לקרב את האתרוג ללולב</strong> שיהיו מחוברים יחד – זה מלמד אותנו את החיוב הגדול להתאחד עם בתו של המלך.</p>
+</div>
+
+<div class="orn">❦ ❦ ❦</div>
+
+<!-- ================= 4 ================= -->
+<h2 id="section4"><span class="num">ד</span>הדס – זו הבת</h2>
+
+<p>ההדס הוא <em>הילדה</em> – כמו הדסה (אסתר המלכה).</p>
+
+<figure class="illus">
+  <a href="images/04-myrtle-belonging.jpg" data-lightbox><img src="images/04-myrtle-belonging.jpg" alt="ענף הדס עבות בתוך הסוכה" width="1024" height="1536" loading="lazy"></a>
+  <figcaption>ההדס – שלושה מקן אחד</figcaption>
+</figure>
+
+<div class="two-columns">
+  <div class="col-green">
+    <h4>🌿 שלושה מקן אחד</h4>
+    <p>הבת צריכה להיות בבית עם ההורים, מכבדת אותם – ושיהיה לה <strong>קן אחד</strong>.</p>
+  </div>
+  <div class="col-gold">
+    <h4>🌿 רוב ההדס מכוסה – ״עבות״</h4>
+    <p>זו <span class="emphasis">הצניעות</span> – כל המהות שלה.</p>
+  </div>
+</div>
+
+<div class="highlight-box">
+  <span class="tag">✂️ נקטם ראשו – כשר</span>
+  <p>הצניעות חשובה כל כך, שאפילו אם חסר קצת בראש ההדס – הוא כשר.</p>
+</div>
+
+<!-- ================= 5 ================= -->
+<h2 id="section5"><span class="num">ה</span>ערבה – זה הבן</h2>
+
+<figure class="illus">
+  <a href="images/05-willow-brotherhood.jpg" data-lightbox><img src="images/05-willow-brotherhood.jpg" alt="עצי ערבה על גדת נחל" width="1024" height="1536" loading="lazy"></a>
+  <figcaption>הערבה – גדלה על המים</figcaption>
+</figure>
+
+<ul>
+  <li><strong>גדלה על המים</strong> – הבן צריך לגדול על התורה.</li>
+  <li><strong>פיה חלק ולא מסורג</strong> – צריך לתקן את המידות.</li>
+  <li><strong>לבלוב</strong> – שיהיה לו <em>לב</em> לאבינו שבשמים.</li>
+</ul>
+
+<div class="section-divider">איש · אשה · בן · בת<small>לולב · אתרוג · ערבה · הדס – משפחה אחת בידו של אדם אחד</small></div>
+
+<!-- ================= 6 ================= -->
+<h2 id="section6"><span class="num">ו</span>אגוד המינים – ולמה האתרוג ביד שמאל</h2>
+
+<div class="qa-box">
+  <p class="q">❓ הקושיה</p>
+  <p>יש דין שאסור לקחת את הלולב והאתרוג ביד אחת (שו"ע תרנ"א סעיף ב'). מה סוד העניין? לכאורה הדבר מוזר: ארבעת המינים אמורים להיות <em>אגודה אחת</em>, ואף על פי כן מי שאוגד את הלולב עם האתרוג – יש דעות שפוסלות, וצריך שיהיו בנפרד. לכאורה זה היפך השלום!</p>
+</div>
+
+<h3>התשובה: כל אחד במקומו</h3>
+
+<figure class="illus">
+  <a href="images/06-separate-and-together.jpg" data-lightbox><img src="images/06-separate-and-together.jpg" alt="ידיים אוחזות אתרוג ביד שמאל ולולב ביד ימין" width="1024" height="1536" loading="lazy"></a>
+  <figcaption>כל אחד במקומו – אתרוג בשמאל, לולב בימין</figcaption>
+</figure>
+<p>יש חושבים ששלום בית יהיה אם האשה תעשה את תפקיד האיש. באה התורה ואמרה: האתרוג אסור לו להיות ביד ימין – הוא ביד שמאל. האשה מכירה בכך שתפקידה הוא <span class="emphasis">יד שמאל</span> – להיות <strong>עזר</strong> לבעלה.</p>
+
+<div class="highlight-box">
+  <span class="tag">⚖️ אבל לא פחות חשובה!</span>
+  <p>האתרוג הוא הפרי החשוב ביותר מכולם – התורה כתבה אותו <strong>ראשון</strong>, ויש בו <strong>טעם וריח</strong> – ועם זאת הוא ביד שמאל. כך האשה עוזרת לבעלה ולבניה ללמוד תורה, ו<em>גדולה ההבטחה שהבטיח ה' לנשים יותר מלאנשים</em>, והשכינה שורה בבית בזכות האשה.</p>
+</div>
+
+<div class="quote-box">
+  <p>אבל אם האתרוג הולך ליד ימין – אם האשה הולכת לתפקיד האיש – זה <strong>פסול</strong>, שכן שלמות היא שכל אחד עומד על מקומו הנכון לו, שבראו בוראו.</p>
+  <span class="source-tag">ועיין בפרק "מן המקורות" – האלשיך על ״שמאלו תחת לראשי״</span>
+</div>
+
+<h3>כמה חשוב איגוד המינים</h3>
+<p>עד כמה חשוב איגוד המינים? עד שמעיקר הדין היה אפשר לברך עליו ״שהחיינו״, ואם בירך בדיעבד – יצא. כל מסורת התורה היא כאשר <strong>הבן והבת מכבדים את האב ולומדים ממנו תורה</strong>, כמו שכתבו הראשונים במצוות כיבוד אב. וזו אחת הסיבות שהלולב צריך להיות גבוה מכולם – שיהיה <span class="emphasis">האור בבית</span>.</p>
+
+<!-- ================= 7 ================= -->
+<h2 id="section7"><span class="num">ז</span>יחוד ארבע אותיות השם</h2>
+
+<p>מעבר לרמז על המשפחה, ארבעת המינים רומזים לארבע אותיות שם הוי"ה. כך כותב בעל <em>באר מים חיים</em>:</p>
+
+<figure class="illus">
+  <a href="images/07-spiritual-unity.jpg" data-lightbox><img src="images/07-spiritual-unity.jpg" alt="ארבעת המינים מאירים באור שמימי מעל הסוכה" width="1024" height="1536" loading="lazy"></a>
+  <figcaption>יחוד ארבע אותיות השם</figcaption>
+</figure>
+
+<div class="quote-box">
+  <p>כי הנה נודע אשר כל דבר ודבר הנעשה בארץ כן נעשה דוגמתו בשמי השמים בעליונים להרע או להיטיב, וזה כל עיקר תורה ותפלה ומצות ה', כי כאשר מיחד אדם שם ה' בדברים הגשמיים התחתונים כמו ארבע מינים שבלולב הרומזים לארבע אותיות שם הוי"ה הקדוש והטהור, וכשאדם לוקחן לשם מצות ה' באהבה ויראה בכדי לעשות נחת רוח ליוצרו, אז כשם שהוא מקרב כל הארבעה מינים הללו אחד אל אחד והיו לאחדים בידו – כן מתיחדים ומתקשרים ארבע אותיות שם הוי"ה הקדוש לאחד ביחודא שלים, ואז נמשך כל בחינת שפע וברכה מדעת עליון לנוה אפריון, למכון בית אלהינו, כי אין הברכה שורה כי אם על דבר שלם. וחס ושלום כשאותיות הוי"ה הם בפרודא – לא תוכל לשרות הברכה עליהם ממקור עליון… וזה כל מעשינו ועבודתינו: ליחד שמא דקודשא בריך הוא ושכינתיה, ליחד שם י"ה בו"ה ביחודא שלים, בכדי שיוכל להשפיע הברכה ולברך לעולמות העליונים ותחתונים על ידי זה. וכן בתפילין וציצית – כולם רמוזים לשמותיו הקדושים ברוך הוא, ובפרט לשם הוי"ה… והיודע אופן הרמוז בהם ומכוון בהם לשם ה' – גורם בזה יחוד קודשא בריך הוא ושכינתא, והכל מתברכין על ידו.</p>
+  <span class="source-tag">ספר באר מים חיים – פרשת יתרו, פרק כ</span>
+</div>
+
+<div class="highlight-box">
+  <span class="tag">🔗 החיבור</span>
+  <p>כשם שהאיש והאשה, הבן והבת מתאחדים בבית – כך מתאחדות אותיות השם. <strong>הבית השלם הוא דוגמה למעלה.</strong> ״אין הברכה שורה כי אם על דבר שלם״.</p>
+</div>
+
+<!-- ================= 8 ================= -->
+<h2 id="section8"><span class="num">ח</span>רמז על האיחוד</h2>
+
+<p>שמעתי מאבי מורי ששמע: ארבעת המינים רומזים על האיחוד. ידוע שיש אחד שיש בו טעם ואין בו ריח וכו'. ויש להקשות עדיין: למה נלקח דווקא אתרוג? הרי יש הרבה דברים שיש בהם טעם וריח, וכן הרבה מינים שיש בהם ריח וכו'?</p>
+
+<div class="highlight-box">
+  <span class="tag">✨ התשובה</span>
+  <p>בארבעת המינים יש דבר מיוחד מאוד – <strong>כל אחד בעצמו רומז על האיחוד</strong>:</p>
+</div>
+
+<figure class="illus">
+  <a href="images/08-unity-within-each-species.jpg" data-lightbox><img src="images/08-unity-within-each-species.jpg" alt="איור בוטני של אתרוג, לולב, הדס וערבה" width="1024" height="1536" loading="lazy"></a>
+  <figcaption>כל מין בעצמו רומז על האיחוד</figcaption>
+</figure>
+
+<div class="two-columns">
+  <div class="col-gold">
+    <h4>🍋 אתרוג</h4>
+    <p>גדל <strong>גם בחורף וגם בקיץ</strong> – חיבור בין זמנים.</p>
+  </div>
+  <div class="col-green">
+    <h4>🌴 לולב</h4>
+    <p>הוא <strong>כפות</strong> – עלים כפופים וקשורים זה בזה.</p>
+  </div>
+  <div class="col-green">
+    <h4>🌿 הדס</h4>
+    <p>יוצאים <strong>שלושה מקן אחד</strong> – ענפים מגזע אחד.</p>
+  </div>
+  <div class="col-gold">
+    <h4>🌾 ערבה</h4>
+    <p>בתרגום נקראת <strong>״אחוותא״</strong> – אחווה.</p>
+  </div>
+</div>
+
+<div class="section-divider">״ולקחתם לכם״ – לקיחה אחת של ארבעה מינים<small>ארבעה מינים – ומצווה אחת</small></div>
+
+<!-- ================= 9 ================= -->
+<h2 id="section9"><span class="num">ט</span>מן המקורות</h2>
+
+<p>בפרק זה מובאים במלואם המקורות שעליהם נשען הדרוש, כדי שהקורא יוכל לעיין בהם בעצמו.</p>
+
+<figure class="illus">
+  <a href="images/09-sources-and-study.jpg" data-lightbox><img src="images/09-sources-and-study.jpg" alt="ספר תורה פתוח, אתרוג ולולב על שולחן לימוד" width="1024" height="1536" loading="lazy"></a>
+  <figcaption>מן המקורות – לעיין וללמוד</figcaption>
+</figure>
+
+<h3>א. שיחות הר"ן – אות פז: ״אתרוג נאה״</h3>
+<div class="quote-box">
+  <p>לפי בחינת הימים נוראים ראוי שיהיה לנו אתרוג נאה. כי אמרי אנשי: ׳כל נער יש לו אשה נאה׳. והאתרוג הוא בחינת אשה, כמו שכתוב בזהר (תקונים יג, כא) שהאתרוג הוא בחינת (שיר השירים ד, ז): ״כולך יפה רעיתי ומום אין בך״. ובימים נוראים ישראל הם בבחינת נער, כי אז הם בבחינת ״והנה נער בוכה״ (שמות ב, ו), מיד: ״ותחמל עליו״, כמו שכתוב בתקונים (תקון יא), ועל כן ראוי שיהיה לישראל אתרוג נאה.</p>
+  <p>ומי שבוכה ביותר ונכנס ביותר בבחינת ״נער בוכה״ ראוי שיהיה לו אתרוג נאה ביותר.</p>
+  <p>כי זה שאומרים העולם שכל נער יש לו אשה נאה, זה יש להבין. כי עיקר השכל הוא מהמוח. והמוח שואב ממוח שבעצמות, שהוא נשקה על ידי לחות ושמנונית הגוף בבחינת (איוב כא, כד): ״ומוח עצמותיו ישוקה״. כי על ידי לחות ושמנונית הגוף נשקה המוח שבעצמות, וזהו עיקר קיום השכל. ועל כן מי שהוא נער ואין שכלו בשלמות, ונשאר מוחו כנוס בעצמות, כי אין שואב מוחו ממוח שבעצמות ומחמת זה אין שכלו בשלמות – נמצא שנשאר המוח כנוס בעצמות. ועל כן בת זוגו שנלקחה מן העצמות, כמו שנאמר: ״ויקח אחת מצלעותיו״ וכו' (בראשית ב, כא), נמשך אליה רבוי המוח שנשאר כנוס בעצמותיו אשר משם נלקחה. ועל כן בת זוגו נאה, כי עיקר היופי על ידי המוח והחכמה בבחינת: ״חכמת אדם תאיר פניו״ (קהלת ח, א).</p>
+  <p>ובקדושה זה בחינת שנמשכים שרשי הדעת אל האתרוג, ועיין בכוונות (שער הכוונות, סוכה ה) סוד אתרוג ולולב, עיין שם.</p>
+  <p>וזה בחינת סוכה: כי ״נער ישראל ואהבהו״ (הושע יא, א). אהבה – זה בחינת ימין, בחינת חבוק יד ימין, בחינת סוכה. וזה נעשה על ידי בחינת נער ישראל, בחינת נער בוכה כנזכר לעיל.</p>
+  <span class="source-tag">ספר שיחות מוהר"ן – אות פז</span>
+</div>
+
+<h3>ב. שיחות הר"ן – אות קצב: ״כשהכלה יפה אזי האהבה בשלמות״</h3>
+<div class="quote-box">
+  <p>סגולה להתמדה, שיזכה להיות מתמיד בלימודו, הוא להיזהר לבלי לדבר על שום איש ישראלי. כמו כשהכלה היא יפה אזי האהבה בשלמות, אבל כשיש להכלה איזה חסרון ומום – אזי בוודאי אין האהבה בשלמות. כמו כן התורה נקראת כלה, כמו שכתוב (דברים לג, ד): ״תורה צוה לנו משה מורשה״, ודרשו רבותינו זכרונם לברכה (ברכות נז.; פסחים מט:): ״אל תקרי מורשה אלא מאורסה״. וכל אחד מישראל יש לו אות בתורה, כי ששים רבוא אותיות התורה כנגד ששים רבוא נשמות ישראל. וכשיש חסרון באחד מישראל – נמצא שיש חסרון בתורה, ששם שורש נשמות ישראל. ועל כן בוודאי אי אפשר לאהוב את התורה בשלמות. אבל כשיזהר מלדבר על שום ישראל ולבלי למצוא שום חסרון בשום ישראלי – נמצא שאין בתורה שום חסרון ומום, אזי בוודאי יאהב את התורה מאוד, ואזי יתמיד בלימוד התורה מגודל האהבה.</p>
+  <p>וזהו ״תורת ה' תמימה״ (תהלים יט, ח) – היינו כשתורת ה' היא תמימה בלי שום חסרון ומום, דהיינו כשנזהרים לבלי לדבר ולבלי למצוא שום חסרון בשום ישראלי שהוא אות מהתורה, נמצא שאז תורת ה' תמימה בלי שום חסרון ומום, אזי היא ״משיבת נפש״. כי אז דווקא זוכים לאהבת התורה ומרגישים טעם מתיקות התורה שמשיבה את הנפש, מאחר שאין בה שום חסרון. ואז זוכים להתמדה.</p>
+  <span class="source-tag">ספר שיחות מוהר"ן – אות קצב</span>
+</div>
+<div class="highlight-box">
+  <span class="tag">🔗 הקשר לדין חזזית</span>
+  <p>כשם שאדם צריך שלא לראות מום באשתו – כך צריך שלא לראות מום בשום איש ישראל. הראייה הטובה מביאה <strong>אהבה שלמה</strong>, ואהבה שלמה מביאה התמדה.</p>
+</div>
+
+<h3>ג. בניהו בן יהוידע על מנחות כז ע"א</h3>
+<div class="quote-box">
+  <p>״שנים מהם עושים פירות ושנים מהם אין עושים פירות״. נראה לי בס"ד: העושים פירות הם לולב ואתרוג, שהם אחד אחד, כי בעלי תורה ובעלי מצוות שעושים פירות – יש להם <strong>לב אחד</strong>. לכן ראשי תיבות <em>לולב אתרוג</em> – ל"א, ראשי תיבות ״לב אחד״. ואותם שאין עושים פירות הם שניים ושלושה, כי יש להם כמה לבבות, שניים ושלוש. וראשי תיבות <em>ערבה הדס</em> – ע"ה, ראשי תיבות ״עם הארץ״, וסופי תיבות ה"ס, לשון שתיקה, שאין פיהם פתוח בדברי תורה.</p>
+  <p>גם לולב כנגד בעלי תורה, ואתרוג כנגד בעלי מצוות; לכן לולב גבוה מכולם, כי תלמוד תורה גדולה מכולם. והדס כנגד הבטלים מדברי תורה, וערבה כנגד הבטלים ממצוות.</p>
+  <p>גם עוד תפס כנגד צדיקים – שני מינין: לולב כנגד אנשים ואתרוג כנגד נשים; וכן בהפך תפס: הדס כנגד אנשים וערבה כנגד נשים.</p>
+  <span class="source-tag">ספר בניהו בן יהוידע – מנחות דף כז ע"א</span>
+</div>
+
+<div class="two-columns">
+  <div class="col-green">
+    <h4>הקריאה שבפרקי הספר</h4>
+    <p>לולב = <strong>הבעל</strong>, אתרוג = <strong>האשה</strong>, הדס = <strong>הבת</strong>, ערבה = <strong>הבן</strong>. משפחה שלמה בארבעה מינים.</p>
+  </div>
+  <div class="col-gold">
+    <h4>הקריאה של בניהו בן יהוידע</h4>
+    <p>לולב ואתרוג כנגד <strong>אנשים ונשים</strong> (וכן בהפך: הדס כנגד אנשים וערבה כנגד נשים), ובמדרגות אחרות: בעלי תורה, בעלי מצוות והבטלים מהם.</p>
+  </div>
+</div>
+<p>אלו שני מישורים של דרוש שאינם סותרים זה את זה: האחד רואה במינים את חלקי <em>הבית</em>, והשני את <em>דרגות האדם</em> בעבודת ה'.</p>
+
+<h3>ד. האלשיך על שיר השירים ב, ו – ״שמאלו תחת לראשי״</h3>
+<div class="quote-box">
+  <p>״שמאלו תחת לראשי״ – וזה יאמר ״תחת לראשי״, כלומר: שמאלו הוא לי כהסבת שמאל שהיא תחת לראשי, כלומר לתועלת הראש ולתומכה, כעניין ״שבטך ומשענתך״ (תהלים כג, ד), כי שבט היסורין הוא משענת לראש. וזולת זה, ״וימינו וגו'״ – כי ימין מקרבת כמדובר.</p>
+  <span class="source-tag">פירוש האלשיך – שושנת העמקים על שיר השירים, פרק ב פסוק ו</span>
+</div>
+
+<div class="sources">
+  <h3>📚 מקורות ומראי מקומות</h3>
+  <ol>
+    <li>ספר חינוך; זוהר, תקוני זוהר (תקון יג, תקון יא) – כפי שהובא בשיחות הר"ן.</li>
+    <li>ספר ברכת מועדיך – האתרוג כאות ה' ו״תפוחים״.</li>
+    <li>ספר פרי צדיק – פרשת שמיני, אות ו.</li>
+    <li>שולחן ערוך אורח חיים, סימן תרנ"א סעיף ב' (לולב ואתרוג ביד אחת).</li>
+    <li>ספר שיחות מוהר"ן – אות פז ואות קצב.</li>
+    <li>ספר בניהו בן יהוידע – מנחות דף כז ע"א.</li>
+    <li>פירוש האלשיך – שושנת העמקים על שיר השירים ב, ו.</li>
+    <li>ספר באר מים חיים – פרשת יתרו, פרק כ.</li>
+    <li>שיר השירים ד, ז; ב, ו · תהלים כג, ד; יט, ח; קטו, יז · בראשית ב, כא · שמות ב, ו · דברים לג, ד · הושע יא, א · קהלת ח, א.</li>
+    <li>תענית כט ע"ב; ברכות נז ע"א; פסחים מט ע"ב.</li>
+  </ol>
+</div>
+
+
+<figure class="illus finale">
+  <a href="images/10-whole-family.jpg" data-lightbox><img src="images/10-whole-family.jpg" alt="משפחה שלמה בסוכה בשקיעה מול ירושלים" width="1024" height="1536" loading="lazy"></a>
+  <figcaption>בית שלם – משפחה אחת, מצווה אחת</figcaption>
+</figure>
+</div><!-- /inner -->
+
+<div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #fdf5cf 0%, #e6efd0 100%); border:1px solid #e6c229; border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר הקול החמישי:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+</div>
+
+</div><!-- /container -->
+
+<a href="#top" class="scroll-top" id="scrollTop" aria-label="חזרה למעלה">▲</a>
+
+<script>
+(function(){
+  var btn=document.getElementById('scrollTop'), bar=document.getElementById('progress');
+  function onScroll(){
+    var y=window.pageYOffset||document.documentElement.scrollTop;
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    btn.classList.toggle('show', y>400);
+    bar.style.width=(h>0? (y/h*100):0)+'%';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
+  });
+})();
+</script>
+<div class="lightbox" id="lightbox" role="dialog" aria-label="תמונה מוגדלת"><img alt=""></div>
+
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'), img=lb.querySelector('img');
+  document.querySelectorAll('a[data-lightbox]').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();img.src=a.getAttribute('href');img.alt=a.querySelector('img').alt;lb.classList.add('open');});
+  });
+  lb.addEventListener('click',function(){lb.classList.remove('open');});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});
+})();
+</script>
+</body>
+</html>
