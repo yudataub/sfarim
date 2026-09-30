@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="torah-html-article 2.7.0">
+<title>ואמונתך בלילות</title>
+<style>
+:root{}
+*{box-sizing:border-box;}
+body{
+  margin:0; padding:40px 20px;
+  background:linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%);
+  font-family:'Segoe UI','Assistant','Noto Sans Hebrew',Arial,sans-serif;
+  color:#1f2937;
+}
+.container{
+  max-width:900px; margin:0 auto; background:#fffefc;
+  padding:60px 80px; border-radius:18px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.1);
+}
+.main-title{
+  font-size:3em; font-weight:bold; text-align:center;
+  background:linear-gradient(135deg,#7e22ce 0%,#ec4899 50%,#f59e0b 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  margin-bottom:10px;
+}
+.subtitle{ text-align:center; font-size:1.3em; color:#6b21a8; margin-bottom:6px;}
+.author{ text-align:center; font-size:1.1em; color:#555; margin-bottom:40px;}
+h2{
+  font-size:2.2em; color:#7e22ce; border-right:6px solid #7e22ce;
+  padding-right:20px; margin-top:60px; margin-bottom:20px;
+}
+.chapter-label{
+  display:inline-block; color:#ec4899; font-weight:bold; font-size:1.1em;
+  margin-top:50px; margin-bottom:-10px;
+}
+h3{ font-size:1.5em; color:#2563eb; margin-top:35px;}
+h4{ font-size:1.3em; color:#059669; margin-top:25px;}
+p, li{ font-size:1.1em; line-height:1.8; margin:18px 0;}
+.in-chapter-box{
+  background:#f3e8ff; border:1px solid #d8b4fe; border-radius:10px;
+  padding:20px 25px; margin:25px 0 35px 0;
+}
+.in-chapter-box h4{ margin-top:0; color:#7e22ce;}
+.in-chapter-box ul{ margin:8px 0; padding-right:22px;}
+.in-chapter-box li{ margin:6px 0; font-size:1.02em;}
+.verse-box{
+  background:linear-gradient(135deg,#e0e7ff 0%,#fce7f3 100%);
+  border-right:6px solid #7e22ce; border-radius:10px;
+  padding:25px 30px; margin:25px 0; font-size:1.15em; text-align:center;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+.highlight-box{
+  background:linear-gradient(135deg,#dbeafe 0%,#e0e7ff 100%);
+  border-right:6px solid #2563eb; border-radius:10px;
+  padding:25px 30px; margin:25px 0;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+.quote-box{
+  background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+  border-right:6px solid #f59e0b; border-radius:10px;
+  padding:25px 30px; margin:25px 0; font-style:italic;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+.quote-box .source-tag{ font-style:normal; color:#92400e; font-weight:bold; text-align:left; margin-top:10px;}
+.story-box{
+  background:linear-gradient(135deg,#d1fae5 0%,#ecfdf5 100%);
+  border-right:6px solid #059669; border-radius:10px;
+  padding:25px 30px; margin:25px 0;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+.qa-box{
+  border:2px dashed #ec4899; border-radius:10px;
+  padding:22px 28px; margin:25px 0; background:#fff;
+}
+.qa-box strong{ color:#be185d;}
+.guiding-box{
+  background:#fff7ed; border:1px solid #fdba74; border-radius:10px;
+  padding:20px 25px; margin:30px 0;
+}
+.guiding-box h4{ margin-top:0; color:#c2410c;}
+.guiding-box ul{ padding-right:22px; margin:10px 0;}
+.guiding-box li{ margin:8px 0;}
+.prayer-box{
+  background:linear-gradient(135deg,#fbbf24 0%,#f59e0b 50%,#ec4899 100%);
+  border-radius:14px; padding:3px; margin:35px 0 10px 0;
+  box-shadow:0 5px 15px rgba(126,34,206,0.15);
+}
+.prayer-box-inner{
+  background:#fffbeb; border-radius:12px; padding:28px 32px;
+}
+.prayer-box-inner h4{ margin-top:0; color:#b45309;}
+.prayer-box-inner p{ font-style:italic; margin:0; font-size:1.1em;}
+.emphasis{ color:#7e22ce; font-weight:bold;}
+.section-divider{
+  background:linear-gradient(135deg,#fbbf24 0%,#f59e0b 50%,#ec4899 100%);
+  color:#fff; text-align:center; padding:18px; border-radius:10px;
+  font-size:1.3em; font-weight:bold; margin:45px 0;
+}
+.toc{
+  background:#f3e8ff; border:1px solid #d8b4fe; border-radius:12px;
+  padding:30px 35px; margin:40px 0;
+}
+.toc h3{ margin-top:0; text-align:center; color:#7e22ce;}
+.toc ul{ list-style:none; padding-right:0; margin:0;}
+.toc li{ margin:10px 0; font-size:1.05em;}
+.toc a{ color:#4a0080; text-decoration:none;}
+.toc a:hover{ text-decoration:underline; color:#ec4899;}
+.toc .toc-main{ font-weight:bold; margin-top:14px;}
+.toc .toc-sub{ padding-right:22px; font-size:0.92em; color:#555;}
+.sources{
+  background:#f9fafb; border:1px solid #e5e7eb; border-radius:10px;
+  padding:25px 30px; margin:40px 0;
+}
+.sources h3{ margin-top:0;}
+.sources ol{ padding-right:22px;}
+.sources li{ margin:6px 0; font-size:1em;}
+.footer{
+  margin-top:60px; text-align:center; padding-top:30px;
+  border-top:2px solid #e5e7eb; font-size:1.05em; color:#333;
+}
+.footer h4{ color:#2563eb;}
+.scroll-top{
+  position:fixed; bottom:30px; left:30px; background:#7e22ce; color:#fff;
+  width:46px; height:46px; border-radius:50%; display:none;
+  align-items:center; justify-content:center; text-decoration:none;
+  font-size:1.3em; box-shadow:0 3px 10px rgba(0,0,0,0.2); z-index:99;
+}
+@media (max-width:768px){
+  .container{ padding:30px 20px;}
+  .main-title{ font-size:2em;}
+  h2{ font-size:1.6em;}
+  h3{ font-size:1.25em;}
+}
+@media print{
+  @page{ size:A4 portrait; margin:20mm 18mm;}
+  *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important;}
+  body{ background:#fff !important; padding:0 !important; font-size:11pt;}
+  .container{ max-width:100% !important; padding:0 !important; box-shadow:none !important;}
+  .scroll-top{ display:none !important;}
+  h2{ page-break-before:always; break-before:page;}
+  h2:first-of-type{ page-break-before:avoid; break-before:avoid;}
+  h3,h4{ page-break-after:avoid; break-after:avoid;}
+  .verse-box,.highlight-box,.quote-box,.story-box,.qa-box,.prayer-box,.in-chapter-box,.guiding-box{
+    page-break-inside:avoid; break-inside:avoid;
+  }
+  .toc{ page-break-after:always; break-after:page;}
+  .main-title{ font-size:26pt !important; -webkit-text-fill-color:#4a0080 !important; background:none !important;}
+  h2{ font-size:16pt !important;} h3{ font-size:13pt !important;} p,li{ font-size:11pt !important;}
+  .footer{ page-break-before:always; break-before:page;}
+  [style*="display: flex"],[style*="display: grid"]{ display:block !important;}
+}
+
+  /* ---------- סרגל ההאזנה (נוסף אוטומטית) ---------- */
+  :root{
+    --lb-purple:#7e22ce; --lb-blue:#2563eb; --lb-green:#059669;
+    --lb-gold:#f59e0b; --lb-pink:#ec4899; --lb-muted:#6b7280;
+    --fs: 1;
+  }
+  .listen-bar{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid var(--lb-gold);
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+  }
+  .listen-btn-group{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .listen-btn{
+    display:flex; align-items:center; gap:8px;
+    background:linear-gradient(135deg, var(--lb-purple) 0%, var(--lb-pink) 100%);
+    color:#fff; border:none; border-radius:30px; padding:10px 22px;
+    font-size:1em; font-weight:bold; font-family:inherit; cursor:pointer;
+    transition:transform .15s, box-shadow .15s;
+  }
+  .listen-btn:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,.3); }
+  .listen-btn:active{ transform:translateY(0); }
+  .listen-stop-btn, .listen-skip-btn, .listen-size-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 16px; font-size:.95em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .listen-skip-btn{ padding:8px 12px; }
+  .listen-stop-btn:hover, .listen-skip-btn:hover,
+  .listen-size-btn:hover:not(:disabled){ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-size{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-size-btn{ padding:6px 12px; line-height:1; }
+  .listen-size-btn:disabled{ opacity:.35; cursor:default; border-color:#d1d5db; color:var(--lb-muted); }
+  .listen-size-btn.big{ font-size:1.25em; }
+  .listen-size output{ font-weight:bold; min-width:3.4em; text-align:center; }
+  .listen-toggle-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 14px; font-size:.88em; font-weight:bold;
+    font-family:inherit; cursor:pointer; white-space:nowrap;
+    transition:transform .15s, background .15s, opacity .15s;
+  }
+  .listen-toggle-btn:hover{ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-toggle-btn[aria-pressed="false"]{
+    color:var(--lb-muted); border-color:#d1d5db; background:#f9fafb; opacity:.8;
+  }
+  .listen-toggle-btn:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+  .listen-skip-btn:focus-visible, .listen-size-btn:focus-visible,
+  .listen-voice select:focus-visible,
+  .listen-rate input:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-status{ font-size:.95em; color:#78350f; flex:1 1 200px; }
+  .listen-progress{ font-size:.9em; color:#78350f; font-weight:bold; white-space:nowrap; }
+  .listen-rate, .listen-voice{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-rate input{ accent-color:var(--lb-purple); }
+  .listen-rate output{ font-weight:bold; min-width:2.6em; }
+  .listen-voice select{
+    border-radius:20px; border:1px solid var(--lb-gold); padding:4px 10px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:190px;
+  }
+  .tts-clickable{ cursor:pointer; transition:background .2s; border-radius:6px; }
+  .tts-clickable:hover{ background:rgba(245,158,11,.10); }
+  .reading-highlight{
+    background:linear-gradient(135deg,#e0e7ff 0%,#fce7f3 100%); border-radius:8px;
+    box-shadow:0 0 0 3px var(--lb-pink) inset; transition:background .3s;
+    padding-right:14px; padding-left:14px;
+    margin-right:-14px; margin-left:-14px;
+  }
+  .audio-player{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid #f59e0b;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  }
+  .audio-player-title{ font-size:1.05em; font-weight:bold; color:#92400e; flex:1 1 100%;}
+  .audio-player audio{ flex:1 1 260px; min-width:220px; height:40px;}
+  .audio-chapter-select{
+    border-radius:20px; border:1px solid #f59e0b; padding:6px 12px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:260px;
+  }
+  .audio-get{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; flex:1 1 100%;}
+  .audio-download{
+    display:inline-flex; align-items:center; gap:6px;
+    background:linear-gradient(135deg,#7e22ce 0%,#ec4899 100%);
+    color:#fff; text-decoration:none; border-radius:30px; padding:8px 18px;
+    font-size:0.95em; font-weight:bold; transition:transform .15s, box-shadow .15s;
+  }
+  .audio-download:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,0.3);}
+  .audio-pick-btn{
+    background:#fff; color:#7e22ce; border:2px solid #7e22ce;
+    border-radius:30px; padding:7px 16px; font-size:0.9em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .audio-pick-btn:hover{ transform:translateY(-2px); background:#f3e8ff;}
+  .audio-note{ font-size:0.9em; color:#92400e;}
+  h2.reading-highlight{ padding-right:34px; }
+  @media(max-width:768px){
+    .listen-bar{ padding:15px; gap:10px; }
+    .listen-status{ flex:1 1 100%; }
+    .listen-voice select{ max-width:140px; }
+  }
+  @media print{
+    .listen-bar{ display:none !important; }
+    .audio-player { display: none !important; }
+    .reading-highlight{ box-shadow:none !important; background:none !important; }
+    .tts-clickable{ cursor:auto; }
+  }
+  /* fs scaling for plain body paragraphs/list items, applied additively so it
+     doesn't fight whatever base font-size the article already declares */
+  .container p, .container li{ font-size: calc(1em * var(--fs)); }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 data-a="01-0" class="main-title" id="top">ואמונתך בלילות</h1>
+  <div class="subtitle">מחשבות של אמונה וחיזוק לעבודת ה' שבלילות</div>
+  <div class="subtitle">כאשר בננו היקר מזכה אותנו ל"ותקם בעוד לילה"</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+
+  <div class="listen-bar">
+      <div class="listen-btn-group">
+          <button class="listen-btn" id="listenBtn" onclick="toggleListen()" aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן למאמר</button>
+          <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+          <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+          <button class="listen-skip-btn" onclick="skipListen(1)" aria-label="פסקה הבאה" title="פסקה הבאה">⏭</button>
+          <button class="listen-skip-btn" onclick="skipChapter(1)" aria-label="פרק הבא" title="פרק הבא">⏩</button>
+          <button class="listen-stop-btn" onclick="stopListen()" aria-label="עצור הקראה">⏹ עצור</button>
+          <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()" aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+      </div>
+      <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+      <span class="listen-progress" id="listenProgress"></span>
+      <div class="listen-rate">
+          <label for="rateRange">מהירות:</label>
+          <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1" oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)" aria-label="מהירות הקראה">
+          <output id="rateValue" for="rateRange">1.0×</output>
+      </div>
+      <div class="listen-voice">
+          <label for="voiceSelect">קול:</label>
+          <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+      </div>
+      <div class="listen-size">
+          <span>גודל טקסט:</span>
+          <button class="listen-size-btn" id="fontSmaller" onclick="setFontScale(-1)" aria-label="הקטן את הטקסט" title="הקטן את הטקסט">א−</button>
+          <output id="fontScaleValue">100%</output>
+          <button class="listen-size-btn big" id="fontBigger" onclick="setFontScale(1)" aria-label="הגדל את הטקסט" title="הגדל את הטקסט">א+</button>
+      </div>
+  </div><div class="audio-player no-tts">
+    <div class="audio-player-title">🎧 האזנה להקלטה — קול הילה</div>
+    <select class="audio-chapter-select" aria-label="בחירת פרק להאזנה" hidden>
+        <option value="audio/%D7%95%D7%90%D7%9E%D7%95%D7%A0%D7%AA%D7%9A_%D7%91%D7%9C%D7%99%D7%9C%D7%95%D7%AA_%D7%94%D7%A8%D7%91_%D7%99%D7%94%D7%95%D7%93%D7%94_%D7%98%D7%90%D7%95%D7%91.mp3" data-seg="01">הקדמה: לשם מה נכתבה החוברת? · פתיחה: שרה אמנו עבדה את השם גם בלילות. · באור המושג מצוות שבמחשבה. · באור הפסוק שמע ישראל. · מצוות אהבת השם. · למה רבי עקיבא חיכה כל חייו? · למה לשמוח בדבר רע? · מתי יש חובה לקיים מצוות אמונה ואהבת השם? · דיני הכנה למצווה. · באור הרשבא על פרשת שמע. · נסיון העקדה שלך. · מצוות החסד והנתינה. · סיכום החוברת בצורת הלכות</option>
+    </select>
+    <audio controls preload="none"></audio>
+    <div class="audio-get">
+        <a class="audio-download" href="#" data-download-placeholder="" target="_blank" rel="noopener">📥 להורדת קובץ השמיעה לחץ כאן</a>
+        <button type="button" class="audio-pick-btn">📂 בחר את הקובץ שהורדת</button>
+        <input type="file" class="audio-pick-input" accept="audio/*" multiple hidden>
+        <span class="audio-note"></span>
+    </div>
+</div>
+
+  <div class="toc"><h3>📑 תוכן העניינים</h3><ul><li class="toc-main"><a href="#section0">הקדמה: לשם מה נכתבה החוברת?</a></li><li class="toc-main"><a href="#section1">פתיחה: שרה אמנו עבדה את ה' גם בלילות.</a></li><li class="toc-main"><a href="#section2">באור המושג מצוות שבמחשבה.</a></li><li class="toc-main"><a href="#section3">באור הפסוק שמע ישראל.</a></li><li class="toc-main"><a href="#section4">מצוות אהבת ה'.</a></li><li class="toc-main"><a href="#section5">למה ר' עקיבא חיכה כל חייו?</a></li><li class="toc-main"><a href="#section6">למה לשמוח בדבר רע?</a></li><li class="toc-main"><a href="#section7">מתי יש חובה לקיים מצוות אמונה ואהבת ה'?</a></li><li class="toc-main"><a href="#section8">דיני הכנה למצווה.</a></li><li class="toc-main"><a href="#section9">באור הרשב"א על פרשת שמע.</a></li><li class="toc-main"><a href="#section10">נסיון העקדה שלך.</a></li><li class="toc-main"><a href="#section11">מצוות החסד והנתינה.</a></li><li class="toc-main"><a href="#section12">סיכום החוברת בצורת הלכות</a></li></ul></div>
+
+  <h2 data-a="01-1" id="section0">הקדמה: לשם מה נכתבה החוברת?</h2>
+<p data-a="01-2"><em>פתיחה אישית לחוברת — מדוע נכתבה, ומה תרוויח מקריאתה.</em></p>
+
+<p data-a="01-3">נושא א:</p>
+<p data-a="01-4">כל אבא ואמא יקרים מכירים את הבעיה שהתינוק בוכה בלילה וצריך לקום להרגיעו, לילות רבים עוברים ללא שינה, דבר מעייף המשבש את כל התוכניות, ה' יתברך מנסה אותנו בנסיון, בחוברת זו נלמד מהו הנסיון,כיצד נוכל לעמוד בו בצורה הנכונה ביותר, וגודל שכר הזוכה לעמוד בו כרצון ה' יתברך.</p>
+<p data-a="01-5">רציתי בקונטרס זה לכתוב כמה מחשבות ומצוות נפלאות שיכול אדם לקיים בזמן קושי, ראיתי שדברים אלו היו חידוש גדול להרבה יהודים, שלא ידעו שניתן לקיים מצוות בזמנים אלו של טירוף הדעת וקושי, ועוד יותר שמצוות אלו כל התורה תלויה בהם ולפי הר''ן גילו לנו חז"ל שהשכר על מצווה זו הוא הגדול ביותר מכל המצוות.</p>
+<p data-a="01-6">נושא ב:</p>
+<p data-a="01-7">עוד ראיתי שהיה זה לחידוש גדול ומאיר עיניים הבאור שזיכה אותנו ה' לבאר את פרשת קריאת שמע, חלק גדול על פי דברי שו"ת הרשב"א המובא בחוברת, וכן כיצד ניתן לקיים את קריאת שמע הלכה למעשה בחיי היום יום.</p>
+<p data-a="01-8">לאחר שתקרא את החוברת תראה שיתכן ואנחנו מקפידים על קוצו של יוד במנהג ישראל כל שהוא, או שמקפידים על זמן קריאת שמע של מגן אברהם או ותיקין וכד', אבל לקיים את קריאת שמע שזה הרבה יותר גדול מלקרוא אותה (כמו שאמר ר' עקיבא מתי יבוא מקרא זה לידי ואקיימנו) לא מקימים, ולא מחמת פשיעה ח"ו אלא מחמת חוסר ידיעה.</p>
+<p data-a="01-9">בקריאת חוברת זו תרוויח שלושה דברים:</p>
+<p data-a="01-10">לקיים מצוות שראוי לעשות סעודת הודיה בבוקר על שזכינו לקיימן.</p>
+<p data-a="01-11">הידיעה כמה חשובים מעשיך בעיני ה' יתברך תתן לך הרבה כוח.</p>
+<p data-a="01-12">סגולה עצומה היא כאשר מקיימים "ואמונתך בלילות" זוכים "להגיד בבוקר חסדך" כמו שאנו מתפללים "ותן שכר טוב לכל הבוטחים בשמך באמת".</p>
+<div class="verse-box"><p data-a="01-13">"וַתָּקָם בְּעוֹד לַיְלָה וַתִּתֵּן טֶרֶף לְבֵיתָהּ וְחֹק לְנַעֲרֹתֶיהָ".</p></div>
+<p data-a="01-14">משלי פרק לא טו</p>
+<div class="guiding-box"><h4 data-a="01-15">🤔 להתבוננות</h4><ul><li data-a="01-16">מה בדרך כלל עולה במחשבתי כשאני קם בלילה להרגיע את התינוק?</li><li data-a="01-17">האם ידעתי עד כה שגם ברגעים אלו אפשר לקיים מצוות גדולות?</li><li data-a="01-18">מה אני מצפה ללמוד וללקחת מהחוברת הזו?</li></ul></div>
+<div class="prayer-box"><div class="prayer-box-inner"><h4 data-a="01-19">🙏 תפילה מסכמת</h4><p data-a="01-20">רבונו של עולם, פתח את ליבי להבין שכל רגע קושי שאתה שולח לי — גם באמצע הלילה — הוא הזדמנות להתקרב אליך. זכני לראות בעיניים חדשות את הלילות שלי, ותן לי כוח וסבלנות ללמוד ולקיים את מה שתלמדני בחוברת זו, ותזכני לומר בבוקר "הודו לה' כי טוב" על כל מה שעברתי בלילה. אמן.</p></div></div>
+<div class="section-divider">✦ ✦ ✦</div>
+<h2 data-a="01-21" id="section1">פתיחה: שרה אמנו עבדה את ה' גם בלילות.</h2>
+<p data-a="01-22"><em>הצצה אל שרה אמנו, שגם בלילותיה לא הפסיקה מעבודת ה' — ומכאן נפתח סיפורה של החוברת כולה.</em></p>
+
+<p data-a="01-23">במדרש רבה: ר' עקיבא היה יושב ודורש והעם מתנמנם בקש לעוררן, אמר מה ראתה אסתר שתמלוך על קכ"ז מדינות? אלא תבוא בת בתה של שרה שחיתה קכ"ז שנה ותמלוך על קכ"ז מדינות. נ"ל ליישב דאיך שיהיו כל שנותיה שווים שבזכות כל שנה תמלוך על מדינה א' וכי זכות יש לקטנה בת שנה או שנתים?</p>
+<p data-a="01-24">וי"ל זה שאמר הכתוב בשבחה של שרה בפ' אשת חיל, "ותקם בעוד לילה ותתן טרף לביתה וחק לנערותיה" דלכאורה האי חק לנערותיה מיותר, מאי אולמיה (מה העדיפות) דנערותיה מטרף לכל ביתה?</p>
+<p data-a="01-25">אך הכי קאמר שבשנותי' האחרונים קמה בעוד לילה ולא נתנה שינה לעין והשלימה בה שנותיה של קטנות ועי"ז שקמה בעוד לילה ניתן חק לנערותיה היינו אסתר שעי"ז מלכה על קכ"ז מדינות אפי' נגד שנותיה של קטנותה שהרי הושלמה ע"י לילות - וע"כ אותן אנשים שבקשו להתנמנם גם ביום הי' מעוררן שהם היפוך מאמנו שרה שגם בלילה לא שכב לבה מעבודת ה'.</p>
+<p data-a="01-26">חתם סופר על בראשית פרק כג פסוק א</p>
+<p data-a="01-27">ובמקום אחר הוסיף החתם סופר:</p>
+<p data-a="01-28">ויהיו חיי שרה וגו' שני חיי שרה, ובמדרש יודע ה' ימי תמימים כשם שהם תמימים כך שנותיהם תמימים וכו',</p>
+<p data-a="01-29">כבר כתבתי לעיל דבסתם אנשי העולם לא יוחשבו הלילות (לא חושבים שבלילה עובדים את ה') כחשבונו של יצחק פלגא דלילי' וכו' אך הצדיק גם בלילה כל מעשיו לה' אפי' רעיונותי' על משכבו ושינה שלו הכל לשם ה', ובאשת חיל הנאמר על שרה כתיב ותקם בעוד לילה ותתן טרף לביתה, א"כ שנותיהם כפולים והיינו שני חיי שרה, שני לשון שנים כי חייה כפול והיינו שנותיהם תמימים ולא יחסרו הלילות.</p>
+<p data-a="01-30">(תורת משה לחת"ס בראשית כג,א)</p>
+<p data-a="01-31">שנזכה בעזרת השם על ידי חוברת זו גם בלילה לעבוד את ה' ונזכה לחיים כפולים ויהיו ימינו ושנותינו תמימים לעבודת הבורא.</p>
+<div class="guiding-box"><h4 data-a="01-32">🤔 להתבוננות</h4><ul><li data-a="01-33">מה לימדה אותנו שרה אמנו על עבודת ה' שאינה תלויה בשעות היום?</li><li data-a="01-34">כיצד "חיים כפולים" יכולים להתבטא גם בחיי היום שלי?</li></ul></div>
+<div class="prayer-box"><div class="prayer-box-inner"><h4 data-a="01-35">🙏 תפילה מסכמת</h4><p data-a="01-36">רבונו של עולם, כשם ששרה אמנו לא נתנה תנומה לעיניה והקדישה גם את לילותיה לעבודתך, כך זכני שגם לילותיי — גם כשהם קשים ומעייפים — יהיו לילות של קרבה אליך. תן לי לחיות "חיים כפולים", שכל רגע, יום ולילה כאחד, יהיה שנה שלמה בעבודתך. אמן.</p></div></div>
+<div class="section-divider">✦ ✦ ✦</div>
+<div class="chapter-label">פרק א</div>
+<h2 data-a="01-37" id="section2">באור המושג מצוות שבמחשבה.</h2>
+<p data-a="01-38"><em>היכרות עם שלושת סוגי המצוות שבתורה, ולמה דווקא המצוות שבלב הן הגבוהות מכולן.</em></p>
+<div class="in-chapter-box"><h4 data-a="01-39">📖 בפרק זה:</h4><ul><li data-a="01-40">שלושה סוגי מצוות.</li><li data-a="01-41">מעלת המצוות שבלב – רבינו בחיי.</li><li data-a="01-42">מצוות שבלב גדולות אפילו מלימוד תורה.</li><li data-a="01-43">שני בתי המקדש נחרבו מחוסר לב.</li><li data-a="01-44">כיצד מקימים מצוות בלב?</li><li data-a="01-45">הלכות מחשבה.</li><li data-a="01-46">מדוע נקראו מצוות אלו מצוות שבלב?</li><li data-a="01-47">סיכום:</li></ul></div>
+<h3 data-a="01-48">שלושה סוגי מצוות.</h3>
+<div class="verse-box"><p data-a="01-49">המצוות שבתורה מתחלקות לשלושה סוגים: א. מצוות שבאיברים. ב. מצוות שבפה. ג. מצוות שבמוח ובלב. וכמו שכתוב בתורה (דברים ל,יד) "כִּי קָרוֹב אֵלֶיךָ הַדָּבָר מְאֹד בְּפִיךָ וּבִלְבָבְךָ לַעֲשׂתוֹ".</p></div>
+<h3 data-a="01-50">מעלת המצוות שבלב – רבינו בחיי.</h3>
+<p data-a="01-51">וכתב רבנו בחיי: בפיך ובלבבך לעשותו. הזכיר בכאן שלושה דברים, הפה והלב והמעשה. והנה כל המצוות נכללות בשלושה חלקים אלו, כי יש מצוות תלויות בפה ויש תלויות בלב ויש במעשה, ועל זה דרשו חז"ל (אבות א, ב) על שלושה דברים העולם עומד, על התורה ועל העבודה ועל גמילות חסדים, על התורה זהו בפיך, ועל העבודה זהו בלבבך זו עבודה שבלב, ועל גמילות חסדים זהו לעשותו.</p>
+<p data-a="01-52">ומן הידוע כי המצוות התלויות בלב עבודה גדולה להקב"ה מן המצוות התלויות בדיבור, ולכך אמרו חז"ל (שבת יא.) פוסק מדברי תורה לפסוק קריאת שמע, ואמרו (ברכות יג ע"ב) על פסוק ראשון זו היא קריאת שמע של רבי יהודה הנשיא.</p>
+<p data-a="01-53">והתלויות בדיבור עבודה גדולה יותר מן התלויות במעשה, ולכך אמרו (תנחומא פרשת צו יד) גדולה תורה יותר מכל הקרבנות כולן, שנאמר (ויקרא ז, לז) זאת התורה לעולה למנחה ולחטאת ולאשם ולמלואים ולזבח השלמים. ומפני זה הזכיר ובלבבך באמצע לחשיבותו מכולן והזכיר לעשותו אחריו עכ"ל.</p>
+<h3 data-a="01-54">מצוות שבלב גדולות אפילו מלימוד תורה.</h3>
+<p data-a="01-55">לפי דברי רבינו בחיי: יוצא שמה שאמרו תלמוד תורה כנגד כולם זה רק כנגד כל מצוות שבמעשה- באברים (כמו הכנסת כלה גמ"ח וכ"ו) אבל מצוות שבלב יותר גדולות מת"ת,</p>
+<p data-a="01-56">למשל: יהודי שיש לו אמונה חזקה בה' יתברך שכל מה שעושה ה' הכול לטובה אבל אינו בקי בכל הש''ס לעומת זאת חבירו בקי בכל הש''ס אבל אמונתו פחות חזקה, זה שאמונתו חזקה יותר גדול.</p>
+<p data-a="01-57">ובאמת זו גמרא מפורשת מסכת סנהדרין דף קו/ב: אמר רבי יצחק מאי דכתיב איה סופר איה שוקל איה סופר את המגדלים, איה סופר כל אותיות שבתורה איה שוקל ששוקל כל קלים וחמורים שבתורה איה סופר את המגדלים שהיה סופר שלש מאות הלכות פסוקות במגדל הפורח באויר, אמר רבי אמי ארבע מאה בעייא בעו דואג ואחיתופל במגדל הפורח באויר,  אמר רבא רבותא למבעי בעיי בשני דרב יהודה כולי תנויי בנזיקין (בזמן רב יהודה כל לימודם היה רק בסדר נזיקין) ואנן קא מתנינן טובא בעוקצין (ואנחנו לומדים הרבה אפילו סדר טהרות) וכי הוה מטי רב יהודה אשה שכובשת ירק בקדירה ואמרי לה זיתים שכבשן בטרפיהן טהורים אמר הויות דרב ושמואל קא חזינא הכא, ואנן קא מתנינן בעוקצין תלת סרי מתיבתא (רב יהודה לא היה מבין בסדר טהרות והיה אומר על משנה מסוימת זה קשה כמו הבעיות של רב ושמואל, ומוסיף רבא למרות שאנו בקיאים בתורה הרבה יותר מהם בכל זאת ה' יותר אוהב אותם כמו שרואים מהמעשה הבא) ורב יהודה שליף מסאני ואתא מטרא ואנן צוחינן וליכא דמשגח בן (מסביר רבא כיצד יתכן ודורות ראשונים שידעו פחות תורה ה' יותר אהב אותם?)</p>
+<p data-a="01-58">אלא הקדוש ברוך הוא ליבא בעי דכתיב וה' יראה ללבב, (למרות חשיבות התורה יש דבר יותר חשוב והוא מצוות שבלב - כגון: אמונה, מידות טובות, אהבת ישראל, אהבת הבורא, ומי שיש לו אותם הוא גדול יותר ממי שבקי בתורה וחסר לו לב, וכ"כ הר"ן בדרשות הר"ן דרוש ו ע"ש.)</p>
+<h3 data-a="01-59">שני בתי המקדש נחרבו מחוסר לב.</h3>
+<p data-a="01-60">שנתבונן נראה שבשני בתי המקדש למדו תורה, ובכל זאת נחרבו בתי המקדש בגלל חוסר קיום המצוות שבלב.</p>
+<p data-a="01-61">בית מקדש ראשון חוסר לב – בין אדם למקום.</p>
+<p data-a="01-62">בית מקדש שני חוסר לב – בין אדם לחבירו.</p>
+<p data-a="01-63">בית ראשון:</p>
+<div class="quote-box"><p data-a="01-64">דאמר רב יהודה אמר רב מאי דכתיב (ירמיה פרק ט יא) מִי הָאִישׁ הֶחָכָם וְיָבֵן אֶת זֹאת וַאֲשֶׁר דִּבֶּר פִּי יְדֹוָד אֵלָיו וְיַגִּדָהּ עַל מָה אָבְדָה הָאָרֶץ נִצְּתָה כַמִּדְבָּר מִבְּלִי עֹבֵר: וַיֹּאמֶר יְדֹוָד עַל עָזְבָם אֶת תּוֹרָתִי אֲשֶׁר נָתַתִּי לִפְנֵיהֶם וְלֹא שָׁמְעוּ בְקוֹלִי וְלֹא הָלְכוּ בָהּ: דבר זה נשאל לחכמים ולנביאים ולא פירשוהו עד שפירשו הקדוש ברוך הוא בעצמו דכתיב ויאמר ה' על עזבם את תורתי וגו' היינו לא שמעו בקולי היינו לא הלכו בה אמר רב יהודה אמר רב שאין מברכין בתורה תחלה.</p><p data-a="01-65" class="source-tag">— תלמוד בבלי מסכת נדרים דף פא/א</p></div>
+<p data-a="01-66">עיין בב''ח אורח חיים סימן מ''ז שהסביר שלא למדו בשביל להתחבר לה' בליבם, לבנות משכן לה' בליבם – דבקות ואהבת ה'.</p>
+<p data-a="01-67">בית שני:</p>
+<div class="quote-box"><p data-a="01-68">מצאנו שלא חרב הבית בראשונה אלא שהיו עובדי עכו"ם ומגלי עריות ושופכין דמים, אבל בשני מכירין אנו אותם שהיו יגיעין בתורה וזהירין במצות ובמעשרות וכל ווסת טובה (הנהגה טובה) היתה בהן,</p><p data-a="01-69" class="source-tag">— ירושלמי מסכת יומא דף ד/ב</p></div>
+<p data-a="01-70">אלא שהיו אוהבין את הממון ושונאין אלו לאלו שנאת חנם,</p>
+<p data-a="01-71">וקשה היא שנאת חנם שהיא שקולה כנגד ע"א וגילוי עריות ושפיכות דמים..</p>
+<p data-a="01-72">חוסר באהבת ישראל – החריב את בית המקדש שני.</p>
+<p data-a="01-73">למדנו מכאן: עד כמה חשוב לה' יתברך המצוות שבלב שכאשר הם חסרים למרות שלומדים תורה ומקימים מצוות, העיקר חסר – חורבן.</p>
+<h3 data-a="01-74">כיצד מקימים מצוות בלב?</h3>
+<div class="qa-box"><p data-a="01-75"><strong>שאלה:</strong> כיצד מקימים מצוות בלב וכי אדם יכול לומר לליבו תרגיש כך וכך?</p><p data-a="01-76">תשובה: במחשבה, כאשר אדם חושב מחשבות מסוימות הם משפיעות לאט לאט על הלב, ובמחשבות אלו הוא מקיים מצוות שבלב.</p></div>
+<p data-a="01-77">כל פעם שאדם בוחר להעביר בראשו מחשבות שה' חפץ שיחשוב בהם, הוא מקיים מצווה.</p>
+<p data-a="01-78">צריך לדעת יסוד גדול בעבודת ה' כשם שאדם מקיים מצוות באיברים, ומצוות בפה, כך אדם מקיים מצוות במחשבה.</p>
+<h3 data-a="01-79">הלכות מחשבה.</h3>
+<p data-a="01-80">בשולחן ערוך כתוב הלכות של מעשה, לדוגמא: יהודי שאוכל בשבת דג עם עצמות כיצד יוציא את העצמות מהדג, זה הלכות כיצד היד צריכה לפעול.</p>
+<p data-a="01-81">בחפץ חיים כתוב הלכות של דיבור: מה מותר לדבר ומה אסור לדבר,</p>
+<p data-a="01-82">ויש גם הלכות של מחשבה: מה מותר לחשוב, מה אסור לחשוב, ומה מצווה לחשוב.</p>
+<p data-a="01-83">וכשם שיש חילוק בהלכה עם מדובר בשבת או ביום חול, ובהלכות דיבור יש הבדל אם מדבר לתועלת או שלא לתועלת, כך גם בהלכות מחשבה יש חילוקים מתי צריך לחשוב כך ומתי צריך לחשוב כך.</p>
+<p data-a="01-84">היכן כתובים הלכות מחשבה?</p>
+<p data-a="01-85">חלק קטן כתוב בשולחן ערוך, ורובו כתוב בספרי המוסר השונים.</p>
+<p data-a="01-86">בחוברת זו ננסה ללמוד הלכות מחשבה שהתורה מלמדת אותנו לחשוב כאשר התינוק בוכה בלילה.</p>
+<p data-a="01-87">וכך כתב הרמב''ם בספר המצוות:</p>
+<p data-a="01-88">מצווה ג' היא שצונו באהבתו יתעלה. וזה שנחשוב ונתבונן במצותיו ומאמריו ופעולותיו עד שנשיגהו ונהנה בהשגתו בתכלית ההנאה, וזאת היא האהבה המחוייבת, ולשון ספרי לפי שנאמר ואהבת את ה' אלהיך איני יודע כיצד אוהב את המקום תלמוד לומר והיו הדברים האלה אשר אנכי מצוך היום על לבבך שמתוך כך אתה מכיר את מי שאמר והיה העולם. הנה בארנו לך שבהתבוננות תעלה בידך ההשגה ותגיע ההנאה ותבא האהבה בהכרח.</p>
+<p data-a="01-89">למדנו מדברי הרמב"ם: שמצוות שלב קונים על ידי מחשבה והתבוננות.</p>
+<p data-a="01-90">ודע!  שמצוות אלו שבמחשבה הם הרבה יותר גדולות ממצוות שבפה (תורה ותפילה) ובאברים (תפילין חסד), שכן ככל שהמעשה נעשה אם אבר יותר גבוה באדם הוא יותר גדול,  ועוד  שבמצוות אלו יש מעלה גדולה מחמת שהם נסתרות דהינו אף אדם לא יודע מה חשבת בהם ועליהם נאמר הנסתרות לה' אלוקינו, שרק ה' יודע אותם, ובהם מקיים והצנע לכת עם אלוקיך .</p>
+<h3 data-a="01-91">מדוע נקראו מצוות אלו מצוות שבלב?</h3>
+<div class="qa-box"><p data-a="01-92"><strong>שאלה:</strong> לפי מה שלמדנו שמצוות שבלב קונים על ידי מחשבה מדוע קראה להם התורה מצוות שבלב היה מתאים לקרוא להם מצוות שמחשבה?</p><p data-a="01-93">תשובה: שני תשובות בדבר:</p></div>
+<p data-a="01-94">אם היו קוראים למצוות אלו מצוות שבמחשבה היה אדם מסתפק במחשבה קלה ללא התבוננות עמוקה, באה התורה ואמרה אתה צריך לדאוג שיהיה לך לב אם אמונה ואהבה (אהבת ה' וישראל) ובשביל זה צריך מחשבות חזקות וכלשון הרמב"ם לחשוב, להתבונן, להשיג, להנות.</p>
+<p data-a="01-95">אם היה קוראים להם מצוות שבמחשבה היתי מסתפק במחשבה פעם בחודש ודינו באה התורה ואמרה לך צריך לב, וממילא כל עוד אדם מרגיש שחסר לו בלב צריך להמשיך ולחשוב עוד ועוד.</p>
+<p data-a="01-96">ניתן לראות את כל מה שלמדנו בפסוק:"וידעת היום והשבות אל לבבך".</p>
+<p data-a="01-97">ראשית וידעת – מחשבות והתבוננות חזקות, וכמה מחשבות עד כדי והשבות אל לבבך.</p>
+<h3 data-a="01-98">סיכום:</h3>
+<div class="highlight-box"><p data-a="01-99">שלושה סוגי מצוות יש: מעשה, דיבור ומחשבה – לב.</p>
+<p data-a="01-100">מעלת המצוות שבלב גדולה מכולם.</p>
+<p data-a="01-101">מצוות שבלב קונים על ידי מחשבה חזקה.</p>
+<p data-a="01-102">כאשר מעביר במוחו מחשבות שה' רוצה מקיים מצווה.</p>
+<p data-a="01-103">בנושאים אלו האריכו בספרים: א. תנה בני לבך לי. ב.פסוקי קרבת ה'. (להשיג בחנויות יפה נוף) ג. מישרים אהבוך – הלכות אהבת ה'.  (להשיג – 02-5635380 )</p>
+<p data-a="01-104">בפרקים הבאים נעסוק:</p>
+<p data-a="01-105">א. מהם המחשבות שמצווה לחשוב שהתינוק בוכה באמצע הלילה?</p>
+<p data-a="01-106">ב. היכן מחשבות אלו כתובות בתורה?</p>
+<p data-a="01-107">ג. והאם זה חובה לחשוב מחשבות אלו או רשות?</p></div>
+<div class="guiding-box"><h4 data-a="01-108">🤔 להתבוננות</h4><ul><li data-a="01-109">מהם שלושת סוגי המצוות, ומדוע דווקא מצוות שבלב הן הגדולות מכולן?</li><li data-a="01-110">מה ההבדל בין "מצוות שבמחשבה" ל"מצוות שבלב" — ולמה זה משנה הלכה למעשה?</li><li data-a="01-111">כיצד אוכל להתחיל לתרגל היום ממש מחשבה שמקיימת מצווה?</li></ul></div>
+<div class="prayer-box"><div class="prayer-box-inner"><h4 data-a="01-112">🙏 תפילה מסכמת</h4><p data-a="01-113">אבא שבשמים, למדתני שגם כשאין בפי מילים ואין בידי מעשה, יש בליבי עולם ומלואו שיכול לעבוד אותך. זכני שדווקא ברגעי הלילה השקטים, כשאני לבד עם מחשבותיי, אדע לכוון את ליבי אליך, ותביא אותי מהתבוננות להשגה, ומהשגה לאהבה אמיתית. אמן.</p></div></div>
+<div class="section-divider">✦ ✦ ✦</div>
+<div class="chapter-label">פרק ב</div>
+<h2 data-a="01-114" id="section3">באור הפסוק שמע ישראל.</h2>
+<p data-a="01-115"><em>צלילה עמוקה לפסוק "שמע ישראל", ולביאור הרשב"א על תכליתה האמיתית של קריאת שמע.</em></p>
+<div class="in-chapter-box"><h4 data-a="01-116">📖 בפרק זה:</h4><ul><li data-a="01-117">באור נפלא מהרשב''א על מצוות קריאת שמע ותכלית היהודי.</li><li data-a="01-118">כיצד תוכל לקיים את שני הדברות הראשונות?</li><li data-a="01-119">ספר הזכרונות לר' צדוק הכהן מלובלין- מצות עשה אנכי.</li><li data-a="01-120">קריאת שמע כנגד שני הדיברות הראשונות.</li><li data-a="01-121">באור האמונה באחדות ה'?</li><li data-a="01-122">כיצד מקימים את קריאת שמע?</li><li data-a="01-123">לסיכום באור הפסוק שמע ישראל:</li><li data-a="01-124">דוגמא למעשה:</li></ul></div>
+<p data-a="01-125">אנו אומרים בכל יום פעמים ביום לפחות את הפסוק של האמונה:</p>
+<p data-a="01-126">"שמע ישראל ה' אלוקינו ה' אחד".</p>
+<p data-a="01-127">ננסה להתבונן מה פסוק זה מלמד אותנו הלכה למעשה?</p>
+<p data-a="01-128">ואלו מחשבות אנו צריכים ללמוד מפסוק זה?</p>
+<h3 data-a="01-129">באור נפלא מהרשב''א על מצוות קריאת שמע ותכלית היהודי.</h3>
+<p data-a="01-130">שו''ת הרשב"א חלק ה' סימן נ''ה.</p>
+<p data-a="01-131">"עוד שאלת, לבאר לך ענין פרשת קריאת שמע: כבר אמרתי שאין לנו עסק בנסתרות. ובאמת יש לכל בעל דעה לדעת כי היא פרשה מיוחדת לנו, כוללת היחוד והאמונה, שהיא באמת רומזת סודות ועיקרים גדולים שהם יסודות כל הבנין אשר בית ישראל נכון עליהם. ואמנם יש לנו רשות להתבונן בפשטי הדברים, שהתורה כולה רומזת ואומרת. ואני אומר ואגיד לך גם בזה, ענינים עלו בלבי מפשט הענין שנצטרך לכוין אליה בשעת הקריאה והוא...</p>
+<p data-a="01-132">ואחר שנבא מתוך השמיעה אל החקירה באמת תביאנו החקירה ותכריחנו הכרח אמתי לקבל ולהאמין כי הוא ית' נמצא, וכן הוא משגיח על פרטי מעשנו. והוא אומרו אלהינו שלטון אלהות מנהיג ודיין. כמו נתתיך אלהים לפרעה (שמות ז, א) תרגם אנקלוס רבה. אלהים לא תקלל (שם כב, כז) תרגום דיינא. ולפי שהמתפלספים משתבשין וגוזרין שהוא ית' אינו משגיח בפרטים התחתונים ואפילו במין האנושי. והוא כדעת האומרים (איוב כב, יד) עבים סתר לו ולא יראה וחוג שמים יתהלך. על כן אמר אלהינו, כי הוא משגיח בנו. ומצטרף לזה שהוא מנהיגנו ולא כוכב ולא מזל ולא שר משרי מעלה רק הוא ית'. ושהוא הבדילנו לשמו ולקחנו לחלקו. כאומרו (דברים לב, ח-ט) בהנחל עליון גוים וכו', כי חלק ה' עמו. ושהוא ית' אחד ואין עוד. וכבר ביאר כל מה שאמרנו באומרו (שם ד, לט) וידעת היום והשבות אל לבבך כי ה' הוא האלהים בשמים ממעל ועל הארץ מתחת אין עוד. וידעת היום כולל הלימוד והשמיעה. והשבות אל לבבך על החקירה. כי ה' הוא האלהים כולל האמונה והקבלה. שהחקירה תביא לדעת שאין עוד זולתו אדון בשמים ממעל ועל הארץ מתחת אין עוד: (המשך דבריו ב )</p>
+<p data-a="01-133">לסיכום: הרשב"א מסביר שהמילים ה' אלוקינו מלמדים אותנו ג' דברים:</p>
+<p data-a="01-134">א. ה' יתברך משגיח על מעשי ידינו.</p>
+<p data-a="01-135">ב. הוא בעצמו ולא שר או מלאך.</p>
+<p data-a="01-136">ג. אנחנו העם הנבחר שהבדילנו לשמו ולקחנו לחלקו.</p>
+<p data-a="01-137">שאנחנו אומרים שה' משגיח אין הכוונה שרק באופן כללי הוא משגיח, אלא משגיח באופן פרטי על כל מקרה ומקרה, ממילא אם קורה לאדם שהתינוק בוכה בלילה, עליו להכיר שזה מושגח מאת ה'.</p>
+<p data-a="01-138">כאשר יהודי זוכה להעביר במחשבתו את המחשבה זה לא מקרה אלא זה רק מה' (אותיות מקרה) הוא זוכה לקיים מצוות עשה דאוריתא מצוות האמונה הכתובה בקריאת שמע.</p>
+<h3 data-a="01-139">כיצד תוכל לקיים את שני הדברות הראשונות?</h3>
+<p data-a="01-140">ספר שמות פרק כ – שתי הדיברות הראשונות:</p>
+<div class="verse-box"><p data-a="01-141">(א) וַיְדַבֵּר אֱלֹהִים אֵת כָּל הַדְּבָרִים הָאֵלֶּה לֵאמֹר:</p></div>
+<div class="verse-box"><p data-a="01-142">(ב) אָנֹכִי יְדֹוָד אֱלֹהֶיךָ אֲשֶׁר הוֹצֵאתִיךָ מֵאֶרֶץ מִצְרַיִם מִבֵּית עֲבָדִים:</p></div>
+<div class="verse-box"><p data-a="01-143">(ג) לֹא יִהְיֶה לְךָ אֱלֹהִים אֲחֵרִים עַל פָּנָי:</p></div>
+<p data-a="01-144">אנכי ה' אלוקיך אשר הוצאתיך מארץ מצרים – מבאר הבה''ל (סימן א ד''ה הוא) מצווה זו כוללת: להאמין שיש אלוה אחד בעולם, שהמציא כל הנמצאות, ומחפצו ורצונו הוא כל מה שהוא עכשיו ושהיה ושיהיה לעדי עד, ושהוא הוציאנו ממצרים ונתן לנו התורה, וזהו מ"ע דכתיב אנכי ה' אלהיך אשר הוצאתיך וגו' ופירושו תדעו ותאמינו שיש לעולם אלוה המשגיח שהרי הוצאתיך מארץ מצרים (ואז ראיתם שאני שולט בכל הבריאה).</p>
+<p data-a="01-145">וכן כתב הרמב''ם באני מאמין הראשון "והוא עשה ועושה ויעשה לכל המעשים".</p>
+<p data-a="01-146">לא יהיה לך אלוהים אחרים על פני – פירושו שנאמין שאין לשום נברא בבריאה כוח לעשות דבר בלתי רצונו.</p>
+<p data-a="01-147">וכדברי הרמב''ן סוף פרשת בא: שאין לאדם חלק בתורת משה רבינו עד שנאמין בכל דברינו ומקרינו שכלם נסים אין בהם טבע ומנהגו של עולם.</p>
+<p data-a="01-148">נמצא שאדם ח''ו מתרגז על הילד שלו שבוכה, למה הוא מתנהג כך, עובר על לאוו מעשרת הדיברות שהרי הוא חושב שיש עוד כוח בעולם לעשות דברים למרות שה' לא גזר.</p>
+<p data-a="01-149">וכמו שכתב בספר התניא - אגרת הקודש - פרק כה</p>
+<p data-a="01-150">אמרו רבותינו זכרונם לברכה: כל הכועס כאילו עובד עכו"ם וכו'. והטעם מובן ליודעי בינה לפי שבעת כעסו נסתלקה ממנו האמונה כי אילו היה מאמין שמאת ה' היתה זאת לו לא היה בכעס כלל ואף שכן אדם שהוא בעל בחירה מקללו או מכהו או מזיק ממונו ומתחייב בדיני אדם ובדיני שמים לרוע בחירתו אעפי"כ על הניזק כבר נגזר מן השמים והרבה שלוחים למקום ולא עוד אלא אפילו בשעה זו ממש שמכהו או מקללו מתלבש בו כח ה' ורוח פיו ית' המחייהו ומקיימו וכמ"ש כי ה' אמר לו קלל והיכן אמר לשמעי אלא שמחשבה זו שנפלה לשמעי בלבו ומוחו ירדה מאת ה' ורוח פיו המחי' כל צבאם החיה רוחו של שמעי בשעה שדיבר דברים אלו לדוד כי אילו נתסלק רוח פיו ית' רגע אחד מרוחו של שמעי לא יכול לדבר מאומה.</p>
+<p data-a="01-151">לא ניתן לקנות דברים אלו בליבו ביום אחד, אבל אם כל פעם שיקרה לו מקרה מסוים יעביר במחשבתו את המחשבות הללו: א. ה' משגיח על הכול. ב. אף אחד לא עושה דבר בלתי רצונו. ג. הכול מאת ה'.</p>
+<p data-a="01-152">במשך הזמן יקנה דברים אלו בליבו ובזה קונה את מצוות האמונה והביטחון.</p>
+<h3 data-a="01-153">ספר הזכרונות לר' צדוק הכהן מלובלין- מצות עשה אנכי.</h3>
+<p data-a="01-154">"ופרטי אמונה זו הם שנים. וזכרם הכתוב כמו שנאמר אנכי ה' אלקיך.</p>
+<p data-a="01-155">כי ה' והוא שם ההוי"ה שמשמעותו ופירוש כוונתו הוא היה והוה ויהיה כמו שאיתא באורח חיים (סימן ה') מזהיר להאמין על היותו יתברך נצחיי והוא ראשון לכל היצור והוא אחריתם ומהוה הכל.</p>
+<p data-a="01-156">ואלקיך והוא שם אלקים שביאורו מנהיג ובעל הכוחות כולם שבכל כוחותיו מנהיג עולמו ולהאמין שהוא יתברך משגיח בכל פרטי היצור כולם וכל המתהוה הנארע באחד מהם ממנו יתברך הוא נתהוה.</p>
+<p data-a="01-157">וביאר זה הכתוב במה שאמר אחר כך אשר הוצאתיך מארץ מצרים. רצה לומר לראיה ולמופת שאנכי אלקיך מנהיגך ומשגיחך הוא אשר הוצאתיך וגו' שאז נראית השגחתו יתברך ויתעלה במוחש לעין כל כי לקח לו גוי מקרב גוי במסות באותות וכו'. (ויהיה מלת אשר ביאורו בעבור כמו (מלכים - א ט"ו, י"ג) אשר עשתה מפלצת) וביאר הכתוב שידיעת האדם אמונה זו במוחש הוא היציאה מארץ מצרים"</p>
+<h3 data-a="01-158">קריאת שמע כנגד שני הדיברות הראשונות.</h3>
+<p data-a="01-159">משנה ברורה סימן סא סק"ב: אליהו רבא הביא בשם הכלבו והוא בירושלמי סוף פ"ק דברכות, דבק"ש מרומז עשרת הדברות.</p>
+<p data-a="01-160">בד' אלהינו מרומז אנכי ד' אלהיך, ד' אחד דיבור לא יהיה לך.</p>
+<p data-a="01-161">לאחר שלמדנו את באור שני הדיברות הראשונות, נבין טוב יותר את באור שמע ישראל.</p>
+<p data-a="01-162">שמע ישראל ה' אלוקינו ה' אחד</p>
+<p data-a="01-163">ה' אלוקינו זה כנגד אנכי ה' (שנאמין שהוא משגיח).</p>
+<p data-a="01-164">ה' אחד – כנגד לא יהיה (שאין לשום נברא כוח ללא רצונו).</p>
+<h3 data-a="01-165">באור האמונה באחדות ה'?</h3>
+<p data-a="01-166">מה נוסף בה' אחד יותר ממה שלמדנו מה' אלוקינו?</p>
+<p data-a="01-167">ת: מה' אלוקינו – למדנו שהוא משגיח, אבל עדין יכולים אנו לחשוב שהוא כמו מנהל בנק שאמנם הוא מנהל הכול, אבל בפועל כל פקיד עושה מה שהוא מבין ואין המנהל בודק כל רגע מה כל פקיד עושה,</p>
+<p data-a="01-168">לכן אנו אומרים ה' אחד שהוא נמצא בכל רגע אצל כל אדם, ואין מעשה אחד שאדם יעשה לולא שה' רצה בכך. (עיין על כך בחוברת פסוקי קרבת ה'.)</p>
+<h3 data-a="01-169">כיצד מקימים את קריאת שמע?</h3>
+<p data-a="01-170">צריך לדעת דבר נפלא: יש לקרוא ק''ש ויש לקיים, וודאי המעלה של המקיים ק''ש היא לאין ערוך מהקורא, כמו שרואים שר' עקיבא כל יום שקרא ק"ש היה מצפה ומיחל מתי יזכה לקיים את ק"ש,</p>
+<p data-a="01-171">לכן כל פעם שמצערים אותך וכד' ואתה זוכר שהכול מאיתו יתברך – דע עכשיו קימת את ק"ש וזה שווה הרבה יותר מאשר לקרוא ק''ש.</p>
+<h3 data-a="01-172">לסיכום באור הפסוק שמע ישראל:</h3>
+<div class="highlight-box"><p data-a="01-173">שמע ישראל הוא כנגד שני הדיברות הראשונות.</p>
+<p data-a="01-174">ה' אלוקינו כנגד אנכי ה' - להאמין שה' משגיח על הכול.</p>
+<p data-a="01-175">ה' אחד כנגד לא יהיה - להאמין שאין לשום נברא כוח ללא רצונו.</p>
+<p data-a="01-176">שיש לאדם נסיון בדברים אלו והוא מעביר במחשבתו דברים אלו הוא זוכה לקיים את קריאת שמע שזה גדול לאין ערוך מלקרוא ק"ש.</p></div>
+<h3 data-a="01-177">דוגמא למעשה:</h3>
+<p data-a="01-178">התינוק בוכה באמצע הלילה, אתה נזכר במה שלמדת ומעביר במחשבה:</p>
+<p data-a="01-179">שמע ישראל (תפנים ללבך יהודי יקר!), ה' אלוקינו (אבינו היקר משגיח על הכול),</p>
+<p data-a="01-180">ה' אחד (אין דבר שנעשה לולא שהוא בעצמו רצה בכך עכשיו).</p>
+<p data-a="01-181">זכית לקיים את שני הדיברות הראשנות שניתנו מאת ה' יתברך בעצמו, את מצוות קריאת שמע שאנו קוראים פעמים בכל יום, מניחים בתפילין כל יום על היד ועל המוח  ובכל פתח מפתחי ביתנו – שכל אלו אמצעים שנזכה שיכנסו הדברים ללבנו</p>
+<p data-a="01-182">וזה תכלית כל המצוות כדברי הרמב''ן (סוף פרשת בא) שכוונת כל המצוות שנאמין באלוקינו וכ''ו ע''ש.</p>
+<p data-a="01-183">אבל אם קמת לתינוק באמצע הלילה ללא שום מחשבה על בורא עולם, הפסדת לקיים את שני הדיברות הראשונות שניתנו מאת ה', הפסדת את מצוות קריאת שמע, וכשתעבור ליד המזוזה, המזוזה תשאל אותך האם תלית אותי לקישוט על הקיר או להפנים בליבך, ומה תאמר לתפילין מחר אחד כנגד הלב ואחד כנגד המוח, והיכן הלב והמוח שלי?</p>
+<p data-a="01-184">זכור! כל פעם שהתינוק בוכה באמצע הלילה זוהי הזדמנות לקיים כמות עצומה של מצוות, וזה הזדמנות נפלאה לקנות את האמונה ללב, שזה תכלית כל עבודת ה'.</p>
+<div class="guiding-box"><h4 data-a="01-185">🤔 להתבוננות</h4><ul><li data-a="01-186">מהי לפי הרשב"א תכליתו של קריאת שמע, מעבר לעצם אמירתה?</li><li data-a="01-187">כיצד קריאת שמע קשורה לשתי הדברות הראשונות?</li><li data-a="01-188">מה משמעות "לקיים" קריאת שמע, ולא רק לקרוא אותה?</li></ul></div>
+<div class="prayer-box"><div class="prayer-box-inner"><h4 data-a="01-189">🙏 תפילה מסכמת</h4><p data-a="01-190">ה' אלוקינו ה' אחד, זכני שקריאת שמע שלי לא תישאר רק מילים על שפתיי, אלא תחדור לליבי ותעצב את חיי. תן לי לחיות מתוך אמונה שלמה באחדותך בכל מצב, גם כשקשה להבין את דרכיך, ותזכני להגיע ליום שבו אקיים באמת את שני הדברות הראשונות באהבה ובשמחה. אמן.</p></div></div>
+<div class="section-divider">✦ ✦ ✦</div>
+<div class="chapter-label">פרק ג</div>
+<h2 data-a="01-191" id="section4">מצוות אהבת ה'.</h2>
+<p data-a="01-192"><em>מהי מצוות אהבת ה', ומדוע היא חובה נפרדת מעצם האמונה בו יתברך.</em></p>
+<div class="in-chapter-box"><h4 data-a="01-193">📖 בפרק זה:</h4><ul><li data-a="01-194">פתיחה: מדוע לא מספיק להאמין?</li><li data-a="01-195">מצוות אהבת ה'-תכלית כל המצוות.</li><li data-a="01-196">אהבת ה' – הלכה למעשה.</li><li data-a="01-197">מתי יש חובה לעורר עצמו לאהבת ה'?</li><li data-a="01-198">שיעור השמחה עיין הערה .</li><li data-a="01-199">כיצד עושים זאת למעשה?</li><li data-a="01-200">ברכה על הרעה.</li></ul></div>
+<h3 data-a="01-201">פתיחה: מדוע לא מספיק להאמין?</h3>
+<p data-a="01-202">לאחר שהאדם זכה להאמין שהכול מאת ה' יש עליו מצווה נוספת וחשובה מאוד: אהבת ה', שכן לאחר שיודע האדם שהכול בהשגחת בורא עולם הוא עלול להתקומם ולהתמרד על ההנהגה שבורא עולם בחר להנהיגה בו, למה ה' עשה לי את זה? לא מגיע לי אני אדם טוב.</p>
+<p data-a="01-203">לשם כך באה מצווה חשובה מאוד והיא:</p>
+<h3 data-a="01-204">מצוות אהבת ה'-תכלית כל המצוות.</h3>
+<p data-a="01-205">יש לנו מצווה עשה שכתובה שלוש עשרה פעמים בתורה הקדושה, אנו קוראים אותה בק"ש מיד אחרי מצוות האמונה (בפסוק שמע ישראל), וגדולה היא מצוות אהבת ה' שהיא תחילת קיום המצוות, והיא גם תכלית קיום כל המצוות,</p>
+<p data-a="01-206">וכדברי ספר חובות הלבבות (בפתיחה לשער העשירי - שער אהבת ה'):</p>
+<p data-a="01-207">"ראוי לך, אחי, שתבין ותדע, כי כל מה שקדם לנו זכרו בספר הזה מחובות הלבבות והמידות ונדבת הנפשות - הן מעלות ומדרגות אל הענין העליון הזה (אהבת ה'), אשר התכווננו לבארו בשער הזה.</p>
+<p data-a="01-208">וגם ראוי לך לדעת, כי כל חובה וכל מידה טובה מושכלת או כתובה או מקובלת הן תכונות ומעלות, שעולים בהן אל הענין הזה והוא תכליתן וסופן, אין מדרגה למעלה ממנו ולא אחריו, ומפני זה סמכו הנביא, עליו השלום, במשנה - תורה לייחוד, באמרו (דברים ו ד): שמע ישראל ה' אלהינו ה' אחד, ואהבת את ה' אלהיך. וזירז עליו והשיב אותו במשנה - תורה הרבה, כמו שנאמר (דברים ל כ): לאהבה את ה' אלהיך לשמוע בקולו ולדבקה בו, וטעם הדביקה - האהבה הנאמנה והלב השלם בה".</p>
+<h3 data-a="01-209">אהבת ה' – הלכה למעשה.</h3>
+<p data-a="01-210">והנה מצווה זו אפשר לקיים אותה על ידי מחשבות מסוימות במשך כל היום, עיין על כך בספרים מישרים אהבוך, בשמחה ובטוב לבב ח"ב ועוד, ואין חובה מסוימת לחשוב על כך בזמן מסוים, ועיין בסוף ספר שמירת הלשון לחפץ חיים מה שחידש בזה.</p>
+<p data-a="01-211">אבל יש זמנים שיש חיוב גמור לקיים מצווה זו- פרוש: יש חובה לחשוב מחשבות של אהבת ה', אחד מהזמנים הללו זה כאשר התינוק בוכה באמצע הלילה, כמו שנלמד באות הבאה.</p>
+<h3 data-a="01-212">מתי יש חובה לעורר עצמו לאהבת ה'?</h3>
+<p data-a="01-213">משנה מסכת ברכות פרק ט משנה ה.</p>
+<p data-a="01-214">חַיָּב אָדָם לְבָרֵךְ עַל הָרָעָה כְּשֵׁם שֶׁהוּא מְבָרֵךְ עַל הַטּוֹבָה, שֶׁנֶּאֱמַר (דברים ו) וְאָהַבְתָּ אֵת יְיָ אֱלֹהֶיךָ בְּכָל לְבָבְךָ וּבְכָל נַפְשְׁךָ וּבְכָל מְאֹדֶךָ. בְּכָל לְבָבְךָ, בִּשְׁנֵי יְצָרֶיךָ, בְּיֵצֶר טוֹב וּבְיֵצֶר רָע. וּבְכָל נַפְשְׁךָ, אֲפִלּוּ הוּא נוֹטֵל אֶת נַפְשְׁךָ. וּבְכָל מְאֹדֶךָ, בְּכָל מָמוֹנְךָ. דָּבָר אַחֵר בְּכָל מְאֹדֶךָ, בְּכָל מִדָּה וּמִדָּה שֶׁהוּא מוֹדֵד לָךְ הֱוֵי מוֹדֶה לוֹ בִּמְאֹד מְאֹד.</p>
+<p data-a="01-215">באור הדרשה: לחז"ל היה קשה למה כתוב בכל מאדך ולא כתוב בכל נכסיך? עוד קשה אחרי שציוה בכל נפשך שאפילו נוטל את נפשך לשם מה ציוה בכל מאודך שזה יותר קל?</p>
+<p data-a="01-216">מכאן דרשו חז"ל: בכל מאדך – לשון מדידה, כל מידה ומידה שה' נוהג איתך יש חיוב להודות לו מאוד מאוד. (ולפ"ז המילה מאדך נדרשת לשני פנים: א. לשון מדידה. ב. לשון מאוד.)</p>
+<p data-a="01-217">והגמ' (ברכות דף ס/ב) מקשה על דין זה:</p>
+<p data-a="01-218">מאי חייב לברך על הרעה כשם שמברך על הטובה אילימא כשם שמברך על הטובה הטוב והמטיב כך מברך על הרעה הטוב והמטיב והתנן על בשורות טובות אומר הטוב והמטיב על בשורות רעות אומר ברוך דיין האמת?</p>
+<p data-a="01-219">אמר רבא לא נצרכה אלא לקבולינהו בשמחה,</p>
+<p data-a="01-220">אמר רב אחא משום רבי לוי מאי קרא חסד ומשפט אשירה לך ה' אזמרה אם חסד אשירה ואם משפט אשירה רבי שמואל בר נחמני אמר מהכא בה' אהלל דבר באלהים אהלל דבר בה' אהלל דבר זו מדה טובה באלהים אהלל דבר זו מדת פורענות רבי תנחום אמר מהכא כוס ישועות אשא ובשם ה' אקרא צרה ויגון אמצא ובשם ה' אקרא ורבנן אמרי מהכא ה' נתן וה' לקח יהי שם ה' מבורך. אמר רב הונא אמר רב משום רבי מאיר וכן תנא משמיה דרבי עקיבא לעולם יהא אדם רגיל לומר כל דעביד רחמנא לטב עביד.</p>
+<p data-a="01-221">ונפסק בשו''ע (רכב סעיף ג),  חייב אדם לברך על הרעה בדעת שלמה ובנפש חפצה כדרך שמברך בשמחה על הטובה.</p>
+<p data-a="01-222">למדנו למרות שמצוות אהבת ה' אין לה זמני חיוב באופן רגיל, אבל כאשר קרה לאדם טובה חובה עליו לעורר בעצמו רגשי הכרת הטוב ואהבת ה', וכן שקורה לו רעה חובה עליו לעורר את המחשבות שה' אוהב אותו ועושה הכול לטובתו.</p>
+<h3 data-a="01-223">שיעור השמחה עיין הערה .</h3>
+
+<h3 data-a="01-224">כיצד עושים זאת למעשה?</h3>
+<p data-a="01-225">כל פעם שקורה לאדם דבר מצער, כגון שהתינוק בוכה בלילה, וזכה להאמין שזה מאת ה', יוסיף ויידע כי ה' אוהב אותו מאוד עוד יותר ממה שהוא אוהב את עצמו, ואם ה' עשה לו כך - זה לטובתו. וכמו שאמר הפסוק (דברים פרק ח פסוק ה) וְיָדַעְתָּ עִם לְבָבֶךָ כִּי כַּאֲשֶׁר יְיַסֵּר אִישׁ אֶת בְּנוֹ יְהוָה אֱלֹהֶיךָ מְיַסְּרֶךָּ:  פירוש: דע ותאמין שה' מייסר אותנו מחמת אהבתו אלינו ולא מחמת שנאה ח''ו, כמשל הילד שאימו לוקחת אותו לרופא שניים שסותם חור בשן, והילד בטוח שהרופא שונא אותו ואמא שלו כועסת עליו,מחמת חוסר שכלו, כך אדם צריך לדעת שה' רק מחפש טובתו, ומה שהוא לא מבין זה מחמת חוסר שכלו, (הפער בין ילד קטן לאדם מבוגר הוא כאין וכאפס לעומת הפער ביננו לבין ה' יתברך, ומה פלא שאיננו מבינים את דרכיו.)</p>
+<p data-a="01-226">לסיכום:</p>
+<p data-a="01-227">כאשר קורה  דבר לא רצוי, מצווה מהתורה להעביר במחשבתו (לפחות וראוי גם בפיו) שתי מחשבות:</p>
+<p data-a="01-228">שמע ישראל ה' אלוקינו ה' אחד – הכול מאת ה'.</p>
+<p data-a="01-229">ואהבת את ה' – ה' אוהב אותי ועושה רק מה שטוב לי.</p>
+<h3 data-a="01-230">ברכה על הרעה.</h3>
+<p data-a="01-231">וראוי לאדם  לומר בפיו בכל פעם :</p>
+<p data-a="01-232">אני מאמין שיש לי אבא שהוא בעל הבית על כל הבריאה וכל מה שקורה בעולם זה רק ממנו יתברך, הוא אוהב אותי מאוד וחושב רק להייטיב, ואם קרה לי כך ודאי שזה טוב מודה אני לך אבא אוהב:</p>
+<p data-a="01-233">א. על שזכית אותי עכשיו: לקיים מצוות אמונה, ומצוות אהבת ה' שמצוות אלו הם תכלית כל האדם בעוה''ז.</p>
+<p data-a="01-234">ב. על שעשית עימדי דבר שנראה לעיני כמצער שהוא באמת דבר טוב .</p>
+<div class="guiding-box"><h4 data-a="01-235">🤔 להתבוננות</h4><ul><li data-a="01-236">מדוע לדעת הרמב"ם לא די באמונה בה', ויש חובה נפרדת של אהבתו?</li><li data-a="01-237">מתי בדיוק חלה חובת ההתעוררות לאהבת ה', וכיצד זה נראה בחיי היום-יום שלי?</li><li data-a="01-238">מה פירוש "ברכה על הרעה" — וכיצד אפשר לשמוח גם ברגע קשה?</li></ul></div>
+<div class="prayer-box"><div class="prayer-box-inner"><h4 data-a="01-239">🙏 תפילה מסכמת</h4><p data-a="01-240">רבונו של עולם, זכני לאהוב אותך לא רק בזמנים הטובים אלא גם ברגעי הקושי, ולדעת שגם אז אתה עמי ומנהיג אותי בחסד. תן לי לב שיודע לברך גם על הרע מתוך אמונה שהכול לטובה, ותוליכני מאהבה נסתרת בליבי לאהבה גלויה בכל מעשיי. אמן.</p></div></div>
+<div class="section-divider">✦ ✦ ✦</div>
+<div class="chapter-label">פרק ד</div>
+<h2 data-a="01-241" id="section5">למה ר' עקיבא חיכה כל חייו?</h2>
+<p data-a="01-242"><em>סיפורו של ר' עקיבא, שחיכה כל ימיו לזכות לקיים "ובכל נפשך" — ומה זה מלמד אותנו.</em></p>
+<div class="in-chapter-box"><h4 data-a="01-243">📖 בפרק זה:</h4><ul><li data-a="01-244">מעשה בר' עקיבא.</li><li data-a="01-245">מתי אזכה לקיים.</li><li data-a="01-246">העצה של ר' עקיבא.</li><li data-a="01-247">למה רצה ר' עקיבא למות?</li><li data-a="01-248">הלכה למעשה.</li><li data-a="01-249">סיכום:</li></ul></div>
+<h3 data-a="01-250">מעשה בר' עקיבא.</h3>
+<div class="quote-box"><p data-a="01-251">בשעה שהוציאו את רבי עקיבא להריגה זמן קריאת שמע היה והיו סורקים את בשרו במסרקות של ברזל והיה מקבל עליו עול מלכות שמים אמרו לו תלמידיו רבינו עד כאן? אמר להם כל ימי הייתי מצטער על פסוק זה בכל נפשך אפילו נוטל את נשמתך אמרתי מתי יבא לידי ואקיימנו ועכשיו שבא לידי לא אקיימנו, היה מאריך באחד עד שיצתה נשמתו באחד יצתה בת קול ואמרה אשריך רבי עקיבא שיצאה נשמתך באחד אמרו מלאכי השרת לפני הקדוש ברוך הוא זו תורה וזו שכרה ממתים ידך ה' ממתים וגו' אמר להם חלקם בחיים יצתה בת קול ואמרה אשריך רבי עקיבא שאתה מזומן לחיי העולם הבא:</p><p data-a="01-252" class="source-tag">— תלמוד בבלי מסכת ברכות דף סא/ב</p></div>
+<h3 data-a="01-253">מתי אזכה לקיים.</h3>
+<p data-a="01-254">ר' עקיבא אמר: "כל ימי היתי מצטער מתי יבוא מקרא זה לידי ואקיימנו"  ר' עקיבא זכה לקרוא כל יום ק''ש וזכה שכאשר הגיע ל"בכל נפשך" קיבל על עצמו למסור את נפשו לבורא עולם, אבל עדין הרגיש ר' עקיבא שחסר לו מעלה עצומה – לקיים, ולכן כל ימיו חיכה וציפה מתי כבר לא רק יקרא את "בכל נפשך", אלא גם יקיים את זה.</p>
+<p data-a="01-255">כל יהודי צריך להרגיש גם כך: בקריאת שמע אני קורא בכל מאודך – בכל מידה ומידה שהוא מודד לך הוי מודה לו במאוד מאוד, מתי אזכה לקיים את זה בפועל ובשמחה.</p>
+<p data-a="01-256">וכבר אמרו שהרבה פעמים יותר קל למות על קידוש ה' מאשר לחיות על קידוש ה', דהיינו יתכן והמעלה לזכור בחיי היום יום שהכול מאת ה' גדולה יותר מלמות על קידוש ה' שזה חד פעמי.</p>
+<h3 data-a="01-257">העצה של ר' עקיבא.</h3>
+<p data-a="01-258">שאלו אותו תלמידיו: רבינו עד כאן?</p>
+<p data-a="01-259">צריך להבין: מה שאלו אותו התלמידים, וכי לא ידעו את הדין של בכל נפשך? וגם מה הוא ענה להם?</p>
+<p data-a="01-260">התלמידים לא שאלו אותו על עצם קיום הדין, התלמידים שאלו אותו רבינו כיצד מגיעים לדרגה כזו שגם בשעה כזו שסוקרים את בשרך אתה מסוגל לקרוא את קריאת שמע ולקבל מלכות שמים בשמחה ובאהבה?!</p>
+<p data-a="01-261">אמר להם ר' עקיבא: כל ימי היתי מצטער, זה לא מגיע ברגע אחד, הרבה הכנות עשיתי בשביל להגיע לרגע זה, בכל יום חכיתי מתי אזכה לקיים את זה כראוי, וממילא עכשיו לא קשה לי כלל.</p>
+<p data-a="01-262">ולמדנו מכאן יסוד גדול: שכיצד קונים את הכוח לעמוד בנסיונות? על ידי ההכנה מקודם, שאדם מתכנן מה יעשה כאשר יגיע לידי נסיון.</p>
+<p data-a="01-263">והארכנו בזה ‎פרק ו :ג. סיכום.</p>
+<p data-a="01-264">מצוות יראת ה' היא מצווה תמידית – לחשוב מחשבות שמביאות את האדם ליראת ה'.</p>
+<p data-a="01-265">בזמן שיש לאדם נסיון חובה לחשוב מחשבות שמביאות ליראת ה'.</p>
+<p data-a="01-266">מצוות האמונה היא מצווה תמידית – לחשוב מחשבות שמביאות את האדם לידי ההרגשה בלב שה' שולט בכול והכול מרצונו.</p>
+<p data-a="01-267">בזמן שיש לאדם נסיון חובה לחשוב מחשבות שמביאות לידי אמונה ואהבת ה' יתברך, וגם זה חלק ממה שאמרו חייב לברך על הרעה.</p>
+<p data-a="01-268">דיני הכנה למצווה.</p>
+<h3 data-a="01-269">למה רצה ר' עקיבא למות?</h3>
+<p data-a="01-270">מדוע רצה ר' עקיבא למות למה לא רצה להמשיך ללמד עוד תלמידים?</p>
+<p data-a="01-271">ת: האדם בא לעולם להכיר את מידותיו של הבורא ובעיקר את מידת רחמיו, עיקר המעלה לדעת את מידת רחמיו היא לא כאשר הכול טוב לך, אלא כאשר הוא נוהג במידה שנראית לך מידת הדין ואכזריות, ואתה לא זז מאמונתך ומאמין שה' אחד תמיד הוא רק טוב, בכך מגיע האדם לשיא הפסגה הנדרשת ממנו, ורק כך עושה נחת ליוצרו באופן המושלם ביותר.</p>
+<h3 data-a="01-272">הלכה למעשה.</h3>
+<p data-a="01-273">משנה ברורה סימן סא ס"ק ג:</p>
+<p data-a="01-274">יקרא ק"ש באימה ויראה - ונראה דאימה ויראה זו. היא באופן זה שיכוין בשעה שהוא קורא את שמע לקבל עליו עול מ"ש להיות נהרג על קידוש השם המיוחד דזהו בכל נפשך אפילו נוטל את נפשך ועל זה אמר הכתוב כי עליך הורגנו כל היום כי אז בכונה זו יקראנה באימה ויראה ורתת וזיע.</p>
+<p data-a="01-275">ספר חיי אדם - חלק ראשון - כלל כא סעיף יא:</p>
+<p data-a="01-276">יכוין "שמע ישראל", ר"ל קבלו עליכם, ה' שהוא אלהינו, שאנחנו מאמינים בו, הוא ה' אחד בכל העולמות, בשמים ובארץ וד' רוחות העולם. ולכן יאריך באחד ... וטוב שיכוין ג"כ שהוא מוסר עצמו להריגה בשביל אמונה זו, וידמה בדעתו כאלו הוא נשרף עכשיו על קדושת שמו, לקיים "כי עליך הורגנו כל היום", ויחשב לו כאלו עשה בפועל ממש. וזאת למודעי, שאף שמלשון זוה"ק בכמה מקומות משמע שחיוב של מסירת נפש בפסוק זה דוקא בתיבת אחד, דז"ל בפרשת משפטים, ומיחד להקב"ה בכל יומא למיהוי מיתתיה באחד, כגונא דשחיטת בהמה בתריסר בדיקות דסכין ובסכין, דאינון אחד כו', עכ"ל. גם בפרשת צו ז"ל, בכל יום ויום צריך בר נש לאזדהרא בתיובתא ולממסר רוחיה לגביה דיפוק באחד כו', עכ"ל. ובהקדמת תקונים ז"ל בקצור, והאי איהו רחימוי דמאריה מאן דמסר נפשיה ב"אחד" ברחימו דמאריה כו', עכ"ל. מכל זה משמע שמסירת נפש יהיה בתיבת אחד דוקא. אך בלתי אפשר שיאריך באות ח' ד"אחד" כל כך עד שיכוין פירוש המלה של אחד ולצייר במחשבתו איזה מיתה של מסירת נפש, אך בודאי שכוונת הזוהר למימסר נפשו באחד, ר"ל אחר שיכוין פירוש המלה דאחד וכנ"ל. ואחר שישלים תיבת אחד ויגמור מחשבתו הנ"ל, אז יקבל על עצמו מסירות נפש  .</p>
+<h3 data-a="01-277">סיכום:</h3>
+<div class="highlight-box"><p data-a="01-278">מצווה לכוין בשעה שקורא אחד או מייד לאחר מכן שמסכים למסור נפשו על קידוש השם, לא הספיק יכוין כך במילים בכל נפשך.</p>
+<p data-a="01-279">ראוי לכוין במילים בכל מאודך לקבל על עצמו שכל מה שיבוא עליו (כגון שהתינוק יבכה בלילה) יקבל באהבה ובשמחה.</p>
+<p data-a="01-280">דרגה גבוהה מזו היא לא רק לקבל על עצמו דברים אלו, אלא גם לזכות לקימם בפועל, ולכן צדיקים מחכים מתי יזכו לקיים מצוות אלו.</p>
+<p data-a="01-281">ר' עקיבא לימד את תלמידיו שבשביל לזכות לקיים מצוות אלו בשמחה יש לעשות הכנות לכך מראש.</p>
+<p data-a="01-282">דרגה זו של לקבל בשמחה ובאהבה את רצון הבורא כל כך גדולה שר' סבר שעדיף לו למות ולהפסיד את לימוד התורה לתלמידיו העיקר לזכות לדרגה נפלאה זו.</p></div>
+<div class="guiding-box"><h4 data-a="01-283">🤔 להתבוננות</h4><ul><li data-a="01-284">מה ציפה ר' עקיבא לזכות לקיים, ומדוע חיכה לכך כל חייו?</li><li data-a="01-285">מה ההבדל בין לדעת שמצווה קיימת לבין לחכות בכיסופים להזדמנות לקיימה?</li><li data-a="01-286">כיצד אני יכול "לחכות" בשמחה לרגעי הנתינה והמסירות שהחיים מזמנים לי?</li></ul></div>
+<div class="prayer-box"><div class="prayer-box-inner"><h4 data-a="01-287">🙏 תפילה מסכמת</h4><p data-a="01-288">רבונו של עולם, כשם שר' עקיבא חיכה כל חייו לרגע שבו יוכל למסור נפשו באהבתך, זכני שגם אני אחכה בציפייה, ולא בתלונה, לרגעים שבהם אתה נותן לי הזדמנות לעבוד אותך במסירות. תן לי לומר באמת ובשמחה "עתה זכיתי לקיים", בכל פעם שאתה שולח לי אתגר. אמן.</p></div></div>
+<div class="section-divider">✦ ✦ ✦</div>
+<div class="chapter-label">פרק ה</div>
+<h2 data-a="01-289" id="section6">למה לשמוח בדבר רע?</h2>
+<p data-a="01-290"><em>חידוש נפלא על היכולת לשמוח דווקא ברגעים הקשים, מתוך יסודות "נהפוכו" ביהדות.</em></p>
+<div class="in-chapter-box"><h4 data-a="01-291">📖 בפרק זה:</h4><ul><li data-a="01-292">חידוש נפלא שחידש רבינו בעל הטורים.</li><li data-a="01-293">היכן יש "נהפוכו" ביהדות לא רק בפורים?</li><li data-a="01-294">מסילת ישרים - פרק יט.</li><li data-a="01-295">סיכום:</li></ul></div>
+<h3 data-a="01-296">חידוש נפלא שחידש רבינו בעל הטורים.</h3>
+<p data-a="01-297">חידוש נפלא כתב בשו''ע (רכ"ב סעיף ג) ומקורו בטור:במשנה שנינו "חייב אדם לברך על הרעה בדעת שלמה ובנפש חפצה כדרך שמברך בשמחה על הטובה" מקובל בעולם כי הסיבה שצריך לברך על הרעה כמו על הטובה, היא כי ה' עושה רק טוב, זה נכון ע''ש במ''ב,</p>
+<p data-a="01-298">אבל רבינו הטור חידש פרוש חדש בטעם השמחה והובא בשו''ע והוא: שהיות וכשקורה לאדם רעה הוא זוכה לקיים הרבה מצוות כמו שראינו לעיל, ממילא האדם שמח לא ביסורים אלא בזה שזיכה אותו ה' יתברך בהרבה מצוות וזה לשונו "כי הרעה לעובדי השם היא שמחתם וטובתם כיון שמקבל מאהבה מה שגזר עליו השם נמצא שבקבלת רעה זו הוא עובד את השם שהיא (עבודת ה' - המצוות) שמחה לו".</p>
+<p data-a="01-299">(וכ"כ במכתב מאליהו ח"ה עמוד 284.)</p>
+<p data-a="01-300">כיצד יהודי לא ישמח שהוא זוכה לקיים את שני הדיברות שרק אותם שמענו מפי ה' בעצמו, ואת מצוות שמע ישראל ומצוות ואהבת.</p>
+<p data-a="01-301">ומדברי הר''ן בדרוש השישי משמע שמה שאומרת הגמ' (מכות כד/א)</p>
+<p data-a="01-302">"בא חבקוק והעמידן על אחת שנאמר וצדיק באמונתו יחיה"</p>
+<p data-a="01-303">הכוונה שהשכר על מצוות האמונה הוא יותר גדול מכל המצוות, וזו המצווה שהכי כדאי לאדם להתחזק בה מכל המצוות שבתורה - מצוות האמונה .נמצא שהזוכה להאמין שתינוק בוכה המעירו בעוד לילה זה מאת ה' ולטובה זכה למצווה הגדולה ביותר, וכיצד לא ישמח.</p>
+<h3 data-a="01-304">היכן יש "נהפוכו" ביהדות לא רק בפורים?</h3>
+<p data-a="01-305">מבואר במסילת ישרים: שיהודי בן מעלה מפנים לעצמנו שהמצוות שבמחשבה הם המצוות הגדולות ביותר שיש לאדם, והמצווה הגדולה ביותר היא לחשוב שאני אוהב את ה', וה' אוהב אותי, והיות וכאשר רע לאדם, יותר קשה לו לחשוב זאת, שלעניים זה נראה הפוך, נמצא שאם למרות הקושי העברנו במחשבה שה' אוהב אותי ועושה איתי רק טוב, קיימתי  מצווה גדולה היום, ולכן אני שמח מאוד, נמצא שיש ונהפוכו כל השנה כשרע לך זה הכי טוב לך.</p>
+<h3 data-a="01-306">מסילת ישרים - פרק יט.</h3>
+<p data-a="01-307">,אַךְ בַּעֲלֵי הַדֵּעָה הָאֲמִתִּית אֵינָם צְרִיכִים אֲפִלּוּ לַטַּעַם הַזֶּה, כִּי הֲרֵי אֵין לָהֶם לְכַוֵּן עַצְמָם כְּלָל, אֶלָּא כָּל תְּפִלָּתָם לְהַגְדִּיל כְּבוֹד הַשֵּׁם יִתְבָּרֵךְ, וְלַעֲשֹוֹת נַחַת רוּחַ לְפָנָיו, וְכָל מַה שֶּׁיִּתְגַּבְּרוּ עִכּוּבִים נֶגְדָּם עַד שֶׁיִּצְטָרְכוּ הֵם יוֹתֵר כֹּחַ לְהַעֲבִירָם, הִנֵּה יֶאֱמַץ לִבָּם וְיִשְֹמְחוּ לְהַרְאוֹת תֹּקֶף אֱמוּנָתָם, כְּשַֹר צָבָא הָרָשׁוּם בִּגְבוּרָה, אֲשֶׁר יִבְחַר לוֹ תָמִיד בַּמִּלְחָמָה הַחֲזָקָה יוֹתֵר, לְהַרְאוֹת תָּקְפּוֹ בְּנִצְחוֹנָהּ. וּכְבָר מֻרְגָּל זֶה הָעִנְיָן בְּכָל אוֹהֵב בָּשָֹר - וָדָם שֶׁיִּשְֹמַח כְּשֶׁיִּזְדַּמֵּן לוֹ מַה שֶּׁיּוּכַל לְהַרְאוֹת בּוֹ אֶל אֲשֶׁר הוּא אוֹהֵב, עַד הֵיכָן מַגִּיעַ עֹצֶם אַהֲבָתוֹ:</p>
+<h3 data-a="01-308">סיכום:</h3>
+<div class="highlight-box"><p data-a="01-309">השולחן ערוך מסביר שכיצד אדם ישמח שמגיעים עליו יסורים: שיתבונן שזכה לקיים מצוות גדולות מאוד וזה השמחה האמיתית.</p>
+<p data-a="01-310">הנביא חבקוק גילה לנו שהשכר על מצוות האמונה הוא הגדול ביותר מכל המצוות, ובמצווה זו כדאי מאוד להתחזק תמיד.</p>
+<p data-a="01-311">יהודי עובד ה' שמח שרע לו יותר מאשר שטוב לו (ונהפוכו), היות ואז יכול יותר לעבוד את ה', ולעשות נחת רוח ליוצרו.</p></div>
+<div class="guiding-box"><h4 data-a="01-312">🤔 להתבוננות</h4><ul><li data-a="01-313">מהו החידוש של בעל הטורים על "נהפוכו" בעבודת ה'?</li><li data-a="01-314">היכן עוד אפשר למצוא "נהפוכו" ביהדות, מעבר לפורים?</li><li data-a="01-315">מה אומר לנו המסילת ישרים (פרק יט) על שמחה מתוך קושי?</li></ul></div>
+<div class="prayer-box"><div class="prayer-box-inner"><h4 data-a="01-316">🙏 תפילה מסכמת</h4><p data-a="01-317">אבינו שבשמים, למדתני שהיהדות יודעת גם "ונהפוך הוא" — שדווקא ממקום של צער יכולה לצמוח שמחה. זכני למצוא בכל דבר רע שקורה לי את הנקודה שאפשר לשמוח בה, ותן לי לב שרואה בכל "מכה" הזדמנות חדשה להתקרב אליך. אמן.</p></div></div>
+<div class="section-divider">✦ ✦ ✦</div>
+<div class="chapter-label">פרק ו</div>
+<h2 data-a="01-318" id="section7">מתי יש חובה לקיים מצוות אמונה ואהבת ה'?</h2>
+<p data-a="01-319"><em>בירור הלכתי-מעשי: מתי מוטלת עלינו חובה לקיים מחשבות אמונה ואהבת ה', ומתי הן רשות.</em></p>
+<div class="in-chapter-box"><h4 data-a="01-320">📖 בפרק זה:</h4><ul><li data-a="01-321">מחשבות של יראת השם – רשות וחובה.</li><li data-a="01-322">מחשבות של אמונה - רשות וחובה.</li><li data-a="01-323">סיכום.</li></ul></div>
+<h3 data-a="01-324">מחשבות של יראת השם – רשות וחובה.</h3>
+<p data-a="01-325">כתב החינוך : תלב. מצות יראת השם.להיות יראת השם יתברך על פנינו תמיד לבלתי נחטא ... ונוהגת מצוה זו בכל מקום ובכל זמן ובכל מין האדם, וזאת אחת מן המצות התמידיות על האדם, שלא יפסק חיובן מעל האדם לעולם, אפילו רגע אחד, ומי שבא דבר עברה לידו חייב להעיר רוחו ולתת אל לבו באותו הפרק, שהשם ברוך הוא משגיח בכל מעשה בני אדם, וישיב להם נקם כפי רע המעשה. והעובר על זה ולא שת לבו לכך באותן שעות בטל עשה זה, שזו היא שעת קיום עשה זה בכוון. ואולם כל ימי האדם וכל עתותיו בכלל המצוה לעמד זריז ונזכר עליה.</p>
+<p data-a="01-326">למדנו מדברי החינוך שלמרות שלמצוות יראת ה' אין זמן חיוב אבל בזמן שיש נסיון חובה לעורר רוחו על יראת ה'.</p>
+<h3 data-a="01-327">מחשבות של אמונה - רשות וחובה.</h3>
+<p data-a="01-328">כשם שלמדנו לגבי מצוות יראת ה' יש שני מצבים רשות חובה,</p>
+<p data-a="01-329">כך יש לומר שלמרות שמצוות אמונה (אנכי ולא יהיה ושמע ישראל) ומצוות אהבת ה' אין להם זמן קבוע , אבל בזמן שיש נסיון חובה על האדם לעורר אז רוחו ולתת אל ליבו דברים אלו, ואם לא חשיב מבטל עשה.</p>
+<p data-a="01-330">כאשר משתנים התכנונים, יש כאן קריאה מבורא עולם:</p>
+<p data-a="01-331">בני יקירי: רוב היום יש לך רשות האם להיזכר בי, אבל עכשיו אני מבקש ממך תזכור שאני קיים, ושאני אוהב אותך. אילו היה ה' נגלה אליך בחלום ואומר בני היקר הריני מנסה אותך איך היינו מגיבים?</p>
+<h3 data-a="01-332">סיכום.</h3>
+<div class="highlight-box"><p data-a="01-333">מצוות יראת ה' היא מצווה תמידית – לחשוב מחשבות שמביאות את האדם ליראת ה'.</p>
+<p data-a="01-334">בזמן שיש לאדם נסיון חובה לחשוב מחשבות שמביאות ליראת ה'.</p>
+<p data-a="01-335">מצוות האמונה היא מצווה תמידית – לחשוב מחשבות שמביאות את האדם לידי ההרגשה בלב שה' שולט בכול והכול מרצונו.</p>
+<p data-a="01-336">בזמן שיש לאדם נסיון חובה לחשוב מחשבות שמביאות לידי אמונה ואהבת ה' יתברך, וגם זה חלק ממה שאמרו חייב לברך על הרעה.</p></div>
+<div class="guiding-box"><h4 data-a="01-337">🤔 להתבוננות</h4><ul><li data-a="01-338">מתי מחשבות של יראת שמים הן חובה, ומתי הן רשות?</li><li data-a="01-339">מה ההבדל, הלכה למעשה, בין רשות לחובה במחשבות אמונה?</li></ul></div>
+<div class="prayer-box"><div class="prayer-box-inner"><h4 data-a="01-340">🙏 תפילה מסכמת</h4><p data-a="01-341">רבונו של עולם, תן לי בהירות לדעת מתי מוטלת עלי חובה להתעורר באמונה וביראת שמים, ומתי אני זוכה לכך מתוך התנדבות ואהבה. זכני שלא אסתפק במינימום הנדרש, אלא אבקש תמיד להוסיף עוד בעבודתך מתוך רצון פנימי. אמן.</p></div></div>
+<div class="section-divider">✦ ✦ ✦</div>
+<div class="chapter-label">פרק ז</div>
+<h2 data-a="01-342" id="section8">דיני הכנה למצווה.</h2>
+<p data-a="01-343"><em>על מעלת ההכנה למצווה, וכיצד ניתן להתכונן כבר לפני השינה למצוות שנזכה לקיים בלילה.</em></p>
+<div class="in-chapter-box"><h4 data-a="01-344">📖 בפרק זה:</h4><ul><li data-a="01-345">מעלת ההכנה למצווה.</li><li data-a="01-346">להתכונן לפני השינה.</li><li data-a="01-347">שמתכונן משרה על עצמו קדושה – נפש החיים.</li><li data-a="01-348">חידושו של ר' שלמה קלוגר - לקבל לפני מועיל כאילו עשה.</li><li data-a="01-349">סיכום:</li></ul></div>
+<h3 data-a="01-350">מעלת ההכנה למצווה.</h3>
+<p data-a="01-351">בגודל חשיבות ההכנה למצווה מצאנו דברים נפלאים בספר חיי אדם - חלק ראשון - כלל סח סעיף כה. "שומר מצוה לא ידע דבר רע", ר"ל שמחויב כשירצה לעשות איזו מצוה לא יעשה אותה בחפזון ובפתאום, רק שישמור וימתין (כמו ואביו שמר את הדבר) ויתיישב בדבר היטב איך יעשה, ... ונ"ל שזהו ג"כ מה שכתוב ושמרתם את המצות.</p>
+<p data-a="01-352">וזו שיסדו לומר "הנני מוכן ומזומן לקיים" כו', ור"ל שכבר אני מוכן ומזומן. וזהו "הכון לקראת אלהיך ישראל", ר"ל שתכין עצמך מקודם ולא בפתע פתאום. וכבר בחנתי בנסיון שכאשר עשיתי מצוה בפתאום לא קיימתיה כראוי, לכן צריך ליזהר בזה.</p>
+<h3 data-a="01-353">להתכונן לפני השינה.</h3>
+<p data-a="01-354">לכן עצה טובה לאדם שיש לו ניסיונות שהתינוק בוכה לפעמים בלילה, כל לילה לפני השינה כדאי לו לקבל על עצמו מראש את המצוות הנ''ל.</p>
+<p data-a="01-355">ויחליט בליבו ועדיף שיאמר בפיו (ע' מ"ב סימן ר"נ סק"ג):</p>
+<p data-a="01-356">אם יעירו אותי משמים הלילה מהשינה, ויעמידו אותי בנסיון:</p>
+<p data-a="01-357">אני מקבל עלי לקיים את המצוות עשה שכתבת לנו בתורתך הקדושה:</p>
+<p data-a="01-358">אנכי ה' אלוקיך, להאמין שכל מה שקורה בעולם הוא מרצונך ומחפצך.</p>
+<p data-a="01-359">לא יהיה לך שנאמין שאין לאף אחד בבריאה כוח לעשות דבר בלתי רצונך.</p>
+<p data-a="01-360">וכל זה כלול במצוות שמע ישראל ה' אלוקינו (שנאמין שאתה משגיח). ה' אחד (שאין לאף כוח ללא רצונך).</p>
+<p data-a="01-361">ומצוות ואהבת את ה' אלוקיך ...בכל מאודך, להאמין שכל מה שקורה לנו הוא הכי טוב שיכול להיות בשבילנו .</p>
+<p data-a="01-362">ועיין לעיל (‎פרק ד :ג. ) שהבאנו שר"ע לימד את תלמידיו שהדרך לקבל את היסורים באהבה היא על ידי שמתכוננים לכך מראש.</p>
+<h3 data-a="01-363">שמתכונן משרה על עצמו קדושה – נפש החיים.</h3>
+<p data-a="01-364">ובנפש החיים כתב: וזה שתקנו נוסח ברכות המצו' אשר קדשנו במצותיו. וכן וקדשתנו במצותיך. כי מעת שעולה  הרעיון לקיים מצוה. תיכף נעשה רישומו למעלה במקור שרשה העליון וממשיך משם על עצמו אור מקיף וקדושה עליונה חופפת עליו וסובבת אותו. וכתוב מפורש והתקדשתם והייתם קדושים וכמאמרם ז''ל (יומא ל''ט א') כל המקדש עצמו מלמטה מקדשין אותו מלמעלה ר''ל שמלמעלה נמשך עליו הקדושה משרשה העליון של המצוה.</p>
+<p data-a="01-365">וכבד למדנו לעיל (‎פרק ד :ה.  מעל): שמי שמקבל על עצמו מסירות נפש/רצונות – נחשב לו כאילו קיים בפועל.</p>
+<h3 data-a="01-366">חידושו של ר' שלמה קלוגר - לקבל לפני מועיל כאילו עשה.</h3>
+<p data-a="01-367">עוד מעלה נוספת יש בזה שמקבל על עצמו מראש שאם יבואו עליו יסורים מודה שהם מאיתו יתברך ולטובה, על פי מה שחידש ר' שלמה קלוגר זצ"ל בספרו (חכמת התורה פ' ויחי עמוד כ"ה) וזה לשונו:</p>
+<p data-a="01-368">"באמת לא כל אדם סביל דא להיות בידו לקבל הרעה בשמחה, אך העצה לזה, דבזמן שעדין לא הגיע לאדם הרעה, אז כיון דאמרו חז"ל באבות אל תתייאש מן הפורענות, ויש לו לחוש בכל יום אולי יבאו עליו ייסורין, לכן אז בעת הרווחה, יתן לו הודאה שאם ח"ו יבואו עליו יסורין, מודה שהם לטובה ומקבלם מעתה בשמחה, וזה בידו לעשות, כיון דעתה עדין אינו ברעה נקל לו לעשותו, ואז אף אם אח"כ אינו מקבלם בשמחה, מהני לו קבלה זו שמתחילה כאילו עתה קיבלם בשמחה.</p>
+<p data-a="01-369">(מתוך הספר מישרים אהבוך - הלכות אהבת ה' להשיג – 02-5635380.)</p>
+<h3 data-a="01-370">סיכום:</h3>
+<div class="highlight-box"><p data-a="01-371">חייב אדם להכין את עצמו לפני קיום המצווה, שנאמר: הכון לקראת אלוקיך ישראל.</p>
+<p data-a="01-372">ר' עקיבא לימד את תלמידיו בשביל לקבל יסורים באהבה חייבים להתכונן לפני.</p>
+<p data-a="01-373">מי שיודע שבנו לפעמים בוכה בלילה יקבל על עצמו לפני השינה מצוות: אנכי, לא יהיה, שמע ישראל, ואהבת.</p>
+<p data-a="01-374">מי שקשה לו לקבל את היסורים בשמחה, לפחות יקבלם בשמחה לפני שהם מגיעים ויחשב לו שקיבלם באהבה.</p></div>
+<div class="guiding-box"><h4 data-a="01-375">🤔 להתבוננות</h4><ul><li data-a="01-376">מהי מעלת ההכנה למצווה, ולמה היא נחשבת כמעט כמו המצווה עצמה?</li><li data-a="01-377">כיצד אוכל להתכונן, כבר לפני השינה, למצב שבו אקום בלילה לתינוק הבוכה?</li><li data-a="01-378">מה מלמד אותנו נפש החיים על הקדושה שאדם ממשיך על עצמו מתוך הכנה?</li></ul></div>
+<div class="prayer-box"><div class="prayer-box-inner"><h4 data-a="01-379">🙏 תפילה מסכמת</h4><p data-a="01-380">רבונו של עולם, זכני להיכנס למיטתי מדי לילה כשליבי מוכן ומזומן לעבודתך, כדי שאם אתעורר, אדע כבר במה לחשוב ובמה לזכות. תן לי מהחידוש של ר' שלמה קלוגר, שההכנה עצמה תיחשב לי כאילו כבר קיימתי, ושכל ההכנות הקטנות שלי יצטרפו למעשה גדול. אמן.</p></div></div>
+<div class="section-divider">✦ ✦ ✦</div>
+<div class="chapter-label">פרק ח</div>
+<h2 data-a="01-381" id="section9">באור הרשב"א על פרשת שמע.</h2>
+<p data-a="01-382"><em>עיון מרוכז בביאור הרשב"א על פרשת שמע, מילה במילה.</em></p>
+<div class="in-chapter-box"><h4 data-a="01-383">📖 בפרק זה:</h4><ul><li data-a="01-384">אהבת ה'.</li><li data-a="01-385">בכל לבבך.</li><li data-a="01-386">ובכל נפשך.</li><li data-a="01-387">ובכל מאודך.</li><li data-a="01-388">והיו הדברים...על לבבך.</li><li data-a="01-389">ושננתם לבניך.</li><li data-a="01-390">והיו לטוטפות בין עיניך.</li><li data-a="01-391">סיכום.</li><li data-a="01-392">חלוקת פרשת שמע לשניים.</li></ul></div>
+<p data-a="01-393">ב‎פרק ב :' למדנו את באור הרשב"א על פסוק ראשון, בפרק זה נלמד את המשך דברי הרשב"א על באור כל פרשה ראשונה של קריאת שמע, ובהמשך נוציא ממנו דברים למעשה.</p>
+<h3 data-a="01-394">אהבת ה'.</h3>
+<p data-a="01-395">"ואחר שנדע ונסכים על זה (שה' שליט בכל הארץ, כמבואר בפסוק שמע ישראל) אז באמת ראוי לאהוב אותו בכל לבבנו ובכל נפשנו ובכל מאודנו, (ומדוע נאהב אותו?) כי משלו הכל, ומשלו נתן לו. כמאמר דוד מלך ישראל ע"ה (דה"א כט, יד) כי ממך הכל ומידך נתנו לך, והוא אומרו ואהבת את ה' אלהיך.</p>
+<h3 data-a="01-396">בכל לבבך.</h3>
+<p data-a="01-397">בכל לבבך - בשני יצריך וכמו שאמרו ז"ל (ברכות נד, א) בשני יצריך ביצר הטוב וביצר הרע. (כיצד אוהבים את ה' ביצר הרע?) ויצר הרע הוא המפתה לאדם ללכת אחר חמדת הלב. והזהירנו להיות חשק עבודתו ואהבתו ית' מבזה כל החשקים. כאומרו (שה"ש ח, ז) אם יתן איש את כל הון ביתו באהבה [בוז יבוזו לו]. (הרשב"א מסביר שביצר הרע הכוונה להסכים למסור את כל חמדת לבבך לבורא עולם, מחמת אהבתך אותו) והוא מדתו של אברהם אבינו ע"ה, שניתן לו בן בעת זקנתו אחר היותו חשוך בנים ושנתאוה לו כל ימיו, והיה המעולה שבמין האנושי, ועיקרו בחפץ חסד, ונעשה לו אכזרי לאהבת בוראו לשחוט אותו בידו. ועזב ושכח אהבת בנו יחידו אשר אהבו תכלית אהבה, וחשק להיות אהבתו גוברת ומשכחת כל החשקים והתאוות והוא שנקרא אוהב, באומרו (ישעיה מא, ח) זרע אברהם אוהבי.</p>
+<h3 data-a="01-398">ובכל נפשך.</h3>
+<p data-a="01-399">ובכל נפשך - כולל כל מה שיגיע לאדם מן הנזקים והצער, ואפילו נטילת נפשו בקיום המצות. כאמרם ז"ל (ויקר"ר לב, א) מה לך יוצא ליסקל? על שמלתי את בני! מה לך יוצא לישרף? על שנטלתי את הלולב! והוא מדתו של יצחק אבינו ע"ה שנעקד על גבי המזבח ופשט צוארו תחת הסכין לחשבו כי השי"ת חפץ בכך.</p>
+<h3 data-a="01-400">ובכל מאודך.</h3>
+<p data-a="01-401">ובכל מאדך - למאוס כל ממונו אם יצטרך לכך לקיים עבודתו ית', כיעקב אבינו ע"ה שמאס בעושר בית אביו, ובחר לו להיות יושב אהלים. ואמר (בראשית כח, כב) וכל אשר תתן לי עשר אעשרנו לך. ובמדרש (תנחומא ויחי ו) שנתן כל נכסיו שהביא מחוצה לארץ בקניית המערה, כמ"ש (בראשית נ, ה) בקברי אשר כריתי לי. שנעשה לו כרי מנכסיו בדמי מערת המכפלה.</p>
+<h3 data-a="01-402">והיו הדברים...על לבבך.</h3>
+<p data-a="01-403">והכלל: שצריכין אנו לקבוע בנפשנו הסכמה מוחלטת בכל עת שנקרא הקריאת שמע שאנו מסכימין למסור כל תאוותנו וחשקי לבבנו וכל נפשנו מן האברים ועד נטילת נפש והממון על יחוד קדושת שמו וקבלת מלכותו. ושנראה בציור הלב כאילו באנו לידי כך וקיימנו. והוא אומרו (תהלים מד, כג) כי עליך הורגנו כל היום. וכי אפשר ליהרג בכל יום, אלא שבכל יום שאנו קורין בק"ש ובכל נפשך ומסכימים על כך הרי הוא כאילו הורגנו באותה שעה עליו ית', כי כל המסכים על זה כאילו עשאו.</p>
+<p data-a="01-404">והוא שאמר והיו הדברים האלה אשר אנכי מצוך היום על לבבך. ר"ל יהיו מוסכמים וחקוקים על לבבך.</p>
+<p data-a="01-405">ומדעתי כי זה היה מדעת מ"ש בגמרא בברכות, (יג, ב) עד היכן כוונת הלב עד על לבבך. כי בלתי גמר כוונת הלב והסכמתו לא יתכן אמיתת הענין. ע"כ באומרנו על לבבך צריכין אנו להתבונן על כוונה הזאת ושנסכים עליה, וע"כ נ"ל שהלכה כדברי מי שאומר עד על לבבך, עד שם צריך כוונת הלב.</p>
+<h3 data-a="01-406">ושננתם לבניך.</h3>
+<p data-a="01-407">ואמנם לא יתכן הכוונה האמתית אף בגמר הלב על זה כולו אם תהיה בהסכמה הכרחית מתוך היראה, כי מסכים לפחד הגמול והעונש, ושמח היה אם לא נצטוה ולא נצרך לכך ואין זו עבודה שלימה, עד שיהיה שמח בעת שנצטווה ומצא עצמו בגמר דעתו על הקיום.</p>
+<p data-a="01-408">והוא אומרו ושננתם לבניך ודברת בם, כאדם המלמד לבנו דברים ערבים עליו והם מורגלים בפיו ומדבר מהם תדיר, שאין אדם מדבר בדברים שלבו קץ ומואס בהם.</p>
+<h3 data-a="01-409">והיו לטוטפות בין עיניך.</h3>
+<p data-a="01-410">ולהניח אותם כעדי בין העינים, והוא אומרו והיו לטטפות בין עיניך,  שיהיה הדבר תמיד בין עיניו, ושלא יעבור אפילו רגע. טוטפות עדויים (תכשיט). וכמו ששנינו בשבת (נז, א) ולא בטוטפת ולא בסרביטין. ולכתוב אותם על פתחי השערים, כדי שיהא הדבר תמיד בין עיניו, ושלא יעבור אפילו רגע מזכרוננו, וכדי שנתפאר ונתעדן בו:</p>
+<h3 data-a="01-411">סיכום.</h3>
+<div class="highlight-box"><p data-a="01-412">למדנו מדברי הרשב"א: שהתורה מצווה לנו למסור את חשקי לבבנו לבורא עולם – מחמת אהבה אליו, פירוש: שיותר נחשוק לעשות רצונו מאשר מה שאנחנו חושקים בו.</p></div>
+<h3 data-a="01-413">חלוקת פרשת שמע לשניים.</h3>
+<p data-a="01-414">על פי דברי הרשב"א הללו ניתן לתת עצה טובה שעוזרת לכוונה בפרשת קריאת שמע, על ידי חלוקת הפרשה לשני חלקים:</p>
+<p data-a="01-415">מצוות יחוד ה' ואהבתו.</p>
+<p data-a="01-416">כיצד מקימים זאת למעשה.</p>
+<p data-a="01-417">חלק א' של קריאת שמע זה הפסוקים:</p>
+<p data-a="01-418">שמע ישראל ידוד אלהינו ידוד אחד:</p>
+<p data-a="01-419">ואהבת את ידוד אלהיך בכל לבבך ובכל נפשך ובכל מאדך:</p>
+<p data-a="01-420">חלק ב' של קריאת שמע זה כיצד מקימים את שני המצוות הללו:</p>
+<p data-a="01-421">והיו הדברים האלה אשר אנכי מצוך היום על לבבך:</p>
+<p data-a="01-422">ושננתם לבניך ודברת בם בשבתך בביתך ובלכתך בדרך ובשכבך ובקומך:</p>
+<p data-a="01-423">וקשרתם לאות על ידך והיו לטטפת בין עיניך:</p>
+<p data-a="01-424">וכתבתם על מזזות ביתך ובשעריך:</p>
+<div class="guiding-box"><h4 data-a="01-425">🤔 להתבוננות</h4><ul><li data-a="01-426">מה מוסיף הרשב"א להבנתנו ב"בכל לבבך", "ובכל נפשך" ו"ובכל מאודך"?</li><li data-a="01-427">מה המשמעות של חלוקת פרשת שמע לשני חלקים?</li><li data-a="01-428">כיצד "והיו הדברים... על לבבך" מלמד אותי דרך מעשית להגיע לאהבת ה'?</li></ul></div>
+<div class="prayer-box"><div class="prayer-box-inner"><h4 data-a="01-429">🙏 תפילה מסכמת</h4><p data-a="01-430">ה' אלוקי, זכני להבין את פרשת שמע לא רק כפסוקים הנאמרים בפי, אלא כדרך חיים — בכל לבבי, בכל נפשי ובכל מאודי. תן לי ללמד גם את ילדיי, כלשון "ושננתם לבניך", שעבודתך אינה עניין של רגע אלא נשימה תמידית בכל מהלך היום והלילה. אמן.</p></div></div>
+<div class="section-divider">✦ ✦ ✦</div>
+<div class="chapter-label">פרק ט</div>
+<h2 data-a="01-431" id="section10">נסיון העקדה שלך.</h2>
+<p data-a="01-432"><em>על הניסיון הפרטי שכל אחד מאיתנו עובר, ומה אפשר ללמוד מניסיון העקידה של אברהם אבינו.</em></p>
+<div class="in-chapter-box"><h4 data-a="01-433">📖 בפרק זה:</h4><ul><li data-a="01-434">כיצד זוכים לעקידת יצחק שלי?</li><li data-a="01-435">מה היה הנסיון של אברהם?</li><li data-a="01-436">הלכה למעשה.</li><li data-a="01-437">צריך להתבונן בשני דברים:</li><li data-a="01-438">כיצד זה נראה למעשה?</li></ul></div>
+<h3 data-a="01-439">כיצד זוכים לעקידת יצחק שלי?</h3>
+<p data-a="01-440">אברהם אבינו זכה לעמוד בנסיון העקידה, ובזה זכה להמון ברכות מבורא עולם לו ולצאצאיו, אנו מזכירים זכות עקידת יצחק בראש השנה, ויש שמזכירים זכות זו בכל יום בתפילת שחרית, וכמו שכתב רש"י (בראשית כב,ו) למה נקרא שמה "מאכלת"?  על שם שישראל אוכלים מתן שכרה.</p>
+<p data-a="01-441">האם גם אני יכול לתת לה' יתברך נחת רוח, כמו שנתן לו אברהם אבינו בעקידת יצחק? נתבונן מה היה מעלת אברהם אבינו בעקידת יצחק ונראה כיצד גם אתה יכול קצת לזכות לזה.</p>
+<h3 data-a="01-442">מה היה הנסיון של אברהם?</h3>
+<p data-a="01-443">התבונן בדברי הרשב"א בפרק הקודם שמבואר בהם דבר נפלא,</p>
+<p data-a="01-444">ידוע הקושיה מה היה נסיון העקדה הרי כל יהודי שהיה ה' אומר לו במפורש עקוד את בנך היה עוקד, ומה גדולתו של אברהם אבינו?</p>
+<p data-a="01-445">מבאר הרשב"א: שמעלת אברהם היתה לא בעשייה, אלא בזה שרצה יותר לעשות את רצון ה' לעקוד את בנו מאשר שבנו יהיה חי מחמת גודל אהבתו את ה' יתברך וזוהי מעלה גדולה מאוד.</p>
+<h3 data-a="01-446">הלכה למעשה.</h3>
+<p data-a="01-447">לפי זה: כאשר התינוק בוכה באמצע הלילה, וכלפי שלמדנו בפירוש פסוק שמע ישראל, אנחנו מצווים להאמין שבורא עולם הוא זה שגרם שהתינוק יבכה, ונמצא שבורא עולם אומר לי כאן: בני יקירי אני מבקש ממך שתקום ותעזור לבני הקטן שצריך עזרה מסוימת והוא כרגע בצער,</p>
+<p data-a="01-448">אם אזכה והצליח לחשוק יותר לעשות רצון הבורא (לעזור לבנו היקר) מאשר חשקי לבבי (להמשיך לישון) וכלשון הרשב"א: "והזהירנו להיות חשק עבודתו ואהבתו ית' מבזה כל החשקים" זכיתי לקיים מעין עקידת יצחק, שהרי עקדתי את חשקי לבבי מפני רצון בוראי.</p>
+<h3 data-a="01-449">צריך להתבונן בשני דברים:</h3>
+<p data-a="01-450">(בראשית כב א) וַיְהִי אַחַר הַדְּבָרִים הָאֵלֶּה וְהָאֱלֹהִים נִסָּה אֶת אַבְרָהָם וַיֹּאמֶר אֵלָיו אַבְרָהָם וַיֹּאמֶר הִנֵּנִי: וַיֹּאמֶר קַח נָא אֶת בִּנְךָ אֶת יְחִידְךָ אֲשֶׁר אָהַבְתָּ אֶת יִצְחָק וְלֶךְ לְךָ אֶל אֶרֶץ הַמֹּרִיָּה וְהַעֲלֵהוּ שָׁם לְעֹלָה עַל אַחַד הֶהָרִים אֲשֶׁר אֹמַר אֵלֶיךָ: וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר וַיַּחֲבשׁ אֶת חֲמֹרוֹ וַיִּקַּח אֶת שְׁנֵי נְעָרָיו אִתּוֹ וְאֵת יִצְחָק בְּנוֹ וַיְבַקַּע עֲצֵי עֹלָה וַיָּקָם וַיֵּלֶךְ אֶל הַמָּקוֹם אֲשֶׁר אָמַר לוֹ הָאֱלֹהִים:
+צריך לדמיין: ויהי אחרי שישנה רבקה (שם בדוי) כמה שעות בלילה, והאלוקים ניסה את רבקה, ויאמר ה' (זה התינוק הבוכה) אל רבקה ותאמר הנני (רבקה קמה ממיטתה): ויאמר ה': קחי נא את שנתך אשר היא מאוד מתוקה לך (כדכתיב מתוקה שנת העמל) ולכי אל מיטת בנך והעלי שם את חמדת לבבך לעולה, כמה זמן שאומר אליך. ותקום רבקה בזריזות ובשמחה ותרחץ את ידיה ותלבש את מנעליה, ותקם ותלך אל מיטת בנה, ותעש ככל אשר חפץ האלוקים.</p>
+<p data-a="01-451">הנסיון הוא לא המעשה שכן כמעט כל אב ואם לא יתנו לבנם לבכות כל הלילה, וכמו ששאלנו לגבי העקידה שכמעט כל יהודי היה עוקד את בנו אם ה' היה אומר לו, הנסיון הוא רק הרצון והחשק.</p>
+<h3 data-a="01-452">כיצד זה נראה למעשה?</h3>
+<p data-a="01-453">אם אני חושק לעשות רצון בורא עולם אני לא להוט שהתינוק כבר יירדם, שהרי אני עכשיו זוכה לקיים רצון אבי האהוב ולמה לי לברוח מעשית רצונו.</p>
+<p data-a="01-454">אני לא קם אם מרמור פנימי (למה שוב הוא עושה לי את זה), 
+אלא אני קם בשמחה שהרי אני זוכה לעקוד לה' את חשקי לבבי על גבי מזבח אהבתו יתברך.</p>
+<p data-a="01-455">אני לא מסתכל על הבן זוג, אולי הוא יקום, אלא אני קם ראשון בשמחה, וכי אדם שחושק בדבר משאיר אותו לאחר.</p>
+<p data-a="01-456">אני חוזר למיטה בסוף בשמחה כמו אדם שהיה מקבל 500 ש''ח על כל פעם שהיה קם מהמיטה לתינוק בוכה.</p>
+<p data-a="01-457">כדאי לקרוא את הדברים בפרק סיכום החוברת – הלכה למעשה.</p>
+<div class="guiding-box"><h4 data-a="01-458">🤔 להתבוננות</h4><ul><li data-a="01-459">מה היה הניסיון האמיתי של אברהם אבינו בעקידה?</li><li data-a="01-460">כיצד אני יכול לזהות את "עקידת יצחק שלי" — הניסיון הפרטי שה' שולח לי?</li><li data-a="01-461">מהם שני הדברים שעלי להתבונן בהם כדי לעמוד בניסיון כראוי?</li></ul></div>
+<div class="prayer-box"><div class="prayer-box-inner"><h4 data-a="01-462">🙏 תפילה מסכמת</h4><p data-a="01-463">אבינו שבשמים, כשם שאברהם אבינו עמד בניסיונו בשמחה ובמסירות, זכני לזהות את הניסיונות הקטנים שאתה שולח לי בחיי היום-יום כ"עקידה" פרטית שלי. תן לי כוח לעמוד בהם מתוך אמונה, ולדעת שכל ניסיון שאני עומד בו מקרב אותי אליך כשם שהעקידה קרבה את אברהם. אמן.</p></div></div>
+<div class="section-divider">✦ ✦ ✦</div>
+<div class="chapter-label">פרק י</div>
+<h2 data-a="01-464" id="section11">מצוות החסד והנתינה.</h2>
+<p data-a="01-465"><em>על מצוות החסד הטמונה בטיפול בילדינו, ועל דוגמת החסד של אברהם אבינו.</em></p>
+<div class="in-chapter-box"><h4 data-a="01-466">📖 בפרק זה:</h4><ul><li data-a="01-467">האם יש מצוות חסד בעזרה שאנו נותנים לילדינו?</li><li data-a="01-468">חסד של אברהם אבינו – הסבא מסלבודקא.</li><li data-a="01-469">סיפור: כיצד לוקחים ילד לרופא?</li><li data-a="01-470">סיכום: האם יש מצוות חסד בעזרה לילדים?</li><li data-a="01-471">לפני שניגש לטפל בתינוק יחשוב/יאמר לקיים מצוות:</li></ul></div>
+<p data-a="01-472">לעיל דיברנו על מצוות האמונה שאדם יכול לקיים שה' מזכה אותו</p>
+<p data-a="01-473">ל "ותקם בעוד לילה", עכשיו נדבר על מצוות החסד שיש בדבר.</p>
+<h3 data-a="01-474">האם יש מצוות חסד בעזרה שאנו נותנים לילדינו?</h3>
+<p data-a="01-475">מדרש רבה בראשית פרשה נח פסקה ט</p>
+<p data-a="01-476">"ואחרי כן קבר אברהם הה"ד (משלי כא) רודף צדקה וחסד ימצא חיים צדקה וכבוד רודף צדקה זה אברהם שנאמר ושמרו דרך ה' לעשות צדקה וחסד שגמל חסד לשרה ימצא חיים ושני חיי אברהם מאת שנה ושבעים שנה וחמשה שנים צדקה וכבוד אמר רבי שמואל בר יצחק אמר לו הקב"ה אני אומנותי גומל חסדים תפסת אומנותי בוא ולבוש לבושי ואברהם זקן בא בימים".</p>
+<p data-a="01-477">דברי המדרש קשים מאוד, לא מצא המדרש במה לציין את החסד של אברהם אבינו רק בזה שקבר את שרה אשתו, הרי זה דבר שכל אדם הפשוט ביותר עושה, ומה מעלה יש בזה לאברהם אבינו?</p>
+<h3 data-a="01-478">חסד של אברהם אבינו – הסבא מסלבודקא.</h3>
+<p data-a="01-479">הסבא מסלבודקא זצ"ל היה מרבה בשיחותיו להביא דברי חז"ל אלו בהם ישנה ידיעה מרעישה שיכולה לרומם את האדם ולנשאו, אנחנו מורגלים לחשוב שלעשות חסד הינו ללכת ולהיטיב עם הזולת, אבל האמת שכל הטבה שאדם עושה עם זולתו, ואפילו עם בני ביתו ואפילו עם עצמו, הם חסד והליכה בדרכיו של הקב"ה.</p>
+<p data-a="01-480">אברהם אבינו שהיה דבוק בקונו הגיע למדרגה זו, שכל מעשה חסד שעשה, כל הטבה שהיטיב התכוון לעשותה משום הליכה בדרכיו, להיטיב לצלם אלוקים, לכן כשקבר את שרה אשתו שלכאורה זה פעולה שכל בעל עושה ומחויב לעשות נחשב לו הדבר לחסד, כי עשה זאת בכוונה להיטיב לצלם אלוקים, אפילו את מעשיו שעשה לעצמו היה עושה משום מידת החסד.</p>
+<p data-a="01-481">הרי שבכל יום ויום אנו מקיימים מאות מעשי חסד והטבה, ועם קצת מחשבה, אדם יכול לרומם את עצמו, בזה שיהיה חדור בהכרה שכל פעם שהוא מברך את רעהו לשלום הוא מקיים מצווה, וכן בכל פעולה של הטבה שעושה בבית, עבור אשתו וילדיו, הוא מקיים את הצווי של והלכת בדרכיו, מאידך כמה הפסד ואבדון כשאדם לא זוכר דבר זה ולא חושב עליו. (נתיבי חיים – שמות עמוד כ"ג)</p>
+<p data-a="01-482">לסיכום: הסבא מסלבודקא מת': שמעלת אברהם אבינו ע"ה שאפילו בפעולה טבעית שכל אדם עושה, הוא לא עשה אותה מחמת טיבעו אלא עשאה מחמת הרצון ללכת בדרכיו של ה' יתברך, להיטיב לזולת – לצלם אלוקים.</p>
+<h3 data-a="01-483">סיפור: כיצד לוקחים ילד לרופא?</h3>
+<p data-a="01-484">מסופר על הגה''צ ר' שלום שבדרון זצ''ל: בתקופה שלאחר נישואיו אירע פעם שאחד מילדיו חלה ולקח אותו לרופא, ובדרך לרופא נפגש עם הגרי''א שר זצ''ל ראש ישיבת סלבודקה בני ברק, וראש הישיבה שאלהו להיכן הוא הולך, והוא ענה לו שהוא לוקח את הילד לרופא, ראש הישיבה חזר ושאל אם כן לאן אתה הולך, ושוב חזר על אותה תשובה וכך חזר ושאל כמה פעמים, עד שלבסוף אמר לו ראש הישיבה, בטון של תוכחה: "הבהמה הגדולה לוקחת את הבהמה הקטנה והולכת לרופא", סיפר ר' שלום – בתחילה הייתי מופתע מאוד, לא הבנתי למה ירמזון מילותיו, אבל אז הבנתי!! כאשר אני נוטל את בני לרופא אני הולך לגמול איתו חסד, להקל מעליו את חוליו, ולא עושה כמעשה קוף בעלמא כדרך שבהמה מטיבה עם בנה.</p>
+<p data-a="01-485">ובמקום אחר ראיתי גירסה אחרת של סיום הסיפור:</p>
+<p data-a="01-486">עד שלבסוף אמר לו ראש הישיבה, בטון של תוכחה: אתה צריך לומר שהנך הולך לעשות מצוות גמילות חסד עם הילד, וכי מפני שהוא ילד שלך אין בו בו מצוות גמילות חסדים?</p>
+<p data-a="01-487">והוסיף ראש הישיבה ואמר שרוב בני אדם טועים בזה לאורך כל הדרך וחושבים שגמילות חסדים הוא רק לפתוח גמ''ח או לפתוח מוסד וכו', והאמת היא שכל הפעולות שאדם עושה בביתו בקרב משפחתו וילדיו הכל הם מצוות של גמילות חסדים וכאשר הוא מכוין לשם מצווה ירויח בכך שני דברים: א. בזה הוא מקדש את כל פעולותיו והופך אותם ממעשים פשוטים למעשי מצווה וגמילות חסד . ב. עי''ז יהיה לו יותר קל לטפל במשפחתו שבזה שהוא יודע שכאשר הוא קם לילד בלילה טורח בטיפולו במשך היום הרי הוא מקיים בכך מצוות גמ''ח, אם כן יקל עליו כל זה שהרי הוא טורח במצווה , וכמו כן אדם שהולך לעבודה אם יחשוב שהוא הולך לעבוד כדי לקיים מצווה לפרנס את בני משפחתו נמצא שהרי הוא מקיים מצוה של גמילות חסד במשך כל השעות שהוא עמל בהם במלאכתו.  (מתוך החוברת חיים וחסד עמוד ח'.)</p>
+<h3 data-a="01-488">סיכום: האם יש מצוות חסד בעזרה לילדים?</h3>
+<div class="highlight-box"><p data-a="01-489">תשובה: תלוי כיצד האדם עושה את הפעולה:</p>
+<p data-a="01-490">שעושה ללא כוונה מחמת טבעו שרוצה להיטיב לבנו, או מלומדה – מחמת הרגל ללא שום כוונה (כמו מכונה) אין בזה כל כך מצווה.</p>
+<p data-a="01-491">שעושה עם כוונה ללכת בדרכיו של ה' יתברך להיטיב לבניו של ה' יתברך, בזה עושה מצווה גמורה.</p></div>
+<h3 data-a="01-492">לפני שניגש לטפל בתינוק יחשוב/יאמר לקיים מצוות:</h3>
+<p data-a="01-493">א. הנני מוכן ומזומן לקיים מצוות עשה שכתבת לנו בתורתך הקדושה "ואהבת לרעך כמוך" שמצווה זו גילה לנו ר' עקיבא שהיא כלל גדול בתורה, והלל אמר עליה שהיא כל התורה כולה.</p>
+<p data-a="01-494">ב. ומצוות עשה שכתבת לנו בתורתך הקדושה "והלכת בדרכיו" ללכת בדרכיך שאתה אוהב לעשות חסד ולרחם, שמחמת חשיבות מצווה זו חזרת עליה שמונה פעמים בתורתך הקדושה.
+וכמו שכתב הגר"א (משלי פרק ד פסוק יג) "כי מה שהאדם חי הוא כדי לשבור מה שלא שבר עד הנה אותו המדה לכן צריך תמיד להתחזק ואם לא יתחזק למה לו חיים".</p>
+<p data-a="01-495">ג. ומצוות חסד שבמצווה זו אתה חפץ כדכתיב: "כה אמר ה' לסריסים אשר ישמרו את שבתותי ובחרו באשר חפצתי". ומהו הדבר שאתה חפץ בו? חסד כדכתיב:"כי חסד חפצתי ולא זבח".</p>
+<p data-a="01-496">ד. ומצוות עשה של קידוש שמך ככתוב בתורתך "ונקדשתי בתוך בני ישראל". ולהרבות כבוד לשמך ככתוב (ישעיה פרק מג) "כֹּל הַנִּקְרָא בִשְׁמִי וְלִכְבוֹדִי בְּרָאתִיו יְצַרְתִּיו אַף עֲשִׂיתִיו". שכוונתי תהיה בגידול הילדים כדי שיתפרסם יחוד שמך בעולם, ולישרם לאהבתך יתברך. שמחמת סיבה זו אהבת את אברהם ככתוב: כי ידעתיו (אהבתיו) למען אשר יצווה את בניו ואת ביתו אחריו ושמרו דרך ה' לעשות צדקה ומשפט.</p>
+<div class="guiding-box"><h4 data-a="01-497">🤔 להתבוננות</h4><ul><li data-a="01-498">האם יש מצוות חסד ממש בעזרה שאנו נותנים לילדינו?</li><li data-a="01-499">מה מלמד אותנו הסבא מסלבודקא על חסדו של אברהם אבינו?</li><li data-a="01-500">מה אוכל לומר או לחשוב, לפני שאני ניגש לטפל בתינוק בלילה, כדי לקיים בכך מצווה?</li></ul></div>
+<div class="prayer-box"><div class="prayer-box-inner"><h4 data-a="01-501">🙏 תפילה מסכמת</h4><p data-a="01-502">רבונו של עולם, זכני לראות בכל טיפול, בכל חיתול ובכל הרגעה של ילדי בלילה — מעשה חסד של ממש כלפי בריותיך. תן לי לומר בליבי לפני כל מעשה כזה שאני עושה זאת לשם קיום מצוות חסד ואהבת ה', ובכך תהפוך כל עייפותי לשכר עצום בעולם הזה ובעולם הבא. אמן.</p></div></div>
+<div class="section-divider">✦ ✦ ✦</div>
+<div class="chapter-label">פרק יא</div>
+<h2 data-a="01-503" id="section12">סיכום החוברת בצורת הלכות</h2>
+<p data-a="01-504"><em>סיכום מרוכז של כל החוברת, ערוך בצורת הלכות קצרות ומעשיות ליישום מיידי.</em></p>
+<div class="in-chapter-box"><h4 data-a="01-505">📖 בפרק זה:</h4><ul><li data-a="01-506">פרק א:</li><li data-a="01-507">פרק ב:</li><li data-a="01-508">פרק ג:</li><li data-a="01-509">פרק ד':</li><li data-a="01-510">פרק ה':</li><li data-a="01-511">פרק ו':</li><li data-a="01-512">פרק ז:</li><li data-a="01-513">פרק ח:</li><li data-a="01-514">פרק ט:</li><li data-a="01-515">פרק י:</li></ul></div>
+<h3 data-a="01-516">פרק א:</h3>
+<p data-a="01-517">בשלושה סוגי מצוות נצטוינו: מצוות שבמעשה, מצוות שבדיבור ובמצוות שבמחשבה – לב.</p>
+<p data-a="01-518">מעלת המצוות שבלב גדולה מכולם, והיא עיקר רצון הבורא.</p>
+<p data-a="01-519">מצוות שבלב קונים על ידי מחשבה חזקה.</p>
+<p data-a="01-520">כל פעם שמעביר במוחו מחשבות שה' רוצה מקיים מצווה.</p>
+<h3 data-a="01-521">פרק ב:</h3>
+<p data-a="01-522">מפסוק שמע ישראל ה' אלוקינו למדנו להאמין בכמה דברים:</p>
+<p data-a="01-523">א.ה' יתברך משגיח על מעשי ידינו.</p>
+<p data-a="01-524">ב.הוא בעצמו ולא שר או מלאך.</p>
+<p data-a="01-525">ג. אנחנו העם הנבחר שהבדילנו לשמו ולקחנו לחלקו.</p>
+<p data-a="01-526">כאשר התינוק בוכה בלילה והאדם מעביר במחשבתו זה מה' יתברך הוא מקיים מצוות עשה דאוריתא של האמונה בה' אלוקינו.</p>
+<p data-a="01-527">בדיברה הראשונה של עשרת הדיברות אנכי – התחייבנו להאמין שה' משגיח על הכול.</p>
+<p data-a="01-528">היציאה ממצרים היא ראיה ומופת שה' שולט ומשגיח בארץ, ומסתבר שראוי לזכור זה כאשר מקימים זכירת יציאת מצרים כל יום.</p>
+<p data-a="01-529">בדיברה השנייה לא יהיה לך התחייבנו להאמין שאין לאף בריה כוח ללא שה' רצה בכך.</p>
+<p data-a="01-530">שאדם כועס על ילדו הוא עלול לעבור על לא יהיה לך אלוהים אחרים על פני.</p>
+<p data-a="01-531">בה' אחד התחייבנו להאמין שאין בריה שעושה פעולה ללא שברגע זה ה' רוצה בכך שתעשה זאת.</p>
+<p data-a="01-532">כאשר מגיע לאדם נסיון והוא מעביר במחשבתו מחשבות אלו, מעלתו גדולה ממי שקורא ק"ש.</p>
+<p data-a="01-533">הלכה למעשה: התינוק בוכה באמצע הלילה, אתה נזכר במה שלמדת ומעביר במחשבה: שמע ישראל (תפנים ללבך יהודי יקר!), ה' אלוקינו (אבינו היקר משגיח על הכול),  ה' אחד (אין דבר שנעשה לולא שהוא בעצמו רצה בכך עכשיו).</p>
+<p data-a="01-534">שאדם רואה את המזוזה מצוות לחשוב: א. ה' שולט בכול. ב.אני אוהב את אבי שבשמים. ג. אני רוצה לעשות רצונו.</p>
+<h3 data-a="01-535">פרק ג:</h3>
+<p data-a="01-536">חובה לאדם להצמיד לאמונה בה' את אהבת ה' אליו.</p>
+<p data-a="01-537">תכלית קיום המצוות היא להגיע לאהבת ה', וצריך האדם מאוד להתבונן כיצד יגיע מקיום המצוות לאהבת ה'.</p>
+<p data-a="01-538">דרגת אהבת ה' היא הדרגה הגבוהה ביותר בעבודת ה'.</p>
+<p data-a="01-539">חובה לחשוב מחשבות של אהבת ה' בזמן קריאת שמע, שאומר ואהבת, כגון שיתבונן בחסדיו.</p>
+<p data-a="01-540">מי שלא כיון אז, חובה עליו לחשוב על כך פעם ביום וראוי בבוקר לפני שאוכל.</p>
+<p data-a="01-541">בזמן שאדם קורה לו דבר טוב חייב לעורר בעצמו רגשי הכרת הטוב ואהבת ה'.</p>
+<p data-a="01-542">בזמן שקורה לאדם דבר רע חובה לעורר עצמו שה' אוהב אותו ועושה הכול לטובתו הניצחית.</p>
+<p data-a="01-543">חובה לברך על הרעה בשמחה, ואין צריך באותו שיעור שמחה שמברך על הטובה.</p>
+<h3 data-a="01-544">פרק ד':</h3>
+<p data-a="01-545">מצווה לכוין בשעה שקורא אחד או מייד לאחר מכן שמסכים למסור נפשו על קידוש השם, לא הספיק יכוין כך במילים בכל נפשך.</p>
+<p data-a="01-546">ראוי לכוין במילים בכל מאודך לקבל על עצמו שכל מה שיבוא עליו (כגון שהתינוק יבכה בלילה) יקבל באהבה ובשמחה.</p>
+<p data-a="01-547">דרגה גבוהה מזו היא לא רק לקבל על עצמו דברים אלו, אלא גם לזכות לקימם בפועל, ולכן צדיקים מחכים מתי יזכו לקיים מצוות אלו.</p>
+<p data-a="01-548">ר' עקיבא לימד את תלמידיו שבשביל לזכות לקיים מצוות אלו בשמחה יש לעשות הכנות לכך מראש.</p>
+<p data-a="01-549">דרגה זו של לקבל בשמחה ובאהבה את רצון הבורא כל כך גדולה שר' סבר שעדיף לו למות ולהפסיד את לימוד התורה לתלמידיו העיקר לזכות לדרגה נפלאה זו.</p>
+<h3 data-a="01-550">פרק ה':</h3>
+<p data-a="01-551">השולחן ערוך מסביר שכיצד אדם ישמח שמגיעים עליו יסורים: שיתבונן שזכה לקיים מצוות גדולות מאוד וזה השמחה האמיתית.</p>
+<p data-a="01-552">הנביא חבקוק גילה לנו שהשכר על מצוות האמונה הוא הגדול ביותר מכל המצוות, ובמצווה זו כדאי מאוד להתחזק תמיד.</p>
+<p data-a="01-553">יהודי עובד ה' שמח שרע לו יותר מאשר שטוב לו (ונהפוכו), היות ואז יכול יותר לעבוד את ה', ולעשות נחת רוח ליוצרו.</p>
+<h3 data-a="01-554">פרק ו':</h3>
+<p data-a="01-555">מצוות יראת ה' היא מצווה תמידית – לחשוב מחשבות שמביאות את האדם ליראת ה'.</p>
+<p data-a="01-556">בזמן שיש לאדם נסיון חובה לחשוב מחשבות שמביאות ליראת ה'.</p>
+<p data-a="01-557">מצוות האמונה היא מצווה תמידית – לחשוב מחשבות שמביאות את האדם לידי ההרגשה בלב שה' שולט בכול והכול מרצונו.</p>
+<p data-a="01-558">בזמן שיש לאדם נסיון חובה לחשוב מחשבות שמביאות לידי אמונה ואהבת ה' יתברך, וגם זה חלק ממה שאמרו חייב לברך על הרעה.</p>
+<h3 data-a="01-559">פרק ז:</h3>
+<p data-a="01-560">חייב אדם להכין את עצמו לפני קיום המצווה, שנאמר: הכון לקראת אלוקיך ישראל.</p>
+<p data-a="01-561">ר' עקיבא לימד את תלמידיו בשביל לקבל יסורים באהבה חייבים להתכונן לפני.</p>
+<p data-a="01-562">מי שיודע שבנו לפעמים בוכה בלילה יקבל על עצמו לפני השינה מצוות: אנכי, לא יהיה, שמע ישראל, ואהבת.</p>
+<p data-a="01-563">מי שקשה לו לקבל את היסורים בשמחה, לפחות יקבלם בשמחה לפני שהם מגיעים ויחשב לו שקיבלם באהבה.</p>
+<h3 data-a="01-564">פרק ח:</h3>
+<p data-a="01-565">נצטווינו על אהבת ה' יתברך על ידי שנתבונן שהכול שלו ומשלו נתן לנו.</p>
+<p data-a="01-566">בכל לבבך – נצטווינו שיהיה החשק לעשות רצון ה' יתברך יותר גדול מכל חשק שיש לנו, לדוגמא שיותר נרצה לקום בלילה לילדו של ה' יתברך כאשר ה' רוצה בכך מאשר להמשיך לישון.</p>
+<p data-a="01-567">בכל נפשך להסכים בשביל רצון ה' יתברך לסבול כל צער ונזק עד נטילת נפשו.</p>
+<p data-a="01-568">בכל מאודך – נצטווינו שימאס בממונו אם יצטרך למוסרו בשביל עבודת ה' יתברך.</p>
+<p data-a="01-569">צריכים לשמוח שזכינו לקיים מצוות עד שמתוך חביבות הדברים נלמד את בנינו דברים אלו כאדם המספר לבנו על אוצר יקר.</p>
+<p data-a="01-570">צריך שיהיו הדברים הללו תמיד בזיכרוננו ובצורה חזקה כמו שאדם רואה דבר מול עינייו.</p>
+<p data-a="01-571">והיו הדברים – צריכים לקבוע בנפשנו בכל פעם שקוראים קריאת שמע הסכמה מוחלטת על כל הנ"ל.</p>
+<p data-a="01-572">צריכים לצייר בלב כאילו בא לידי כך וקיים זאת.</p>
+<h3 data-a="01-573">פרק ט:</h3>
+<p data-a="01-574">מעלה גדולה מאוד ליהודי לא להסתפק בעשיית  רצון ה' אלא גם לרצות לזכות לעשות את מצוות ה'.</p>
+<p data-a="01-575">לדוגמא: התינוק מתעורר בלילה ובוכה, יש לפני עשית רצון ה' לשמח את בנו, אם ארצה בזה יותר מאשר לישון זכיתי לקיים עקידת יצחק.</p>
+<p data-a="01-576">עובד ה' החושק לעשות רצון בורא עולם לא להוט שהתינוק כבר יירדם, שהרי עכשיו זוכה לקיים רצון אביו האהוב ולמה לו לברוח מעשית רצונו.</p>
+<p data-a="01-577">עובד ה' קם בשמחה למיטת בנו הבוכה שהרי הוא זוכה לעקוד לה' את חשקי לבבו על גבי מזבח אהבתו יתברך.</p>
+<p data-a="01-578">עובד ה' לא מסתכל על הבן זוג, אולי הוא יקום, אלא קם ראשון בשמחה, כאדם החושק בדבר שאין משאיר אותו לאחר.</p>
+<p data-a="01-579">עובד ה' חוזר למיטה בשמחה כאדם שהיה מקבל 500 ש''ח על כל פעם שהיה קם מהמיטה בשביל תינוק בוכה.</p>
+<h3 data-a="01-580">פרק י:</h3>
+<p data-a="01-581">מצוות חסד מתקיימת גם עם הילדים ועם רעיתו או עם הבעל, בתנאי שעושה כך מחמת רצון ה' שנלך בדרכיו שהוא טוב ומטיב.</p>
+<p data-a="01-582">ראוי לאדם לומר לפני שניגש לעשות חסד:</p>
+<p data-a="01-583">הנני מוכן ומזומן לקיים מצוות עשה שכתבת לנו בתורתך הקדושה "ואהבת לרעך כמוך"</p>
+<p data-a="01-584">ומצוות עשה שכתבת לנו בתורתך הקדושה "והלכת בדרכיו" ללכת בדרכיך שאתה אוהב לעשות חסד ולרחם,</p>
+<div class="guiding-box"><h4 data-a="01-585">🤔 להתבוננות</h4><ul><li data-a="01-586">אילו מההלכות שלמדתי בחוברת זו אני יכול להתחיל ליישם כבר הלילה?</li><li data-a="01-587">מהי הנקודה המרכזית ביותר שאני לוקח איתי מכל הפרקים?</li></ul></div>
+<div class="prayer-box"><div class="prayer-box-inner"><h4 data-a="01-588">🙏 תפילה מסכמת</h4><p data-a="01-589">רבונו של עולם, זכני נא לקחת את כל מה שלמדתי בחוברת זו מהתיאוריה אל המעשה. תן לי שלא אשכח, גם ברגעי העייפות והלחץ, שכל לילה הוא הזדמנות חדשה לקיים מצוות גדולות שבלב. ובזכות זה, זכני "להגיד בבוקר חסדך ואמונתך בלילות", ותן שכר טוב לכל הבוטחים בשמך באמת. אמן.</p></div></div>
+
+  
+<div class="sources">
+<h3>📚 מקורות ומראי מקומות</h3>
+<ol>
+<li>תנ"ך: דברים ל,יד; דברים ו (פרשת שמע); ירמיה ט,יא; בראשית (עקידת יצחק, פרשת חיי שרה)</li>
+<li>משנה: מסכת אבות</li>
+<li>תלמוד בבלי: שבת יא ע"א; ברכות יג ע"ב; נדרים פא ע"א; סנהדרין קו ע"ב</li>
+<li>תלמוד ירושלמי: מסכת יומא</li>
+<li>מדרש רבה; מדרש תנחומא פרשת צו</li>
+<li>רמב"ם — ספר המצוות, מצוות עשה</li>
+<li>רבינו בחיי — פירוש על התורה, פרשת ואתחנן</li>
+<li>שו"ת הרשב"א — ביאור על פרשת קריאת שמע</li>
+<li>ספר הזכרונות לר' צדוק הכהן מלובלין</li>
+<li>בעל הטורים — פירוש על התורה</li>
+<li>מסילת ישרים — פרק יט</li>
+<li>נפש החיים</li>
+<li>חתם סופר — תורת משה, בראשית</li>
+<li>ב"ח — אורח חיים, סימן מז</li>
+<li>הסבא מסלבודקא — שיחות מוסר</li>
+<li>הר"ן — דרשות הר"ן, דרוש ו</li>
+</ol>
+</div>
+
+
+  
+<div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+</div>
+
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var links = document.querySelectorAll('.toc a[href^="#"]');
+  links.forEach(function(l){
+    l.addEventListener('click', function(e){
+      e.preventDefault();
+      var t = document.querySelector(l.getAttribute('href'));
+      if(t){ t.scrollIntoView({behavior:'smooth'}); }
+    });
+  });
+  var st = document.getElementById('scrollTop');
+  window.addEventListener('scroll', function(){
+    st.style.display = window.scrollY > 400 ? 'flex' : 'none';
+  });
+  st.addEventListener('click', function(e){
+    e.preventDefault();
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+});
+</script>
+
+<script>
+/* =============================================================================
+   קול תודה — מנוע הקראה למאמרים תורניים   |   tts.js   v2.0
+   -----------------------------------------------------------------------------
+   העתק את הקובץ הזה כמות שהוא לתוך תגית <script> בסוף ה-HTML.
+   אין לכתוב אותו מחדש, לקצר או "לשפר" תוך כדי יצירת מאמר — הוא נבדק כך.
+   Web Speech API בלבד: בלי API חיצוני, בלי מפתח, בלי רשת, בלי עלות.
+   ============================================================================= */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    var NS       = 'koltoda.tts.';
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false, noHeVoice = false;
+    var clickToRead = true;
+
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+    function readPos() { try { return parseInt(localStorage.getItem(POS_KEY) || '0', 10) || 0; } catch (e) { return 0; } }
+
+    var G = '["\\u05f4\\u201d\\u2033]';
+    var R = "['\\u05f3\\u2019]";
+
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' ');
+        t = t.replace(/־/g, ' ');
+        t = t.replace(/\s*[–—]\s*/g, ', ');
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function chapterLabel(h) {
+        var d = h.getAttribute && h.getAttribute('data-chapter');
+        if (d && d.trim()) return d.trim();
+        var p = h.previousElementSibling;
+        if (p && p.classList && p.classList.contains('chapter-label')) {
+            return p.textContent.replace(/\s+/g, ' ').trim();
+        }
+        return '';
+    }
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (n.closest(SKIP)) return;
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            if (n.tagName === 'H2') {
+                var lbl = chapterLabel(n);
+                if (lbl && raw.indexOf(lbl) !== 0) raw = lbl + '. ' + raw;
+            }
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    function hint() {
+        if (noHeVoice) {
+            return 'לא נמצא קול עברי במחשב — ההקראה תישמע משובשת. ' +
+                   'ב-Windows: הגדרות ← שעה ושפה ← דיבור ← נהל קולות ← הוסף קולות ← עברית.';
+        }
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = readPos();
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        var was = noHeVoice;
+        noHeVoice = !he.length;
+        if (noHeVoice !== was && !isOn) say(hint());
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;
+                if (e.target.closest('a')) return;
+                if (window.getSelection && String(window.getSelection()).length) return;
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    var FS_MIN = 0.85, FS_MAX = 1.75, FS_STEP = 0.15, fontScale = 1;
+
+    function applyFontScale() {
+        document.documentElement.style.setProperty('--fs', String(fontScale));
+        var out = document.getElementById('fontScaleValue');
+        if (out) out.textContent = Math.round(fontScale * 100) + '%';
+        var dec = document.getElementById('fontSmaller'), inc = document.getElementById('fontBigger');
+        if (dec) dec.disabled = fontScale <= FS_MIN + 0.001;
+        if (inc) inc.disabled = fontScale >= FS_MAX - 0.001;
+    }
+
+    window.setFontScale = function (dir) {
+        fontScale = Math.min(FS_MAX, Math.max(FS_MIN, +(fontScale + dir * FS_STEP).toFixed(2)));
+        store('fs', String(fontScale));
+        applyFontScale();
+    };
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var savedFs = parseFloat(store('fs') || '1');
+        if (savedFs >= FS_MIN && savedFs <= FS_MAX) fontScale = savedFs;
+        applyFontScale();
+        if (readPos() > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+<script data-audio-cues="" type="application/json">{"01":[0.1,2.29,5.65,10.8,12.56,33.05,53.34,54.86,68.96,90,93.26,98.44,103.59,112.5,116.96,119.06,120.86,125.65,130.29,133.84,135.85,157.31,161.36,168.99,190.14,203.88,224.66,228.39,231.31,239.44,265.58,269.36,278.02,279.79,284.26,288.29,290.3,310.15,313.06,319.35,321.01,323.34,326.95,330.24,333.56,336.15,338,341.5,343.19,345.46,364.13,367.68,397.76,413.98,436.97,440.24,452.19,464.78,531.72,551.42,554.7,562.41,566.4,570.44,572.26,601.42,605.29,614.55,616.16,629.45,633.01,637.96,643.54,647.75,657.75,660.34,666.55,675.67,682.06,690.75,692.59,702.86,708.37,714.96,727.38,729.96,735.49,742,745.15,774.66,780.24,805.45,808.89,817.44,820.48,838.59,850.2,855.83,862.73,864.46,870.03,873.15,876.7,880.91,899.78,902.26,907.11,910.58,915,916.92,922.4,928.07,932.54,934.55,954.74,957.27,963.55,965.2,969.6,973.04,977.77,981.15,983.72,986.31,989.22,991.15,995.37,998.74,1002.82,1006.12,1010.52,1013.36,1044.56,1132.86,1138.57,1142.44,1146.07,1151.03,1163.89,1174.58,1177.99,1182.09,1186.38,1191.81,1195.62,1224.83,1230.36,1237.56,1247.35,1258,1262.86,1307.88,1324.11,1329.68,1334.43,1341.13,1354.49,1366.56,1395,1398.39,1407.24,1411.94,1418.06,1421.48,1426.83,1432.35,1434.98,1439.13,1452.09,1463.43,1466.05,1478.34,1487.34,1490.26,1493.94,1499.15,1504.35,1512.96,1514.84,1520.64,1528.13,1533.46,1548.34,1556.04,1577.59,1589.51,1591.28,1596.18,1599.85,1603.86,1606.06,1626.45,1628.7,1634.55,1636.25,1639.51,1642.71,1645.91,1649.04,1651.72,1654.1,1655.99,1659.25,1676.87,1680.1,1683.34,1697.65,1703.5,1717.85,1752.4,1755.55,1771.62,1783.46,1786.6,1790,1817.31,1829.31,1845.45,1850.17,1862.8,1866.55,1898.28,1906.92,1921.75,1924.41,1926.89,1977.32,1978.95,1987.04,1991.69,1996.03,1997.98,2001.17,2013.14,2021.33,2026.67,2028.42,2033.92,2040.04,2044.73,2046.75,2065.2,2068.19,2074.88,2076.53,2078.82,2081.09,2083.47,2086.12,2088.07,2089.8,2092.2,2128.45,2132.13,2134.37,2154.98,2166.08,2177.77,2180.12,2183.62,2191.73,2204.4,2217.67,2228.77,2232.62,2238.6,2243.57,2251.72,2260.85,2263.15,2265.87,2270.69,2292.98,2294.93,2298.35,2316.35,2320.98,2406.9,2408.59,2417.39,2426.04,2435.33,2441.97,2451.68,2453.62,2458.68,2463.82,2468.96,2470.97,2491.37,2493.76,2500.21,2501.86,2505.33,2508.66,2511.66,2513.4,2516.83,2533.73,2559.58,2563.96,2572.65,2578.63,2583,2601.41,2604.73,2634.33,2637.51,2637.51,2673.2,2683.96,2692.51,2692.51,2701.97,2707.63,2712.11,2717.51,2719.53,2735.53,2737.05,2737.05,2737.05,2748.11,2748.11,2749.81,2753.37,2797.7,2797.7,2811.32,2814.52,2814.52,2833.79,2833.79,2852.73,2852.73,2854.4,2860.35,2860.35,2873.47,2873.47,2873.47,2882.62,2882.62,2905.15,2905.15,2905.15,2905.15,2911.98,2911.98,2911.98,2922.62,2924.27,2962.74,2972.72,2978.73,2985.52,2985.52,2996.6,3001.4,3006.43,3011.5,3022.79,3028.74,3028.74,3042.18,3075.84,3087.55,3096.68,3114.96,3114.96,3114.96,3114.96,3145.75,3154.16,3167.85,3167.85,3177.2,3177.2,3184.5,3184.5,3191.41,3191.41,3214.16,3214.16,3214.16,3214.16,3214.16,3214.16,3223.3,3224.81,3227.42,3227.42,3227.42,3232.1,3250.3,3254.73,3254.73,3280.2,3280.2,3346.47,3346.47,3374.81,3374.81,3407.27,3444.13,3460.41,3460.41,3475.81,3490.52,3490.52,3508.81,3508.81,3531.73,3541.18,3550.52,3552.2,3552.2,3552.2,3552.2,3563.8,3563.8,3574.73,3577.31,3582.88,3586.07,3586.07,3590.8,3590.8,3595.36,3595.36,3605.22,3605.22,3627.02,3627.02,3627.02,3627.02,3627.02,3642.8,3642.8,3642.8,3651.79,3674.12,3674.12,3674.12,3697.05,3706.59,3720.45,3729.19,3740.95,3740.95,3761.49,3761.49,3829.73,3838.67,3851.31,3853.7,3863.5,3863.5,3863.5,3863.5,3872.93,3881.25,3881.25,3888.23,3888.23,3904.25,3910.88,3910.88,3910.88,3910.88,3921.38,3921.38,3929.53,3931.05,3931.05,3939.27,3944.76,3977.96,3977.96,3977.96,4012.41,4036.49,4059.66,4059.66,4082.21,4082.21,4082.21,4140.74,4140.74,4140.74,4140.74,4140.74,4140.74,4212.22,4233.12,4256.94,4268.87,4268.87,4291.05,4295.24,4301.28,4301.28,4309.52,4309.52,4338.12,4338.12,4338.12,4338.12,4338.12,4344.72,4346.74,4346.74,4346.74,4346.74,4346.74,4346.74,4346.74,4355.5,4355.5,4355.5,4365.34,4365.34,4369.73,4375.87,4379.3,4385.69,4392.43,4408.55,4412.07,4422.67,4430.14,4443.44,4449.45,4458.63,4464.68,4464.68,4476.38,4483.47,4483.47,4483.47,4483.47,4501.1,4509.6,4514.38,4514.38,4526.34,4538.27,4544.16,4556.96,4562.89,4562.89,4573.28,4581.92,4591.21,4591.21,4597.83,4597.83,4607.58,4618.16,4618.16,4626.69,4626.69,4636.17,4643.76,4643.76,4643.76,4656.88,4674.22,4679.81,4689.15,4696.45,4703.77,4703.77,4703.77,4716.05,4721.95,4728.47,4743.37,4750.07,4762.32,4762.32,4772.4,4772.4,4782.2,4782.2,4782.2,4789.94,4789.94,4789.94,4798.59]}</script><script data-audio-player="">
+/* =============================================================================
+   audio-player.js — נגן ההקלטה (MP3 שהופק מראש ב-edge-tts)
+   הדבק מילה במילה. נפרד לגמרי מ-tts.js (ההקראה החיה של הדפדפן).
+   ============================================================================= */
+(function () {
+    var box = document.querySelector('.audio-player');
+    if (!box) return;
+
+    var audio  = box.querySelector('audio');
+    var select = box.querySelector('.audio-chapter-select');
+    if (!audio || !select) return;
+
+    var KEY = 'koltoda.audio.ch.' + (document.title || '');
+
+    /* מפת תזמונים: { "01": [0, 3.2, 9.7, ...] } — זמן תחילת כל פסקה בקטע.
+       נוצרת ב-make-audio.mjs מקובצי ה-SRT של edge-tts. */
+    var CUES = {};
+    var tag = document.querySelector('script[data-audio-cues]');
+    if (tag) { try { CUES = JSON.parse(tag.textContent || '{}'); } catch (e) {} }
+
+    var seg = null;      // מזהה הקטע הפעיל, למשל "01"
+    var line = -1;       // אינדקס הפסקה המודגשת
+
+    /* ---------- הדגשה ---------- */
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+        line = -1;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+
+        /* בספר מתחלף — מדפדפים לעמוד של הפסקה, כמו בהקראה החיה */
+        var pg = el.closest ? el.closest('.page') : null;
+        if (pg && !pg.classList.contains('active') && window.bookGo) {
+            var pages = [].slice.call(document.querySelectorAll('#book .page'));
+            var i = pages.indexOf(pg);
+            if (i > -1) { window.bookGo(i); return; }
+        }
+
+        /* גוללים רק אם הפסקה מחוץ למסך, כדי לא לחטוף את הדף מהקורא */
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    /* איזו פסקה נאמרת עכשיו — האחרונה שזמן ההתחלה שלה כבר עבר */
+    function lineAt(starts, t) {
+        var lo = 0, hi = starts.length - 1, ans = 0;
+        while (lo <= hi) {
+            var mid = (lo + hi) >> 1;
+            if (starts[mid] <= t) { ans = mid; lo = mid + 1; } else { hi = mid - 1; }
+        }
+        return ans;
+    }
+
+    audio.addEventListener('timeupdate', function () {
+        var starts = CUES[seg];
+        if (!starts || !starts.length) return;
+        var i = lineAt(starts, audio.currentTime);
+        if (i === line) return;
+        line = i;
+        var el = document.querySelector('[data-a="' + seg + '-' + i + '"]');
+        if (el) highlight(el);
+    });
+
+    /* ---------- קבצים שנבחרו מהמחשב ----------
+       דפדפן לא יכול לקרוא נתיב מקומי מעצמו (תיקיית ההורדות חסומה לו), אבל
+       קובץ שהמשתמש בוחר בעצמו מותר. ממפים לפי שם הקובץ, כך שאפשר לבחור את
+       כל פרקי הספר בבת אחת. ההדגשה עובדת גם ככה — התזמונים כבר בדף. */
+    var picked = {};
+    var note   = box.querySelector('.audio-note');
+    var input  = box.querySelector('.audio-pick-input');
+    var pickBtn = box.querySelector('.audio-pick-btn');
+
+    function say(msg) { if (note) note.textContent = msg || ''; }
+
+    /* קישור הורדה שלא מולא עדיין מוסתר מהקורא — אין טעם ב"לחץ כאן" מת.
+       הבדיקה היא על ה-href עצמו, כך שברגע שמדביקים כתובת הוא מופיע לבד. */
+    var dl = box.querySelector('.audio-download');
+    if (dl && (dl.getAttribute('href') || '#') === '#') dl.style.display = 'none';
+
+    function baseName(u) {
+        try { u = decodeURIComponent(u); } catch (e) {}
+        return u.split('/').pop();
+    }
+
+    function srcFor(opt) {
+        return picked[baseName(opt.value)] || opt.value;
+    }
+
+    if (pickBtn && input) {
+        pickBtn.addEventListener('click', function () { input.click(); });
+        input.addEventListener('change', function () {
+            var files = [].slice.call(input.files || []);
+            if (!files.length) return;
+            var names = {};
+            for (var i = 0; i < select.options.length; i++) names[baseName(select.options[i].value)] = true;
+
+            var matched = 0, spare = [];
+            files.forEach(function (f) {
+                if (names[f.name]) { picked[f.name] = URL.createObjectURL(f); matched++; }
+                else spare.push(f);
+            });
+            /* קובץ יחיד בשם אחר — מניחים שהוא של הפרק המוצג */
+            if (!matched && spare.length === 1) {
+                picked[baseName(select.options[select.selectedIndex].value)] = URL.createObjectURL(spare[0]);
+                matched = 1;
+            }
+            say(matched ? 'נטענו ' + matched + ' קבצים מהמחשב.' : 'שמות הקבצים לא תואמים לפרקים.');
+            if (matched) load(select.selectedIndex, true);
+        });
+    }
+
+    /* הקובץ לא נמצא בנתיב היחסי — מכוונים להורדה ולבחירה ידנית */
+    audio.addEventListener('error', function () {
+        if (!audio.getAttribute('src')) return;
+        say('קובץ השמע לא נמצא לצד הדף. הורד אותו ואז בחר אותו כאן.');
+    });
+
+    /* ---------- ניווט בין פרקים ---------- */
+    function load(i, autoplay) {
+        var opt = select.options[i];
+        if (!opt) return;
+        select.selectedIndex = i;
+        seg = opt.getAttribute('data-seg');
+        clearHighlight();
+        audio.src = srcFor(opt);
+        try { localStorage.setItem(KEY, String(i)); } catch (e) {}
+        if (autoplay) {
+            var p = audio.play();
+            /* דפדפן שחוסם ניגון אוטומטי זורק — לא נשאיר Promise תלוי */
+            if (p && p.catch) p.catch(function () {});
+        }
+    }
+
+    select.addEventListener('change', function () { load(select.selectedIndex, true); });
+
+    /* סיום פרק — מנקה הדגשה וממשיך לבא אחריו מעצמו, כמו בהקראה החיה.
+       (השהיה לעומת זאת משאירה את ההדגשה — היא מסמנת איפה עצרנו.) */
+    audio.addEventListener('ended', function () {
+        clearHighlight();
+        if (select.selectedIndex < select.options.length - 1) {
+            load(select.selectedIndex + 1, true);
+        } else {
+            try { localStorage.removeItem(KEY); } catch (e) {}
+        }
+    });
+
+    /* חוזרים לפרק שבו עצרנו — בלי לנגן מעצמו */
+    var saved = 0;
+    try { saved = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (e) {}
+    if (saved < 0 || saved >= select.options.length) saved = 0;
+    load(saved, false);
+})();
+
+</script></body>
+</html>
