@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>סוכות – חג של אהבת ה׳</title>
+<style>
+:root{
+  --apple:#b71c1c; --apple-light:#e53935; --apple-soft:#fde8e6;
+  --honey:#e8a317; --honey-deep:#b9770e; --honey-soft:#fff1c9;
+  --leaf:#558b2f; --leaf-soft:#eaf4dc;
+  --cream:#fffaf0; --ink:#3e2a14;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; padding:30px 15px;
+  font-family:'Frank Ruhl Libre','Segoe UI','Assistant','Noto Sans Hebrew',Arial,sans-serif;
+  background:linear-gradient(135deg,#fff3d6 0%,#f7c96b 100%);
+  background-attachment:fixed;
+  color:var(--ink); line-height:1.8;
+}
+.container{
+  max-width:900px; margin:0 auto; padding:60px 80px;
+  background:var(--cream); border-radius:18px;
+  box-shadow:0 10px 40px rgba(120,60,0,.18);
+}
+
+/* ===== עטיפה ===== */
+.cover{
+  position:relative; overflow:hidden; text-align:center;
+  margin:-60px -80px 50px; padding:70px 40px 60px;
+  border-radius:18px 18px 0 0;
+  background:linear-gradient(160deg,#b71c1c 0%,#d84315 45%,#e8a317 100%);
+  color:#fff;
+}
+.cover .comb{position:absolute; inset:0; opacity:.13; pointer-events:none}
+.cover svg.apple{width:190px; height:190px; position:relative; filter:drop-shadow(0 8px 10px rgba(0,0,0,.25))}
+.main-title{
+  font-size:3em; font-weight:800; margin:10px 0 6px; line-height:1.25; position:relative;
+  color:#fff8dc; text-shadow:0 3px 8px rgba(80,0,0,.35);
+}
+.subtitle{font-size:1.35em; color:#fff1c9; position:relative; margin-bottom:8px}
+.author{font-size:1.15em; color:#fff; position:relative; margin-top:18px; font-weight:700}
+.cover-verse{
+  position:relative; display:inline-block; margin-top:26px; padding:12px 28px;
+  border:2px solid rgba(255,241,201,.7); border-radius:40px; font-size:1.15em; color:#fff1c9;
+}
+
+/* ===== כותרות ===== */
+h2{
+  font-size:2.2em; color:var(--apple); margin:60px 0 20px;
+  border-right:6px solid var(--apple); padding-right:20px; line-height:1.3;
+}
+h2 .num{color:var(--honey-deep); font-size:.6em; display:block; letter-spacing:.5px}
+h3{font-size:1.8em; color:var(--honey-deep); margin:34px 0 12px}
+h4{font-size:1.5em; color:var(--leaf); margin:26px 0 10px}
+p,li{font-size:1.15em; line-height:1.8}
+p{margin:0 0 20px}
+.emphasis{color:var(--apple); font-weight:700}
+em{color:var(--honey-deep); font-style:italic}
+strong{font-weight:700}
+
+/* ===== קופסאות ===== */
+.verse-box,.highlight-box,.quote-box,.story-box,.qa-box{
+  padding:28px 30px; margin:28px 0; border-radius:12px;
+  box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+.verse-box{
+  background:linear-gradient(135deg,#fde8e6 0%,#fff1c9 100%);
+  border:2px solid var(--apple); text-align:center; font-size:1.35em; font-weight:600; color:var(--apple);
+  box-shadow:0 5px 15px rgba(183,28,28,.15);
+}
+.verse-box small{display:block; font-size:.62em; color:var(--honey-deep); margin-top:8px; font-weight:400}
+.highlight-box{
+  background:linear-gradient(135deg,#fff8e1 0%,#ffe9a8 100%);
+  border-right:6px solid var(--honey);
+}
+.quote-box{
+  background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+  border:2px solid var(--honey); font-style:italic;
+}
+.source-tag{display:block; font-style:normal; font-size:.85em; color:var(--honey-deep); margin-top:10px; font-weight:700}
+.story-box{
+  background:linear-gradient(135deg,#eaf4dc 0%,#f6fbe9 100%);
+  border-right:6px solid var(--leaf);
+}
+.qa-box{background:#fff; border:2px dashed var(--apple-light)}
+.qa-box .q{color:var(--apple); font-weight:800}
+.qa-box .a{color:var(--ink)}
+.two-columns{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin:28px 0}
+.two-columns>div{padding:24px; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.col-purple{background:var(--apple-soft); border-top:5px solid var(--apple)}   /* שם הקלאס נשמר לפי הסקיל – כאן: תפוח */
+.col-gold{background:var(--honey-soft); border-top:5px solid var(--honey)}
+.two-columns h4{margin-top:0}
+.section-divider{
+  background:linear-gradient(135deg,#e8a317 0%,#d84315 55%,#b71c1c 100%);
+  color:#fff; text-align:center; font-size:1.5em; font-weight:700;
+  padding:26px 20px; margin:50px 0; border-radius:12px;
+}
+.steps{display:flex; gap:14px; margin:26px 0; flex-wrap:wrap}
+.steps>div{
+  flex:1; min-width:180px; text-align:center; padding:18px 12px; border-radius:12px;
+  background:linear-gradient(135deg,#fff8e1,#ffe9a8); border:2px solid var(--honey);
+}
+.steps b{display:block; color:var(--apple); font-size:1.25em}
+.steps span{font-size:.95em}
+
+/* ===== תוכן עניינים ===== */
+.toc{
+  background:linear-gradient(135deg,#fde8e6 0%,#fff1c9 100%);
+  border:2px solid var(--honey); border-radius:14px; padding:26px 34px; margin-bottom:40px;
+}
+.toc h3{margin-top:0; color:var(--apple)}
+.toc ul{list-style:none; margin:0; padding:0}
+.toc li{padding:5px 0; border-bottom:1px dotted rgba(185,119,14,.4)}
+.toc a{color:var(--ink); text-decoration:none; font-weight:600}
+.toc a:hover{color:var(--apple)}
+.toc .n{display:inline-block; width:32px; color:var(--honey-deep); font-weight:800}
+
+/* ===== שבעת הימים ===== */
+.days{margin:28px 0; padding:0; list-style:none}
+.days li{
+  display:flex; gap:16px; align-items:flex-start; padding:16px 20px; margin-bottom:12px;
+  background:#fff; border-radius:12px; border-right:6px solid var(--honey);
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+.days .d{
+  flex:0 0 auto; min-width:70px; text-align:center; padding:6px 10px; border-radius:10px;
+  background:linear-gradient(135deg,var(--apple),#d84315); color:#fff; font-weight:800;
+}
+
+.checklist{list-style:none; padding:0}
+.checklist li{padding:8px 44px 8px 0; position:relative}
+.checklist li::before{content:"🍎"; position:absolute; right:0}
+
+.sources{
+  background:#f6efe2; border-radius:12px; padding:26px 34px; margin-top:60px; border:1px solid #e6d3ad;
+}
+.sources li{font-size:1em}
+
+.footer{
+  margin-top:60px; padding:34px; text-align:center; border-radius:14px;
+  background:linear-gradient(135deg,#fde8e6 0%,#fff1c9 100%); border-top:5px solid var(--apple);
+  font-size:1.1em;
+}
+.footer a{color:var(--apple)}
+
+.scroll-top{
+  position:fixed; bottom:24px; left:24px; width:48px; height:48px; line-height:48px; text-align:center;
+  background:var(--apple); color:#fff; border-radius:50%; text-decoration:none; font-size:1.2em;
+  box-shadow:0 4px 12px rgba(0,0,0,.3); opacity:0; pointer-events:none; transition:opacity .3s;
+}
+.scroll-top.show{opacity:1; pointer-events:auto}
+
+/* ===== מובייל ===== */
+@media (max-width:768px){
+  body{padding:10px 6px}
+  .container{padding:30px 20px}
+  .cover{margin:-30px -20px 36px; padding:44px 18px 40px}
+  .main-title{font-size:2.1em}
+  h2{font-size:1.7em} h3{font-size:1.45em} h4{font-size:1.25em}
+  .two-columns{grid-template-columns:1fr}
+  .days li{flex-direction:column; gap:8px}
+}
+
+/* ===== הדפסה A4 ===== */
+@media print{
+  @page{size:A4 portrait; margin:20mm 18mm}
+  *{-webkit-print-color-adjust:exact !important; print-color-adjust:exact !important}
+  body{background:#fff !important; padding:0 !important; font-size:11pt}
+  .container{max-width:100% !important; padding:0 !important; box-shadow:none !important}
+  .cover{margin:0 0 0 !important; border-radius:0 !important; page-break-after:always; break-after:page}
+  .scroll-top{display:none !important}
+  h2{page-break-before:always; break-before:page}
+  h2:first-of-type{page-break-before:avoid; break-before:avoid}
+  h3,h4{page-break-after:avoid; break-after:avoid}
+  .verse-box,.highlight-box,.quote-box,.story-box,.two-columns,.qa-box,.days li{
+    page-break-inside:avoid; break-inside:avoid;
+  }
+  .toc{page-break-after:always; break-after:page}
+  .main-title{font-size:26pt !important}
+  h2{font-size:16pt !important} h3{font-size:13pt !important} p,li{font-size:11pt !important}
+  .footer{page-break-before:always; break-before:page}
+  [style*="display: flex"],[style*="display: grid"]{display:block !important}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ===================== עטיפה ===================== -->
+  <div class="cover" id="top">
+    <svg class="comb" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <pattern id="hex" width="56" height="97" patternUnits="userSpaceOnUse" patternTransform="scale(1)">
+          <path d="M28 2 L52 16 L52 44 L28 58 L4 44 L4 16 Z" fill="none" stroke="#fff" stroke-width="2"/>
+          <path d="M56 50 L80 64 L80 92 L56 106 L32 92 L32 64 Z" fill="none" stroke="#fff" stroke-width="2" transform="translate(-28 -2)"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#hex)"/>
+    </svg>
+
+    <svg class="apple" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="תפוח בדבש">
+      <path d="M100 62 C70 40 20 62 26 118 C32 168 72 192 100 178 C128 192 168 168 174 118 C180 62 130 40 100 62 Z" fill="#c62828"/>
+      <path d="M100 62 C130 40 180 62 174 118 C170 150 150 172 128 182 C150 160 158 120 148 90 C142 74 122 62 100 62 Z" fill="#8e1414" opacity=".35"/>
+      <ellipse cx="66" cy="96" rx="14" ry="24" fill="#fff" opacity=".28" transform="rotate(20 66 96)"/>
+      <path d="M100 62 C99 46 104 34 113 26" stroke="#5d3a1a" stroke-width="6" stroke-linecap="round" fill="none"/>
+      <path d="M108 40 C124 18 152 22 158 32 C148 52 124 54 108 40 Z" fill="#7cb342"/>
+      <path d="M112 40 C126 34 140 32 152 32" stroke="#558b2f" stroke-width="2" fill="none"/>
+      <!-- טיפות דבש -->
+      <path d="M60 150 C60 190 84 196 86 208 C88 218 70 220 64 210 C58 200 56 176 60 150 Z" fill="#f5b21b"/>
+      <path d="M118 150 C122 176 116 190 122 200 C126 210 140 208 140 198 C140 184 126 172 118 150 Z" fill="#e8a317"/>
+      <ellipse cx="100" cy="150" rx="46" ry="12" fill="#f5b21b" opacity=".9"/>
+    </svg>
+
+    <div class="main-title">סוכות<br>חג של אהבת ה׳</div>
+    <div class="subtitle">מסע בן שבעה ימים אל המטען של הקב״ה</div>
+    <div class="author">מאת: הרב יהודה טאוב</div>
+    <div class="cover-verse">״בַּסֻּכֹּת תֵּשְׁבוּ שִׁבְעַת יָמִים״ &nbsp;·&nbsp; ויקרא כ״ג, מב</div>
+  </div>
+
+  <!-- ===================== תוכן עניינים ===================== -->
+  <div class="toc">
+    <h3>📑 תוכן העניינים</h3>
+    <ul>
+      <li><a href="#section1"><span class="n">1</span>פתיחה – חג שכולו אהבה</a></li>
+      <li><a href="#section2"><span class="n">2</span>יאר · ישא · וישם – סדר הברכה המפתיע</a></li>
+      <li><a href="#section3"><span class="n">3</span>שלום, אחד, אהבה – משוואה אחת</a></li>
+      <li><a href="#section4"><span class="n">4</span>סוכת שלום – ענני הכבוד ואהרן הכהן</a></li>
+      <li><a href="#section5"><span class="n">5</span>למה דווקא ענני כבוד? – ההבדל בין צורך לחיבה</a></li>
+      <li><a href="#section6"><span class="n">6</span>״ה׳ אוהב אותי״ – מה חושבים כשיושבים בסוכה</a></li>
+      <li><a href="#section7"><span class="n">7</span>הסכך והדפנות – מה עיקר ומה טפל</a></li>
+      <li><a href="#section8"><span class="n">8</span>חיבוק – ומן הסוכה אל שמחת תורה</a></li>
+      <li><a href="#section9"><span class="n">9</span>לשבת בעראי – ויתור שמביא אהבה</a></li>
+      <li><a href="#section10"><span class="n">10</span>ארבעת המינים – תיקון החושים ואחדות ישראל</a></li>
+      <li><a href="#section11"><span class="n">11</span>למה סוכות הוא הרגל האחרון?</a></li>
+      <li><a href="#section12"><span class="n">12</span>המטען של ה׳ – משל לשבעה ימים</a></li>
+      <li><a href="#section13"><span class="n">13</span>שבעה ימים, שבע טעינות – תוכנית מעשית</a></li>
+      <li><a href="#section14"><span class="n">14</span>שאלות לחברותא ולשולחן החג</a></li>
+    </ul>
+  </div>
+
+  <!-- ===================== 1 ===================== -->
+  <h2 id="section1"><span class="num">פרק א</span>פתיחה – חג שכולו אהבה</h2>
+
+  <p>רוב החגים שלנו באים עם סימן היכר בולט. בפסח יש מצה, בשבועות יש מתן תורה, בראש השנה יש שופר ובכיפור יש צום. את סוכות קשה יותר לסכם במילה אחת. יושבים בבקתה, מנענעים ענפים, ואומרים ״זמן שמחתנו״. מה בעצם קורה כאן?</p>
+
+  <p>הספר הזה מציע תשובה אחת, פשוטה וגדולה: <span class="emphasis">סוכות הוא חג של אהבת ה׳</span>. לא רק חג שבו אנחנו אוהבים את ה׳, אלא קודם כול חג שבו אנחנו מוזמנים להרגיש שהוא אוהב אותנו, ואחר כך לאהוב בחזרה, ולאהוב זה את זה.</p>
+
+  <div class="highlight-box">
+    <strong>שלוש שאלות מלוות את הספר:</strong>
+    <ul>
+      <li>מדוע ברכת כהנים מסתדרת בסדר כזה – קודם אור, אחר כך נשיאת פנים, ורק בסוף שלום?</li>
+      <li>מדוע הסוכה, ולא משהו אחר, היא סמל השלום?</li>
+      <li>מה אדם צריך לחשוב כשהוא יושב בסוכה – כדי שהמצווה תחדור מהגוף אל הלב?</li>
+    </ul>
+  </div>
+
+  <p>בסוף הדרך נגיע למשל שאולי ילווה אתכם כל השנה: הטלפון שנטען בלילה, והנשמה שנטענת בסוכה.</p>
+
+  <!-- ===================== 2 ===================== -->
+  <h2 id="section2"><span class="num">פרק ב</span>יאר · ישא · וישם – סדר הברכה המפתיע</h2>
+
+  <div class="verse-box">
+    ״יָאֵר ה׳ פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ. יִשָּׂא ה׳ פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם״
+    <small>במדבר ו׳, כה–כו</small>
+  </div>
+
+  <h3>הקושיה</h3>
+  <div class="qa-box">
+    <p><span class="q">קושיה:</span> ״ישא ה׳ פניו אליך״ הוא בקשה שה׳ יסלח וימחל ויעביר על פשעינו. ״יאר פניו״ הוא בקשה שיאיר לנו. היינו מצפים לסדר הפוך: קודם מוחלים לנו, ורק אחר כך מאירים לנו פנים. מדוע הברכה פותחת דווקא באור?</p>
+    <p><span class="a">תשובה:</span> כי בלי אור אין חרטה אמיתית.</p>
+  </div>
+
+  <p>״יאר״ הוא מלשון אור. ואור זה, כך אפשר להבין, הוא ״ה׳ אורי״ – האור שמכירים בו את ה׳. הבקשה הראשונה בברכה איננה ״תסלח לנו״ אלא <span class="emphasis">״תן לנו לראות כמה טוב האור שלך״</span>. כשאדם רואה את האור הזה ומרגיש עד כמה הוא טוב, נוצרת בו חרטה טבעית על כל מה שהרחיק אותו ממנו. והחרטה הזאת היא שמכשירה את הקרקע ל״ישא ה׳ פניו״, לנשיאת העוון.</p>
+
+  <div class="quote-box">
+    בעניין זה ראוי לעיין ברבנו יונה, שכתב שאדם הקבוע בחטא צריך לחזור בתשובה בדרך כזאת: להכיר קודם את הטוב שהוא מחמיץ, ואחר כך לעזוב את החטא.
+    <span class="source-tag">עיין רבנו יונה, שערי תשובה (מראה מקום מדויק – ראו הערת המקורות בסוף)</span>
+  </div>
+
+  <h3>שלושה שלבים, שלושה חגים</h3>
+  <p>הסדר הזה מתגלגל אל לוח השנה של חודש תשרי. במדרש נאמר על הפסוק ״ה׳ אורי וישעי״ ש״אורי״ הוא בראש השנה ו״ישעי״ ביום הכיפורים. בברכת כהנים נמצאת אותה שרשרת, והיא ממשיכה עוד צעד אחד:</p>
+
+  <div class="steps">
+    <div><b>🍯 ראש השנה</b><span>״יאר״ – לראות את האור</span></div>
+    <div><b>🍎 יום הכיפורים</b><span>״ישא״ – החרטה והסליחה</span></div>
+    <div><b>🛖 סוכות</b><span>״וישם לך שלום״ – ישיבה משותפת עם המלך</span></div>
+  </div>
+
+  <p>בסוכות אנחנו יושבים <em>יחד עם המלך</em>, באהבה ובשמחה. זו בחינת ״ושכנתי בתוכם״ – ה׳ שוכן בתוכנו, וכפי שהובא מהגר״א, זהו עצמו השלום: יש אהבה ויש אחווה. ולכן, בתפילה, אנחנו קוראים לסוכה ״סוכת שלום״.</p>
+
+  <!-- ===================== 3 ===================== -->
+  <h2 id="section3"><span class="num">פרק ג</span>שלום, אחד, אהבה – משוואה אחת</h2>
+
+  <p>חז״ל אמרו דבר חריג: השלום שקול כנגד הכול. איך אפשר להבין זאת? מה כל כך גדול בשלום?</p>
+
+  <h3>שלום הוא שלמות</h3>
+  <p>שלום הוא לא רק ״אין מלחמה״. שלום הוא שלמות מוחלטת בין שניים, עד שהם נעשים ליחידה אחת. הרי זה משמעות השורש: ״שלם״.</p>
+
+  <h3>איך התורה יוצרת אחדות?</h3>
+  <p>התורה מלמדת אותנו דרך אחת ליצור אחדות מוחלטת, והיא <span class="emphasis">אהבה</span>. הרמז לכך גלוי בגימטריה:</p>
+
+  <div class="highlight-box" style="text-align:center; font-size:1.3em">
+    <strong>אהבה</strong> = 13 &nbsp;&nbsp;=&nbsp;&nbsp; <strong>אחד</strong> = 13
+  </div>
+
+  <p>אהבה היא אחד. ואם אהבה שווה שלום, נמצא שהמטרה של כל התורה כולה – ״כל נתיבותיה שלום״ – היא בסופו של דבר אהבה שלמה. זו מטרת התורה, וזו מטרת החג.</p>
+
+  <div class="quote-box">
+    ״דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבֹתֶיהָ שָׁלוֹם״
+    <span class="source-tag">משלי ג׳, יז</span>
+  </div>
+
+  <p>ומכאן אפשר להבין גם את ארבעת המינים: אהבת ה׳ נבנית דרך <em>אהבת ישראל</em>, כאשר כל כלל ישראל – הטובים והרעים, כולם – מאוגדים יחד. על כך נרחיב בפרק י׳.</p>
+
+  <!-- ===================== 4 ===================== -->
+  <h2 id="section4"><span class="num">פרק ד</span>סוכת שלום – ענני הכבוד ואהרן הכהן</h2>
+
+  <p>בתפילת ערבית אנחנו אומרים ״הפורש סוכת שלום עלינו ועל כל עמו ישראל״, ובברכת ״השכיבנו״ ״ופרוש עלינו סוכת שלומך״. הסוכה, במסורת התפילה, היא <span class="emphasis">סוכת שלום</span>.</p>
+
+  <p>ההסבר הפשוט: הסוכה שאנו יושבים בה זכר לענני הכבוד שהקיפו את ישראל במדבר, והענן הזה עצמו נקרא ״סוכת שלום״.</p>
+
+  <div class="story-box">
+    <h4>מי זכה בענני הכבוד?</h4>
+    <p>חז״ל לימדו שענני הכבוד ניתנו לישראל בזכות אהרן הכהן. מה היתה מידתו של אהרן? ״אוהב שלום ורודף שלום, אוהב את הבריות ומקרבן לתורה״. ולפי מה שמבואר בגמרא במסכת ראש השנה (דף ג׳), עם פטירתו של אהרן נסתלקו ענני הכבוד.</p>
+    <p>כלומר: <em>הסוכה מגיעה אלינו מכוחה של אהבה.</em> הענן שהקיף את ישראל היה פרי של אדם שכל חייו רדף אחר שלום ואהבה.</p>
+  </div>
+
+  <!-- ===================== 5 ===================== -->
+  <h2 id="section5"><span class="num">פרק ה</span>למה דווקא ענני כבוד? – ההבדל בין צורך לחיבה</h2>
+
+  <p>במדבר קיבלנו מהקב״ה שלושה דברים: המן, הבאר וענני הכבוד. אבל רק על אחד מהם אנחנו עושים זכר בחג. מדוע לא על המן ולא על הבאר, אלא דווקא על הענן?</p>
+
+  <div class="highlight-box">
+    <p><strong>תשובה:</strong> לחם ומים הם הכרחיים. כשאדם מספק לך דברים הכרחיים, זה עדיין לא מוכיח שהוא אוהב אותך – אפשר לדאוג לצרכיו של מישהו בלי שום חיבה. אבל כשהמלך מביא לך משהו שהוא <em>רשות</em>, שאיננו הכרחי, ורק מתוך חיבה – זה מראה על אהבה.</p>
+  </div>
+
+  <p>הענן לא היה הכרחי להישרדות. הוא היה מתנה. הוא היה ההוכחה של ״אני אוהב אתכם״. ולכן עושים זכר דווקא לו. הסוכה, בפשטות, היא <span class="emphasis">מכתב אהבה מבנוי מקרשים וסכך</span>.</p>
+
+  <!-- ===================== 6 ===================== -->
+  <h2 id="section6"><span class="num">פרק ו</span>״ה׳ אוהב אותי״ – מה חושבים כשיושבים בסוכה</h2>
+
+  <p>אם סוכה היא מכתב אהבה, אז יש כאן שאלה מעשית: מה אדם אמור לחשוב כשהוא יושב בה?</p>
+
+  <div class="verse-box" style="font-size:1.6em">
+    ה׳ אוהב אותי. &nbsp; ה׳ אוהב אותי.
+    <small>זה מה שה׳ רוצה להגיד לי בכך שציווה עליי לבנות סוכה</small>
+  </div>
+
+  <p>זו המחשבה. וכוח המצווה גורם לה לחדור אל הלב. כשעושים מעשה של מצווה ובאותו זמן חושבים על משמעותו, המחשבה לא נשארת בראש – היא נטמעת.</p>
+
+  <h3>לא פעם אחת – בכל כניסה</h3>
+  <ul class="checklist">
+    <li>לא מספיק לחשוב את המחשבה פעם אחת בחג. כדאי בכל פעם שנכנסים לסוכה.</li>
+    <li>ראוי גם מדי פעם, בזמן שהאדם יושב, לעצור ולחשוב: <em>ה׳ אוהב אותי, והוא רוצה מאוד שאדע זאת ושאזכור זאת.</em></li>
+    <li>אפשר להוסיף שלט קטן בכניסה לסוכה – שלוש מילים בלבד.</li>
+  </ul>
+
+  <h3>סיבה נוספת ל״זמן שמחתנו״</h3>
+  <p>מכאן גם ההסבר לכך שסוכות הוא זמן של שמחה: <span class="emphasis">כשאדם יודע שאוהבים אותו, הוא נעשה שמח.</span> השמחה בסוכות איננה סיסמה שנוספה לחג – היא תוצאה ישירה של התובנה שאהבה מקיפה אותנו.</p>
+
+  <!-- ===================== 7 ===================== -->
+  <h2 id="section7"><span class="num">פרק ז</span>הסכך והדפנות – מה עיקר ומה טפל</h2>
+
+  <div class="quote-box">
+    ״עיקר הסוכה הוא הסכך, ועל שם הסכך נקראת סוכה״.
+    <span class="source-tag">בדברי רש״י (מראה מקום מדויק – ראו הערת המקורות)</span>
+  </div>
+
+  <p>נחשוב על זה: מה בעצם ההגדרה של סוכה? סכך. הדפנות הן רק מסגרת. ואולי בזה גלום רעיון עמוק. העיקר בסוכה הוא לדעת <span class="emphasis">שה׳ מסכך עלינו תמיד, ושומר עלינו תמיד</span>.</p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <h4>🧱 הדפנות – ההשתדלות</h4>
+      <p>דפנות הסוכה כשרות מכל חומר. אין צורך להשקיע הרבה. כך גם בהשתדלות שלנו בעולם: צריך לעשות, אבל אין צורך להילחץ ולהשקיע יותר מדי.</p>
+    </div>
+    <div class="col-gold">
+      <h4>🌿 הסכך – הגנת ה׳</h4>
+      <p>הסכך הוא העיקר. ההגנה של ה׳ היא מה שמחזיק את הכול. מהסכך נובע הביטחון, ומהביטחון נובעת השמחה.</p>
+    </div>
+  </div>
+
+  <!-- ===================== 8 ===================== -->
+  <h2 id="section8"><span class="num">פרק ח</span>חיבוק – ומן הסוכה אל שמחת תורה</h2>
+
+  <h3>הסוכה כחיבוק</h3>
+  <p>ההלכה קובעת שסוכה כשרה צריכה לפחות שתי דפנות כהלכתן, ושלישית ולו בגודל טפח. לפי מה שכתב הרב פינקוס בשם האר״י, הצורה הזאת היא <span class="emphasis">צורת חיבוק</span>. הסוכה היא ה׳ שמחבק אותנו.</p>
+
+  <h3>מקיף ופנימי</h3>
+  <p>בליקוטי מוהר״ן (תורה כ״א) מבואר שיש הבדל בין שני סוגי אור. ואפשר להסביר לפי דבריו את ההבדל בין סוכות לשמחת תורה:</p>
+
+  <div class="two-columns">
+    <div class="col-gold">
+      <h4>🛖 סוכות – אור מקיף</h4>
+      <p>ה׳ מקיף אותנו מכל צד. הוא סביבנו, אך עדיין לא בתוכנו. יש חיבוק, אבל לא איחוד גמור.</p>
+    </div>
+    <div class="col-purple">
+      <h4>📜 שמחת תורה – אור פנימי</h4>
+      <p>אם בסוכות אנחנו זוכים להיות מוקפים, בשמחת תורה אנו נכנסים <em>בתוכו</em> ממש – ״נגילה ונשמחה בך״: לא רק אור מקיף, אלא אור שבפנים.</p>
+    </div>
+  </div>
+
+  <p>(ראו גם בספר ״שערי סוכות״, במאמר שבסוף הספר בשם הרב משה מבאר יעקב על סוגי הדבקות בבורא.)</p>
+
+  <!-- ===================== 9 ===================== -->
+  <h2 id="section9"><span class="num">פרק ט</span>לשבת בעראי – ויתור שמביא אהבה</h2>
+
+  <p>למה דווקא סוכה מסמלת שלום? כי שלום דורש ויתור. והסוכה היא בית של ויתור.</p>
+
+  <div class="quote-box">
+    אין אהבת ה׳ נקשרת בלבו של אדם עד שיעזוב את תאוות העולם הזה ויעסוק רק באהבת ה׳.
+    <span class="source-tag">חובות הלבבות, שער אהבת ה׳ (בדרך הדברים, לא בציטוט מדויק)</span>
+  </div>
+
+  <p>זו בדיוק ההוראה של הסוכה. אם אתה רוצה אהבת ה׳ – מה עושים? <span class="emphasis">שב בסוכה.</span> תוותר על עניינים של העולם הזה, ותהיה בעראי. כפי שכתוב על יעקב אבינו: ״וּלְמִקְנֵהוּ עָשָׂה סֻכֹּת״ – הוא עשה לרכושו סוכות, ולא לקבע.</p>
+
+  <div class="highlight-box">
+    <strong>רק אדם שמסכים להיות בעראי, לא לעשות עצמו קבוע אלא לשמוח בחלקו – ראוי לשלום.</strong> מי שמתעקש על קביעות, על הבית המושלם, על הבעלות המלאה – יש לו הרבה לריב עליו. מי שיושב בסוכה יודע שהכול זמני, ולכן מסוגל להיות בשלום.
+  </div>
+
+  <!-- ===================== 10 ===================== -->
+  <h2 id="section10"><span class="num">פרק י</span>ארבעת המינים – תיקון החושים ואחדות ישראל</h2>
+
+  <h3>אחדות שכוללת גם את הרחוקים</h3>
+  <p>ארבעת המינים מלמדים על אהבת ישראל, שממנה נוצרת אהבת ה׳. הם אגודה אחת, ובה כלולים כל כלל ישראל – <em>הטובים והרעים, כולם</em>. החסרון של אחד מהם פוסל את כולם: אין ארבעה מינים בלי כולם.</p>
+
+  <h3>תיקון ארבע היציאות של המוח</h3>
+  <p>לפי ליקוטי מוהר״ן, המוח מתוקן כאשר ארבעה חושים נעשים טהורים. ובחג של אהבת ה׳ נדרש לתקן את ארבע היציאות – והנה כיצד ארבעת המינים מקבילים להם:</p>
+
+  <div class="steps">
+    <div><b>🍋 אתרוג</b><span>היחיד שיש בו טעם – כנגד הפה</span></div>
+    <div><b>🌿 הדס</b><span>המיוחד בריח – כנגד האף</span></div>
+    <div><b>🌴 לולב</b><span>היחיד שמשמיע קול – כנגד האוזן</span></div>
+    <div><b>🍃 ערבה</b><span>אין בה טעם ואין בה ריח, רק רואים אותה – כנגד העיניים</span></div>
+  </div>
+
+  <p>כך כל אחד מארבעת החושים מקבל את מינו. המצווה לא נותרת ״בראש״ – היא נוגעת בטעם, בריח, בשמיעה ובראייה. אדם נוטל את הארבעה יחד וכל גופו נכנס לתוך המצווה.</p>
+
+  <!-- ===================== 11 ===================== -->
+  <h2 id="section11"><span class="num">פרק יא</span>למה סוכות הוא הרגל האחרון?</h2>
+
+  <p>שלוש רגלים בשנה: פסח, שבועות, סוכות. לא במקרה סוכות אחרון בסדרה.</p>
+
+  <div class="highlight-box">
+    מעלת <span class="emphasis">אהבת ה׳</span> היא המעלה הגדולה מכולם. לכן חג האהבה הוא השיא, הרגל האחרון. קודם משתחררים (פסח), אחר כך מקבלים תורה (שבועות), ובסוף – מגיעים אל האהבה עצמה.
+  </div>
+
+  <p>כשם שבמסע המוליך אל הבית, הרגע האחרון הוא הרגע שבו נכנסים ומתחבקים, כך שלושת הרגלים מוליכים אל סוכות.</p>
+
+  <!-- ===================== 12 ===================== -->
+  <h2 id="section12"><span class="num">פרק יב</span>המטען של ה׳ – משל לשבעה ימים</h2>
+
+  <div class="story-box">
+    <h4>📱 הטלפון והלב</h4>
+    <p>אדם מחבר את הטלפון שלו למטען בלילה. בבוקר הוא קם – והטלפון מלא חשמל. בלי המטען, הטלפון נכבה באמצע היום.</p>
+    <p>יהודי צריך להתמלא באהבת ה׳. ממה? מהמטען של ה׳. היכן המטען? <span class="emphasis">בסוכה.</span> ה׳ נמצא שם, שורה שם כל הזמן, וכל מי שמגיע – מקבל הטענה.</p>
+  </div>
+
+  <h3>אין לילה מיותר</h3>
+  <p>ואפשר להוסיף: אין לנו לילה מיותר בחג הזה, כי ה׳ נותן לאדם בדיוק כמה שצריך. אם ה׳ נתן לנו שבעה ימים, זה סימן שיהודי צריך שבעה ימים כדי להטעין את עצמו באהבת ה׳ – <span class="emphasis">כדי שיהיה לו לכל השנה.</span></p>
+
+  <div class="highlight-box">
+    <strong>מסקנה מעשית:</strong> טלפון שנטען חצי לילה מחזיק חצי יום. מי שרוצה שאהבת ה׳ תספיק לו עד סוכות הבא – שלא יחסוך בימי הטעינה, ולא יברח מהסוכה באמצע החג.
+  </div>
+
+  <!-- ===================== 13 ===================== -->
+  <div class="section-divider">🍎 מהרעיון אל המעשה 🍯</div>
+
+  <h2 id="section13"><span class="num">פרק יג</span>שבעה ימים, שבע טעינות – תוכנית מעשית</h2>
+
+  <p>את הרעיונות שבספר אפשר להפוך למסלול פשוט. זו הצעה מעשית (ולא מקור מהמסורת) – אפשר להתאים אותה למשפחה ולכיתה:</p>
+
+  <ul class="days">
+    <li><span class="d">יום א׳</span><div><strong>״ה׳ אוהב אותי״.</strong> בכל כניסה לסוכה – עצירה של עשר שניות, ואמירה שקטה של המשפט.</div></li>
+    <li><span class="d">יום ב׳</span><div><strong>הסכך.</strong> להסתכל למעלה, דרך הסכך, ולומר תודה על הגנה אחת ספציפית מהשנה האחרונה.</div></li>
+    <li><span class="d">יום ג׳</span><div><strong>שלום.</strong> ליזום שיחה עם מישהו שיש איתו מתח, ולוותר על משהו אחד.</div></li>
+    <li><span class="d">יום ד׳</span><div><strong>הדפנות.</strong> לזהות התחייבות אחת מיותרת שמלחיצה אותי, ולהניח אותה.</div></li>
+    <li><span class="d">יום ה׳</span><div><strong>ארבעת המינים.</strong> לנענע לאט, ולשים לב לכל חוש בנפרד.</div></li>
+    <li><span class="d">יום ו׳</span><div><strong>אחדות.</strong> להזמין לסוכה אורח שלא הוזמן בדרך כלל.</div></li>
+    <li><span class="d">שבת</span><div><strong>מנוחה בחיבוק.</strong> לשבת בסוכה בלי מסך, ולהרגיש שהמקום מחבק.</div></li>
+  </ul>
+
+  <h3>צ׳ק־ליסט לפני החג</h3>
+  <ul class="checklist">
+    <li>הסוכה בנויה, והסכך באמת עיקר – לא מוסתר, לא מכוסה, לא מוזנח.</li>
+    <li>שלט קטן בכניסה: ״ה׳ אוהב אותי״.</li>
+    <li>לוח הזמנים לימי החג כולל שהות בסוכה, לא רק סעודות.</li>
+    <li>רשימת אורחים – כולל מי שקשה להזמין.</li>
+  </ul>
+
+  <!-- ===================== 14 ===================== -->
+  <h2 id="section14"><span class="num">פרק יד</span>שאלות לחברותא ולשולחן החג</h2>
+
+  <div class="qa-box">
+    <ol>
+      <li>מדוע לדעתכם ברכת כהנים פותחת באור ולא בסליחה? האם יש מקום בחיינו שבו ״אור״ קודם ל״תיקון״?</li>
+      <li>איך אפשר להבחין בין מתנה שניתנת מתוך צורך לבין מתנה שניתנת מתוך חיבה? תנו דוגמה מהבית.</li>
+      <li>אילו ״דפנות״ אני משקיע בהן יותר מדי, ולאיזה ״סכך״ אני צריך להרים את המבט?</li>
+      <li>מי ב״ארבעת המינים״ שלי – בקהילה, במשפחה או בכיתה – הוא ה״ערבה״ שנראה שאין בו טעם וריח, ואיך אני מקרב אותו?</li>
+      <li>מה ההבדל בין להיות מוקף באהבה לבין להיות מלא בה? מה צריך לקרות כדי שנעבור מהראשון לשני?</li>
+      <li>איזו ״הטענה״ אני צריך להביא איתי מסוכות אל השנה כולה?</li>
+    </ol>
+  </div>
+
+  <!-- ===================== מקורות ===================== -->
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות</h3>
+    <ol>
+      <li>במדבר ו׳, כד–כו – ברכת כהנים.</li>
+      <li>תהילים כ״ז, א – ״ה׳ אורי וישעי״; ומדרש ויקרא רבה כ״א – אורי בראש השנה, וישעי ביום הכיפורים.</li>
+      <li>רבנו יונה, שערי תשובה – בעניין אדם הקבוע בחטא.</li>
+      <li>גר״א – ״ושכנתי בתוכם״ ובחינת שלום כאהבה ואחווה.</li>
+      <li>גמרא ראש השנה ג׳ע״א – ענני הכבוד בזכות אהרן הכהן.</li>
+      <li>פרקי אבות א׳, יב – ״הלל אומר: הוי מתלמידיו של אהרן, אוהב שלום ורודף שלום, אוהב את הבריות ומקרבן לתורה״.</li>
+      <li>רש״י, מסכת סוכה – ״עיקר סוכה סכך״.</li>
+      <li>סוכה ב׳ע״א–ד׳ע״ב – שיעורי הדפנות (שתים כהלכתן ושלישית טפח); והאר״י כפי שהובא בספרו של הרב פינקוס.</li>
+      <li>ליקוטי מוהר״ן, תורה כ״א – אור מקיף ואור פנימי; ותיקון המוח וארבעת החושים.</li>
+      <li>שערי סוכות – מאמר בשם הרב משה מבאר יעקב על סוגי הדבקות.</li>
+      <li>חובות הלבבות, שער אהבת ה׳ – עזיבת תאוות העולם.</li>
+      <li>בראשית ל״ג, יז – ״וּלְמִקְנֵהוּ עָשָׂה סֻכֹּת״.</li>
+      <li>ויקרא כ״ג, מ–מג – מצוות ארבעת המינים והסוכה.</li>
+      <li>ויקרא רבה ל׳ – ארבעת המינים ואחדות ישראל.</li>
+      <li>משלי ג׳, יז – ״וכל נתיבותיה שלום״.</li>
+    </ol>
+  </div>
+
+  <!-- ===================== חתימה חובה ===================== -->
+  <div class="footer">
+      <strong>נכתב ונערך על ידי:</strong><br>
+      <strong>הרב יהודה טאוב</strong><br>
+      קרית אתא<br>
+      📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+      <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #fff1c9 0%, #fde8e6 100%); border-radius: 10px;">
+          <h4>🎧 שיעורים נוספים של הרב</h4>
+          <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+          <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+          <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+      </div>
+  </div>
+</div>
+
+<a href="#top" class="scroll-top" id="scrollTop" aria-label="חזרה למעלה">▲</a>
+
+<script>
+(function(){
+  var btn=document.getElementById('scrollTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>400){btn.classList.add('show')}else{btn.classList.remove('show')}
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(t){e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
+  });
+})();
+</script>
+</body>
+</html>
