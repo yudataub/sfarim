@@ -1,30 +1,661 @@
-<!-- autosync-generated-folder-index -->
-<!doctype html>
-<html lang="he" dir="rtl"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>אהבה בשני כיוונים – סוכה ולולב</title>
 <style>
- *{box-sizing:border-box}
- body{font-family:"Segoe UI",Arial,sans-serif;background:#f7f8fa;color:#16181d;
-      margin:0;padding:28px 16px;line-height:1.5}
- .wrap{max-width:820px;margin:0 auto}
- a.back{display:inline-block;margin-bottom:14px;color:#2563eb;text-decoration:none;font-size:14px}
- a.back:hover{text-decoration:underline}
- h1{font-size:25px;margin:0 0 6px}
- .sub{color:#6b7280;font-size:14px;margin-bottom:20px}
- .item{display:block;background:#fff;border:1px solid #e4e6ea;border-radius:10px;
-       padding:13px 16px;margin-bottom:9px;text-decoration:none;color:inherit;transition:.12s}
- .item:hover{border-color:#2563eb;box-shadow:0 2px 10px rgba(37,99,235,.10)}
- .t{font-weight:600;font-size:15.5px;word-break:break-word}
- .m{color:#8b909a;font-size:12.5px;margin-top:3px}
- .item.dir{background:#fbfcfe;border-color:#d9e2f5}
- .ic{margin-inline-end:7px}
- .empty{color:#8b909a}
- footer{margin-top:26px;color:#9aa0a6;font-size:12px;text-align:center}
-</style></head><body><div class="wrap">
-<a class="back" href="../../">&#8594; חזרה לכל הספרים</a>
-<h1>אהבה בשני כיוונים – סוכה ולולב</h1>
-<div class="sub">תיקייה אחת</div>
-<a class="item dir" href="images/"><div class="t"><span class="ic">📁</span>images</div><div class="m">קובץ אחד</div></a>
-<footer>נוצר אוטומטית</footer>
-</div></body></html>
+:root{
+  --apple:#b71c1c; --apple-light:#e53935; --apple-soft:#fde8e6;
+  --honey:#e8a317; --honey-deep:#b9770e; --honey-soft:#fff1c9;
+  --leaf:#558b2f; --leaf-soft:#eaf4dc;
+  --cream:#fffaf0; --ink:#3e2a14;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; padding:30px 15px;
+  font-family:'Frank Ruhl Libre','Segoe UI','Assistant','Noto Sans Hebrew',Arial,sans-serif;
+  background:linear-gradient(135deg,#fff3d6 0%,#f7c96b 100%);
+  background-attachment:fixed;
+  color:var(--ink); line-height:1.8;
+}
+.container{
+  max-width:900px; margin:0 auto; padding:60px 80px;
+  background:var(--cream); border-radius:18px;
+  box-shadow:0 10px 40px rgba(120,60,0,.18);
+}
+
+/* ===== עטיפה ===== */
+.cover{
+  position:relative; overflow:hidden; text-align:center;
+  margin:-60px -80px 50px; padding:70px 40px 60px;
+  border-radius:18px 18px 0 0;
+  background:linear-gradient(160deg,#b71c1c 0%,#d84315 45%,#e8a317 100%);
+  color:#fff;
+}
+.cover .comb{position:absolute; inset:0; opacity:.13; pointer-events:none}
+.cover svg.apple{width:190px; height:190px; position:relative; filter:drop-shadow(0 8px 10px rgba(0,0,0,.25))}
+.main-title{
+  font-size:3em; font-weight:800; margin:10px 0 6px; line-height:1.25; position:relative;
+  color:#fff8dc; text-shadow:0 3px 8px rgba(80,0,0,.35);
+}
+.subtitle{font-size:1.35em; color:#fff1c9; position:relative; margin-bottom:8px}
+.author{font-size:1.15em; color:#fff; position:relative; margin-top:18px; font-weight:700}
+.cover-verse{
+  position:relative; display:inline-block; margin-top:26px; padding:12px 28px;
+  border:2px solid rgba(255,241,201,.7); border-radius:40px; font-size:1.15em; color:#fff1c9;
+}
+
+/* ===== כותרות ===== */
+h2{
+  font-size:2.2em; color:var(--apple); margin:60px 0 20px;
+  border-right:6px solid var(--apple); padding-right:20px; line-height:1.3;
+}
+h2 .num{color:var(--honey-deep); font-size:.6em; display:block; letter-spacing:.5px}
+h3{font-size:1.8em; color:var(--honey-deep); margin:34px 0 12px}
+h4{font-size:1.5em; color:var(--leaf); margin:26px 0 10px}
+p,li{font-size:1.15em; line-height:1.8}
+p{margin:0 0 20px}
+.emphasis{color:var(--apple); font-weight:700}
+em{color:var(--honey-deep); font-style:italic}
+strong{font-weight:700}
+
+/* ===== קופסאות ===== */
+.verse-box,.highlight-box,.quote-box,.story-box,.qa-box{
+  padding:28px 30px; margin:28px 0; border-radius:12px;
+  box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+.verse-box{
+  background:linear-gradient(135deg,#fde8e6 0%,#fff1c9 100%);
+  border:2px solid var(--apple); text-align:center; font-size:1.35em; font-weight:600; color:var(--apple);
+  box-shadow:0 5px 15px rgba(183,28,28,.15);
+}
+.verse-box small{display:block; font-size:.62em; color:var(--honey-deep); margin-top:8px; font-weight:400}
+.highlight-box{
+  background:linear-gradient(135deg,#fff8e1 0%,#ffe9a8 100%);
+  border-right:6px solid var(--honey);
+}
+.quote-box{
+  background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+  border:2px solid var(--honey); font-style:italic;
+}
+.source-tag{display:block; font-style:normal; font-size:.85em; color:var(--honey-deep); margin-top:10px; font-weight:700}
+.story-box{
+  background:linear-gradient(135deg,#eaf4dc 0%,#f6fbe9 100%);
+  border-right:6px solid var(--leaf);
+}
+.qa-box{background:#fff; border:2px dashed var(--apple-light)}
+.qa-box .q{color:var(--apple); font-weight:800}
+.qa-box .a{color:var(--ink)}
+.two-columns{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin:28px 0}
+.two-columns>div{padding:24px; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.col-purple{background:var(--apple-soft); border-top:5px solid var(--apple)}   /* שם הקלאס נשמר לפי הסקיל – כאן: תפוח */
+.col-gold{background:var(--honey-soft); border-top:5px solid var(--honey)}
+.two-columns h4{margin-top:0}
+.section-divider{
+  background:linear-gradient(135deg,#e8a317 0%,#d84315 55%,#b71c1c 100%);
+  color:#fff; text-align:center; font-size:1.5em; font-weight:700;
+  padding:26px 20px; margin:50px 0; border-radius:12px;
+}
+.steps{display:flex; gap:14px; margin:26px 0; flex-wrap:wrap}
+.steps>div{
+  flex:1; min-width:180px; text-align:center; padding:18px 12px; border-radius:12px;
+  background:linear-gradient(135deg,#fff8e1,#ffe9a8); border:2px solid var(--honey);
+}
+.steps b{display:block; color:var(--apple); font-size:1.25em}
+.steps span{font-size:.95em}
+
+/* ===== תוכן עניינים ===== */
+.toc{
+  background:linear-gradient(135deg,#fde8e6 0%,#fff1c9 100%);
+  border:2px solid var(--honey); border-radius:14px; padding:26px 34px; margin-bottom:40px;
+}
+.toc h3{margin-top:0; color:var(--apple)}
+.toc ul{list-style:none; margin:0; padding:0}
+.toc li{padding:5px 0; border-bottom:1px dotted rgba(185,119,14,.4)}
+.toc a{color:var(--ink); text-decoration:none; font-weight:600}
+.toc a:hover{color:var(--apple)}
+.toc .n{display:inline-block; width:32px; color:var(--honey-deep); font-weight:800}
+
+/* ===== שבעת הימים ===== */
+.days{margin:28px 0; padding:0; list-style:none}
+.days li{
+  display:flex; gap:16px; align-items:flex-start; padding:16px 20px; margin-bottom:12px;
+  background:#fff; border-radius:12px; border-right:6px solid var(--honey);
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+.days .d{
+  flex:0 0 auto; min-width:70px; text-align:center; padding:6px 10px; border-radius:10px;
+  background:linear-gradient(135deg,var(--apple),#d84315); color:#fff; font-weight:800;
+}
+
+.checklist{list-style:none; padding:0}
+.checklist li{padding:8px 44px 8px 0; position:relative}
+.checklist li::before{content:"🍎"; position:absolute; right:0}
+
+.sources{
+  background:#f6efe2; border-radius:12px; padding:26px 34px; margin-top:60px; border:1px solid #e6d3ad;
+}
+.sources li{font-size:1em}
+
+.footer{
+  margin-top:60px; padding:34px; text-align:center; border-radius:14px;
+  background:linear-gradient(135deg,#fde8e6 0%,#fff1c9 100%); border-top:5px solid var(--apple);
+  font-size:1.1em;
+}
+.footer a{color:var(--apple)}
+
+.scroll-top{
+  position:fixed; bottom:24px; left:24px; width:48px; height:48px; line-height:48px; text-align:center;
+  background:var(--apple); color:#fff; border-radius:50%; text-decoration:none; font-size:1.2em;
+  box-shadow:0 4px 12px rgba(0,0,0,.3); opacity:0; pointer-events:none; transition:opacity .3s;
+}
+.scroll-top.show{opacity:1; pointer-events:auto}
+
+/* ===== מובייל ===== */
+@media (max-width:768px){
+  body{padding:10px 6px}
+  .container{padding:30px 20px}
+  .cover{margin:-30px -20px 36px; padding:44px 18px 40px}
+  .main-title{font-size:2.1em}
+  h2{font-size:1.7em} h3{font-size:1.45em} h4{font-size:1.25em}
+  .two-columns{grid-template-columns:1fr}
+  .days li{flex-direction:column; gap:8px}
+}
+
+/* ===== הדפסה A4 ===== */
+@media print{
+  @page{size:A4 portrait; margin:20mm 18mm}
+  *{-webkit-print-color-adjust:exact !important; print-color-adjust:exact !important}
+  body{background:#fff !important; padding:0 !important; font-size:11pt}
+  .container{max-width:100% !important; padding:0 !important; box-shadow:none !important}
+  .cover{margin:0 0 0 !important; border-radius:0 !important; page-break-after:always; break-after:page}
+  .scroll-top{display:none !important}
+  h2{page-break-before:always; break-before:page}
+  h2:first-of-type{page-break-before:avoid; break-before:avoid}
+  h3,h4{page-break-after:avoid; break-after:avoid}
+  .verse-box,.highlight-box,.quote-box,.story-box,.two-columns,.qa-box,.days li{
+    page-break-inside:avoid; break-inside:avoid;
+  }
+  .toc{page-break-after:always; break-after:page}
+  .main-title{font-size:26pt !important}
+  h2{font-size:16pt !important} h3{font-size:13pt !important} p,li{font-size:11pt !important}
+  .footer{page-break-before:always; break-before:page}
+  [style*="display: flex"],[style*="display: grid"]{display:block !important}
+}
+
+/* ===== איורי בובות סרוגות — מהדורת חג ===== */
+.chapter-illustration{max-width:430px;margin:46px auto 30px;break-inside:avoid;page-break-inside:avoid;text-align:center}
+.chapter-illustration button{display:block;width:100%;padding:10px;background:linear-gradient(145deg,#f7e1ae,#77994a);border:3px solid #9c2e25;border-radius:18px;box-shadow:0 10px 25px rgba(76,42,15,.24);cursor:zoom-in;transition:transform .2s,box-shadow .2s}
+.chapter-illustration button:hover{transform:translateY(-3px);box-shadow:0 15px 30px rgba(76,42,15,.3)}
+.chapter-illustration img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:10px}
+.chapter-illustration figcaption{margin-top:10px;color:#6d311a;font-weight:800;font-size:1.04em}
+.image-lightbox{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(20,14,7,.92);cursor:zoom-out}
+.image-lightbox.open{display:flex}.image-lightbox img{max-width:min(90vw,720px);max-height:88vh;object-fit:contain;border:7px solid #e7be53;border-radius:11px;box-shadow:0 18px 60px #000}
+.image-lightbox button{position:fixed;top:18px;left:20px;width:45px;height:45px;border:1px solid #f5dd9b;border-radius:50%;background:#7b291e;color:#fff;font-size:28px;cursor:pointer;line-height:1}
+@media(max-width:768px){.chapter-illustration{max-width:330px;margin:35px auto 28px}.chapter-illustration button{padding:7px}.image-lightbox{padding:12px}.image-lightbox img{max-width:94vw;max-height:85vh}}
+@media print{.chapter-illustration{max-width:105mm;margin:10mm auto;break-inside:avoid;page-break-inside:avoid}.chapter-illustration button{padding:4mm;box-shadow:none}.chapter-illustration img{max-height:148mm;object-fit:contain}.image-lightbox{display:none!important}}
+
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ===================== עטיפה ===================== -->
+  <div class="cover" id="top">
+    <svg class="comb" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <pattern id="hex" width="56" height="97" patternUnits="userSpaceOnUse" patternTransform="scale(1)">
+          <path d="M28 2 L52 16 L52 44 L28 58 L4 44 L4 16 Z" fill="none" stroke="#fff" stroke-width="2"/>
+          <path d="M56 50 L80 64 L80 92 L56 106 L32 92 L32 64 Z" fill="none" stroke="#fff" stroke-width="2" transform="translate(-28 -2)"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#hex)"/>
+    </svg>
+
+    <svg class="apple" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="תפוח בדבש">
+      <path d="M100 62 C70 40 20 62 26 118 C32 168 72 192 100 178 C128 192 168 168 174 118 C180 62 130 40 100 62 Z" fill="#c62828"/>
+      <path d="M100 62 C130 40 180 62 174 118 C170 150 150 172 128 182 C150 160 158 120 148 90 C142 74 122 62 100 62 Z" fill="#8e1414" opacity=".35"/>
+      <ellipse cx="66" cy="96" rx="14" ry="24" fill="#fff" opacity=".28" transform="rotate(20 66 96)"/>
+      <path d="M100 62 C99 46 104 34 113 26" stroke="#5d3a1a" stroke-width="6" stroke-linecap="round" fill="none"/>
+      <path d="M108 40 C124 18 152 22 158 32 C148 52 124 54 108 40 Z" fill="#7cb342"/>
+      <path d="M112 40 C126 34 140 32 152 32" stroke="#558b2f" stroke-width="2" fill="none"/>
+      <!-- טיפות דבש -->
+      <path d="M60 150 C60 190 84 196 86 208 C88 218 70 220 64 210 C58 200 56 176 60 150 Z" fill="#f5b21b"/>
+      <path d="M118 150 C122 176 116 190 122 200 C126 210 140 208 140 198 C140 184 126 172 118 150 Z" fill="#e8a317"/>
+      <ellipse cx="100" cy="150" rx="46" ry="12" fill="#f5b21b" opacity=".9"/>
+    </svg>
+
+    <div class="main-title">אהבה בשני כיוונים<br>סוכה ולולב</div>
+    <div class="subtitle">ספר ב׳ – מה הלב צריך, ומה הלב נותן</div>
+    <div class="author">מאת: הרב יהודה טאוב</div>
+    <div class="cover-verse">״כַּמַּיִם הַפָּנִים לַפָּנִים כֵּן לֵב הָאָדָם לָאָדָם״ &nbsp;·&nbsp; משלי כ״ז, יט</div>
+  </div>
+
+  <!-- ===================== תוכן עניינים ===================== -->
+  <div class="toc">
+    <h3>📑 תוכן העניינים</h3>
+    <ul>
+      <li><a href="#section1"><span class="n">1</span>פתיחה – מה הלב מחפש</a></li>
+      <li><a href="#section2"><span class="n">2</span>ענני הכבוד – מותרות של אהבה</a></li>
+      <li><a href="#section3"><span class="n">3</span>שאלת הזכירה – למה בכל כניסה?</a></li>
+      <li><a href="#section4"><span class="n">4</span>הדבר שהאדם משתוקק אליו יותר מכול</a></li>
+      <li><a href="#section5"><span class="n">5</span>המלבין שיניים – כוחו של חיוך</a></li>
+      <li><a href="#section6"><span class="n">6</span>למה נברא האדם צמא לכבוד?</a></li>
+      <li><a href="#section7"><span class="n">7</span>מה למדנו על יסוד האדם</a></li>
+      <li><a href="#section8"><span class="n">8</span>אהבת עולם ו״ואהבת״ – שתי אהבות בתפילה</a></li>
+      <li><a href="#section9"><span class="n">9</span>כמים הפנים לפנים – איך מגיעים לאהבת ה׳</a></li>
+      <li><a href="#section10"><span class="n">10</span>שוב ושוב – למה לא מספיק פעם אחת</a></li>
+      <li><a href="#section11"><span class="n">11</span>סוכה ולולב – אהבה שלו ואהבה שלנו</a></li>
+      <li><a href="#section12"><span class="n">12</span>הסדר המתהפך – כל אחד משבח את השני</a></li>
+      <li><a href="#section13"><span class="n">13</span>הלל, הודאה ושמחה</a></li>
+      <li><a href="#section14"><span class="n">14</span>חג האסיף – ביכורי הלב</a></li>
+      <li><a href="#section15"><span class="n">15</span>״הודו לה׳ כי טוב כי לעולם חסדו״ – שני חצאי הפסוק</a></li>
+      <li><a href="#section16"><span class="n">16</span>שלושה חלקים בהלל</a></li>
+      <li><a href="#section17"><span class="n">17</span>מעשה – מסלול אהבה בשני כיוונים</a></li>
+      <li><a href="#section18"><span class="n">18</span>שאלות לחברותא ולשולחן החג</a></li>
+    </ul>
+  </div>
+
+  <!-- ===================== 1 ===================== -->
+  <h2 id="section1"><span class="num">פרק א</span>פתיחה – מה הלב מחפש</h2>
+
+  <p>בספר הראשון בסדרה הצענו שסוכות הוא חג של אהבת ה׳, ושהמחשבה שצריך לשאת בסוכה היא ״ה׳ אוהב אותי״. הספר הזה ממשיך את הדרך, ושואל שאלה שהראשון רק נגע בה: <span class="emphasis">למה אנחנו צריכים לשמוע את זה בכלל?</span> מה קורה בנפש האדם שהופך את המשפט הפשוט ״אוהבים אותך״ לצורך כל כך עמוק?</p>
+
+  <p>התשובה תוביל אותנו דרך ארבע תחנות: הצורך של האדם בכבוד ובאהבה, ברכת ״אהבת עולם״ שבתפילה, נטילת הלולב כתשובה של האדם לאהבת ה׳, והסוד של ההלל.</p>
+
+  <div class="highlight-box">
+    <strong>הרעיון המרכזי של הספר:</strong> בסוכות האהבה זורמת בשני כיוונים. <em>ה׳ מראה לנו שהוא אוהב אותנו</em> – בסוכה. <em>ואנחנו מראים לו שאנחנו אוהבים אותו</em> – בארבעת המינים, בהלל ובהודאה. ״מתוק מדבש״ הוא כשהשניים נפגשים במקום אחד.
+  </div>
+
+  <p>הספר מבוסס על שיעור מס׳ 214, שנאמר ביום שישי, ט״ז בתשרי תשע״ב.</p>
+
+  <!-- ===================== 2 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/01-מה-הלב-מחפש.jpg" aria-label="הגדלת התמונה: מה הלב מחפש"><img src="images/01-מה-הלב-מחפש.jpg" alt="מה הלב מחפש" loading="lazy"></button><figcaption>מה הלב מחפש</figcaption></figure>
+<h2 id="section2"><span class="num">פרק ב</span>ענני הכבוד – מותרות של אהבה</h2>
+
+  <p>נזכור את השאלה מהספר הראשון: מדוע עושים זכר בחג רק לענני הכבוד, ולא לבאר ולמן?</p>
+
+  <div class="qa-box">
+    <p><span class="q">שאלה:</span> ענני הכבוד עשו במדבר עבודה מסוימת – הגנה מפני החום והנחיה בדרך. למה דווקא הם נבחרו לזכר?</p>
+    <p><span class="a">תשובה:</span> כי מטרת ענני הכבוד היא <em>מותרות</em>. המן והבאר סיפקו צרכים בסיסיים, ואילו הענן נתן נוחות, כבוד ותחושה של מלך שדואג לעמו מעבר למינימום.</p>
+  </div>
+
+  <p>וזה מראה על אהבה. מי שנותן רק את ההכרחי עושה חובה. מי שנותן גם מה שאפשר היה בלעדיו – הוא אוהב. הסוכה מזכירה לנו שה׳ לא רק החזיק אותנו בחיים במדבר, אלא <span class="emphasis">עשה לנו כבוד</span>.</p>
+
+  <!-- ===================== 3 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/02-ענני-הכבוד.jpg" aria-label="הגדלת התמונה: מותרות של אהבה"><img src="images/02-ענני-הכבוד.jpg" alt="מותרות של אהבה" loading="lazy"></button><figcaption>מותרות של אהבה</figcaption></figure>
+<h2 id="section3"><span class="num">פרק ג</span>שאלת הזכירה – למה בכל כניסה?</h2>
+
+  <p>בהלכות סוכה מצאנו דין מעניין: כל פעם שאדם נכנס לסוכה ויושב בה, עליו לזכור לשם מה הוא יושב בה – כדי שידע שהסוכה זכר לענני הכבוד ולניסים שעשה ה׳ לישראל.</p>
+
+  <div class="qa-box">
+    <p><span class="q">קושיה:</span> למה צריך לזכור בכל פעם? מדוע לא מספיק פעם אחת בחג? או פעם ביום?</p>
+  </div>
+
+  <p>את התשובה נבנה בהדרגה בפרקים הבאים. רמז ראשון: מדובר ברגש, לא במידע. ורגשות, כפי שנראה, צריכים חיזוק מחודש שוב ושוב.</p>
+
+  <!-- ===================== 4 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/03-שאלת-הזכירה.jpg" aria-label="הגדלת התמונה: זכירת הסוכה בכל כניסה"><img src="images/03-שאלת-הזכירה.jpg" alt="זכירת הסוכה בכל כניסה" loading="lazy"></button><figcaption>זכירת הסוכה בכל כניסה</figcaption></figure>
+<h2 id="section4"><span class="num">פרק ד</span>הדבר שהאדם משתוקק אליו יותר מכול</h2>
+
+  <p>נשאל את עצמנו שאלה פשוטה: <span class="emphasis">מה האדם רוצה יותר מכול?</span> רבים יענו כסף. אבל ההתבוננות מגלה משהו אחר: <strong>כבוד</strong>.</p>
+
+  <div class="story-box">
+    <h4>סיפור האברך</h4>
+    <p>מסופר על אברך שהשיא את ביתו והסתבך בחובות כבדים בגלל החתונה. (לפי הסיפור, הכבוד היה חשוב לו יותר מהכסף.)</p>
+    <p><small>(הסיפור המלא – להשלמה על ידי המחבר.)</small></p>
+  </div>
+
+  <p>וכך גם כתב המסילת ישרים: חמדת הכבוד גדולה מחמדת הממון. אדם יוותר על ממון כדי לזכות בכבוד, ולא ההפך.</p>
+
+  <!-- ===================== 5 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/04-הכיסופים.jpg" aria-label="הגדלת התמונה: הדבר שהלב משתוקק אליו"><img src="images/04-הכיסופים.jpg" alt="הדבר שהלב משתוקק אליו" loading="lazy"></button><figcaption>הדבר שהלב משתוקק אליו</figcaption></figure>
+<h2 id="section5"><span class="num">פרק ה</span>המלבין שיניים – כוחו של חיוך</h2>
+
+  <div class="quote-box">
+    ״גדול המלבין שיניים לחברו יותר ממשקהו חלב״
+    <span class="source-tag">כתובות קי״א ע״ב (וראו הערת המקורות)</span>
+  </div>
+
+  <p>״מלבין שיניים״ הוא מי שמחייך לחברו. חז״ל אומרים שזה גדול יותר מלהשקות אותו חלב. למה? חלב הוא צורך גופני, וחיוך הוא נתינה של הדבר שהאדם משתוקק אליו יותר מכול.</p>
+
+  <h3>מה קורה כשמישהו מחייך אלינו?</h3>
+  <p>כשאדם מחייך לחברו, טבע האדם לחשוב: ״הוא מחייך כי הוא שמח לראות אותי.״ ממילא הוא מרגיש <span class="emphasis">חשוב</span> – הרי שמחים בו. החיוך אומר: אתה לא מטרד, אתה שמחה.</p>
+
+  <div class="highlight-box">
+    זה בדיוק המסר של ה׳ בסוכה: הוא לא רק מספק לנו צרכים, הוא ״מחייך אלינו״. הוא שמח בנו. וברגע שאנחנו קולטים את זה, משהו בנפש מתמלא.
+  </div>
+
+  <!-- ===================== 6 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/05-חיוך.jpg" aria-label="הגדלת התמונה: כוחו של חיוך"><img src="images/05-חיוך.jpg" alt="כוחו של חיוך" loading="lazy"></button><figcaption>כוחו של חיוך</figcaption></figure>
+<h2 id="section6"><span class="num">פרק ו</span>למה נברא האדם צמא לכבוד?</h2>
+
+  <div class="qa-box">
+    <p><span class="q">שאלה:</span> אם הכבוד הוא חולשה כל כך גדולה, למה ה׳ ברא את האדם כך? הרי הרבה עבירות נובעות מרדיפת כבוד. (וכך גם באהבה – האדם צמא לאהבה מאוד.)</p>
+  </div>
+
+  <p>התשובה: <span class="emphasis">כדי שנרצה שה׳ יעריך אותנו.</span> הצורך העמוק בכבוד ובאהבה נועד להוביל את האדם אל מקור הכבוד והאהבה האמיתי. שיתבונן הרבה כמה ה׳ אוהב אותו: מלך מלכי המלכים, שברא הכול, אוהב אותו.</p>
+
+  <div class="verse-box">
+    ״וְאַתָּה קָדוֹשׁ יוֹשֵׁב תְּהִלּוֹת יִשְׂרָאֵל״
+    <small>תהילים כ״ב, ד</small>
+  </div>
+
+  <h3>״למען יזמרך כבוד״</h3>
+  <p>הפסוק בתהילים (ל׳, יג) אומר ״לְמַעַן יְזַמֶּרְךָ כָבוֹד״. מיהו ״כבוד״ שם? נפשו של האדם. ולמה נקראת הנפש בשם ״כבוד״? משום שכל חיותה היא מהכבוד שה׳ מעניק לה.</p>
+
+  <!-- ===================== 7 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/06-כבוד.jpg" aria-label="הגדלת התמונה: הצימאון לכבוד"><img src="images/06-כבוד.jpg" alt="הצימאון לכבוד" loading="lazy"></button><figcaption>הצימאון לכבוד</figcaption></figure>
+<h2 id="section7"><span class="num">פרק ז</span>מה למדנו על יסוד האדם</h2>
+
+  <div class="highlight-box">
+    <strong>למדנו כאן יסוד נפלא:</strong> האדם זקוק לכבוד ולאהבה. ובזכות תורת ה׳ הוא זוכה להשלים את החפץ הזה – על ידי כך שהוא יודע שה׳ אוהב אותו, שמח בו ומתפאר בו.
+  </div>
+
+  <p>שימו לב לשלוש הפעולות: <em>אוהב אותו</em>, <em>שמח בו</em>, <em>מתפאר בו</em>. זו לא אהבה מרוחקת. זו אהבה של הורה שמראה את ילדו בגאווה.</p>
+
+  <!-- ===================== 8 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/07-יסוד-האדם.jpg" aria-label="הגדלת התמונה: יסוד האדם"><img src="images/07-יסוד-האדם.jpg" alt="יסוד האדם" loading="lazy"></button><figcaption>יסוד האדם</figcaption></figure>
+<h2 id="section8"><span class="num">פרק ח</span>אהבת עולם ו״ואהבת״ – שתי אהבות בתפילה</h2>
+
+  <p>ההשוואה הזאת מובילה אותנו לתפילה. לפני קריאת שמע אנחנו אומרים את ברכת <span class="emphasis">אהבת עולם</span> (בערב) או <em>אהבה רבה</em> (בבוקר), ובקריאת שמע עצמה נאמר ״וְאָהַבְתָּ אֵת ה׳ אֱלֹהֶיךָ״.</p>
+
+  <div class="qa-box">
+    <p><span class="q">קושיה א׳:</span> מה הקשר בין הברכה לקריאת שמע, עד שהשולחן ערוך פוסק שאין להפסיק ביניהן?</p>
+    <p><span class="q">קושיה ב׳:</span> הבית יוסף כותב שזו ברכה על קריאת שמע. אבל איזו ברכה יש כאן? הרי אין בה מצווה.</p>
+  </div>
+
+  <p>לפי מה שלמדנו, התשובה ברורה: <span class="emphasis">הברכה היא אהבת ה׳ אלינו, והקריאה היא אהבתנו אליו.</span> קודם ה׳ מראה שהוא אוהב אותנו, ואז אנחנו מצווים ״ואהבת״. הרצף הזה הוא לב העניין, ולכן אסור להפריד ביניהם.</p>
+
+  <div class="steps">
+    <div><b>💛 אהבת עולם</b><span>ה׳ אוהב אותנו</span></div>
+    <div><b>❤️ ואהבת</b><span>אנחנו אוהבים אותו</span></div>
+  </div>
+
+  <h3>לעורר את האהבה</h3>
+  <p>לפי החפץ חיים, ״ואהבת״ היא חובה על האדם לעורר בעצמו את אהבת ה׳ – ולא לקרוא ק״ש כמי שקורא בלי תפילין, כלומר בלי הלב.</p>
+
+  <div class="highlight-box">
+    <strong>שאלה פתוחה:</strong> מה ההבדל בין ״אהבת עולם״ ל״אהבה רבה״, ולמה אחת נאמרת בבוקר והשנייה בערב? בשיעור לא נמצאה תשובה לכך, ולכן היא מופיעה בסוף הספר כשאלה לחברותא.
+  </div>
+
+  <!-- ===================== 9 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/08-שתי-אהבות.jpg" aria-label="הגדלת התמונה: שתי אהבות בתפילה"><img src="images/08-שתי-אהבות.jpg" alt="שתי אהבות בתפילה" loading="lazy"></button><figcaption>שתי אהבות בתפילה</figcaption></figure>
+<h2 id="section9"><span class="num">פרק ט</span>כמים הפנים לפנים – איך מגיעים לאהבת ה׳</h2>
+
+  <p>אם החובה היא לעורר אהבה, נשאלת השאלה: <span class="emphasis">איך מגיעים אליה?</span> התשובה: על ידי כך שאדם יודע כמה ה׳ אוהב אותו.</p>
+
+  <div class="verse-box">
+    ״כַּמַּיִם הַפָּנִים לַפָּנִים כֵּן לֵב הָאָדָם לָאָדָם״
+    <small>משלי כ״ז, יט – דברי החכם מכל אדם</small>
+  </div>
+
+  <p>המשמעות: יש כלל בנפש האדם. כשאדם יודע שהשני אוהב אותו, הוא <em>חייב</em> לאהוב אותו בחזרה. אין אפשרות אחרת – כך נבראה הנפש. כמו שפנים במים משקפות את מי שמביט בהן.</p>
+
+  <div class="quote-box">
+    ולכן, אם אדם רואה שאין בו אהבת ה׳ – סימן שהלב לא הפנים את הידיעה שה׳ אוהב אותו. הבעיה איננה בחוסר אהבה אלא בחוסר ידיעה שירדה מהראש אל הלב.
+  </div>
+
+  <!-- ===================== 10 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/09-כמים-הפנים.jpg" aria-label="הגדלת התמונה: כמים הפנים לפנים"><img src="images/09-כמים-הפנים.jpg" alt="כמים הפנים לפנים" loading="lazy"></button><figcaption>כמים הפנים לפנים</figcaption></figure>
+<h2 id="section10"><span class="num">פרק י</span>שוב ושוב – למה לא מספיק פעם אחת</h2>
+
+  <p>עכשיו אנחנו יכולים לענות על קושיית הזכירה מפרק ג׳. בסוכה צריך לכוון בכל פעם את טעם ענני הכבוד, כי אדם צריך כל הזמן לדעת כמה ה׳ אוהב אותו.</p>
+
+  <h3>מדוע כל פעם?</h3>
+  <p>כמו שאדם אוהב צריך לשמוע מבן זוגו שאוהבים אותו שוב ושוב, ולא רק פעם אחת בשנה, כך צריך האדם לומר ללבו כמה פעמים ביום שה׳ אוהב אותו. אחרת, בסופו של דבר הלב מאבד את הרגש הזה.</p>
+
+  <div class="highlight-box">
+    <strong>ולכן סגולת הסוכה:</strong> כשאדם נכנס לסוכה וחושב שה׳ אוהב אותו, הדבר מכניס בו המון אהבת ה׳ – הרבה יותר מאשר סתם להרהר בזה במשך כל השנה. כך יצר ה׳ שסגולת המצווה מעניקה לאדם את השפע שהוקצה לה.
+  </div>
+
+  <p>שימו לב להבדל: אותה מחשבה, אבל בתוך מצווה היא חודרת אחרת. הסוכה היא מסגרת שהקב״ה עצמו בנה כדי שהמחשבה תחדור עמוק.</p>
+
+  <!-- ===================== 11 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/10-שוב-ושוב.jpg" aria-label="הגדלת התמונה: שוב ושוב — אהבה שמעמיקים בה"><img src="images/10-שוב-ושוב.jpg" alt="שוב ושוב — אהבה שמעמיקים בה" loading="lazy"></button><figcaption>שוב ושוב — אהבה שמעמיקים בה</figcaption></figure>
+<h2 id="section11"><span class="num">פרק יא</span>סוכה ולולב – אהבה שלו ואהבה שלנו</h2>
+
+  <div class="qa-box">
+    <p><span class="q">שאלה:</span> מה הקשר בין מצוות סוכה למצוות ארבעת המינים? מדוע שתי מצוות שונות כל כך נמצאות באותו חג?</p>
+  </div>
+
+  <p>אמרנו: יש ״אהבת עולם״ ואחר כך ״ואהבת״. כך גם בחג:</p>
+
+  <div class="two-columns">
+    <div class="col-gold">
+      <h4>🛖 הסוכה – ה׳ אוהב אותנו</h4>
+      <p>ה׳ מראה לנו שהוא אוהב אותנו: הוא מקיף אותנו בענני כבוד, בחיבוק, בשלום.</p>
+    </div>
+    <div class="col-purple">
+      <h4>🌴 הלולב – אנחנו אוהבים אותו</h4>
+      <p>ואנחנו נוטלים את ארבעת המינים כדי להראות לו כמה אנחנו אוהבים אותו.</p>
+    </div>
+  </div>
+
+  <h3>למה נוטלים את המינים בהלל?</h3>
+  <p>ולכן נוטלים את ארבעת המינים דווקא בהלל, שבו אנו מהללים את ה׳. התוספות מביא את הפסוק ״אָז יְרַנְּנוּ עֲצֵי הַיָּעַר״ – הלולב הוא כחץ המכוון כלפי ה׳, כי אנו המהללים.</p>
+
+  <h3>לולב בתוך הסוכה</h3>
+  <p>לפי זה מובן גם מדוע יש ענין ליטול לולב <em>בתוך</em> הסוכה, כפי שהובא בשם האריז״ל (כמדומני). כשם שבתפילה אסור להפסיק בין אהבת ה׳ אלינו לאהבתנו אליו, כך בסוכות יש ענין לחבר את שתי האהבות – ואת זה עושים בנטילת הלולב בסוכה.</p>
+
+  <div class="verse-box" style="font-size:1.5em">
+    מתוק מדבש 🍯
+    <small>שתי אהבות שנפגשות במקום אחד</small>
+  </div>
+
+  <!-- ===================== 12 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/11-סוכה-ולולב.jpg" aria-label="הגדלת התמונה: אהבה שלו ואהבה שלנו"><img src="images/11-סוכה-ולולב.jpg" alt="אהבה שלו ואהבה שלנו" loading="lazy"></button><figcaption>אהבה שלו ואהבה שלנו</figcaption></figure>
+<h2 id="section12"><span class="num">פרק יב</span>הסדר המתהפך – כל אחד משבח את השני</h2>
+
+  <div class="qa-box">
+    <p><span class="q">שאלה:</span> בתורה (ויקרא כ״ג) מופיעים קודם ארבעת המינים ורק אחר כך הסוכה. אבל מסכת סוכה מתחילה דווקא בבניין הסוכה, ואחר כך מגיעה לארבעת המינים. למה ההפוך?</p>
+  </div>
+
+  <div class="two-columns">
+    <div class="col-gold">
+      <h4>📜 התורה</h4>
+      <p>ה׳ מדבר, וכך הוא מסדר את החג: קודם הצד של האדם, ארבעת המינים – כאילו אומר: ״ראו כמה אתם אוהבים אותי״.</p>
+    </div>
+    <div class="col-purple">
+      <h4>📚 חז״ל</h4>
+      <p>עם ישראל מדבר, וכך הוא מסדר את החג: קודם הסוכה – כאילו אומר: ״ראו כמה אתה אוהב אותנו״.</p>
+    </div>
+  </div>
+
+  <p>אותו דבר מצאנו בפסח: ה׳ קורא לו ״חג המצות״, ואנחנו קוראים לו ״פסח״ – ומסכת הגמרא נקראת ״פסחים״. ה׳ משבח את עמו, ועמו משבחים אותו.</p>
+
+  <div class="highlight-box">
+    <strong>כלל אחד:</strong> כל אחד מראה את השבח של השני. ה׳ מראה תחילה את אהבת ישראל, וישראל מראים תחילה כמה ה׳ אוהב אותנו. זו אהבה הדדית שכל צד מתחיל בשבחו של הצד השני.
+  </div>
+
+  <!-- ===================== 13 ===================== -->
+  <div class="section-divider">🍎 מהאהבה אל השירה 🍯</div>
+
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/12-הסדר-המתהפך.jpg" aria-label="הגדלת התמונה: כל אחד משבח את השני"><img src="images/12-הסדר-המתהפך.jpg" alt="כל אחד משבח את השני" loading="lazy"></button><figcaption>כל אחד משבח את השני</figcaption></figure>
+<h2 id="section13"><span class="num">פרק יג</span>הלל, הודאה ושמחה</h2>
+
+  <p>עוד שאלה: היכן בתורה מרומז שיש לקרוא הלל בשעת נטילת הלולב? בספר ״ברכת מועדיך״, בשם הגרי״ז מבריסק, מובא רמז בפסוק עצמו:</p>
+
+  <div class="verse-box">
+    ״וּלְקַחְתֶּם לָכֶם… וּשְׂמַחְתֶּם לִפְנֵי ה׳ אֱלֹהֵיכֶם שִׁבְעַת יָמִים״
+    <small>ויקרא כ״ג, מ</small>
+  </div>
+
+  <p>איך אפשר לשמוח עם ארבעת המינים? <span class="emphasis">על ידי שירה.</span> כך אומרת הגמרא: מנין לשירה מן התורה? שנאמר ״תַּחַת אֲשֶׁר לֹא עָבַדְתָּ אֶת ה׳ אֱלֹהֶיךָ בְּשִׂמְחָה״ – למדנו ששמחה באה משירה. ושירה היא ענין ההודאה.</p>
+
+  <h3>הודאה ושמחה הולכים יחד</h3>
+  <p>בכמה מקומות מצאנו הודאה יחד עם שמחה:</p>
+  <ul class="checklist">
+    <li><strong>מביא ביכורים</strong> בפרשת כי תבוא – ״וְשָׂמַחְתָּ בְכָל הַטּוֹב״.</li>
+    <li><strong>בתהילים</strong> – ״עִבְדוּ אֶת ה׳ בְּשִׂמְחָה, בֹּאוּ לְפָנָיו בִּרְנָנָה״, ״בֹּאוּ שְׁעָרָיו בְּתוֹדָה״.</li>
+    <li><strong>כאן, בסוכות.</strong></li>
+  </ul>
+
+  <p>ללמדך מה גורם לאדם לשמחה: ההודאה לה׳. וכך גם קראתי בספר ״לחיות את עצמנו״ שאחד הרגשות המביאים שמחה והנאה הוא רגש של אהבה והכרת הטוב.</p>
+
+  <!-- ===================== 14 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/13-הלל-ושמחה.jpg" aria-label="הגדלת התמונה: הלל, הודאה ושמחה"><img src="images/13-הלל-ושמחה.jpg" alt="הלל, הודאה ושמחה" loading="lazy"></button><figcaption>הלל, הודאה ושמחה</figcaption></figure>
+<h2 id="section14"><span class="num">פרק יד</span>חג האסיף – ביכורי הלב</h2>
+
+  <p>יש עוד דרך להבין מדוע ארבעת המינים הם הודאה, והיא אהבה. שמעתי מיעקב גולדשטיין הי״ו: חג הסוכות הוא <span class="emphasis">חג האסיף</span>, ואנו מביאים לה׳ ביכורים מהתבואה שנתן לנו. הארבעה מייצגים ארבעה סוגי עצים:</p>
+
+  <div class="steps">
+    <div><b>🍋 אתרוג</b><span>מאילני המאכל</span></div>
+    <div><b>🌿 הדס</b><span>מאילני הריח</span></div>
+    <div><b>🍃 ערבה</b><span>מאילני הסרק</span></div>
+    <div><b>🌴 לולב</b><span>מהעץ הגבוה ביותר (ואולי גם מאילני הנוי)</span></div>
+  </div>
+
+  <p>נמצא שאנו נותנים הודיה על מה שנתן לנו – על העצים מכל הסוגים.</p>
+
+  <!-- ===================== 15 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/14-חג-האסיף.jpg" aria-label="הגדלת התמונה: חג האסיף — ביכורי הלב"><img src="images/14-חג-האסיף.jpg" alt="חג האסיף — ביכורי הלב" loading="lazy"></button><figcaption>חג האסיף — ביכורי הלב</figcaption></figure>
+<h2 id="section15"><span class="num">פרק טו</span>״הודו לה׳ כי טוב כי לעולם חסדו״ – שני חצאי הפסוק</h2>
+
+  <div class="qa-box">
+    <p><span class="q">שאלה:</span> מה הענין של הנענועים בשעה שאומרים ״הודו לה׳״ בהלל?</p>
+  </div>
+
+  <p>הפסוק מחולק לשני חלקים, וכל חלק הוא אהבה בכיוון אחר:</p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <h4>א. ״הודו לה׳ כי טוב״</h4>
+      <p>בספר ״ברכת מועדיך״ מסבירים: טוב בעיני ה׳ שתודו לו. או על דרך ״טוב להודות לה׳״ – שההודאה עצמה טובה לאדם. כך גם הפסוק ״הגיד לך אדם מה טוב ומה ה׳ דורש ממך״ – ה׳ דורש ממך את מה שטוב לך. כשאדם חש הכרת הטוב, נולדת בו שמחה.</p>
+    </div>
+    <div class="col-gold">
+      <h4>ב. ״כי לעולם חסדו״</h4>
+      <p>כאן עוברים לחלקו של ה׳: הוא אוהב אותנו תמיד, ולכן ״לעולם חסדו״.</p>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>נמצא:</strong> החצי הראשון של הפסוק הוא האהבה שלנו לה׳ – וזה הטוב שלנו. החצי השני הוא אהבת ה׳ אלינו. בפסוק אחד יש את שני הכיוונים של ספר זה.
+  </div>
+
+  <!-- ===================== 16 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/15-הודו-לה.jpg" aria-label="הגדלת התמונה: טוב וחסד בשני כיוונים"><img src="images/15-הודו-לה.jpg" alt="טוב וחסד בשני כיוונים" loading="lazy"></button><figcaption>טוב וחסד בשני כיוונים</figcaption></figure>
+<h2 id="section16"><span class="num">פרק טז</span>שלושה חלקים בהלל</h2>
+
+  <p>בהלל נאמרים שלושה פסוקים ברצף: ״יֹאמַר נָא יִשְׂרָאֵל״, ״יֹאמְרוּ נָא בֵית אַהֲרֹן״, ״יֹאמְרוּ נָא יִרְאֵי ה׳״ (תהילים קי״ח). מי הם?</p>
+
+  <ul class="checklist">
+    <li><strong>ישראל</strong> – הכלל כולו.</li>
+    <li><strong>בית אהרן</strong> – לומדי התורה, כדרך שכתב הרמב״ם שהכוונה לא רק לשבט לוי אלא לכל מי שמקדיש עצמו לה׳.</li>
+    <li><strong>יראי ה׳</strong> – אלו שיש בהם אהבת ה׳ ויראתו.</li>
+  </ul>
+
+  <p>ההלל מזמין את כולם: מי ששייך לעם, מי שלומד, ומי שאוהב. וכולם אומרים באותו קול: ״כי לעולם חסדו״.</p>
+
+  <!-- ===================== 17 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/16-שלושה-חלקים.jpg" aria-label="הגדלת התמונה: שלושה חלקים בהלל"><img src="images/16-שלושה-חלקים.jpg" alt="שלושה חלקים בהלל" loading="lazy"></button><figcaption>שלושה חלקים בהלל</figcaption></figure>
+<h2 id="section17"><span class="num">פרק יז</span>מעשה – מסלול אהבה בשני כיוונים</h2>
+
+  <p>זו הצעה מעשית (ולא מקור מהמסורת) ליישום הרעיונות של הספר:</p>
+
+  <ul class="days">
+    <li><span class="d">בכניסה</span><div><strong>אהבה שלו.</strong> בכל כניסה לסוכה, לפני שיושבים – לומר בלב: ״ה׳ אוהב אותי, זה מה שהסוכה אומרת לי.״</div></li>
+    <li><span class="d">בישיבה</span><div><strong>לזכור את הענן.</strong> לחשוב על הנוחות שאין בה הכרח – עוד רגע קטן שה׳ נתן מעבר למה שנדרש.</div></li>
+    <li><span class="d">בלולב</span><div><strong>אהבה שלי.</strong> ליטול את ארבעת המינים (בסוכה, לפי הצעת האריז״ל) ולכוון: ״אני אוהב אותך.״</div></li>
+    <li><span class="d">בהלל</span><div><strong>הודאה.</strong> ב״הודו לה׳ כי טוב״ – להודות על דבר אחד מסוים מהיום.</div></li>
+    <li><span class="d">בערב</span><div><strong>חיוך.</strong> לחייך באמת לאדם אחד שלא חייכתם אליו – נתינה של כבוד.</div></li>
+  </ul>
+
+  <!-- ===================== 18 ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/17-מסלול-האהבה.jpg" aria-label="הגדלת התמונה: מסלול אהבה בשני כיוונים"><img src="images/17-מסלול-האהבה.jpg" alt="מסלול אהבה בשני כיוונים" loading="lazy"></button><figcaption>מסלול אהבה בשני כיוונים</figcaption></figure>
+<h2 id="section18"><span class="num">פרק יח</span>שאלות לחברותא ולשולחן החג</h2>
+
+  <div class="qa-box">
+    <ol>
+      <li>מהו ״הענן״ הפרטי שלי – דבר שקיבלתי ממותרות ולא מצורך? האם אני רואה בו אהבה?</li>
+      <li>מדוע כבוד חשוב לאדם יותר מכסף? האם זה נכון גם בי?</li>
+      <li>מי חייך אלי לאחרונה, וכיצד הרגשתי? למי אני יכול לחייך היום?</li>
+      <li>מה ההבדל בין ״אהבת עולם״ ל״אהבה רבה״, ולמה אחת בערב והשנייה בבוקר? (שאלה פתוחה.)</li>
+      <li>אם אין בי אהבת ה׳ – האם זה אומר שאין בי אהבה, או שהידיעה שה׳ אוהב אותי עוד לא ירדה אל הלב?</li>
+      <li>מדוע סדר החג בתורה הפוך מהסדר במסכת סוכה? מה מלמדת ״הקדמת השבח של השני״?</li>
+      <li>על איזה דבר אחד אני מודה לה׳ היום, ומה גורם לי לשמחה בהודאה הזו?</li>
+    </ol>
+  </div>
+
+  <!-- ===================== מקורות ===================== -->
+  
+<figure class="chapter-illustration"><button type="button" class="zoom-image" data-full="images/18-חברותא.jpg" aria-label="הגדלת התמונה: שיחה של חברותא ושולחן החג"><img src="images/18-חברותא.jpg" alt="שיחה של חברותא ושולחן החג" loading="lazy"></button><figcaption>שיחה של חברותא ושולחן החג</figcaption></figure>
+<div class="sources">
+    <h3>📚 מקורות ומראי מקומות</h3>
+    <ol>
+      <li>הלכות סוכה – הכוונה בכל ישיבה בסוכה, לזכור את טעם המצווה (מראה מקום מדויק – להשלמה).</li>
+      <li>מסילת ישרים – חמדת הכבוד לעומת חמדת הממון (פרק – להשלמה).</li>
+      <li>כתובות קי״א ע״ב – ״גדול המלבין שיניים לחברו יותר ממשקהו חלב״.</li>
+      <li>תהילים כ״ב, ד – ״ואתה קדוש יושב תהילות ישראל״.</li>
+      <li>תהילים ל׳, יג – ״למען יזמרך כבוד״.</li>
+      <li>משלי כ״ז, יט – ״כמים הפנים לפנים כן לב האדם לאדם״.</li>
+      <li>ברכת אהבת עולם / אהבה רבה; בית יוסף ושולחן ערוך, אורח חיים – הקשר לקריאת שמע ואיסור ההפסקה (סימן – להשלמה).</li>
+      <li>חפץ חיים – חובת עורר אהבת ה׳ בקריאת שמע (מראה מקום – להשלמה).</li>
+      <li>דברים ו׳, ה – ״ואהבת את ה׳ אלוקיך״.</li>
+      <li>תוספות, מסכת סוכה – נטילת לולב בהלל, ״אז ירננו עצי היער״ (דף – להשלמה).</li>
+      <li>האריז״ל – נטילת לולב בסוכה (כמובא בשיעור, ״כמדומני״ – לאימות).</li>
+      <li>ויקרא כ״ג, מ – ״ולקחתם לכם… ושמחתם לפני ה׳ אלוקיכם שבעת ימים״; הגרי״ז מבריסק בספר ״ברכת מועדיך״.</li>
+      <li>דברים כ״ח, מז – ״תחת אשר לא עבדת… בשמחה״; גמרא ערכין י״א ע״א – מנין לשירה מן התורה (לאימות).</li>
+      <li>דברים כ״ו, יא – ״ושמחת בכל הטוב״; תהילים ק׳, ב–ד.</li>
+      <li>ספר ״לחיות את עצמנו״ – שמחה והנאה מהכרת הטוב (כמובא בשיעור).</li>
+      <li>שמעתי מיעקב גולדשטיין הי״ו – סוכות כחג האסיף וארבעת המינים כביכורים.</li>
+      <li>מיכה ו׳, ח – ״הגיד לך אדם מה טוב ומה ה׳ דורש ממך״.</li>
+      <li>תהילים קי״ח, ב–ד – ״יאמר נא ישראל, בית אהרן, יראי ה׳״; רמב״ם, הלכות שמיטה ויובל י״ג, יג – ״לא שבט לוי בלבד״.</li>
+      <li>ויקרא כ״ג, מ–מג – סדר ארבעת המינים והסוכה; מסכת סוכה; מסכת פסחים; שמות כ״ג, טו – ״חג המצות״.</li>
+      <li>שיעור מס׳ 214, ט״ז תשרי תשע״ב.</li>
+    </ol>
+  </div>
+
+  <!-- ===================== חתימה חובה ===================== -->
+  <div class="footer">
+      <strong>נכתב ונערך על ידי:</strong><br>
+      <strong>הרב יהודה טאוב</strong><br>
+      קרית אתא<br>
+      📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+      <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #fff1c9 0%, #fde8e6 100%); border-radius: 10px;">
+          <h4>🎧 שיעורים נוספים של הרב</h4>
+          <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+          <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+          <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+      </div>
+  </div>
+</div>
+
+<a href="#top" class="scroll-top" id="scrollTop" aria-label="חזרה למעלה">▲</a>
+
+<script>
+(function(){
+  var btn=document.getElementById('scrollTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>400){btn.classList.add('show')}else{btn.classList.remove('show')}
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(t){e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
+  });
+})();
+</script>
+<div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" aria-label="תמונה מוגדלת"><button type="button" aria-label="סגירת התמונה">×</button><img src="" alt=""></div><script>(function(){const b=document.getElementById('imageLightbox'),p=b.querySelector('img'),close=()=>{b.classList.remove('open');p.src=''};document.querySelectorAll('.zoom-image').forEach(x=>x.addEventListener('click',()=>{p.src=x.dataset.full;p.alt=x.querySelector('img').alt;b.classList.add('open')}));b.addEventListener('click',close);b.querySelector('button').addEventListener('click',e=>{e.stopPropagation();close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});})();</script></body>
+</html>
