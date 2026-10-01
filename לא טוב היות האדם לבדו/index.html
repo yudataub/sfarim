@@ -1,0 +1,3291 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="torah-html-article 2.7.0">
+<title>לא טוב היות האדם לבדו</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #1f2937;
+    padding: 40px 15px;
+    line-height: 1.8;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffffe;
+    padding: 60px 80px;
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  }
+  h1.main-title {
+    font-size: 3em;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 1.3em;
+    color: #6b7280;
+    margin-bottom: 6px;
+  }
+  .author {
+    text-align: center;
+    font-size: 1.05em;
+    color: #7e22ce;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  .bsd { text-align: center; color: #9ca3af; font-size: 0.95em; margin-bottom: 8px;}
+
+  h2 {
+    font-size: 2.2em;
+    color: #7e22ce;
+    border-right: 6px solid #7e22ce;
+    padding-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+  h3 {
+    font-size: 1.5em;
+    color: #2563eb;
+    margin-top: 38px;
+    margin-bottom: 16px;
+  }
+  h4 {
+    font-size: 1.25em;
+    color: #059669;
+    margin-top: 26px;
+    margin-bottom: 12px;
+  }
+  p, li { font-size: 1.15em; line-height: 1.8; text-align: justify; }
+  p { margin: 20px 0; }
+  ul, ol { padding-right: 30px; }
+  li { margin: 8px 0; }
+
+  .emphasis { color: #7e22ce; font-weight: 700; }
+  em { color: #2563eb; font-style: italic; }
+  strong { font-weight: 700; }
+
+  .chapter-label {
+    display: inline-block;
+    font-size: 0.95em;
+    color: #f59e0b;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 50px;
+  }
+
+  .verse-box {
+    background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    border: 1px solid rgba(126,34,206,0.25);
+    border-radius: 14px;
+    padding: 28px 30px;
+    margin: 28px 0;
+    text-align: center;
+    font-size: 1.2em;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .verse-box .ref { display:block; margin-top:12px; font-size:0.75em; color:#7e22ce; font-weight:700;}
+
+  .highlight-box {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    border-right: 6px solid #2563eb;
+    border-radius: 12px;
+    padding: 25px 28px;
+    margin: 28px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .highlight-box p { text-align: justify; margin: 12px 0; }
+
+  .quote-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-right: 6px solid #f59e0b;
+    border-radius: 12px;
+    padding: 25px 28px;
+    margin: 28px 0;
+    font-style: italic;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .quote-box p { text-align: justify; }
+  .source-tag {
+    display: block;
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: 700;
+    color: #b45309;
+    font-size: 0.85em;
+  }
+
+  .story-box {
+    background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    border-right: 6px solid #059669;
+    border-radius: 12px;
+    padding: 25px 28px;
+    margin: 28px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .story-box p { text-align: justify; }
+
+  .qa-box {
+    border: 2px dashed #ec4899;
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin: 28px 0;
+    background: rgba(252,231,243,0.35);
+  }
+  .qa-box .q { color: #be185d; font-weight: 700; margin-bottom: 8px; }
+  .qa-box .a { color: #1f2937; }
+
+  .two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 28px 0;
+  }
+  .two-columns .col-purple, .two-columns .col-gold {
+    border-radius: 12px;
+    padding: 22px 24px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .two-columns .col-purple {
+    background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%);
+    border-right: 5px solid #7e22ce;
+  }
+  .two-columns .col-gold {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-right: 5px solid #f59e0b;
+  }
+  .two-columns h4 { margin-top: 0; }
+  @media (max-width: 768px) { .two-columns { grid-template-columns: 1fr; } }
+
+  .box-title { font-weight: 700; margin-bottom: 10px; display:block; }
+
+  .toc {
+    background: linear-gradient(135deg, #f3e8ff 0%, #fdf4ff 100%);
+    border: 1px solid rgba(126,34,206,0.2);
+    border-radius: 14px;
+    padding: 30px 34px;
+    margin: 40px 0;
+  }
+  .toc h3 { color: #7e22ce; margin-top: 0; text-align:center; font-size: 1.6em;}
+  .toc-chapter { margin-top: 22px; }
+  .toc-chapter:first-of-type { margin-top: 10px; }
+  .toc-chapter a.toc-chapter-link {
+    display: block;
+    font-size: 1.25em;
+    font-weight: 800;
+    color: #7e22ce;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .toc-chapter a.toc-chapter-link:hover { background: rgba(126,34,206,0.1); color: #5b1a9e; }
+  .toc-sub { list-style: none; padding-right: 22px; margin: 6px 0 0 0; }
+  .toc-sub li { margin: 2px 0; }
+  .toc-sub a {
+    font-size: 0.92em;
+    color: #4b5563;
+    text-decoration: none;
+    display: block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .toc-sub a:hover { background: rgba(37,99,235,0.08); color: #2563eb; }
+  .toc-sub li::before { content: "· "; color: #ec4899; }
+  .toc-sub li { display: flex; }
+  .toc-sub li a { flex: 1; }
+
+  .in-this-chapter {
+    background: #fff;
+    border: 2px solid #f59e0b;
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin: 20px 0 36px 0;
+  }
+  .in-this-chapter .icl-title { font-weight: 800; color: #b45309; font-size: 1.1em; margin-bottom: 10px; display:block;}
+  .in-this-chapter ul { margin: 0; padding-right: 24px; }
+  .in-this-chapter li { font-size: 1.02em; }
+
+  .chapter-card {
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 20px;
+    margin: 60px 0 0 0;
+    background: linear-gradient(135deg, #4b0082 0%, #ec4899 55%, #f59e0b 100%);
+    box-shadow: 0 10px 30px rgba(75,0,130,0.35);
+    padding: 30px;
+  }
+  .chapter-card .cc-num {
+    font-size: 5.5em;
+    font-weight: 900;
+    opacity: 0.9;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 18px rgba(0,0,0,0.25);
+  }
+  .chapter-card .cc-title {
+    font-size: 2.3em;
+    font-weight: 800;
+    max-width: 700px;
+    text-shadow: 0 3px 14px rgba(0,0,0,0.3);
+  }
+  .chapter-card .cc-sub {
+    margin-top: 18px;
+    font-size: 1.15em;
+    opacity: 0.92;
+    max-width: 600px;
+  }
+
+  .section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 40px 0;
+  }
+  .section-divider .line {
+    flex: 1;
+    height: 3px;
+    background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    border-radius: 3px;
+  }
+  .section-divider .icon {
+    margin: 0 18px;
+    font-size: 1.6em;
+    color: #7e22ce;
+  }
+
+  .sources {
+    background: #f3f4f6;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-top: 60px;
+  }
+  .sources h3 { color: #374151; margin-top: 0; }
+  .sources ol { padding-right: 24px; }
+  .sources li { font-size: 1em; color: #374151; margin: 6px 0; }
+
+  .footnotes {
+    background: #f9fafb;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-top: 40px;
+  }
+  .footnotes h3 { color: #374151; margin-top: 0; }
+  .footnotes ol { padding-right: 24px; }
+  .footnotes li { font-size: 0.95em; color: #374151; margin: 14px 0; text-align: justify; }
+  .footnotes li p { font-size: 1em; margin: 6px 0; text-align: justify; }
+  sup.fn { font-size: 0.7em; }
+  sup.fn a { color: #ec4899; text-decoration: none; font-weight: 700; }
+  .fn-back { color: #7e22ce; text-decoration: none; font-weight: 700; margin-right: 6px; }
+
+  .footer {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 3px solid #f3e8ff;
+    text-align: center;
+    color: #374151;
+    font-size: 1.05em;
+  }
+
+  .scroll-top {
+    position: fixed;
+    bottom: 28px;
+    left: 28px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7e22ce, #ec4899);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.3em;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .scroll-top.visible { opacity: 1; pointer-events: auto; }
+
+  @media (max-width: 768px) {
+    body { padding: 12px 6px; }
+    .container { padding: 30px 22px; }
+    h1.main-title { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.25em; }
+    p, li { font-size: 1.03em; }
+    .chapter-card .cc-num { font-size: 3.2em; }
+    .chapter-card .cc-title { font-size: 1.5em; }
+    .chapter-card { min-height: 40vh; }
+  }
+
+  @media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+    .scroll-top { display: none !important; }
+    h2 { page-break-before: always; break-before: page; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box, .in-this-chapter {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .chapter-card { page-break-before: always; break-before: page; min-height: auto; padding: 60px 20px; }
+    .section-divider { page-break-after: avoid; }
+    .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+    h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+    .footer { page-break-before: always; break-before: page; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+  }
+
+  /* ---------- סרגל ההאזנה (נוסף אוטומטית) ---------- */
+  :root{
+    --lb-purple:#7e22ce; --lb-blue:#2563eb; --lb-green:#059669;
+    --lb-gold:#f59e0b; --lb-pink:#ec4899; --lb-muted:#6b7280;
+    --fs: 1;
+  }
+  .listen-bar{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid var(--lb-gold);
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+  }
+  .listen-btn-group{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .listen-btn{
+    display:flex; align-items:center; gap:8px;
+    background:linear-gradient(135deg, var(--lb-purple) 0%, var(--lb-pink) 100%);
+    color:#fff; border:none; border-radius:30px; padding:10px 22px;
+    font-size:1em; font-weight:bold; font-family:inherit; cursor:pointer;
+    transition:transform .15s, box-shadow .15s;
+  }
+  .listen-btn:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,.3); }
+  .listen-btn:active{ transform:translateY(0); }
+  .listen-stop-btn, .listen-skip-btn, .listen-size-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 16px; font-size:.95em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .listen-skip-btn{ padding:8px 12px; }
+  .listen-stop-btn:hover, .listen-skip-btn:hover,
+  .listen-size-btn:hover:not(:disabled){ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-size{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-size-btn{ padding:6px 12px; line-height:1; }
+  .listen-size-btn:disabled{ opacity:.35; cursor:default; border-color:#d1d5db; color:var(--lb-muted); }
+  .listen-size-btn.big{ font-size:1.25em; }
+  .listen-size output{ font-weight:bold; min-width:3.4em; text-align:center; }
+  .listen-toggle-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 14px; font-size:.88em; font-weight:bold;
+    font-family:inherit; cursor:pointer; white-space:nowrap;
+    transition:transform .15s, background .15s, opacity .15s;
+  }
+  .listen-toggle-btn:hover{ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-toggle-btn[aria-pressed="false"]{
+    color:var(--lb-muted); border-color:#d1d5db; background:#f9fafb; opacity:.8;
+  }
+  .listen-toggle-btn:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+  .listen-skip-btn:focus-visible, .listen-size-btn:focus-visible,
+  .listen-voice select:focus-visible,
+  .listen-rate input:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-status{ font-size:.95em; color:#78350f; flex:1 1 200px; }
+  .listen-progress{ font-size:.9em; color:#78350f; font-weight:bold; white-space:nowrap; }
+  .listen-rate, .listen-voice{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-rate input{ accent-color:var(--lb-purple); }
+  .listen-rate output{ font-weight:bold; min-width:2.6em; }
+  .listen-voice select{
+    border-radius:20px; border:1px solid var(--lb-gold); padding:4px 10px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:190px;
+  }
+  .tts-clickable{ cursor:pointer; transition:background .2s; border-radius:6px; }
+  .tts-clickable:hover{ background:rgba(245,158,11,.10); }
+  .reading-highlight{
+    background:linear-gradient(135deg,#e0e7ff 0%,#fce7f3 100%); border-radius:8px;
+    box-shadow:0 0 0 3px var(--lb-pink) inset; transition:background .3s;
+    padding-right:14px; padding-left:14px;
+    margin-right:-14px; margin-left:-14px;
+  }
+  .audio-player{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid #f59e0b;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  }
+  .audio-player-title{ font-size:1.05em; font-weight:bold; color:#92400e; flex:1 1 100%;}
+  .audio-player audio{ flex:1 1 260px; min-width:220px; height:40px;}
+  .audio-chapter-select{
+    border-radius:20px; border:1px solid #f59e0b; padding:6px 12px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:260px;
+  }
+  .audio-get{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; flex:1 1 100%;}
+  .audio-download{
+    display:inline-flex; align-items:center; gap:6px;
+    background:linear-gradient(135deg,#7e22ce 0%,#ec4899 100%);
+    color:#fff; text-decoration:none; border-radius:30px; padding:8px 18px;
+    font-size:0.95em; font-weight:bold; transition:transform .15s, box-shadow .15s;
+  }
+  .audio-download:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,0.3);}
+  .audio-pick-btn{
+    background:#fff; color:#7e22ce; border:2px solid #7e22ce;
+    border-radius:30px; padding:7px 16px; font-size:0.9em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .audio-pick-btn:hover{ transform:translateY(-2px); background:#f3e8ff;}
+  .audio-note{ font-size:0.9em; color:#92400e;}
+  h2.reading-highlight{ padding-right:34px; }
+  @media(max-width:768px){
+    .listen-bar{ padding:15px; gap:10px; }
+    .listen-status{ flex:1 1 100%; }
+    .listen-voice select{ max-width:140px; }
+  }
+  @media print{
+    .listen-bar{ display:none !important; }
+    .audio-player { display: none !important; }
+    .reading-highlight{ box-shadow:none !important; background:none !important; }
+    .tts-clickable{ cursor:auto; }
+  }
+  /* fs scaling for plain body paragraphs/list items, applied additively so it
+     doesn't fight whatever base font-size the article already declares */
+  .container p, .container li{ font-size: calc(1em * var(--fs)); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="bsd">בס"ד</div>
+  <h1 data-a="01-0" class="main-title" id="top">לא טוב היות האדם לבדו</h1>
+  <div class="subtitle">עיון מקיף בחובת הנישואין, שורשה ומהותה — בין הלכה למחשבה</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+
+  <div class="listen-bar">
+      <div class="listen-btn-group">
+          <button class="listen-btn" id="listenBtn" onclick="toggleListen()" aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן למאמר</button>
+          <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+          <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+          <button class="listen-skip-btn" onclick="skipListen(1)" aria-label="פסקה הבאה" title="פסקה הבאה">⏭</button>
+          <button class="listen-skip-btn" onclick="skipChapter(1)" aria-label="פרק הבא" title="פרק הבא">⏩</button>
+          <button class="listen-stop-btn" onclick="stopListen()" aria-label="עצור הקראה">⏹ עצור</button>
+          <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()" aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+      </div>
+      <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+      <span class="listen-progress" id="listenProgress"></span>
+      <div class="listen-rate">
+          <label for="rateRange">מהירות:</label>
+          <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1" oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)" aria-label="מהירות הקראה">
+          <output id="rateValue" for="rateRange">1.0×</output>
+      </div>
+      <div class="listen-voice">
+          <label for="voiceSelect">קול:</label>
+          <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+      </div>
+      <div class="listen-size">
+          <span>גודל טקסט:</span>
+          <button class="listen-size-btn" id="fontSmaller" onclick="setFontScale(-1)" aria-label="הקטן את הטקסט" title="הקטן את הטקסט">א−</button>
+          <output id="fontScaleValue">100%</output>
+          <button class="listen-size-btn big" id="fontBigger" onclick="setFontScale(1)" aria-label="הגדל את הטקסט" title="הגדל את הטקסט">א+</button>
+      </div>
+  </div><div class="audio-player no-tts">
+    <div class="audio-player-title">🎧 האזנה להקלטה — קול הילה</div>
+    <select class="audio-chapter-select" aria-label="בחירת פרק להאזנה" hidden>
+        <option value="audio/%D7%9E%D7%90%D7%9E%D7%A8_%D7%9C%D7%90_%D7%98%D7%95%D7%91_%D7%94%D7%99%D7%95%D7%AA_%D7%94%D7%90%D7%93%D7%9D_%D7%9C%D7%91%D7%93%D7%95_%D7%94%D7%A8%D7%91_%D7%99%D7%94%D7%95%D7%93%D7%94_%D7%98%D7%90%D7%95%D7%91.mp3" data-seg="01">המקור בתורה והשאלות הפותחות · סוגיית הגמרא: שיטת הרמבם מול החולקים · פירוש שני: האחדות היא הטוב · יישומים הלכתיים למעשה · העמקה מחשבתית: האשה, הבית והתורה · התורה, האשה והברית, חתימה</option>
+    </select>
+    <audio controls preload="none"></audio>
+    <div class="audio-get">
+        <a class="audio-download" href="#" data-download-placeholder="" target="_blank" rel="noopener">📥 להורדת קובץ השמיעה לחץ כאן</a>
+        <button type="button" class="audio-pick-btn">📂 בחר את הקובץ שהורדת</button>
+        <input type="file" class="audio-pick-input" accept="audio/*" multiple hidden>
+        <span class="audio-note"></span>
+    </div>
+</div>
+
+  <div class="toc">
+    <h3>📑 תוכן העניינים</h3>
+
+    <div class="toc-chapter">
+      <a class="toc-chapter-link" href="#ch1">פרק א — המקור בתורה והשאלות הפותחות</a>
+      <ul class="toc-sub">
+        <li><a href="#ch1-1">פסוקי הבריאה ושתים־עשרה שאלות יסוד</a></li>
+        <li><a href="#ch1-2">שלושה טעמים גלויים לנישואין</a></li>
+      </ul>
+    </div>
+
+    <div class="toc-chapter">
+      <a class="toc-chapter-link" href="#ch2">פרק ב — סוגיית הגמרא: שיטת הרמב"ם מול החולקים</a>
+      <ul class="toc-sub">
+        <li><a href="#ch2-1">סוגיית הגמרא במסכת יבמות</a></li>
+        <li><a href="#ch2-2">שיטת הרמב"ם והריטב"א — משום חשש הרהור</a></li>
+        <li><a href="#ch2-3">החולקים על הרמב"ם — חיוב מן התורה</a></li>
+        <li><a href="#ch2-4">סיכום ביניים: ארבע נקודות מחלוקת</a></li>
+      </ul>
+    </div>
+
+    <div class="toc-chapter">
+      <a class="toc-chapter-link" href="#ch3">פרק ג — פירוש שני: האחדות היא הטוב</a>
+      <ul class="toc-sub">
+        <li><a href="#ch3-1">"שרוי בלא טובה" — טעם נוסף בגמרא ובתורה תמימה</a></li>
+        <li><a href="#ch3-2">לא טוב לבדו — ביאור הרמב"ן</a></li>
+        <li><a href="#ch3-3">מהר"ל והזוהר — האחדות עצמה היא הטוב</a></li>
+        <li><a href="#ch3-4">זכה — עֵזֶר, לא זכה — כְּנֶגְדּוֹ</a></li>
+        <li><a href="#ch3-5">"שים שלום... טובה וברכה"</a></li>
+        <li><a href="#ch3-6">ללא הבנה — מהי אהבה</a></li>
+        <li><a href="#ch3-7">מחיצתו של הקב"ה</a></li>
+      </ul>
+    </div>
+
+    <div class="toc-chapter">
+      <a class="toc-chapter-link" href="#ch4">פרק ד — יישומים הלכתיים למעשה</a>
+      <ul class="toc-sub">
+        <li><a href="#ch4-1">נפקא מינה באדם מבוגר ובעוסק בתורה</a></li>
+        <li><a href="#ch4-2">רב ששת ובן עזאי — פטור העוסק בתורה בכל כוחו</a></li>
+        <li><a href="#ch4-3">מעשה רב — הגר"א</a></li>
+        <li><a href="#ch4-4">שו"ת שבט הלוי — בנין בית שני בזקנה</a></li>
+        <li><a href="#ch4-5">שליח ציבור נשוי בימים נוראים</a></li>
+      </ul>
+    </div>
+
+    <div class="toc-chapter">
+      <a class="toc-chapter-link" href="#ch5">פרק ה — העמקה מחשבתית: האשה, הבית והתורה</a>
+      <ul class="toc-sub">
+        <li><a href="#ch5-1">מחוק הטוב להטיב</a></li>
+        <li><a href="#ch5-2">הטוב האמיתי הוא בבית</a></li>
+        <li><a href="#ch5-3">לא טוב — מי לא טוב?</a></li>
+        <li><a href="#ch5-4">סיכום שלוש השיטות בביאור "לא טוב"</a></li>
+        <li><a href="#ch5-5">והלכת בדרכיו — המפתח לכל השלימות</a></li>
+        <li><a href="#ch5-6">רחמנא ליבא בעי</a></li>
+        <li><a href="#ch5-7">תפקיד האשה בעבודת ה'</a></li>
+        <li><a href="#ch5-8">מוסר אביך ותורת אמך</a></li>
+      </ul>
+    </div>
+
+    <div class="toc-chapter">
+      <a class="toc-chapter-link" href="#ch6">פרק ו — התורה, האשה והברית: חתימה</a>
+      <ul class="toc-sub">
+        <li><a href="#ch6-1">התורה והאשה — שוות ביקרן</a></li>
+        <li><a href="#ch6-2">כשם שנכנס לברית כך יכנס לתורה</a></li>
+        <li><a href="#ch6-3">כבוד — תנאי לשפע הטוב</a></li>
+        <li><a href="#ch6-4">ילדים מאשה, ילדים מהתורה</a></li>
+        <li><a href="#ch6-5">מתנה טובה — חתימה</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chapter-card">
+    <div class="cc-num">א</div>
+    <div class="cc-title">המקור בתורה והשאלות הפותחות</div>
+    <div class="cc-sub">מדוע בכלל נברא האדם לבדו, ומה מלמדת אותנו התורה בבריאת האשה?</div>
+  </div>
+  <div class="section-divider"><span class="line"></span><span class="icon">✡</span><span class="line"></span></div>
+
+  <span class="chapter-label">פרק 1</span>
+  <h2 data-a="01-1" id="ch1">המקור בתורה והשאלות הפותחות</h2>
+
+  <div class="in-this-chapter">
+    <span class="icl-title">📖 בפרק זה:</span>
+    <ul>
+      <li>פסוקי הבריאה בפרשת בראשית ושתים־עשרה שאלות יסוד העולות מהם</li>
+      <li>שלושה טעמים גלויים לנישואין המופיעים במקורות, ומיפוי הדרך שלפנינו</li>
+    </ul>
+  </div>
+
+  <h3 data-a="01-2" id="ch1-1">פסוקי הבריאה ושתים־עשרה שאלות יסוד</h3>
+
+  <p data-a="01-3">
+    נפתח את העיון במקום שבו פותחת התורה עצמה: בפרשת בריאת האשה, המובאת מיד לאחר בריאת האדם.
+    זהו המקור שממנו שואבים חז"ל והפוסקים לדורותיהם את עצם היסוד שאין זה טוב לאדם לחיות
+    בגפו, ושראוי ואף מחויב הוא להינשא. אך דווקא משום שזהו המקור הראשוני, הוא גם המקום
+    הראוי ביותר להעמיד בו את השאלות היסודיות שילוו אותנו לאורך כל העיון.
+  </p>
+
+  <div class="verse-box">
+    <p data-a="01-4">וַיֹּאמֶר יְדֹוָד אֱלֹהִים <strong>לֹא טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ</strong> אֶעֱשֶׂה לּוֹ עֵזֶר כְּנֶגְדּוֹ:
+    וַיִּצֶר יְדֹוָד אֱלֹהִים מִן הָאֲדָמָה כָּל חַיַּת הַשָּׂדֶה וְאֵת כָּל עוֹף הַשָּׁמַיִם וַיָּבֵא אֶל הָאָדָם
+    לִרְאוֹת מַה יִּקְרָא לוֹ וְכֹל אֲשֶׁר יִקְרָא לוֹ הָאָדָם נֶפֶשׁ חַיָּה הוּא שְׁמוֹ: וַיִּקְרָא הָאָדָם שֵׁמוֹת
+    לְכָל הַבְּהֵמָה וּלְעוֹף הַשָּׁמַיִם וּלְכֹל חַיַּת הַשָּׂדֶה וּלְאָדָם לֹא מָצָא עֵזֶר כְּנֶגְדּוֹ: וַיַּפֵּל יְדֹוָד אֱלֹהִים
+    תַּרְדֵּמָה עַל הָאָדָם וַיִּישָׁן וַיִּקַּח אַחַת מִצַּלְעֹתָיו וַיִּסְגֹּר בָּשָׂר תַּחְתֶּנָּה: וַיִּבֶן יְדֹוָד אֱלֹהִים אֶת
+    הַצֵּלָע אֲשֶׁר לָקַח מִן הָאָדָם לְאִשָּׁה וַיְבִאֶהָ אֶל הָאָדָם: וַיֹּאמֶר הָאָדָם זֹאת הַפַּעַם עֶצֶם מֵעֲצָמַי
+    וּבָשָׂר מִבְּשָׂרִי לְזֹאת יִקָּרֵא אִשָּׁה כִּי מֵאִישׁ לֻקֳחָה זֹּאת: עַל כֵּן יַעֲזָב אִישׁ אֶת אָבִיו וְאֶת אִמּוֹ
+    וְדָבַק בְּאִשְׁתּוֹ וְהָיוּ לְבָשָׂר אֶחָד:
+    <span class="ref">בראשית פרק ב, פסוקים יח–כד</span></p>
+  </div>
+
+  <p data-a="01-5">
+    קריאה זהירה בפסוקים הללו, מתוך רצון להבין לעומק ולא רק לעבור עליהם כרקע מוכר, מעלה
+    מיד שורה ארוכה של תמיהות. נסדר אותן כאן כמפת דרכים לכל מה שיבוא בהמשך העיון — חלקן
+    ילוו אותנו פרק אחר פרק, וחלקן ימצאו את מענן כבר בפרקים הקרובים:
+  </p>
+
+  <ol>
+    <li data-a="01-6">אם "לא טוב היות האדם לבדו" — מדוע בכלל נברא האדם לבדו מלכתחילה? האם יש כאן הֲוָה־אֲמִינָא
+      ומסקנה, כלומר תהליך שבו הקב"ה עצמו מראה לאדם את החיסרון שבבדידותו?</li>
+    <li data-a="01-7">מדוע התורה מפסיקה באמצע הענין בשני פסוקים, ומספרת שהקב"ה הביא את כל בעלי החיים לפני
+      האדם כדי שיקרא להם שמות — ורק אחר כך חוזרת לענין בריאת האשה?</li>
+    <li data-a="01-8">מוזכרים בתורה שני טעמים שונים לכאורה לנישואין: (א) "לא טוב היות האדם לבדו"; (ב) לאחר
+      החלוקה — "עצם מעצמי ובשר מבשרי". ייתכן שהטעם השני שייך רק בזיווג הראשון, שבו האשה
+      אכן "עצם מעצמיו" ממש, ואילו הטעם הראשון שייך גם בזיווג שני. יש לעיין בכך.</li>
+    <li data-a="01-9">בשולחן ערוך אבן העזר הלכות פריה ורביה (סימן א) נכתב שכל אדם חייב לישא אשה כדי לפרות
+      ולרבות — ואילו בתורה כאן, במקום שבו מסופר על בריאת האשה, לא מוזכר כלל ענין פרו ורבו.
+      כיצד ייתכן הדבר?</li>
+    <li data-a="01-10">נמצא אפוא שיש לנו שלושה טעמים אפשריים לחיוב הנישואין. יש לעיין האם צריך את שלושתם
+      יחד כדי להצדיק את החיוב, או שדי בחלק מהם?</li>
+    <li data-a="01-11">מדאורייתא, אדם יכול לקיים את מצוות פרו ורבו גם על ידי פילגש, לדעת הרא"ש — ובכל זאת
+      אין זה רצון ה' השלם. יש להתבונן מה הקשר בין מצוות פרו ורבו לבין החיוב הנפרד לשאת אשה.</li>
+    <li data-a="01-12">מדוע בכלל "לא טוב" שהאדם לבדו? האם "לא טוב" משמעו "רע", או רק חיסרון בטוב? והאם
+      זהו ציווי גמור להינשא, או עצה טובה, או אף רק הצעה בעלמא?</li>
+    <li data-a="01-13">האם האשה רק מצילה את האדם מן החטא ("סור מרע"), או שהיא גם מביאה לו טוב ממשי
+      ("עשה טוב")?</li>
+    <li data-a="01-14">מה פירוש הפסוק "מָצָא אִשָּׁה מָצָא טוֹב" (משלי יח, כב) — איזה "טוב" בדיוק הוא מוצא?</li>
+    <li data-a="01-15">במסכת יבמות (סג ע"ב) מובא מספר בן סירא: אשה טובה — <strong>מתנה טובה</strong> לבעלה. ובאותו
+      לשון ממש נאמר גם על השבת: "מתנה טובה יש לי בבית גנזי". האם יש קשר עמוק בין האשה לשבת?</li>
+    <li data-a="01-16">חז"ל קבעו: "אין מוכרין ספר תורה אלא בשביל ללמוד תורה או לישא אשה", וכן "אין יוצאין
+      מארץ ישראל אלא ללמוד תורה או לישא אשה (ופרנסה)". מהו בדיוק הערך המושווה כאן לתורה —
+      האשה עצמה, או הילדים שיוולדו ממנה, או שניהם? והאם יש קשר מהותי בין לימוד תורה לנשיאת אשה?</li>
+    <li data-a="01-17">חז"ל אמרו: "כל מי ששרוי בלא אשה שרוי בלא טובה, בלא ברכה, בלא דירה, בלא תורה, בלא חומה,
+      בלא שלום". החיד"א בספר "מדבר קדמות" (מערכת נו"ן) כתב סימן לכל אלו: <em>שב"ח אשת"ו</em> —
+      שמחה, ברכה, חומה, אדם, שלום, תורה, וטובה. מהו הכוח הגלום באשה שמביא עמו שפע כה נפלא
+      ומגוון?</li>
+  </ol>
+
+  <div class="qa-box">
+    <p data-a="01-18" class="q">שאלה מנחה לפתיחה:</p>
+    <p data-a="01-19" class="a">
+      אם התשובה הפשוטה ביותר היא שהאדם זקוק לאשה כדי להוליד — מדוע לא כתבה זאת התורה
+      במפורש כאן, במקום המתאים ביותר לכך, אלא דווקא ניסחה זאת בלשון "לא טוב היות האדם
+      לבדו"? ניסוח זה, כפי שנראה, טומן בחובו הרבה יותר מסיבה טכנית להולדה — והוא יהיה
+      חוט השני שילווה אותנו בכל העיון שלפנינו.
+    </p>
+  </div>
+
+  <h3 data-a="01-20" id="ch1-2">שלושה טעמים גלויים לנישואין</h3>
+
+  <p data-a="01-21">
+    מתוך רשימת השאלות שהעלינו, ומתוך המקורות שנפגוש בהמשך, מתבררים למעשה שלושה טעמים
+    שונים לחיוב הנישואין, שכל אחד מהם עומד — לכאורה — בפני עצמו:
+  </p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <h4 data-a="01-22">טעם א: "לא טוב היות האדם לבדו"</h4>
+      <p data-a="01-23">
+        עצם ההיות לבד הוא מצב לא־רצוי, בלא תלות בשאלת ההולדה. טעם זה מנוסח באופן הרחב ביותר,
+        ולכאורה אמור לחול תמיד — הן על אדם הראשון קודם החטא, הן על מי שכבר הוליד, והן על
+        מי שאינו יכול עוד להוליד.
+      </p>
+    </div>
+    <div class="col-gold">
+      <h4 data-a="01-24">טעם ב: "עצם מעצמי ובשר מבשרי"</h4>
+      <p data-a="01-25">
+        טעם זה מבוסס על הקשר הביולוגי־מהותי המיוחד בין האדם הראשון לחוה, שנוצרה ממש מגופו.
+        השאלה המתבקשת: האם טעם זה שייך רק בזיווג הראשון והייחודי ההוא, או שיש בו יסוד
+        השייך בכל זיווג?
+      </p>
+    </div>
+  </div>
+
+  <p data-a="01-26">
+    לצדם עומד <span class="emphasis">טעם ג</span>: חיוב פרו ורבו — הצורך הפשוט והמעשי בהמשכיות הדורות, כפי שנפסק
+    בשולחן ערוך אבן העזר הלכות פריה ורביה. טעם זה, בניגוד לשני קודמיו, אינו נזכר כלל בפרשת
+    בריאת האשה, ומקורו במקום אחר לגמרי בתורה — "פרו ורבו ומלאו את הארץ".
+  </p>
+
+  <p data-a="01-27">
+    שאלת היחס בין שלושת הטעמים הללו — האם הם שלושה חיובים נפרדים, שלוש בחינות של אותו
+    חיוב עצמו, או שמא היחס בין הראשון (לא טוב לבדו) לשני האחרים הוא יחס של עיקר וטפל —
+    היא ציר מרכזי שילווה את הדיון בפרקים הבאים. בפרק הבא נפתח בבחינת סוגיית הגמרא
+    המרכזית בענין, שבה נחלקו הראשונים עצמם בשאלה זו: האם עומד לאדם, מעבר לחיוב פרו ורבו,
+    חיוב נפרד ועצמאי שלא לעמוד בלא אשה — וממה נובע חיוב זה.
+  </p>
+
+  <div class="chapter-card">
+    <div class="cc-num">ב</div>
+    <div class="cc-title">סוגיית הגמרא: שיטת הרמב"ם מול החולקים</div>
+    <div class="cc-sub">האם החיוב שלא לעמוד בלא אשה הוא מדאורייתא או מדרבנן — ומה השורש שביסודו?</div>
+  </div>
+  <div class="section-divider"><span class="line"></span><span class="icon">📖</span><span class="line"></span></div>
+
+  <span class="chapter-label">פרק 2</span>
+  <h2 data-a="01-28" id="ch2">סוגיית הגמרא: שיטת הרמב"ם מול החולקים</h2>
+
+  <div class="in-this-chapter">
+    <span class="icl-title">📖 בפרק זה:</span>
+    <ul>
+      <li>סוגיית הגמרא במסכת יבמות המחדשת חיוב נפרד שלא לעמוד בלא אשה</li>
+      <li>שיטת הרמב"ם והריטב"א — החיוב מדרבנן מחשש הרהור</li>
+      <li>שיטת החולקים — חיוב מהתורה ממש</li>
+      <li>סיכום ביניים לקראת הפרק הבא</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-29">
+      בטרם ניכנס לעובי הסוגיה, יש להעמיד את השאלה המרכזית שתלווה את הפרק: המשנה במסכת
+      יבמות עוסקת בחיוב פרו ורבו — הבאת זכר ונקבה. הגמרא, לעומת זאת, מחדשת דבר נוסף
+      ומפתיע: שגם מי שכבר קיים פרו ורבו במלואו, ויש לו כמה וכמה ילדים, עדיין אסור לו
+      לעמוד בלא אשה. מהו בדיוק שורשו של חיוב נוסף זה — האם הוא באמת "נוסף" וחדש, או
+      שהוא בעצם אותו חיוב ראשוני של "לא טוב היות האדם לבדו" שפגשנו בפרק הקודם, החוזר
+      ומתגלה כאן בלבוש הלכתי?
+    </p>
+  </div>
+
+  <h3 data-a="01-30" id="ch2-1">סוגיית הגמרא במסכת יבמות</h3>
+
+  <p data-a="01-31">
+    מסכת יבמות (דף סא עמוד ב) פותחת במשנה: "לא יבטל אדם מפריה ורביה אלא אם כן יש לו
+    בנים. בית שמאי אומרים: שני זכרים, ובית הלל אומרים: זכר ונקבה, שנאמר: זכר ונקבה
+    בראם"<sup class="fn" id="fnref1"><a href="#fn1">1</a></sup>.
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-32">
+      הא יש לו בנים — מפריה ורביה בטיל, מאשה לא בטיל (מסביר רש"י: מדלא כתיב "לא יבטל
+      אדם מאשה", שהיה כולל גם ביטול מאשה וגם מבנים, וקתני דבר מצומצם יותר — "לא יבטל
+      מפריה ורביה" — משמע שמאשה אסור לעולם להיבטל). מסייעא ליה לרב נחמן אמר שמואל,
+      דאמר: אף על פי שיש לו לאדם כמה בנים — אסור לעמוד בלא אשה, שנאמר: לא טוב היות
+      האדם לבדו... נפקא מינה? למכור ספר תורה בשביל בנים.
+      <span class="source-tag">יבמות סא ע"ב</span>
+    </p>
+  </div>
+
+  <div class="qa-box">
+    <p data-a="01-33" class="q">קושיית המפרשים:</p>
+    <p data-a="01-34" class="a">
+      מה פירוש "נפקא מינה" כאן? הרי רב נחמן חידש חידוש גדול — שאדם צריך לישא אשה גם
+      לאחר שכבר יש לו ילדים! מדוע מציגה הגמרא את החידוש הגדול הזה כטפל, וכ"נפקא מינה"
+      בלבד למכירת ספר תורה?
+    </p>
+  </div>
+
+  <p data-a="01-35">שני תירוצים מרכזיים הובאו ליישוב קושיה זו:</p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <h4 data-a="01-36">תירוץ א (תוס' בשם ר"י, רא"ש בשיטת הרי"ף)</h4>
+      <p data-a="01-37">
+        הגמרא כאן סוברת כדעת רבי יהושע להלן (סב ע"ב): "היו לו בנים בילדותו — יהיו לו
+        בנים בזקנותו", שנאמר "בבקר זרע את זרעך ולערב אל תנח ידך". נמצא שיש חיוב מדרבנן
+        להביא ילדים גם מעבר לשניים, ואילו המשנה שאמרה "זכר ונקבה" עוסקת רק בחיוב
+        מדאורייתא. אם כן, מה בדיוק חידש רב נחמן — הרי היה אפשר לחייבו ממילא מדין
+        "ולערב אל תנח ידך"? מתרצים: החידוש הוא <em>למכור ספר תורה</em>. מסביר רש"י: אם
+        יש לו כבר בנים, לא ימכור ספר תורה כדי לישא אשה בת בנים, אלא ישא עקרה או זקנה —
+        כלומר, במקום שאין באפשרותו לישא אשה הראויה להביא בנים אלא אם כן ימכור ספר
+        תורה, אין למכור בשביל "ולערב", שכן אין מוכרים ספר תורה בשביל מצוות זו. אלא
+        ישא, מכוח חידושו של רב נחמן, אשה שאינה ראויה להוליד.
+      </p>
+    </div>
+    <div class="col-gold">
+      <h4 data-a="01-38">תירוץ ב (תוס' בתירוץ הראשון, דעת הרא"ש למסקנה)</h4>
+      <p data-a="01-39">
+        הגמרא כאן חולקת על שיטת רבי יהושע, וסוברת שאין חיוב מדרבנן מעבר לשני ילדים.
+        מה שאמרו "נפקא מינה" אין הכוונה לדווקא, אלא ל"עוד נפקא מינה" בין רבות — ותירוץ
+        זה נשאר, לדעת בעלי התוספות עצמם, מעט דחוק.
+      </p>
+    </div>
+  </div>
+
+  <p data-a="01-40">
+    <span class="emphasis">להלכה</span>: נפסק כדעת רבי יהושע, כמבואר בגמרא (סב ע"ב).
+    בשאלה אם מוכרים ספר תורה בשביל מצוות "ולערב" נחלקו הראשונים, ופסק השולחן ערוך
+    בסתם שאין מוכרין (אבן העזר סימן א סעיף ח): "אף על פי שקיים פריה ורביה, אסור לו
+    לעמוד בלא אשה, וצריך שישא אשה בת בנים אם יש ספק בידו, אפילו יש לו כמה בנים; ואם
+    אין ספק בידו לישא אשה בת בנים אלא אם כן ימכור ספר תורה — אם אין לו בנים ימכור כדי
+    שישא אשה בת בנים; אבל אם יש לו בנים, לא ימכור אלא ישא אשה שאינה בת בנים, ולא
+    יעמוד בלא אשה". ויש אומרים שאפילו אם יש לו בנים ימכור ספר תורה כדי שישא אשה בת
+    בנים.
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-41"><strong>סיכום הסוגיה:</strong></p>
+    <p data-a="01-42">
+      א. מדאורייתא אדם חייב להביא בן ובת.<br>
+      ב. מדרבנן צריך אדם להביא עוד ילדים, ואין לדבר שיעור.<br>
+      ג. פסק השולחן ערוך בסתם שאין מוכרים ספר תורה בשביל מצוות "ולערב".<br>
+      ד. אסור לאדם להיות ללא אשה — גם לאחר שכבר היה נשוי ויש לו בנים.
+    </p>
+  </div>
+
+  <p data-a="01-43">
+    מן הסוגיה עולות שלוש שאלות שילוו אותנו בהמשך הפרק: (א) מדוע בעצם "לא טוב" שהאדם
+    לבדו — וכפי שראינו, יש לכך נפקא מינה למקרים רבים? (ב) האם החיוב להיות עם אשה הוא
+    מדאורייתא או מדרבנן, ופסוק "לא טוב" הוא אסמכתא בעלמא, או שמא הוא בכלל רק עצה
+    טובה? (ג) האם מוכרים ספר תורה בשביל חיוב זה, כשם שמוכרים בשביל מצוות פרו ורבו?
+  </p>
+
+  <h3 data-a="01-44" id="ch2-2">שיטת הרמב"ם והריטב"א — משום חשש הרהור</h3>
+
+  <div class="quote-box">
+    <p data-a="01-45">
+      אף על פי שקיים אדם מצות פריה ורביה, הרי הוא מצווה מדברי סופרים שלא יבטל מלפרות
+      ולרבות כל זמן שיש בו כח, שכל המוסיף נפש אחת בישראל כאילו בנה עולם. <strong>וכן מצות
+      חכמים</strong> היא שלא ישב אדם בלא אשה, <strong>שלא יבא לידי הרהור</strong>.
+      <span class="source-tag">רמב"ם, הלכות אישות פרק טו הלכה טז</span>
+    </p>
+  </div>
+
+  <p data-a="01-46">
+    כלשון הזה כתבו גם הריטב"א והנימוקי יוסף: אסור לעמוד בלא אשה משום חשש הרהור.
+    מסביר הבית שמואל (על אבן העזר א, יג): לפי הרמב"ם, הפסוק "לא טוב היות האדם לבדו"
+    הוא אסמכתא בעלמא<sup class="fn" id="fnref2"><a href="#fn2">2</a></sup>, ואיסור זה הוא רק מדרבנן, ומקורו בחשש הרהור עבירה.
+  </p>
+
+  <p data-a="01-47">
+    עוד כתב הריטב"א: "ומיהו אינו מוכר ספר תורה בשביל זה". מסביר הבית שמואל: אין מוכרים
+    ספר תורה בשביל להינצל מעבירה — רק בשביל לקיים מצווה בפועל. כלומר, לפי שיטה זו יש
+    לחלק חילוק עקרוני בין מכירת ספר תורה למען מצוות פרו ורבו (מצוות עשה ממשית) לבין
+    מכירתו למען הצלה מהרהור (מניעת עבירה גרידא).
+  </p>
+
+  <p data-a="01-48">
+    ולכולי עלמא — אף לשיטת הרמב"ם — דין רב נחמן שלא יעמוד בלא אשה אינו בבחינת רשות
+    אלא חיוב גמור, וכפי שמביא הרמ"א (אבן העזר סימן א סעיף ח, בהגהה): "אם יש לו בנים
+    הרבה, ומתירא שאם ישא אשה בת בנים יבואו קטטות ומריבות בין הבנים ובין אשתו — מותר
+    לישא אשה שאינה בת בנים" (כלומר, מחמת חשש מריבה מותר לוותר על מצוות "ולערב"), "אבל
+    אסור לישב בלא אשה משום חשש זו" (תרומת הדשן סימן רסג). רואים אפוא בבירור שזהו חיוב
+    גמור, וכלשון חכמים: "אסור לאדם שיהא שרוי בלא אשה".
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-49"><strong>סיכום שיטת הרמב"ם והריטב"א (דעה א'):</strong></p>
+    <p data-a="01-50">
+      א. חיוב גמור — אך מדרבנן.<br>
+      ב. הפסוק "לא טוב" הוא אסמכתא בעלמא.<br>
+      ג. הטעם — חשש הרהור.<br>
+      ד. אין מוכרים ספר תורה בשביל חיוב זה.
+    </p>
+  </div>
+
+  <h3 data-a="01-51" id="ch2-3">החולקים על הרמב"ם — חיוב מן התורה</h3>
+
+  <p data-a="01-52">
+    לא כל הראשונים קיבלו את הנחת היסוד של הרמב"ם. שו"ת הרד"ך כתב: "תנן בפרק הבא על
+    יבמתו... אסור לעמוד בלא אשה... ולדעת הרי"ף ז"ל נראה קצת דאסור תורה קאמר, ודרשה
+    גמורה היא ולא אסמכתא היא". הוכחתו: הרי"ף, כאשר הביא בהלכותיו את דברי רבי יהושע בן
+    לוי (היו לו בנים בילדותו יהיו לו בנים בזקנותו), כתב במפורש "והא מלתא דרבנן היא —
+    אבל מדאורייתא כיון שיש לו זכר ונקבה קיים מצות פריה ורביה". לעומת זאת, כאשר הביא
+    את דברי רב נחמן (שלא לעמוד בלא אשה), הביאם כלשונם בגמרא, בלא לציין "מדרבנן קאמר".
+    מכאן משמע קצת שהרי"ף סבר שזוהי דרשה גמורה מן התורה.
+  </p>
+
+  <p data-a="01-53">
+    הרמב"ן במלחמות (יבמות כ ע"א) מסתפק אם איסור זה הוא מדאורייתא או מדרבנן. וכן כתב
+    בקרן אורה שהוא מדאורייתא<sup class="fn" id="fnref3"><a href="#fn3">3</a></sup>.
+  </p>
+
+  <p data-a="01-54">
+    ומעבר לשאלת מקור החיוב, חולק הרמב"ן במלחמות גם על הריטב"א בשאלת מכירת ספר תורה,
+    וסובר שמוכרים ספר תורה בשביל המצווה שלא לעמוד בלא אשה. כך משמע גם מתוספות בשם
+    ר"י, וכן דייק החלקת מחוקק בדעת השולחן ערוך<sup class="fn" id="fnref4"><a href="#fn4">4</a></sup>.
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-55"><strong>סיכום שיטת החולקים (דעה ב'):</strong></p>
+    <p data-a="01-56">
+      א. חיוב מן התורה ממש.<br>
+      ב. הפסוק אינו אסמכתא בעלמא, אלא מלמד את רצון התורה במפורש.<br>
+      ג. הטעם — כפי שיתבאר בפרקים הבאים.<br>
+      ד. מוכרים ספר תורה בשביל חיוב זה, ממש כשם שמוכרים בשביל פרו ורבו.
+    </p>
+  </div>
+
+  <p data-a="01-57">
+    יש לדון: במה בדיוק נחלקו הרי"ף והרמב"ם? נראה לומר שהם ביארו באור שונה לגמרי
+    באיסור לעמוד ללא אשה, כפי שיתברר בעז"ה בהמשך העיון. וכפי שנראה, מצאנו כמה פוסקים
+    שהסבירו את האיסור לעמוד ללא אשה, מכוח הפסוק "לא טוב היות האדם לבדו", בצורה שונה
+    לחלוטין מדרכו של הרמב"ם.
+  </p>
+
+  <h3 data-a="01-58" id="ch2-4">סיכום ביניים: ארבע נקודות מחלוקת</h3>
+
+  <p data-a="01-59">
+    לפני שנעבור לפרק הבא, נעמיד את התמונה הכוללת העולה מכל הסוגיה עד כה:
+  </p>
+
+  <ol>
+    <li data-a="01-60">שלוש מצוות עומדות לפנינו: (1) פרו ורבו; (2) "ולערב אל תנח ידך"; (3) להיות עם אשה.</li>
+    <li data-a="01-61">מדאורייתא אדם חייב בפרו ורבו. מדרבנן אדם חייב ב"ולערב". ובשאלה אם להיות עם אשה
+      הוא חיוב מדאורייתא או מדרבנן — נחלקו הראשונים, אך לכולי עלמא אין זה רק עצה טובה.</li>
+    <li data-a="01-62">מוכרים ספר תורה בשביל פרו ורבו. נחלקו הראשונים בשביל מצוות "ולערב", וסתם השולחן
+      ערוך שאין מוכרים. ונחלקו הראשונים והאחרונים אם מוכרים בשביל להיות עם אשה, והעיקר
+      להלכה שמוכרים.</li>
+    <li data-a="01-63">דעת הרמב"ם והריטב"א שהחיוב להיות עם אשה הוא משום חשש הרהור, והפסוק אסמכתא בעלמא.</li>
+    <li data-a="01-64">נראה שהראשונים הסוברים שמוכרים ספר תורה בשביל אשה — למרות שבשביל מצוות "ולערב"
+      אין מוכרים — וכן אלו מהם הסוברים שיש כאן מצווה מן התורה עצמה, למדים בחיוב זה טעם
+      אחר לגמרי מטעמו של הרמב"ם.</li>
+    <li data-a="01-65">בפסוק כתוב "מָצָא אִשָּׁה מָצָא טוֹב", ונאמר גם ש"אשה טובה מתנה טובה לבעלה" — משמע
+      שיש באשה דבר טוב ממשי. מהו אותו טוב?</li>
+  </ol>
+
+  <p data-a="01-66">
+    השאלה האחרונה היא בדיוק הצוהר שדרכו ניכנס לפרק הבא: אם אמנם יש בנישואין תוכן חיובי
+    משל עצמו, ולא רק מניעת חטא, מהו אותו תוכן — ומדוע דווקא הוא נקרא בתורה "טוב"?
+  </p>
+
+  <div class="chapter-card">
+    <div class="cc-num">ג</div>
+    <div class="cc-title">פירוש שני: האחדות היא הטוב</div>
+    <div class="cc-sub">מסע אל שורש עמוק יותר של "לא טוב" — לא מניעת חטא, אלא נוכחות של טוב ממשי</div>
+  </div>
+  <div class="section-divider"><span class="line"></span><span class="icon">✡</span><span class="line"></span></div>
+
+  <span class="chapter-label">פרק 3</span>
+  <h2 data-a="01-67" id="ch3">פירוש שני: האחדות היא הטוב</h2>
+
+  <div class="in-this-chapter">
+    <span class="icl-title">📖 בפרק זה:</span>
+    <ul>
+      <li>"שרוי בלא טובה" — טעם נוסף בגמרא ובתורה תמימה</li>
+      <li>לא טוב לבדו — ביאור הרמב"ן, ומדוע לא מדובר בחשש הרהור</li>
+      <li>מהר"ל והזוהר — האחדות עצמה היא הטוב</li>
+      <li>זכה — עֵזֶר, לא זכה — כְּנֶגְדּוֹ: משל הבגד התפור במידה</li>
+      <li>"שים שלום... טובה וברכה" — מדוע השלום קודם</li>
+      <li>ללא הבנה — מהי אהבה</li>
+      <li>מחיצתו של הקב"ה</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-68">
+      בפרק הקודם ראינו שלדעת הרמב"ם והריטב"א, "לא טוב היות האדם לבדו" משמעו בפועל חשש
+      מפני הרהור עבירה. אך צדדנו שראשונים אחרים — הרי"ף, הרמב"ן, בעל קרן אורה ועוד —
+      הבינו כי מקור החיוב עמוק ומהותי הרבה יותר: לא מניעת רע, אלא נוכחות של טוב ממשי
+      שהאדם זוכה בו רק כשאינו לבדו. בפרק זה נעקוב אחר קו זה של פרשנות, ונראה כיצד הוא
+      נשען על מקורות עצמאיים משלו — בגמרא, בזוהר, ובדברי גדולי החסידות והמוסר.
+    </p>
+  </div>
+
+  <h3 data-a="01-69" id="ch3-1">"שרוי בלא טובה" — טעם נוסף בגמרא ובתורה תמימה</h3>
+
+  <p data-a="01-70">
+    הגמרא עצמה מלמדת אותנו שהטעם שאסור לעמוד ללא אשה קשור ל"לא טוב היות האדם לבדו" —
+    ומצאנו גמרא נוספת המבארת ביטוי זה במפורש:
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-71">
+      אמר רבי תנחום אמר רבי חנילאי: כל אדם שאין לו אשה — <strong>שרוי בלא טובה</strong>, דכתיב:
+      "לא טוב היות האדם לבדו".
+      <span class="source-tag">יבמות סב ע"ב</span>
+    </p>
+  </div>
+
+  <div class="verse-box">
+    <p data-a="01-72">מָצָא אִשָּׁה מָצָא טוֹב וַיָּפֶק רָצוֹן מֵיְקֹוָק:
+    <span class="ref">משלי פרק יח, פסוק כב</span></p>
+  </div>
+
+  <p data-a="01-73">
+    וכן אמרו חז"ל על בועז — "וייטב לבו" (רות ג, ז) — שהיה מבקש אשה, שנאמר "מצא אשה
+    מצא טוב"<sup class="fn" id="fnref5"><a href="#fn5">5</a></sup>. באותו היום שבאה רות המואביה לארץ ישראל, מתה אשתו של בועז, ובועז נשא
+    את רות — ואף על פי שהיו לו עדיין בנים רבים, השמיענו הדבר (יבמות סב ע"ב) שאם נשא
+    אדם אשה בבחרותו, ישא אשה בזקנותו, כשם שעשה אבצן (=בועז, לפירוש הרשב"ם).
+  </p>
+
+  <p data-a="01-74">
+    למדנו מכל זה: ללא אשה אין לאדם טוב בעולם, ולכן חייב אדם להיות עם אשה — ואין הטעם
+    רק משום הרהור<sup class="fn" id="fnref6"><a href="#fn6">6</a></sup>. בעל התורה תמימה (בראשית פרק ב, הערה מ) הוסיף זווית חשובה: לכאורה בלשון
+    הפסוק "אעשה לו עזר כנגדו" אין נרמז כלל איסור, אלא עצה והודעה בעלמא. אלא שהעצה הזו,
+    מאחר שיצאה מאת הקדוש ברוך הוא, נעשתה — לאחר מכן — למצווה<sup class="fn" id="fnref7"><a href="#fn7">7</a></sup>. כלומר: יש הבדל בין
+    עצם התוכן של הדברים (עצה טובה לחיים טובים) לבין המעמד ההלכתי שקיבל לאחר מכן
+    (מצווה מחייבת). שני הדברים אמת בעת ובעונה אחת.
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-75">
+      <strong>סיכום:</strong> האשה גורמת לאדם שיהיה לו טוב, ולכן חייב אדם לישא אשה — כדי לתת
+      אפשרות לבורא עולם להשפיע לו את כל הטוב שהוא רוצה להיטיב לו.
+    </p>
+  </div>
+
+  <p data-a="01-76">
+    ומצאנו כמה וכמה מצוות שכל מטרתן להעניק לאדם טוב — ודוגמה מאלפת לכך היא ברכת המזון,
+    כפי שכתב בעל ספר החינוך (מצוה תל):
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-77">
+      ידוע הדבר ומפורסם כי השם ברוך הוא פועל כל הנמצא, וברא האדם והשליטו על הארץ ועל
+      כל אשר בה, וממדותיו ברוך הוא שהוא רב חסד והוא חפץ בטובת בריותיו, ורוצה להיותן
+      ראויין וזכאין לקבל טובה מאתו... לפי שאין ספק בזה לכל בן דעת, כי לא יקרא שלם
+      בטובה רק מי שהוא מטיב לאחרים זולתו. ואחר הסכמה זו שידענו בחיוב מרוב שלמות טובו
+      <strong>שחפצו להריק עלינו מברכתו</strong>, נאמר שענין הברכה שאנו אומרים לפניו איננו רק
+      הזכרה לעורר נפשנו בדברי פינו... ועם הודאת הכל בזה תנוח ברכתו בעולם, <strong>ויושלם חפצו
+      שהוא חפץ להיטיב</strong> כמו שאמרנו, ותשלום החפץ תכלית כל המבוקש.
+      <span class="source-tag">ספר החינוך, מצוה תל</span>
+    </p>
+  </div>
+
+  <p data-a="01-78">
+    אותו עקרון עצמו — רצונו של הבורא להיטיב לברואיו — עומד, כפי שנראה, גם ביסוד חיוב
+    הנישואין: לא מצוה שנועדה למנוע רע, אלא מצוה שכל תכליתה לפתוח צינור שדרכו זורם
+    לאדם טוב שלא היה יכול לקבלו בהיותו לבדו.
+  </p>
+
+  <h3 data-a="01-79" id="ch3-2">לא טוב לבדו — ביאור הרמב"ן</h3>
+
+  <p data-a="01-80">
+    כדי להבין לעומק מדוע "לא טוב" שהאדם לבדו, יש להבין תחילה היטב את גוף הפסוק. הקשה
+    בעל התורה תמימה קושיה יסודית:
+  </p>
+
+  <div class="qa-box">
+    <p data-a="01-81" class="q">קושיית התורה תמימה:</p>
+    <p data-a="01-82" class="a">
+      בכלל צריך ביאור בלשון "לא טוב... אעשה לו עזר", שמשמע מכך שכל עיקר בריאת האשה
+      הוא רק מפני שלא טוב לו <em>לבדו</em>. אך הלוא קיום העולם תלוי בחילופי הדורות, ובני
+      אדם כעשבי השדה — "הללו נוצצין והללו נובלין" (עירובין נד ע"א). אם כן, בהכרח נבראו
+      זכר ונקבה לתכלית פרו ורבו — ומהי אם כן ה"לבדו" המיוחד שמדגישה כאן התורה?
+    </p>
+  </div>
+
+  <p data-a="01-83">
+    מתרץ הרמב"ן על התורה (בראשית פרק ב, פסוק יח): "איננו נראה שנברא האדם להיות יחיד
+    בעולם ולא יוליד, שכל הנבראים זכר ונקבה מכל בשר נבראו להקים זרע, וגם העשב והעץ
+    זרעם בהם. אבל יתכן לומר, כי היה כדברי האומר (ברכות סא ע"א) "דו פרצופים נבראו",
+    ונעשו שיהיה בהם טבע מביא באיברי ההולדה מן הזכר לנקבה כח מוליד, והיה הפרצוף השני
+    עזר לראשון בתולדתו. וראה הקדוש ברוך הוא כי טוב שיהיה העזר עומד לנגדו, והוא יראנו,
+    ויפרד ממנו ויתחבר אליו כפי רצונו. וזהו שאמר: 'אעשה לו עזר <strong>כנגדו</strong>'".
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-84">
+      וזהו ביאור הפסוק: "לא טוב" לאדם כאשר הוא ללא חיי אחדות<sup class="fn" id="fnref8"><a href="#fn8">8</a></sup>. כלומר, הבעיה בהיות "לבדו"
+      אינה שאלה טכנית של הולדה — הרי גם בהיותו "דו פרצופים" יש בו כבר את שני מיני
+      ההולדה — אלא היעדר יכולת ליצור אחדות פנים־בפנים, קשר מלא ומשמעותי, עם עֵזֶר הניצב
+      <em>מולו</em>.
+    </p>
+  </div>
+
+  <p data-a="01-85">
+    (ואל יקשה בעיניך הלשון "לבדו" — שכן ייתכן מאוד שמה שאמרו "דו פרצופים נבראו" הכוונה
+    שנברא באדם כוח זכר ונקבה, אך היה זה בכל זאת אדם אחד, כמו הנפש המחוברת אל הגוף.)
+  </p>
+
+  <p data-a="01-86">
+    בביאור זה מתורצת גם קושיית ה"עיון יעקב": הלוא אדם הראשון, שנאמר עליו "לא טוב", לא
+    היה לו עדיין בנים כלל — ואיך אפוא לומדים ממנו למי שכבר יש לו בנים? לפי דברי הרמב"ן
+    מובן הדבר לגמרי: אדם הראשון היה מסוגל להוליד גם בהיותו "דו פרצופים", ובכל זאת
+    נאמר עליו "לא טוב" — מחמת שלא היתה לו אחדות עם אשה. נמצא שהתורה כתבה במפורש שגם
+    למי שכבר יש ילדים, ללא אשה — הוא לא טוב, ולכן יש כאן ככל הנראה מצווה מן התורה
+    לישא אשה.
+  </p>
+
+  <p data-a="01-87">
+    עוד יש להעיר: לא ייתכן לומר ש"לא טוב לבדו" נאמר מחמת חשש הרהור, שכן פסוק זה נאמר
+    עוד בטרם חטא אדם הראשון — כשלא היה עדיין כלל יצר העריות, ככתוב "ויהיו שניהם
+    ערומים ולא יתבוששו" (מחמת שהכל היה אז בקדושה). ועל כרחך, אין הטעם כאן מחמת הרהור.
+  </p>
+
+  <p data-a="01-88">
+    המהר"ל, בגור אריה, הסביר טעם נוסף מדוע לא ייתכן לומר ש"לא טוב" משמעו הרהור או
+    הולדה בלבד:
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-89">
+      ונראה לי לפרש שדברי רז"ל (פרקי דרבי אליעזר פרק יב) הם דברים נפלאים, והם דקדקו
+      במלת "לא טוב היות האדם לבדו" — על מה נאמר "לא טוב"? שאין פירושו שאינו טוב כדי
+      שיוכל לקיים העולם שיפרו וירבו, שהפריה ורביה אינו דבר עצמי לאדם במה שהוא אדם, אבל
+      הוא דבר מקרה לאדם. <strong>ו"לא טוב" פירושו שהמציאות בעצמו אינו טוב</strong>, לא שיהיה זה
+      בשביל שום מקרה — ולפיכך הוקשה להם מלת "לא טוב".
+      <span class="source-tag">מהר"ל, גור אריה</span>
+    </p>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-90">
+      <strong>סיכום:</strong> אדם הראשון היה יכול להביא ילדים גם לפני שנבראה חוה. התורה מעידה
+      שאדם ללא אשה הוא "לא טוב" — מחמת שהטוב קיים רק היכן שיש אחדות, כפי שיתבאר להלן.
+      אין הטעם משום הרהור, שכן הדברים נאמרו לפני החטא.
+    </p>
+  </div>
+
+  <h3 data-a="01-91" id="ch3-3">מהר"ל והזוהר — האחדות עצמה היא הטוב</h3>
+
+  <p data-a="01-92">
+    כיוון זה — שהאחדות עצמה היא התוכן החיובי של ה"טוב" — מתברר עוד יותר בדברי המהר"ל
+    בחידושי אגדות:
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-93">
+      ואמר "בלא טובה", כי המחלוקת לא נאמרו בה "כי טוב" — אבל האחדות והחיבור הוא הטוב
+      בעצמו. ודבר זה יש להבין ממה שבחלוק שהיה ביום השני, כאשר נברא העולם, לא נאמר בו
+      "כי טוב" — ממילא, "הזכר ונקבה" דכתיב בהם "והיו לבשר אחד" הוא הטוב.
+      <span class="source-tag">חידושי אגדות, מסכת יבמות, חלק ראשון עמוד קלד</span>
+    </p>
+  </div>
+
+  <p data-a="01-94">
+    כלומר: ביום השני של מעשה בראשית, שבו נחלקו המים העליונים מן התחתונים, לא נאמר
+    "כי טוב" — משום שיש בו יסוד של חלוקה ופירוד. לעומת זאת, בבריאת האדם, שהיא בריאה
+    המכוונת לאחדות ("והיו לבשר אחד"), טמון הטוב עצמו.
+  </p>
+
+  <p data-a="01-95">מקבילה נפלאה לרעיון זה מצינו בזוהר הקדוש:</p>
+
+  <div class="quote-box">
+    <p data-a="01-96">
+      וְאִי תֵּימָא אֲמַאי לָא כְּתִיב "כִּי טוֹב" בַּשֵּׁנִי? בְּגִין דִּזְמִינִין לְאִתְפָּרְשָׁא (=משום שעתידים
+      להיפרד). וְרָזָא דְּמִלָּה: "לֹא טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ" — בְּזִמְנָא דְּאִיהוּ לְבַדּוֹ, "לֹא טוֹב"
+      כְּתִיב. וְעַל דָּא לָא כְּתִיב "כִּי טוֹב" בַּשֵּׁנִי.
+      <span class="source-tag">זוהר חלק ג, דף ה ע"א</span>
+    </p>
+  </div>
+
+  <div class="quote-box">
+    <p data-a="01-97">
+      פָּתַח וְאָמַר (רשב"י), (תהלים קלג) "שִׁיר הַמַּעֲלוֹת הִנֵּה <strong>מַה טוֹב</strong> וּמַה נָעִים שֶׁבֶת אַחִים
+      גַּם יָחַד". מַאי "שֶׁבֶת אַחִים גַּם יָחַד"? כְּמָה דְאַתְּ אָמֵר "וּפְנֵיהֶם אִישׁ אֶל אָחִיו" — בְּשַׁעֲתָא
+      דַּהֲווֹ חַד בְּחַד (יחוד הקב"ה וכנסת ישראל) מַשְׁגִּיחִין אַנְפִּין בְּאַנְפִּין (הכרובים, פניהם איש אל
+      אחיו) — אָז כְּתִיב "מַה טוֹב וּמַה נָעִים". וְכַד מְהַדֵּר דְּכוּרָא אַנְפּוֹי מִן נוּקְבָּא (הקב"ה מכנסת
+      ישראל) — וַוי לְעָלְמָא.
+      <span class="source-tag">זוהר חלק ג, דף נט ע"א</span>
+    </p>
+  </div>
+
+  <p data-a="01-98">
+    ביאור הדברים: כאשר אין איחוד למטה, אין איחוד למעלה — בין הקדוש ברוך הוא לכנסת
+    ישראל — וכל העולם כולו חסר שפע עצום. אבל כאשר הם פנים בפנים, כל העולם כולו מתמלא
+    שפע, וכפי שממשיך הזוהר:
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-99">
+      אֲבָל תָּא חֲזֵי, בְּשַׁעֲתָא דְּבָרָא קוּדְשָׁא בְּרִיךְ הוּא לְאָדָם הָרִאשׁוֹן, דְּכַר וְנוּקְבָּא אִתְבְּרִיאוּ,
+      וַהֲווּ תַּרְוַויְיהוּ דָּא עִם דָּא קִשׁוּרָא, נוּקְבָּא לַאֲחוֹרָא וּדְכוּרָא לְקָמָא, עַד דְּנָסַר לוֹן קוּדְשָׁא
+      בְּרִיךְ הוּא וְאַתְקִין לָהּ, וְאָעִיל לָהּ לְקַמֵּיהּ דְּאָדָם לְאִסְתַּכְּלָא אַנְפִּין בְּאַנְפִּין (למה ניסר הקב"ה
+      את האדם? כדי שיסתכלו פנים כנגד פנים, דהיינו שירבו אהבה ואחווה ביניהם), וְכֵיוָן דְּאִסְתַּכְּלוּ
+      אַנְפִּין בְּאַנְפִּין — כְּדֵין אִתְסָגֵּי רְחִימוּתָא בְּעָלְמָא (כיון שהם מסתכלים אחד אל השני באהבה,
+      גורמים אהבה בעולם — בין הקב"ה לכנסת ישראל, כי הכל תלוי באדם התחתון).
+      <span class="source-tag">זוהר חלק ב, דף רלא ע"א</span>
+    </p>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-100">
+      נמצא ביאור נפלא בדברים: אין הפירוש שהמחלוקת יוצרת חיסרון בטוב, אלא ש<strong>האחדות היא
+      זו שיוצרת את הטוב</strong>. אבל היכן שאין אחדות — אף שאין שם פירוד גלוי — עדיין אין
+      טובה, שכן טובה נוצרת מן האחדות, מן השלום. ולכן מצווה על האדם לשאת אשה, כדי ליצור
+      אחדות בעולם — למטה, וכתוצאה מכך, גם למעלה.
+    </p>
+  </div>
+
+  <h3 data-a="01-101" id="ch3-4">זכה — עֵזֶר, לא זכה — כְּנֶגְדּוֹ</h3>
+
+  <p data-a="01-102">
+    הרב פידלנדר זצ"ל כתב שלפי היסוד הנ"ל מתורצת קושיה ידועה בגמרא: מהו לשון הכתוב
+    "עזר <em>כנגדו</em>"? ודרשו חז"ל: "זכה — עזר; לא זכה — מנגדתו" (חלוקה עליו וסותרת
+    דבריו). אך לפי דברי הרמב"ן שהובאו לעיל, הדבר מובן כבר לפי פשוטו: שכן גם לפני
+    הנסירה היתה האשה עזר לאדם להביא ולדות, וכל מה שהשתנה בנסירה הוא רק שהעזר אינו
+    עוד "איתו ובתוכו", אלא "כנגדו" — מולו. וכן תרגם אונקלוס: "לְקָבְלֵיהּ" (=לעומתו).
+  </p>
+
+  <div class="qa-box">
+    <p data-a="01-103" class="q">קושיה:</p>
+    <p data-a="01-104" class="a">
+      מה ראתה הגמרא לדרוש "מנגדתו"? הרי דרש זה אינו משתמע כלל מן הפשט — אדרבה, הוא
+      הפוך ממנו. ועוד: בדרך כלל לא ימצא שאותו נברא ישמש לתכליות הפוכות — שמן שמבעיר
+      את המדורה אי אפשר להשתמש בו כדי לכבותה; מה שמקרר אינו מחמם, ומה שמחמם אינו
+      מקרר. ואילו כאן, אותה אשה עצמה משמשת גם לעֵזֶר וגם ל"כנגדו" — הרי אלו שני הפכים!
+    </p>
+  </div>
+
+  <p data-a="01-105">
+    בספר "תפוחי זהב" על מסכת יבמות (מהרב גולדווסר שליט"א) מובא ביאור נפלא ליישוב זה,
+    באמצעות משל:
+  </p>
+
+  <div class="story-box">
+    <p data-a="01-106">
+      משל לאדם שתפרו לו בגד <strong>בדיוק כפי מדתו</strong>. כל עוד גופו כשיעורו, הבגד יושב עליו
+      נאה ומדויק. אך כאשר האדם משמין, הבגד — שוב אינו מתאים לו. אילו היה הבגד רחב
+      וכללי, לא תפור בדיוק לפי הגוף, היה אפשר ללובשו גם לאחר שהשמין. אך דווקא משום
+      שהבגד תפור עליו בדקדקנות, לפי קומתו המדויקת — היא הנותנת שכאשר השתנו ממדיו,
+      הבגד "מיצר" לו.
+    </p>
+    <p data-a="01-107">
+      וכן בנמשל: האשה תפורה, כביכול, על פי מידת האדם השלם — כפי שהוא ראוי להיות בצלמו
+      וכדמותו של הקדוש ברוך הוא. זהו פירוש "כנגדו" — "לעומתו", בהקבלה מדויקת אליו. והיא
+      הנותנת: כאשר הוא אינו זוכה להיות מה שהוא עשוי להיות, שוב אין היא מתאימה לו,
+      אלא היא צָרָה ומְצֵרָה לו. נמצא שאין הבעיה באשה — הבעיה בו, שהוא לא זוכה להיות
+      אדם כראוי.
+    </p>
+  </div>
+
+  <p data-a="01-108">
+    הגאון רבי דב יפה שליט"א מספר (בספר "לעבדך באמת", עמוד ר"ה) ששמע מרבי אייזיק שר
+    זצ"ל תירוץ נוסף, בדרשת אירוסין:
+  </p>
+
+  <div class="story-box">
+    <p data-a="01-109">
+      "בחורים, אני מקווה שתהיו אנשים גדולים — ואנשים גדולים לא מוכיחים. אך האשה אינה
+      מפחדת להוכיח את בעלה, ואם תנצלו את תוכחתה, תוכלו להפיק מכך תועלת גדולה". וכך
+      פירש את מאמר חז"ל "זכה — נעשית לו עזר; לא זכה — כנגדו": אם הבעל מעוניין לעבוד על
+      עצמו ולתקן את דרכיו, יכול לזכות שהאשה תהיה לו לעֵזֶר — על ידי שינצל את תוכחתה
+      לשפר את עצמו. אך אם אינו רוצה לתקן את דרכיו, הרי שבמקום שתוכחותיה יביאו לו
+      תועלת, הן הופכות להיות בגדר "הטחת דברים" נגדו גרידא.
+    </p>
+  </div>
+
+  <h3 data-a="01-110" id="ch3-5">"שים שלום... טובה וברכה"</h3>
+
+  <p data-a="01-111">
+    לפי היסוד שהאחדות והשלום הם המקור לטוב — ולא רק תנאי צדדי לו — מתבארת באור נפלא
+    ברכת "שים שלום" שבתפילה: "שים שלום, טובה וברכה". מדוע נכנסות הטובה והברכה דווקא
+    בתוך ברכת השלום? לכאורה היה מתאים יותר לבקש אותן בברכת השנים וכדומה.
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-112">
+      אלא, כפי שראינו לעיל: <strong>השלום הוא זה שיוצר את הטובה ואת הברכה</strong>. ואולי זו גם
+      הסיבה שגם אומרים "וטוב יהיה בעיניך לברכנו" — ולא מצאנו בשום מקום בתפילה נוסח כמו
+      "טוב בעיניך לרפאנו" וכיוצא בזה. אלא שהשלום הוא היוצר את הטוב<sup class="fn" id="fnref9"><a href="#fn9">9</a></sup>.
+    </p>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-113">
+      <strong>סיכום:</strong> טובתו של הקדוש ברוך הוא יכולה לחול רק על דבר שלם. לכן, כאשר אדם
+      הוא ללא אשה, אין הטובה יכולה לחול עליו — שכן הוא עצמו, במובן מסוים, עדיין אינו
+      "שלם".
+    </p>
+  </div>
+
+  <h3 data-a="01-114" id="ch3-6">ללא הבנה — מהי אהבה</h3>
+
+  <p data-a="01-115">
+    זווית נוספת ועמוקה, המקשרת בין החיוב שלא לעמוד בלא אשה לבין עבודת ה' עצמה, כתב
+    הגאון הרב מרדכי גיפטער זצ"ל בפתיחתו למגילת שיר השירים (הוצאת ארטסקרול), אות ד':
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-116">
+      אהבת ה' במלואה — אומרת ביטול גמור של האוהב אל הנאהב, עד כדי דבקות ואיחוד. ולמען
+      הגיע לידי כך, צריך אדם להרגיש בגדר אהבה כזאת דרך החוש. בבריאת האדם כתיב "על כן
+      יעזב איש את אביו ואת אמו ודבק באשתו..." — והוא הדבקות הגמורה של האוהב בנאהב
+      (ועיין שם ברמב"ן ובספורנו). ובהתקיים בו באדם דבקות זו, יוכשר להתעלות לאותה
+      הדבקות השלמה — ביטול האוהב בנאהב שבאהבת ה'.
+      <span class="source-tag">הרב מרדכי גיפטער זצ"ל</span>
+    </p>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-117">
+      ולפי זה ניתן להבין: מה שאמר ה' "לא טוב היות האדם לבדו" — <strong>הוא כי אי אפשר שיגיע
+      לתכלית השלמות של דבקות בה' כל עוד שהוא לבדו, ולא ירגיש בחושיו את ענין האהבה של
+      הדבקות הגמורה</strong>. ולכן למדונו רז"ל שכל אדם שאין לו אשה שרוי בלא טובה, דכתיב "לא
+      טוב היות האדם לבדו" (יבמות סב ע"ב) — <strong>שהטובה שהיא טובה בעצם היא דבקות בה'
+      יתברך, אשר בזה זוכה לקבל טובתו של השם יתברך, שהוא הטוב האמיתי</strong>. וכל שאין לו
+      אשה, אי אפשר להגיע לידי כך.
+    </p>
+  </div>
+
+  <p data-a="01-118">
+    יסוד זה — שהאהבה האנושית בקשר הזוגי היא מדריגה מקדימה ומכשירה לאהבת ה' עצמה —
+    מבואר גם בדברי רבי יצחק דמן עכו ז"ל, המובאים בספר "ראשית חכמה" (סוף פרק ד משער
+    האהבה).
+  </p>
+
+  <h3 data-a="01-119" id="ch3-7">מחיצתו של הקב"ה</h3>
+
+  <p data-a="01-120">
+    התמונה המצטברת עד כה — שהיות לבדו הוא לא רק חסרון, אלא מצב של ריחוק ממשי מטובתו
+    של הקדוש ברוך הוא — מקבלת ביטוי חד ביותר במשנה:
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-121">
+      שבעה מנודין לשמים, אלו הן: יהודי שאין לו אשה, ושיש לו אשה ואין לו בנים, וכו'.
+      <span class="source-tag">פסחים דף קיג ע"ב</span>
+    </p>
+  </div>
+
+  <p data-a="01-122">
+    (ייתכן שבכלל "מי שאין לו אשה" נכלל גם מי שעומד ללא אשה מחמת שנפטרה אשתו.) בעל
+    ה"עיון יעקב" (על שבת דף קמט) הסביר שהטעם לכך הוא משום שכתוב "לֹא יְגֻרְךָ רָע" —
+    ולמדו מכאן<sup class="fn" id="fnref10"><a href="#fn10">10</a></sup> שכל מי שאינו טוב, אינו נכנס למחיצתו של הקדוש ברוך הוא. ולכן, מי
+    שאין לו אשה — שהרי "לא טוב" הוא, כפי שביארנו — אינו נחשב "טוב", ולכן הוא "מנודה
+    לשמים"<sup class="fn" id="fnref11"><a href="#fn11">11</a></sup>.
+  </p>
+
+  <p data-a="01-123">
+    יתכן שזהו גם הביאור לכך שאדם הנושא ישראלית נחשב כמי ש"בא לקהל ה'", כפי שכותב רש"י
+    (דברים פרק כג, ג) על הפסוק "לֹא יָבֹא מַמְזֵר בִּקְהַל ה'": "לא ישא ישראלית". שכן —
+    מי שאין לו אשה הוא מנודה לשמים, ומי שנושא אשה הוא הבא לקהל ה'.
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-124">
+      עם סיום הפרק, נעמדת תמונה כפולה: מצד אחד, שיטת הרמב"ם — חיוב מדרבנן, מחשש הרהור.
+      מצד שני, שיטה עשירה ומגוונת, הנשענת על הרמב"ן, המהר"ל, הזוהר וגדולי המחשבה —
+      הרואה בחיוב הנישואין דבר עמוק הרבה יותר: פתיחת צינור לשפע הטוב האלוקי, יצירת
+      אחדות שהיא כשלעצמה תכלית, והכשרה לדבקות בה' יתברך. בפרק הבא נרד מן העיון
+      התיאורטי אל השדה המעשי: כיצד מתבטאות שתי השיטות הללו בשאלות הלכתיות מוחשיות —
+      זקן, תלמיד חכם השקוע בתורתו, אלמן, ושליח ציבור.
+    </p>
+  </div>
+
+  <div class="chapter-card">
+    <div class="cc-num">ד</div>
+    <div class="cc-title">יישומים הלכתיים למעשה</div>
+    <div class="cc-sub">כאשר שתי השיטות פוגשות את המציאות: זקן, בן תורה, אלמן ושליח ציבור</div>
+  </div>
+  <div class="section-divider"><span class="line"></span><span class="icon">📖</span><span class="line"></span></div>
+
+  <span class="chapter-label">פרק 4</span>
+  <h2 data-a="01-125" id="ch4">יישומים הלכתיים למעשה</h2>
+
+  <div class="in-this-chapter">
+    <span class="icl-title">📖 בפרק זה:</span>
+    <ul>
+      <li>נפקא מינה באדם מבוגר, ובעוסק בתורה — מתי מתעכב החיוב?</li>
+      <li>רב ששת ובן עזאי — פטור מיוחד למי שדבוק בתורה בכל כוחו</li>
+      <li>מעשה רב מן הגר"א</li>
+      <li>שו"ת שבט הלוי — בניית בית שני בגיל הזקנה</li>
+      <li>שליח ציבור נשוי בימים נוראים</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-126">
+      עד כאן עסקנו בשורש התיאורטי של החיוב שלא לעמוד בלא אשה. אולם לכל שיטה תיאורטית
+      יש השלכות מעשיות, וכאן בדיוק אנו רואים כיצד המחלוקת בין הרמב"ם לחולקים עליו אינה
+      אקדמית גרידא: היא קובעת, למעשה, מי פטור מן החיוב ומתי, מה דין הזקן, ומה דין
+      השקוע לגמרי בתלמודו.
+    </p>
+  </div>
+
+  <h3 data-a="01-127" id="ch4-1">נפקא מינה באדם מבוגר ובעוסק בתורה</h3>
+
+  <p data-a="01-128">
+    בהלכות פריה ורביה מצאנו חידוש גדול. השולחן ערוך (אבן העזר הלכות פריה ורביה סימן א
+    סעיף ג) פוסק: "מצוה על כל אדם שישא אשה בן שמונה עשרה. ובשום ענין לא יעבור מעשרים
+    שנה בלא אשה. מיהו אם עוסק בתורה וטרוד בה, ומתירא לישא אשה כדי שלא יטרח במזונו
+    ויתבטל מן התורה — מותר להתאחר".
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-129">
+      האיש מצווה על פריה ורביה, אבל לא האשה. ומאימתי האיש נתחייב במצוה זו? מבן שבע
+      עשרה. וכיון שעברו עשרים שנה ולא נשא אשה — הרי זה עובר ומבטל מצות עשה. ואם היה
+      עוסק בתורה וטרוד בה, והיה מתירא מלישא אשה כדי שלא יטרח במזונות ויבטל מן התורה
+      — הרי זה מותר להתאחר, שהעוסק במצוה פטור מן המצוה, <strong>וכל שכן בתלמוד תורה</strong>.
+      <span class="source-tag">רמב"ם, הלכות אישות פרק טו הלכה ב</span>
+    </p>
+  </div>
+
+  <div class="qa-box">
+    <p data-a="01-130" class="q">קושיית האחרונים:</p>
+    <p data-a="01-131" class="a">
+      מהו "וכל שכן בתלמוד תורה"? אדרבה — תלמוד תורה אינו דוחה מצוות אחרות, אלא להיפך!
+    </p>
+  </div>
+
+  <p data-a="01-132">
+    שמעתי מהרב אשר וייס שליט"א ביאור לכך: רק כאשר המצווה דוחה את הלימוד <em>באופן זמני</em>
+    — אז יעסוק במצווה ואחר כך יחזור לתלמודו. אבל כאשר המצווה גורמת ביטול <em>קבוע</em> מן
+    הלימוד, ואין כאן "ויחזור לתלמודו", אין מצווה דוחה את החיוב להיות דבוק בתורה. ולכן,
+    כאן, שהנישואין עלולים לגרום לו להיבטל לגמרי מן התורה — מותר להתאחר. (ולפי זה, כיום
+    שיש כוללים ואין ביטול מוחלט מן התורה, לכאורה אין היתר זה קיים באותה מידה, וכך כתבו
+    כמה פוסקים<sup class="fn" id="fnref12"><a href="#fn12">12</a></sup>.)
+  </p>
+
+  <p data-a="01-133">
+    הנצי"ב (בהעמק שאלה ה, ד) מבאר בדרך אחרת מדוע ת"ת דוחה נישואין: אם כל הנישואין
+    מטרתם רק שלא יהרהר בעבירה, הרי העוסק בתורה כראוי אין לו הרהורים כלל, כמבואר
+    בברייתא דאבות דרבי נתן (פרק כ): "כל הנותן דברי תורה על לבו — מבטלין ממנו הרהורי
+    חרב, הרהורי רעב, הרהורי שטות, הרהורי זנות, הרהורי יצר הרע, הרהורי אשת איש, הרהורי
+    דברים בטלים, הרהורי עול בשר ודם" — שנאמר "פִּקּוּדֵי ה' יְשָׁרִים מְשַׂמְּחֵי לֵב". ומכיוון שכל
+    הענין הוא משום הרהור, וזה נפתר בלימוד התורה עצמו — אצל ת"ח באמת אין ה"לא טוב"
+    דוחה תלמוד תורה. ומיהו, מי שאינו יכול לתת עליו עול תורה כה גדול שיבטל ממנו הרהורי
+    "דרך ארץ" — פשיטא שישא אשה תחילה ואחר כך ילמד תורה.
+  </p>
+
+  <p data-a="01-134">
+    וכן כתב בספר חכמת אדם (כלל קכג): "ולא ישב בלא אשה, אם מתירא שיצרו מתגבר עליו".
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-135">
+      ואף על פי שקיים פריה ורביה ויש לו הרבה בנים ובנות, אם מתה אשתו או גירשה — אסור
+      להיות בלא אשה, שנאמר "לא טוב היות האדם לבדו", ומצות חכמים היא כדי שלא יבוא לידי
+      הרהור (רמב"ם פט"ו מהלכות אישות). ולכן, אפילו יודע בעצמו שאינו ראוי להוליד עוד —
+      מכל מקום לא יעמוד בלא אשה, משום הרהור (נימוקי יוסף). <strong>ומסתימת לשון הש"ס
+      והפוסקים משמע שאין חילוק בזה</strong>, ואפילו אם הוא זקן — חייב ליקח אשה. והנה ראינו
+      ושמענו גדולים וטובים שלעת זקנותם, במיתת אשתם, אינם נושאים אשה עד יום מותם.
+      ואפשר לומר, דכיון שאין זה מן התורה, וקרא ד"לא טוב היות האדם לבדו" אסמכתא בעלמא
+      הוא לענין זה (בית שמואל) — והטעם הוא רק משום הרהור עבירה, והם יודעים בעצמם שהם
+      רחוקים מהרהור מפני זקנתם וחולשתם, לכן פוטרים עצמם מזה.
+      <span class="source-tag">ערוך השולחן, אבן העזר סימן א סעיף ז</span><sup class="fn" id="fnref13"><a href="#fn13">13</a></sup>
+    </p>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-136">
+      אמנם כל זה — לפירוש הרמב"ם, שכל ענין האשה הוא משום הרהור. אבל אם הטעם הוא כדי
+      שהאדם יהיה "טוב" — כלומר מטיב לבריות, כפי שנראה בפרק הבא — או משום שיהיה "טוב"
+      בעולם כפי שביארנו בפרק הקודם, לפי זה ברור שגם העוסק בתורה חייב בכך, ואין הפטור
+      מוגבל רק לחשש הרהור. הזוהר הקדוש (חלק א דף מט ע"ב) מבאר: "דְּהָא כָּל בַּר נָשׁ בָּעֵי
+      לְאִשְׁתַּכְּחָא דְּכַר וְנוּקְבָא בְּגִין לְאַתְקָפָא מְהֵימְנוּתָא, וּכְדֵין שְׁכִינְתָּא לָא אִתְפָּרְשָׁא מִנֵּיהּ לְעָלְמִין"
+      — כל אדם צריך להיות עם אשה (אפילו הוא צדיק כאברהם אבינו, כמבואר שם), כדי שהטוב
+      ישרה עליו.
+    </p>
+  </div>
+
+  <h3 data-a="01-137" id="ch4-2">רב ששת ובן עזאי — פטור העוסק בתורה בכל כוחו</h3>
+
+  <p data-a="01-138">
+    מקור מעניין לגבול ההיתר להתאחר מוצאים אנו בסיפור על רב ששת:
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-139">
+      אמרי ליה רבנן לרב ששת (שלא היה לו בן): "נסיב איתתא ואוליד בני" (שא אשה והולד
+      בנים). אמר להו: "בני ברתי בני נינהו" (הבנים של ביתי נחשבים כבניי — ומקשה הגמרא:
+      וכי זה כנגד ההלכה?). התם — דחויי קמדחי להו, דרב ששת איעקר מפירקיה דרב הונא
+      (והיות שהיה עקר לא יכול היה להביא ילדים).
+      <span class="source-tag">יבמות סב ע"ב</span>
+    </p>
+  </div>
+
+  <p data-a="01-140">
+    הקשה הרמב"ן: אפילו כן, היה לו לישא אשה מדין שמואל, שאמר "אסור לעמוד ללא אשה
+    שנאמר לא טוב היות האדם לבדו"! ואם תאמר שלא סבר כשמואל — היה להם לראשונים לדחות
+    את דברי רב ששת מסברת שמואל! אלא יש לומר: או שפסקה תאוותו לגמרי בעקרות זו, או
+    שכיון שכבר קיימו מצוות פרו ורבו דאורייתא, אין מחייבים אותם לישא — לפי שהיו זקנים
+    ונאים בישיבה יותר מן הבית, ודומים במקצת ל<span class="emphasis">בן עזאי</span>.
+  </p>
+
+  <p data-a="01-141">
+    וכן כתב המאירי: אפשר שפסקה תאוותו מצד אותו עיקור, "או שחשקה נפשו בתורה, והיה זקן
+    יושב בישיבה, ופירש לגמרי".
+  </p>
+
+  <p data-a="01-142">
+    נראה אפוא שהרמב"ן לא פטר אלא מי שדומה ממש ל"בן עזאי", וכפי שמגדיר הלבוש (אבן העזר
+    סימן א) את בן עזאי: "אם חשקה נפשו בתורה וידבק בה מאוד, ויצרו אינו מתגבר עליו כלל".
+    והטעם בכך — אף שלא מצאנו בשום מקום שהעוסק בתורה בכל כוחו פטור מכל המצוות (וכמו
+    שאמרו שאפילו רשב"י וחבריו מפסיקים לקריאת שמע) — הוא: אשה שאני, שכן האשה והתורה יש
+    להם פעולה אחת בעולמות עליונים (ולכן משה רבנו היה פטור מאשה, כמבואר בשל"ה), והדבוק
+    בתורה פטור מאשה. לפי הפירוש הראשון של הרמב"ן — הרואים אין ענין לישא אשה מצד עצם
+    מעלת האחדות, אלא רק מחשש הרהור.
+  </p>
+
+  <h3 data-a="01-143" id="ch4-3">מעשה רב — הגר"א</h3>
+
+  <div class="story-box">
+    <p data-a="01-144">
+      כאשר היה הגר"א בגיל שישים ושלוש, נפטרה עליו אשתו חנה. מוסרים לנו שהגר"א הספידה
+      במילים: "מה ארבה בשבחה — אולם זאת אגיד, ששכר שלה גדול משלי, שכן היא ידעה לסבול
+      את סבל פרנסתה בגבורה". הגר"א ציווה לחרוט על מצבתה: "קרית חנה ותמת חנה... לא
+      הניחה תמורתה", וערך לספר את שבחה שאין נתיב ודרך (הגאון החסיד, כב–כג). ועוד מובא
+      שם, שלמרות דברי הזוהר (ב, קב) שאין לשאת אלמנה, נהג הגר"א כך: כעבור שנים־עשר
+      חודש מאלמנותו נשא את גיטל, אחותו של רבי אליהו קדאזער — עשיר מופלג לפי ערך הזמן,
+      ובעל מעשים גדולים.
+    </p>
+  </div>
+
+  <p data-a="01-145">
+    מעשה זה, מגדול הדור בזמנו — מי שכל חייו היו תורה שבה עסק בכל שעה משעות היממה —
+    מלמד עד כמה החיוב שלא לעמוד בלא אשה נתפס כחיוב גמור, שאינו נדחה גם מפני שקיעה
+    מוחלטת בתורה בשעות הרגילות של החיים, לאחר אבל ראוי.
+  </p>
+
+  <h3 data-a="01-146" id="ch4-4">שו"ת שבט הלוי — בניית בית שני בגיל הזקנה</h3>
+
+  <p data-a="01-147">
+    שאלה מעשית חשובה: האם צריך אדם להקים בית שני בגיל מבוגר, כאשר כבר אינו ראוי
+    להוליד? ומה הדין באדם תלמיד חכם ש"ראשו בתורה"? בתשובה מקיפה דן בכך בעל שו"ת שבט
+    הלוי:
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-148">
+      באתי בזה בתשובה קצרה בענין בנין בית שני בגיל הזקנה. הנה פשוט להלכה, דאף על פי
+      שקיים פריה ורביה בילדותו, וכבר עברו הימים דיהיה אפשר לקיים דין "ולערב אל תנח
+      ידיך" שיהיו לו בנים גם בימי זקנותו — מכל מקום איכא דין שלישי, שלא יעמוד בלי אשה,
+      ומשמע בהלכה שזה החיוב אינו פוקע מן האדם לעולם. אב"א (איבעית אימא) — משום האי
+      דרב נחמן ביבמות סא ע"ב, דאף על פי שיש לו לאדם כמה בנים אסור לעמוד בלא אשה, והיינו
+      משום חשש הרהור עבירה, כמו שכתב הרמב"ם (פט"ו מאישות הלכה ט"ז). ואב"א — משום
+      דהשרוי בלא אשה שרוי בלא תורה בלא שמחה וכו', ביבמות שם סב ע"ב, וכמו שכתב בתרומת
+      הדשן (סוס"י רס"ג).
+      <span class="source-tag">שו"ת שבט הלוי, חלק י סימן רכג</span>
+    </p>
+  </div>
+
+  <p data-a="01-149">
+    הוא ממשיך ומבאר: בתרומת הדשן, ובעקבותיו הרמ"א (אבן העזר א, ח), נפסק שדין זה — שאסור
+    לעמוד בלא אשה — אינו נדחה גם משום חשש שמא האשה אינה בת מידות טובות, שכן חשש הרהור
+    עבירה עדיף מזה (בית שמואל). ובשולחן ערוך ובפוסקים לא מוזכר גבול בענין, ומשמע שגם
+    בגיל מתקדם — למעלה משמונים שנה — עדיין קיים החיוב.
+  </p>
+
+  <p data-a="01-150">
+    ומכל מקום, מוסיף בעל שבט הלוי סייג חשוב: אם האשה בעלת מידות רעות ובעלת קטטה, עד
+    שלפי טבעו לא יוכל לסבול אותה — בטל טעם התורה, שכן יהיה לו יותר ביטול תורה מאשר
+    לפני כן, וגם לא תועיל לו לענין הרהור עבירה. או שלפי מצבו בימי הזקנה קשה לו לסבול
+    ולקבל בת קטטה, ורק "נשמה יקרה שתהא עזר ושמחה לו בשנות הזקנה" — ולא כל אשה סתם —
+    היא בכלל החיוב. במקרה כזה, אין בכוחנו לחייבו בנישואין שיגרמו לו ירידה ואבדן שמחה,
+    היפך המבוקש כולו.
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-151">
+      נמצא הלכה למעשה: החיוב שלא לעמוד בלא אשה נשאר קבוע גם בגיל מתקדם, אך יישומו
+      תלוי בבדיקה עדינה של המציאות — האם הנישואין המוצעים אכן יביאו את אותו "טוב" ואותה
+      שמחה שהם עצם תכלית המצווה, או שמא יגרמו להיפך הגמור.
+    </p>
+  </div>
+
+  <h3 data-a="01-152" id="ch4-5">שליח ציבור נשוי בימים נוראים</h3>
+
+  <div class="quote-box">
+    <p data-a="01-153">
+      נוהגים להעמיד להתפלל סליחות מי שיש לו בנים וירא שמים, שהוא שופך לבו ומפיל
+      תחנונים מקירות הלב, שבאותן הימים אנו תלויים בדין וצריך כוונה גדולה... ושיהיה בן
+      שלושים שנה, שיש לו דעת מיושבת, שמשם ואילך מתחילין ימי זקנה, ולבבו נכנע ונשבר,
+      <strong>וגם יהיה נשוי אשה</strong> (משנה ברורה: דוגמת כהן גדול, שהיו מכינים לו אשה אחרת, כדי
+      שתהיה לו אשה לשומרו מן החטא). מי שהיה נשוי ונתאלמן — אין למנותו שליח ציבור
+      לכתחילה, אפילו אם אירס אשה ולא לקחה עדיין. אבל אם כבר מינוהו הציבור בהיותו אלמן
+      והחזיק כמה שנים, ואחר כך יצאו עליו עוררים מחמת שהוא אלמן — אין לדחותו.
+      <span class="source-tag">ספר מטה אפרים, סימן תקפא</span>
+    </p>
+  </div>
+
+  <p data-a="01-154">
+    מקור דברים אלו מה"אורחות חיים" וה"כל בו", והובאו ברמ"א. ויש בזה חידוש: מנין לנו
+    להשוות שליח ציבור בימים נוראים לכהן גדול, ולא לכהן רגיל — שאינו צריך להיות נשוי?
+    אלא אם כן נאמר כדברי הזוהר (ויקרא, דף ה ע"ב), שכל כהן שלא נשא אשה — אין קרבנו
+    קרבן, מפני שהוא פגום והרי הוא כבעל מום. או שנאמר שעיקר טעמו של ה"כל בו" הוא כדי
+    שיהיה שמור מן החטא, ומה שכתב ללמוד מכהן גדול הוא בבחינת אסמכתא בעלמא.
+  </p>
+
+  <p data-a="01-155">
+    ולכן, מנהג זה נוהג דווקא כאשר יש שני מועמדים למשרת שליח ציבור, ושניהם שקולים במידה
+    שווה בתורה ובמעשים טובים — אז יש להעדיף את הנשוי על הרווק. אבל אם הרווק לבדו הוא
+    בן תורה וירא שמים, הדבר ברור שמעלה זו חשובה יותר ממעלת הנשוי, ולו משפט הבכורה —
+    וכן כתב המשנה ברורה (סימן תקפ"א ס"ק י"ג, ועיין בזה באריכות בשו"ת יחוה דעת חלק א
+    סימן נב).
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-156">
+      פרק זה הראה כיצד שתי השיטות שנסקרו בפרקים הקודמים — חשש הרהור מול נוכחות הטוב —
+      מולידות תוצאות הלכתיות שונות במקרי הגבול: זקן, בן תורה, אלמן. אך בכל המקרים נותר
+      עומד ביסוד הדברים העיקרון שהחיוב שלא לעמוד בלא אשה הוא חיוב מהותי וקבוע, שאינו
+      נדחה בקלות. בפרק הבא נשוב אל השאלה המחשבתית העמוקה ביותר: <em>מדוע</em> באמת אין
+      טוב בלא אחדות — ומה תפקידה הייחודי של האשה בהבאת הטוב הזה לעולם.
+    </p>
+  </div>
+
+  <div class="chapter-card">
+    <div class="cc-num">ה</div>
+    <div class="cc-title">העמקה מחשבתית: האשה, הבית והתורה</div>
+    <div class="cc-sub">מדוע דווקא בבית, ומדוע דווקא עם אשה, נפגש האדם עם התוכן האמיתי של עבודת ה'?</div>
+  </div>
+  <div class="section-divider"><span class="line"></span><span class="icon">✡</span><span class="line"></span></div>
+
+  <span class="chapter-label">פרק 5</span>
+  <h2 data-a="01-157" id="ch5">העמקה מחשבתית: האשה, הבית והתורה</h2>
+
+  <div class="in-this-chapter">
+    <span class="icl-title">📖 בפרק זה:</span>
+    <ul>
+      <li>מחוק הטוב להטיב — מדוע "טוב" פירושו מטיב לזולת</li>
+      <li>הטוב האמיתי הוא בבית — ההבדל בין חסד בחוץ לחסד בפנים</li>
+      <li>לא טוב — מי לא טוב? על מי חוזר התואר</li>
+      <li>סיכום שלוש השיטות בביאור "לא טוב"</li>
+      <li>והלכת בדרכיו — המפתח לכל השלימות</li>
+      <li>רחמנא ליבא בעי — ההבדל בין שכל ללב</li>
+      <li>תפקיד האשה בעבודת ה'</li>
+      <li>מוסר אביך ותורת אמך</li>
+    </ul>
+  </div>
+
+  <h3 data-a="01-158" id="ch5-1">מחוק הטוב להטיב</h3>
+
+  <p data-a="01-159">
+    הגר"ח פידלנדר זצ"ל (בחוברת "וידעת", עמוד יד) הביא ביאור נפלא לשאלה מדוע אין אחדות
+    האדם — טוב. יסוד הדברים: "טוב" בלשון חז"ל פירושו — אדם שמטיב לבריות. וכפי שאמרו
+    חז"ל (קידושין מ ע"א): "צדיק כי טוב" — שהכוונה לצדיק המטיב לבריות. וכפי שכתב בעל
+    ה"דעת תבונות" (א, מב):
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-160">
+      כי האל יתברך שמו הוא תכלית הטוב ודאי, ואמנם <strong>מחוק הטוב הוא להטיב</strong>, וזה הוא
+      מה שרצה הוא יתברך — לברוא נבראים כדי שיוכל להטיב להם, כי אם אין מקבל הטוב, אין
+      הטבה.
+      <span class="source-tag">רמח"ל, דעת תבונות</span>
+    </p>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-161">
+      למדנו: "טוב" פירושו אדם שאוהב ומטיב לבריות, כמו הקדוש ברוך הוא עצמו, שהוא "טוב
+      ומטיב לכל", כמו שאומרים באשרי — "טוֹב יְדֹוָד לַכֹּל וְרַחֲמָיו עַל כָּל מַעֲשָׂיו", ובברכת
+      המזון — "הַמֶּלֶךְ הַטּוֹב וְהַמֵּטִיב לַכֹּל". וכדי שיזכה האדם להיות "טוב" כמו הקדוש ברוך הוא —
+      וכמו שציוונו התורה שמונה פעמים "והלכת בדרכיו" — ברא וחילק השם יתברך את האדם
+      לשניים, כדי שיוכלו להיטיב זה עם זה, ולעלות במעלת הטוב<sup class="fn" id="fnref14"><a href="#fn14">14</a></sup>.
+    </p>
+    <p data-a="01-162">
+      (ובהתבוננות תראה שזה דומה ממש למה שהקדוש ברוך הוא ברא את האדם על ידי שלקח חלק
+      ממנו — "כי חלק ה' עמו" — כדי שיהיה למי להיטיב.)
+    </p>
+  </div>
+
+  <h3 data-a="01-163" id="ch5-2">הטוב האמיתי הוא בבית</h3>
+
+  <div class="qa-box">
+    <p data-a="01-164" class="q">ואם תאמר:</p>
+    <p data-a="01-165" class="a">
+      מדוע בשביל להטיב צריך דווקא להתחתן — וכי חסר למי להטיב בכל שאר הבריאה?
+    </p>
+  </div>
+
+  <p data-a="01-166">
+    יש בזה כמה וכמה דרכים לבאר, ואחת מהן: חסד מחוץ לבית הוא בעיקר חסד <em>בגוף</em>,
+    ואילו החסד בבית הוא בעיקר חסד <em>בנפש</em> — להקשיב, לתמוך, לאהוב, לכבד, להיות לב טוב,
+    ובקיצור — להיות אחד. וכפי שהסביר הרמב"ן את החיוב של "שארה כסותה ועונתה", שכולם
+    ענינים ליצור אחדות אמיתית עמה, מתוך כבוד ואהבה. וכלשון החזון איש, שצריך השתדלות
+    ל"התאחדות" — שזו כוונת היצירה, "והיו לבשר אחד". אדם שעושה חסד בחוץ, אינו מתאחד עם
+    המקבל; אך חסד בבית — מטרתו כל כולה לאחד בין השניים. וזהו "חסד" מלשון "חד" — לעשותם
+    ללב אחד.
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-167">
+      עיקר המעשים הטובים של האדם הם בביתו, עם אשתו ובניו, כמו שדרשו: "כשם שנכנס לברית,
+      כן יכנס לתורה, לחופה, ולמעשים טובים". מדוע אמרו "מעשים טובים" דווקא אחרי "חופה"?
+      ללמדך שעיקר המעשים הטובים של האדם באים לאחר חופתו עם רעייתו ובניו.
+    </p>
+  </div>
+
+  <h3 data-a="01-168" id="ch5-3">לא טוב — מי לא טוב?</h3>
+
+  <p data-a="01-169">
+    הפסוק אומר "לֹא טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ" — ויש להסתפק: על מי חוזר התיאור "לא טוב"?
+    על "האדם" עצמו, או על מצב "הלבדו"? לפי פירוש המהר"ל, שעל ידי האחדות מתגלה הטוב,
+    נמצא ש"לא טוב" חוזר על "הלבדו" — כלומר, המצב של בדידות הוא זה שאינו טוב. אבל לפי
+    דברי הרב פידלנדר, שהטוב הוא היות האדם מטיב, יוצא ש"לא טוב" חוזר על "האדם" עצמו —
+    שהאדם עצמו אינו "טוב" כשהוא לבדו, שכן אין לו למי להיטיב באותה מידה מלאה שבה הוא
+    יכול להיטיב בביתו. ודו"ק בכך.
+  </p>
+
+  <h3 data-a="01-170" id="ch5-4">סיכום שלוש השיטות בביאור "לא טוב"</h3>
+
+  <p data-a="01-171">
+    לאחר כל המסע שעברנו, נוכל לעמוד על שלושה פירושים עיקריים בביאור "לא טוב היות האדם
+    לבדו":
+  </p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <h4 data-a="01-172">שיטה 1 — הרמב"ם ורוב הפוסקים</h4>
+      <p data-a="01-173">
+        "לא טוב" פירושו שאינו יכול להוליד ילדים. האיסור לעמוד ללא אשה — מדרבנן, משום
+        חשש הרהור. העוסק בתורה בכל כוחו פטור מכך.
+      </p>
+    </div>
+    <div class="col-gold">
+      <h4 data-a="01-174">שיטה 2 — שיטת המוסר</h4>
+      <p data-a="01-175">
+        "לא טוב" פירושו שאינו מטיב לבריות. יש מצוה מן התורה לישא אשה בכל גיל, וגם
+        העוסק בתורה חייב בכך — אלא אם כן הדבר יבטלו לגמרי מן הלימוד.
+      </p>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-176">
+      <strong>שיטה 3 — המהר"ל, הזוהר וכמה ראשונים:</strong> "לא טוב" פירושו שהטוב שורה על האדם
+      רק כשהוא באחדות. יש חיוב מן התורה לישא אשה בכל גיל, וגם העוסק בתורה חייב בכך.
+    </p>
+  </div>
+
+  <p data-a="01-177">
+    שים לב: שתי השיטות האחרונות — שיטת המוסר ושיטת המהר"ל/הזוהר — מגיעות לאותה תוצאה
+    הלכתית (חיוב מהתורה, החל גם על העוסק בתורה), אך מטעמים תיאורטיים שונים לגמרי: האחת
+    רואה בנישואין הזדמנות להטיב, והשניה רואה בהם תנאי הכרחי לגילוי הטוב האלוקי בעולם.
+    שתי הזוויות הללו, כפי שנראה בהמשך הפרק, אינן סותרות זו את זו — אלא משלימות זו את
+    זו, ומצטרפות לתמונה אחת עשירה.
+  </p>
+
+  <h3 data-a="01-178" id="ch5-5">והלכת בדרכיו — המפתח לכל השלימות</h3>
+
+  <p data-a="01-179">
+    לפעמים אדם חושב שמידות טובות הן "עוד מעלה" — אולי אפילו מעלה גדולה. אך כשמעיינים
+    בתורה, מתברר שזו אינה רק מעלה נוספת, אלא <strong>המפתח לכל שלימותו של האדם</strong>. בלעדיה —
+    אין זה אדם.
+  </p>
+
+  <p data-a="01-180">
+    נקדים הקדמה: תפקיד האדם, שלא כפי שחושבים רבים, אינו רק "ללמוד תורה" — אלא תפקידו
+    ומעלתו הם: יראה, אהבה, דבקות, מידות טובות, וקיום המצוות מתוך מסירות, כמבואר בפסוקי
+    "ועתה ישראל" שיובאו להלן. אלא שלימוד התורה בצורה נכונה הוא אחד המפתחות הגדולים
+    להגיע לכך.
+  </p>
+
+  <div class="verse-box">
+    <p data-a="01-181">וְשָׁמַרְתָּ אֶת מִצְוֹת יְקֹוָק אֱלֹהֶיךָ לָלֶכֶת בִּדְרָכָיו וּלְיִרְאָה אֹתוֹ.
+    <span class="ref">דברים פרק ח, פסוק ו</span></p>
+  </div>
+  <div class="verse-box">
+    <p data-a="01-182">וְעַתָּה יִשְׂרָאֵל מָה יְקֹוָק אֱלֹהֶיךָ שֹׁאֵל מֵעִמָּךְ כִּי אִם לְיִרְאָה אֶת יְקֹוָק אֱלֹהֶיךָ לָלֶכֶת בְּכָל
+    דְּרָכָיו וּלְאַהֲבָה אֹתוֹ וְלַעֲבֹד אֶת יְקֹוָק אֱלֹהֶיךָ בְּכָל לְבָבְךָ וּבְכָל נַפְשֶׁךָ.
+    <span class="ref">דברים פרק י, פסוק יב</span></p>
+  </div>
+  <div class="verse-box">
+    <p data-a="01-183">כִּי אִם שָׁמֹר תִּשְׁמְרוּן אֶת כָּל הַמִּצְוָה הַזֹּאת אֲשֶׁר אָנֹכִי מְצַוֶּה אֶתְכֶם לַעֲשֹׂתָהּ לְאַהֲבָה אֶת
+    יְקֹוָק אֱלֹהֵיכֶם לָלֶכֶת בְּכָל דְּרָכָיו וּלְדָבְקָה בוֹ.
+    <span class="ref">דברים פרק יא, פסוק כב</span></p>
+  </div>
+
+  <div class="qa-box">
+    <p data-a="01-184" class="q">קושיית החפץ חיים (אהבת חסד, סוף ההקדמה):</p>
+    <p data-a="01-185" class="a">
+      מדוע בפסוק הראשון מופיעה "הליכה בדרכיו" לפני "יראה"; בשני — בין "יראה" ל"אהבה";
+      ובשלישי — אחרי "אהבה" ולפני "דבקות"? מדוע אין סדר קבוע?
+    </p>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-186">
+      ונראה לומר: בא הקדוש ברוך הוא וגילה לך <strong>מהו המפתח לזכות לכל המעלות בעבודת ה'</strong>
+      — יראה, אהבה, דבקות? "והלכת בדרכיו" — להיות אדם טוב ומטיב, ובמיוחד בבית, ששם זה
+      ממש "והלכת בדרכיו" כמו שיתבאר להלן<sup class="fn" id="fnref15"><a href="#fn15">15</a></sup>. משום כך אין ל"והלכת בדרכיו" מיקום קבוע ביחס
+      לשאר המעלות — הוא אינו עוד מדרגה ברשימה, אלא התנאי המקדים והנושא של כולן.
+    </p>
+  </div>
+
+  <p data-a="01-187">
+    במה שונה החסד בבית מחסד בחוץ? החסד בבית הוא חסד של אחדות: כבוד (יראת הרוממות),
+    אהבה ("אוהבה כגופו"), ודבקות ("ודבק באשתו") — וזה מעין ממש תכלית עבודת ה' כנ"ל.
+    וכאשר אדם מתנהג כך עם אשתו, יוכל בקלות רבה יותר להתנהג כך גם עם ה' — שהרי הוא כבר
+    התאמן, יום־יום, בשלוש המעלות הללו במקום שהן הכי קשות ליישום: בבית, מול בן הזוג
+    שרואה אותו כפי שהוא באמת.
+  </p>
+
+  <h3 data-a="01-188" id="ch5-6">רחמנא ליבא בעי</h3>
+
+  <p data-a="01-189">
+    ניתן לבאר באופן נוסף ונפלא מדוע דווקא החסד בבית הוא זה שהופך את האדם להיות אדם טוב
+    בעצם. נתבונן: מה ההבדל בין איש לאשה? האיש הוא שכל/מוח, והאשה היא רגש/לב — וכפי
+    שרואים בתורה שהאיש נמשל ל"חמה" (אותיות: מ"ח), והאשה נמשלה ל"לבנה" (אותיות: ל"ב).
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-190">
+      והנה, כאשר אדם עוסק בחסד בחוץ, ייתכן שכל החסד נעשה מכוח השכל — הוא מבין ששכך
+      כדאי לעשות, בגלל שזו מצווה, בגלל שזה טוב וכדומה. אבל בפנים הבית, האדם מפסיק
+      לעבוד עם השכל החיצוני, ועובד עם הלב הפנימי. בבית, עם האשה, האדם "נהיה לב" כמוה,
+      ושם הוא פועל עם הלב שלו — עם המהות הפנימית שלו. ומכיוון ש"רחמנא ליבא בעי" (הקדוש
+      ברוך הוא רוצה את הלב), לכן כל תיקון האדם — עיקרו בביתו.
+    </p>
+  </div>
+
+  <h3 data-a="01-191" id="ch5-7">תפקיד האשה בעבודת ה'</h3>
+
+  <p data-a="01-192">
+    אחרי שלמדנו את היסוד הנפלא שאדם בביתו עובד עם המהות הפנימית שלו, נשאל: מהו תפקיד
+    האשה בעולם? המחשבה הפשוטה עשויה להיות כעין הפסוק:
+  </p>
+
+  <div class="verse-box">
+    <p data-a="01-193">וּמִי יִשְׁמַע לָכֶם לַדָּבָר הַזֶּה כִּי כְּחֵלֶק הַיֹּרֵד בַּמִּלְחָמָה וּכְחֵלֶק הַיֹּשֵׁב עַל הַכֵּלִים יַחְדָּו יַחֲלֹקוּ.
+    <span class="ref">שמואל א פרק ל, פסוק כד</span></p>
+  </div>
+
+  <p data-a="01-194">
+    כלומר: האיש יורד למלחמה, האשה שומרת על הבית והילדים, ושניהם חולקים בשכר. ולפי זה,
+    ודאי שכל אחד מבין שתפקיד האיש חשוב יותר, שהרי כולם מעריכים יותר את חלקם של
+    הלוחמים, והם מקבלים את הצל"ש. אלא שכשנתבונן, נראה שאין זה כך.
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-195">
+      "רחמנא ליבא בעי" — הקדוש ברוך הוא אינו מעוניין באנשים שעבודת ה' שלהם היא כמו
+      עבודה: באים, דופקים כרטיס, עובדים חצי יום, והולכים הביתה. ואם תשאל אותו: "היכן
+      אתה באמת?" — כמובן שיאמר: "בבית אני באמת; העבודה זה כורח הנסיבות". הקדוש ברוך הוא
+      מבקש מאתנו "ואתם הדבקים בה' אלוקיכם" — ו"קרבת אלוקים לי טוב", כי רק זהו הטוב.
+      בשביל זה צריך את האשה בבית, ששם הלב עובד: כאשר האשה מכניסה את עבודת ה' לתוך
+      הבית, אז החיים הפנימיים שלה, של בעלה ושל ילדיה, נהפכים ל"קרבת אלוקים לי טוב". זהו
+      תפקידה — להפוך את הפנימיות לעבודת ה'.
+    </p>
+  </div>
+
+  <h3 data-a="01-196" id="ch5-8">מוסר אביך ותורת אמך</h3>
+
+  <p data-a="01-197">
+    זהו גם ההבדל בין "שְׁמַע בְּנִי מוּסַר אָבִיךָ" לבין "וְאַל תִּטֹּשׁ תּוֹרַת אִמֶּךָ" (משלי א, ח). בפסוק
+    זה טמונות שלוש קושיות: (א) אצל האב — "מוסר"; אצל האם — "תורה". (ב) אצל האב —
+    "שמע" (אקטיבי); אצל האם — "אל תיטוש" (פסיבי). (ג) הרי האם אינה מצווה על לימוד
+    תורה — ומהו אם כן "תורת אמך"? (עיין גמרא ברכות לה ע"א, במהרש"א, שמכוח קושיה זו
+    מסביר "תורת אומתך".)
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-198">
+      מוסרו של האב בא על ידי שמיעה: הבן שומע מה שאביו מלמדו, ולשם כך עליו להיות בגיל
+      שבו הוא מסוגל לשמוע ולהבין. אך עוד לפני כן — יש "ואל תיטוש תורת אמך": תורתה של
+      האם אינה באה על ידי לימוד. האם אינה מלמדת את בניה תורה בפועל, ובכל זאת היא
+      מנחילה להם את תורתה על ידי אהבת התורה שהיא מחדירה בלבותיהם הרכים, על ידי הדוגמה
+      האישית שהיא מראה להם במעשיה הטובים, ועל ידי יחס הכבוד שהיא רוחשת ללימודם של
+      בעלה ובניה.
+    </p>
+  </div>
+
+  <p data-a="01-199">
+    יש הבדל בצורה שבה הדברים נחרטים בלב הילד: לגבי מוסר האב נאמר "שמע בני" — אם הבן לא
+    יטה אוזנו לשמוע, מוסר האב לא יוכל לחדור אליו. אך לגבי האם: "אל תיטוש תורת אמך" —
+    תורת האם אינה זקוקה למעשה מיוחד כדי שתשפיע; היא כבר קיימת מהרגע שבו נולד התינוק,
+    ומבקשים מן הילד רק שלא יטוש אותה.
+  </p>
+
+  <p data-a="01-200">
+    חז"ל אומרים: "גדול שימושה יותר מלימודה" — כלומר, אדם המשמש תלמיד חכם גדול יותר
+    מאדם הלומד איתו. מסבירים: כאשר יהודי לומד עם תלמיד חכם, ההשפעה הטובה מוגבלת לשעת
+    הלימוד. אולם כאשר יהודי זוכה לשמש תלמיד חכם, אין זה רק תפקיד טכני — הוא נמצא לצדו
+    רוב שעות היום, עוקב אחר הליכותיו, מתרשם עמוקות ממעשיו; כל תנועה שלו היא לימוד
+    בפני עצמו. כך הוא מקבל הרבה יותר מזה שלומד עמו בפועל זמן מוגבל. וכן, בדיוק, מקבל
+    הילד מאמו — "תורה" הבנויה כל כולה מהשהות, מהדוגמה, ומהאהבה שבבית.
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-201">
+      ראינו בפרק זה כיצד תפקיד האשה בעבודת ה' אינו תפקיד "שני" או משני לתפקיד האיש —
+      אלא תפקיד מהותי ומרכזי: היא זו שמכניסה את התוכן הפנימי, את הלב, לתוך הבית ולתוך
+      עבודת ה'. בפרק הבא, החותם, נראה כיצד יסוד זה מתבטא בהשוואה מפורשת בין האשה
+      לתורה עצמה — וכיצד שני הבריתות שיש לאדם, ברית התורה וברית הנישואין, שלובות זו בזו.
+    </p>
+  </div>
+
+  <div class="chapter-card">
+    <div class="cc-num">ו</div>
+    <div class="cc-title">התורה, האשה והברית — חתימה</div>
+    <div class="cc-sub">שתי הבריתות של האדם, ומדוע האשה נמשלת לתורה במקומות רבים כל כך</div>
+  </div>
+  <div class="section-divider"><span class="line"></span><span class="icon">📖</span><span class="line"></span></div>
+
+  <span class="chapter-label">פרק 6</span>
+  <h2 data-a="01-202" id="ch6">התורה, האשה והברית — חתימה</h2>
+
+  <div class="in-this-chapter">
+    <span class="icl-title">📖 בפרק זה:</span>
+    <ul>
+      <li>התורה והאשה — שוות ביקרן ובדיניהן</li>
+      <li>כשם שנכנס לברית כך יכנס לתורה, לחופה ולמעשים טובים</li>
+      <li>כבוד — תנאי לשפע הטוב, בתורה ובאשה כאחד</li>
+      <li>ילדים מאשה, ילדים מהתורה</li>
+      <li>מתנה טובה — חתימת העיון</li>
+    </ul>
+  </div>
+
+  <h3 data-a="01-203" id="ch6-1">התורה והאשה — שוות ביקרן</h3>
+
+  <p data-a="01-204">
+    לאורך כל העיון פגשנו זיקה חוזרת בין האשה לבין התורה: שתיהן קרויות "טוב" ו"לקח
+    טוב", שתיהן "מתנה", ושתיהן מהוות תנאי לדבקות בה'. זיקה זו אינה מקרית, והיא באה
+    לידי ביטוי הלכתי מובהק בדברי הרמב"ם:
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-205">
+      ספר תורה כשר נוהגין בו קדושה יתירה וכבוד גדול, ואסור לאדם למכור ספר תורה אפילו
+      אין לו מה יאכל, ואפילו היו לו ספרים רבים, ואפילו ישן ליקח בו חדש — לעולם אין
+      מוכרין ספר תורה <strong>אלא לשני דברים: שילמוד תורה בדמיו, או שישא אשה בדמיו</strong>, והוא
+      שלא יהיה לו דבר אחר למכור.
+      <span class="source-tag">רמב"ם, הלכות תפילין ומזוזה וספר תורה פרק י הלכה ב</span>
+    </p>
+  </div>
+
+  <p data-a="01-206">
+    וכן מצאנו ברמב"ם (הלכות מלכים פרק ה הלכה ט): "אסור לצאת מארץ ישראל לחוצה לארץ
+    לעולם, אלא <strong>ללמוד תורה או לישא אשה</strong>, או להציל מן העכו"ם — ויחזור לארץ. וכן יוצא
+    הוא לסחורה". וכן הלכה בשולחן ערוך (יורה דעה הלכות אבילות סימן שעב סעיף א, על פי
+    עבודה זרה יג ע"א): אף על פי שהכהן אסור להיכנס לבית הפרס (שדה שנאבד בה קבר) או
+    לארץ העמים — אם היה צריך לילך שם לישא אשה או ללמוד תורה, ואין לו דרך אחרת, יכול
+    לעבור דרך שם. (וכתבו תוספות שם: דווקא בשתי המצוות החשובות הללו — שגדול תלמוד
+    תורה שמביא לידי מעשה, ואף אשה נמי דכתיב "לא תהו בראה" — אך לשאר מצוות לא.)
+  </p>
+
+  <p data-a="01-207">
+    זיקה זו ממשיכה ומתבארת בסוגיה נוספת ביבמות (סב ע"ב):
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-208">
+      תניא, רבי יהושע אומר: נשא אדם אשה בילדותו — ישא אשה בזקנותו; היו לו בנים
+      בילדותו — יהיו לו בנים בזקנותו, שנאמר "בַּבֹּקֶר זְרַע אֶת זַרְעֶךָ וְלָעֶרֶב אַל תַּנַּח יָדֶךָ, כִּי
+      אֵינְךָ יוֹדֵעַ אֵי זֶה יִכְשָׁר הֲזֶה אוֹ זֶה וְאִם שְׁנֵיהֶם כְּאֶחָד טוֹבִים"<sup class="fn" id="fnref16"><a href="#fn16">16</a></sup>. רבי עקיבא אומר:
+      למד תורה בילדותו — ילמד תורה בזקנותו; היו לו תלמידים בילדותו — יהיו לו תלמידים
+      בזקנותו, שנאמר "בבקר זרע את זרעך" וגו'.
+      <span class="source-tag">יבמות סב ע"ב</span>
+    </p>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-209">
+      רבי עקיבא ורבי יהושע דורשים את אותו הפסוק — האחד על תלמוד תורה, והשני על נישואין.
+      נראה שיש כאן קשר גדול בין הדברים: כשם שמי שלמד בילדותו חייב ללמוד גם בזקנותו,
+      שכן כתוב "כִּי לֶקַח טוֹב נָתַתִּי לָכֶם — תּוֹרָתִי אַל תַּעֲזֹבוּ" (דבר טוב לא עוזבים לעולם),
+      כך האשה היא דבר טוב, כדכתיב "מָצָא אִשָּׁה מָצָא טוֹב" — ודבר טוב מחזרים אחריו לעולם.
+    </p>
+  </div>
+
+  <p data-a="01-210">
+    ללא אשה — אדם נקרא "לא טוב"; וכן ללא תורה נקרא אדם "לא טוב", כמו שכתוב: "גַּם
+    בְּלֹא דַעַת נֶפֶשׁ לֹא טוֹב" (משלי יט, ב). מסביר הגר"א: כלומר, אם אדם עושה מצוות ואינו
+    עוסק בתורה — "לא טוב", כי "פִּתָּא הוּא סְעָדָא דְּלִבָּא" (הפת היא זו שמזינה את הלב), וכמו
+    שכתוב "לֶחֶם לְבָב". שאף אם יתענג האדם בכל המעדנים, אם לא יאכל לחם — נפשו תהיה
+    רעבה; כך, אף אם יעשה את כל המצוות, אם לא ילמד את התורה — הנקראת "לחם", כמו שכתוב
+    "לְכוּ לַחֲמוּ בְלַחְמִי" — עדיין "לא טוב". וזהו "בלא דעת" — אז הוא "נפש לא טוב", כי
+    יראת ה' באה מן התורה, ואם לא ילמד — לא תהיה לו יראה.
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-211">
+      (הן התורה והן האשה נמשלו ל"לחם" — כמו "קָרְאָן לוֹ וְיֹאכַל לָחֶם" (בראשית לז, כה), שרמז
+      לכוונתו של יעקב לתת לו את ביתו, ואין "לחם" אלא אשה. שכן ה"לחם" הוא השלמת האדם
+      הרעב — והתורה והאשה כאחד משלימות את האדם.)
+    </p>
+  </div>
+
+  <p data-a="01-212">
+    יש לאדם שני בריתות, כמו שכתב הגר"א (בפירושו על ספר יצירה, פרק א משנה ג) — <strong>ושניהם
+    נקראים "ברית"</strong>: ברית התורה, הנקראת "ברית", וברית המעור — ברית המילה. הן מכוונות
+    אחת מתחת השניה, והן האברים היחידים שאינם זוגות, וכל אבר מהם הוא "סיום" חמישה
+    אברים (בסוד חמש אותיות "שמחה", היות והשמחה היא שלימות). ועל ידי שתי בריתות אלו יש
+    קיום לכל העולם, כמו שכתוב: "אִם לֹא בְרִיתִי יוֹמָם וָלַיְלָה חֻקּוֹת שָׁמַיִם וָאָרֶץ לֹא שָׂמְתִּי" —
+    שדרשו על ברית התורה וברית המילה. ואלו שתי הבריתות — משתיהן נולד אדם "ערל", עד
+    שנימול, שנאמר "יִמּוֹל בְּשַׂר עָרְלָתוֹ", ואצל הלשון נאמר "עֲרֵל שְׂפָתַיִם". ומילת הלשון —
+    שמתייגע בתורה בדיבור — עד שהוא נגדל בשתיהן, שכן אדם פרא נולד.
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-213">
+      כשם שברית הלשון בלא תורה היא "לא טוב", ועם התורה נאמר עליה "כי לקח טוב נתתי
+      לכם" — כך ברית המעור בלא אשה נאמר עליה "לא טוב היות לבדו", ועם אשה נאמר עליה
+      "מצא אשה מצא טוב". וכשם ש"למד תורה בילדותו ילמד תורה בזקנותו" — כך "נשא אשה
+      בילדותו ישא אשה בזקנותו".
+    </p>
+  </div>
+
+  <h3 data-a="01-214" id="ch6-2">כשם שנכנס לברית כך יכנס לתורה</h3>
+
+  <p data-a="01-215">
+    בברית מילה, העומדים אומרים מדינא דגמרא (שבת דף קלז ע"ב): "כשם שנכנס לברית, כך
+    יכנס לתורה, לחופה, ולמעשים טובים". מהו "כשם"? ומהם "המעשים הטובים" שבסוף?
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-216">
+      בברית המעור יש "סור מרע" ויש "עשה טוב": בברית מילה עושים "סור מרע" — מורידים את
+      הערלה; בחתונה עושים "עשה טוב" — שהיסוד משפיע חסדים למלכות. וכך ממש בתורה: יש
+      "סור מרע" — "בראתי יצר הרע, בראתי לו תורה תבלין, אם עוסקים בה ניצלים" — ויש
+      "עשה טוב", שכן התורה היא העצה הגדולה ביותר להידבק בבורא (כמבואר בדרך ה').
+    </p>
+  </div>
+
+  <p data-a="01-217">
+    תמיד צריך שתקדים ברית המעור לברית הלשון (כמו שמי שלא מל אינו יכול לעשות פסח) —
+    לכן קודם ברית מילה, ורק אחר כך יכול להיכנס לתורה, כמובא בשו"ת רבי עקיבא איגר
+    (מהדורא קמא סימן מב) בשם "עוללות אפרים": שמילה חיצונית היא סיבה למילה פנימית —
+    "מערלת לב". כשימול את ערלת לבבו, יהיו חדרי לבו פתוחים להבין ולהשכיל בתורה ובמצוות.
+    אלא שיש לשאול: לאיזו תורה נכנס — לתורה של סור מרע?
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-218">
+      אחרי שאדם מתחתן, וזוכה שהברית החיצונית שלו היא כבר בבחינת "עשה טוב" — אז יכול
+      לזכות גם לתורה של "עשה טוב": תורה המדביקה את האדם בבורא, תורה של "כי לקח טוב
+      נתתי לכם". וזהו שאמרו: "השרוי בלא אשה שרוי בלא תורה", שנאמר "הַאִם אֵין עֶזְרָתִי בִי
+      וְתוּשִׁיָּה נִדְּחָה מִמֶּנִּי" — אין הכוונה לתורה של "סור מרע", אלא לתורה של "עשה טוב":
+      תורה של תושיה, כלומר עצה — תרי"ג עיטין ("עצות") להידבק בבורא. לתורה זו זוכים רק
+      לאחר שיש אשה<sup class="fn" id="fnref17"><a href="#fn17">17</a></sup>.
+    </p>
+  </div>
+
+  <p data-a="01-219">
+    וזהו שאומרים "לחופה ולמעשים טובים": שלאחר החופה, הברית תעשה "מעשים טובים" (ולא רק
+    "סור מרע") — בהבאת ילדים, ובלימוד תורה לשמה. (ולכן לא אמרו "לעשה טוב" בלשון יחיד,
+    אלא "מעשים טובים" בלשון רבים — שכולל ששתי הבריתות יהיו כאחד בבחינת "עשה טוב", ובזה
+    מתורץ מדוע "מעשים טובים" מוזכרים דווקא אחרי "חופה".) וכפי שכתב החיד"א, יתבאר עוד
+    שתורה שבעל פה היא במידת "מלכות", והאשה גם היא במידת "מלכות" — ולכן, על ידי הנישואין
+    זוכה האדם לתורה שבעל פה, ומושפע עליו שפע שיהיה מכוון אל האמת ומצליח בתורה. וזהו
+    שאמר הכתוב: "מָצָא אִשָּׁה" — דהיינו אשה כשרה — "מָצָא טוֹב" — שהוא התורה.
+  </p>
+
+  <h3 data-a="01-220" id="ch6-3">כבוד — תנאי לשפע הטוב</h3>
+
+  <p data-a="01-221">
+    ודע דבר חשוב מאוד: כדי לזכות לדבקות באמצעות התורה, צריך האדם להתנהג בה בכבוד, כמו
+    שכתב הרמח"ל בדרך ה' (חלק ד פרק ב):
+  </p>
+
+  <div class="quote-box">
+    <p data-a="01-222">
+      הנה כל כוחה של התורה אינו אלא במה שקשר ותלה יתברך שמו את השפעתו היקרה בה, עד
+      שעל ידי הדיבור בה וההשכלה תימשך ההשפעה הגדולה ההיא... והנה צריך שיבוש משפלותו
+      האנושי, וירעש מרוממותו יתברך. והנה יגל מאוד מחלקו הטוב שזכה לזה, אך ברעדה כמו
+      שכתוב. ונכלל בזה, שלא ישב בקלות ראש, ולא ינהג שום מנהג ביזיון, לא בדיבריה ולא
+      בספריה, וידע לפני מי עומד ומתעסק. ואם הוא עושה כן — אז יהיה תלמודו מה שראוי לו
+      להיות באמת, ותימשך על ידו ההשפעה שזכרנו, ויתעצם בו היקר האלוקי, ויימשך תיקון
+      והארה לכל הבריאה. אבל אם תנאי זה יחסר ממנו — לא תימשך ההארה על ידו, ולא יהיו
+      דבריו אלא כשאר כל הדיבורים האנושיים.
+      <span class="source-tag">רמח"ל, דרך ה' חלק ד פרק ב</span>
+    </p>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-223">
+      כך ממש, אם רוצים לזכות לכל הטוב מן האשה — חייבים ללמוד לכבדה עד מאוד. הכבוד אינו
+      תוספת נימוסית לקשר הזוגי; הוא, ממש כמו ביחס לתורה, התנאי המקדים שבלעדיו אין ההשפעה
+      והשפע יכולים לרדת כלל. יזכנו ה' יתברך.
+    </p>
+  </div>
+
+  <h3 data-a="01-224" id="ch6-4">ילדים מאשה, ילדים מהתורה</h3>
+
+  <p data-a="01-225">
+    דע: כשם שיש לאדם ילדים מאשתו, כך יש לאדם ילדים בלימוד תורתו — הנוצרים על ידי דיבור
+    פיו (כשם שלשון הרע יוצר מלאכים רעים). אבל כשלומד בלחש או בהרהור בלבד — לא נוצרים
+    ילדים<sup class="fn" id="fnref18"><a href="#fn18">18</a></sup>. לכן צריך להיזהר מאוד ללמוד בקול ובחשק, "באבר חי", כמו שאמרו: "כי חיים הם
+    למוצאיהם".
+  </p>
+
+  <div class="story-box">
+    <p data-a="01-226">
+      אמר ליה שמואל לרב יהודה: "שיננא, פתח פומך קרי, פתח פומך תני — כי היכי דתתקיים
+      בידך ותוריך חיי, שנאמר כי חיים הם למוצאיהם — אל תקרי 'למוצאיהם' אלא 'למוציאיהם
+      בפה'". ברוריא אשכחתיה לההוא תלמידא דהוה קא גריס בלחישה, בטשא ביה ואמרה ליה:
+      כתיב "עֲרוּכָה בַכֹּל וּשְׁמֻרָה" — אם ערוכה ברמ"ח אברים שבאדם, משומרת; ואם לאו, אינה
+      משומרת. ועל תורה שאינה משומרת אמרו (סנהדרין צט ע"א): "כל הלומד תורה ומשכחה,
+      דומה לאשה שיולדת וקוברת" (ובכגון זה, לא קיים פריה ורביה — וכן במצות תלמוד תורה).
+      <span class="source-tag">עירובין נד ע"ב</span>
+    </p>
+  </div>
+
+  <p data-a="01-227">
+    חז"ל אומרים: המלמד את בן חברו תורה — כאילו ילדו. בתוספתא יש לשונות שונים להולדה
+    זו: "כאילו רקמו", "יצרו" וכיוצא בזה — כאשר משתמשים נכון בכוח הדיבור, זוהי הולדה
+    מחדש. פעמים רבות רואים אנו דבר מופלא בבחורים בעת הגיעם לישיבה: מגיעים כנערים
+    מתלמוד תורה שהם עדיין "עיר פרא", ולאחר שלוש שנים בלמדם בישיבה — "אדם יולד". נולד
+    אדם חדש. זהו פשוטו של מקרא: "וְשִׁנַּנְתָּם לְבָנֶיךָ" — אלו התלמידים. הם ממש בנים שלך;
+    אתה מולידם ויוצרם לבריאה חדשה. יצירה חדשה זו נעשית בכוח הדיבור. (ומה שאמרנו שלימוד
+    תורה הוא לידה — הכוונה ללידה רוחנית, ואילו תלמידים — זו לידה גשמית; וכן בפריה
+    ורביה יש לידה גשמית — בנים, ויש לידה רוחנית בכל ביאה בקדושה<sup class="fn" id="fnref19"><a href="#fn19">19</a></sup>.)
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-228">
+      נמצא, כשם שיש לאדם שתי מצוות עשה בלימוד תורה — ללמוד לעצמו, וללמד לאחרים — שכל
+      אחת מהן נלמדת ממקרא נפרד בפני עצמו<sup class="fn" id="fnref20"><a href="#fn20">20</a></sup>, כך ממש יש לאדם שתי מצוות עם האשה: לשאת
+      אשה, ולהביא ילדים. שני זיווגים מקבילים: זיווג עם התורה, וזיווג עם האשה — שניהם
+      מולידים, שניהם דורשים כבוד וטהרה, ושניהם, כאשר הם נעשים כראוי, יוצרים בריאה חדשה
+      בעולם.
+    </p>
+  </div>
+
+  <h3 data-a="01-229" id="ch6-5">מתנה טובה — חתימה</h3>
+
+  <div class="quote-box">
+    <p data-a="01-230">
+      לדעת כי אני ה' מקדשכם — אמר לו הקדוש ברוך הוא למשה: משה, <strong>מתנה טובה</strong> יש לי
+      בבית גנזי, ושבת שמה, ואני מבקש ליתנה לישראל — לך והודע אותם.
+      <span class="source-tag">ביצה דף טז ע"א</span>
+    </p>
+  </div>
+
+  <div class="quote-box">
+    <p data-a="01-231">
+      כתוב בספר בן סירא: אשה טובה — <strong>מתנה טובה</strong> לבעלה, וכתיב "טוֹבָה בְּחֵיק יְרֵא אֱלֹהִים
+      תִּנָּתֵן". ובסנהדרין (דף ק ע"ב) אמר רב יוסף: מילי מעלייתא דאית ביה (בספר בן סירא)
+      דרשינן להו — "אשה טובה מתנה טובה בחיק ירא אלהים תנתן".
+      <span class="source-tag">יבמות דף סג ע"ב</span>
+    </p>
+  </div>
+
+  <p data-a="01-232">
+    האם ישנו קשר בין "אשה טובה" ל"שבת"? ובכלל, מהי "מתנה טובה" — וכי הקדוש ברוך הוא
+    נותן מתנות שאינן טובות?
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-233">
+      ביאור הענין, כפי שביאר בספר "מתנה טובה יש לי בבית גנזי": (א) "מתנה" — הגדרתה הארה
+      של עולם הבא, הנמשכת לעולם הזה שלא בזמנה. (ב) היסוד והעטרה נקראים שניהם בשם "כי
+      טוב", כי על ידי שתי מידות אלו נמשכות כל הטובות לעולם — כאשר העטרה אינה מכוסה
+      בערלה. ובשני זמנים מתגלה שפע זה: בשבת קודש, ובאשת חיל, ככתוב "אֵשֶׁת חַיִל עֲטֶרֶת
+      בַּעְלָהּ" (ותן דעתך ששני המושגים — "שבת" ו"אשת חיל" — שווים במספר, שבע).
+    </p>
+  </div>
+
+  <p data-a="01-234">
+    מסתבר שזהו גם הביאור לכך שאיש בלא אשה הוא "לא טוב": השפע הטוב הנ"ל אינו מתגלה
+    אצלו, שהרי אין לו את אותה "מתנה טובה". וזהו גם הביאור בדברי חז"ל (שמות רבה, סוטה
+    יב) על הפסוק "וַתֵּרֶא אֹתוֹ כִּי טוֹב הוּא" (שמות ב, ב) — שמשה רבנו נולד מהול. הקשו
+    המפרשים: היכן כתוב במפורש "כי טוב" ששימש רבנו נולד מהול? אלא, "טוב" פורש כאן —
+    שהערלה מתגלה מעל היסוד, ולכן מי שהוא מהול הוא "טוב", כי אין ערלה המונעת את השפע
+    הטוב מלרדת. ומשום כך נהגו העם לומר "הודו לה' כי טוב" — על המילה (חזקוני).
+  </p>
+
+  <p data-a="01-235">
+    לפי פשוטו, "טוב" פירושו — נותן לאחרים, ככתוב "אִמְרוּ צַדִּיק כִּי טוֹב", שהכוונה: טוב
+    לשמים ולבריות. וכן, כפי שראינו לעיל, "לא טוב לבדו" — טוב פירושו אדם שמטיב לבריות.
+    והנה, התינוק בעודו "ערל" הוא סתום, ככתוב לגבי הפרי — "שָׁלֹשׁ שָׁנִים יִהְיֶה לָכֶם עֲרֵלִים",
+    ומפרש רש"י: "וערלתם ערלתו — ואטמתם אטימתו: יהא אטום ונסתם מליהנות ממנו". ורק לאחר
+    המילה הוא נהיה "טוב". לכן ברית מילה — "כי טוב הוא".
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-236">
+      וכך גם, בהיקש הגדול שליווה אותנו לאורך כל העיון: כל עוד האדם "לבדו" — אטום וסתום
+      הוא, בבחינת ערלה שאינה מגלה את השפע. וברגע שהוא זוכה לבנות בית של אחדות, של
+      כבוד, של אהבה — הוא נעשה "טוב": צינור שדרכו זורם השפע האלוקי, גם אליו וגם דרכו
+      אל אשתו, אל ילדיו, ואל העולם כולו. זהו סוד הפסוק שממנו יצאנו לדרך: "לֹא טוֹב הֱיוֹת
+      הָאָדָם לְבַדּוֹ, אֶעֱשֶׂה לּוֹ עֵזֶר כְּנֶגְדּוֹ" — לא רק פתרון טכני לבעיה, אלא פתיחת השער אל
+      כל הטוב שהקדוש ברוך הוא חפץ להעניק לברואיו.
+    </p>
+  </div>
+
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות</h3>
+    <ol>
+      <li>תנ"ך: בראשית פרק ב; משלי פרק יח, פרק יט, פרק א; תהלים פרק לג, פרק לד, פרק קלג; שמואל א פרק ל; דברים פרקים ח, י, יא, כג; שמות פרק ב; ישעיה פרקים מה, נב; איכה פרק ג.</li>
+      <li>משנה ותלמוד בבלי: יבמות סא–סג; פסחים קיג; שבת ל, קלז, קמט; ביצה טז; סנהדרין צט–ק; עבודה זרה יג, כ; עירובין נד; ברכות סא, לה; קידושין מ, כט; בבא בתרא צא.</li>
+      <li>מדרשים וזוהר: שמות רבה; בראשית רבה; זוהר חלק א (דף מט), חלק ב (דף רלא), חלק ג (דף ה, מד, נט; ויקרא ה).</li>
+      <li>רש"י ותוספות על הסוגיות הנזכרות; תוספתא.</li>
+      <li>רמב"ם: הלכות אישות; הלכות תפילין ומזוזה וספר תורה; הלכות מלכים.</li>
+      <li>רמב"ן: פירוש על התורה (בראשית ב); מלחמות ה' (יבמות).</li>
+      <li>ריטב"א ונימוקי יוסף על מסכת יבמות.</li>
+      <li>טור ובית יוסף, שולחן ערוך ונושאי כליו: אבן העזר הלכות פריה ורביה סימן א (ב"ח, בית שמואל, חלקת מחוקק); יורה דעה הלכות אבילות סימן שעב; רמ"א; ערוך השולחן אבן העזר סימן א.</li>
+      <li>תרומת הדשן סימן רסג; שו"ת הרד"ך; קרן אורה יבמות; מהרש"א חידושי אגדות יבמות; מאירי יבמות.</li>
+      <li>מהר"ל: גור אריה על התורה; חידושי אגדות על מסכת יבמות.</li>
+      <li>ספר החינוך מצוה תל; רמח"ל: דעת תבונות, דרך ה'.</li>
+      <li>תורה תמימה על בראשית ודברים.</li>
+      <li>הגר"א: פירוש על ספר יצירה; תיקוני זוהר (תקו"ז תיקון נג).</li>
+      <li>איגרת הקודש המיוחסת לרמב"ן.</li>
+      <li>חפץ חיים, אהבת חסד (הקדמה); חכמת אדם כלל קכג; העמק שאלה לנצי"ב; חזון איש קידושין.</li>
+      <li>לבוש אבן העזר סימן א; שו"ת שבט הלוי חלק י סימן רכג; ילקוט יוסף שובע שמחות; שו"ת יחוה דעת חלק א סימן נב.</li>
+      <li>ספר מטה אפרים סימן תקפא; משנה ברורה סימן תקפא.</li>
+      <li>ספר תוכחת חיים לרבי חיים פלאג'י; ספר "הגאון החסיד" (תולדות הגר"א).</li>
+      <li>הרב מרדכי גיפטער זצ"ל, הקדמה למגילת שיר השירים (הוצאת ארטסקרול); רבי יצחק דמן עכו, מובא בראשית חכמה שער האהבה.</li>
+      <li>חיד"א, ספר מדבר קדמות; ספר "מתנה טובה יש לי בבית גנזי"; ספר תולעת יעקב; של"ה הקדוש.</li>
+      <li>הגר"ח פידלנדר זצ"ל, חוברת "וידעת"; ספר תפוחי זהב על מסכת יבמות (הרב גולדווסר שליט"א); הרב דב יפה שליט"א, לעבדך באמת.</li>
+      <li>שו"ת שלמת חיים יורה דעה סימן קיב; ביאור לספר המצוות לרס"ג (הרב פערלא); סמ"ג, סמ"ק, ספר יראים, בעל הלכות גדולות; באר מים חיים (פרשת נח).</li>
+      <li>דברי תורה שבעל פה נמסרו בשם הרב אשר וייס שליט"א.</li>
+    </ol>
+  </div>
+
+  <div class="footnotes">
+    <h3 data-a="01-237">📝 הערות שוליים</h3>
+    <ol>
+      <li data-a="01-238" id="fn1">
+        <p data-a="01-239">
+          מנין לבית הלל שאדם חייב בפרו ורבו כמו יצירת העולם? נראה שבית הלל מניחים שהאדם
+          מצווה על פריה ורביה כהקבלה לתחילת מעשה ה' בישוב העולם: כמו שיצר ה' זכר אחד
+          ונקבה אחת כדי לישב את העולם, כך צריך האדם להוליד זכר ונקבה כדי לקיים את
+          המצווה שתכליתה ישוב העולם — ומסתבר שהטעם בזה כעין "והלכת בדרכיו".
+        </p>
+        <p data-a="01-240">
+          ובכלל, כל עניני איש ואשה הם בבחינת "והלכת בדרכיו" למעיין בדבר. נביא כמה
+          דוגמאות: א. המצווה היחידה שבה האדם יוצר דבר חדש בבחינת "יש מאין", כמו הבורא
+          שברא עולם יש מאין, היא מצוות פרו ורבו. ב. המצווה היחידה שבה האדם נעשה שותף
+          של הקדוש ברוך הוא היא מצווה זו, וכמו שאמרה חוה: "קניתי איש את ה'" — מפרש
+          רש"י: "את ה' — כמו עם ה', כשברא אותי ואת אישי הוא לבדו בראנו, אבל בזה שותפים
+          אנו עמו". וכמו שכתב הגר"א (תיקוני זוהר, תיקון נג) בזוהר חדש פרשת בראשית, שה'
+          אמר לאדם "נעשה אדם" (לשון רבים) — אני ואתם, שתצרפוני בשעת הזיווג, "דאם ה' לא
+          יבנה בית" וגו'. ובאיגרת הקודש המיוחסת לרמב"ן (פרק ב) כתב: ובענין רות נאמר
+          "וַיִּתֵּן ה' לָהּ הֵרָיוֹן" — ואילו היה בדבר גנות, הרי כבר נאמר "וְהַבֵּט אֶל עָמָל לֹא תוּכָל",
+          וכתיב "טְהוֹר עֵינַיִם מֵרְאוֹת בְּרָע"... אלא כשיהיה החיבור לשם שמים, אין דבר קדוש
+          ונקי למעלה הימנו. ולפיכך נאמר בחיבור הצדיקים (ירמיה א) "בְּטֶרֶם אֶצָּרְךָ בַבֶּטֶן
+          יְדַעְתִּיךָ" — ייחס צורת הצדיק אל הבורא יתברך, כאילו הוא מצייר את טיפת הזרע
+          הנמשכת מן הצדיק. כל ילד שאדם זוכה להביא נעשה שותף חזק יותר של הקדוש ברוך
+          הוא (ויש המסבירים — עיין כלי יקר — שמצוות כיבוד אב בצד ימין של הלוח, משום שזה
+          כבוד הקדוש ברוך הוא שמכבדים את שותפיו).
+        </p>
+        <p data-a="01-241">
+          <strong>סיכום:</strong> א. פרו ורבו — חיובה לדבוק בדרכי הקדוש ברוך הוא שיצר איש ואשה,
+          אף אנו. ב. במצווה זו האדם נדמה לקדוש ברוך הוא ביצירת יש מאין. ג. במצווה זו
+          האדם נעשה שותף ממש לקדוש ברוך הוא ("קניתי איש את ה'", "נעשה אדם", "ויתן ה'
+          לה הריון" ברות).
+        </p>
+        <a class="fn-back" href="#fnref1">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-242" id="fn2">
+        <p data-a="01-243">
+          וכמו שהקשה ה"עיון יעקב": הלוא אדם הראשון, שנאמר עליו "לא טוב", לא היו לו עדיין
+          בנים — ואיך לומדים מכאן למי שכבר יש לו בנים? לכן למד הרמב"ם שהפסוק הוא
+          אסמכתא בעלמא. נראה שלפי הרמב"ם, ביאור הפסוק "לא טוב היות האדם לבדו" לפי
+          פשוטו הוא משום שאינו יכול להביא ילדים לעולם. ולפי הדרשה: הרי נאמר בגמרא
+          (עבודה זרה כ ע"ב): "תנו רבנן: ונשמרת מכל דבר רע — שלא יהרהר אדם ביום ויבוא
+          לידי טומאה בלילה". אלמא, המהרהר באשה נקרא "רע" — וזהו "לא טוב היות האדם
+          לבדו", היות ומהרהר באשה.
+        </p>
+        <a class="fn-back" href="#fnref2">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-244" id="fn3">
+        <p data-a="01-245">
+          קרן אורה, מסכת יבמות דף סא עמוד ב: היה נראה שרב נחמן מדאורייתא קאמר, שאסור
+          לעמוד בלא אשה, וכדכתיב "לא טוב היות האדם לבדו" — ושני מצוות הן: לישא אשה
+          ולהוליד בנים. ומשום הכי, אם כבר קיים פרו ורבו, יכול לישא אשה שאינה בת בנים.
+          דאי מדרבנן קאמר, אם כן מאי קאמר בלישנא בתרא "לימא תיהוי תיובתא דרב נחמן"?
+          דילמא מתניתין מדאורייתא קאמר, דבטיל נמי מאשה, ואין מוכרין ספר תורה לא בשביל
+          בנים ולא בשביל אשה. אלא ודאי אין לחלק בזה, כיון שמן התורה מחויב הוא לישא
+          אשה. ולפי זה מצי אתיא מתניתין כרבי יהושע דאמר לקמן "היו לו בנים בילדותו יהיו
+          לו בנים בזקנותו" (כגירסת הרי"ף — משום שרבי יהושע מדרבנן קאמר), והיינו דקאמר
+          הש"ס "נפקא מינה למכור ספר תורה בשביל בנים" — כיון שמחויב הוא מדרבנן להוליד
+          בנים אפילו אם יש לו כבר.
+        </p>
+        <a class="fn-back" href="#fnref3">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-246" id="fn4">
+        <p data-a="01-247">
+          כדעה זו, שמוכרים ספר תורה בשביל להיות עם אשה, מצאנו עוד הרבה אחרונים: שו"ת
+          משיבת נפש חלק א סימן מא הוכיח כן גם מדברי הרמב"ם (פ"י מהלכות ספר תורה ה"ב)
+          שסתם וכתב שלישא אשה מותר למכור ספר תורה, ולא חילק בין אשה בת בנים לשאינה בת
+          בנים; שו"ת פני יהושע (מב) כתב שלישא אשה — פירושו אפילו שאינה בת בנים, ואם
+          אינו יכול לישא אפילו כזאת אלא אם כן ימכור ספר תורה — מחויב למכור, שאסור
+          לעמוד בלא אשה; וכן שו"ת עדות ביהוסף, יד אהרן, שו"ת גליא מסכת, ישועות יעקב,
+          נתיבות לשבת, עטרת ישועה, ופרי יצחק בלזר.
+        </p>
+        <p data-a="01-248">
+          וכדאי להתבונן שלא מצאנו שמוכרים ספר תורה בשביל שום מצווה אחרת — רק ללמוד
+          תורה ולישא אשה, כדברי הרמב"ם (הלכות תפילין ומזוזה וספר תורה פרק י הלכה ב;
+          הלכות מלכים פרק ה הלכה ט). ללמדנו שמעלת האשה כמעלת ספר תורה, שכן נמשלה האשה
+          לתורה במקומות רבים.
+        </p>
+        <a class="fn-back" href="#fnref4">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-249" id="fn5">
+        <p data-a="01-250">
+          וכן אמרו בשבת דף ל ע"א: "ביום השמיני שלח את העם ויברכו את המלך, וילכו לאהליהם
+          שמחים וטובי לב, על כל הטובה אשר עשה ה' לדוד עבדו ולישראל עמו" — "וילכו
+          לאהליהם", שמצאו נשותיהן בטהרה, "שמחים", שנהנו מזיו השכינה, "וטובי לב", שנתעברו
+          נשותיהם וילדו זכר. וכן דרשו חז"ל על הפסוק (איכה ג, יז): "וַתִּזְנַח מִשָּׁלוֹם נַפְשִׁי,
+          נָשִׁיתִי טוֹבָה" — שהכוונה לאשה. וכתב המהר"ל: הטוב שיש לו לאדם מצד האשה, שהיא
+          זולתו — שנאמר "לא טוב היות אדם לבדו" — הוא טוב גמור. וכן (ישעיה נב, ז) "מַשְׁמִיעַ
+          שָׁלוֹם מְבַשֵּׂר טוֹב". ונראה שזה גם הביאור בתהלים (לד, יג–טו): "מִי הָאִישׁ הֶחָפֵץ חַיִּים
+          אֹהֵב יָמִים לִרְאוֹת טוֹב... בַּקֵּשׁ שָׁלוֹם וְרָדְפֵהוּ" — שהשלום מביא טוב.
+        </p>
+        <a class="fn-back" href="#fnref5">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-251" id="fn6">
+        <p data-a="01-252">
+          תרומת הדשן סימן רסג: אמנם לפי צד השני (של השואל), שאם לא ימצא אשה שאינה בת
+          מריבה — ימנע מלישא אשה כלל — בזה אין דעתי נוחה שיפה הוא עושה, שהרי דרשו
+          חכמים שאסור לאדם שיהא שרוי בלא אשה, שנאמר "לא טוב היות האדם לבדו", וגם אמרו
+          "כל השרוי בלא אשה שרוי בלא טובה ובלא ברכה ובלא שמחה ובלא שלום". ותו איכא
+          למיחש שמא תתגבר יצרו עליו ויבוא לידי חטא — ולכן לא דוחקים כל כך מכוח חשש
+          קטטה. מבואר בדבריו שהחיוב להיות עם אשה הוא משום שללא אשה אדם חסר טובה. וכן
+          כתב המהרש"א בחידושי אגדות: "אף על פי שיש לו לאדם כמה בנים כו', שנאמר לא טוב
+          היות האדם לבדו כו'" — טוב הנאמר בכל מעשה בראשית הוא הרצון והקיום לפניו
+          יתברך, ולכך אמר באדם "לא טוב היות אדם לבדו" (שכאשר הוא לבדו, אין זה רצוי
+          לפניו). וכן כתב המאירי (יבמות סב ע"ב): כבר ביארנו שאין ראוי לאדם לעמוד בלא
+          אשה. דרך הערה אמרו: "כל אדם שאין לו אשה שרוי בלא טובה" — שנאמר "לא טוב היות
+          האדם לבדו"; "בלא שמחה" — שנאמר "ושמחת אתה וביתך"; "בלא ברכה" — דכתיב
+          "להניח ברכה אל ביתך"; "בלא תורה" — דכתיב "האם אין עזרתי בי ותושיה נדחה
+          ממני".
+        </p>
+        <p data-a="01-253">
+          ומצאנו שיש לאדם חיוב לקחת אשה גם בשביל שתהיה לו שמחה — לגבי מצוות מעשר שני —
+          כמו שכתב המהרש"א (יבמות סב ע"ב): "כל אדם שאין לו אשה שרוי בלא שמחה, דכתיב
+          'ושמחת אתה וביתך'" — שאשתו קרויה "ביתו" של אדם. וכתב בתורה תמימה (דברים יד,
+          הערה עה): "וביתו — זו אשתו, ומשמע דאי אפשר לאדם יחידי לשמוח שמחה אמיתית כשהוא
+          לבדו".
+        </p>
+        <a class="fn-back" href="#fnref6">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-254" id="fn7">
+        <p data-a="01-255">
+          הטור, אבן העזר הלכות פריה ורביה סימן א, פתח את ההלכות כך: "יתברך שמו של
+          הקדוש ברוך הוא, שהוא חפץ בטוב בריותיו, שידע שאין טוב לאדם להיות לבדו, ועל כן
+          עשה לו עזר כנגדו". מסביר הב"ח: מדוע פתח הטור בשבח זה, שלכאורה אינו מענין
+          הפסיקה עצמה? נראה: לפי שנמצאים מקצת בני אדם המעלים בדעתם המשובשת, שכיון
+          שלטובתי עשה לי את העזר — הנה איני חפץ בטובה זו, ואי אפשי בה, כי לדעתו יותר
+          טוב לו לישב בלא אשה. ולכן, להוציא טעות זה מן הלב, אמר יתברך שמו: "שידע שאין
+          טוב..." — כי הוא יתברך, היודע מה הוא העזר, ולא מחשבת ליבו של האדם הטועה
+          בדעתו. מבואר שהטור בא ללמדנו: בורא כל העולמים יודע שהטוב לאדם שלא יהיה
+          לבדו, ואין לאדם לחשוב שהוא מבין יותר טוב מיוצרו ובוראו — אלא חייב לבטל רצונו
+          ודעתו מפני רצון המקום ברוך הוא, כי חיוב הוא, ולא רק "טובה" שהוא רשאי לוותר
+          עליה.
+        </p>
+        <a class="fn-back" href="#fnref7">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-256" id="fn8">
+        <p data-a="01-257">
+          כעין דברי הרמב"ן מצאנו בזוהר הקדוש (חלק ג דף מד ע"ב): "וְכִי לְבַדּוֹ הֲוָה, וְהָא כְּתִיב
+          (בראשית ה) 'זָכָר וּנְקֵבָה בְּרָאָם', וְתָנֵינָן: אָדָם דּוּ פַּרְצוּפִין אִתְבְּרֵי — וְאַתְּ אַמְרַת 'לֹא טוֹב
+          הֱיוֹת הָאָדָם לְבַדּוֹ'"? (וכי לבדו היה? הרי כתוב בבריאה הראשונה "זכר ונקבה ברא
+          אותם", ולמדנו במסכת ברכות שהאדם נברא "דו פרצופין" — אם כן מה פירוש הפסוק "לא
+          טוב היות האדם לבדו"?) מתרץ הזוהר הקדוש: "אֶלָּא דְּלָא אִשְׁתְּדַּל בְּנוּקְבֵיהּ, וְלָא הַוַת לֵיהּ
+          סֶמֶךְ לָקֳבְלֵיהּ, בְּגִין דְּהֲוַת בְּסִטְרוֹי, וַהֲווּ כַּחֲדָא מֵאֲחוֹרָא, וּכְדֵין הֲוָה הָאָדָם לְבַדּוֹ... אֶעֱשֶׂה
+          לּוֹ עֵזֶר כְּנֶגְדּוֹ. מַהוּ 'כְּנֶגְדּוֹ'? לָקֳבֵל אַנְפּוֹי, לְאִתְדַּבְּקָא דָּא בְּדָא אַנְפִּין בְּאַנְפִּין. מָה עֲבַד קוּדְשָׁא
+          בְּרִיךְ הוּא? נָסַר לֵיהּ וְנָטִיל נוּקְבָּא מִנֵּיהּ, הֲדָא הוּא דִכְתִיב 'וַיִּקַּח אַחַת מִצַּלְעוֹתָיו'". ביאור
+          הדברים: "לא טוב לבדו" פירושו — לא טוב שאדם נמצא ללא אהבה, אחווה, שלום ורעות
+          עם רעייתו, משום שכאשר הם דבוקים מגבם, ואינם רואים את פני השני — אין אהבה
+          ואיחוד ביניהם, וזה נחשב שהוא "לבד". ולכן הפריד ה' וחילקם לשניים, וכעת היא
+          "עזר כנגדו" — כנגד פניו, שעל ידי שהם רואים אחד את השני, הם יכולים להתחבר זה
+          לזה פנים בפנים.
+        </p>
+        <a class="fn-back" href="#fnref8">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-258" id="fn9">
+        <p data-a="01-259">
+          ספר תולעת יעקב, וכן השל"ה הקדוש: אמר רבי תנחום בר חנילאי, "כל השרוי בלא אשה
+          שרוי בלא טובה בלא שמחה בלא ברכה" וכו'. הנה הודיעונו <strong>שהיות האשה סיבת כל
+          הטובות</strong> האלה, לפי שבה השלמות. ובדוגמא זו למעלה — סוד "צלם ודמות", כי תשוקת
+          העליונים להריק ברכה אל בית דוד, ובסיבתה מתברך המלך שלמה. וזהו שאמר עליה
+          (שיר השירים ה, ב) "אֲחֹתִי רַעְיָתִי", ואמרו רז"ל במדרש חזית: "רעיתי — מפרנסתי".
+          וכשהמלך מרוחק מן המלכה, כפי התעוררות התחתונים, אין המלך שלם — כי אינו אלא
+          חצי אדם, <strong>ואין טובה אלא על דבר שלם, ועל השלימות תחול הטובה</strong>. בלא ברכה —
+          שהברכה נמנעת מלבוא, לפי שאין שם על מה שתחול, והשמחה נמנעת בזה. והמבין כל זה
+          ידע ויכיר ענין הזיווג על בוריו, וישתדל לישא אשה לשם שמים ולא יפנה אל רהבים.
+          ובהתקדש האדם עם אשתו על הכוונה הזו, יתן לכוחות העליונים מקום לפעול בקדושה
+          ובטהרה, ותבוא אליו הנפש ממקום קדוש, ואם תלמיד חכם הוא — יביא ענף מהשורש
+          כמוהו.
+        </p>
+        <a class="fn-back" href="#fnref9">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-260" id="fn10">
+        <p data-a="01-261">
+          מסכת שבת דף קמט עמוד ב: אמר רבי יעקב בריה דבת יעקב: כל שחברו נענש על ידו —
+          אין מכניסין אותו במחיצתו של הקדוש ברוך הוא. מנין? ... אלא מהכא: "גַּם עֲנוֹשׁ
+          לַצַּדִּיק לֹא טוֹב" — אין "לא טוב" אלא "רע", וכתיב "כִּי לֹא אֵל חָפֵץ רֶשַׁע אָתָּה, לֹא יְגֻרְךָ
+          רָע. צַדִּיק אַתָּה ה', וְלֹא יָגוּר בִּמְגוּרְךָ רָע". יש להעיר מכאן דבר מעניין: שאלה מפורסמת
+          — האם אדם ללא אשה הוא רק "לא טוב" או שהוא ממש "רע"? מן הגמרא הנ"ל משמע שמי
+          שהוא "לא טוב" — הוא בגדר "רע".
+        </p>
+        <a class="fn-back" href="#fnref10">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-262" id="fn11">
+        <p data-a="01-263">
+          ראה מה שכתוב בזוהר חלק ג דף ה ע"ב: "תָּא חֲזִי, אָדָם כִּי יַקְרִיב, לַאֲפוּקֵי מַאן דְּלָא
+          אִתְנְסִיב, דְּהָא קָרְבָּנֵיהּ לָאו קָרְבָּן, וּבִרְכָּאן לָא מִשְׁתַּכְּחָן לְגַבֵּיהּ, לָא לְעֵילָּא וְלָא לְתַתָּא...
+          וּנְדָב וַאֲבִיהוּא אוֹכָחָן... בְּגִין דְּמַאן דְּלָא אִתְנְסִיב הוּא פָּגִים... קְדוּשָּׁה דְּמַלְכָּא אִסְתַּלָּק
+          מִנֵּיהּ, וְלָא שַׁרְיָא בִּפְגִּימוּ". נתבונן: נדב ואביהוא, קדושי עליון היו, ובכל זאת, היות
+          והיו ללא אשה, נחשבו פגומים, בעלי מומים — כמו רכב עם שני גלגלים. כמה צריך
+          האדם להתבונן בדבר: שכן, גם מי שיש לו אשה, אם אינו אוהב אותה ומכבדה — הרי זה
+          כמעט כמי שאין לו אשה, שכן אדם שאינו מעריך את מה שיש לו, בשמים אינו נחשב לו
+          כאילו יש לו — כמו שרואים ששכר המצוות הוא לפי כמה שאדם מעריך אותן (וכן מצאנו
+          שעם שבשוק מתברכים מן הכהנים, אך עם שמאחורי הכהנים, שאינם מעריכים, אינם בכלל
+          הברכה).
+        </p>
+        <a class="fn-back" href="#fnref11">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-264" id="fn12">
+        <p data-a="01-265">
+          ילקוט יוסף, שובע שמחות א, הערות פרק א אות ג: בזמן הזה שרבתה הפריצות ברחוב,
+          דעת מרן זצ"ל שיש להזדרז בזה, אם אינו שקוע כל כולו בלימוד בלא שום יציאה, כדי
+          שיעסוק בתורה מתוך קדושה וטהרה — שהרי כיום יש הרבה כוללים, ואצל הרבה אברכים
+          עיקר הלימוד, בהתעלות ובמשך שנים, נעשה בכולל. ועל כל פנים, בחור שעדיין לא מצא
+          את בת זוגו — ישקיע ראשו ורובו בבירור הסוגיות בהבנה ובעיון בדברי הראשונים,
+          ורק על ידי שיהיה שקוע בתורה יוכל להינצל מהרהורי עבירה. גם החזון איש כותב
+          (קידושין כט ע"ב): אף על גב שבבבל אמרינן דילמוד תורה ואחר כך ישא אשה, מכל מקום
+          לא יאחר מעשרים שנה, דהא תניא "ואם אי אפשר בלא אשה — ישא אשה ואחר כך ילמוד
+          תורה", ולאחר עשרים שנה הוי בגדר "לא אפשר בלא אשה", דהרי הוא כל ימיו בהרהור.
+        </p>
+        <a class="fn-back" href="#fnref12">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-266" id="fn13">
+        <p data-a="01-267">
+          לאידך גיסא, ראה מה שכתב הגאון רבי חיים פלאג'י בספרו "תוכחת חיים" (בראשית):
+          ובכלל זה, למי שהוא אלמן שמתה אשתו — אף שיש לו בנים ובנות וקיים מצות פריה
+          ורביה, אם הוא עדיין בכוחו ואינו זקן גמור, הרי אי אפשר בלי הרהורי עבירה, שיצרו
+          מתגבר עליו, ואיכא חיוב מדינא דש"ס והפוסקים ז"ל שאסור לו לעמוד בלא אשה אפילו
+          שקיים פריה ורביה. אבל למנוע עצמו מלישא אשה לגמרי, ולהיות פנוי בלא אשה מחמת
+          חשש קטטה, ולעשות עבירה שיתגבר עליו יצרו — זה איסור גמור. ומכאן תוכחה מגולה
+          לבנים ולבנות המונעים מאביהם שלא ישא אשה אחרת כשמתה אמם, משום עגמת נפשם —
+          אינם עושים יפה.
+        </p>
+        <a class="fn-back" href="#fnref13">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-268" id="fn14">
+        <p data-a="01-269">
+          שם, בחוברת "וידעת", תירץ בזה הגר"ח פידלנדר את הקושיה: מהו "לא טוב", הרי לא
+          היה לבד (דו פרצופים נבראו)? אלא "לא טוב" הכוונה שאינו אדם מטיב. והקשה לו
+          בחור: הרי יכול היה להיטיב עמה גם כך, לשלוח לה דברים? ותירץ לו על פי דברי
+          הזוהר הנ"ל, שבלי שהיו פנים אל מול פנים, לא יכול היה לחייך אליה — וזהו עיקר
+          תפקיד הבעל: לשמח את אשתו.
+        </p>
+        <a class="fn-back" href="#fnref14">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-270" id="fn15">
+        <p data-a="01-271">
+          מעניין לציין שבפרשת עקב מוזכר כמה פעמים היחס לאשה: א. "וְהָיָה עֵקֶב תִּשְׁמְעוּן" —
+          "עקב" זו אשה, הנקראת "בית יעקוב". ב. "שָׁמֹר אֶת כָּל הַמִּצְוָה" — רומז לאשה. ג. "כִּי עַל
+          כָּל מוֹצָא פִי ה' יִחְיֶה הָאָדָם" — כתב מהרח"ו: זו אשה, שבשכר אהבתה יזכה לחיים בעולם
+          הזה ובעולם הבא, כדכתיב "רְאֵה חַיִּים עִם אִשָּׁה אֲשֶׁר אָהַבְתָּ". ד. בהפטרה: "שִׁמְעוּ אֵלַי
+          רֹדְפֵי צֶדֶק... כִּי אֶחָד קְרָאתִיו" — ואז נזכה ל"כי נחם". ה. תשעה באב שחל בשבוע של
+          פרשת עקב הוא 45 יום לפני ראש השנה — ו-45 בגימטריה הוא "אדם", וכן "לב אחד",
+          וגם גימטריית הוי"ה במילוי האותיות היא 45 — המראה על ייחוד הקדוש ברוך הוא
+          ושכינתו, המבואר בפתח אליהו, ונעשה על ידי לב אחד של איש ואשה. ועל כך נאמר "מָה
+          ה' אֱלֹהֶיךָ שֹׁאֵל מֵעִמָּךְ" — ה' שואל מעמך יחוד הקדוש ברוך הוא ושכינתו, שזה
+          בגימטריה "מה".
+        </p>
+        <a class="fn-back" href="#fnref15">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-272" id="fn16">
+        <p data-a="01-273">
+          הקשה השואל בשו"ת שלמת חיים יורה דעה סימן קיב: בשלמא בנים יש קצבה מן התורה,
+          ויותר מזה אינו חייב אלא מדברי קבלה. אבל "למד תורה בילדותו" — וכי מצות תלמוד
+          תורה, וכן "ושננתם לבניך", אלו התלמידים, נאמרה רק על עת ילדותו? ומה שונה זה
+          מכל שאר המצוות האמורות בתורה, שאדם מחויב בהן כל ימי חייו — ואם כן, למה צריך
+          על כך פסוק מדברי קבלה? תשובה: מצוות תלמוד תורה — "ושננתם" או "ולמדתם" — היינו
+          האב לבנים; הגם שגם תלמידים נקראו בנים, אבל הוה אמינא שלא לרבות אלא דומיא של
+          בנים, כל זמן שמחויב ללמוד עם הבנים חייב גם בתלמידים, אבל כשעבר זמן זה, שכבר
+          למד עם בניו — אם כן פטור גם מתלמידים; לכך מרבים מדברי קבלה. למדנו מדבריו
+          ששייך להקיש בנים לתלמידים, ועל אותו דרך נאמר — הקש מתורה לאשה.
+        </p>
+        <a class="fn-back" href="#fnref16">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-274" id="fn17">
+        <p data-a="01-275">
+          בזה נבין את מה שאמר רבי חייא על האשה, ש"דיינו שמצילות אותנו מן החטא" — אין
+          הכוונה שרק זו מעלת האשה, אלא שאשתו היתה אשה רעה, ולא היה בה כל ה"מצא טוב";
+          ובכל זאת, את ה"סור מרע" היה בה, ולכן אמר שגם על זה צריך להכיר טובה.
+        </p>
+        <a class="fn-back" href="#fnref17">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-276" id="fn18">
+        <p data-a="01-277">
+          פירוש הגר"א ז"ל על ספר יצירה, פרק א משנה ח: המאמר מתחלק לחמישה חלקים: רצון,
+          מחשבה, הרהור, קול, ודיבור. הרצון — התחלת הרצון לדבר; המחשבה — שמחשב מה
+          לדבר, אך אינו מצייר דיבור; ההרהור — שמצייר דיבור בהרהור; הקול — בגרונו קודם
+          שיורד לפה; והדיבור — חיתוך האותיות. הרצון בנפש, המחשבה במוח, ההרהור בלב,
+          והקול והדיבור בגרון ובפה — והם כנגד חמשת הפרצופים; והיינו שיש פה כנגד אותיות
+          הוי"ה, ו-ה' הינו תורה שבעל פה (שאומרים בפה, וכל זה כנגד ההולדה).
+        </p>
+        <a class="fn-back" href="#fnref18">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-278" id="fn19">
+        <p data-a="01-279">
+          כמו שכתב בספר "באר מים חיים" (פרשת נח, פרק יא): אמרו בגמרא — "האיש מצווה על
+          פריה ורביה ולא האשה; רבי יוחנן בן ברוקה אומר: על שניהם הוא אומר, 'וַיְבָרֶךְ
+          אֹתָם אֱלֹהִים וַיֹּאמֶר לָהֶם פְּרוּ וּרְבוּ'". ולכאורה צריך לתרץ לדברי תנא קמא, מה שאמר
+          בפירוש "וַיֹּאמֶר לָהֶם"? אלא, שני מיני הולדות יש: האחד בגשמיות העולם — בנים
+          ובנות, "כי לשבת יצרה"; והשני — הולדת הנשמות בעולם העליון, על ידי מצוות ומעשים
+          טובים, שמהם באים נשמות לגרים או לבעלי תשובה, כנודע מדברי מרן האר"י ז"ל.
+          והעיקר לזה הוא איש ואשה שמזדווגים בכוונת אמת לשם ה', ובזה השווה האשה לאיש,
+          כי גם היא צריכה לגרום במעשים טובים למעבד "נשמתין ורוחין חדתין", שהוא עיקר
+          תולדותיהם של צדיקים — מעשים טובים. ועל כן זה אשר נאמר "וַיֹּאמֶר לָהֶם פְּרוּ וּרְבוּ" —
+          הכוונה על הולדה זו. ובזה שניהם שווים לעשות פרי למעלה, להרבות הנשמות בעולם
+          העליון. ואמנם הציווי על תולדות הארץ כפשוטה, להוליד בנים לקיום המין, הוא מה
+          שנאמר אחר כך "וּמִלְאוּ אֶת הָאָרֶץ וְכִבְשֻׁהָ" — למלא הארץ התחתונה, להרבות דמות
+          וצלם אלוהים בעולם — ובזה נאמר "וְכִבְשֻׁהָ", ואיש דרכו לכבוש ולא האשה, ועל כן הוא
+          מצווה ולא היא.
+        </p>
+        <a class="fn-back" href="#fnref19">↑ חזרה לטקסט</a>
+      </li>
+
+      <li data-a="01-280" id="fn20">
+        <p data-a="01-281">
+          ביאור לספר המצוות לרס"ג (הרב פערלא): מצוות תלמוד תורה מנאה רבנו הגאון ז"ל
+          בשתי מצוות: ללמוד לעצמו — מצוה בפני עצמה; וללמד לאחרים — מצוה בפני עצמה,
+          שבכל אחת כתוב מקרא מיוחד בפני עצמו: בללמוד לעצמו כתיב (פרשת ואתחנן) "וּלְמַדְתֶּם
+          אֹתָם וּשְׁמַרְתֶּם לַעֲשֹׂתָם"; ובללמד לאחרים כתיב (פרשת שמע) "וְשִׁנַּנְתָּם לְבָנֶיךָ" וגו' (אלו
+          תלמידים); ובסדר עקב (פרשת "והיה") כתיב "וְלִמַּדְתֶּם אֹתָם אֶת בְּנֵיכֶם" וגו' (אלו הבנים
+          ממש). וכן כתבו הסמ"ג (עשין יב) והיראים (סימן כה). וכיון שבכל אחת כתובה מצוה
+          בפני עצמה, ודאי יש למנותן בשתי מצוות עשה לעצמן. וכן בעל הלכות גדולות וכל
+          הנמשכים אחריו, וכן הסמ"ק (סימנים קה, קו), מנאום כל אחת למצות עשה מיוחדת. אבל
+          הרמב"ם ז"ל וכל הנמשכים אחריו מנו בזה רק מצות עשה אחת, וסברו שאין זה אלא
+          כעשין כפולים.
+        </p>
+        <a class="fn-back" href="#fnref20">↑ חזרה לטקסט</a>
+      </li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+  </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    var target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    history.pushState(null, '', '#' + id);
+  });
+
+  var scrollTopBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 400) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+</script>
+
+<script>
+/* =============================================================================
+   קול תודה — מנוע הקראה למאמרים תורניים   |   tts.js   v2.0
+   -----------------------------------------------------------------------------
+   העתק את הקובץ הזה כמות שהוא לתוך תגית <script> בסוף ה-HTML.
+   אין לכתוב אותו מחדש, לקצר או "לשפר" תוך כדי יצירת מאמר — הוא נבדק כך.
+   Web Speech API בלבד: בלי API חיצוני, בלי מפתח, בלי רשת, בלי עלות.
+   ============================================================================= */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    var NS       = 'koltoda.tts.';
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false, noHeVoice = false;
+    var clickToRead = true;
+
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+    function readPos() { try { return parseInt(localStorage.getItem(POS_KEY) || '0', 10) || 0; } catch (e) { return 0; } }
+
+    var G = '["\\u05f4\\u201d\\u2033]';
+    var R = "['\\u05f3\\u2019]";
+
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' ');
+        t = t.replace(/־/g, ' ');
+        t = t.replace(/\s*[–—]\s*/g, ', ');
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function chapterLabel(h) {
+        var d = h.getAttribute && h.getAttribute('data-chapter');
+        if (d && d.trim()) return d.trim();
+        var p = h.previousElementSibling;
+        if (p && p.classList && p.classList.contains('chapter-label')) {
+            return p.textContent.replace(/\s+/g, ' ').trim();
+        }
+        return '';
+    }
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (n.closest(SKIP)) return;
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            if (n.tagName === 'H2') {
+                var lbl = chapterLabel(n);
+                if (lbl && raw.indexOf(lbl) !== 0) raw = lbl + '. ' + raw;
+            }
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    function hint() {
+        if (noHeVoice) {
+            return 'לא נמצא קול עברי במחשב — ההקראה תישמע משובשת. ' +
+                   'ב-Windows: הגדרות ← שעה ושפה ← דיבור ← נהל קולות ← הוסף קולות ← עברית.';
+        }
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = readPos();
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        var was = noHeVoice;
+        noHeVoice = !he.length;
+        if (noHeVoice !== was && !isOn) say(hint());
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;
+                if (e.target.closest('a')) return;
+                if (window.getSelection && String(window.getSelection()).length) return;
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    var FS_MIN = 0.85, FS_MAX = 1.75, FS_STEP = 0.15, fontScale = 1;
+
+    function applyFontScale() {
+        document.documentElement.style.setProperty('--fs', String(fontScale));
+        var out = document.getElementById('fontScaleValue');
+        if (out) out.textContent = Math.round(fontScale * 100) + '%';
+        var dec = document.getElementById('fontSmaller'), inc = document.getElementById('fontBigger');
+        if (dec) dec.disabled = fontScale <= FS_MIN + 0.001;
+        if (inc) inc.disabled = fontScale >= FS_MAX - 0.001;
+    }
+
+    window.setFontScale = function (dir) {
+        fontScale = Math.min(FS_MAX, Math.max(FS_MIN, +(fontScale + dir * FS_STEP).toFixed(2)));
+        store('fs', String(fontScale));
+        applyFontScale();
+    };
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var savedFs = parseFloat(store('fs') || '1');
+        if (savedFs >= FS_MIN && savedFs <= FS_MAX) fontScale = savedFs;
+        applyFontScale();
+        if (readPos() > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+<script data-audio-cues="" type="application/json">{"01":[0.1,2.51,5.58,9,34.13,76.5,94.81,107.3,118.69,140.81,156.96,167.1,181.61,194.04,201.59,208.07,224.32,245,271.91,274.22,294.84,297.64,309.39,312.9,312.9,328.46,347.16,368.16,368.16,397.99,397.99,435.48,455.36,455.36,483.39,501.34,501.34,507.68,507.68,563.62,580.76,580.76,627.03,649.26,649.26,674.61,695.92,724.01,748.09,748.09,776.78,787.29,794.39,847.23,851.58,851.58,872.46,881.9,881.9,912.07,912.07,922.29,941.24,955.83,958.93,977.4,990.62,998.63,1000.47,1000.47,1037.37,1047.88,1047.88,1061.93,1107.96,1128.11,1146.13,1159.45,1201.2,1210.16,1213.13,1213.13,1228.52,1253.26,1297.6,1314.12,1327.9,1361.97,1361.97,1387.29,1419.16,1426.89,1434.77,1442.41,1465.52,1481.93,1491.82,1503.46,1547.06,1556.02,1608.16,1608.16,1620.01,1620.01,1656.81,1686.15,1698.57,1721.82,1752.03,1764.78,1764.78,1808.37,1816.92,1835.82,1835.82,1854.5,1872.35,1900.79,1935.07,1935.07,1950.01,1950.01,1968.27,2007.75,2016.48,2016.48,2062.03,2074.89,2082.3,2104.83,2134.48,2140.2,2152.63,2184.49,2232.18,2240.39,2295.03,2336.21,2336.21,2354.47,2371.52,2399.82,2406.16,2406.16,2463.52,2494.44,2494.44,2518.82,2534.54,2588.84,2603.46,2645.09,2655.48,2662.83,2708.18,2740.83,2770.98,2770.98,2770.98,2798.98,2817.05,2838.67,2838.67,2880.24,2880.24,2880.24,2894.21,2930.69,2930.69,2954.03,2991.11,2991.11,3000.54,3000.54,3000.54,3013.78,3025.42,3040.81,3068.6,3068.6,3087.7,3106.01,3113.21,3133,3146.15,3146.15,3156.28,3184.67,3184.67,3217.57,3244.19,3269.16,3280.38,3286.61,3293.83,3311.87,3356.24,3364.44,3388.66,3434.85,3455.8,3485.59,3485.59,3509.44,3518.08,3531.03,3560.19,3560.19,3622.53,3639.04,3666.14,3715.07,3729.51,3779.08,3779.08,3798.75,3817.93,3838.19,3867.92,3898.23,3898.23,3940.94,3966.85,4001.94,4001.94,4027.87,4039.02,4084.04,4140.79,4163.74,4167.09,4181.01,4208.9,4223.54,4248.65,4292.05,4326.01,4326.01,4363.31,4504.9,4526.01,4626.88,4644.28,4680.14,4718.71,4778.11,4835.23,4910.7,4910.7,4975.54,5019.56,5075.57,5184.05,5262.58,5286.17,5343.61,5406.48,5472.45,5554.13,5628.58,5701.01,5738.49,5772.89,5829.38,5892.01,5955.54,6010.39,6040.39,6082.64,6118.6,6145.51,6210.81,6273.44,6326.76,6384.28,6414.71,6421.61,6456.67,6499.44,6581.94,6662.73,6738.24]}</script><script data-audio-player="">
+/* =============================================================================
+   audio-player.js — נגן ההקלטה (MP3 שהופק מראש ב-edge-tts)
+   הדבק מילה במילה. נפרד לגמרי מ-tts.js (ההקראה החיה של הדפדפן).
+   ============================================================================= */
+(function () {
+    var box = document.querySelector('.audio-player');
+    if (!box) return;
+
+    var audio  = box.querySelector('audio');
+    var select = box.querySelector('.audio-chapter-select');
+    if (!audio || !select) return;
+
+    var KEY = 'koltoda.audio.ch.' + (document.title || '');
+
+    /* מפת תזמונים: { "01": [0, 3.2, 9.7, ...] } — זמן תחילת כל פסקה בקטע.
+       נוצרת ב-make-audio.mjs מקובצי ה-SRT של edge-tts. */
+    var CUES = {};
+    var tag = document.querySelector('script[data-audio-cues]');
+    if (tag) { try { CUES = JSON.parse(tag.textContent || '{}'); } catch (e) {} }
+
+    var seg = null;      // מזהה הקטע הפעיל, למשל "01"
+    var line = -1;       // אינדקס הפסקה המודגשת
+
+    /* ---------- הדגשה ---------- */
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+        line = -1;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+
+        /* בספר מתחלף — מדפדפים לעמוד של הפסקה, כמו בהקראה החיה */
+        var pg = el.closest ? el.closest('.page') : null;
+        if (pg && !pg.classList.contains('active') && window.bookGo) {
+            var pages = [].slice.call(document.querySelectorAll('#book .page'));
+            var i = pages.indexOf(pg);
+            if (i > -1) { window.bookGo(i); return; }
+        }
+
+        /* גוללים רק אם הפסקה מחוץ למסך, כדי לא לחטוף את הדף מהקורא */
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    /* איזו פסקה נאמרת עכשיו — האחרונה שזמן ההתחלה שלה כבר עבר */
+    function lineAt(starts, t) {
+        var lo = 0, hi = starts.length - 1, ans = 0;
+        while (lo <= hi) {
+            var mid = (lo + hi) >> 1;
+            if (starts[mid] <= t) { ans = mid; lo = mid + 1; } else { hi = mid - 1; }
+        }
+        return ans;
+    }
+
+    audio.addEventListener('timeupdate', function () {
+        var starts = CUES[seg];
+        if (!starts || !starts.length) return;
+        var i = lineAt(starts, audio.currentTime);
+        if (i === line) return;
+        line = i;
+        var el = document.querySelector('[data-a="' + seg + '-' + i + '"]');
+        if (el) highlight(el);
+    });
+
+    /* ---------- קבצים שנבחרו מהמחשב ----------
+       דפדפן לא יכול לקרוא נתיב מקומי מעצמו (תיקיית ההורדות חסומה לו), אבל
+       קובץ שהמשתמש בוחר בעצמו מותר. ממפים לפי שם הקובץ, כך שאפשר לבחור את
+       כל פרקי הספר בבת אחת. ההדגשה עובדת גם ככה — התזמונים כבר בדף. */
+    var picked = {};
+    var note   = box.querySelector('.audio-note');
+    var input  = box.querySelector('.audio-pick-input');
+    var pickBtn = box.querySelector('.audio-pick-btn');
+
+    function say(msg) { if (note) note.textContent = msg || ''; }
+
+    /* קישור הורדה שלא מולא עדיין מוסתר מהקורא — אין טעם ב"לחץ כאן" מת.
+       הבדיקה היא על ה-href עצמו, כך שברגע שמדביקים כתובת הוא מופיע לבד. */
+    var dl = box.querySelector('.audio-download');
+    if (dl && (dl.getAttribute('href') || '#') === '#') dl.style.display = 'none';
+
+    function baseName(u) {
+        try { u = decodeURIComponent(u); } catch (e) {}
+        return u.split('/').pop();
+    }
+
+    function srcFor(opt) {
+        return picked[baseName(opt.value)] || opt.value;
+    }
+
+    if (pickBtn && input) {
+        pickBtn.addEventListener('click', function () { input.click(); });
+        input.addEventListener('change', function () {
+            var files = [].slice.call(input.files || []);
+            if (!files.length) return;
+            var names = {};
+            for (var i = 0; i < select.options.length; i++) names[baseName(select.options[i].value)] = true;
+
+            var matched = 0, spare = [];
+            files.forEach(function (f) {
+                if (names[f.name]) { picked[f.name] = URL.createObjectURL(f); matched++; }
+                else spare.push(f);
+            });
+            /* קובץ יחיד בשם אחר — מניחים שהוא של הפרק המוצג */
+            if (!matched && spare.length === 1) {
+                picked[baseName(select.options[select.selectedIndex].value)] = URL.createObjectURL(spare[0]);
+                matched = 1;
+            }
+            say(matched ? 'נטענו ' + matched + ' קבצים מהמחשב.' : 'שמות הקבצים לא תואמים לפרקים.');
+            if (matched) load(select.selectedIndex, true);
+        });
+    }
+
+    /* הקובץ לא נמצא בנתיב היחסי — מכוונים להורדה ולבחירה ידנית */
+    audio.addEventListener('error', function () {
+        if (!audio.getAttribute('src')) return;
+        say('קובץ השמע לא נמצא לצד הדף. הורד אותו ואז בחר אותו כאן.');
+    });
+
+    /* ---------- ניווט בין פרקים ---------- */
+    function load(i, autoplay) {
+        var opt = select.options[i];
+        if (!opt) return;
+        select.selectedIndex = i;
+        seg = opt.getAttribute('data-seg');
+        clearHighlight();
+        audio.src = srcFor(opt);
+        try { localStorage.setItem(KEY, String(i)); } catch (e) {}
+        if (autoplay) {
+            var p = audio.play();
+            /* דפדפן שחוסם ניגון אוטומטי זורק — לא נשאיר Promise תלוי */
+            if (p && p.catch) p.catch(function () {});
+        }
+    }
+
+    select.addEventListener('change', function () { load(select.selectedIndex, true); });
+
+    /* סיום פרק — מנקה הדגשה וממשיך לבא אחריו מעצמו, כמו בהקראה החיה.
+       (השהיה לעומת זאת משאירה את ההדגשה — היא מסמנת איפה עצרנו.) */
+    audio.addEventListener('ended', function () {
+        clearHighlight();
+        if (select.selectedIndex < select.options.length - 1) {
+            load(select.selectedIndex + 1, true);
+        } else {
+            try { localStorage.removeItem(KEY); } catch (e) {}
+        }
+    });
+
+    /* חוזרים לפרק שבו עצרנו — בלי לנגן מעצמו */
+    var saved = 0;
+    try { saved = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (e) {}
+    if (saved < 0 || saved >= select.options.length) saved = 0;
+    load(saved, false);
+})();
+
+</script></body>
+</html>
