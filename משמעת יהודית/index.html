@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="torah-html-article 2.7.0">
+<title>משמעת יהודית: מהפעלה חיצונית לבניין הפנים</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #1f2937;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdfb;
+    padding: 60px 80px;
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  h1.main-title {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 1.3em;
+    color: #6b7280;
+    margin-bottom: 8px;
+  }
+  .author {
+    text-align: center;
+    font-size: 1.1em;
+    color: #7e22ce;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 2.2em;
+    color: #7e22ce;
+    border-right: 6px solid #7e22ce;
+    padding-right: 20px;
+    margin-top: 50px;
+  }
+  h3 {
+    font-size: 1.8em;
+    color: #2563eb;
+    margin-top: 35px;
+  }
+  h4 {
+    font-size: 1.5em;
+    color: #059669;
+  }
+  p, li {
+    font-size: 1.15em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  .emphasis { color: #7e22ce; font-weight: bold; }
+  em { color: #2563eb; font-style: italic; }
+
+  .toc {
+    background: #f3e8ff;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 30px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .toc h3 { margin-top: 0; color: #7e22ce; }
+  .toc ul { list-style: none; padding-right: 10px; }
+  .toc li { margin-bottom: 10px; font-size: 1.05em; }
+  .toc a { color: #2563eb; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  .verse-box, .highlight-box, .quote-box, .story-box {
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 30px 0;
+    box-shadow: 0 5px 15px rgba(126,34,206,0.15);
+  }
+  .verse-box {
+    background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    border-right: 6px solid #7e22ce;
+    font-size: 1.2em;
+    text-align: center;
+    font-style: italic;
+  }
+  .highlight-box {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    border-right: 6px solid #2563eb;
+  }
+  .quote-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-right: 6px solid #f59e0b;
+    font-style: italic;
+  }
+  .quote-box .source-tag {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #92400e;
+    text-align: left;
+  }
+  .story-box {
+    background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    border-right: 6px solid #059669;
+  }
+  .qa-box {
+    border: 2px dashed #ec4899;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 30px 0;
+    background: #fff;
+  }
+  .qa-box .q { color: #ec4899; font-weight: bold; }
+  .qa-box .a { color: #1f2937; }
+
+  .section-divider {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    color: #fff;
+    text-align: center;
+    padding: 18px;
+    border-radius: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 40px 0;
+    box-shadow: 0 5px 15px rgba(126,34,206,0.15);
+  }
+
+  .two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 30px 0;
+  }
+  .col-purple, .col-gold {
+    border-radius: 12px;
+    padding: 22px 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .col-purple { background: #f3e8ff; border-right: 5px solid #7e22ce; }
+  .col-gold { background: #fef3c7; border-right: 5px solid #f59e0b; }
+  .col-purple h4, .col-gold h4 { margin-top: 0; }
+  .col-gold h4 { color: #b45309; }
+
+  .sources {
+    background: #f3f4f6;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-top: 50px;
+  }
+  .sources h3 { color: #374151; margin-top: 0; }
+  .sources ol { padding-right: 20px; }
+
+  .footer {
+    margin-top: 50px;
+    text-align: center;
+    background: #fdf2f8;
+    border-radius: 12px;
+    padding: 30px;
+    color: #4b5563;
+    line-height: 2;
+  }
+  .footer a { color: #7e22ce; font-weight: bold; }
+
+  .scroll-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: #7e22ce;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.3em;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+  }
+
+  @media (max-width: 768px) {
+    body { padding: 15px; }
+    .container { padding: 30px 20px; }
+    h1.main-title { font-size: 2em; }
+    h2 { font-size: 1.6em; }
+    h3 { font-size: 1.3em; }
+    .two-columns { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+    .scroll-top { display: none !important; }
+    h2 { page-break-before: always; break-before: page; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+    h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+    .footer { page-break-before: always; break-before: page; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+  }
+
+  /* ---------- סרגל ההאזנה (נוסף אוטומטית) ---------- */
+  :root{
+    --lb-purple:#7e22ce; --lb-blue:#2563eb; --lb-green:#059669;
+    --lb-gold:#f59e0b; --lb-pink:#ec4899; --lb-muted:#6b7280;
+    --fs: 1;
+  }
+  .listen-bar{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid var(--lb-gold);
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+  }
+  .listen-btn-group{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .listen-btn{
+    display:flex; align-items:center; gap:8px;
+    background:linear-gradient(135deg, var(--lb-purple) 0%, var(--lb-pink) 100%);
+    color:#fff; border:none; border-radius:30px; padding:10px 22px;
+    font-size:1em; font-weight:bold; font-family:inherit; cursor:pointer;
+    transition:transform .15s, box-shadow .15s;
+  }
+  .listen-btn:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,.3); }
+  .listen-btn:active{ transform:translateY(0); }
+  .listen-stop-btn, .listen-skip-btn, .listen-size-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 16px; font-size:.95em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .listen-skip-btn{ padding:8px 12px; }
+  .listen-stop-btn:hover, .listen-skip-btn:hover,
+  .listen-size-btn:hover:not(:disabled){ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-size{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-size-btn{ padding:6px 12px; line-height:1; }
+  .listen-size-btn:disabled{ opacity:.35; cursor:default; border-color:#d1d5db; color:var(--lb-muted); }
+  .listen-size-btn.big{ font-size:1.25em; }
+  .listen-size output{ font-weight:bold; min-width:3.4em; text-align:center; }
+  .listen-toggle-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 14px; font-size:.88em; font-weight:bold;
+    font-family:inherit; cursor:pointer; white-space:nowrap;
+    transition:transform .15s, background .15s, opacity .15s;
+  }
+  .listen-toggle-btn:hover{ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-toggle-btn[aria-pressed="false"]{
+    color:var(--lb-muted); border-color:#d1d5db; background:#f9fafb; opacity:.8;
+  }
+  .listen-toggle-btn:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+  .listen-skip-btn:focus-visible, .listen-size-btn:focus-visible,
+  .listen-voice select:focus-visible,
+  .listen-rate input:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-status{ font-size:.95em; color:#78350f; flex:1 1 200px; }
+  .listen-progress{ font-size:.9em; color:#78350f; font-weight:bold; white-space:nowrap; }
+  .listen-rate, .listen-voice{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-rate input{ accent-color:var(--lb-purple); }
+  .listen-rate output{ font-weight:bold; min-width:2.6em; }
+  .listen-voice select{
+    border-radius:20px; border:1px solid var(--lb-gold); padding:4px 10px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:190px;
+  }
+  .tts-clickable{ cursor:pointer; transition:background .2s; border-radius:6px; }
+  .tts-clickable:hover{ background:rgba(245,158,11,.10); }
+  .reading-highlight{
+    background:linear-gradient(135deg,#e0e7ff 0%,#fce7f3 100%); border-radius:8px;
+    box-shadow:0 0 0 3px var(--lb-pink) inset; transition:background .3s;
+    padding-right:14px; padding-left:14px;
+    margin-right:-14px; margin-left:-14px;
+  }
+  .audio-player{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid #f59e0b;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  }
+  .audio-player-title{ font-size:1.05em; font-weight:bold; color:#92400e; flex:1 1 100%;}
+  .audio-player audio{ flex:1 1 260px; min-width:220px; height:40px;}
+  .audio-chapter-select{
+    border-radius:20px; border:1px solid #f59e0b; padding:6px 12px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:260px;
+  }
+  .audio-get{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; flex:1 1 100%;}
+  .audio-download{
+    display:inline-flex; align-items:center; gap:6px;
+    background:linear-gradient(135deg,#7e22ce 0%,#ec4899 100%);
+    color:#fff; text-decoration:none; border-radius:30px; padding:8px 18px;
+    font-size:0.95em; font-weight:bold; transition:transform .15s, box-shadow .15s;
+  }
+  .audio-download:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,0.3);}
+  .audio-pick-btn{
+    background:#fff; color:#7e22ce; border:2px solid #7e22ce;
+    border-radius:30px; padding:7px 16px; font-size:0.9em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .audio-pick-btn:hover{ transform:translateY(-2px); background:#f3e8ff;}
+  .audio-note{ font-size:0.9em; color:#92400e;}
+  h2.reading-highlight{ padding-right:34px; }
+  @media(max-width:768px){
+    .listen-bar{ padding:15px; gap:10px; }
+    .listen-status{ flex:1 1 100%; }
+    .listen-voice select{ max-width:140px; }
+  }
+  @media print{
+    .listen-bar{ display:none !important; }
+    .audio-player { display: none !important; }
+    .reading-highlight{ box-shadow:none !important; background:none !important; }
+    .tts-clickable{ cursor:auto; }
+  }
+  /* fs scaling for plain body paragraphs/list items, applied additively so it
+     doesn't fight whatever base font-size the article already declares */
+  .container p, .container li{ font-size: calc(1em * var(--fs)); }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1 data-a="01-0" class="main-title" id="top">משמעת יהודית</h1>
+  <div class="subtitle">מהפעלה חיצונית לבניין הפנים</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+
+  <div class="listen-bar">
+      <div class="listen-btn-group">
+          <button class="listen-btn" id="listenBtn" onclick="toggleListen()" aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן למאמר</button>
+          <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+          <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+          <button class="listen-skip-btn" onclick="skipListen(1)" aria-label="פסקה הבאה" title="פסקה הבאה">⏭</button>
+          <button class="listen-skip-btn" onclick="skipChapter(1)" aria-label="פרק הבא" title="פרק הבא">⏩</button>
+          <button class="listen-stop-btn" onclick="stopListen()" aria-label="עצור הקראה">⏹ עצור</button>
+          <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()" aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+      </div>
+      <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+      <span class="listen-progress" id="listenProgress"></span>
+      <div class="listen-rate">
+          <label for="rateRange">מהירות:</label>
+          <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1" oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)" aria-label="מהירות הקראה">
+          <output id="rateValue" for="rateRange">1.0×</output>
+      </div>
+      <div class="listen-voice">
+          <label for="voiceSelect">קול:</label>
+          <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+      </div>
+      <div class="listen-size">
+          <span>גודל טקסט:</span>
+          <button class="listen-size-btn" id="fontSmaller" onclick="setFontScale(-1)" aria-label="הקטן את הטקסט" title="הקטן את הטקסט">א−</button>
+          <output id="fontScaleValue">100%</output>
+          <button class="listen-size-btn big" id="fontBigger" onclick="setFontScale(1)" aria-label="הגדל את הטקסט" title="הגדל את הטקסט">א+</button>
+      </div>
+  </div><div class="audio-player no-tts">
+    <div class="audio-player-title">🎧 האזנה להקלטה — קול הילה</div>
+    <select class="audio-chapter-select" aria-label="בחירת פרק להאזנה" hidden>
+        <option value="audio/%D7%9E%D7%90%D7%9E%D7%A8_%D7%9E%D7%A9%D7%9E%D7%A2%D7%AA_%D7%99%D7%94%D7%95%D7%93%D7%99%D7%AA_%D7%94%D7%A8%D7%91_%D7%99%D7%94%D7%95%D7%93%D7%94_%D7%98%D7%90%D7%95%D7%91.mp3" data-seg="01">פתיחה: השוויון השגוי בין כוחנות לחינוך · פרק א: אשליית ההפעלה", מדוע עונשים, איומים ופרסים אינם משמעת? · פרק ב: סוד החינוך, יצירת הרצון הפנימי · פרק ג: שני הכוחות שבנפש הילד, עזות "עז כנמר" מול השאיפה לעוגן · פרק ד: סמכות ללא כוחנות, מה גורם לילד לציית למבוגר שלא מעניש? · סיכום אסטרטגי</option>
+    </select>
+    <audio controls preload="none"></audio>
+    <div class="audio-get">
+        <a class="audio-download" href="#" data-download-placeholder="" target="_blank" rel="noopener">📥 להורדת קובץ השמיעה לחץ כאן</a>
+        <button type="button" class="audio-pick-btn">📂 בחר את הקובץ שהורדת</button>
+        <input type="file" class="audio-pick-input" accept="audio/*" multiple hidden>
+        <span class="audio-note"></span>
+    </div>
+</div>
+
+  <div class="toc">
+    <h3>📑 תוכן העניינים</h3>
+    <ul>
+      <li><a href="#section1">פתיחה: השוויון השגוי בין כוחנות לחינוך</a></li>
+      <li><a href="#section2">פרק א: אשליית ה"הפעלה" – מדוע עונשים, איומים ופרסים אינם משמעת</a></li>
+      <li><a href="#section3">פרק ב: סוד החינוך – יצירת הרצון הפנימי</a></li>
+      <li><a href="#section4">פרק ג: שני הכוחות שבנפש הילד – עזות "עז כנמר" מול השאיפה לעוגן</a></li>
+      <li><a href="#section5">פרק ד: סמכות ללא כוחנות – מה גורם לילד לציית למבוגר שלא מעניש</a></li>
+      <li><a href="#section6">סיכום אסטרטגי</a></li>
+    </ul>
+  </div>
+
+  <h2 data-a="01-1" id="section1">פתיחה: השוויון השגוי בין כוחנות לחינוך</h2>
+  <p data-a="01-2">
+    כדי לייצר שינוי אמיתי באווירת הבית ולגדל ילדים בעלי חוסן נפשי ומשמעת עצמית, עלינו לערוך תחילה
+    "שידוד מערכות" בהבנת המושג <span class="emphasis">משמעת</span>. הבלבול הגדול ביותר של דורנו הוא
+    השוויון השגוי שאנו עושים בין <em>כוחנות</em> לבין <em>חינוך</em>.
+  </p>
+  <div class="highlight-box">
+    <p data-a="01-3">
+      בפרק זה ננתח את יסודות המשמעת בראייה תורנית ומקצועית, ונעניק כלים לבניית סמכות שקטה, יציבה ומצמיחה –
+      תוך מענה לארבע שאלות מרכזיות: מדוע עונשים, איומים ופרסים אינם משמעת? מהו חינוך אמיתי? האם טבעו
+      של הילד הוא מרדני או נכנע? ומה גורם לילד לשמוע בקול מבוגר שאינו מטיל עונשים?
+    </p>
+  </div>
+
+  <h2 data-a="01-4" data-chapter="פרק א" id="section2">פרק א: אשליית ה"הפעלה" – מדוע עונשים, איומים ופרסים אינם משמעת?</h2>
+  <p data-a="01-5">
+    שורש הכשל החינוכי טמון בחוסר ההבחנה בין "חינוך" לבין "הפעלה". כל פעולה שאנו עושים – בין אם בצעקות,
+    עונשים או מתן שוחד ופרסים – כדי לגרום לילד להתנהג כראוי כאן ועכשיו, איננה חינוך אלא
+    <span class="emphasis">הפעלה</span>. הפעלה זו מזיקה לחינוך לטווח הארוך, שכן היא מבוססת על שיקולים
+    של כאן ועכשיו ולא על בניית עולמו הפנימי של הילד.
+  </p>
+
+  <h3 data-a="01-6">1. הסכנה שבעונשים</h3>
+  <p data-a="01-7">
+    משמעת אמיתית פירושה תפיסת עולם שלפיה יש סמכות ויש חוקים, והעולם אינו הפקר. כאשר אנו משתמשים
+    בעונשים תכופים (ובוודאי בצעקות או כוחנות), אנו פוגעים במשמעת עצמה. הילד אינו לומד לציית לסמכות
+    בגלל עצמותה, אלא לומד מאבק כוחות – <em>"מי חזק יותר"</em>.
+  </p>
+  <div class="story-box">
+    <p data-a="01-8">
+      העונש מעורר אצל הילד מרי והתנגדות פנימית. גם אם הוא נכנע פיזית ברגע הנתון, רצונו הפנימי לפרוץ
+      את המסגרת דווקא מתחזק. במקום לבנות משמעת, העונש בונה מאגר של התנגדות שממתין לרגע שבו הפיקוח ירפה.
+    </p>
+  </div>
+
+  <h3 data-a="01-9">2. מלכודת האיומים</h3>
+  <p data-a="01-10">
+    איומים אינם בונים משמעת אלא <span class="emphasis">מרסקים</span> אותה, ומשלוש סיבות שונות.
+  </p>
+  <div class="two-columns">
+    <div class="col-purple">
+      <h4 data-a="01-11">מה משדר האיום?</h4>
+      <p data-a="01-12">
+        ראשית, איום משדר מסר של חוסר ביטחון וחולשה מצד ההורה עצמו – הורה בטוח בסמכותו אינו זקוק לאיים.
+      </p>
+    </div>
+    <div class="col-gold">
+      <h4 data-a="01-13">מה קולט הילד?</h4>
+      <p data-a="01-14">
+        שנית, כאשר הורה אומר "אם לא תעשה כך, אעשה לך כך", הוא מציג בפני הילד אלטרנטיבה לגיטימית
+        למרדנות – והילד תופס את האיום כ"עסקה" עסקית גרידא.
+      </p>
+    </div>
+  </div>
+  <div class="quote-box">
+    <p data-a="01-15">
+      המסר הסמוי וההרסני ביותר של האיום הוא שטיפת מוח לילד, שלפיה אנו כהורים כבר מצפים מראש
+      שהוא לא ישמע בקולנו.
+      <span class="source-tag">— מתוך ניתוח יסודות המשמעת</span>
+    </p>
+  </div>
+
+  <h3 data-a="01-16">3. השחתת הפרסים</h3>
+  <p data-a="01-17">
+    מתן פרסים או "משכורות" על תפקוד יומיומי בסיסי השייך למסגרת המשמעת (כמו הכנת שיעורי בית או סדר)
+    הורס את המשמעת. כשאנו משלמים לילד שוחד כדי שיתנהג כראוי, אנו מחנכים אותו לערכים חומריים, ומשדרים
+    לו שההתנהגות הטובה אינה נורמה טבעית, אלא פעולה חריגה שדורשת תשלום.
+  </p>
+
+  <div class="section-divider">אם לא עונשים, איומים ופרסים – מהו אם כן חינוך אמיתי?</div>
+
+  <h2 data-a="01-18" data-chapter="פרק ב" id="section3">פרק ב: סוד החינוך – יצירת הרצון הפנימי</h2>
+  <div class="qa-box">
+    <p data-a="01-19" class="q">שאלה: מהו אפוא "חינוך"?</p>
+    <p data-a="01-20" class="a">
+      <strong>תשובה:</strong> רש"י מגדיר את המילה "חינוך" כ<em>"תחילת כניסת אדם או כלי לאומנות שהוא
+      עתיד לעמוד בה"</em>. חינוך אינו מתמקד בטווח המיידי, אלא בשאלה מה יקרה בעוד עשר שנים, כאשר הילד
+      לא יהיה עוד תחת שליטתנו.
+    </p>
+  </div>
+
+  <p data-a="01-21">
+    מטרת החינוך היא לגרום לכך שההתנהגות הטובה תהפוך לחלק מהעולם הפנימי של הילד, כך שהוא עצמו
+    <span class="emphasis">ירצה</span> בה וישמח בה. זהו ההבדל התהומי בין חינוך אמיתי לבין הפעלה
+    חיצונית: חינוך יוצר רצון, הפעלה יוצרת ציות זמני בלבד.
+  </p>
+
+  <div class="highlight-box">
+    <p data-a="01-22">
+      כאשר אנו רק כופים על הילד לבצע מצווה (למשל תפילה), אין זה חינוך אלא רק <em>"הכשר מצווה"</em> –
+      יצירת המסגרת הטכנית בלבד. אם הורה מכריח את בנו להתפלל, אך הילד סובל וחולם רק על הרגע שבו
+      ישתחרר מהעול – ההורה לא חינך אותו, אלא רק <span class="emphasis">הפעיל</span> אותו.
+    </p>
+  </div>
+
+  <p data-a="01-23">
+    החינוך האמיתי (ההפנמה) מתחיל דווקא <em>אחרי</em> שהילד פעל כשורה. הכלל התורני
+    <span class="emphasis">"האדם נפעל כפי פעולותיו"</span> דורש מאיתנו, ההורים, לעודד את הילד ולהאיר
+    לו פנים לאחר המעשה, כדי שיקשר בין ההתנהגות הטובה לבין תחושת רוממות, חשיבות וסיפוק רוחני.
+  </p>
+
+  <h2 data-a="01-24" data-chapter="פרק ג" id="section4">פרק ג: שני הכוחות שבנפש הילד – עזות "עז כנמר" מול השאיפה לעוגן</h2>
+  <p data-a="01-25">
+    הורים רבים נרתעים מדרישת משמעת משום שהם תופסים את הילד כיצור חופשי ומרדן שטבעו מתנגד לגבולות.
+    אך זוהי טעות בתפיסת המבנה הביו-פסיכולוגי של האדם בראייה תורנית. האמת המדויקת היא שבנפש הילד
+    פועלים <span class="emphasis">שני כוחות טבעיים</span> שנטע בו הבורא – ושניהם קדושים, ושניהם
+    הכרחיים.
+  </p>
+
+  <div class="verse-box">
+    <p data-a="01-26">"באותה מידה שהקדוש ברוך הוא נטע באדם את כוח המרידה וההתנגדות לכפייה (הנובע מ'יסוד האש'),
+    הוא נטע בו שאיפה עמוקה וטבעית למסגרת"</p>
+  </div>
+
+  <h3 data-a="01-27">הכוח הראשון: שאיפת האוטונומיה – "הוי עז כנמר"</h3>
+  <p data-a="01-28">
+    כוח ההתנגדות והעצמאות שבילד אינו קלקול שיש למחוק, אלא <span class="emphasis">כוח נשמה שנטע בו
+    הבורא לתכלית</span>. המחקר הפסיכולוגי המודרני מכיר בכך בפירוש: תיאוריית ההכוונה העצמית
+    (Self-Determination Theory) של דסי וריאן קובעת שהצורך ב<em>אוטונומיה</em> – בתחושת בחירה
+    ובעלות על מעשיו – הוא אחד משלושת הצרכים הנפשיים הבסיסיים של כל אדם, לצד הצורך בקשר והצורך
+    במסוגלות. גם אריק אריקסון הגדיר את שלב הגיל הרך כמאבק ההתפתחותי של "אוטונומיה מול בושה וספק" –
+    ההתנגדות של בן השנתיים-שלוש אינה מרדנות במובן השלילי, אלא בניית עצמי בריא ונפרד.
+  </p>
+  <div class="quote-box">
+    <p data-a="01-29">
+      "יהודה בן תימא אומר: הוי עז כנמר, וקל כנשר, ורץ כצבי, וגיבור כארי – לעשות רצון אביך שבשמים"
+      <span class="source-tag">— משנה, אבות ה, כ</span>
+    </p>
+  </div>
+  <p data-a="01-30">
+    וביאר הטור בפתיחת שולחן חייו של יהודי: <em>"שלא יתבייש מפני בני אדם המלעיגים עליו בעבודת
+    השם יתברך"</em> (טור ורמ"א, אורח חיים סימן א). הרי לנו שהעזות – אותו "יסוד האש" עצמו – היא
+    תנאי לעבודת ה'! יהודי שאין בו כוח לעמוד לבדו מול לעג הסביבה, לא יוכל לעמוד בניסיונות הדור.
+    וזהו סוד כוחו של עם ישראל לאורך הגלויות: <span class="emphasis">היכולת לעמוד "כבשה אחת בין
+    שבעים זאבים"</span> ולא להיכנע לתרבות האומות, נובעת בדיוק מאותה עזות פנימית שאיננה מתביישת
+    ואיננה נגררת אחר הרוב. מי שמוחק בילדו את כוח העמידה – מוחק בו את הכוח שבזכותו ישמור על
+    יהדותו כשיצא לעולם.
+  </p>
+  <div class="highlight-box">
+    <p data-a="01-31">
+      <strong>המסקנה החינוכית:</strong> הורה חכם אינו נלחם בשאיפת האוטונומיה אלא <em>מתעל</em>
+      אותה – נותן לילד תחומי בחירה אמיתיים בתוך המסגרת (מה ללבוש, באיזה סדר להכין שיעורים),
+      ושומר את הדרישות המוחלטות למינימום ההכרחי. כך העזות מופנית "לעשות רצון אביך שבשמים"
+      ולא למאבק בהורה.
+    </p>
+  </div>
+
+  <h3 data-a="01-32">הכוח השני: השאיפה למסגרת ולעוגן</h3>
+  <p data-a="01-33">
+    ולעומת כוח העזות – נטע הבורא בילד שאיפה עמוקה לא פחות למסגרת, לסדר ולגבולות. כדברי הרב
+    יעקובזון: <span class="emphasis">הילד זקוק למסגרת ברורה, ואף רוצה בה יותר משהוא רוצה למרוד</span>.
+    לעיתים, הילד משתמש בכוח המרידה שלו כדי "לדפוק בקיר" של המסגרת – לא כדי להרסו, אלא רק כדי לוודא
+    שהקיר אכן חזק, קיים ושומר עליו.
+  </p>
+  <p data-a="01-34">
+    ואף ליסוד זה יש ביסוס מחקרי איתן, משלושה כיוונים משלימים: <em>ראשית</em>, מחקרי דיאנה באומרינד
+    הראו לאורך עשורים שילדים להורות "סמכותית" – המשלבת חום גבוה עם דרישות וגבולות ברורים – מפתחים
+    ביטחון עצמי, ויסות עצמי והישגים גבוהים יותר מילדים להורות ותרנית נטולת גבולות. <em>שנית</em>,
+    בתוך תיאוריית ההכוונה העצמית עצמה, מחקרי וונדי גרולניק הבחינו בין <em>שליטה</em> (Control),
+    הפוגעת בילד, לבין <em>מבנה</em> (Structure) – חוקים ברורים, צפויים ועקביים – שנמצא כמיטיב
+    ומחזק את תחושת המסוגלות. <em>שלישית</em>, פרופ' חיים עומר מאוניברסיטת תל-אביב טבע את המושג
+    <span class="emphasis">"פונקציית העיגון" (Anchoring Function)</span>: ההורה כעוגן יציב שהילד
+    נאחז בו מול הסערות – מושג שהוא כמעט תרגום פסיכולוגי מדויק לתיאור "הקיר החזק" של הרב יעקובזון.
+  </p>
+
+  <div class="story-box">
+    <p data-a="01-35">
+      <strong>📌 הערה מקצועית חשובה – ילדים בעלי מזג קשה ו-ODD:</strong> כל האמור בפרק זה מתאר את
+      הילד הממוצע. אולם מחקרי המזג (Temperament) מלמדים שכ-10%–15% מהילדים נולדים עם מזג "קשה" –
+      תגובתיות עזה והתנגדות חזקה מלידה – ואצלם ההתנגדות אינה רק "דפיקה בקיר לבדיקתו". ובמדרגה
+      חמורה יותר קיימת <em>הפרעת התנגדות מרדנית (ODD)</em> – דפוס מתמשך של עוינות וסירוב לסמכות
+      הפוגע בתפקוד היומיומי, המאובחן אצל אחוזים בודדים מהילדים. חשוב להבחין: מזג קשה הוא שונות
+      טבעית ואינו אבחנה; ODD היא אבחנה קלינית הדורשת הערכה מקצועית. אצל ילדים אלו, עקרונות
+      העקביות והרוגע שבפרק זה נכונים שבעתיים – דווקא ענישה קשוחה מחריפה את מצבם – אך הם אינם
+      מספיקים לבדם, ונדרשת הדרכת הורים מקצועית (ובכלל זה גישת ה"התנגדות הלא-אלימה" של עומר,
+      שנחקרה בהצלחה בדיוק באוכלוסיות אלו). הורה המזהה דפוס כזה אצל ילדו – אל יאשים את עצמו
+      ואל יתבייש לפנות לאיש מקצוע.
+    </p>
+  </div>
+
+  <h3 data-a="01-36">קומת הנפש מול קומת הדעת</h3>
+  <p data-a="01-37">
+    מבחינה רוחנית, עלינו ללמד את קומת <em>"הנפש"</em> (החלק הבהמי, היצרי והאימפולסיבי) להיכנע בפני
+    קומת <em>"הדעת"</em>. הדרך היחידה שבה ילד יכול לאמן את הנפש שלו להיכנע לדעת היא על ידי הכנעה
+    לסמכות חיצונית – הוריו ומחנכיו.
+  </p>
+  <div class="quote-box">
+    <p data-a="01-38">
+      "הוקש כבודם לכבודו של מקום"
+      <span class="source-tag">— חז"ל</span>
+    </p>
+  </div>
+  <p data-a="01-39">
+    ילד שלא התרגל מילדותו לכופף את רצונו ולהיכנע לסמכות אנושית יציבה, לעולם לא יצליח לפתח יראת
+    שמיים פנימית וקניעה אמיתית כלפי בורא עולם. במילים אחרות: <span class="emphasis">הכנעה בריאה
+    להורה היא אימון לקראת הכנעה בריאה לבורא</span>.
+  </p>
+
+  <h2 data-a="01-40" data-chapter="פרק ד" id="section5">פרק ד: סמכות ללא כוחנות – מה גורם לילד לציית למבוגר שלא מעניש?</h2>
+  <p data-a="01-41">
+    אם הפעלת כוח ועונשים הורסים את המשמעת, מה יגרום לילד לשמוע בקולנו? התשובה המקצועית והחדה ביותר
+    היא כלי אחד בלבד: <span class="emphasis">עקביות תקיפה ורגועה</span>.
+  </p>
+
+  <h3 data-a="01-42">1. הצורך הנפשי בהורה חזק</h3>
+  <p data-a="01-43">
+    הילד מציית בראש ובראשונה משום שהוא שואף להישען על מנהיגות, והוא זקוק נפשית להורים חזקים שיגנו
+    עליו מפני העולם החיצוני ומפני יצריו שלו. כאשר הורה מוותר ומתנהג כמו "ג'לי" (סמרטוט) הנכנע לצרחות
+    וליללות של הילד, הילד אולי מרוויח את רצונו המיידי – אך הוא חווה מצוקה נוראית וחרדה, מכיוון שהוא
+    מבין שאין מי שיגן עליו.
+  </p>
+
+  <h4 data-a="01-44">ההסבר הפסיכולוגי: תיאוריית ההתקשרות – מדוע הילד רוצה לשמוע?</h4>
+  <p data-a="01-45">
+    אחד הממצאים המשוכפלים והמבוססים ביותר בפסיכולוגיה ההתפתחותית מספק את המנגנון המדויק לתופעה
+    שמתאר הרב יעקובזון. <span class="emphasis">תיאוריית ההתקשרות</span> של ג'ון בולבי ומרי
+    איינסוורת' גילתה שהילד נולד עם מערכת מולדת המחפשת דמות מבוגר שתשמש עבורו
+    <em>"בסיס בטוח" (Secure Base)</em> – עוגן יציב שממנו הוא יוצא לחקור את העולם, ואליו הוא שב
+    בעת מצוקה. ילד שהוריו מתפקדים כעוגן יציב, רגוע וצפוי – אינו מציית מפחד, אלא
+    <span class="emphasis">מתוך רצון עמוק להתקשר ולהתחבר לדמות החזקה שמעניקה לו ביטחון</span>.
+  </p>
+  <div class="highlight-box">
+    <p data-a="01-46">
+      מחקריה של גרז'ינה קוכנסקה מאוניברסיטת איווה חידדו זאת בהבחנה מכרעת בין שני סוגי ציות:
+      <em>ציות נסיבתי</em> (Situational Compliance) – הילד נכנע כי הוא מפוקח, אך ליבו בל עמו;
+      לעומת <em>ציות מחויב</em> (Committed Compliance) – הילד מאמץ בלב שלם את דרישת ההורה כשלו.
+      הממצא: ציות מחויב צומח דווקא מתוך קשר חם והדדי (Mutually Responsive Orientation), והוא –
+      ורק הוא – מנבא הפנמה מוסרית אמיתית לטווח ארוך. זהו בדיוק ההבדל שבין "הפעלה" ל"חינוך"
+      בלשונו של הרב יעקובזון – הפעם במעבדה, עם נתונים.
+    </p>
+  </div>
+  <p data-a="01-47">
+    ופרופ' חיים עומר סגר את המעגל: בגישת "הסמכות החדשה" שלו, כוחו של ההורה אינו ביכולתו להעניש
+    אלא ב<em>נוכחותו</em> – "אני כאן, אני נשאר, ואיני זז" – נוכחות עיקשת, לא-מסלימה ולא-אלימה,
+    המתפקדת כעוגן. גישה זו נבדקה במחקרים מבוקרים ונמצאה יעילה. שלוש האסכולות – בולבי, קוכנסקה
+    ועומר – מצביעות על אותה אמת שניסח הרב יעקובזון: <span class="emphasis">הילד נשמע למבוגר
+    המשדר ביטחון שקט ושליטה עצמית, מתוך צורך נפשי טבעי להישען על עוגן – לא מתוך פחד</span>.
+  </p>
+  <div class="story-box">
+    <p data-a="01-48">
+      עוצמתו של הורה אינה צעקות, אלא היכולת לומר "לא" בשלווה, ולעמוד מאחורי המילה שלו כקיר ברזל.
+    </p>
+  </div>
+
+  <h3 data-a="01-49">2. הצבת דרישות מוחלטות – חוק "נעשה ונשמע"</h3>
+  <p data-a="01-50">
+    משמעת לא מושגת על ידי בקשות מנומסות ("אני מבקשת שתסדר") המאפשרות לילד לסרב, וגם לא על ידי
+    שכנועים מתישים. הדרך היא להציב דרישות קצרות, פשוטות וחד-משמעיות.
+  </p>
+  <div class="highlight-box">
+    <p data-a="01-51">
+      אל תסבירו לילד כל הוראה כדי לשכנע אותו, משום שמתן הסברים שוטף לילד את המוח שאם הוא מבין –
+      עליו לקיים, ואם אינו מבין – הוא פטור. הציגו את הדרישה כעובדה מוגמרת ("נעשה"), ורק לאחר מכן,
+      אם הילד גילה סקרנות אמיתית, תוכלו להסביר לו את הרציונל ("נשמע") כדי לפתח את תבונתו.
+    </p>
+  </div>
+
+  <h3 data-a="01-52">3. השתיקה האקטיבית</h3>
+  <p data-a="01-53">
+    כאשר הילד מסרב או מנסה לגרור אתכם למאבק כוחות, הכלי העוצמתי ביותר אינו לצעוק חזרה, אלא להשתמש
+    <span class="emphasis">בשתיקה אקטיבית</span>. עמדו מולו בשילוב ידיים, במבט שליו, תקיף ורגוע.
+    השתיקה הזו משדרת עוצמה אדירה, והיא מוכיחה לילד שהסמכות שלכם אינה ניתנת לערעור, ושאינכם זקוקים
+    לכוחנות כדי להוכיח את מעמדכם.
+  </p>
+
+  <div class="section-divider">משמעת אמיתית אינה כפייה – היא מתנה לחיים</div>
+
+  <h2 data-a="01-54" id="section6">סיכום אסטרטגי</h2>
+  <p data-a="01-55">
+    הענקת משמעת היא מתנה לחיים שההורה מחויב לתת לילדו. היא בונה אצלו יציבות, ביטחון עצמי ומשמעת
+    עצמית. הוציאו מהלקסיקון את האיומים, והפחיתו למינימום את ריבוי המלל.
+  </p>
+  <div class="verse-box">
+    <p data-a="01-56">כאשר תקבלו את הילד ללא תנאי, תצמצמו את דרישות המשמעת למינימום ההכרחי, ותעמדו עליהן בעקביות,
+    בתקיפות וברוגע – הילד יזהה את העוצמה השקטה שלכם, וייכנע למסגרת מתוך צורך נפשי טבעי
+    של אמון וביטחון.</p>
+  </div>
+
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות</h3>
+    <h4>מקורות תורניים</h4>
+    <ol>
+      <li>רש"י – פירוש המילה "חינוך" כ"תחילת כניסת אדם או כלי לאומנות שהוא עתיד לעמוד בה"</li>
+      <li>משנה, אבות ה, כ – "הוי עז כנמר... לעשות רצון אביך שבשמים"</li>
+      <li>טור ורמ"א, אורח חיים סימן א – "שלא יתבייש מפני בני אדם המלעיגים עליו"</li>
+      <li>חז"ל – "הוקש כבודם לכבודו של מקום" (חובת כיבוד הורים כאימון ליראת שמיים)</li>
+      <li>הכלל התורני "האדם נפעל כפי פעולותיו" (ספר החינוך, מצוה טז)</li>
+      <li>הרב יעקובזון – יסודות המשמעת: "יסוד האש" (כוח המרידה) מול השאיפה הטבעית למסגרת</li>
+    </ol>
+    <h4>מקורות מחקריים</h4>
+    <ol>
+      <li>Gershoff &amp; Grogan-Kaylor (2016) – מטא-אנליזה על נזקי ענישה גופנית, 160,927 ילדים, Journal of Family Psychology –
+        <a href="https://pubmed.ncbi.nlm.nih.gov/27055181/">pubmed.ncbi.nlm.nih.gov/27055181</a></li>
+      <li>Deci &amp; Ryan – תיאוריית ההכוונה העצמית (SDT): אוטונומיה כצורך נפשי בסיסי; והבחנת גרולניק בין שליטה (Control) למבנה (Structure) –
+        <a href="https://selfdeterminationtheory.org/">selfdeterminationtheory.org</a></li>
+      <li>Kochanska (1995) – ציות מחויב מול ציות נסיבתי והפנמה מוסרית, Child Development –
+        <a href="https://pubmed.ncbi.nlm.nih.gov/8556897/">pubmed.ncbi.nlm.nih.gov/8556897</a></li>
+      <li>Kochanska (2002) – Mutually Responsive Orientation: קשר חם והדדי כקרקע להתפתחות המצפון –
+        <a href="https://journals.sagepub.com/doi/10.1111/1467-8721.00198">journals.sagepub.com/doi/10.1111/1467-8721.00198</a></li>
+      <li>Omer &amp; al. – The Anchoring Function: פונקציית העיגון של הסמכות ההורית –
+        <a href="https://www.researchgate.net/publication/237843739_The_Anchoring_Function_Parental_Authority_and_the_Parent-Child_Bond">researchgate.net (The Anchoring Function)</a>;
+        אתר הגישה: <a href="https://www.haimomer-nvr.com/nvr-approach">haimomer-nvr.com</a></li>
+      <li>Bowlby &amp; Ainsworth – תיאוריית ההתקשרות ומושג ה"בסיס הבטוח" (Secure Base); ראו: Bowlby, J. (1988), <em>A Secure Base</em></li>
+      <li>Baumrind – סגנונות ההורות: סמכותי, סמכותני וותרן, והשלכותיהם ההתפתחותיות</li>
+      <li>AACAP – הפרעת התנגדות מרדנית (ODD): מידע להורים מטעם האקדמיה האמריקאית לפסיכיאטריה של הילד –
+        <a href="https://www.aacap.org/AACAP/Families_and_Youth/Facts_for_Families/FFF-Guide/Children-With-Oppositional-Defiant-Disorder-072.aspx">aacap.org – Facts for Families</a></li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+  </div>
+
+</div>
+
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+
+<script>
+  document.querySelectorAll('.toc a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  var scrollTopBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', function() {
+    scrollTopBtn.style.display = (window.scrollY > 400) ? 'flex' : 'none';
+  });
+  scrollTopBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+<script>
+/* =============================================================================
+   קול תודה — מנוע הקראה למאמרים תורניים   |   tts.js   v2.0
+   -----------------------------------------------------------------------------
+   העתק את הקובץ הזה כמות שהוא לתוך תגית <script> בסוף ה-HTML.
+   אין לכתוב אותו מחדש, לקצר או "לשפר" תוך כדי יצירת מאמר — הוא נבדק כך.
+   Web Speech API בלבד: בלי API חיצוני, בלי מפתח, בלי רשת, בלי עלות.
+   ============================================================================= */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    var NS       = 'koltoda.tts.';
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false, noHeVoice = false;
+    var clickToRead = true;
+
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+    function readPos() { try { return parseInt(localStorage.getItem(POS_KEY) || '0', 10) || 0; } catch (e) { return 0; } }
+
+    var G = '["\\u05f4\\u201d\\u2033]';
+    var R = "['\\u05f3\\u2019]";
+
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' ');
+        t = t.replace(/־/g, ' ');
+        t = t.replace(/\s*[–—]\s*/g, ', ');
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function chapterLabel(h) {
+        var d = h.getAttribute && h.getAttribute('data-chapter');
+        if (d && d.trim()) return d.trim();
+        var p = h.previousElementSibling;
+        if (p && p.classList && p.classList.contains('chapter-label')) {
+            return p.textContent.replace(/\s+/g, ' ').trim();
+        }
+        return '';
+    }
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (n.closest(SKIP)) return;
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            if (n.tagName === 'H2') {
+                var lbl = chapterLabel(n);
+                if (lbl && raw.indexOf(lbl) !== 0) raw = lbl + '. ' + raw;
+            }
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    function hint() {
+        if (noHeVoice) {
+            return 'לא נמצא קול עברי במחשב — ההקראה תישמע משובשת. ' +
+                   'ב-Windows: הגדרות ← שעה ושפה ← דיבור ← נהל קולות ← הוסף קולות ← עברית.';
+        }
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = readPos();
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        var was = noHeVoice;
+        noHeVoice = !he.length;
+        if (noHeVoice !== was && !isOn) say(hint());
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;
+                if (e.target.closest('a')) return;
+                if (window.getSelection && String(window.getSelection()).length) return;
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    var FS_MIN = 0.85, FS_MAX = 1.75, FS_STEP = 0.15, fontScale = 1;
+
+    function applyFontScale() {
+        document.documentElement.style.setProperty('--fs', String(fontScale));
+        var out = document.getElementById('fontScaleValue');
+        if (out) out.textContent = Math.round(fontScale * 100) + '%';
+        var dec = document.getElementById('fontSmaller'), inc = document.getElementById('fontBigger');
+        if (dec) dec.disabled = fontScale <= FS_MIN + 0.001;
+        if (inc) inc.disabled = fontScale >= FS_MAX - 0.001;
+    }
+
+    window.setFontScale = function (dir) {
+        fontScale = Math.min(FS_MAX, Math.max(FS_MIN, +(fontScale + dir * FS_STEP).toFixed(2)));
+        store('fs', String(fontScale));
+        applyFontScale();
+    };
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var savedFs = parseFloat(store('fs') || '1');
+        if (savedFs >= FS_MIN && savedFs <= FS_MAX) fontScale = savedFs;
+        applyFontScale();
+        if (readPos() > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+<script data-audio-cues="" type="application/json">{"01":[0.1,2.06,6.15,22.2,45.49,52,75.89,78.74,99.13,115.74,118.54,123.86,125.84,133.82,135.75,146.79,158.2,160.94,181.35,185.84,189.1,203.49,219.5,237.16,255.69,261.84,282.04,291.5,296.23,334.05,346.13,386.88,406.24,410.14,434.78,484.8,548.68,551.52,568.32,572.02,587.55,593.75,605.09,608.64,632.14,637.57,670.97,708.05,742.65,750.11,754.71,768.41,790.48,793.37,817.25,819.26,833.33]}</script><script data-audio-player="">
+/* =============================================================================
+   audio-player.js — נגן ההקלטה (MP3 שהופק מראש ב-edge-tts)
+   הדבק מילה במילה. נפרד לגמרי מ-tts.js (ההקראה החיה של הדפדפן).
+   ============================================================================= */
+(function () {
+    var box = document.querySelector('.audio-player');
+    if (!box) return;
+
+    var audio  = box.querySelector('audio');
+    var select = box.querySelector('.audio-chapter-select');
+    if (!audio || !select) return;
+
+    var KEY = 'koltoda.audio.ch.' + (document.title || '');
+
+    /* מפת תזמונים: { "01": [0, 3.2, 9.7, ...] } — זמן תחילת כל פסקה בקטע.
+       נוצרת ב-make-audio.mjs מקובצי ה-SRT של edge-tts. */
+    var CUES = {};
+    var tag = document.querySelector('script[data-audio-cues]');
+    if (tag) { try { CUES = JSON.parse(tag.textContent || '{}'); } catch (e) {} }
+
+    var seg = null;      // מזהה הקטע הפעיל, למשל "01"
+    var line = -1;       // אינדקס הפסקה המודגשת
+
+    /* ---------- הדגשה ---------- */
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+        line = -1;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+
+        /* בספר מתחלף — מדפדפים לעמוד של הפסקה, כמו בהקראה החיה */
+        var pg = el.closest ? el.closest('.page') : null;
+        if (pg && !pg.classList.contains('active') && window.bookGo) {
+            var pages = [].slice.call(document.querySelectorAll('#book .page'));
+            var i = pages.indexOf(pg);
+            if (i > -1) { window.bookGo(i); return; }
+        }
+
+        /* גוללים רק אם הפסקה מחוץ למסך, כדי לא לחטוף את הדף מהקורא */
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    /* איזו פסקה נאמרת עכשיו — האחרונה שזמן ההתחלה שלה כבר עבר */
+    function lineAt(starts, t) {
+        var lo = 0, hi = starts.length - 1, ans = 0;
+        while (lo <= hi) {
+            var mid = (lo + hi) >> 1;
+            if (starts[mid] <= t) { ans = mid; lo = mid + 1; } else { hi = mid - 1; }
+        }
+        return ans;
+    }
+
+    audio.addEventListener('timeupdate', function () {
+        var starts = CUES[seg];
+        if (!starts || !starts.length) return;
+        var i = lineAt(starts, audio.currentTime);
+        if (i === line) return;
+        line = i;
+        var el = document.querySelector('[data-a="' + seg + '-' + i + '"]');
+        if (el) highlight(el);
+    });
+
+    /* ---------- קבצים שנבחרו מהמחשב ----------
+       דפדפן לא יכול לקרוא נתיב מקומי מעצמו (תיקיית ההורדות חסומה לו), אבל
+       קובץ שהמשתמש בוחר בעצמו מותר. ממפים לפי שם הקובץ, כך שאפשר לבחור את
+       כל פרקי הספר בבת אחת. ההדגשה עובדת גם ככה — התזמונים כבר בדף. */
+    var picked = {};
+    var note   = box.querySelector('.audio-note');
+    var input  = box.querySelector('.audio-pick-input');
+    var pickBtn = box.querySelector('.audio-pick-btn');
+
+    function say(msg) { if (note) note.textContent = msg || ''; }
+
+    /* קישור הורדה שלא מולא עדיין מוסתר מהקורא — אין טעם ב"לחץ כאן" מת.
+       הבדיקה היא על ה-href עצמו, כך שברגע שמדביקים כתובת הוא מופיע לבד. */
+    var dl = box.querySelector('.audio-download');
+    if (dl && (dl.getAttribute('href') || '#') === '#') dl.style.display = 'none';
+
+    function baseName(u) {
+        try { u = decodeURIComponent(u); } catch (e) {}
+        return u.split('/').pop();
+    }
+
+    function srcFor(opt) {
+        return picked[baseName(opt.value)] || opt.value;
+    }
+
+    if (pickBtn && input) {
+        pickBtn.addEventListener('click', function () { input.click(); });
+        input.addEventListener('change', function () {
+            var files = [].slice.call(input.files || []);
+            if (!files.length) return;
+            var names = {};
+            for (var i = 0; i < select.options.length; i++) names[baseName(select.options[i].value)] = true;
+
+            var matched = 0, spare = [];
+            files.forEach(function (f) {
+                if (names[f.name]) { picked[f.name] = URL.createObjectURL(f); matched++; }
+                else spare.push(f);
+            });
+            /* קובץ יחיד בשם אחר — מניחים שהוא של הפרק המוצג */
+            if (!matched && spare.length === 1) {
+                picked[baseName(select.options[select.selectedIndex].value)] = URL.createObjectURL(spare[0]);
+                matched = 1;
+            }
+            say(matched ? 'נטענו ' + matched + ' קבצים מהמחשב.' : 'שמות הקבצים לא תואמים לפרקים.');
+            if (matched) load(select.selectedIndex, true);
+        });
+    }
+
+    /* הקובץ לא נמצא בנתיב היחסי — מכוונים להורדה ולבחירה ידנית */
+    audio.addEventListener('error', function () {
+        if (!audio.getAttribute('src')) return;
+        say('קובץ השמע לא נמצא לצד הדף. הורד אותו ואז בחר אותו כאן.');
+    });
+
+    /* ---------- ניווט בין פרקים ---------- */
+    function load(i, autoplay) {
+        var opt = select.options[i];
+        if (!opt) return;
+        select.selectedIndex = i;
+        seg = opt.getAttribute('data-seg');
+        clearHighlight();
+        audio.src = srcFor(opt);
+        try { localStorage.setItem(KEY, String(i)); } catch (e) {}
+        if (autoplay) {
+            var p = audio.play();
+            /* דפדפן שחוסם ניגון אוטומטי זורק — לא נשאיר Promise תלוי */
+            if (p && p.catch) p.catch(function () {});
+        }
+    }
+
+    select.addEventListener('change', function () { load(select.selectedIndex, true); });
+
+    /* סיום פרק — מנקה הדגשה וממשיך לבא אחריו מעצמו, כמו בהקראה החיה.
+       (השהיה לעומת זאת משאירה את ההדגשה — היא מסמנת איפה עצרנו.) */
+    audio.addEventListener('ended', function () {
+        clearHighlight();
+        if (select.selectedIndex < select.options.length - 1) {
+            load(select.selectedIndex + 1, true);
+        } else {
+            try { localStorage.removeItem(KEY); } catch (e) {}
+        }
+    });
+
+    /* חוזרים לפרק שבו עצרנו — בלי לנגן מעצמו */
+    var saved = 0;
+    try { saved = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (e) {}
+    if (saved < 0 || saved >= select.options.length) saved = 0;
+    load(saved, false);
+})();
+
+</script></body>
+</html>
