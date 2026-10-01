@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="torah-html-article 2.7.0">
+<title>באהבה ובאחדות — עיונים במצוות ואהבת לרעך כמוך</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #1f2937;
+  line-height: 1.8;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fffefc;
+  padding: 60px 80px;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+.main-title {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.subtitle {
+  text-align: center;
+  font-size: 1.3em;
+  color: #6b21a8;
+  margin-bottom: 8px;
+}
+.author {
+  text-align: center;
+  font-size: 1.05em;
+  color: #6b7280;
+  margin-bottom: 45px;
+}
+h2 {
+  font-size: 2.2em;
+  color: #7e22ce;
+  border-right: 6px solid #7e22ce;
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+h3 {
+  font-size: 1.55em;
+  color: #2563eb;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+h4 {
+  font-size: 1.25em;
+  color: #059669;
+  margin-top: 25px;
+}
+p, li {
+  font-size: 1.15em;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+strong { color: inherit; }
+.emphasis { color: #7e22ce; font-weight: bold; }
+em { color: #2563eb; font-style: italic; }
+
+/* chapter label + in-this-chapter box */
+.chapter-label {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #a78bfa;
+  font-size: 0.95em;
+  font-weight: bold;
+  margin-top: 70px;
+  margin-bottom: 6px;
+}
+.chapter-toc-box {
+  background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+  border-right: 5px solid #ec4899;
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 35px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+.chapter-toc-box h4 {
+  margin-top: 0;
+  color: #7e22ce;
+  font-size: 1.15em;
+}
+.chapter-toc-box ul { margin: 8px 0 0 0; padding-right: 22px; }
+.chapter-toc-box li { font-size: 1em; margin-bottom: 4px; text-align: right; }
+
+/* full-screen chapter transition card */
+.chapter-card {
+  width: 100vw;
+  position: relative;
+  right: 50%;
+  margin-right: -50vw;
+  height: 55vh;
+  min-height: 380px;
+  margin-top: 70px;
+  margin-bottom: 0;
+  background: linear-gradient(135deg, #6b21a8 0%, #ec4899 55%, #f59e0b 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.chapter-card .num {
+  font-size: 6em;
+  font-weight: 900;
+  opacity: 0.9;
+  line-height: 1;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+.chapter-card .label {
+  font-size: 1.1em;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+.chapter-card .title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 12px;
+  max-width: 80%;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* decorative divider before new chapter h2 */
+.chapter-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 45px 0 40px 0;
+}
+.chapter-divider::before, .chapter-divider::after {
+  content: "";
+  flex: 1;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #f59e0b, #ec4899);
+}
+.chapter-divider::after { background: linear-gradient(90deg, #ec4899, #f59e0b, transparent); }
+.chapter-divider .icon {
+  margin: 0 20px;
+  font-size: 1.6em;
+}
+
+.verse-box {
+  background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+  border-right: 6px solid #7e22ce;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+  font-size: 1.2em;
+  text-align: center;
+  font-style: italic;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.highlight-box {
+  background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+  border-right: 6px solid #2563eb;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.highlight-box p:last-child { margin-bottom: 0; }
+.quote-box {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-right: 6px solid #f59e0b;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+  font-style: italic;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box .source-tag {
+  display: block;
+  margin-top: 12px;
+  font-style: normal;
+  font-size: 0.9em;
+  color: #92400e;
+  font-weight: bold;
+}
+.story-box {
+  background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+  border-right: 6px solid #059669;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.section-divider {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  border-radius: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 35px 0;
+}
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 25px 0;
+}
+.two-columns .col-purple {
+  background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%);
+  border-right: 5px solid #7e22ce;
+  border-radius: 10px;
+  padding: 20px 22px;
+}
+.two-columns .col-gold {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-right: 5px solid #f59e0b;
+  border-radius: 10px;
+  padding: 20px 22px;
+}
+.two-columns h4 { margin-top: 0; }
+@media (max-width: 768px) {
+  .two-columns { grid-template-columns: 1fr; }
+  .container { padding: 30px 20px; }
+  .main-title { font-size: 2em; }
+  h2 { font-size: 1.6em; }
+  .chapter-card .num { font-size: 4em; }
+  .chapter-card .title { font-size: 1.4em; }
+}
+.qa-box {
+  border: 2px dashed #ec4899;
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin: 25px 0;
+  background: #fff9fb;
+}
+.qa-box .q { color: #be185d; font-weight: bold; }
+.qa-box .a { color: #1f2937; margin-top: 8px; }
+
+.toc {
+  background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%);
+  border-radius: 12px;
+  padding: 30px 35px;
+  margin: 35px 0 50px 0;
+}
+.toc h3 { margin-top: 0; color: #7e22ce; }
+.toc ol { padding-right: 20px; margin: 0; }
+.toc > ol > li { margin-bottom: 18px; }
+.toc a.toc-chapter-link {
+  color: #6b21a8;
+  font-weight: bold;
+  font-size: 1.15em;
+  text-decoration: none;
+}
+.toc a.toc-chapter-link:hover { text-decoration: underline; }
+.toc-subs {
+  font-size: 0.88em;
+  color: #9333a1;
+  opacity: 0.75;
+  margin: 5px 0 0 0;
+  line-height: 1.6;
+}
+.toc-subs a {
+  color: #9333a1;
+  text-decoration: none;
+}
+.toc-subs a:hover { text-decoration: underline; opacity: 1; }
+.toc-subs .dot { margin: 0 6px; opacity: 0.6; }
+
+.sources {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 30px 35px;
+  margin-top: 50px;
+}
+.sources h3 { margin-top: 0; color: #4b5563; }
+.sources ol { padding-right: 20px; }
+.sources li { font-size: 1em; margin-bottom: 6px; }
+
+.footer {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 3px solid #e5e7eb;
+  text-align: center;
+  font-size: 1.05em;
+  color: #374151;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background: linear-gradient(135deg, #7e22ce, #ec4899);
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+.scroll-top.visible { opacity: 1; }
+
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+    .scroll-top { display: none !important; }
+    .chapter-card { display: none !important; }
+    .chapter-divider { margin: 10px 0 !important; }
+    h2 { page-break-before: always; break-before: page; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box, .chapter-toc-box {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+    h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+    .footer { page-break-before: always; break-before: page; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+
+  /* ---------- סרגל ההאזנה (נוסף אוטומטית) ---------- */
+  :root{
+    --lb-purple:#7e22ce; --lb-blue:#2563eb; --lb-green:#059669;
+    --lb-gold:#f59e0b; --lb-pink:#ec4899; --lb-muted:#6b7280;
+    --fs: 1;
+  }
+  .listen-bar{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid var(--lb-gold);
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+  }
+  .listen-btn-group{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .listen-btn{
+    display:flex; align-items:center; gap:8px;
+    background:linear-gradient(135deg, var(--lb-purple) 0%, var(--lb-pink) 100%);
+    color:#fff; border:none; border-radius:30px; padding:10px 22px;
+    font-size:1em; font-weight:bold; font-family:inherit; cursor:pointer;
+    transition:transform .15s, box-shadow .15s;
+  }
+  .listen-btn:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,.3); }
+  .listen-btn:active{ transform:translateY(0); }
+  .listen-stop-btn, .listen-skip-btn, .listen-size-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 16px; font-size:.95em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .listen-skip-btn{ padding:8px 12px; }
+  .listen-stop-btn:hover, .listen-skip-btn:hover,
+  .listen-size-btn:hover:not(:disabled){ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-size{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-size-btn{ padding:6px 12px; line-height:1; }
+  .listen-size-btn:disabled{ opacity:.35; cursor:default; border-color:#d1d5db; color:var(--lb-muted); }
+  .listen-size-btn.big{ font-size:1.25em; }
+  .listen-size output{ font-weight:bold; min-width:3.4em; text-align:center; }
+  .listen-toggle-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 14px; font-size:.88em; font-weight:bold;
+    font-family:inherit; cursor:pointer; white-space:nowrap;
+    transition:transform .15s, background .15s, opacity .15s;
+  }
+  .listen-toggle-btn:hover{ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-toggle-btn[aria-pressed="false"]{
+    color:var(--lb-muted); border-color:#d1d5db; background:#f9fafb; opacity:.8;
+  }
+  .listen-toggle-btn:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+  .listen-skip-btn:focus-visible, .listen-size-btn:focus-visible,
+  .listen-voice select:focus-visible,
+  .listen-rate input:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-status{ font-size:.95em; color:#78350f; flex:1 1 200px; }
+  .listen-progress{ font-size:.9em; color:#78350f; font-weight:bold; white-space:nowrap; }
+  .listen-rate, .listen-voice{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-rate input{ accent-color:var(--lb-purple); }
+  .listen-rate output{ font-weight:bold; min-width:2.6em; }
+  .listen-voice select{
+    border-radius:20px; border:1px solid var(--lb-gold); padding:4px 10px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:190px;
+  }
+  .tts-clickable{ cursor:pointer; transition:background .2s; border-radius:6px; }
+  .tts-clickable:hover{ background:rgba(245,158,11,.10); }
+  .reading-highlight{
+    background:linear-gradient(135deg,#e0e7ff 0%,#fce7f3 100%); border-radius:8px;
+    box-shadow:0 0 0 3px var(--lb-pink) inset; transition:background .3s;
+    padding-right:14px; padding-left:14px;
+    margin-right:-14px; margin-left:-14px;
+  }
+  .audio-player{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid #f59e0b;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  }
+  .audio-player-title{ font-size:1.05em; font-weight:bold; color:#92400e; flex:1 1 100%;}
+  .audio-player audio{ flex:1 1 260px; min-width:220px; height:40px;}
+  .audio-chapter-select{
+    border-radius:20px; border:1px solid #f59e0b; padding:6px 12px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:260px;
+  }
+  .audio-get{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; flex:1 1 100%;}
+  .audio-download{
+    display:inline-flex; align-items:center; gap:6px;
+    background:linear-gradient(135deg,#7e22ce 0%,#ec4899 100%);
+    color:#fff; text-decoration:none; border-radius:30px; padding:8px 18px;
+    font-size:0.95em; font-weight:bold; transition:transform .15s, box-shadow .15s;
+  }
+  .audio-download:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,0.3);}
+  .audio-pick-btn{
+    background:#fff; color:#7e22ce; border:2px solid #7e22ce;
+    border-radius:30px; padding:7px 16px; font-size:0.9em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .audio-pick-btn:hover{ transform:translateY(-2px); background:#f3e8ff;}
+  .audio-note{ font-size:0.9em; color:#92400e;}
+  h2.reading-highlight{ padding-right:34px; }
+  @media(max-width:768px){
+    .listen-bar{ padding:15px; gap:10px; }
+    .listen-status{ flex:1 1 100%; }
+    .listen-voice select{ max-width:140px; }
+  }
+  @media print{
+    .listen-bar{ display:none !important; }
+    .audio-player { display: none !important; }
+    .reading-highlight{ box-shadow:none !important; background:none !important; }
+    .tts-clickable{ cursor:auto; }
+  }
+  /* fs scaling for plain body paragraphs/list items, applied additively so it
+     doesn't fight whatever base font-size the article already declares */
+  .container p, .container li{ font-size: calc(1em * var(--fs)); }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 data-a="01-0" class="main-title" id="top">באהבה ובאחדות</h1>
+  <div class="subtitle">עיונים במצוות "ואהבת לרעך כמוך" — מן הבית ועד לשמים</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+
+  <div class="listen-bar">
+      <div class="listen-btn-group">
+          <button class="listen-btn" id="listenBtn" onclick="toggleListen()" aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן למאמר</button>
+          <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+          <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+          <button class="listen-skip-btn" onclick="skipListen(1)" aria-label="פסקה הבאה" title="פסקה הבאה">⏭</button>
+          <button class="listen-skip-btn" onclick="skipChapter(1)" aria-label="פרק הבא" title="פרק הבא">⏩</button>
+          <button class="listen-stop-btn" onclick="stopListen()" aria-label="עצור הקראה">⏹ עצור</button>
+          <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()" aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+      </div>
+      <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+      <span class="listen-progress" id="listenProgress"></span>
+      <div class="listen-rate">
+          <label for="rateRange">מהירות:</label>
+          <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1" oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)" aria-label="מהירות הקראה">
+          <output id="rateValue" for="rateRange">1.0×</output>
+      </div>
+      <div class="listen-voice">
+          <label for="voiceSelect">קול:</label>
+          <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+      </div>
+      <div class="listen-size">
+          <span>גודל טקסט:</span>
+          <button class="listen-size-btn" id="fontSmaller" onclick="setFontScale(-1)" aria-label="הקטן את הטקסט" title="הקטן את הטקסט">א−</button>
+          <output id="fontScaleValue">100%</output>
+          <button class="listen-size-btn big" id="fontBigger" onclick="setFontScale(1)" aria-label="הגדל את הטקסט" title="הגדל את הטקסט">א+</button>
+      </div>
+  </div><div class="audio-player no-tts">
+    <div class="audio-player-title">🎧 האזנה להקלטה — קול הילה</div>
+    <select class="audio-chapter-select" aria-label="בחירת פרק להאזנה" hidden>
+        <option value="audio/%D7%91%D7%90%D7%94%D7%91%D7%94_%D7%95%D7%91%D7%90%D7%97%D7%93%D7%95%D7%AA.mp3" data-seg="01">יסודות מצוות "ואהבת לרעך כמוך" · לא תשנא, איסור שנאת הלב · מעגלי האהבה · אהבת האישה והבית היהודי · שלום ואהבה, פנים אחד של מטבע</option>
+    </select>
+    <audio controls preload="none"></audio>
+    <div class="audio-get">
+        <a class="audio-download" href="#" data-download-placeholder="" target="_blank" rel="noopener">📥 להורדת קובץ השמיעה לחץ כאן</a>
+        <button type="button" class="audio-pick-btn">📂 בחר את הקובץ שהורדת</button>
+        <input type="file" class="audio-pick-input" accept="audio/*" multiple hidden>
+        <span class="audio-note"></span>
+    </div>
+</div>
+
+  <div class="toc">
+    <h3>📑 תוכן העניינים</h3>
+    <ol>
+      <li>
+        <a class="toc-chapter-link" href="#section1">פרק א: יסודות מצוות "ואהבת לרעך כמוך"</a>
+        <div class="toc-subs">
+          <a href="#s1-1">המקור בתורה וביאור הרמב"ן</a><span class="dot">·</span>
+          <a href="#s1-2">שיטת הרמב"ם: אהבה שבלב</a><span class="dot">·</span>
+          <a href="#s1-3">מדוע ניסח הלל בלשון שלילה?</a><span class="dot">·</span>
+          <a href="#s1-4">חיוב שבלב וחיוב שבמעשה — סיכום</a>
+        </div>
+      </li>
+      <li>
+        <a class="toc-chapter-link" href="#section2">פרק ב: לא תשנא — איסור שנאת הלב</a>
+        <div class="toc-subs">
+          <a href="#s2-1">כמה גדול החיוב לאהוב</a><span class="dot">·</span>
+          <a href="#s2-2">מקור האיסור ולשונו</a><span class="dot">·</span>
+          <a href="#s2-3">שיטת הרמב"ם והחינוך</a><span class="dot">·</span>
+          <a href="#s2-4">מדוע שנאה נסתרת חמורה יותר?</a><span class="dot">·</span>
+          <a href="#s2-5">האם צריך לגלות לחברו שהוא שונאו?</a><span class="dot">·</span>
+          <a href="#s2-6">שיטת הרמב"ן: הוכח תוכיח</a><span class="dot">·</span>
+          <a href="#s2-7">שיטת הכסף משנה והשאילתות</a><span class="dot">·</span>
+          <a href="#s2-8">קושיות מן הש"ס</a><span class="dot">·</span>
+          <a href="#s2-9">חידושו של החפץ חיים</a><span class="dot">·</span>
+          <a href="#s2-10">קמצא ובר קמצא וחורבן הבית</a><span class="dot">·</span>
+          <a href="#s2-11">משך זמן העבירה</a><span class="dot">·</span>
+          <a href="#s2-12">היתר לתועלת</a><span class="dot">·</span>
+          <a href="#s2-13">מצוות קדימת השונא</a>
+        </div>
+      </li>
+      <li>
+        <a class="toc-chapter-link" href="#section3">פרק ג: מעגלי האהבה</a>
+        <div class="toc-subs">
+          <a href="#s3-1">דין קדימה: קרובים לפני זרים</a><span class="dot">·</span>
+          <a href="#s3-2">מדוע "רעך" ולא "אחיך"?</a><span class="dot">·</span>
+          <a href="#s3-3">לאהוב את הילדים — גם מה שבין כך היית עושה</a><span class="dot">·</span>
+          <a href="#s3-4">כמה מצוות מקיים אדם בחסד אחד</a><span class="dot">·</span>
+          <a href="#s3-5">אהרן הכהן — מופת אהבת אח</a>
+        </div>
+      </li>
+      <li>
+        <a class="toc-chapter-link" href="#section4">פרק ד: אהבת האישה והבית היהודי</a>
+        <div class="toc-subs">
+          <a href="#s4-1">מצוות אהבת רעיתו — דאורייתא, דרבנן, או תמצית התורה?</a><span class="dot">·</span>
+          <a href="#s4-2">אהבה או דביקות?</a><span class="dot">·</span>
+          <a href="#s4-3">הבית היהודי — מקום תכלית האדם</a><span class="dot">·</span>
+          <a href="#s4-4">לגרום לאחרים שיאהבו אותי</a>
+        </div>
+      </li>
+      <li>
+        <a class="toc-chapter-link" href="#section5">פרק ה: שלום ואהבה — פנים אחד של מטבע</a>
+        <div class="toc-subs">
+          <a href="#s5-1">ראיות ששלום פירושו אהבה</a><span class="dot">·</span>
+          <a href="#s5-2">נפקא מינות למעשה</a><span class="dot">·</span>
+          <a href="#s5-3">עוד מקומות שבהם אהבה היא המצווה הגדולה ביותר</a>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <!-- ===================== CHAPTER 1 ===================== -->
+  <div class="chapter-label">פרק 1</div>
+  <h2 data-a="01-1" id="section1">יסודות מצוות "ואהבת לרעך כמוך"</h2>
+
+  <div class="chapter-toc-box">
+    <h4 data-a="01-2">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-3"><a href="#s1-1">המקור בתורה וביאור הרמב"ן</a></li>
+      <li data-a="01-4"><a href="#s1-2">שיטת הרמב"ם: אהבה שבלב</a></li>
+      <li data-a="01-5"><a href="#s1-3">מדוע ניסח הלל בלשון שלילה?</a></li>
+      <li data-a="01-6"><a href="#s1-4">חיוב שבלב וחיוב שבמעשה — סיכום</a></li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-7">מצוות "ואהבת לרעך כמוך" יוצאת דופן ביחס לשאר מצוות התורה: היא איננה עוסקת רק במעשה, אלא בתחושת הלב עצמה. אדם יכול לקיים "לא תגנוב" בלי לחוש דבר בליבו — אך כיצד מצווים על *הרגשה*? האם אנו כלל עומדים בדרגה של אהבת הזולת, ואם לא – מה מוטל עלינו לעשות כדי לזכות לכך? בפרק זה ננסה להבין את גדר המצווה מיסודה.</p>
+  </div>
+
+  <h3 data-a="01-8" id="s1-1">א. המקור בתורה וביאור הרמב"ן</h3>
+  <div class="verse-box">
+    <p data-a="01-9">"לֹא תִשְׂנָא אֶת אָחִיךָ בִּלְבָבֶךָ הוֹכֵחַ תּוֹכִיחַ אֶת עֲמִיתֶךָ וְלֹא תִשָּׂא עָלָיו חֵטְא. לֹא תִקֹּם וְלֹא תִטֹּר אֶת בְּנֵי עַמֶּךָ וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ אֲנִי ה'" (ויקרא יט, יז-יח)</p>
+  </div>
+
+  <p data-a="01-10">לכאורה יש כאן קושי גדול: כיצד ניתן לצוות אדם לאהוב את חברו <em>כמוהו</em>? הרמב"ן עצמו מעלה שתי קושיות על כך: ראשית, "לא יקבל לב האדם שיאהוב את חבירו כאהבתו את נפשו". שנית, רבי עקיבא עצמו קבע ש"חייך קודמין לחיי חברך" — ואם שניים הולכים במדבר וביד אחד מהם קיתון מים שמספיק רק לאחד, ישתה בעליו ולא יתן לחברו, אף שבכך ימות חברו. אם כן כיצד שייך "כמוך" ממש?</p>
+
+  <p data-a="01-11">מבאר הרמב"ן שאין הכוונה שנחוש כלפי הזולת בדיוק כפי שאנו חשים כלפי עצמנו, אלא שנרצה שיהיה לו טוב, באותה מידה שאנו רוצים טוב לעצמנו. מתוך דבריו ניתן לחלץ שלושה יסודות למידת האהבה הנדרשת:</p>
+  <ul>
+    <li data-a="01-12">שיחפוץ שיהיה לחברו טוב, כפי שהוא חפץ בטוב לעצמו.</li>
+    <li data-a="01-13">שיאהב וישמח בכך שיש לחברו טוב, כפי ששמח בטוב שיש לו עצמו.</li>
+    <li data-a="01-14">שלא ירצה שיהיה דבר טוב שיהיה לו ולא לחברו — כלומר, בלי קנאה כלל.</li>
+  </ul>
+
+  <p data-a="01-15">הרמב"ן עצמו נותן לכך דוגמה: יהונתן, שאהב את דוד "כאהבת נפשו", עד כדי כך שאמר לו "ואתה תמלוך על ישראל" — משום שהסיר מליבו לגמרי את מידת הקנאה.</p>
+
+  <div class="qa-box">
+    <p data-a="01-16" class="q">שאלה מעשית: האם אנו כבר עומדים בדרגה הזו?</p>
+    <p data-a="01-17" class="a">יתבונן אדם בעצמו: כאשר הוא עצמו זוכה להישג — למשל, לכתוב חיבור תורני יפה, או לרכוש ספר יקר ערך — האם הוא שמח <em>באותה מידה</em> כאשר אשתו זוכה להישג מקביל, כגון להשלים עבודת גמר מוצלחת? האם הוא שמח חצי ממה שהיא שמחה בכך? או שהוא רק מהנהן בראשו "כן, יפה מאוד" — בלי שהדבר נוגע לליבו כלל? זהו מבחן אמיתי לכך שהבנת הרמב"ן, על אף היותה "מקילה" יחסית ל"כמוך" הפשוט, עדיין רחוקה מאיתנו מרחק רב, אפילו ביחס לבן/בת הזוג.</p>
+  </div>
+
+  <p data-a="01-18">מעניין שהרמב"ן עצמו, בפירושו למצוות אהבת הזולת הכללית ("כל אדם"), עדיין לא הגיע לרמה של "כמוך" הפשוטה. וכך כותב בעל <em>חיי האושר בחיק האמת</em>: "היסוד הגדול והחשוב לרצות מאוד שתהיה אשתו שמחה ומאושרת ושיהיה לה עימו רק טוב, ולהשתדל בכך כראוי" — כלומר, נדרש <strong>רצון גדול וממשי</strong>, לא רק היעדר רגש שלילי. וככל שהרצון שיהיה לאשתו טוב יגדל, ממילא תגדל שמחתו כשטוב לה בפועל.</p>
+
+  <h3 data-a="01-19" id="s1-2">ב. שיטת הרמב"ם: אהבה שבלב</h3>
+  <p data-a="01-20">הרמב"ם בספר המצוות (מצוה רו) מגדיר את המצווה כך:</p>
+  <div class="quote-box">
+    <p data-a="01-21">"היא שצונו לאהוב קצתנו את קצתנו כאשר נאהב עצמנו, ושתהיה אהבתו וחמלתו לאחיו כאהבתו וחמלתו לעצמו בממונו ובגופו... והוא אמרו יתעלה ואהבת לרעך כמוך."</p>
+    <span class="source-tag">רמב"ם, ספר המצוות, מצוה רו</span>
+  </div>
+
+  <p data-a="01-22">וביתר ביאור, בשורש התשיעי לספר המצוות מבחין הרמב"ם בין ארבעה סוגי ציוויים שבתורה: <strong>דעות</strong> (כגון אמונת הייחוד), <strong>פעולות</strong> (כגון הקרבת קרבנות), <strong>מידות</strong> (כגון חמלה, רחמנות, וחסד — ובכללן "ואהבת לרעך כמוך"), ו<strong>דיבור</strong>. חשוב להבחין: הרמב"ם ממקם את "ואהבת" בקטגוריה של <span class="emphasis">מידות</span> — לא בקטגוריה של פעולות. משמעות הדבר עמוקה: זוהי מצווה על עיצוב הנפש והלב, בדומה למצוות אמונה ויראה, ולא רק מצווה על ביצוע מעשים חיצוניים.</p>
+
+  <p data-a="01-23">מכאן ניתן ללמוד יסוד נוסף: כשם שבכל המצוות אמרו חז"ל "רחמנא ליבא בעי" (התורה דורשת לב), כך גם בחסד — הקב"ה רוצה שיהיה לאדם לב שאכפת לו, מהחולה, מהעני, ולא רק שיבצע את הפעולה הטכנית. וכפי שהתורה מזהירה לגבי הלוואה "ולא ירע לבבך בתתך לו" — כלומר, שלא יתן מתוך כבדות לב — כך בכל מצוות החסד נדרשת השתתפות רגשית אמיתית בצער הזולת, לא רק סיפוק צרכיו הטכני.</p>
+
+  <h3 data-a="01-24" id="s1-3">ג. מדוע ניסח הלל בלשון שלילה?</h3>
+  <p data-a="01-25">מפורסם המעשה בגמרא:</p>
+  <div class="quote-box">
+    <p data-a="01-26">"שוב מעשה בנכרי אחד שבא לפני שמאי, אמר לו: גיירני על מנת שתלמדני כל התורה כולה כשאני עומד על רגל אחת. דחפו באמת הבנין שבידו. בא לפני הלל, גייריה. אמר לו: דעלך סני לחברך לא תעביד — זו היא כל התורה כולה, ואידך פירושה הוא, זיל גמור."</p>
+    <span class="source-tag">שבת לא, א</span>
+  </div>
+
+  <p data-a="01-27">ומעניין שגם תלמידו הגדול של הלל, יונתן בן עוזיאל, בתרגומו לפסוק "ואהבת לרעך כמוך" מתרגם באותה לשון שלילית: "ותרחם לחברך, דמן אנת סני לך לא תעביד ליה". לא זו בלבד שהלל אמר כך לגר שביקש תמצית קצרה — אלא שתלמידו מפרש כך את גוף הפסוק בתורה עצמה! מכאן שאין זו התאמה מקרית ללומד מזדמן, אלא הבנה עקרונית בגדר המצווה.</p>
+
+  <p data-a="01-28">מדוע, אם כן, בחרו הלל ותלמידו לנסח מצוות חיובית ("ואהבת") בלשון שלילית ("מה ששנוא עליך לא תעשה לחברך")? מבאר המהרש"א (שבת לא, א) שהדבר נלמד מהקשרו: כשם ש"לא תקום ולא תטור" הם ציוויים בדרך השלילה, כך גם "ואהבת לרעך כמוך" הבא בהמשכם — נדרש מלכתחילה רק בדרך השלילה, שלא לעשות דברים המצערים את הזולת.</p>
+
+  <div class="qa-box">
+    <p data-a="01-29" class="q">כיצד ביאור זה מיישב את קושיות הרמב"ן?</p>
+    <p data-a="01-30" class="a">אם באמת "ואהבת" במעשה פירושה רק "אל תעשה לחברך מה ששנוא עליך" — מתיישבות שתי קושיות הרמב"ן בבת אחת: <br>(א) אין כאן דרישה בלתי אפשרית "לאהוב כאהבת נפשו ממש", כי במעשה הדרישה מוגבלת לאי-הזקה בלבד.<br>(ב) אין סתירה מדברי רבי עקיבא: אדם אכן אינו חייב לתת לחברו את קיתון המים שלו — שהרי החובה היא רק שלא להזיק ולא לגזול ממנו, לא לתת לו מרכושו. וכפי שביאר בספר <em>תורת האדם לאדם</em> (חלק ד), קושיית הרמב"ן היא מעין "ממה נפשך": אם "כמוך" מוסב על הלב — אי אפשר לקיימו במלואו; ואם מוסב על המעשים — הרי ר' עקיבא מלמד שאין חובה לוותר על חייו שלו. מכאן שגם מבחינת המעשה, "כמוך" אינו כפשוטו ממש.</p>
+  </div>
+
+  <p data-a="01-31">גם ספר החינוך (מצוה רמג) בונה על יסוד דומה: <em>"ואמרו זכרונם לברכה: דעלך סני לחברך לא תעביד"</em> — ומוסיף מיד: "שהאוהב חבירו כנפשו לא יגנוב ממונו ולא ינאף את אשתו ולא יונהו בממון ולא בדברים ולא יסיג גבולו ולא יזיק לו כשום צד". כלומר, לחינוך יש למעשה <strong>שני מישורים</strong> במצווה: מישור הלב — שם נדרשת אהבה אמיתית וחיובית, ומישור המעשה — שם החובה היא שלילית: הימנעות מכל היזק.</p>
+
+  <h3 data-a="01-32" id="s1-4">ד. חיוב שבלב וחיוב שבמעשה — סיכום</h3>
+  <p data-a="01-33">נותר לברר: אם החיוב הבסיסי הוא מהתורה ("דאורייתא"), מדוע כשמגיע הרמב"ם לפרט מצוות מסוימות של חסד (ביקור חולים, ניחום אבלים, הכנסת כלה, לוויית המת) הוא כותב "מצות עשה של דבריהם" — כלומר, מדרבנן?</p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <h4 data-a="01-34">הסבר א (הרב מירניק)</h4>
+      <p data-a="01-35">מצוות "ואהבת" מתחלקת לשתיים: מצווה <strong>חיובית</strong> — שהיא רק שלילת הרע, שלא יעשה לחברו את מה ששנוא עליו (כמבואר לעיל); ומצווה <strong>קיומית</strong> — כל עזרה שהוא עושה בפועל מוסיפה קיום נוסף במצווה, אך אינה חובה גמורה. באו חכמים וקבעו חובות ספציפיות (ביקור חולים וכו') כדי שיהיו חובה ולא רשות בלבד. הנתינה במעשה, מצידה, מחזקת את האהבה שבלב (וכפי שכתב במכתב מאליהו: "נתינה עושה אהבה").</p>
+    </div>
+    <div class="col-gold">
+      <h4 data-a="01-36">הסבר ב (הרב נתנאל פילו)</h4>
+      <p data-a="01-37">יש חיוב אמיתי לעשות לחברו כל מה שהוא <em>מצפה</em> ממך (לא כל מה שתרצה) — ואין בכך סתירה לקושיית רבי עקיבא, שהרי חברך אינו מצפה שתיתן לו את קיתון המים שלך. מה שחידשו חכמים הוא לחייב גם במקום שהחבר אינו מצפה בפועל — כגון ביקור חולים — במקרים שהם הגדירו זאת כחובה קבועה.</p>
+    </div>
+  </div>
+
+  <p data-a="01-38">לסיכום פרק זה: (א) מדאורייתא, עיקר החיוב של "ואהבת לרעך כמוך" הוא אהבת הלב, ובמעשה — הימנעות מהיזק. (ב) מדרבנן, קיימת רשימה מוגדרת של חובות חסד (ביקור חולים, ניחום אבלים, הכנסת כלה ועוד) שקיבלו מעמד של חיוב גמור. (ג) בשאר סוגי החסד — יש מקום לומר שהם בגדר "לפנים משורת הדין", מידת חסידות ראויה, אך לא חיוב פורמלי. הבנה זו תשמש אותנו בהמשך הספר, כשנעמוד על כך שהמעגל הקרוב ביותר — המשפחה — הוא המקום שבו אהבת הלב אמורה להגיע לשיא ביטויה.</p>
+
+  <div class="chapter-card">
+    <div class="label">הפרק הבא</div>
+    <div class="num">2</div>
+    <div class="title">לא תשנא — איסור שנאת הלב</div>
+  </div>
+  <div class="chapter-divider"><span class="icon">✡</span></div>
+
+  <!-- ===================== CHAPTER 2 ===================== -->
+  <div class="chapter-label">פרק 2</div>
+  <h2 data-a="01-39" id="section2">לא תשנא — איסור שנאת הלב</h2>
+
+  <div class="chapter-toc-box">
+    <h4 data-a="01-40">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-41"><a href="#s2-1">כמה גדול החיוב לאהוב</a></li>
+      <li data-a="01-42"><a href="#s2-2">מקור האיסור ולשונו</a></li>
+      <li data-a="01-43"><a href="#s2-3">שיטת הרמב"ם והחינוך</a></li>
+      <li data-a="01-44"><a href="#s2-4">מדוע שנאה נסתרת חמורה יותר?</a></li>
+      <li data-a="01-45"><a href="#s2-5">האם צריך לגלות לחברו שהוא שונאו?</a></li>
+      <li data-a="01-46"><a href="#s2-6">שיטת הרמב"ן: הוכח תוכיח</a></li>
+      <li data-a="01-47"><a href="#s2-7">שיטת הכסף משנה והשאילתות</a></li>
+      <li data-a="01-48"><a href="#s2-8">קושיות מן הש"ס</a></li>
+      <li data-a="01-49"><a href="#s2-9">חידושו של החפץ חיים</a></li>
+      <li data-a="01-50"><a href="#s2-10">קמצא ובר קמצא וחורבן הבית</a></li>
+      <li data-a="01-51"><a href="#s2-11">משך זמן העבירה</a></li>
+      <li data-a="01-52"><a href="#s2-12">היתר לתועלת</a></li>
+      <li data-a="01-53"><a href="#s2-13">מצוות קדימת השונא</a></li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-54">אם בפרק הקודם עסקנו בצד החיובי — מצוות האהבה — פרק זה עוסק בצידו השני של אותו מטבע: איסור השנאה. נראה כיצד השנאה הנסתרת בלב, דווקא משום שאינה נראית לעין, נחשבת בעיני חז"ל לחמורה מכל שאר גילויי השנאה, ועד כמה הרחיקו חכמים ופוסקים לכת בהבנת חומרתה.</p>
+  </div>
+
+  <h3 data-a="01-55" id="s2-1">א. כמה גדול החיוב לאהוב</h3>
+  <p data-a="01-56">מרן ראש הישיבה הגר"א שך זצוק"ל אמר יסוד גדול, כפי שמובא ב"מחשבת מוסר": הגמרא ביומא (ט, ב) קובעת שבית שני נחרב בעוון שנאת חינם. בפשטות היה נראה שיש רק שלוש דרגות: אהבה, שנאה, ודרגת ביניים ניטרלית. אולם הגר"א שך מחדש: כשם שאנו מוצאים בתורה תביעות דקות מן הדקות אצל האבות ואצל משה רבנו — חיסרון קטן בשלמות שאצל כל אדם אחר לא היה נחשב כלל — כך גם בשנאה: קיימות עשרות דרגות שביניים, וכל חיסרון באהבת אחים ואהבת חברים, ולו הקטן ביותר, נחשב במידה מסוימת ל<em>שנאה</em>.</p>
+
+  <p data-a="01-57">ראיה לכך: התורה אומרת על עמון ומואב "לא תדרוש שלומם וטובתם כל ימיך לעולם" (דברים כג, ז), ותרגום יונתן מוסיף: "דאפילו מתגיירין סנא נטיר בליבכון עד עלמא" — אפילו אם יתגיירו, תישאר שנאה שמורה בלבבכם. והרי כאן לא נאמר במפורש "תשנאו" אלא רק "לא תדרוש שלומם" — ובכל זאת מפרש התרגום זאת כשנאה ממשית! מוכח: היכן שאין אהבה מלאה, יש כאן כבר איזו מידה של שנאה.</p>
+
+  <p data-a="01-58">ראיה נוספת: הרמב"ם בהלכות תשובה (פ"י ה"ב) כותב שהעובד את ה' מיראה או מתקווה לשכר — "אינו עובד ד' על דרך זה אלא עמי הארץ והנשים והקטנים", ואילו מעלת אברהם אבינו, שנקרא "אוהב ה'", "מעלה גדולה מאד ואין כל חכם זוכה לה". נמצא שיש חכמים גדולים שלא הגיעו למעלת האהבה העליונה, ולכאורה עולה תמיהה: האם חיסרון במעלה כזו גובל עם שנאה חלילה?</p>
+
+  <div class="qa-box">
+    <p data-a="01-59" class="q">כיצד מתיישב הדבר?</p>
+    <p data-a="01-60" class="a">בבין אדם לחברו קיים מושג של "כמוך": אם חסר ב"כמוך", כלומר אתה מעריך את עצמך יותר מן השני ואינך מקבלו כראוי — זהו כבר גובל בהיפך מאהבה. לעומת זאת אצל הקב"ה, הדרישה גבוהה עוד יותר: "בכל נפשך", אפילו נוטל את נפשך ("יראה שהוא נוטל את נפשך") — אין המושג "חיסרון בכך" מתפרש כשנאה, שכן ממילא רף הדרישה שם שונה לחלוטין ואינו נמדד באותה אמת מידה.</p>
+  </div>
+
+  <p data-a="01-61">סיכומו של דבר, אמר הגר"א שך זצוק"ל: אולי דרגות הדקדוק העדין הללו מיועדות בעיקר לגדולי הדור (כדוגמת "בגד לבן ונקי — רואים בו כל כתם"), אך יש לזכור שבית המקדש חרב על שנאת חינם, ויסוד כלל ישראל תלוי כולו במידת בין אדם לחברו.</p>
+
+  <p data-a="01-62">מרן החפץ חיים זצוק"ל, בהקדמתו לספרו, מוסיף זווית משלימה: בסוף ימי בית שני "גברה שנאת חינם", ובמקום אחר מובא בחז"ל שהחורבן היה על עוון לשון הרע. מיישב החפץ חיים שלמעשה שני הדברים אחד הם — שכן לשון הרע יוצא מתוך השנאה, ובלעדיה לא היו נענשים כל כך. ואפשר לומר עוד יותר: לשון הרע ושנאת חינם הם ממש דבר אחד, שכן מדוע אדם שונא את חברו? משום שהוא מדבר בליבו דברים רעים עליו — וזהו בעצם "לשון הרע בחשאי". וכך מוצאים בפרשת חוקת: "וידבר העם באלוקים ובמשה" — ותרגום יונתן: "והרהרו עמא בלבביהון" — הם לא דיברו בפועל, אלא רק הרהרו בליבם, ובכל זאת נענשו בנחשים כדין מוציאי דיבה. זוהי, אם כן, ה"שנאת חינם" האמיתית — מחשבה רעה על הזולת, בלי אפילו הוצאתה בפה.</p>
+
+  <p data-a="01-63">עם יסוד עמוק זה — שכל דרגת חוסר-אהבה היא צורה כלשהי של שנאה — נעבור עתה לבחון את המצווה הפרטית "לא תשנא", על כל דקדוקיה ההלכתיים.</p>
+
+  <h3 data-a="01-64" id="s2-2">ב. מקור האיסור ולשונו</h3>
+  <div class="verse-box">"לֹא תִשְׂנָא אֶת אָחִיךָ בִּלְבָבֶךָ" (ויקרא יט, יז)</div>
+
+  <p data-a="01-65">הגמרא במסכת ערכין (טז, ב) דורשת: "תנו רבנן: לא תשנא את אחיך בלבבך — יכול לא יכנו, לא יסטרנו, ולא יקלקלנו? תלמוד לומר: בלבבך — שנאה שבלב הכתוב מדבר." כלומר, המילה "בלבבך" מלמדת שעיקר האיסור אינו על המעשה (הכאה, קללה) אלא דווקא על השנאה הפנימית, החבויה בלב.</p>
+
+  <h3 data-a="01-66" id="s2-3">ג. שיטת הרמב"ם והחינוך</h3>
+  <p data-a="01-67">וכך פוסק הרמב"ם (ספר המצוות, לא תעשה שב): "הזהירנו משנוא קצתנו לקצתנו... אמנם כשהראה לו השנאה והודיע שהוא שונאו אינו עובר על זה הלאו, אבל הוא עובר על לא תקום ולא תטור, ועובר על עשה גם כן — ואהבת לרעך כמוך. אבל שנאת הלב הוא חטא יותר חזק מן הכל." ובלשון דומה כותב ספר החינוך (מצוה רלח). כלומר: לשיטתם, ברגע שהשנאה יוצאת אל הפועל וגלויה לחברו — פוקע דווקא הלאו הספציפי הזה (אף שעדיין עובר על לאווים אחרים), ונשארת רק השנאה החבויה, שאיש אינו יודע ממנה, כעבירה שהתורה מזהירה עליה בחומרה מיוחדת.</p>
+
+  <h3 data-a="01-68" id="s2-4">ד. מדוע שנאה נסתרת חמורה יותר?</h3>
+  <p data-a="01-69">לכאורה זהו היפוך גמור מסברת העולם: הרי בדרך כלל, מי שפוגע בחברו בפועל (הנוקם ממש) נחשב חמור יותר ממי ששונא רק בליבו! מדוע, אם כן, מחמירה התורה דווקא בשנאה הנסתרת?</p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <h4 data-a="01-70">הסבר היד הקטנה</h4>
+      <p data-a="01-71">כאשר השנאה נשארת בלב, "אש השנאה" אינה נכבית לעולם, ועלולה בסופו של דבר להוביל אף לרציחה — בדומה לרוח שאינה יכולה לצאת, ולבסוף פורצת בקול רעש גדול. לעומת זאת, כאשר השנאה יוצאת החוצה, היא "מתכבה" מליבו של האדם (על דרך "דאגה בלב איש ישיחנה" — משיחתו משכיחה אותה).</p>
+    </div>
+    <div class="col-gold">
+      <h4 data-a="01-72">הסבר כד הקמח והחפץ חיים</h4>
+      <p data-a="01-73">אם השונא אינו מגלה את שנאתו, חברו יכול לטעות ולחשוב שהוא אוהבו — ולא ידע כיצד להישמר ממנו. וכפי שהעיד רבנו בחיי: "כבר ידעת כי יואב בן צרויה אחז הדרך הזה שהראה את עצמו אוהב לאבנר ולעמשא עד שהרג אותם, וכן עשה ישמעאל בן נתניה לגדליה בן אחיקם עד שהרגו." כאשר אדם מתרגל במידה זו בינו לבין חברו, סופו שינהג כך גם בינו לבין הקב"ה עצמו — "ויפתוהו בפיהם ובלשונם יכזבו לו" (תהלים עח).</p>
+    </div>
+  </div>
+
+  <h3 data-a="01-74" id="s2-5">ה. האם צריך לגלות לחברו שהוא שונאו?</h3>
+  <p data-a="01-75">מכאן עולה שאלה מעשית חשובה: אם אדם שונא את חברו, האם עליו ללכת ולומר לו זאת במפורש — כדי לא לעבור על "לא תשנא בלבבך" — או שכל מה שנדרש הוא שלא <em>יסתיר</em> את שנאתו במעשים המראים כאילו הוא אוהבו, אך אין חובה ממש לגשת ולהודיע?</p>
+
+  <p data-a="01-76">מקבילה מאלפת ניתן למצוא בעניין מחילה על לשון הרע: בעל "תשובות והנהגות" (ה, שצז) מביא שהחפץ חיים כתב שאם סיפר לשון הרע על חברו וזה הוזק, אך חברו אינו יודע כלל — עדיין צריך לגלות לו ולבקש מחילה. לעומתו, מובא בשם רבי ישראל סלנטר זצ"ל, שאושר במכתב מרבי אליהו אליעזר דסלר זצ"ל, שאם הגילוי יגרום צער לחברו — אין חובה לגלות, שהרי "לא הותר לצער את חברו כדי לזכות במחילה", ודי בבקשת מחילה כללית.</p>
+
+  <p data-a="01-77">וכך גם כתב החפץ חיים בעצמו (פתיחה, לאוין ז): "ולפעמים עובר המספר גם כן בלאו ד'לא תשנא את אחיך בלבבך', כגון אם בפניו שלום ידבר את רעהו, ושלא בפניו מבאיש את ריחו בפני אחרים." מדיוק לשונו — "אם בפניו שלום ידבר" — עולה שהאיסור מתמקד במעשה ההסתרה, בהעמדת פנים של שלום, ולא בעצם אי-הגילוי. הנראה מכל זה: אין חובה ללכת ולהודיע לחברו "אני שונא אותך" — הדבר אף עלול להיאסר מדין "אונאת דברים" — אלא שאסור לנהוג כלפיו במעשי העמדת פנים המטעים אותו לחשוב שהוא אהוב.</p>
+
+  <h3 data-a="01-78" id="s2-6">ו. שיטת הרמב"ן: הוכח תוכיח כהמשך "לא תשנא"</h3>
+  <p data-a="01-79">הרמב"ן מציע קריאה שונה לגמרי של הפסוקים, המחברת יחד את כל הרצף — "לא תשנא", "הוכח תוכיח", "ולא תשא עליו חטא", "לא תקום ולא תטור" — לכדי תהליך אחד שלם:</p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <h4 data-a="01-80">ביאור א'</h4>
+      <p data-a="01-81">"בעבור שדרך השונאים לכסות את שנאתם בלבם, כמו שאמר 'בשפתיו ינכר שונא' — הזכיר הכתוב בהווה" (כלומר: "בלבבך" אינו דווקא, אלא מתאר את המצב השכיח). "הוכח תוכיח" היא מצווה נפרדת — ללמד תוכחת מוסר; ו"ולא תשא עליו חטא" פירושו שלא יהיה עליך אשם כאשר יחטא ולא הוכחת אותו (וכתרגום אונקלוס: "ולא תקבל על דיליה חובא").</p>
+    </div>
+    <div class="col-gold">
+      <h4 data-a="01-82">ביאור ב' — "והנכון בעיני" (עמדתו של הרמב"ן עצמו)</h4>
+      <p data-a="01-83">"הוכח תוכיח" — מלשון ויכוח (כמו "והוכיח אברהם את אבימלך"), ולא מלשון מוסר! כלומר: אל תשנא את חברך בסתר בעבור שעשה לך שלא כרצונך — אלא <strong>עמוד וטען עמו</strong>: "מדוע ככה עשית עמדי?" — ובכך הוא יתנצל, או ישוב ויתוודה, ותוכל לסלוח לו. "ולא תשא עליו חטא" — לא תישא בעצמך את חטא הסתרת השנאה, ולאחר מכן — גם אם עדיין נפגעת — "לא תקום ולא תטור", ולבסוף — "ואהבת לרעך כמוך".</p>
+    </div>
+  </div>
+
+  <p data-a="01-84">לפי ביאורו השני והמועדף של הרמב"ן, "בלבבך" כלל אינו מתאר מקום לגיטימי לשנאה שקטה — אלא מלמד שאסור <strong>לשמור</strong> את השנאה בלב, במקום להוציאה כלפי חוץ בדרך של דו-שיח כן ופתוח. זהו הבדל תהומי משיטת הרמב"ם: אצל הרמב"ם, גילוי השנאה (ללא תוכחה) פוטר מהלאו הספציפי; אצל הרמב"ן, החובה החיובית היא דווקא <em>לפנות ולהתעמת</em> — לא סתם "לגלות", אלא לברר ולתקן את מקור הפגיעה.</p>
+
+  <h3 data-a="01-85" id="s2-7">ז. שיטת הכסף משנה והשאילתות</h3>
+  <p data-a="01-86">מחלוקת מהותית נוספת קיימת בהבנת שיטת הרמב"ם עצמו. הכסף משנה (הלכות דעות פ"ו ה"ה) מבין שגם המכה או המחרף את חברו <em>בפועל</em>, אם עשה זאת מתוך שנאה אמיתית שבליבו, עדיין עובר על "לא תשנא" — ומה שכתב הרמב"ם ש"בלבבך" ממעט הוא רק את מי שפוגע בחברו <em>שלא</em> מתוך שנאה כלל (למשל, מכהו למטרה חינוכית). כלומר, "לא תשנא" לשיטתו חל הן על שנאה נסתרת והן על שנאה גלויה, כל עוד קיימת בלב שנאה אמיתית.</p>
+
+  <p data-a="01-87">גם השאילתות (וישב, כז) נוקט לכאורה כשיטה זו: "שאילתא דאסיר להו לדבית ישראל למישנא חד לחבריה... למימרא דשנאה בעלמא קאסר רחמנא, ואף על גב דלא קא עביד מדעם" — ומבאר ה"העמק שאלה" שכוונת השאילתות היא שאם עצם השנאה (גם ללא מעשה) אסורה, ודאי שגם כשיש מעשה הנובע משנאה — אסור.</p>
+
+  <p data-a="01-88">אולם רוב הפוסקים דחו את הבנת הכסף משנה, מכוח לשון הרמב"ם עצמו בספר המצוות, המבחין באופן ברור: שנאה גלויה יוצאת מכלל "לא תשנא" הספציפי (אך נכנסת ללאווים אחרים). למעשה נקטו הפוסקים (וכן המשנה ברורה, סימן קנו) כדעת הרמב"ם כפשוטו.</p>
+
+  <h3 data-a="01-89" id="s2-8">ח. קושיות מן הש"ס</h3>
+  <p data-a="01-90">מספר סוגיות בש"ס מעוררות דיוק מעניין בגדר "לא תשנא":</p>
+
+  <p data-a="01-91"><strong>מסוטה (ג, א):</strong> "וקנא את אשתו — רשות, דברי רבי ישמעאל... רבי אליעזר בן יעקב אומר, כלפי שאמרה תורה 'לא תשנא את אחיך בלבבך', יכול כגון זו? תלמוד לומר 'ועבר עליו רוח קנאה'." לכאורה קשה: הרי הבעל המקנא לאשתו מודיע לה בגלוי את קנאתו — ומדוע שיעבור על "לא תשנא", המוגבל (לדעת הרמב"ם) רק לשנאה שבלב? מבאר הקהילות יעקב: בתחילת דרך הקינוי, אין כאן שנאה כלל — רק דאגה למעשיה. מה שהזהירה הגמרא הוא שמתוך תהליך הקינוי הממושך <strong>עלול</strong> להיווצר בסופו של דבר שנאה נסתרת בלב, וזהו עצמו האיסור: לעשות מעשה שעלול להוביל לידי שנאה, אף שכעת עדיין אין שנאה בפועל. חידוש עצום זה מלמד שהאיסור אינו רק על השנאה עצמה, אלא גם על הליכה במסלול המוביל אליה.</p>
+
+  <p data-a="01-92"><strong>מפסחים (קיג, ב):</strong> "שלשה הקדוש ברוך הוא שונאן: המדבר אחד בפה ואחד בלב..." והגמרא דנה במי שראה ערווה בחברו — "ומי שריא למסניה? והכתיב לא תשנא את אחיך בלבבך?" הקשה הקהילות יעקוב: מדוע לא תירצה הגמרא בפשטות ששונא אותו בגלוי, שאז אין בכך "לא תשנא"? מתרץ: גם שנאה גלויה עדיין עוברת על "לא תקום ולא תטור", כך שקושיית הגמרא נכונה בכל מקרה — רק שקיצרה בניסוחה.</p>
+
+  <p data-a="01-93">הבאר יהודה מציע כיוון נוסף, בהתבסס על המלבי"ם: קיים הבדל בין "אויב", ששנאתו גלויה, לבין "שונא", ששנאתו דווקא בלב. לפי זה, הפסוק "כי תראה חמור שונאך" עוסק דווקא בשנאה נסתרת — אלא שיש להעיר על כך מפסוק "וישנאו אתו ולא יכלו דברו לשלום" (בראשית לז, ד), שם מתוארת שנאת האחים ליוסף כ"שנאה", אף שהיתה ידועה וגלויה, וצריך עיון.</p>
+
+  <p data-a="01-94"><strong>מנדרים (סה, ב):</strong> "אילו היית יודע שאתה עובר על... לא תשנא את אחיך בלבבך... אמר: אילו הייתי יודע שהוא כן לא הייתי נודר — הרי זה מותר." לכאורה קשה: אם הדיר את קרובו בגלל שנאה, וכעת הודיעוהו שהוא עובר על "לא תשנא" — הרי כבר לפני כן שנא אותו, ומדוע שיוסיף לעבור? יש לומר שמדובר במקרה שלא גילה את שנאתו לחברו, וחברו עלול לחשוב שההדרתו נובעת מקמצנות בלבד ולא משנאה.</p>
+
+  <h3 data-a="01-95" id="s2-9">ט. חידושו של החפץ חיים</h3>
+  <p data-a="01-96">החפץ חיים מוסיף רובד נוסף: מי שמדבר לשון הרע על חברו לאחרים אינו רק ממשיך בהסתרת שנאתו, אלא <strong>שב ועובר שוב</strong> על "לא תשנא" בעצם מעשה הדיבור — משום שהדיבור עצמו <em>מחזק</em> את השנאה בליבו (על דרך "האמנתי כי אדבר"). ראיה לכך מביא מהמשנה בנדרים (סה, ב): שם מדובר במי שהדיר את קרובו כבר קודם לכן מתוך שנאה — ובכל זאת אומרת המשנה "אילו היית יודע שאתה <em>עובר</em>" בלשון הווה, ולא "שעברת" — מכאן שהאיסור נמשך ומתחדש כל עוד ההדרה בתוקף, ולא רק ברגע הקביעה הראשוני.</p>
+
+  <div class="qa-box">
+    <p data-a="01-97" class="q">מחלוקת עדינה: האם דיבור מחליש או מחזק את השנאה?</p>
+    <p data-a="01-98" class="a">כאן נחשפת מחלוקת מעניינת בין הפוסקים: לפי היד הקטנה, הוצאת השנאה בפה (אפילו לצד שלישי) דווקא <strong>מקטינה</strong> ומכבה אותה, בבחינת "דאגה בלב איש ישיחנה". לפי החפץ חיים, לעומת זאת, הדיבור <strong>מחזק</strong> ומעצים את השנאה. שתי הבנות אלו סותרות זו את זו באופן ישיר, וצריך עיון גדול (וצ"ב) כיצד ליישבן — אולי יש לחלק בין דיבור המפרק את הרגש (שיחה עם איש שלום, המבקש רק לשמוע ולתמוך) לבין דיבור לשון הרע המחזק את התיוג השלילי של הזולת ("הוא רשע", "הוא כזה וכזה") ומקבע אותו כעובדה.</p>
+  </div>
+
+  <h3 data-a="01-99" id="s2-10">י. קמצא ובר קמצא וחורבן הבית</h3>
+  <p data-a="01-100">הגמרא ביומא (ט, ב) קובעת: "ראשונים שנתגלה עונם — נתגלה קצם, אחרונים שלא נתגלה עונם — לא נתגלה קצם". והרי בית שני חרב על שנאת חינם — דבר שנחשב כשלעצמו לפרהסיה! מבאר המהרש"א: השנאה עצמה היתה נסתרת — "שנאת חנם בלב, ולפנים כאילו אוהבים, כדאמרינן שאוכלין ושותין זה עם זה... ודוקרין זה את זה בחרבות שבלשונם". וכן מוזכר גם לגבי בית ראשון: "מגורי אל חרב היו את עמי... אלו בני אדם שאוכלין ושותין זה עם זה, ודוקרין זה את זה בחרבות שבלשונם" — אלא ששם מדובר דווקא ב"נשיאי ישראל" (המנהיגים), ולא בעם כולו, כך שחומרתו של בית ראשון (עבודה זרה, גילוי עריות, שפיכות דמים) היתה עדיין חמורה וגלויה יותר.</p>
+
+  <div class="qa-box">
+    <p data-a="01-101" class="q">אם החורבן היה על שנאה נסתרת — מדוע מספרת הגמרא דווקא את סיפור קמצא ובר קמצא, שהוא מקרה מובהק של שנאה גלויה (השפלה פומבית במסיבה)?</p>
+    <p data-a="01-102" class="a">נראה לומר שאכן ה"מכה בפטיש" הפומבית היתה מעשה בר קמצא — אך לולא היה הדור כולו שקוע בשנאה חבויה, לא היה חטא בודד זה יכול להביא לחורבן בית המקדש. ויש להוסיף: הובא בשם הרב שלמה לוינשטיין שליט"א ביאור מרתק, המבוסס על המהרש"א בגיטין (שם מבואר שקמצא ובר קמצא היו כנראה אב ובנו): קמצא אהב את בעל הסעודה — אך רק כלפי חוץ; בתוך ביתו שלו, מול בנו עצמו, מעולם לא ביטא אהבה או קרבה. וכתוצאה מכך גדל בנו לשנוא — הן את אביו והן, מתוך אותה שנאה מודחקת, את הסובבים אותו. נמצא שקמצא עצמו, בהיותו "אחד בפה ואחד בלב" בתוך ביתו-שלו, נושא באחריות עמוקה יותר לחורבן מכפי שנדמה במבט ראשון — וזהו ביטוי מזעזע לכך שהחיסרון באהבה בתוך הבית עלול להוליד תוצאות הרסניות הרחק מעבר לכתלי הבית עצמו.</p>
+  </div>
+
+  <h3 data-a="01-103" id="s2-11">יא. משך זמן העבירה</h3>
+  <p data-a="01-104">יש לחקור: האם עובר על "לא תשנא" רק פעם אחת, ברגע קביעת השנאה בלב, או שכל רגע שהשנאה מתעוררת בליבו הוא עובר מחדש? ספר "אהבת ישראל" (לחפץ חיים) קובע חד-משמעית: "בכל העבירות אינו מצוי אצל אדם שיעבור עליהן בכל רגע ורגע (אם לא באדם המופקר), אבל בעון זה של שנאת חנם עובר האדם בכל רגע ורגע בזמן שמתעוררת שנאה בליבו, ולפעמים עומדת השנאה אצלו חודש או שנה ויותר, ונתכפלו הלאווין עד אין שיעור." דברים דומים כתובים בשערי קדושה ובפלא יועץ.</p>
+
+  <p data-a="01-105">מכאן מתעוררת שאלה על שיטת הרמב"ם: החקרי לב מקשה — כיצד אומר הרמב"ם שהמכה את חברו אינו עובר על "לא תשנא" (אלא רק על "לא יוסיף"), הרי הכאתו נובעת משנאה שכבר גמר בליבו קודם לכן, ונמצא שכבר עבר על "לא תשנא"?</p>
+
+  <p data-a="01-106">תשובה יפה לכך: כוונת הרמב"ם היא שמרגע הכאתו — הוא <strong>מפסיק</strong> לעבור על "לא תשנא". חידוש זה, אגב, מוכיח בעצמו שהעבירה נעברת בכל רגע ורגע ולא רק פעם אחת בקביעת השנאה — ולפי זה מובן היטב מדוע כל כך רצה הרמב"ם שאדם יגלה את שנאתו החוצה, על אף שבכך יעבור על לאווים אחרים (לא תיטור, לא תשא עליו חטא, לא תונו): שכן כל עוד השנאה חבויה בלב — האדם צובר עבירות ללא סוף, בכל רגע מחדש; ואילו בגילוי — הוא עובר אולי פעם או פעמיים על לאווים אחרים, ותם ונשלם.</p>
+
+  <p data-a="01-107">גישה שלישית, שונה במהותה, מוצעת בשערי תשובה לרבנו יונה: האיסור אינו ממוקד בשנאת אדם ספציפי כלל, אלא מטרתו לעקור את <strong>מידת</strong> השנאה מנפש האדם באופן כללי — יעד של תיקון האופי, ולא רק ציות פר-אדם.</p>
+
+  <h3 data-a="01-108" id="s2-12">יב. היתר לתועלת</h3>
+  <p data-a="01-109">קובץ הערות מציע כלל מארגן: כל האיסורים שבין אדם לחברו נאסרו רק כדרך "קלקול והשחתה שלא לצורך" — כלומר, אינם אסורים באופן מוחלט, אלא רק כאשר אין להם תועלת ממשית. לכן, "לא תשנא" אוסר רק שנאת חינם, אך אם ראה בחברו דבר עבירה ממש — מותר, ואף מצווה (כלשון הגמרא בפסחים: "מצוה לשנאתו, שנאמר יראת ה' שנאת רע") לשנוא אותו. עיקרון דומה נמצא באיסורים מקבילים: חבלה מותרת לצורך חינוכי, עינוי יתום מותר ללמדו תורה, לשון הרע מותר לגבי בעלי מחלוקת כדי להשקיט מריבה, ואונאת דברים מותרת דרך תוכחה.</p>
+
+  <p data-a="01-110">הפלא יועץ מוסיף נופך: במקרה שבו מותר לשנוא (מחמת עבירה ממשית), ראוי אף שהשנאה תהיה <strong>גלויה</strong> — כפירושו לפסוק "כי תראה חמור שונאך" — משום שכאשר השנאה מוצהרת בפרהסיה, לפחות "יעמדו מתווכי שלום ויעשו שלום ביניהם"; אך כאשר היא נסתרת, "עברתם שמורה נצח, ואין אדם יוכל להישמר מחברו".</p>
+
+  <h3 data-a="01-111" id="s2-13">יג. מצוות קדימת השונא</h3>
+  <div class="verse-box">"כִּי תִרְאֶה חֲמוֹר שֹׂנַאֲךָ רֹבֵץ תַּחַת מַשָּׂאוֹ וְחָדַלְתָּ מֵעֲזֹב לוֹ, עָזֹב תַּעֲזֹב עִמּוֹ" (שמות כג, ה)</div>
+
+  <p data-a="01-112">הגמרא בבבא מציעא (לב, ב) מחדשת חידוש מפתיע: "אוהב לפרוק ושונא לטעון — מצוה בשונא, כדי לכוף את יצרו." ואפילו אם נאמר שצער בעלי חיים הוא מדאורייתא (שהרי פריקת המשא מהחמור עצמו קודמת כמובן, אך העניין כאן הוא סדר העדיפויות בין אוהב לשונא) — "אפילו הכי כדי לכוף את יצרו עדיף"! כלומר, מצוות "כפיית היצר" — לעזור דווקא לשונא — עדיפה אף על פני מצוות דאורייתא.</p>
+
+  <div class="qa-box">
+    <p data-a="01-113" class="q">כיצד יכולה מצווה שמקורה בחכמים (כפיית היצר) לדחות מצוות דאורייתא של צער בעלי חיים?</p>
+    <p data-a="01-114" class="a">מציע המנחת חינוך יישוב על בסיס מחלוקת ראשונים בגדר צער בעלי חיים: לדעת הר"ן (ב"מ לג, א), איסור צער בעלי חיים "הותר לתשמישן של בני אדם" — כלומר, ניתן מלכתחילה עם "פתח יציאה" לצרכי האדם. אם כן, כשם שהותר לצורך הגוף — קל וחומר שהותר לצורך הנפש (כפיית היצר), ומותר לצער אף בקום ועשה, ומכל שכן בשב ואל תעשה. לחלופין, אפשר לבאר שהקדמת השונא היא עצמה חלק ממצוות השלום — ומכיוון שגדול השלום עד כדי שהשם הקדוש נמחק בשבילו (כפי שנראה בפרק הבא), הריהי דוחה אף איסור דאורייתא של צער בעלי חיים.</p>
+  </div>
+
+  <p data-a="01-115">מעניין לציין שהתוספות עצמם נחלקו לגבי איזה "שונא" מדובר: לפי גרסת התוספות בבבא מציעא, מדובר בשונא סתם (שונא מן העולם) — ומצוות התורה כאן היא רק להקדימו לאוהב, כדי שלא להגביר את השנאה. לפי גרסתם בפסחים, מדובר דווקא ב"שונא כדין" (מי שראה בו דבר עבירה ומצווה לשנאו) — ובזה יש להסתפק האם התורה חידשה רק את סדר ה<em>קדימה</em>, או שחידשה שיש כלל <em>לעזור</em> לו, שכן היה מקום לחשוב שמותר להזניחו לגמרי.</p>
+
+  <div class="section-divider">מכל שנשנה בפרק זה עולה תמונה ברורה: התורה מייחסת לשנאה הנסתרת חומרה יוצאת דופן, בדיוק משום שהיא שקטה, בלתי-נראית, ומצטברת רגע אחר רגע. תרופתה אינה הדחקה נוספת — אלא מעורבות אקטיבית: תוכחה, שיחה כנה, ואף עזרה מכוונת לאדם שקשה לך עימו.</div>
+
+  <div class="chapter-card">
+    <div class="label">הפרק הבא</div>
+    <div class="num">3</div>
+    <div class="title">מעגלי האהבה</div>
+  </div>
+  <div class="chapter-divider"><span class="icon">📖</span></div>
+
+  <!-- ===================== CHAPTER 3 ===================== -->
+  <div class="chapter-label">פרק 3</div>
+  <h2 data-a="01-116" id="section3">מעגלי האהבה</h2>
+
+  <div class="chapter-toc-box">
+    <h4 data-a="01-117">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-118"><a href="#s3-1">דין קדימה: קרובים לפני זרים</a></li>
+      <li data-a="01-119"><a href="#s3-2">מדוע "רעך" ולא "אחיך"?</a></li>
+      <li data-a="01-120"><a href="#s3-3">לאהוב את הילדים — גם מה שבין כך היית עושה</a></li>
+      <li data-a="01-121"><a href="#s3-4">כמה מצוות מקיים אדם בחסד אחד</a></li>
+      <li data-a="01-122"><a href="#s3-5">אהרן הכהן — מופת אהבת אח</a></li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-123">נטייתו הטבעית של אדם המבקש להתחזק במידת האהבה היא לחפש "לקוחות" חדשים לאהבתו: חבר שכועס עליו, שכן מלמטה, מכר רחוק. פרק זה מבקש להראות שהתורה מכוונת בדיוק להיפך: להשקיע יותר ויותר במי שכבר קרוב אליך — משפחתך, ילדיך, ובני זוגך — עד לדרגת "כמוך" ממש.</p>
+  </div>
+
+  <h3 data-a="01-124" id="s3-1">א. דין קדימה: קרובים לפני זרים</h3>
+  <p data-a="01-125">הגמרא ביבמות (סב, ב) קובעת: "האוהב את שכניו והמקרב את קרוביו... עליהם הכתוב אומר: אז תקרא וה' יענה." ומבאר רש"י (יבמות סג, א): "אז תקרא — לעיל מיניה כתיב 'כי תראה ערום וכסיתו', היינו דוחק העני, ומבשרך לא תתעלם — היינו אוהב את שכניו שהן כקרוביו ומקרב את קרוביו." כלומר, כשם שבצדקה קיים דין קדימה לקרובים, כך גם באהבת ישראל — יש דין לאהוב את הקרובים יותר משאר עם ישראל.</p>
+
+  <p data-a="01-126">הטעם לכך פשוט אך עמוק: שלום ואהבה במעגל הפנימי מולידים שלום גם כלפי חוץ. אין תמה בכך: אדם שלא זכה לבנות אהבה יציבה במעגל הקרוב ביותר שלו, קשה לו מאוד להאמין שיוכל לבססה במעגלים הרחוקים ממנו.</p>
+
+  <h3 data-a="01-127" id="s3-2">ב. מדוע "רעך" ולא "אחיך"?</h3>
+  <p data-a="01-128">נשים לב לדקדוק לשוני מפתיע: לגבי "לא תשנא" כתובה המילה <em>"אחיך"</em>, לגבי רכילות ונקימה כתובה המילה <em>"עמך"</em>, ואילו לגבי אהבה כתובה דווקא המילה <em>"רעך"</em>! לכאורה היה מתאים יותר לכתוב, בהתאמה ל"לא תשנא", "ואהבת <em>לאחיך</em> כמוך".</p>
+
+  <div class="highlight-box">
+    <p data-a="01-129"><strong>חידוש גדול בהלכות אהבת ישראל:</strong> נראה לומר שהתורה מלמדת אותנו כאן יסוד מפתיע לגמרי בסדרי העדיפויות. באיסורי שנאה, נקימה ורכילות — הדרישה מתייחסת לכל "אחיך" ו"עמך", כלומר, לכל יהודי באשר הוא, גם הרחוק ביותר: אל תשנא אותו, אל תנקום ואל תיטור. אבל במצוות האהבה החיובית, התורה כבר לא מדברת על "כל אחיך" הרחוקים — אלא דווקא על מי שכבר "רעך", כלומר, מי שכבר <em>ידיד קרוב שלך</em>, מי שכבר קיימת בינך לבינו אהבה מסוימת! ולגביו אומרת התורה: אל תסתפק באהבת "רעים" הרגילה — הוסף עד שתגיע ל"כמוך" ממש.</p>
+  </div>
+
+  <p data-a="01-130">נמצא, אם כן, שעיקר עבודת האדם במצוות אהבת ישראל אינה לחפש עוד ועוד "לקוחות" חדשים לאהבתו, אלא <strong>להעמיק</strong> את מה שכבר קיים: לאהוב יותר את קרוביו שהוא בין כך אוהב, לאהוב יותר את ילדיו שהוא בין כך אוהב, ולאהוב עוד יותר את בן/בת זוגו שהוא בין כך אוהב — עד שיגיע, בעזרת ה', לאהבה כגופו ממש.</p>
+
+  <p data-a="01-131">מקור נפלא לעיקרון זה מצוי במשנה באבות (ב, ט): "אמר להם: צאו וראו איזוהי דרך ישרה שידבק בה האדם. רבי אליעזר אומר: עין טובה. רבי יהושע אומר: חבר טוב. רבי יוסי אומר: שכן טוב." ומבאר התוספות יום טוב, בשם מדרש שמואל: "כי בודאי שבכל הטובות והישרות יש להידבק, אלא ר"ל במדה אחת להיות בה שלם לעולם. כי טוב לאדם לאחוז במדה אחת לעולם בשלמות." — כלומר, אין הכוונה שיש להיות מעורב עם כל אדם באופן שווה, אלא לבחור <em>מידה אחת</em> ולהיות בה שלם.</p>
+
+  <p data-a="01-132">רבנו יונה מפרש: "רבי יהושע אומר, חבר טוב (זו אשה טובה)... שידבק אל הדרך הטוב והישר הזה, והוא נקל לעשותו — להיותו חבר טוב בלי לב ולב לאיש אחד... ועל כן יבא באהבה עם כל הבריות. רבי יוסי אומר, שכן טוב — שיהא הוא בעצמו טוב אל כל שכניו... ואחר היותו אוהב נאמן לחמישה בני אדם או לשמונה קרוב אליו הדבר לאהוב את כל באי עולם, ונמצא מאושר בכל המידות הטובות." כלומר: הדרך הישרה שידבק בה האדם היא שיהיה לו חבר אחד טוב באמת (ולר' יהושע, אף אשה נחשבת "חבר טוב" במובן זה), או קבוצה קטנה של חברים נאמנים — ומשם, ורק משם, מתפשטת האהבה החוצה אל כלל הבריות.</p>
+
+  <p data-a="01-133">שאלה מתבקשת: מדוע דווקא כך? מדוע עדיף להשקיע את כל האהבה בבן/בת הזוג, ולא בכמה וכמה חברים במקביל? התשובה נעוצה בהבחנה בין שתי מטרות אפשריות של המצווה: (א) שיהיו הרבה יהודים שאוהבים זה את זה; (ב) שייבנה ליהודי לב שיודע לאהוב. שתי המטרות נכונות — אך המטרה השנייה חשובה יותר, וזוהי עיקר עבודת האדם בעולמו: בניית לב אוהב.</p>
+
+  <p data-a="01-134">וכיצד בונים לעצמם לב אוהב — על ידי אהבת אנשים רבים, או על ידי אהבה עמוקה לאדם אחד? רמז לכך מובא בברכה השביעית משבע ברכות: "אשר ברא ששון ושמחה, חתן וכלה, גילה רינה דיצה וחדווה, אהבה ואחוה שלום ורעות". ר' איזיק שר (בכתב יד) מסביר: "כן אני אומר במי שאין לו אשה, שהוא בעל מום ואין לו שם אדם שלם, זהו מפני שחסר לו ההרגשה הנפשית בענייני החיים, כמו אהבה ואחווה שלום ורעות, שכל אלו הענינים נבראו ביחד עם יצירת האשה... וכך טבע חיי איש ואשתו בהשתלמות רגשים אלו." כלומר, אותם רגשות עצמם — אהבה, אחווה — נבראים ונקנים דווקא בתוך חיי הנישואין, ולכן מודים לה' עליהם בתוך ברכות הנישואין עצמן. מכאן: העצה לקנות לב אוהב היא להתרכז באדם אחד ולאהוב אותו מאוד — ומי שזכה להיות נשוי, עיקר עבודתו היא אהבת איש ואשתו.</p>
+
+  <h3 data-a="01-135" id="s3-3">ג. לאהוב את הילדים — גם מה שבין כך היית עושה</h3>
+  <p data-a="01-136">יש שיתמהו: איזו מצווה שייכת באהבת ילדים, הרי הורה אוהב את ילדיו ממילא, מטבע ברייתו? תשובה לכך אפשר למצוא ברש"י בקידושין (לב, א), ד"ה ומאכילין זה לזה: "אם יש לבן מעשר עני לחלק לעניים — מאכילו לאביו אם אביו עני, וכן כולם, אף על פי שחביב עליו כגופו, ואם לא היה בידו מעשר זה היה נותן לו מזונות משלו." הרמז כאן ברור: אף על פי שבין כך היה מפרנס את אביו, בכל זאת יש כאן קיום מצווה נפרד — כי ה' רצה לזכות את ישראל בהרבה תורה ומצוות, גם בדברים שהאדם היה עושה ממילא, ובלבד שיכוון בליבו לעשותם משום שה' רוצה בכך — שאם לא כן, לא יקבל שכר על מעשה שנעשה ללא כוונה, ויהיה זה בגדר "נהמא דכיסופא" (לחם בושה).</p>
+
+  <p data-a="01-137">מוסר יפה בעניין זה מובא בשם בעלי המוסר: החסידה נקראת בשמה על שם ה"חסד" שהיא עושה עם חברותיה. מדוע, אם כן, אסורה היא באכילה? מפני שהחסד שהיא עושה מיועד <strong>לחברותיה</strong> בלבד, ולא לבני ביתה. מכאן מוסר גדול: על האדם למלא תחילה את חובתו כלפי אנשי ביתו ואשתו, ורק לאחר מכן — כלפי שאר משפחתו, ולאחר מכן — כלפי שאר בני עמו. חסד המכוון החוצה בטרם מולא כלפי פנים — אינו חסד שלם.</p>
+
+  <h3 data-a="01-138" id="s3-4">ד. כמה מצוות מקיים אדם בחסד אחד</h3>
+  <p data-a="01-139">ראוי להתבונן: כמה מצוות מקיים אדם כאשר הוא עושה חסד אחד עם בן ביתו? מתגלה כאן ריבוי מרשים:</p>
+  <ul>
+    <li data-a="01-140"><strong>מצוות חסד</strong> — "והלכת בדרכיו" (מיכה ו, ח): "הגיד לך אדם מה טוב... כי אם עשות משפט ואהבת חסד").</li>
+    <li data-a="01-141"><strong>ואהבת לרעך כמוך</strong> — אהבת ישראל, שהיא "כלל גדול בתורה".</li>
+    <li data-a="01-142"><strong>מידות טובות</strong> — "אם אין דרך ארץ אין תורה" — שלא יכולה התורה לשכון באדם חסר מידות.</li>
+    <li data-a="01-143"><strong>קידוש שם שמים</strong> — האופן שבו יתפרש מעשהו בעיני הבריות.</li>
+    <li data-a="01-144"><strong>ענווה</strong> — ביטול רצון האדם לפני רצון ה', היוצר ענווה.</li>
+    <li data-a="01-145"><strong>כבוד ה'</strong> — "חברך שהוא בדמות יוצרך" (וכעין "קללת אלוקים תלוי" מלמד על החומרה שבפגיעה בכבודו).</li>
+    <li data-a="01-146"><strong>מסירות נפש</strong> — מסירת רצונותיו האישיים בשביל רצון ה'.</li>
+  </ul>
+  <p data-a="01-147">נמצא: מעשה חסד אחד קטן, שנעשה כלפי בן משפחה מתוך כוונה נכונה, יכול לשאת בתוכו שבע מצוות בו זמנית.</p>
+
+  <h3 data-a="01-148" id="s3-5">ה. אהרן הכהן — מופת אהבת אח</h3>
+  <p data-a="01-149">נסיים פרק זה בשאלה: במה זכה אהרן הכהן להיות כהן גדול, ובזכות מה יצא ממנו שבט הכהונה כולו? האם בזכות שהיה "אוהב שלום" גורף כלפי כל הבריות? לא. אלא בזכות שאהב את אחיו — משה — אהבה עמוקה ואישית:</p>
+  <div class="quote-box">
+    <p data-a="01-150">"ויחר אף ה' במשה ויאמר: הלא אהרן אחיך הלוי... וגם הנה הוא יצא לקראתך וראך ושמח בלבו." רש"י: "וראך ושמח בלבו — לא כשאתה סבור שיהא מקפיד עליך שאתה עולה לגדולה. ומשם זכה אהרן לעדי החושן הנתון על הלב."</p>
+    <span class="source-tag">שמות ד, יד ורש"י שם</span>
+  </div>
+  <p data-a="01-151">הרי לנו סיכום מוחשי לכל פרק זה: ככל שיהיה לאדם לב שיודע לאהוב יותר במעגל הקרוב — כך יוכל בסופו של דבר לאהוב יותר גם את בורא עולם. אהרן הכהן זכה למעלתו העצומה לא מתוך אהבה כללית ומעורפלת לכלל האנושות, אלא מתוך אהבת אח אמיתית, ספציפית וכנה.</p>
+
+  <div class="chapter-card">
+    <div class="label">הפרק הבא</div>
+    <div class="num">4</div>
+    <div class="title">אהבת האישה והבית היהודי</div>
+  </div>
+  <div class="chapter-divider"><span class="icon">✡</span></div>
+
+  <!-- ===================== CHAPTER 4 ===================== -->
+  <div class="chapter-label">פרק 4</div>
+  <h2 data-a="01-152" id="section4">אהבת האישה והבית היהודי</h2>
+
+  <div class="chapter-toc-box">
+    <h4 data-a="01-153">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-154"><a href="#s4-1">מצוות אהבת רעיתו — דאורייתא, דרבנן, או תמצית התורה?</a></li>
+      <li data-a="01-155"><a href="#s4-2">אהבה או דביקות?</a></li>
+      <li data-a="01-156"><a href="#s4-3">הבית היהודי — מקום תכלית האדם</a></li>
+      <li data-a="01-157"><a href="#s4-4">לגרום לאחרים שיאהבו אותי</a></li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-158">המתבונן בבית היהודי יגלה דבר נפלא: תפקיד האישה כלפי בעלה משול לתפקיד היהודי כלפי בוראו, ותפקיד האיש כלפי רעייתו הוא כעין הדרך שבה אנו מייחלים שהבורא ינהג עימנו. פרק זה יעמוד על גדרה המיוחד של מצוות אהבת האישה, ועל מעמדו של הבית היהודי כזירה המרכזית שבה מתגלמת תכלית קיומו של האדם.</p>
+  </div>
+
+  <h3 data-a="01-159" id="s4-1">א. מצוות אהבת רעיתו — דאורייתא, דרבנן, או תמצית התורה?</h3>
+  <p data-a="01-160">לכאורה קיימת סתירה מפתיעה בדברי הרמב"ם עצמו:</p>
+
+  <div class="qa-box">
+    <p data-a="01-161" class="q">רמב"ם אחד לעומת רמב"ם שני</p>
+    <p data-a="01-162" class="a">
+      בהלכות אישות (טו, יט) כותב הרמב"ם: "וכן <strong>צוו חכמים</strong> שיהיה אדם מכבד את אשתו יתר מגופו ואוהבה כגופו..." — לשון זו משמעה לכאורה שהחיוב הוא מדרבנן בלבד.<br><br>
+      אולם בהלכות חנוכה (ד, יד) כותב: "נר ביתו קודם משום שלום ביתו, שהרי השם הנמחק לעשות שלום בין איש לאשתו. <strong>גדול השלום, שכל התורה ניתנה לעשות שלום בעולם</strong>, שנאמר 'דרכיה דרכי נעם וכל נתיבותיה שלום'." — לשון זו משמעה שדווקא שלום בית הוא <em>כל</em> תכלית התורה כולה!<br><br>
+      כיצד יתכן שדבר אחד יהיה גם "רק" תקנת חכמים וגם תכלית כל התורה?
+    </p>
+  </div>
+
+  <p data-a="01-163">ניתן ליישב זאת כך: אין מצווה נפרדת ועצמאית "לאהוב את אשתך" ברמת דאורייתא (ולכן כותב הרמב"ם "צוו חכמים" — חכמים באו וגיבשו זאת כחובה מוגדרת, במקום שהיה יכול להישאר ברשות, שהרי, כפי שראינו, מדאורייתא עיקר האהבה היא מידה שברשות ולא חיוב מעשי). אולם התוכן שחכמים ניסחו כחובה — הוא בדיוק אותו יעד דאורייתא: מצוות "ואהבת לרעך כמוך", המתקיימת בצורתה המרוכזת והמשמעותית ביותר, כפי שראינו בפרק הקודם, דווקא במעגל הקרוב ביותר — בבית עצמו. ולכן, כאשר אדם באמת אוהב את אשתו, הוא מקיים ממש את תכלית התורה כולה, אף שהחובה הפורמלית לכך נוסחה על ידי חכמים.</p>
+
+  <p data-a="01-164">נעיין גם בלשון ספר המצוות (מצוה רו) המשלימה זאת: "וכל מה שיהיה ברשותו אם ירצה אותו ארצה אני אותו, וכל מה שארצה לעצמי ארצה לו כמוהו" — הרי לנו דיוק לשוני נפלא. התורה אינה כותבת "תאהב יהודי כמוך", כדרך שאר המצוות שכתוב בהן "עמיתך" או "עמך", אלא "ואהבת <strong>לרעך</strong>" — כלומר, כבר לפני המצווה קיים כאן אדם שהוא ידיד גדול שלך, ביטוי לאהבה גדולה מראש. ואת אותו אחד, שכבר לפני המצווה אתה אוהב אותו מאוד, מצווה התורה: אל תסתפק במה שאתה כבר אוהב אותו — אלא תאהב אותו <em>כגופך</em> ממש. אין דוגמה טובה יותר לכך מבן/בת הזוג.</p>
+
+  <h3 data-a="01-165" id="s4-2">ב. אהבה או דביקות?</h3>
+  <p data-a="01-166">נחזור לבחון את דברי הרמב"ן שהובאו בפרק א, בהקשר של אהבת האישה הספציפית: יתבונן אדם בעצמו — האם הוא שמח כשאשתו זוכה ומאושרת, באותה מידה בדיוק שהוא שמח בהצלחתו שלו? האם הוא באמת נהנה מכך "שכיף לאשתו", עד כדי כך שהוא מרגיש מאושר כאשר היא מתקשרת ומספרת לו "היה לי יום נפלא"?</p>
+
+  <p data-a="01-167">מעבר לשאלת האהבה עצמה, עולה שאלה עמוקה יותר: האם אהבת האישה היא <strong>מטרה</strong> בפני עצמה, או <strong>אמצעי</strong> — מדרגת ביניים בדרך לדביקות בבורא עולם? הרי מצינו בתורה שנצטווינו הן על דביקות בה' והן על "ודבק באשתו" — ויש לעיין: האם דביקות זו, אצל האישה, זהה במהותה לאהבה, או שמא היא דרגה גבוהה יותר, כעין הדביקות שאצל בורא עולם (המבוארת בספרי מוסר כדרגה מעל האהבה עצמה)?</p>
+
+  <p data-a="01-168">ספר החינוך (מצוות שנה ראשונה) מסביר את הרעיון של דביקות טבעית באישה: "כי האל ברוך הוא... חפצו שיתישב בבריות טובות הנולדות מזכר ונקבה, שיזדוגו בהכשר... על כן גזר עלינו... שנשב עם האשה המיוחדת לנו להקים זרע, שנה שלמה מעת שנשא אותה, כדי להרגיל הטבע עמה ולהדביק הרצון אצלה, ולהכניס ציורה וכל פעולה בלב, עד שיבוא אצל הטבע כל מעשה אשה אחרת... דרך זרות, כי כל טבע ברוב יבקש ויאהב מה שרגיל בו." הנה לנו יסוד: אין די באהבה חד-פעמית, אלא נדרשת דביקות והרגלת הטבע — תהליך מתמשך המכניס את דמות האישה עמוק בלב, עד שהיא הופכת לחלק מהטבע הפנימי של האדם עצמו.</p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <h4 data-a="01-169">אהבה כאמצעי לדביקות בה'</h4>
+      <p data-a="01-170">הרב טאובר כתב שהתורה מציגה במקביל את מצוות הדביקות בה' ואת מצוות הדביקות באישה, ללמדך שלא ניתן להגיע לדביקות בה' לולא הגיע קודם לדביקות באישה. הטעם: אין אדם יכול להגיע לדבקות בדבר רוחני (שהוא דבר שבדמיון) אם לא היתה לו קודם לכן דבקות בדבר גשמי ומוחשי — בדומה לעיוור שלא ניתן להסביר לו מהו הצבע האדום בלי שיחווה קודם צבעים אחרים דרך חוש אחר.</p>
+    </div>
+    <div class="col-gold">
+      <h4 data-a="01-171">אהבה כמטרה בפני עצמה</h4>
+      <p data-a="01-172">מצד שני, מצינו בחז"ל שגם כשחטאו ישראל, אמר ה': "חבור עצבים אפרים — הנח לו" — ה' אוהב שעם ישראל יהיה באחדות, גם כאשר זה אינו מוביל לדביקות בו. וכן: "גדול השלום, שאפילו ישראל עובדים עבודת כוכבים ושלום ביניהם, אמר המקום כביכול: איני יכול לשלוט בהם." יתרה מזו, בזוהר על דור הפלגה: "ומה בשביל שהיו ברצון ולב אחד... כתוב 'לא יבצר מהם כל אשר יזמו לעשות'... אנחנו... העוסקים בתורה, ואנחנו בלב אחד ורצון אחד, על אחת כמה וכמה" — כלומר, כוחה של האחדות עוצר אף מדין העונש, גם ללא כל קשר לדביקות רוחנית.</p>
+    </div>
+  </div>
+
+  <p data-a="01-173">כיצד ניישב בין שתי הגישות? האדמו"ר האמצעי, בספרו "דרך מצוותיך", מציע שהמתח בין שתי ההשקפות בעצם נפתר: כל מטרת המצוות היא ליחד את הקדוש ברוך הוא ושכינתו, וכאשר יש אחדות בין ישראל — ה' מתחבר אליהם, ובכך מתקיימת המטרה. ואז, למרות שיש להם עבירות, אין אדם רואה נגעי עצמו, והיות וה' מחובר אליהם — אינו רואה עוונם. כלומר, גם המקרים שנראים כ"אחדות בלבד ללא דביקות" — משרתים בסופו של דבר את יעד הדביקות, רק במסלול אחר: לא האדם המרגיש את ה' דרך תרגול הדביקות הארצי, אלא ה' עצמו המתקרב ומתעלם מעוונם מכוח האחדות.</p>
+
+  <h3 data-a="01-174" id="s4-3">ג. הבית היהודי — מקום תכלית האדם</h3>
+  <p data-a="01-175">הקהילות יעקב (באגרות קודש) כותב יסוד עמוק: "כידוע עיקר תאוות האשה בעולמה הוא: שיהיה לה בעל האוהב אותה, וכשהיא רואה שזה אינו — כמעט שקרוב לפקוח נפש מרוב צער ויגון על היותה גלמודה כאלמנות חיות." ובדיוק כך היא תאוות הצדיקים מהבורא, כמבואר ברבנו יונה בשערי תשובה (א, מב): "ותאות הצדיקים מן ההצלחות להפק רצון מהשם ושיחפוץ בהם... אין לנו אלא הארת פניך" — עיקר תאוות הצדיקים בעולמם הוא לזכות שה' <em>יאהב אותם</em>.</p>
+
+  <p data-a="01-176">וכך גם בחובת הלבבות (שער הביטחון, פרק ד): "גמול העולם הבא אין תכליתו אלא להידבק באלהים... ולא יגיע אליו אלא מי שרצה הבורא בו" — כלומר, זכייה בעולם הבא מותנית בכך שה' <em>ירצה</em> באדם, ולא רק במעשיו הטובים כשלעצמם.</p>
+
+  <div class="highlight-box">
+    <p data-a="01-177">ר' יחזקאל לוינשטיין זצ"ל מחדד את המשמעות המעשית: "לא כהבנת העולם, הסבורים שבעת שעושה מעשים טובים הרי העולם הבא מובטח לו, כי רק מי שהקב"ה רוצה בו יזכה שהקב"ה יקבלו ויקבל חלקו בעולם הבא." משמעות הדבר: על האדם לחפש בעיקר דרכים לזכות ל<em>רצון ה'</em> — לא רק לבצע מעשים כשלעצמם, אלא לכוון את מעשיו כך שיזכה באהבת ה'.</p>
+  </div>
+
+  <p data-a="01-178">וכאן מגיע החידוש המרכזי: אחת הדרכים הגדולות ביותר לזכות ברצון ה' היא מידה כנגד מידה — כאשר האדם נותן לרעייתו, שהיא "ביתו של המלך", את מה שהיא חפצה — נותן לו הקב"ה, בתמורה, את מה שהוא חפץ. בכך מתבארת שאלה עתיקה: מדוע ראו רבי עקיבא והלל לעשות ממצוות "ואהבת לרעך כמוך" "כלל גדול בתורה", ואף "כל התורה כולה", יותר מכל מצוה אחרת? התשובה: היות שעיקר הזכות לעולם הבא היא בכך שה' אוהב את האדם, ואין דבר שמביא אהבת ה' לאדם יותר מכך שהוא עצמו אוהב אחרים — ובימינו, המבחן העיקרי לכך הוא <strong>בביתו</strong> — לכן זוהי כל התורה כולה.</p>
+
+  <p data-a="01-179">וצריך להדגיש: לא זוכים לדבר גדול זה ללא עמל ויגיעה. מי שבא לביתו מתוך "מצוות אנשים מלומדה", ללא מחשבה טהורה ומתמדת כיצד לאהוב ולשמח, לא עליו נאמרו דברים אלו — אין לעשות עסק מהדבר, אלא לעמול ולהתייגע ממש כיצד להוסיף אהבה ושמחה בבית.</p>
+
+  <p data-a="01-180">סמך לכך בלשון התפילה: "ברכנו אבינו כולנו כאחד באור פניך" — "אור פניך" הוא הרצון האלוקי באדם, וזוכים לו דווקא כשאנו אחד. ובתנא דבי אליהו רבה (פרק כח) מובא: "כך אמר להם הקב"ה לישראל: בני אהובי, כלום חסרתי דבר שאבקש מכם? ומה אני מבקש מכם? אלא שתהיו אוהבין זה את זה, ותהיו מכבדין זה את זה..." — ומוסיפה הברייתא: "והצנע לכת עם אלהיך — אל תקרי 'עם אלהיך' אלא 'עמך אלהיך'; כל זמן שאתה הולך עמו בצנעה, יהא הוא גם כן עמך בצנעה." נראה לומר שאין לך "הצנע לכת" גדול יותר מאהבה וחסד שבתוך הבית — ובכך זוכים שה' עצמו, כביכול, שרוי עימך בביתך.</p>
+
+  <p data-a="01-181">כך גם המסילת ישרים (סוף פרק יט): "כי אין הקדוש ברוך הוא אוהב אלא למי שאוהב את ישראל, וכל מה שאדם מגדיל אהבתו לישראל, גם הקדוש ברוך הוא מגדיל עליו." יש לדקדק בלשונו: מי שאינו אוהב את ישראל — הקב"ה אינו אוהב אותו, ומשמע שאף אם השלים את כל הש"ס ושמר את כל המצוות, אם חסר לו העיקר הזה — חסר לו העיקר. ובימינו, כפי שראינו, עיקר הבחינה לכך תלוי דווקא בבית — שם האהבה הגדולה והחשובה ביותר בעיני הבורא, פי כמה וכמה מאהבת ישראל הרגילה.</p>
+
+  <p data-a="01-182">נמצא, אם כן, שהבית היהודי הוא המקום המרכזי לקניית תכלית כל עבודת ה' — הזכייה באהבת ה' ורצונו.</p>
+
+  <h3 data-a="01-183" id="s4-4">ד. לגרום לאחרים שיאהבו אותי</h3>
+  <p data-a="01-184">חידוש מעניין נוסף: כשם שיש מצווה לאהוב את הזולת, כך יש עניין — ואף מצווה — לגרום שאחרים יאהבו אותי. ראיות לכך:</p>
+  <ul>
+    <li data-a="01-185">הגמרא בברכות (יז, א): "כדי שיהיה אהוב למעלה ונחמד למטה, ומתקבל על הבריות" — כלומר, יש ערך עצמי לכך שאדם יהיה "נחמד" ו"מתקבל" בעיני זולתו.</li>
+    <li data-a="01-186">הדין שהנותן מתנה לחברו צריך <strong>להודיעו</strong> — כלומר, לא די בביצוע הטכני של הנתינה, אלא יש חשיבות לכך שהמקבל ירגיש את האהבה שמאחורי המעשה.</li>
+    <li data-a="01-187">העיקרון "אוהב שלום ורודף שלום" — לא רק שהוא עצמו אוהב את חברו, אלא שהוא פועל באופן אקטיבי כדי שגם אחרים יאהבו זה את זה, ובכללם, אותו.</li>
+    <li data-a="01-188">יתכן שגם יסוד "והייתם נקיים מה' ומישראל" שייך לכאן: שלא יבואו לחשוד באדם ללא עילה, שכן חשד כזה מפחית מן האהבה הכללית השוררת בין הבריות.</li>
+  </ul>
+  <p data-a="01-189">מכאן, השער נפתח לפרק האחרון: אם אהבה ואחדות הן כל כך מרכזיות, יש להבין לעומק — מהו בעצם אותו מושג "שלום" שחוזר ונשנה בתפילותינו ובכל מקום?</p>
+
+  <div class="chapter-card">
+    <div class="label">הפרק הבא</div>
+    <div class="num">5</div>
+    <div class="title">שלום ואהבה — פנים אחד של מטבע</div>
+  </div>
+  <div class="chapter-divider"><span class="icon">📖</span></div>
+
+  <!-- ===================== CHAPTER 5 ===================== -->
+  <div class="chapter-label">פרק 5</div>
+  <h2 data-a="01-190" id="section5">שלום ואהבה — פנים אחד של מטבע</h2>
+
+  <div class="chapter-toc-box">
+    <h4 data-a="01-191">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-192"><a href="#s5-1">ראיות ששלום פירושו אהבה</a></li>
+      <li data-a="01-193"><a href="#s5-2">נפקא מינות למעשה</a></li>
+      <li data-a="01-194"><a href="#s5-3">עוד מקומות שבהם אהבה היא המצווה הגדולה ביותר</a></li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-195">שאלת יסוד: כאשר אנו אומרים "שלום", האם כוונתנו רק להיעדר מריבה — כלומר, מצב ניטרלי שבו אין עימות גלוי — או שמא "שלום" הוא כשלעצמו שם נרדף לאהבה עצמה, כך שכל תוספת אהבה היא תוספת שלום, וכל חיסרון באהבה הוא חיסרון בשלום? פרק זה יבקש להוכיח את האפשרות השנייה.</p>
+  </div>
+
+  <h3 data-a="01-196" id="s5-1">א. ראיות ששלום פירושו אהבה</h3>
+
+  <p data-a="01-197"><strong>1. ברית השלום לפנחס.</strong> ה' מברך את פנחס: "הנני נותן לו את בריתי שלום." מהי "ברית"? איחוד מוחלט בין הנשמה לגוף, עד כדי כך שלא ימות. מבחירת המילה "בריתי" — לשון קשר ואיחוד עמוק — למד על העומק שבמושג "שלום" בעיני הבורא.</p>
+
+  <p data-a="01-198"><strong>2. שרה ואברהם.</strong> התורה כותבת ששרה אמרה "ואני זקנתי", אך כשהקב"ה מספר לאברהם על דבריה משנה ואומר "ואדוני זקן" — ולמדו חז"ל מכאן ש"גדול השלום, שאפילו הקב"ה שינה בו". יש להקשות: וכי חלילה היו אברהם ושרה במריבה כלשהי? ודאי שלא! אלא ודאי הכוונה שמא תיפגם מעט האהבה שביניהם — וזוהי הכוונה "מפני השלום". מכאן: המושג "שלום" חל כבר על פגיעה זעירה, לא-מריבתית כלל, באהבה שבין בני זוג.</p>
+
+  <p data-a="01-199"><strong>3. "כל התורה ניתנה לעשות שלום".</strong> הרמב"ם כותב "כל התורה כולה לא ניתנה אלא לעשות שלום בעולם, שנאמר וכל נתיבותיה שלום". וכי כל מטרת התורה היא רק למנוע מריבות? הרי אדם שאינו רב עם איש — לכאורה כבר אין לו מה ללמוד מהתורה במושג זה! ודאי שהכוונה רחבה בהרבה, כפי שיתבאר.</p>
+
+  <p data-a="01-200"><strong>4. "כלל גדול בתורה" מול "כל התורה ניתנה לעשות שלום".</strong> רבי עקיבא אומר ש"ואהבת לרעך כמוך" הוא "כלל גדול בתורה", ובמקום אחר אנו אומרים ששלום הוא הכלל הגדול. אם שלום = אהבה, מתבארים שני המקורות כאחד: שתי האמירות מתייחסות לאותו עיקרון בדיוק.</p>
+
+  <p data-a="01-201"><strong>5. "ויחן שם ישראל" — כאיש אחד בלב אחד.</strong> אמרו חז"ל שכיוון ששנאו את המחלוקת ואהבו את השלום, "הגיעה השעה" שאתן להם את תורתי. נראה שהכוונה שהיו "בלב אחד" — כלומר, אהבו איש את רעהו — וזה עצמו נחשב "שלום".</p>
+
+  <p data-a="01-202"><strong>6. מגילת אסתר — "דורש טוב לעמו ודובר שלום לכל זרעו".</strong> מבאר הגר"א: אלו מעשים טובים ומידות טובות. "דורש טוב" — מעשים טובים, כלומר שהיה מחפש רק לעשות מעשים טובים; "דובר שלום" — מידות טובות, ו"שלום" הוא <strong>הכלי</strong> המכיל את כל המידות הטובות. מכאן עולה הבנה מהפכנית: הרמב"ם כותב שיש באדם כמה מידות, והדרך הממוצעת ביניהן היא הדרך הבינונית — וזהו בדיוק "שלום": לא נוטה לכאן ולא לכאן, אלא באמצע. "שלום", אם כן, אינו מידה אחת מיני רבות, אלא הביטוי הכולל לאיזון המידות כולו.</p>
+
+  <div class="qa-box">
+    <p data-a="01-203" class="q">נר שבת נקרא "נר של שלום בית" — אך מה שייך "שלום" כשאדם לבדו?</p>
+    <p data-a="01-204" class="a">רש"י (שבת כג, ב) כותב: "נר ביתו בשבת והוא עני ואין לו כדי לקנות שמן לשתי נרות — שלום ביתו... זו הדלקת נר בשבת, שבני ביתו מצטערין לישב בחשך." ומשמע שאפילו הוא לבדו, ללא בני בית כלל, נר שבת קודם — משום שהוא עצמו יהיה בצער. לכאורה, איזה "שלום" יש כאן אם הוא לבדו? אלא, לפי היסוד שביארנו, אחת המידות שמונה הרמב"ם היא "לא להיות עצוב" אלא שמח — ואם האדם עצוב, אין הוא ב"שלום" עם עצמו. חידוש גדול עולה מכאן: "שלום", מלבד היותו יחס בין אדם לזולתו, כולל גם שלום פנימי — האדם עם עצמו.</p>
+  </div>
+
+  <p data-a="01-205"><strong>7. תיקון פורים.</strong> בפורים מתקנים את "ישנו עם אחד מפוזר ומפורד" באמצעות משלוח מנות ומתנות לאביונים — כלומר, לא די בכך שאין מחלוקת, אלא יש צורך <strong>להרבות</strong> אהבה ממשית בין היהודים. הרב חיים שמואלביץ מבאר שמעלת פורים עולה על מעלת יום כיפור מחמת ריבוי האהבה ששררה בין ישראל דווקא ביום זה.</p>
+
+  <p data-a="01-206"><strong>8. חתימת תפילות ומסכתות בשלום.</strong> ששה סדרי משנה, תפילת שמונה עשרה, קדיש, ברכת המזון — כל אלו מסתיימים ב"שלום". לפי היסוד שביארנו (שהגר"א מלמד שהמידות הטובות כלולות כולן במילה "שלום") — מובן היטב מדוע: כל דבר החותם ב"שלום" חותם, למעשה, בכל דבר.</p>
+
+  <h3 data-a="01-207" id="s5-2">ב. נפקא מינות למעשה</h3>
+  <p data-a="01-208">מהבנה זו נובעות כמה תוצאות מעשיות משמעותיות:</p>
+
+  <ul>
+    <li data-a="01-209"><strong>א.</strong> בכל פעם שאדם מברך את ברכת השלום בתפילת שמונה עשרה או בקדיש — עליו לבקש בכל ליבו, שהרי מי יכול לומר שכבר זכה לאהוב יהודי כנפשו? אם אדם הפנים שזוהי המעלה הגדולה ביותר שהוא יכול להשיג — עליו לבקש עליה בכל ליבו ונפשו.</li>
+    <li data-a="01-210"><strong>ב.</strong> הגר"א כותב שמטרת האדם בעולם היא לשבור מידותיו — "ואם לא, למה לו חיים" — ואם כן, כמה עליו לבקש שלום, שהרי משמעותו האמיתית היא זכייה בתיקון המידות כולן.</li>
+    <li data-a="01-211"><strong>ג.</strong> יש להפנים שכשם שיש מצוות מעשיות, כך יש "מצוות שבלב" — פשוט לעמוד ולחשוב "אני אוהב אותו". כל רגע של מחשבה כזו מזכה את האדם בקיום מצוות עשה מהתורה.</li>
+    <li data-a="01-212"><strong>ד.</strong> אם אדם יפנים זאת, אזי כל פעם שחבר או בן/בת זוגו מדברים איתו, יוכל לחשוב לאורך כל השיחה: "אני אוהב אותו/אותה, אני רוצה שיהיה לו/לה טוב" — וכך כל רגע ורגע של השיחה יהיה קיום מצוות עשה נפרד.</li>
+    <li data-a="01-213"><strong>ה.</strong> חידוש עצום: מאחר שהתבאר ש"שלום" הוא תוספת אהבה בין שניים, מתבאר גם למה אמרו חז"ל ש"הכל נדחה מפני השלום", והוא "חביב מהכל" — הכוונה שאף פירור זעיר של תוספת שלום נחשב חשוב ביותר. לכן נר חנוכה, שדוחה כל המצוות, נדחה בעצמו מפני פירור של שלום בית; ומקרא מגילה נדחה מפני כבוד הבריות. אלו אינם דינים טכניים גרידא, אלא ביטויים ישירים ליסוד זה.</li>
+  </ul>
+
+  <h3 data-a="01-214" id="s5-3">ג. עוד מקומות שבהם אהבה היא המצווה הגדולה ביותר</h3>
+  <p data-a="01-215">לסיום, נביא עוד מספר מקורות המחזקים את המסקנה שאהבת הזולת היא ציר מרכזי, אולי המרכזי ביותר, בעבודת ה':</p>
+
+  <p data-a="01-216">בתנא דבי אליהו רבה (כח) חוזרת ומתבארת אותה יסוד: "כך אמר להם הקדוש ברוך הוא לישראל: בני אהובי, כלום חסרתי דבר שאבקש מכם? ומה אני מבקש מכם? אלא שתהיו אוהבים זה את זה, ותהיו מכבדים זה את זה, ותהיו יראים זה מזה..." — משפט זה, המובא כבר בפרק הקודם ביחס לבית, הוא בעצם הצהרה כללית של רצון ה' מעם ישראל בכללותו.</p>
+
+  <p data-a="01-217">בהלכות מקרא מגילה (שולחן ערוך אורח חיים תרפז) נפסק: "מבטלים תלמוד תורה לשמוע מקרא מגילה, קל וחומר לשאר מצוות של תורה, שכולם נדחים מפני מקרא מגילה, שאין לך דבר שנדחה מקרא מגילה מפניו, חוץ ממת מצוה שאין לו קוברים." כלומר, מקרא מגילה עצמו דוחה כמעט את כל התורה כולה — למעט מת מצווה, שבו מדובר בכבוד המת, דהיינו הדאגה שאדם לא יתבזה. נמצא: כבוד הבריות — הדאגה שלא יתבזה אדם — חשוב אף ממקרא מגילה, שהוא עצמו חשוב מכל שאר המצוות!</p>
+
+  <p data-a="01-218">ומעניין: אף על פי שבכל המצוות אמרינן "העוסק במצווה פטור מן המצווה" — כאן, אם נמצא מת מצווה, חייב להפסיק ממצווה שעוסק בה ולטפל בו. הטעם: מצוות כבוד המת כוללת בתוכה גם כבוד ה' וגם כבוד הבריות גם יחד. כבר כתב הרא"ש שה' חפץ יותר במצוות שבין אדם לחברו ממצוות שבין אדם למקום.</p>
+
+  <p data-a="01-219">הקדמה לנפש החיים מנסחת יסוד דומה: "וזה כל האדם, לא לעצמו נברא, רק להועיל לאחריני ככל אשר ימצא בכוחו לעשות." ובמה אדם מועיל ביותר לאחרים? "ולתת לרעב נפשך", "מלבין שיניים לחברו", ועוד. גם המכתב מאליהו (קונטרס החסד) מאריך ביסוד זה: על האדם להפנים ולהבין היטב שכל תכליתו היא <strong>לתת</strong>, ולמען כך הוא חי.</p>
+
+  <p data-a="01-220">ולבסוף, נחזור אל דברי הרמב"ם: "כל התורה כולה לא ניתנה אלא לעשות שלום, שנאמר וכל נתיבותיה שלום" — כעת, לאחר שהתבאר ש"שלום" הוא שם נרדף לאהבה, מקבלים הדברים משמעות עמוקה בהרבה: כל מטרת התורה היא שיהודי יאהב את חברו. עיקרון זה חל, כמובן, כלפי כלל האנושות וכלל עם ישראל — אך כפי שראינו לאורך ספר זה, הוא מתחיל, ראשית לכל, בבית עצמו.</p>
+
+  <div class="story-box">
+    <p data-a="01-221">לסיכום כללי של הספר: מיסוד מצוות "ואהבת לרעך כמוך" (פרק א), דרך האזהרה החמורה שבשנאת הלב (פרק ב), ועד לעיקרון מעגלי האהבה — קרובים לפני זרים, רעים ומשפחה לפני מכרים רחוקים (פרק ג) — עולה תמונה אחת ברורה: הבית היהודי הוא הזירה המרכזית והחשובה ביותר לקיום תכלית האדם בעולמו (פרק ד), וכל זה מתגלה, בסופו של דבר, כפנים שונות של אותו רעיון יסודי אחד — ש"שלום" ו"אהבה" הם, בעומק העניין, דבר אחד ממש (פרק ה). הקב"ה מבקש מאיתנו, יותר מכל דבר אחר, שנאהב איש את רעהו — ומקום העבודה הראשון והחשוב ביותר לכך הוא בתוך ביתנו שלנו.</p>
+  </div>
+
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות</h3>
+    <ol>
+      <li>ויקרא יט, יז-יח; דברים כג, ז; שמות ד, יד; שמות כג, ד-ה</li>
+      <li>רמב"ן על ויקרא יט, יז-יח</li>
+      <li>רמב"ם, ספר המצוות, עשה רו; לא תעשה שב; שורש תשיעי</li>
+      <li>רמב"ם הלכות דעות פרק ו; הלכות אבל פרק יד; הלכות אישות פרק טו; הלכות חנוכה פרק ד; הלכות תשובה פרק י</li>
+      <li>ספר החינוך, מצוות רלח, רמג, ותמצית מצוות שנה ראשונה</li>
+      <li>תלמוד בבלי: שבת לא, א; ערכין טז, ב; יבמות סב-סג; נדה יז, א; יומא ט, ב; פסחים קיג, ב; נדרים סה, ב; סוטה ג, א; בבא מציעא לב, ב; קידושין לב, א</li>
+      <li>תרגום יונתן על ויקרא יט; רש"י על יבמות, שבת, שמות, קידושין</li>
+      <li>ספר כד הקמח לרבנו בחיי, ערך שנאת חינם</li>
+      <li>ספר החפץ חיים: הקדמה; פתיחה ללאוין (סעיף ז); הלכות איסורי לשון הרע כלל ג; ספר אהבת ישראל פרק ב</li>
+      <li>מהרש"א על שבת לא, א ועל יומא ט, ב וגיטין</li>
+      <li>שערי תשובה לרבנו יונה, שער ג; שערי תשובה שער א (אות מב)</li>
+      <li>חובת הלבבות, שער הביטחון פרק ד; הקדמה לשער העשירי (שער אהבת ה')</li>
+      <li>ספר השאילתות, פרשת וישב שאילתא כז, פרשת קרח שאילתא קלא; העמק שאלה</li>
+      <li>כסף משנה על הלכות דעות פרק ו</li>
+      <li>קובץ הערות סימן ע; חקרי לב; מנחת חינוך מצוה פ, רלח; קרית ספר הלכות רוצח</li>
+      <li>חידושי הר"ן בבא מציעא לג, א; רמב"ן בבא מציעא לב, ב</li>
+      <li>שערי קדושה חלק ב שער ד; פלא יועץ, ערכי שנאה ואהבת רעים; באר יהודה; ביאור לספר המצוות לרס"ג (הרב פערלא)</li>
+      <li>משנה אבות פרק ב משנה ט; תוספות יום טוב ופירוש רבנו יונה שם</li>
+      <li>מדרש אגדה (בובר) ויקרא; תהלים פרק יב, פרק פט, פרק קכ; מלבי"ם שם</li>
+      <li>קהילות יעקב, אגרות קודש; מסילת ישרים סוף פרק יט; ר' יחזקאל לוינשטיין, ר' איזיק שר (כתב יד)</li>
+      <li>תנא דבי אליהו רבה פרק כח</li>
+      <li>שולחן ערוך אורח חיים סימן תרפז ומשנה ברורה שם; שפתי חכמים; דברי הרא"ש</li>
+      <li>הקדמה לנפש החיים; מכתב מאליהו, קונטרס החסד</li>
+      <li>שפת אמת, ויקרא, פרשת קדושים, תרמ"ג; דרך מצוותיך לאדמו"ר האמצעי; זוהר (על דור הפלגה)</li>
+      <li>ר' חיים שמואלביץ, מובא בספר שלום רב; ספר חיים של שלום; ספר לרעך כמוך; ספר תורת האדם לאדם; חשוקי חמד סנהדרין</li>
+      <li>הגר"א, ביאורי אגדה על מגילת אסתר; רש"י שבת כג, ב</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+  </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+var scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 400) {
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+  }
+});
+</script>
+
+<script>
+/* =============================================================================
+   קול תודה — מנוע הקראה למאמרים תורניים   |   tts.js   v2.0
+   -----------------------------------------------------------------------------
+   העתק את הקובץ הזה כמות שהוא לתוך תגית <script> בסוף ה-HTML.
+   אין לכתוב אותו מחדש, לקצר או "לשפר" תוך כדי יצירת מאמר — הוא נבדק כך.
+   Web Speech API בלבד: בלי API חיצוני, בלי מפתח, בלי רשת, בלי עלות.
+   ============================================================================= */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    var NS       = 'koltoda.tts.';
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false, noHeVoice = false;
+    var clickToRead = true;
+
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+    function readPos() { try { return parseInt(localStorage.getItem(POS_KEY) || '0', 10) || 0; } catch (e) { return 0; } }
+
+    var G = '["\\u05f4\\u201d\\u2033]';
+    var R = "['\\u05f3\\u2019]";
+
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' ');
+        t = t.replace(/־/g, ' ');
+        t = t.replace(/\s*[–—]\s*/g, ', ');
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function chapterLabel(h) {
+        var d = h.getAttribute && h.getAttribute('data-chapter');
+        if (d && d.trim()) return d.trim();
+        var p = h.previousElementSibling;
+        if (p && p.classList && p.classList.contains('chapter-label')) {
+            return p.textContent.replace(/\s+/g, ' ').trim();
+        }
+        return '';
+    }
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (n.closest(SKIP)) return;
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            if (n.tagName === 'H2') {
+                var lbl = chapterLabel(n);
+                if (lbl && raw.indexOf(lbl) !== 0) raw = lbl + '. ' + raw;
+            }
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    function hint() {
+        if (noHeVoice) {
+            return 'לא נמצא קול עברי במחשב — ההקראה תישמע משובשת. ' +
+                   'ב-Windows: הגדרות ← שעה ושפה ← דיבור ← נהל קולות ← הוסף קולות ← עברית.';
+        }
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = readPos();
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        var was = noHeVoice;
+        noHeVoice = !he.length;
+        if (noHeVoice !== was && !isOn) say(hint());
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;
+                if (e.target.closest('a')) return;
+                if (window.getSelection && String(window.getSelection()).length) return;
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    var FS_MIN = 0.85, FS_MAX = 1.75, FS_STEP = 0.15, fontScale = 1;
+
+    function applyFontScale() {
+        document.documentElement.style.setProperty('--fs', String(fontScale));
+        var out = document.getElementById('fontScaleValue');
+        if (out) out.textContent = Math.round(fontScale * 100) + '%';
+        var dec = document.getElementById('fontSmaller'), inc = document.getElementById('fontBigger');
+        if (dec) dec.disabled = fontScale <= FS_MIN + 0.001;
+        if (inc) inc.disabled = fontScale >= FS_MAX - 0.001;
+    }
+
+    window.setFontScale = function (dir) {
+        fontScale = Math.min(FS_MAX, Math.max(FS_MIN, +(fontScale + dir * FS_STEP).toFixed(2)));
+        store('fs', String(fontScale));
+        applyFontScale();
+    };
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var savedFs = parseFloat(store('fs') || '1');
+        if (savedFs >= FS_MIN && savedFs <= FS_MAX) fontScale = savedFs;
+        applyFontScale();
+        if (readPos() > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+<script data-audio-cues="" type="application/json">{"01":[0.1,2.41,5.64,7.34,10.39,13.73,16.52,20.35,46.14,49.75,60.63,89.31,103.95,108.68,114.36,120.11,131.18,135.24,169.28,198.4,202,207.24,220.51,255.19,284.09,287.51,289.95,311.81,337.38,364.06,367.49,412.94,442.82,447.22,464.29,467.54,498.27,501.45,521.75,561.6,564.69,566.39,569.13,571.56,574.06,576.94,580.01,583.25,586.29,588.41,590.99,594.19,596.28,598.36,600.63,621.04,624.26,663.51,692.04,717.91,720.28,750.29,777.18,833.24,833.24,833.24,833.24,864.55,895.89,895.89,895.89,912.89,912.89,934.95,971.14,983.8,995.47,1031.69,1066.34,1080.85,1080.85,1093.66,1114.54,1121.37,1153.9,1153.9,1182.2,1217.19,1238.8,1247.36,1249.68,1260.26,1312.68,1312.68,1365.09,1365.09,1410.23,1410.23,1444.39,1483.43,1498.53,1538.54,1553.74,1553.74,1631.32,1647.21,1661.14,1708.13,1708.13,1729.67,1756.44,1756.44,1780.57,1780.57,1813.63,1859.59,1859.59,1859.59,1859.59,1859.59,1890.22,1890.22,1890.22,1899.87,1899.87,1899.87,1949.73,1959.78,1963.64,1979.92,2023.34,2049.83,2099.51,2148.39,2170.34,2170.34,2234.41,2282.91,2282.91,2282.91,2282.91,2282.91,2336.59,2343.11,2343.11,2351,2360.73,2360.73,2360.73,2360.73,2385.6,2411.53,2411.53,2411.53,2425.54,2425.54,2425.54,2430.51,2444.68,2444.68,2444.68,2464.31,2466.64,2511.83,2543.26,2543.26,2587.96,2613.77,2645.64,2645.64,2691.92,2691.92,2728.18,2773.89,2773.89,2818.95,2854.27,2862.22,2901.65,2948.68,2961.96,3001.8,3001.8,3001.8,3041.85,3061.35,3067.44,3073.7,3084.3,3098.84,3098.84,3098.84,3098.84,3098.84,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54,3115.54]}</script><script data-audio-player="">
+/* =============================================================================
+   audio-player.js — נגן ההקלטה (MP3 שהופק מראש ב-edge-tts)
+   הדבק מילה במילה. נפרד לגמרי מ-tts.js (ההקראה החיה של הדפדפן).
+   ============================================================================= */
+(function () {
+    var box = document.querySelector('.audio-player');
+    if (!box) return;
+
+    var audio  = box.querySelector('audio');
+    var select = box.querySelector('.audio-chapter-select');
+    if (!audio || !select) return;
+
+    var KEY = 'koltoda.audio.ch.' + (document.title || '');
+
+    /* מפת תזמונים: { "01": [0, 3.2, 9.7, ...] } — זמן תחילת כל פסקה בקטע.
+       נוצרת ב-make-audio.mjs מקובצי ה-SRT של edge-tts. */
+    var CUES = {};
+    var tag = document.querySelector('script[data-audio-cues]');
+    if (tag) { try { CUES = JSON.parse(tag.textContent || '{}'); } catch (e) {} }
+
+    var seg = null;      // מזהה הקטע הפעיל, למשל "01"
+    var line = -1;       // אינדקס הפסקה המודגשת
+
+    /* ---------- הדגשה ---------- */
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+        line = -1;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+
+        /* בספר מתחלף — מדפדפים לעמוד של הפסקה, כמו בהקראה החיה */
+        var pg = el.closest ? el.closest('.page') : null;
+        if (pg && !pg.classList.contains('active') && window.bookGo) {
+            var pages = [].slice.call(document.querySelectorAll('#book .page'));
+            var i = pages.indexOf(pg);
+            if (i > -1) { window.bookGo(i); return; }
+        }
+
+        /* גוללים רק אם הפסקה מחוץ למסך, כדי לא לחטוף את הדף מהקורא */
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    /* איזו פסקה נאמרת עכשיו — האחרונה שזמן ההתחלה שלה כבר עבר */
+    function lineAt(starts, t) {
+        var lo = 0, hi = starts.length - 1, ans = 0;
+        while (lo <= hi) {
+            var mid = (lo + hi) >> 1;
+            if (starts[mid] <= t) { ans = mid; lo = mid + 1; } else { hi = mid - 1; }
+        }
+        return ans;
+    }
+
+    audio.addEventListener('timeupdate', function () {
+        var starts = CUES[seg];
+        if (!starts || !starts.length) return;
+        var i = lineAt(starts, audio.currentTime);
+        if (i === line) return;
+        line = i;
+        var el = document.querySelector('[data-a="' + seg + '-' + i + '"]');
+        if (el) highlight(el);
+    });
+
+    /* ---------- קבצים שנבחרו מהמחשב ----------
+       דפדפן לא יכול לקרוא נתיב מקומי מעצמו (תיקיית ההורדות חסומה לו), אבל
+       קובץ שהמשתמש בוחר בעצמו מותר. ממפים לפי שם הקובץ, כך שאפשר לבחור את
+       כל פרקי הספר בבת אחת. ההדגשה עובדת גם ככה — התזמונים כבר בדף. */
+    var picked = {};
+    var note   = box.querySelector('.audio-note');
+    var input  = box.querySelector('.audio-pick-input');
+    var pickBtn = box.querySelector('.audio-pick-btn');
+
+    function say(msg) { if (note) note.textContent = msg || ''; }
+
+    /* קישור הורדה שלא מולא עדיין מוסתר מהקורא — אין טעם ב"לחץ כאן" מת.
+       הבדיקה היא על ה-href עצמו, כך שברגע שמדביקים כתובת הוא מופיע לבד. */
+    var dl = box.querySelector('.audio-download');
+    if (dl && (dl.getAttribute('href') || '#') === '#') dl.style.display = 'none';
+
+    function baseName(u) {
+        try { u = decodeURIComponent(u); } catch (e) {}
+        return u.split('/').pop();
+    }
+
+    function srcFor(opt) {
+        return picked[baseName(opt.value)] || opt.value;
+    }
+
+    if (pickBtn && input) {
+        pickBtn.addEventListener('click', function () { input.click(); });
+        input.addEventListener('change', function () {
+            var files = [].slice.call(input.files || []);
+            if (!files.length) return;
+            var names = {};
+            for (var i = 0; i < select.options.length; i++) names[baseName(select.options[i].value)] = true;
+
+            var matched = 0, spare = [];
+            files.forEach(function (f) {
+                if (names[f.name]) { picked[f.name] = URL.createObjectURL(f); matched++; }
+                else spare.push(f);
+            });
+            /* קובץ יחיד בשם אחר — מניחים שהוא של הפרק המוצג */
+            if (!matched && spare.length === 1) {
+                picked[baseName(select.options[select.selectedIndex].value)] = URL.createObjectURL(spare[0]);
+                matched = 1;
+            }
+            say(matched ? 'נטענו ' + matched + ' קבצים מהמחשב.' : 'שמות הקבצים לא תואמים לפרקים.');
+            if (matched) load(select.selectedIndex, true);
+        });
+    }
+
+    /* הקובץ לא נמצא בנתיב היחסי — מכוונים להורדה ולבחירה ידנית */
+    audio.addEventListener('error', function () {
+        if (!audio.getAttribute('src')) return;
+        say('קובץ השמע לא נמצא לצד הדף. הורד אותו ואז בחר אותו כאן.');
+    });
+
+    /* ---------- ניווט בין פרקים ---------- */
+    function load(i, autoplay) {
+        var opt = select.options[i];
+        if (!opt) return;
+        select.selectedIndex = i;
+        seg = opt.getAttribute('data-seg');
+        clearHighlight();
+        audio.src = srcFor(opt);
+        try { localStorage.setItem(KEY, String(i)); } catch (e) {}
+        if (autoplay) {
+            var p = audio.play();
+            /* דפדפן שחוסם ניגון אוטומטי זורק — לא נשאיר Promise תלוי */
+            if (p && p.catch) p.catch(function () {});
+        }
+    }
+
+    select.addEventListener('change', function () { load(select.selectedIndex, true); });
+
+    /* סיום פרק — מנקה הדגשה וממשיך לבא אחריו מעצמו, כמו בהקראה החיה.
+       (השהיה לעומת זאת משאירה את ההדגשה — היא מסמנת איפה עצרנו.) */
+    audio.addEventListener('ended', function () {
+        clearHighlight();
+        if (select.selectedIndex < select.options.length - 1) {
+            load(select.selectedIndex + 1, true);
+        } else {
+            try { localStorage.removeItem(KEY); } catch (e) {}
+        }
+    });
+
+    /* חוזרים לפרק שבו עצרנו — בלי לנגן מעצמו */
+    var saved = 0;
+    try { saved = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (e) {}
+    if (saved < 0 || saved >= select.options.length) saved = 0;
+    load(saved, false);
+})();
+
+</script></body>
+</html>
