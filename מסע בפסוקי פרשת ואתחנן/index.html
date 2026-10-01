@@ -1,0 +1,2739 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="torah-html-article 2.7.0">
+<title>מסע בפסוקי פרשת ואתחנן</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #1f2937;
+  direction: rtl;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fffefc;
+  border-radius: 18px;
+  padding: 60px 60px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  position: relative;
+}
+h1.main-title {
+  font-size: 2.6em;
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+.subtitle { text-align: center; font-size: 1.25em; color: #4b5563; margin-bottom: 8px; }
+.author { text-align: center; font-size: 1.05em; color: #7e22ce; font-weight: 700; margin-bottom: 35px; }
+h2 {
+  font-size: 1.9em;
+  color: #7e22ce;
+  border-right: 6px solid #7e22ce;
+  padding-right: 20px;
+  margin-top: 55px;
+  margin-bottom: 6px;
+}
+.perek-ref { color: #9333ea; font-size: 0.95em; font-weight: 600; margin: 0 0 18px 26px; }
+h3 { font-size: 1.5em; color: #2563eb; margin-top: 30px; }
+h4 { font-size: 1.25em; color: #059669; }
+p, li { font-size: 1.08em; line-height: 1.85; }
+.emphasis { color: #7e22ce; font-weight: 800; }
+em { color: #2563eb; font-style: italic; }
+
+.verse-box {
+  background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+  border: 2px solid #c4b5fd;
+  border-radius: 14px;
+  padding: 26px 30px;
+  margin: 18px 0 26px 0;
+  font-size: 1.2em;
+  line-height: 2.1;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(126,34,206,0.12);
+}
+.highlight-box {
+  background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+  border-right: 6px solid #2563eb;
+  border-radius: 10px;
+  padding: 22px 26px;
+  margin: 18px 0;
+}
+.quote-box {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-right: 6px solid #f59e0b;
+  border-radius: 10px;
+  padding: 22px 26px;
+  margin: 18px 0;
+  font-style: italic;
+}
+.quote-box .source-tag { display:block; margin-top:10px; font-style: normal; font-weight:700; color:#92400e; font-size:0.9em; }
+.story-box {
+  background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+  border-right: 6px solid #059669;
+  border-radius: 10px;
+  padding: 22px 26px;
+  margin: 18px 0;
+}
+.love-box {
+  background: linear-gradient(135deg, #fce7f3 0%, #fdf2f8 100%);
+  border: 2px dashed #ec4899;
+  border-radius: 14px;
+  padding: 22px 28px;
+  margin: 20px 0;
+}
+.love-box h4 { margin-top: 0; color: #be185d; }
+.love-box h4::before { content: "🔥 "; }
+.mini-box {
+  background: #f8fafc;
+  border-right: 4px solid #94a3b8;
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin: 14px 0;
+  font-size: 1.02em;
+}
+.idea-title { font-size: 1.3em; color: #9333ea; font-weight: 700; margin-top: 26px; }
+.anchor-tag { color: #92400e; font-weight: 700; }
+.section-divider {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+  margin: 44px 0;
+}
+.toc {
+  background: linear-gradient(135deg, #f3e8ff 0%, #fdf4ff 100%);
+  border: 2px solid #c084fc;
+  border-radius: 14px;
+  padding: 26px 30px;
+  margin: 30px 0 45px 0;
+  column-count: 2;
+  column-gap: 30px;
+}
+.toc h3 { margin-top: 0; text-align: center; column-span: all; color: #7e22ce; }
+.toc ul { list-style: none; padding-right: 0; margin: 0; }
+.toc li { margin-bottom: 8px; break-inside: avoid; }
+.toc a { color: #6b21a8; text-decoration: none; font-size: 0.98em; }
+.toc a:hover { text-decoration: underline; }
+.opening-box {
+  background: linear-gradient(135deg, #fff7ed 0%, #fef9c3 100%);
+  border: 2px solid #f59e0b;
+  border-radius: 14px;
+  padding: 26px 30px;
+  margin: 20px 0 30px 0;
+}
+.opening-box h3 { margin-top: 0; color: #b45309; }
+.taub-banner {
+  background: linear-gradient(135deg, #4c1d95 0%, #7e22ce 50%, #db2777 100%);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin: 26px 0;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(124,58,237,0.35);
+}
+.taub-banner a { color: #fff9e6; font-weight: 800; text-decoration: underline; }
+.taub-banner .icon-row { font-size: 1.6em; margin-bottom: 6px; }
+.closing-box {
+  background: linear-gradient(135deg, #ede9fe 0%, #fce7f3 100%);
+  border: 3px solid #a855f7;
+  border-radius: 16px;
+  padding: 30px 34px;
+  margin: 30px 0;
+}
+.closing-box h3 { margin-top: 0; text-align:center; }
+.sources {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 24px 30px;
+  margin: 40px 0;
+  font-size: 0.95em;
+}
+.sources h3 { margin-top: 0; color: #374151; }
+.footer {
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border-radius: 14px;
+  padding: 30px;
+  margin-top: 40px;
+  text-align: center;
+  line-height: 2;
+}
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background: #7e22ce;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.3em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 999;
+}
+
+@media print {
+  @page { size: A4 portrait; margin: 20mm 18mm; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+  .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; width: 210mm; }
+  .scroll-top { display: none !important; }
+  h2 { page-break-before: always; break-before: page; }
+  h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+  h3, h4 { page-break-after: avoid; break-after: avoid; }
+  .verse-box, .highlight-box, .quote-box, .story-box, .love-box, .mini-box, .opening-box, .closing-box, .taub-banner {
+    page-break-inside: avoid; break-inside: avoid;
+  }
+  p { orphans: 3; widows: 3; }
+  .toc { page-break-after: always; break-after: page; column-count: 1; }
+  .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+  h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+  .footer { page-break-before: always; break-before: page; }
+  [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+
+  /* ---------- סרגל ההאזנה (נוסף אוטומטית) ---------- */
+  :root{
+    --lb-purple:#7e22ce; --lb-blue:#2563eb; --lb-green:#059669;
+    --lb-gold:#f59e0b; --lb-pink:#ec4899; --lb-muted:#6b7280;
+    --fs: 1;
+  }
+  .listen-bar{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid var(--lb-gold);
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+  }
+  .listen-btn-group{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .listen-btn{
+    display:flex; align-items:center; gap:8px;
+    background:linear-gradient(135deg, var(--lb-purple) 0%, var(--lb-pink) 100%);
+    color:#fff; border:none; border-radius:30px; padding:10px 22px;
+    font-size:1em; font-weight:bold; font-family:inherit; cursor:pointer;
+    transition:transform .15s, box-shadow .15s;
+  }
+  .listen-btn:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,.3); }
+  .listen-btn:active{ transform:translateY(0); }
+  .listen-stop-btn, .listen-skip-btn, .listen-size-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 16px; font-size:.95em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .listen-skip-btn{ padding:8px 12px; }
+  .listen-stop-btn:hover, .listen-skip-btn:hover,
+  .listen-size-btn:hover:not(:disabled){ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-size{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-size-btn{ padding:6px 12px; line-height:1; }
+  .listen-size-btn:disabled{ opacity:.35; cursor:default; border-color:#d1d5db; color:var(--lb-muted); }
+  .listen-size-btn.big{ font-size:1.25em; }
+  .listen-size output{ font-weight:bold; min-width:3.4em; text-align:center; }
+  .listen-toggle-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 14px; font-size:.88em; font-weight:bold;
+    font-family:inherit; cursor:pointer; white-space:nowrap;
+    transition:transform .15s, background .15s, opacity .15s;
+  }
+  .listen-toggle-btn:hover{ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-toggle-btn[aria-pressed="false"]{
+    color:var(--lb-muted); border-color:#d1d5db; background:#f9fafb; opacity:.8;
+  }
+  .listen-toggle-btn:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+  .listen-skip-btn:focus-visible, .listen-size-btn:focus-visible,
+  .listen-voice select:focus-visible,
+  .listen-rate input:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-status{ font-size:.95em; color:#78350f; flex:1 1 200px; }
+  .listen-progress{ font-size:.9em; color:#78350f; font-weight:bold; white-space:nowrap; }
+  .listen-rate, .listen-voice{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-rate input{ accent-color:var(--lb-purple); }
+  .listen-rate output{ font-weight:bold; min-width:2.6em; }
+  .listen-voice select{
+    border-radius:20px; border:1px solid var(--lb-gold); padding:4px 10px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:190px;
+  }
+  .tts-clickable{ cursor:pointer; transition:background .2s; border-radius:6px; }
+  .tts-clickable:hover{ background:rgba(245,158,11,.10); }
+  .reading-highlight{
+    background:linear-gradient(135deg,#e0e7ff 0%,#fce7f3 100%); border-radius:8px;
+    box-shadow:0 0 0 3px var(--lb-pink) inset; transition:background .3s;
+    padding-right:14px; padding-left:14px;
+    margin-right:-14px; margin-left:-14px;
+  }
+  .audio-player{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid #f59e0b;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  }
+  .audio-player-title{ font-size:1.05em; font-weight:bold; color:#92400e; flex:1 1 100%;}
+  .audio-player audio{ flex:1 1 260px; min-width:220px; height:40px;}
+  .audio-chapter-select{
+    border-radius:20px; border:1px solid #f59e0b; padding:6px 12px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:260px;
+  }
+  .audio-get{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; flex:1 1 100%;}
+  .audio-download{
+    display:inline-flex; align-items:center; gap:6px;
+    background:linear-gradient(135deg,#7e22ce 0%,#ec4899 100%);
+    color:#fff; text-decoration:none; border-radius:30px; padding:8px 18px;
+    font-size:0.95em; font-weight:bold; transition:transform .15s, box-shadow .15s;
+  }
+  .audio-download:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,0.3);}
+  .audio-pick-btn{
+    background:#fff; color:#7e22ce; border:2px solid #7e22ce;
+    border-radius:30px; padding:7px 16px; font-size:0.9em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .audio-pick-btn:hover{ transform:translateY(-2px); background:#f3e8ff;}
+  .audio-note{ font-size:0.9em; color:#92400e;}
+  h2.reading-highlight{ padding-right:34px; }
+  @media(max-width:768px){
+    .listen-bar{ padding:15px; gap:10px; }
+    .listen-status{ flex:1 1 100%; }
+    .listen-voice select{ max-width:140px; }
+  }
+  @media print{
+    .listen-bar{ display:none !important; }
+    .audio-player { display: none !important; }
+    .reading-highlight{ box-shadow:none !important; background:none !important; }
+    .tts-clickable{ cursor:auto; }
+  }
+  /* fs scaling for plain body paragraphs/list items, applied additively so it
+     doesn't fight whatever base font-size the article already declares */
+  .container p, .container li{ font-size: calc(1em * var(--fs)); }
+</style>
+</head>
+<body>
+<div class="container">
+<h1 data-a="01-0" class="main-title" id="top">מסע בפסוקי פרשת ואתחנן</h1>
+<div class="subtitle">פסוק אחר פסוק, מתחילת "ואתחנן" ועד "ושמרת את המצוה" — מסע ללב הפרשה, לחיזוק אהבת ה'</div>
+<div class="author">מבוסס על שיעוריו של הרב אליהו דיסקין &#160;•&#160; עיבוד, סדר והוראה: הרב יהודה טאוב, קרית אתא</div>
+
+
+  <div class="listen-bar">
+      <div class="listen-btn-group">
+          <button class="listen-btn" id="listenBtn" onclick="toggleListen()" aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן למאמר</button>
+          <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+          <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+          <button class="listen-skip-btn" onclick="skipListen(1)" aria-label="פסקה הבאה" title="פסקה הבאה">⏭</button>
+          <button class="listen-skip-btn" onclick="skipChapter(1)" aria-label="פרק הבא" title="פרק הבא">⏩</button>
+          <button class="listen-stop-btn" onclick="stopListen()" aria-label="עצור הקראה">⏹ עצור</button>
+          <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()" aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+      </div>
+      <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+      <span class="listen-progress" id="listenProgress"></span>
+      <div class="listen-rate">
+          <label for="rateRange">מהירות:</label>
+          <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1" oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)" aria-label="מהירות הקראה">
+          <output id="rateValue" for="rateRange">1.0×</output>
+      </div>
+      <div class="listen-voice">
+          <label for="voiceSelect">קול:</label>
+          <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+      </div>
+      <div class="listen-size">
+          <span>גודל טקסט:</span>
+          <button class="listen-size-btn" id="fontSmaller" onclick="setFontScale(-1)" aria-label="הקטן את הטקסט" title="הקטן את הטקסט">א−</button>
+          <output id="fontScaleValue">100%</output>
+          <button class="listen-size-btn big" id="fontBigger" onclick="setFontScale(1)" aria-label="הגדל את הטקסט" title="הגדל את הטקסט">א+</button>
+      </div>
+  </div><div class="audio-player no-tts">
+    <div class="audio-player-title">🎧 האזנה להקלטה — קול הילה</div>
+    <select class="audio-chapter-select" aria-label="בחירת פרק להאזנה" hidden>
+        <option value="audio/%D7%9E%D7%A1%D7%A2_%D7%91%D7%A4%D7%A1%D7%95%D7%A7%D7%99_%D7%A4%D7%A8%D7%A9%D7%AA_%D7%95%D7%90%D7%AA%D7%97%D7%A0%D7%9F_%D7%94%D7%A8%D7%91_%D7%99%D7%94%D7%95%D7%93%D7%94_%D7%98%D7%90%D7%95%D7%91.mp3" data-seg="01">פתיחה · 1. וָאֶתְחַנַּן, כוח התפילה, "רַב לָךְ", ועין טובה · 2. עֲלֵה רֹאשׁ הַפִּסְגָּה, כוח הראייה, והלימוד בחינם · 3. וְלֹא תֹסִפוּ, "אתם" הם "אמת", ובל תוסיף · 4. וּשְׁמַרְתֶּם וַעֲשִׂיתֶם, חכמת ישראל וקרבת השם בתפילה · 5. רַק הִשָּׁמֶר לְךָ, פן תשכח את הר סיני · 6. וַתִּקְרְבוּן, קול בלי תמונה · 7. וְנִשְׁמַרְתֶּם מְאֹד, למה משה לא נכנס לארץ · 8. וּפֶן תִּשָּׂא עֵינֶיךָ, כור הברזל וחלק ה' · 9. כִּי אָנֹכִי מֵת, פֶּסֶל תְּמוּנַת כֹּל · 10. הַעִידֹתִי בָכֶם הַיּוֹם, אלילי עץ ואבן · 11. וּבִקַּשְׁתֶּם מִשָּׁם, תפילה שלמה · 12. לְפָנֶיךָ לְמִן הַיּוֹם, דבר גדול כזה · 13. אַתָּה הָרְאֵתָ לָדַעַת, אין עוד מלבדו · 14. וְיָדַעְתָּ הַיּוֹם, ערי המקלט, לדאוג לחלש · 15. וְזֹאת הַתּוֹרָה, לעשות, לא להצליח · 16. בְּעֵבֶר הַיַּרְדֵּן, בגיא מול בית פעור · 17. וַיִּקְרָא מֹשֶׁה, פנים בפנים · 18. אָנֹכִי עֹמֵד בֵּין השם, עשרת הדברות (א) · 19. לֹא תִשְׁתַּחֲוֶה, שם השם וערך השבת · 20. וְיוֹם הַשְּׁבִיעִי, מנוחת הנפש · 21. אֶת אָבִיךָ וְאֶת אִמֶּךָ, הורים כמתנה · 22. וַיְהִי כְּשָׁמְעֲכֶם, היום הזה ראינו · 23. כִּי מִי כָל בָּשָׂר, היטיבו כל אשר דברו · 24. מִי יִתֵּן וְהָיָה, לא תסורו ימין ושמאל · 25. בְּכָל הַדֶּרֶךְ, וזאת המצוה · 26. שְׁמַע יִשְׂרָאֵל וְאָהַבְתָּ, היום ממש, ובכל נפשך · 27. וְאָכַלְתָּ וְשָׂבָעְתָּ, סכנת השובע · 28. הִשָּׁמֶר לְךָ פֶּן תִּשְׁכַּח, לשמה, ולא תנסו · 29. שָׁמוֹר תִּשְׁמְרוּן, הישר והטוב · 30. וַיִּתֵּן השם אוֹתֹת, וצדקה תהיה לנו · 31. כִּי יְבִיאֲךָ, לא תחנם, רבים ועצומים · 32. כִּי יָסִיר אֶת בִּנְךָ, עם סגולה, כתר מלכות · 33. כִּי מֵאַהֲבַת השם, האל הנאמן · 34. וְשָׁמַרְתָּ אֶת הַמִּצְוָה, סיכום: לעשותם על אמתתם</option>
+    </select>
+    <audio controls preload="none"></audio>
+    <div class="audio-get">
+        <a class="audio-download" href="#" data-download-placeholder="" target="_blank" rel="noopener">📥 להורדת קובץ השמיעה לחץ כאן</a>
+        <button type="button" class="audio-pick-btn">📂 בחר את הקובץ שהורדת</button>
+        <input type="file" class="audio-pick-input" accept="audio/*" multiple hidden>
+        <span class="audio-note"></span>
+    </div>
+</div>
+
+<div class="taub-banner">
+<div class="icon-row">📖✨🕊️</div>
+<div>עוד חומרי הוראה, משחקים ומצגות תורניות לכל הפרשות — אצל <strong>הרב יהודה טאוב</strong></div>
+<a href="https://sites.google.com/view/yuda-taub-parashat-hashavua/אתרים-נוספים-למשחקים" target="_blank">לחצו כאן לאתר "עוד אתרים ומשחקים"</a>
+</div>
+
+<div class="opening-box">
+<h3 data-a="01-1">🕯️ פתיח למורה — לפני שצוללים פנימה</h3>
+<p data-a="01-2">
+פרשת ואתחנן היא פרשת ה"לב" של ספר דברים: תחינת משה, עשרת הדברות בפעם השנייה, וקריאת שמע. אבל מתחת לכל הפסוקים המוכרים
+מסתתר קו מחשבה אחד שחוזר שוב ושוב בדברי הרב אליהו דיסקין לאורך כל הפרשה: <span class="emphasis">אין לנו שום "מתווך" בינינו לבין ה'</span> —
+לא כוכב, לא מזל, לא אפילו משה רבנו עצמו — ואנחנו הבנים היחידים בעולם שזוכים לקשר ישיר, אישי, "היום ממש" מול מלך מלכי המלכים.
+המסע שלפניכם עובר איתכם פסוק אחר פסוק לאורך כל הפרשה, ובכל תחנה מגלה זווית חדשה של אותו קשר אוהב ובלתי אמצעי.
+</p>
+</div>
+
+<div class="toc">
+<h3>📑 תוכן העניינים — תחנות המסע</h3>
+<ul>
+<li><a href="#s1">1. וָאֶתְחַנַּן — כוח התפילה ו"רַב לָךְ"</a></li>
+<li><a href="#s2">2. עֲלֵה רֹאשׁ הַפִּסְגָּה — כוח הראייה והלימוד בחינם</a></li>
+<li><a href="#s3">3. וְלֹא תֹסִפוּ — "אתם" הם "אמת", ובל תוסיף</a></li>
+<li><a href="#s4">4. וּשְׁמַרְתֶּם וַעֲשִׂיתֶם — חכמת ישראל וקרבת ה' בתפילה</a></li>
+<li><a href="#s5">5. רַק הִשָּׁמֶר לְךָ — פן תשכח את הר סיני</a></li>
+<li><a href="#s6">6. וַתִּקְרְבוּן — קול בלי תמונה</a></li>
+<li><a href="#s7">7. וְנִשְׁמַרְתֶּם מְאֹד — למה משה לא נכנס לארץ</a></li>
+<li><a href="#s8">8. וּפֶן תִּשָּׂא עֵינֶיךָ — כור הברזל וחלק ה'</a></li>
+<li><a href="#s9">9. כִּי אָנֹכִי מֵת — פֶּסֶל תְּמוּנַת כֹּל</a></li>
+<li><a href="#s10">10. הַעִידֹתִי בָכֶם הַיּוֹם — אלילי עץ ואבן</a></li>
+<li><a href="#s11">11. וּבִקַּשְׁתֶּם מִשָּׁם — תפילה שלמה</a></li>
+<li><a href="#s12">12. לְפָנֶיךָ לְמִן הַיּוֹם — דבר גדול כזה</a></li>
+<li><a href="#s13">13. אַתָּה הָרְאֵתָ לָדַעַת — אין עוד מלבדו</a></li>
+<li><a href="#s14">14. וְיָדַעְתָּ הַיּוֹם — ערי המקלט, לדאוג לחלש</a></li>
+<li><a href="#s15">15. וְזֹאת הַתּוֹרָה — לעשות, לא להצליח</a></li>
+<li><a href="#s16">16. בְּעֵבֶר הַיַּרְדֵּן — בגיא מול בית פעור</a></li>
+<li><a href="#s17">17. וַיִּקְרָא מֹשֶׁה — פנים בפנים</a></li>
+<li><a href="#s18">18. אָנֹכִי עֹמֵד בֵּין ה' — עשרת הדברות (א)</a></li>
+<li><a href="#s19">19. לֹא תִשְׁתַּחֲוֶה — שם ה' וערך השבת</a></li>
+<li><a href="#s20">20. וְיוֹם הַשְּׁבִיעִי — מנוחת הנפש</a></li>
+<li><a href="#s21">21. אֶת אָבִיךָ וְאֶת אִמֶּךָ — הורים כמתנה</a></li>
+<li><a href="#s22">22. וַיְהִי כְּשָׁמְעֲכֶם — היום הזה ראינו</a></li>
+<li><a href="#s23">23. כִּי מִי כָל בָּשָׂר — היטיבו כל אשר דברו</a></li>
+<li><a href="#s24">24. מִי יִתֵּן וְהָיָה — לא תסורו ימין ושמאל</a></li>
+<li><a href="#s25">25. בְּכָל הַדֶּרֶךְ — וזאת המצוה</a></li>
+<li><a href="#s26">26. שְׁמַע יִשְׂרָאֵל וְאָהַבְתָּ — היום ממש, ובכל נפשך</a></li>
+<li><a href="#s27">27. וְאָכַלְתָּ וְשָׂבָעְתָּ — סכנת השובע</a></li>
+<li><a href="#s28">28. הִשָּׁמֶר לְךָ פֶּן תִּשְׁכַּח — לשמה, ולא תנסו</a></li>
+<li><a href="#s29">29. שָׁמוֹר תִּשְׁמְרוּן — הישר והטוב</a></li>
+<li><a href="#s30">30. וַיִּתֵּן ה' אוֹתֹת — וצדקה תהיה לנו</a></li>
+<li><a href="#s31">31. כִּי יְבִיאֲךָ — לא תחנם, רבים ועצומים</a></li>
+<li><a href="#s32">32. כִּי יָסִיר אֶת בִּנְךָ — עם סגולה, כתר מלכות</a></li>
+<li><a href="#s33">33. כִּי מֵאַהֲבַת ה' — האל הנאמן</a></li>
+<li><a href="#s34">34. וְשָׁמַרְתָּ אֶת הַמִּצְוָה — סיכום: לעשותם על אמתתם</a></li>
+</ul>
+</div>
+
+
+<h2 data-a="01-3" id="s1">1. וָאֶתְחַנַּן — כוח התפילה, "רַב לָךְ", ועין טובה</h2>
+<p data-a="01-4" class="perek-ref">דברים ג, כג–כו</p>
+<div class="verse-box">
+וָאֶתְחַנַּן אֶל יְהוָה בָּעֵת הַהִוא לֵאמֹר. אֲדֹנָי יְהוִה אַתָּה הַחִלּוֹתָ לְהַרְאוֹת אֶת עַבְדְּךָ אֶת גָּדְלְךָ וְאֶת יָדְךָ הַחֲזָקָה אֲשֶׁר מִי אֵל בַּשָּׁמַיִם וּבָאָרֶץ אֲשֶׁר יַעֲשֶׂה כְמַעֲשֶׂיךָ וְכִגְבוּרֹתֶךָ. <span class="emphasis">אֶעְבְּרָה נָּא וְאֶרְאֶה אֶת הָאָרֶץ הַטּוֹבָה</span> אֲשֶׁר בְּעֵבֶר הַיַּרְדֵּן הָהָר הַטּוֹב הַזֶּה וְהַלְּבָנוֹן. וַיִּתְעַבֵּר יְהוָה בִּי לְמַעַנְכֶם וְלֹא שָׁמַע אֵלָי וַיֹּאמֶר יְהוָה אֵלַי <span class="emphasis">רַב לָךְ אַל תּוֹסֶף דַּבֵּר אֵלַי עוֹד בַּדָּבָר הַזֶּה</span>.
+</div>
+
+<div class="idea-title">רעיון א: כוחה העצום של התפילה</div>
+<p data-a="01-5"><span class="anchor-tag">עוגן:</span> "אַל תּוֹסֶף דַּבֵּר אֵלַי עוֹד"</p>
+<p data-a="01-6">
+מדוע ה' צריך לומר למשה "אל תוסף" — הרי אם הבקשה אינה ראויה, פשוט אומרים "לא", ונגמר העניין? הרב חיים שמואלביץ עומד על כך שדווקא הצורך
+לעצור את משה מלהמשיך לבקש מגלה יסוד מדהים: תפילה אינה רק בקשה שנדונה בבית דין של מעלה אם לקבלה, אלא <span class="emphasis">כוח טבעי, ממשי, שהטביע הקב"ה בבריאה</span> —
+ממש כמו פטיש שבוקע קיר. המצב הטבעי והתקין הוא שתפילת יהודי פועלת ונענית ("כי מי גוי גדול... בכל קראנו אליו"); דווקא כשתפילה
+<em>אינה</em> נענית — זהו החריג, שינוי טבע של ממש, ולכן על עצירת תפילות עצמן (כמו עצירת גשמים) גוזרים תענית במשנה. ה' כביכול אומר למשה:
+"יש כאן גזירה — אל תיקח את הטרקטור הרוחני הזה ותשבור אותה".
+</p>
+<div class="love-box">
+<h4 data-a="01-7">חיבור לאהבת ה'</h4>
+<p data-a="01-8">
+תחשבו כמה זה שונה מכל "לא" אחר שקיבלתם בחיים. הורה שאומר "לא" לא צריך להזהיר את הילד "אל תבקש שוב, כי לא אוכל לעמוד בזה" —
+אלא אם באמת יש בבקשה של הילד כוח ענק. ה' מגלה לנו שהמילים הפשוטות שיוצאות מהפה שלנו בתפילה הן כוח עצום שהוא עצמו נתן לנו,
+מתוך אהבה שאין לה גבול. <strong>פעולה מעשית:</strong> בפעם הבאה שאתם מתפללים או מבקשים משהו מה', עצרו שנייה ותזכרו: המילים שלכם
+לא "נכנסות לתור" — הן כוח פועל, אהוב וקרוב.
+</p>
+</div>
+
+<div class="story-box">
+<strong>סיפור המחשה:</strong> נהג הסעות מאשדוד עצר פעם, במקרה בלבד, בצומת נטושה שמעולם לא עצר בה. שם מצא אישה זקנה עם סלים כבדים,
+שביקשה להגיע לנתניה. היא סיפרה בפשטות: "אמרו לי שאצטרך לחזור לאשדוד, לעבור כביש מסוכן ולהחליף כמה אוטובוסים. אז אמרתי
+לריבונו של עולם: אני זקנה עם סלים כבדים — תסדר לי מפה הסעה לנתניה". ואכן, כך היה. היא לא סיפרה זאת כנס מרעיש, אלא כדבר טבעי
+לגמרי: ביקשתי מאבא, והוא הביא.
+</div>
+
+<div class="section-divider"></div>
+
+<div class="idea-title">רעיון ב: גם ה"לא" של ה' — הכל אהבה</div>
+<p data-a="01-9"><span class="anchor-tag">עוגן:</span> "רַב לָךְ"</p>
+<div class="quote-box">
+מדרש תנחומא דורש על הפסוק "תחנונים ידבר רש... ועשיר יענה עזות" (משלי יח) — זה משה שבא בתחנונים, וזה הקב"ה שעונה לו "רב לך".
+<span class="source-tag">מדרש תנחומא, בשם האדמו"ר מזידיטשוב, ספר "זכרון אלעזר"</span>
+</div>
+<p data-a="01-10">
+מדוע דווקא "עזות"? מבואר בשם הרב מזידיטשוב שאילו משה היה נכנס לארץ, הוא היה הופך ל"רגל הרביעית" במרכבה במקום דוד המלך —
+וממילא לא הייתה קמה מלכות בית דוד. לכן ה' עונה לו: <strong>ר"ב</strong> לך — ראשי תיבות <strong>ר</strong>ות <strong>ב</strong>ועז,
+שמזיווגם יצא דוד המלך ומשיח צדקנו. הסירוב אינו דחייה, אלא ויתור על טוב גדול לטובת טוב גדול עוד יותר.
+</p>
+<div class="love-box">
+<h4 data-a="01-11">חיבור לאהבת ה'</h4>
+<p data-a="01-12">
+כשה' אומר "לא" לבקשה שלכם — לחבר, לצעצוע, למשאלה שנראית לכם הכי חשובה בעולם — זה לא כי הוא שכח אתכם. ה' רואה את כל הפאזל
+של החיים, וה"לא" שלו הרגע הוא לפעמים ההכנה ל"כן" הרבה יותר גדול שמחכה בעתיד. <strong>פעולה מעשית:</strong> בפעם הבאה שתאכזבו
+מתשובה שלילית, נסו לומר בלב: "אבא שלי בשמים רואה משהו שאני לא רואה עדיין".
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="idea-title">רעיון ג: עין טובה ("וְאֶרְאֶה אֶת הָאָרֶץ הַטּוֹבָה")</div>
+<p data-a="01-13">
+הספורנו (פרשת ויחי) מלמד שכדי שברכה תחול צריך חיבור ממשי בין המברך למתברך — ולכן יעקב אבינו, שעיניו כבדו מזוקן ולא יכול היה
+לראות את אפרים ומנשה, נזקק לחיבוק ונישוק כתחליף לחיבור שהראייה יוצרת. משה מתחנן "ואראה את הארץ הטובה" מפני שידע: ברגע
+שיביט בה מתוך <span class="emphasis">עין טובה</span>, הראייה שלו תשפיע עליה שפע וברכה לישראל לעולם. ראייה אינה רק קליטת מידע —
+היא יצירת קשר רוחני מחייה.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> הגאון רבי שלמה זלמן אוירבך זצ"ל בא לבקר את הרב דינקל זצ"ל שעבר לדירה חדשה. הוא עבר מפינה לפינה
+בבית והתפעל בקול: "איזה מטבח מרווח! אילו חלונות! אילו כיווני אוויר!". כשנשאל לפשר התנהגותו המפתיעה, הסביר: בדיוק כפי ש"עין רעה"
+עלולה חלילה להזיק, כך "עין טובה" — התבוננות אמיתית ומתפעלת בטוב שיש — ממש משפיעה ברכה על המקום ועל האנשים בו.
+</div>
+<div class="love-box">
+<h4 data-a="01-14">חיבור לאהבת ה'</h4>
+<p data-a="01-15">
+משה רבנו מלמד אותנו שיש בעיניים שלנו כוח לברך בלי להגיד מילה. כשאתם מסתכלים על אח קטן, על חבר לכיתה, או סתם על הבית שלכם —
+במבט אוהב ומתפעל במקום במבט ביקורתי — אתם ממש ממשיכים שפע וברכה, בדיוק כמו משה שהביט בארץ ישראל באהבה. <strong>פעולה מעשית:</strong>
+היום, תבחרו דבר אחד (חבר, מקום, חפץ) ותתבוננו בו בכוונה במבט של "איזה טוב יש כאן" — ותרגישו איך זה משנה גם אתכם.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-16" id="s2">2. עֲלֵה רֹאשׁ הַפִּסְגָּה — כוח הראייה, והלימוד בחינם</h2>
+<p data-a="01-17" class="perek-ref">דברים ג, כז – ד, א</p>
+<div class="verse-box">
+עֲלֵה רֹאשׁ הַפִּסְגָּה וְשָׂא עֵינֶיךָ יָמָּה וְצָפֹנָה וְתֵימָנָה וּמִזְרָחָה <span class="emphasis">וּרְאֵה בְעֵינֶיךָ</span> כִּי לֹא תַעֲבֹר אֶת הַיַּרְדֵּן הַזֶּה. וְצַו אֶת יְהוֹשֻׁעַ וְחַזְּקֵהוּ וְאַמְּצֵהוּ כִּי הוּא יַעֲבֹר לִפְנֵי הָעָם הַזֶּה וְהוּא יַנְחִיל אוֹתָם אֶת הָאָרֶץ אֲשֶׁר תִּרְאֶה. וַנֵּשֶׁב בַּגָּיְא מוּל בֵּית פְּעוֹר. וְעַתָּה יִשְׂרָאֵל שְׁמַע אֶל הַחֻקִּים וְאֶל הַמִּשְׁפָּטִים <span class="emphasis">אֲשֶׁר אָנֹכִי מְלַמֵּד אֶתְכֶם</span> לַעֲשׂוֹת לְמַעַן תִּחְיוּ וּבָאתֶם וִירִשְׁתֶּם אֶת הָאָרֶץ אֲשֶׁר יְהוָה אֱלֹהֵי אֲבֹתֵיכֶם נֹתֵן לָכֶם.
+</div>
+
+<div class="idea-title">רעיון א: העיניים כ"כבל חיבור" לנשמה</div>
+<p data-a="01-18"><span class="anchor-tag">עוגן:</span> "וּרְאֵה בְעֵינֶיךָ"</p>
+<p data-a="01-19">
+ה' עונה למשה "וראה בעיניך" — ולא רק "תדע" או "תשמע". כפי שראינו כבר בתחנה הקודמת אצל יעקב אבינו וברכת אפרים ומנשה, כוח הראייה
+יוצר חיבור רוחני עמוק יותר מכל תיאור מילולי. דרך הראייה עצמה, משה מתחבר לארץ ישראל ולקדושתה — חיבור שנשאר איתו גם כשאינו יכול
+להיכנס אליה פיזית. זו אותה "עין טובה" שראינו בתחנה הקודמת, כאן מיושמת על הקשר לארץ עצמה.
+</p>
+<div class="love-box">
+<h4 data-a="01-20">חיבור לאהבת ה'</h4>
+<p data-a="01-21">
+גם אנחנו, כשאיננו יכולים "להיכנס" פיזית למקום או למצב שהיינו רוצים בו, יכולים עדיין ליצור חיבור אמיתי דרך מבט אוהב ומתעניין.
+<strong>פעולה מעשית:</strong> הביטו הערב בעיניים בבני המשפחה בזמן הארוחה, במקום להביט במסך — ותרגישו את הכוח המחבר שבעיניים.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="idea-title">רעיון ב: ללמד תורה בחינם, מתוך אהבה</div>
+<p data-a="01-22"><span class="anchor-tag">עוגן:</span> "מְלַמֵּד אֶתְכֶם"</p>
+<p data-a="01-23">
+משה אומר על לימוד התורה "כאשר צווני ה'", וחז"ל דורשים מכאן יסוד: "מה אני בחינם, אף אתם בחינם". מרן הרב אלישיב זצ"ל חידש
+שקבלת שכר על לימוד תורה (מדין "שכר בטלה") אינה אסורה, אך המלמד בחינם זוכה למעלה השלמה והטהורה ביותר — כי מהות התורה היא
+חסד ונתינה גמורה, ללא חיפוש רווח.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> החפץ חיים המחיש זאת בבעל מכולת פשוט. אם קם בבוקר ואומר לעצמו "אני פותח את החנות רק להרוויח" —
+בשמיים אומרים: קיבל תשלום, אך לא עשה מצווה. אך אם יחשוב: "אני מוכר לחם וחלב כדי שלשכנים ולאלמנות יהיה מה לאכול, ועל הדרך
+גם אני מתפרנס" — כל שעת עבודה שלו הופכת למצוות חסד עצומה. הכל תלוי בלב שנותנים בו.
+</div>
+<div class="love-box">
+<h4 data-a="01-24">חיבור לאהבת ה'</h4>
+<p data-a="01-25">
+ה' נתן לנו את התורה במתנה גמורה, בלי לדרוש תשלום. כשאתם עוזרים לחבר בלימודים או מסבירים לו הלכה בלי לצפות לתמורה, אתם
+ממש ממשיכים את אותה שרשרת אהבה שהתחילה במתן תורה. <strong>פעולה מעשית:</strong> הפעם הבאה שתעזרו לחבר בשיעורי בית, נסו לעשות
+זאת בלי לחשוב "מה אני מרוויח מזה" — רק מאהבה.
+</p>
+</div>
+
+<p data-a="01-26" class="mini-box">
+<strong>הערה קצרה:</strong> גם המילים "אֲשֶׁר אָנֹכִי מְלַמֵּד אֶתְכֶם לַעֲשׂוֹת" נושאות בתוכן את אותו רעיון עתיק-חדש שנפגוש
+שוב ושוב לאורך הפרשה, ונרחיב בו לעומק בתחנה המרכזית (תחנה 26, קריאת שמע): שכל מצווה, גם אם ניתנה לפני אלפי שנים לעם שלם,
+היא בעצם פנייה אישית שה' פונה בה אליי, ממש היום.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-27" id="s3">3. וְלֹא תֹסִפוּ — "אתם" הם "אמת", ובל תוסיף</h2>
+<p data-a="01-28" class="perek-ref">דברים ד, ב–ד</p>
+<div class="verse-box">
+לֹא תֹסִפוּ עַל הַדָּבָר אֲשֶׁר אָנֹכִי מְצַוֶּה אֶתְכֶם וְלֹא תִגְרְעוּ מִמֶּנּוּ לִשְׁמֹר אֶת מִצְוֺת יְהוָה אֱלֹהֵיכֶם אֲשֶׁר אָנֹכִי מְצַוֶּה אֶתְכֶם. עֵינֵיכֶם הָרֹאֹת אֵת אֲשֶׁר עָשָׂה יְהוָה בְּבַעַל פְּעוֹר כִּי כָל הָאִישׁ אֲשֶׁר הָלַךְ אַחֲרֵי בַעַל פְּעוֹר הִשְׁמִידוֹ יְהוָה אֱלֹהֶיךָ מִקִּרְבֶּךָ. <span class="emphasis">וְאַתֶּם הַדְּבֵקִים בַּיהוָה אֱלֹהֵיכֶם חַיִּים כֻּלְּכֶם הַיּוֹם</span>. רְאֵה לִמַּדְתִּי אֶתְכֶם חֻקִּים וּמִשְׁפָּטִים כַּאֲשֶׁר צִוַּנִי יְהוָה אֱלֹהָי לַעֲשׂוֹת כֵּן בְּקֶרֶב הָאָרֶץ אֲשֶׁר אַתֶּם בָּאִים שָׁמָּה לְרִשְׁתָּהּ.
+</div>
+
+<div class="idea-title">רעיון א: "אתם" = "אמת" — רמ"ח איברים מחוברים לחיים</div>
+<p data-a="01-29"><span class="anchor-tag">עוגן:</span> "וְאַתֶּם הַדְּבֵקִים... חַיִּים כֻּלְּכֶם הַיּוֹם"</p>
+<div class="quote-box">
+בספר "דגל מחנה אפרים" מובא רמז: בקריאת שמע אומרים "ה' אלוקיכם אמת" — ובחיבור המילה "אמת" (שבתחילת "ויאמר") למילים
+שלפניה, משלימים את קריאת שמע לרמ"ח (248) תיבות, כנגד רמ"ח איברי האדם.
+<span class="source-tag">דגל מחנה אפרים</span>
+</div>
+<p data-a="01-30">
+אותיות המילה "אתם" הן בדיוק אותיות המילה "אמת". כשמדביקים את "אתם" (אמת) לה' אלוקיכם — מתקיים "חיים כולכם היום": כל
+רמ"ח האיברים מקבלים חיות אמיתית ומוחלטת. הדבקות במצוות אינה עוד "רשימת מטלות" — היא המטען שנותן אנרגיה וחיים לגוף כולו.
+</p>
+<div class="love-box">
+<h4 data-a="01-31">חיבור לאהבת ה'</h4>
+<p data-a="01-32">
+תדמיינו טלפון נייד משוכלל שאינו מחובר לחשמל — הוא רק חתיכת מתכת. ברגע שמחברים אותו, המסך מתעורר לחיים. כשאנחנו נדבקים בה'
+דרך מצווה, אנחנו מתחברים ל"שקע החיים" עצמו. <strong>פעולה מעשית:</strong> בברכה הקרובה שתברכו, נסו לחשוב לרגע: המילים האלה
+מחברות אותי עכשיו למקור החיים עצמו.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<p data-a="01-33" class="mini-box">
+<strong>עוגן: "רְאֵה לִמַּדְתִּי אֶתְכֶם... כַּאֲשֶׁר צִוַּנִי ה'"</strong> — כפי שראינו בתחנה הקודמת, גם כאן חוזר יסוד "מה אני
+בחינם אף אתם בחינם": משה מדגיש שלימד את ישראל בדיוק כפי שה' לימד אותו — במתנה, ללא תמורה. כשאנחנו מעבירים תורה לזולת
+מתוך אהבה טהורה, בלי לחשב "מה יוצא לי", אנחנו ממשיכים את שרשרת החסד שהחלה במתן תורה עצמו.
+</p>
+
+<div class="idea-title">רעיון ב: "בל תוסיף" — דיוק ולא תוספת</div>
+<p data-a="01-34"><span class="anchor-tag">עוגן:</span> "לֹא תֹסִפוּ עַל הַדָּבָר"</p>
+<p data-a="01-35">
+הגאון מווילנא (אדרת אליהו) מבחין בין איסור "בל תוסיף" כאן, בפרשת ואתחנן, לבין אותו איסור בפרשת ראה: כאן הוא ממוקם בדברי
+מוסר והשקפה. המסר: אסור לתת למניעות של הרגל וזמן לשחוק את ההתלהבות במצוות עד כדי כך שנרגיש צורך "להוסיף" עליהן כדי
+להרגיש אותן מחדש. השלמות היא במצווה כפי שניתנה — לא בתוספת.
+</p>
+<div class="love-box">
+<h4 data-a="01-36">חיבור לאהבת ה'</h4>
+<p data-a="01-37">
+לפעמים דווקא מתוך אהבה גדולה מדי, מתחשק לנו "להמציא" משהו נוסף כדי להראות כמה אנחנו מעריכים את המצווה. אבל ה' מלמד
+שהאהבה האמיתית מתבטאת דווקא בביצוע מדויק של מה שהתבקשנו — לא פחות ולא יותר. <strong>פעולה מעשית:</strong> במצווה הקטנה
+הבאה שתעשו, נסו לעשות אותה בדיוק כפי שנלמדתם, בלי "שיפורים" משלכם — ותרגישו את השלמות שבפשטות.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="idea-title">רעיון ג: "עֵינֵיכֶם הָרֹאֹת" — פריצת גבולות מול קדושה</div>
+<p data-a="01-38"><span class="anchor-tag">עוגן:</span> "עֵינֵיכֶם הָרֹאֹת אֵת אֲשֶׁר עָשָׂה יְהוָה בְּבַעַל פְּעוֹר"</p>
+<p data-a="01-39">
+הרב חיים שמואלביץ עומד על כך שמהות חטא בעל פעור הייתה "פריצת מסגרות" — ביזוי עצמי והפקרות מוחלטת, במטרה "להוכיח"
+שהאדם משוחרר מכל גבול. פריצת מסגרות זו הביאה לחורבן, משום שגבולות התורה אינם עול — הם השומרים על צלם האלוקים שבאדם
+ומאפשרים חיים של קדושה ושמחה אמיתית.
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> משחק כדורגל בלי חוקים — בלי קווי מגרש, בלי שופט, מותר לגעת בידיים — נשמע "משוחרר", אבל אחרי חמש
+דקות הופך לבלגן שאיש אינו נהנה ממנו. חוקי התורה הם אלה שיוצרים את המסגרת שבתוכה אפשר לרוץ, לשמוח ולהגיע רחוק בביטחון.
+</div>
+<div class="love-box">
+<h4 data-a="01-40">חיבור לאהבת ה'</h4>
+<p data-a="01-41">
+ה"גבולות" של ההלכה אינם מכלאים אותנו — הם המעקה שמאפשר לנו לרוץ בביטחון על גשר גבוה ויפהפה בלי לפחד מנפילה.
+<strong>פעולה מעשית:</strong> בפעם שתרגישו ש"בא לכם לפרוץ גבול" — עצרו רגע ושאלו את עצמכם אם זה באמת יביא שמחה, או רק
+הרגשת חופש מדומה.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-42" id="s4">4. וּשְׁמַרְתֶּם וַעֲשִׂיתֶם — חכמת ישראל וקרבת ה' בתפילה</h2>
+<p data-a="01-43" class="perek-ref">דברים ד, ו–ח</p>
+<div class="verse-box">
+וּשְׁמַרְתֶּם וַעֲשִׂיתֶם <span class="emphasis">כִּי הִוא חָכְמַתְכֶם וּבִינַתְכֶם לְעֵינֵי הָעַמִּים</span> אֲשֶׁר יִשְׁמְעוּן אֵת כָּל הַחֻקִּים הָאֵלֶּה וְאָמְרוּ רַק עַם חָכָם וְנָבוֹן הַגּוֹי הַגָּדוֹל הַזֶּה. <span class="emphasis">כִּי מִי גוֹי גָּדוֹל אֲשֶׁר לוֹ אֱלֹהִים קְרֹבִים אֵלָיו כַּיהוָה אֱלֹהֵינוּ בְּכָל קָרְאֵנוּ אֵלָיו</span>. וּמִי גּוֹי גָּדוֹל אֲשֶׁר לוֹ חֻקִּים וּמִשְׁפָּטִים צַדִּיקִם כְּכֹל הַתּוֹרָה הַזֹּאת אֲשֶׁר אָנֹכִי נֹתֵן לִפְנֵיכֶם הַיּוֹם.
+</div>
+
+<div class="idea-title">רעיון א: תוכנית הבנייה של היקום</div>
+<p data-a="01-44"><span class="anchor-tag">עוגן:</span> "כִּי הִוא חָכְמַתְכֶם וּבִינַתְכֶם לְעֵינֵי הָעַמִּים"</p>
+<p data-a="01-45">
+הגמרא (שבת עה.) שואלת: "איזו היא חכמה ובינה שהיא לעיני העמים? הוי אומר זה חישוב תקופות ומזלות". אומות העולם אינם
+יכולים להעריך את עומק הסוגיות התלמודיות, ולכן דווקא בחכמת החישוב האסטרונומי המדויק (חישוב המולד, עד לחלקי שנייה) הם
+מזהים את גדולת חכמי ישראל — ודרכה מציצים ונדהמים מחכמת התורה כולה.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> מדינת ספרד הוציאה בול דואר מיוחד לכבוד 900 שנה להולדת הרמב"ם — אך לא בזכות ספרי ההלכה
+העמוקים שלו כמו "משנה תורה", אלא בזכות היותו רופא, פילוסוף ואסטרונום. זו בדיוק המשמעות: חכמת ישראל ניכרת לעולם דרך
+הדברים שהם מסוגלים להעריך.
+</div>
+<div class="love-box">
+<h4 data-a="01-46">חיבור לאהבת ה'</h4>
+<p data-a="01-47">
+כשאתם לומדים תורה, אתם לא רק לומדים "סיפורים וחוקים" — אתם מתחברים לתוכנית הבנייה של כל היקום. איזו גאווה יהודית ואיזו
+אהבה לה' זה צריך לעורר! <strong>פעולה מעשית:</strong> בפעם הבאה שתלמדו קטע תורה, נסו לחשוב: זה חלק מהחכמה שברא בה ה'
+את העולם כולו.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<p data-a="01-48" class="mini-box">
+<strong>עוגן: "וְאָמְרוּ רַק עַם חָכָם וְנָבוֹן"</strong> — רש"י מדייק: אומות העולם יכירו בחכמתנו רק "כשתעשום על אמיתתם" — כאשר
+נשמור את המצוות בדיוק כפי שנמסרו, בלי "לשפר" אותן בהמצאות ורגשות משלנו. נחזור לרעיון הזה ביתר הרחבה בהמשך המסע (תחנה 34);
+כאן די לזכור: החכמה שלנו ניכרת דווקא בנאמנות המדויקת למקור, לא ביצירתיות עצמאית.
+</p>
+
+<div class="idea-title">רעיון ב: קרבת ה' בתפילה — "כמפה לאוזן"</div>
+<p data-a="01-49"><span class="anchor-tag">עוגן:</span> "אֱלֹהִים קְרֹבִים אֵלָיו כַּיהוָה אֱלֹהֵינוּ בְּכָל קָרְאֵנוּ אֵלָיו"</p>
+<div class="quote-box">
+"אדם עומד ומתפלל בלחש, והקדוש ברוך הוא מאזין לתפילתו... כמפה לאוזן" — אף שהמרחק מהארץ לרקיע הוא מהלך אלפי שנים.
+<span class="source-tag">תלמוד ירושלמי, ברכות פרק ט</span>
+</div>
+<p data-a="01-50">
+תפילה שנענית אינה "מופת" חריג — היא המצב הטבעי והתקין של כלל ישראל. אנחנו מדמיינים לפעמים שכדי שה' ישמע אותנו צריך
+"לצעוק לשמיים" או לחפש מליצי יושר; האמת היא הפוכה: ה' קרוב אלינו יותר מכל דבר בעולם, שם ממש את אוזנו ליד הפה שלנו.
+</p>
+<div class="love-box">
+<h4 data-a="01-51">חיבור לאהבת ה'</h4>
+<p data-a="01-52">
+אתם לא צריכים "פרוטקציה" כדי שה' ישמע אתכם. הוא כבר קרוב, מקשיב ללחישה הכי שקטה שלכם, בכל רגע. <strong>פעולה מעשית:</strong>
+היום, כשמשהו יטריד אתכם, נסו לדבר אל ה' במילים שלכם, בשקט, בלי סידור — ותזכרו: הוא ממש כאן, כמו פה לאוזן.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-53" id="s5">5. רַק הִשָּׁמֶר לְךָ — פן תשכח את הר סיני</h2>
+<p data-a="01-54" class="perek-ref">דברים ד, ט–י</p>
+<div class="verse-box">
+<span class="emphasis">רַק הִשָּׁמֶר לְךָ וּשְׁמֹר נַפְשְׁךָ מְאֹד פֶּן תִּשְׁכַּח</span> אֶת הַדְּבָרִים <span class="emphasis">אֲשֶׁר רָאוּ עֵינֶיךָ</span> וּפֶן יָסוּרוּ מִלְּבָבְךָ כֹּל יְמֵי חַיֶּיךָ וְהוֹדַעְתָּם לְבָנֶיךָ וְלִבְנֵי בָנֶיךָ. יוֹם אֲשֶׁר עָמַדְתָּ לִפְנֵי יְהוָה אֱלֹהֶיךָ בְּחֹרֵב בֶּאֱמֹר יְהוָה אֵלַי הַקְהֶל לִי אֶת הָעָם וְאַשְׁמִעֵם אֶת דְּבָרָי אֲשֶׁר יִלְמְדוּן לְיִרְאָה אֹתִי <span class="emphasis">כָּל הַיָּמִים אֲשֶׁר הֵם חַיִּים עַל הָאֲדָמָה</span> וְאֶת בְּנֵיהֶם יְלַמֵּדוּן.
+</div>
+
+<div class="idea-title">רעיון: זכירת הר סיני — "איבר שהנשמה תלויה בו"</div>
+<p data-a="01-55"><span class="anchor-tag">עוגן:</span> "רַק הִשָּׁמֶר לְךָ וּשְׁמֹר נַפְשְׁךָ מְאֹד פֶּן תִּשְׁכַּח"</p>
+<p data-a="01-56">
+לשון האזהרה "השמר לך ושמור נפשך מאוד" מופיעה בכל התורה כולה רק פעמיים: פעם אחת ביחס לאיסור החמור של עבודה זרה, ופעם
+שנייה כאן — באזהרה שלא לשכוח את מעמד הר סיני. זהו רמז ברור: זכירת הר סיני חמורה כמו איסור עבודה זרה עצמו, "איבר שהנשמה
+תלויה בו". הגמרא (פסחים מט:) אף משווה את מי שמבזבז זמנו מבלי לעסוק בתורה, למי ש"על חייו לא חס" — כי התורה היא החיים עצמם.
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> צוללן שמעמיק בלב הים מחובר לספינה בצינור חמצן. כל עוד הצינור מחובר — הוא נושם, חי, ורואה את יופי
+המצולות. התורה וזכירת מעמד הר סיני הם צינור החמצן הישיר שלנו, שמשאיר אותנו חיים ושמחים.
+</div>
+<div class="love-box">
+<h4 data-a="01-57">חיבור לאהבת ה'</h4>
+<p data-a="01-58">
+ה' כל כך אוהב אותנו, שהוא דאג שלנשמה שלנו תמיד יהיה "מטען" וכוח. המצוות אינן סתם חוקים — הן הדרך לשמור על הנשמה מוארת
+ובוהקת. <strong>פעולה מעשית:</strong> הערב, לפני השינה, הזכירו לעצמכם רגע אחד ממעמד הר סיני שלמדתם — כדי "לחבר את המטען" מחדש.
+</p>
+</div>
+
+<p data-a="01-59" class="mini-box">
+<strong>עוגן: "אֲשֶׁר רָאוּ עֵינֶיךָ"</strong> — כפי שראינו כבר פעמיים במסע שלנו (תחנות 1–2), הראייה יוצרת חיבור עמוק יותר
+משמיעה בלבד. ה' לא רק "השמיע" את התורה בהר סיני — הוא נתן לעם לראות, כדי שהחיבור לתורה יהיה נצחי ובלתי ניתן לניתוק, ממש
+כחיבוק וקדושה שנכנסים דרך העיניים אל תוך הנשמה.
+</p>
+<p data-a="01-60" class="mini-box">
+<strong>עוגן: "כָּל הַיָּמִים אֲשֶׁר הֵם חַיִּים עַל הָאֲדָמָה"</strong> — סוד "כל הימים" הוא לחיות את ההווה כאילו אנו עומדים
+עכשיו ממש למרגלות ההר, מקבלים משימה אישית ממלך מלכי המלכים. נרחיב ביסוד המכונן הזה — כיצד הופכים "שגרה" ל"היום ממש" —
+כשנגיע לתחנת המרכז של המסע, בקריאת שמע (תחנה 26).
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-61" id="s6">6. וַתִּקְרְבוּן — קול בלי תמונה</h2>
+<p data-a="01-62" class="perek-ref">דברים ד, יא–יד</p>
+<div class="verse-box">
+וַתִּקְרְבוּן וַתַּעַמְדוּן תַּחַת הָהָר וְהָהָר בֹּעֵר בָּאֵשׁ עַד לֵב הַשָּׁמַיִם חֹשֶׁךְ עָנָן וַעֲרָפֶל. וַיְדַבֵּר יְהוָה אֲלֵיכֶם מִתּוֹךְ הָאֵשׁ קוֹל דְּבָרִים אַתֶּם שֹׁמְעִים <span class="emphasis">וּתְמוּנָה אֵינְכֶם רֹאִים זוּלָתִי קוֹל</span>. וַיַּגֵּד לָכֶם אֶת בְּרִיתוֹ אֲשֶׁר צִוָּה אֶתְכֶם לַעֲשׂוֹת עֲשֶׂרֶת הַדְּבָרִים וַיִּכְתְּבֵם עַל שְׁנֵי לֻחוֹת אֲבָנִים. וְאֹתִי צִוָּה יְהוָה בָּעֵת הַהִוא <span class="emphasis">לְלַמֵּד אֶתְכֶם</span> חֻקִּים וּמִשְׁפָּטִים לַעֲשֹׂתְכֶם אֹתָם בָּאָרֶץ אֲשֶׁר אַתֶּם עֹבְרִים שָׁמָּה לְרִשְׁתָּהּ.
+</div>
+
+<div class="idea-title">רעיון: קשר ישיר בלי שום מתווך</div>
+<p data-a="01-63"><span class="anchor-tag">עוגן:</span> "וּתְמוּנָה אֵינְכֶם רֹאִים זוּלָתִי קוֹל"</p>
+<p data-a="01-64">
+התורה מזהירה בחומרה מהגשמה וראיית "תמונה" — ורבי מאיר שמחה מדווינסק (המשך חכמה) מסביר שאחת הסיבות שמשה רבנו לא נכנס
+לארץ הייתה החשש שהדור הצעיר, שלא הכיר אותו לפני שהפך ל"איש האלוקים", יעשה מעצמותיו עבודה זרה. ההבדל העצום בין ישראל
+לאומות העולם הוא בדרך ההשגחה: אומות העולם מונהגות על ידי שרים ומזלות, אך כלל ישראל מונהגים ישירות על ידי הקב"ה עצמו,
+ללא שום אמצעי — אפילו לא צדיק כמשה רבנו.
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> ילד של מלך גדול לא צריך לקבוע פגישה דרך המזכירה כדי לספר לאבא שלו איך עבר היום — הוא פשוט פותח
+את הדלת ורץ אליו. כך אנחנו מול ה': לא צריכים תמונה, פסל או מתווך — רק לרוץ אליו ישירות בקול שלנו.
+</div>
+<div class="love-box">
+<h4 data-a="01-65">חיבור לאהבת ה'</h4>
+<p data-a="01-66">
+בעוד שלרוב האנשים בעולם יש "פקידים" ו"שרים" בדרך למלך, לנו יש קו פרטי וישיר. כשאתם מתפללים, אתם לא ממתינים בתור —
+אתם על "הקו הפרטי" של מלך מלכי המלכים. <strong>פעולה מעשית:</strong> נסו הערב לדבר עם ה' במילים שלכם ממש, בלי תיווך של אף אחד.
+</p>
+</div>
+
+<p data-a="01-67" class="mini-box">
+<strong>עוגן: "וְאֹתִי צִוָּה ה'... לְלַמֵּד אֶתְכֶם"</strong> — שוב אנו פוגשים את היסוד "מה אני בחינם אף אתם בחינם" שפגשנו
+בתחנות 2–3: משה מלמד את ישראל בדיוק כפי שקיבל מה' — במתנה גמורה. וגם כאן, במילה "אֲשֶׁר צִוָּה אֶתְכֶם לַעֲשׂוֹת", מהדהד
+אותו יסוד של קרבה אישית שנרחיב בו בתחנה 26: כל ציווי הוא בעצם פנייה חיה, לא רשומה היסטורית.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-68" id="s7">7. וְנִשְׁמַרְתֶּם מְאֹד — למה משה לא נכנס לארץ</h2>
+<p data-a="01-69" class="perek-ref">דברים ד, טו–יח</p>
+<div class="verse-box">
+וְנִשְׁמַרְתֶּם מְאֹד לְנַפְשֹׁתֵיכֶם כִּי לֹא רְאִיתֶם כָּל תְּמוּנָה בְּיוֹם דִּבֶּר יְהוָה אֲלֵיכֶם בְּחֹרֵב מִתּוֹךְ הָאֵשׁ. <span class="emphasis">פֶּן תַּשְׁחִתוּן וַעֲשִׂיתֶם לָכֶם פֶּסֶל</span> תְּמוּנַת כָּל סָמֶל תַּבְנִית זָכָר אוֹ נְקֵבָה. תַּבְנִית כָּל בְּהֵמָה אֲשֶׁר בָּאָרֶץ תַּבְנִית כָּל צִפּוֹר כָּנָף אֲשֶׁר תָּעוּף בַּשָּׁמָיִם. תַּבְנִית כָּל רֹמֵשׂ בָּאֲדָמָה תַּבְנִית כָּל דָּגָה אֲשֶׁר בַּמַּיִם מִתַּחַת לָאָרֶץ.
+</div>
+
+<div class="idea-title">רעיון: הדאגה שלא יעשו ממשה עצמו עבודה זרה</div>
+<p data-a="01-70"><span class="anchor-tag">עוגן:</span> "פֶּן תַּשְׁחִתוּן וַעֲשִׂיתֶם לָכֶם פֶּסֶל"</p>
+<p data-a="01-71">
+המשך חכמה שואל: מדוע בתוך רצף אזהרות חמורות מפני הגשמת האל, מזכיר משה לפתע את העונש שלו שלא ייכנס לארץ? התשובה:
+דור יוצאי מצרים הכיר את משה עוד לפני שהיה "איש האלוקים", אך הדור הצעיר גדל על כך שהוא קורע ימים, מוריד מן וגוזר גזירות
+מתקיימות. הייתה סכנה עצומה שאם משה ייכנס עמם לארץ, הם עלולים לייחס לו כוחות אלוקיים ולעשותו לעבודה זרה חלילה. נעמיק
+ביסוד הזה עוד ברגע, בתחנה הבאה — שם הוא מופיע במלואו.
+</p>
+<div class="love-box">
+<h4 data-a="01-72">חיבור לאהבת ה'</h4>
+<p data-a="01-73">
+ה' כל כך רוצה שהקשר שלנו יהיה טהור וישיר, שהוא ויתר על הכניסה של העבד האהוב ביותר שלו, משה, לארץ ישראל — רק כדי שלא
+ייווצר בלבול בין הצדיק לבין ה' עצמו. <strong>פעולה מעשית:</strong> כשמישהו גדול ומרשים עוזר לכם, זכרו לומר תודה גם לה'
+שעומד מאחורי כל עזרה.
+</p>
+</div>
+
+<p data-a="01-74" class="mini-box">
+<strong>עוגן: "כִּי לֹא רְאִיתֶם כָּל תְּמוּנָה"</strong> — שוב פוגשים את כוח הראייה כ"דבק" רוחני (תחנות 1–2, 5): מה שאנחנו
+מסתכלים עליו, הנשמה נדבקת אליו. ה' לא הראה תמונה בהר סיני כדי שנשתמש בעיניים שלנו רק להידבק בקדושה טהורה — לא בייצוגים
+גשמיים שלה.
+</p>
+<p data-a="01-75" class="mini-box">
+<strong>עוגן: "בְּיוֹם דִּבֶּר ה' אֲלֵיכֶם בְּחֹרֵב"</strong> — קול ה' מהר סיני אינו אירוע שנגמר; הוא מהדהד אלינו כפנייה אישית
+בכל יום מחדש. ביסוד הזה — כיצד "היום ההוא" הופך ל"היום הזה" — נרחיב במלואו בתחנה 26.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-76" id="s8">8. וּפֶן תִּשָּׂא עֵינֶיךָ — כור הברזל וחלק ה'</h2>
+<p data-a="01-77" class="perek-ref">דברים ד, יט–כא</p>
+<div class="verse-box">
+וּפֶן תִּשָּׂא עֵינֶיךָ הַשָּׁמַיְמָה וְרָאִיתָ אֶת הַשֶּׁמֶשׁ וְאֶת הַיָּרֵחַ וְאֶת הַכּוֹכָבִים כֹּל צְבָא הַשָּׁמַיִם וְנִדַּחְתָּ וְהִשְׁתַּחֲוִיתָ לָהֶם וַעֲבַדְתָּם <span class="emphasis">אֲשֶׁר חָלַק יְהוָה אֱלֹהֶיךָ אֹתָם לְכֹל הָעַמִּים</span> תַּחַת כָּל הַשָּׁמָיִם. וְאֶתְכֶם לָקַח יְהוָה וַיּוֹצִא אֶתְכֶם <span class="emphasis">מִכּוּר הַבַּרְזֶל מִמִּצְרָיִם</span> לִהְיוֹת לוֹ לְעַם נַחֲלָה כַּיּוֹם הַזֶּה. וַיהוָה הִתְאַנֶּף בִּי עַל דִּבְרֵיכֶם וַיִּשָּׁבַע לְבִלְתִּי עָבְרִי אֶת הַיַּרְדֵּן וּלְבִלְתִּי בֹא אֶל הָאָרֶץ הַטּוֹבָה אֲשֶׁר יְהוָה אֱלֹהֶיךָ נֹתֵן לְךָ נַחֲלָה.
+</div>
+
+<div class="idea-title">רעיון א: "חלק ה'" — מונהגים ישירות, בלי מתווכים</div>
+<p data-a="01-78"><span class="anchor-tag">עוגן:</span> "אֲשֶׁר חָלַק ה' אֱלֹהֶיךָ אֹתָם לְכֹל הָעַמִּים... וְאֶתְכֶם לָקַח ה'"</p>
+<p data-a="01-79">
+הספורנו והרמב"ן מסבירים שהקב"ה חילק לכל אומה ולשון "שר" — כוכב או מזל — שההשפעה עוברת דרכו. אומות העולם טעו לחשוב
+שלאותם כוכבים יש כוח בחירה עצמאי, ועבדו אותם, אף שבאמת הם רק צינורות חסרי בחירה. אך כלל ישראל הם "חלק ה'" ומונהגים
+ישירות על ידי הקב"ה בעצמו, ללא שום שר, כוכב או מזל באמצע.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> הרב אליהו דיסקין מספר שפעם ישב בסעודת שבת, ובנו התינוק ישב לו על הברכיים. התינוק רצה לשתות,
+ובמקום לבקש מאבא ישירות, פנה לאמא ואמר: "אמא, תגידי לאבא שיימזוג לי לשתות". הרב סיפר שהרגיש פגיעה קלה: "ילדי, אתה יושב
+לי ממש על הברכיים — למה אתה מבקש ממישהו אחר?". כך בדיוק אנחנו נראים לפעמים מול ה' — הוא מחזיק אותנו קרוב אליו, ובמקום
+לבקש ממנו ישירות, אנחנו הולכים לחפש "מתווכים" שיבקשו במקומנו.
+</div>
+<div class="love-box">
+<h4 data-a="01-80">חיבור לאהבת ה'</h4>
+<p data-a="01-81">
+אנחנו ה"וי.אי.פי" של בורא עולם — לא צריכים "טלפון של פקיד", יש לנו קו ישיר. <strong>פעולה מעשית:</strong> הפעם הבאה
+שתרצו משהו, נסו לבקש ישירות מה' במילים שלכם, בלי לחפש "מי יבקש בשבילי".
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="idea-title">רעיון ב: כור הברזל — התכה ויצירה מחדש</div>
+<p data-a="01-82"><span class="anchor-tag">עוגן:</span> "מִכּוּר הַבַּרְזֶל מִמִּצְרָיִם"</p>
+<p data-a="01-83">
+הרב משה שפירא זצ"ל מבאר מדוע מצרים מכונה "כור הברזל": מצרים הייתה המקום הכי חומרי בעולם, "חומר בלי צורה". כדי לברוא
+עם ה' חדש, לא הספיק "לשפץ" — היה צריך להכניס לכור אש, להתיך את הצורה הישנה כליל, ולצקת מחדש. מצרים הייתה הכור שהתיך
+מישראל את צורתם הקודמת, כדי שבהר סיני יקבלו צורה רוחנית טהורה — עם ה' נטו, בלי שום אחיזה בטבע.
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> תכשיט זהב מרהיב לא נוצר מניקוי חתיכת מתכת ישנה — מכניסים אותה לתנור בוער עד שהיא נמסה לגמרי,
+ורק אז יוצקים אותה לתבנית חדשה, נוצצת וטהורה. ה' "המיס" מאיתנו את השפעות מצרים כדי לברוא אותנו מחדש כעם קדוש ומיוחד.
+</div>
+<div class="love-box">
+<h4 data-a="01-84">חיבור לאהבת ה'</h4>
+<p data-a="01-85">
+כל פעם שאתם מקיימים מצווה, אתם ממש מבריקים את "התכשיט" שה' יצר מכם באהבה. <strong>פעולה מעשית:</strong> חשבו על מצווה
+אחת קטנה שעשיתם היום, ותרגישו איך היא מבריקה חלק אחד מכם.
+</p>
+</div>
+
+<p data-a="01-86" class="mini-box">
+<strong>עוגן: "וַה' הִתְאַנֶּף בִּי... לְבִלְתִּי עָבְרִי אֶת הַיַּרְדֵּן"</strong> — נגיעה נוספת ביסוד שפגשנו בתחנה 7 ונרחיב
+בו במלואו בתחנה הבאה: משה לא נכנס לארץ כדי שלא ייווצר בלבול בין כוחו לבין כוח ה' עצמו.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-87" id="s9">9. כִּי אָנֹכִי מֵת — פֶּסֶל תְּמוּנַת כֹּל</h2>
+<p data-a="01-88" class="perek-ref">דברים ד, כב–כה</p>
+<div class="verse-box">
+כִּי אָנֹכִי מֵת בָּאָרֶץ הַזֹּאת אֵינֶנִּי עֹבֵר אֶת הַיַּרְדֵּן וְאַתֶּם עֹבְרִים וִירִשְׁתֶּם אֶת הָאָרֶץ הַטּוֹבָה הַזֹּאת. <span class="emphasis">הִשָּׁמְרוּ לָכֶם פֶּן תִּשְׁכְּחוּ אֶת בְּרִית יְהוָה... וַעֲשִׂיתֶם לָכֶם פֶּסֶל תְּמוּנַת כֹּל</span> אֲשֶׁר צִוְּךָ יְהוָה אֱלֹהֶיךָ. כִּי יְהוָה אֱלֹהֶיךָ אֵשׁ אֹכְלָה הוּא אֵל קַנָּא. כִּי תוֹלִיד בָּנִים וּבְנֵי בָנִים וְנוֹשַׁנְתֶּם בָּאָרֶץ וְהִשְׁחַתֶּם וַעֲשִׂיתֶם פֶּסֶל תְּמוּנַת כֹּל וַעֲשִׂיתֶם הָרַע בְּעֵינֵי יְהוָה אֱלֹהֶיךָ לְהַכְעִיסוֹ.
+</div>
+
+<div class="idea-title">רעיון: משה מוותר על חלומו — למעננו</div>
+<p data-a="01-89"><span class="anchor-tag">עוגן:</span> "כִּי אָנֹכִי מֵת... הִשָּׁמְרוּ לָכֶם פֶּן תִּשְׁכְּחוּ... וַעֲשִׂיתֶם לָכֶם פֶּסֶל"</p>
+<p data-a="01-90">
+משה מזכיר את מותו הקרוב בדיוק בתוך רצף האזהרות מפני עבודה זרה — וזה לא מקרי. המשך חכמה מבאר: דור יוצאי מצרים הכיר
+את משה כאדם רגיל לפני שהפך ל"איש האלוקים", ולכן לא היה חשש שיטעו בו. אך דור באי הארץ הכיר את משה רק כמי שקורע ימים,
+מוריד מן ושליו, ועושה ניסים גלויים — סכנה עצומה שיעשו ממנו אלוהות. משה עצמו אומר בעצם: "כל הסיבה שאיני עובר את הירדן,
+ושאפילו עצמותיי לא נכנסות לארץ, היא כדי להציל אתכם מהיצר של עבודה זרה — שלא תעשו ממני פסל ותמונה".
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> תארו לכם מלך שזכה במדליה יוקרתית ביותר, אך רואה שהמדליה מסנוורת את בנו וגורמת לו לאבד את דרכו —
+המלך יזרוק אותה בלי לחשוב פעמיים. כך משה ויתר על "המדליה" של הכניסה לארץ, רק כדי שנשמור על קשר ישיר וטהור עם ה'.
+</div>
+<div class="love-box">
+<h4 data-a="01-91">חיבור לאהבת ה'</h4>
+<p data-a="01-92">
+משה רבנו אהב אותנו ואת הקשר שלנו עם ה' כל כך, שהיה מוכן לוותר על חלום חייו למעננו. תראו כמה המנהיגים שלנו, וה' עצמו,
+דואגים לטוהר הנשמה שלנו! <strong>פעולה מעשית:</strong> חשבו על ויתור קטן שמישהו עשה למענכם באהבה, ואמרו לו תודה היום.
+</p>
+</div>
+
+<p data-a="01-93" class="mini-box">
+<strong>עוגן: "וְנוֹשַׁנְתֶּם בָּאָרֶץ וְהִשְׁחַתֶּם"</strong> — המילה "ונושנתם" (מלשון "ישן") מזהירה מסכנת ההרגל: כשהמצוות
+הופכות ל"ישנות" בעינינו, קל ליפול. התרופה — להרגיש כל מצווה "כאילו היום ניתנה" — נעמיק בה בתחנה 26.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-94" id="s10">10. הַעִידֹתִי בָכֶם הַיּוֹם — אלילי עץ ואבן</h2>
+<p data-a="01-95" class="perek-ref">דברים ד, כו–כח</p>
+<div class="verse-box">
+הַעִידֹתִי בָכֶם הַיּוֹם אֶת הַשָּׁמַיִם וְאֶת הָאָרֶץ כִּי אָבֹד תֹּאבֵדוּן מַהֵר מֵעַל הָאָרֶץ אֲשֶׁר אַתֶּם עֹבְרִים אֶת הַיַּרְדֵּן שָׁמָּה לְרִשְׁתָּהּ לֹא תַאֲרִיכֻן יָמִים עָלֶיהָ כִּי הִשָּׁמֵד תִּשָּׁמֵדוּן. וְהֵפִיץ יְהוָה אֶתְכֶם בָּעַמִּים וְנִשְׁאַרְתֶּם מְתֵי מִסְפָּר בַּגּוֹיִם אֲשֶׁר יְנַהֵג יְהוָה אֶתְכֶם שָׁמָּה. וַעֲבַדְתֶּם שָׁם אֱלֹהִים מַעֲשֵׂה יְדֵי אָדָם עֵץ וָאֶבֶן <span class="emphasis">אֲשֶׁר לֹא יִרְאוּן וְלֹא יִשְׁמְעוּן וְלֹא יֹאכְלוּן וְלֹא יְרִיחֻן</span>.
+</div>
+
+<div class="idea-title">רעיון: אלילים ש"מדברים" — הפסל של נבוכדנצר</div>
+<p data-a="01-96"><span class="anchor-tag">עוגן:</span> "אֲשֶׁר לֹא יִרְאוּן וְלֹא יִשְׁמְעוּן וְלֹא יֹאכְלוּן וְלֹא יְרִיחֻן"</p>
+<p data-a="01-97">
+הגאון מווילנא שואל: מדוע הפסוק מונה את החושים החסרים לאליל — ראייה, שמיעה, אכילה וריח — אך משמיט את הדיבור, בניגוד
+ל"פֶּה לָהֶם וְלֹא יְדַבֵּרוּ" שבתהילים? התשובה נעוצה במדרש שיר השירים: נבוכדנצר מלך בבל הקים פסל ענק מזהב, והכניס לתוך
+פיו את ה"ציץ" הקדוש מבית המקדש, שעליו חקוק שם ה' המפורש. הפסל אכן "פתח פיו" ואמר "אנוכי ה' אלוקיך"! לכן כאן, ברמז לגלות
+בבל, לא נכתב "ולא ידברון" — כי אותו פסל דיבר בפועל.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> כל העולם השתחווה לפסל המדבר מרוב פחד. אך דניאל, שידע את האמת, לא התפעל. הוא ביקש לטפס
+עד לפיו של הפסל, השביע את הציץ הקדוש לצאת כדי שלא יתחלל שם שמים — וברגע שיצא, הפסל השתתק מיד, נפל והתרסק לרסיסים. כולם
+ראו שאין לו שום כוח משל עצמו.
+</div>
+<div class="love-box">
+<h4 data-a="01-98">חיבור לאהבת ה'</h4>
+<p data-a="01-99">
+לפעמים אנחנו רואים בעולם דברים "מדברים" חזק — כסף, פרסום, אנשים שנראים כאילו הם שולטים בהכל. אבל כל אלה, בסוף, הם
+רק "עץ ואבן" — הכוח האמיתי היחיד שייך לה'. <strong>פעולה מעשית:</strong> בפעם הבאה שמשהו נוצץ ינסה "לדבר" אליכם בפרסומת
+או ברשת, זכרו: מי שבאמת מדבר אליכם באהבה זה ה' עצמו, לא ההצגה שמסביב.
+</p>
+</div>
+
+<p data-a="01-100" class="mini-box">
+<strong>עוגן: "אֲשֶׁר יְנַהֵג ה' אֶתְכֶם שָׁמָּה"</strong> — גם בגלות הרחוקה ביותר, מי שמנהיג אותנו הוא הקב"ה עצמו, בלי
+מזל או שר באמצע (כפי שהרחבנו בתחנה 8) — ולכן התביעה מאיתנו גדולה עוד יותר.
+</p>
+<p data-a="01-101" class="mini-box">
+<strong>עוגן: "הַעִידֹתִי בָכֶם הַיּוֹם"</strong> — המילה "היום" כאן היא הד נוסף לאותו יסוד מרכזי (הר סיני כ"עכשיו ממש",
+לא היסטוריה) שנעמיק בו בתחנה 26.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-102" id="s11">11. וּבִקַּשְׁתֶּם מִשָּׁם — תפילה שלמה</h2>
+<p data-a="01-103" class="perek-ref">דברים ד, כט–לב</p>
+<div class="verse-box">
+<span class="emphasis">וּבִקַּשְׁתֶּם מִשָּׁם אֶת יְהוָה אֱלֹהֶיךָ וּמָצָאתָ</span> כִּי תִדְרְשֶׁנּוּ בְּכָל לְבָבְךָ וּבְכָל נַפְשֶׁךָ. בַּצַּר לְךָ וּמְצָאוּךָ כֹּל הַדְּבָרִים הָאֵלֶּה בְּאַחֲרִית הַיָּמִים וְשַׁבְתָּ עַד יְהוָה אֱלֹהֶיךָ וְשָׁמַעְתָּ בְּקֹלוֹ. <span class="emphasis">כִּי אֵל רַחוּם יְהוָה אֱלֹהֶיךָ</span> לֹא יַרְפְּךָ וְלֹא יַשְׁחִיתֶךָ וְלֹא יִשְׁכַּח אֶת בְּרִית אֲבֹתֶיךָ אֲשֶׁר נִשְׁבַּע לָהֶם. כִּי שְׁאַל נָא לְיָמִים רִאשֹׁנִים אֲשֶׁר הָיוּ.
+</div>
+
+<div class="idea-title">רעיון: מ"ובקשתם" הרבים אל "ומצאת" היחיד</div>
+<p data-a="01-104"><span class="anchor-tag">עוגן:</span> "וּבִקַּשְׁתֶּם מִשָּׁם... וּמָצָאתָ כִּי תִדְרְשֶׁנּוּ"</p>
+<p data-a="01-105">
+הגאון מווילנא עומד על דקדוק נפלא: הפסוק פותח בלשון רבים ("ובקשתם") ומסיים בלשון יחיד ("ומצאת"). על פי הגמרא (ראש השנה
+יח.) על "שניים שעלו למיטה" — זה מתפלל וזה מתפלל, זה ניצול וזה לא — מוסבר: מי שהתפלל "תפילה שלמה" (שהתכוון בה מכל הלב)
+נענה. כך גם כאן: "ובקשתם" — רבים יכולים לבקש יחד, אבל "ומצאת" — מי שזוכה להיענות באופן אישי, הוא מי שדורש "בכל לבבו
+ובכל נפשו".
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> מסופר על ה"סטייפלר" (רבי יעקב ישראל קניבסקי זצ"ל) שקיבל פתק לבקש רפואה עבור רבי יוסף לב,
+שעבר ייסורים קשים בשואה וכעת סבל ממחלת לב. עוד לפני שסיים לקרוא את הפתק, נאנח הסטייפלר מעומק הלב וזעק: "אוי טאטע! (אבא!)
+רחמנות! רחם על רבי יוסף!" — הוא לא אמר "אתפלל עליו בכותל בשבוע הבא"; הוא פנה לה' מיד, ממש שם, כי הרגיש שה' נמצא איתו
+באותו רגע.
+</div>
+<div class="love-box">
+<h4 data-a="01-106">חיבור לאהבת ה'</h4>
+<p data-a="01-107">
+כשאתם מתפללים בכיתה יחד עם כולם, אפשר להרגיש "אני רק אחד מתוך המון — האם ה' באמת שומע אותי?". הפסוק מבטיח: כן! כשאתם
+מתכוונים באמת, ה' מקשיב לכם באופן אישי, כאילו אתם היחידים בעולם. <strong>פעולה מעשית:</strong> בתפילה הבאה שלכם, בחרו
+מילה אחת ותגידו אותה לאט, מכל הלב — ותרגישו את ה"תפילה השלמה".
+</p>
+</div>
+
+<p data-a="01-108" class="mini-box">
+<strong>עוגן: "כִּי אֵל רַחוּם ה'"</strong> — ה' מחכה שנפנה אליו ישירות בכל צרה, בלי לחפש מתווכים (כפי שהרחבנו בתחנה 8).
+כשקשה לכם — במבחן, בריב עם חבר — אתם לא צריכים לחפש מישהו "גדול" שיבקש בשבילכם; פשוט תבקשו, ממש כמו שביקשה אישה זקנה
+ליד אשדוד (תחנה 1) הסעה הביתה, בפשטות ובביטחון שאבא שומע.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-109" id="s12">12. לְפָנֶיךָ לְמִן הַיּוֹם — דבר גדול כזה</h2>
+<p data-a="01-110" class="perek-ref">דברים ד, לב–לג</p>
+<div class="verse-box">
+לְפָנֶיךָ לְמִן הַיּוֹם אֲשֶׁר בָּרָא אֱלֹהִים אָדָם עַל הָאָרֶץ וּלְמִקְצֵה הַשָּׁמַיִם וְעַד קְצֵה הַשָּׁמָיִם הֲנִהְיָה כַּדָּבָר הַגָּדוֹל הַזֶּה אוֹ הֲנִשְׁמַע כָּמֹהוּ. <span class="emphasis">הֲשָׁמַע עָם קוֹל אֱלֹהִים מְדַבֵּר מִתּוֹךְ הָאֵשׁ</span> כַּאֲשֶׁר שָׁמַעְתָּ אַתָּה וַיֶּחִי. אוֹ הֲנִסָּה אֱלֹהִים לָבוֹא לָקַחַת לוֹ גוֹי מִקֶּרֶב גּוֹי בְּמַסֹּת בְּאֹתֹת וּבְמוֹפְתִים וּבְמִלְחָמָה וּבְיָד חֲזָקָה וּבִזְרוֹעַ נְטוּיָה וּבְמוֹרָאִים גְּדֹלִים כְּכֹל אֲשֶׁר עָשָׂה לָכֶם יְהוָה אֱלֹהֵיכֶם בְּמִצְרַיִם לְעֵינֶיךָ.
+</div>
+
+<div class="idea-title">רעיון: עדות לדורות — "הנהיה כדבר הגדול הזה"</div>
+<p data-a="01-111">
+משה מציב כאן שאלה רטורית לדורות: האם קרה אי פעם דבר כזה — עם שלם ששמע את קול ה' מדבר מתוך האש וחי? השאלה אינה נשארת
+בגדר תיאור היסטורי בלבד; היא מונחת כ"עדות" קבועה שכל דור מוסר הלאה. אנחנו, תלמידי כיתה ו' בשנת תשפ"ו, אנחנו הקישור החי
+בשרשרת הזאת — אנחנו מי ש"שומע" היום את אותה עדות ומעביר אותה הלאה.
+</p>
+<div class="love-box">
+<h4 data-a="01-112">חיבור לאהבת ה'</h4>
+<p data-a="01-113">
+כשאתם מספרים לאח קטן או לחבר על מעמד הר סיני, אתם לא סתם "מלמדים היסטוריה" — אתם ממשיכים שרשרת עדות בת 3,300 שנה,
+ואתם חלק ממנה. <strong>פעולה מעשית:</strong> ספרו היום למישהו קטן מכם דבר אחד שלמדתם על הר סיני — ותרגישו שאתם חוליה בשרשרת.
+</p>
+</div>
+<p data-a="01-114" class="mini-box">
+כפי שכבר ראינו (תחנות 6, 10), ה"קול" ותפילת "כמסת ובאתות" (כוח על-טבעי) מהדהדים לאורך כל הפרשה את אותו יסוד: תפילה
+וקשר עם ה' הם כוח ממשי בבריאה, לא סתם בקשה תיאורטית — כפי שראינו במלואו בתחנת הפתיחה (תחנה 1).
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-115" id="s13">13. אַתָּה הָרְאֵתָ לָדַעַת — אין עוד מלבדו</h2>
+<p data-a="01-116" class="perek-ref">דברים ד, לה–לח</p>
+<div class="verse-box">
+<span class="emphasis">אַתָּה הָרְאֵתָ לָדַעַת כִּי יְהוָה הוּא הָאֱלֹהִים אֵין עוֹד מִלְבַדּוֹ</span>. מִן הַשָּׁמַיִם הִשְׁמִיעֲךָ אֶת קֹלוֹ לְיַסְּרֶךָּ וְעַל הָאָרֶץ הֶרְאֲךָ אֶת אִשּׁוֹ הַגְּדוֹלָה וּדְבָרָיו שָׁמַעְתָּ מִתּוֹךְ הָאֵשׁ. וְתַחַת כִּי אָהַב אֶת אֲבֹתֶיךָ וַיִּבְחַר בְּזַרְעוֹ אַחֲרָיו וַיּוֹצִאֲךָ בְּפָנָיו בְּכֹחוֹ הַגָּדֹל מִמִּצְרָיִם. לְהוֹרִישׁ גּוֹיִם גְּדֹלִים וַעֲצֻמִים מִמְּךָ מִפָּנֶיךָ לַהֲבִיאֲךָ לָתֶת לְךָ אֶת אַרְצָם נַחֲלָה כַּיּוֹם הַזֶּה.
+</div>
+
+<div class="idea-title">רעיון: "אתה הראת לדעת" — לדעת מתוך ראייה, לא רק שמיעה</div>
+<p data-a="01-117"><span class="anchor-tag">עוגן:</span> "אַתָּה הָרְאֵתָ לָדַעַת"</p>
+<p data-a="01-118">
+כפי שראינו כבר בתחנות 1, 2 ו-5, לכוח הראייה יש עוצמת חיבור שאין לשמיעה בלבד — הספורנו מסביר זאת ביעקב אבינו, שכיוון
+שלא יכול היה לראות את אפרים ומנשה, נזקק לחיבוק ולנישוק כתחליף. כאן, "אתה הראת לדעת" מלמד שה' לא הסתפק בכך שעם ישראל
+ישמע על ייחודו — הוא רצה שיראו זאת בעצמם, כדי ליצור דבקות שאי אפשר לנתק. "אין עוד מלבדו" הופך מידיעה שכלית לחוויה חיה.
+</p>
+<div class="love-box">
+<h4 data-a="01-119">חיבור לאהבת ה'</h4>
+<p data-a="01-120">
+לדעת "בשכל" ש"אין עוד מלבדו" זה טוב, אבל להרגיש את זה בלב — זה מה שיוצר אהבה אמיתית. <strong>פעולה מעשית:</strong>
+בפעם הבאה שתסתכלו על שקיעה, על תינוק, או על משהו יפה בטבע — עצרו רגע ותגידו לעצמכם: "זה ה', אין עוד מלבדו".
+</p>
+</div>
+
+<p data-a="01-121" class="mini-box">
+<strong>עוגן: "אֵין עוֹד מִלְבַדּוֹ" / "וַיּוֹצִאֲךָ בְּפָנָיו"</strong> — זהו אותו יסוד של הנהגה ישירה בלי מתווכים שהרחבנו
+בו בתחנה 8 ("חלק ה'"): "ויוציאך בפניו" — ה' עצמו, לא שר או מלאך, הוציא אותנו ממצרים, וממשיך להנהיג אותנו ישירות בכל רגע.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-122" id="s14">14. וְיָדַעְתָּ הַיּוֹם — ערי המקלט, לדאוג לחלש</h2>
+<p data-a="01-123" class="perek-ref">דברים ד, לט–מא</p>
+<div class="verse-box">
+וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל לְבָבֶךָ כִּי יְהוָה הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל הָאָרֶץ מִתָּחַת אֵין עוֹד. וְשָׁמַרְתָּ אֶת חֻקָּיו וְאֶת מִצְוֺתָיו אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם אֲשֶׁר יִיטַב לְךָ וּלְבָנֶיךָ אַחֲרֶיךָ וּלְמַעַן תַּאֲרִיךְ יָמִים עַל הָאֲדָמָה אֲשֶׁר יְהוָה אֱלֹהֶיךָ נֹתֵן לְךָ כָּל הַיָּמִים. <span class="emphasis">אָז יַבְדִּיל מֹשֶׁה שָׁלֹשׁ עָרִים בְּעֵבֶר הַיַּרְדֵּן מִזְרְחָה שָׁמֶשׁ</span>.
+</div>
+
+<div class="idea-title">רעיון: אהבת ה' אמיתית — לדאוג דווקא לחלשים</div>
+<p data-a="01-124"><span class="anchor-tag">עוגן:</span> "אָז יַבְדִּיל מֹשֶׁה שָׁלֹשׁ עָרִים"</p>
+<p data-a="01-125">
+על מה "מבזבז" משה רבנו את רגעיו האחרונים עלי אדמות? על הבדלת ערי מקלט לרוצחים בשגגה — אנשים שנכשלו וגרמו לאסון מתוך
+רשלנות. מנהיג ומחנך אמיתי אינו דואג רק ל"מצוינים" ולמוצלחים; חובתו הגדולה ביותר היא לדאוג לשוליים, לאלה שנכשלו, לחלשים
+ולנידחים. הנביא יחזקאל (פרק לד) מוכיח את רועי ישראל שדאגו רק לצאן הבריא והשמן, והזניחו את הצאן החולה והאובד. כאן,
+ברגעיו האחרונים, מציב משה את המודל האמיתי של אהבת ישראל.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> הביאו פעם ל"חזון איש" בחור ישיבה שנחלש ברוחניותו והלך אף לקולנוע. המשגיח קיווה שהחזון איש
+ינזוף בו קשות. להפתעתו, החזון איש התיישב ולמד איתו במתיקות ובסבלנות במשך רבע שעה, בלי מילת תוכחה. כשנשאל לפשר הדבר,
+ענה: "יש לבחור הזה טעם בדברים אחרים; אם לא יהיה לו טעם מתוק בלימוד — מה יהיה עליו?! העבודה שלנו היא לתת להם טעם בלימוד".
+</div>
+<div class="love-box">
+<h4 data-a="01-126">חיבור לאהבת ה'</h4>
+<p data-a="01-127">
+משה רבנו, גדול הנביאים, בחר להשקיע ברגעיו האחרונים דווקא באדם שנכשל. זה מלמד אותנו שאהבת ה' פירושה לאהוב את כל ילדיו —
+גם את הילד בכיתה שקשה לו, שמסתבך, או שלא תמיד מקובל. <strong>פעולה מעשית:</strong> חפשו היום בכיתה מי שקצת "בצד", ותנו
+לו חיוך או מילה טובה — זה בדיוק מה שהכי משמח את ה'.
+</p>
+</div>
+
+<p data-a="01-128" class="mini-box">
+<strong>עוגן: "אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם"</strong> — עוד הד ליסוד "היום ממש" שנעמיק בו בתחנה 26; ו"אָז יַבְדִּיל מֹשֶׁה"
+טומן גם רעיון של "לעשות, לא רק להצליח" (מצווה שאפשר לקיימה, אקיימנה) שנרחיב בו במלואו בתחנה הבאה, תחנה 15.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-129" id="s15">15. וְזֹאת הַתּוֹרָה — לעשות, לא להצליח</h2>
+<p data-a="01-130" class="perek-ref">דברים ד, מב–מד</p>
+<div class="verse-box">
+לָנֻס שָׁמָּה רוֹצֵחַ אֲשֶׁר יִרְצַח אֶת רֵעֵהוּ בִּבְלִי דַעַת וְהוּא לֹא שֹׂנֵא לוֹ מִתְּמוֹל שִׁלְשׁוֹם וְנָס אֶל אַחַת מִן הֶעָרִים הָאֵל וָחָי. אֶת בֶּצֶר בַּמִּדְבָּר בְּאֶרֶץ הַמִּישֹׁר לָרֻאוּבֵנִי וְאֶת רָאמֹת בַּגִּלְעָד לַגָּדִי וְאֶת גּוֹלָן בַּבָּשָׁן לַמְנַשִּׁי. <span class="emphasis">וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל</span>. אֵלֶּה הָעֵדֹת וְהַחֻקִּים וְהַמִּשְׁפָּטִים אֲשֶׁר דִּבֶּר מֹשֶׁה אֶל בְּנֵי יִשְׂרָאֵל בְּצֵאתָם מִמִּצְרָיִם.
+</div>
+
+<div class="idea-title">רעיון: "לעשות" ולא "להצליח" — יסוד לכל התורה</div>
+<p data-a="01-131"><span class="anchor-tag">עוגן:</span> "וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה" (בסמיכות להבדלת ערי המקלט)</p>
+<p data-a="01-132">
+רש"י שואל: הרי ערי המקלט שבעבר הירדן לא קולטות רוצחים בפועל עד שיובדלו גם שלוש הערים בארץ כנען — אז מה בער למשה
+להבדילן כעת? תשובתו: "מצווה שאפשר לקיימה — אקיימנה". הכלי יקר מבאר שהסמיכות ל"וזאת התורה אשר שם משה" מלמדת יסוד לכל
+התורה כולה — כפי שנהג לומר רבי ישראל מסלנטר: <em>"א-ייד דארף טאהן, נישט אויף-טאהן"</em> — יהודי צריך לפעול, לא להצליח
+דווקא. אנו "פועלים" של הקב"ה, לא "קבלנים" הנמדדים רק לפי תוצאה. כשאדם משקיע ימים ולילות במצווה ובסוף אינו רואה ברכה
+בעמלו, עליו לדעת: שום דבר לא הולך לאיבוד.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> הסטייפלר זצ"ל היה מסביר כך את אברהם אבינו: אברהם קרע את השמים בתפילה כדי להציל את סדום,
+ניהל משא ומתן עם ה' — ולבסוף, לכאורה, הכל היה "לחינם": סדום נחרבה. אדם רגיל היה נשבר מכישלון כזה. אך הפסוק מעיד: "וְאַבְרָהָם
+שָׁב לִמְקֹמוֹ" — הוא חזר לאותה דרגה ולאותה שמחה, כי ידע: "אני חייל; עשיתי את המוטל עליי, והתוצאות הן בידי ה'".
+</div>
+<div class="love-box">
+<h4 data-a="01-133">חיבור לאהבת ה'</h4>
+<p data-a="01-134">
+כשאתם מתאמצים לעזור לחבר, ללמוד למבחן, או לארגן משהו טוב — ובסוף זה לא "מצליח" — ה' לא נותן ציונים על הצלחות, אלא על
+ההשתדלות והלב. <strong>פעולה מעשית:</strong> חשבו על פעם שהתאמצתם ולא הצליח — ותגידו לעצמכם: "עשיתי את חלקי, וזה שווה
+בשמיים בדיוק כמו הצלחה".
+</p>
+</div>
+
+<p data-a="01-135" class="mini-box">
+<strong>עוגן: "וְזֹאת הַתּוֹרָה" (זווית נוספת)</strong> — כפי שכבר ראינו בתחנה 14 (ערי מקלט, חזון איש), משה מלמד אותנו כאן
+עוד פעם: התורה כולה — "וזאת התורה" — נבנית על הדאגה דווקא לחלש, לרוצח בשגגה, למי שנפל. זו לא רק הלכה טכנית של ערי מקלט,
+אלא הצהרה שהתורה מלאה ברחמים לכל אחד, גם למי שטעה.
+</p>
+
+<div class="idea-title">רעיון: התורה המדויקת — הגנה על ישראל בכל מילה</div>
+<p data-a="01-136"><span class="anchor-tag">עוגן:</span> "בִּבְלִי דַעַת" / "בֶּצֶר בַּמִּדְבָּר" / "לִפְנֵי בְּנֵי יִשְׂרָאֵל"</p>
+<div class="quote-box">
+"יַחְשׁוֹב לוֹ בְּבָצְרָה תִּיקָלֵט כְּבֶצֶר, וּמַלְאָךְ כְּאָדָם בְּסֻכּוֹ יִנָּצֵר, וּמֵזִיד כְּשׁוֹגֵג בַּמִּקְלָט יֵעָצֵר"
+<span class="source-tag">פיוט "ברוך ה' יום יום" לשבת, על פי הגמרא במכות י ע"א</span>
+</div>
+<p data-a="01-137">
+הגמרא מספרת שלעתיד לבוא יטעה שרו של אדום ויברח לעיר "בָּצְרָה" בחושבו שהיא עיר מקלט. בספר "נעים זמירות ישראל" מובא
+ששלוש טעויותיו נשללות במפורש בפסוקים שלנו: (1) "בבלי דעת" — קולט רק שוגג, לא מזיד; (2) "בֶּצֶר" — לא "בָּצְרָה"; (3)
+"לפני בני ישראל" — קולט רק בני אדם, לא מלאכים. דיוק נפלא המראה כיצד התורה מדויקת עד למילה האחרונה, ומגנה על ישראל.
+</p>
+<div class="love-box">
+<h4 data-a="01-138">חיבור לאהבת ה'</h4>
+<p data-a="01-139">
+ה' נתן לנו "קוד סודי" — התורה — שמותאם בדיוק בשבילנו, מגן עלינו במקום שאנחנו טועים בשוגג, ומלא ברחמים מדויקים כלפינו.
+<strong>פעולה מעשית:</strong> חשבו על מצווה אחת שמרגישה "מדויקת בשבילכם" — ותודו לה' על תורה שמכוונת אליכם אישית.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-140" id="s16">16. בְּעֵבֶר הַיַּרְדֵּן — בגיא מול בית פעור</h2>
+<p data-a="01-141" class="perek-ref">דברים ד, מה–מט</p>
+<div class="verse-box">
+<span class="emphasis">בְּעֵבֶר הַיַּרְדֵּן בַּגַּיְא מוּל בֵּית פְּעוֹר</span> בְּאֶרֶץ סִיחֹן מֶלֶךְ הָאֱמֹרִי אֲשֶׁר יוֹשֵׁב בְּחֶשְׁבּוֹן <span class="emphasis">אֲשֶׁר הִכָּה מֹשֶׁה</span> וּבְנֵי יִשְׂרָאֵל בְּצֵאתָם מִמִּצְרָיִם. <span class="emphasis">וַיִּירְשׁוּ אֶת אַרְצוֹ וְאֶת אֶרֶץ עוֹג מֶלֶךְ הַבָּשָׁן</span> שְׁנֵי מַלְכֵי הָאֱמֹרִי אֲשֶׁר בְּעֵבֶר הַיַּרְדֵּן מִזְרַח שָׁמֶשׁ. מֵעֲרֹעֵר אֲשֶׁר עַל שְׂפַת נַחַל אַרְנֹן וְעַד הַר שִׂיאֹן הוּא חֶרְמוֹן. וְכָל הָעֲרָבָה עֵבֶר הַיַּרְדֵּן מִזְרָחָה וְעַד יָם הָעֲרָבָה תַּחַת אַשְׁדֹּת הַפִּסְגָּה.
+</div>
+
+<div class="idea-title">רעיון א: "בגיא" — ראשי תיבות של אמונה מנצחת</div>
+<p data-a="01-142"><span class="anchor-tag">עוגן:</span> "בַּגַּיְא מוּל בֵּית פְּעוֹר"</p>
+<div class="quote-box">
+"הרואה בתי עכו"ם בישובן מברך: בית גאים יסח ה'" <span class="source-tag">גמרא, ברכות נח ע"ב</span>
+</div>
+<p data-a="01-143">
+ר' שמשון מאוסטרופולי מרמז שהמילה "בַּגַּיְא" היא ראשי תיבות "בית גאים יסח ה'". בני ישראל חנו "בגיא" — מתוך אמונה
+שה' יעקור את כוחות השקר — דווקא מול "בית פעור", מרכז הטומאה של אז. העמידה שם מסמלת ניצחון אמונה פשוטה וטהורה מול
+כל "גאווה" ושקר של אומות העולם.
+</p>
+<div class="love-box">
+<h4 data-a="01-144">חיבור לאהבת ה'</h4>
+<p data-a="01-145">
+כשאנחנו רואים בעולם דברים שנראים נוצצים, חזקים או מרשימים, אנחנו יודעים שכל הכוח שייך רק לה', וכל השאר הוא "הצגה".
+<strong>פעולה מעשית:</strong> בפעם שמשהו "נוצץ" ינסה להרשים אתכם, זכרו — הכוח האמיתי היחיד הוא של ה'.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="idea-title">רעיון ב: לקחת את כוח הרע ולהפוך אותו לקדושה</div>
+<p data-a="01-146"><span class="anchor-tag">עוגן:</span> "וַיִּירְשׁוּ אֶת אַרְצוֹ וְאֶת אֶרֶץ עוֹג מֶלֶךְ הַבָּשָׁן"</p>
+<p data-a="01-147">
+הרב אלישיב זצ"ל מבאר יסוד עמוק דרך כתר מלכות בית דוד: הכתר נוצר במקורו מזהב של עבודה זרה עמונית ("מלכום"), שאיש
+צבאו של דוד (איתי הגיתי) ביטל. כיצד הופך חפץ טמא לכתר קדוש? מפני שהביטול הגדול ביותר של הרע הוא לקחת את כוחו ולהפוך
+אותו לכתר של קדושה. כך גם ירושת ארצם של סיחון ועוג — הפיכת מקום טומאה עמוקה לנחלת ה'.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> הגמרא מספרת שכתר מלכות בית דוד היה פלאי: התאים בדיוק למי שראוי למלכות, ולא התאים למי
+שאינו ראוי. הזהב ממנו נוצר היה במקורו זהבו של הפסל "מלכום" — אך לאחר שבוטלה העבודה הזרה, הפך לכתר מלכי יהודה.
+</div>
+<div class="love-box">
+<h4 data-a="01-148">חיבור לאהבת ה'</h4>
+<p data-a="01-149">
+כשיש לנו יצר הרע שנראה לנו ענק כמו "עוג מלך הבשן", ואנחנו מתגברים עליו — אנחנו לא רק "בורחים" ממנו, אנחנו לוקחים
+את הכוח שלו והופכים אותו לכתר קדושה! <strong>פעולה מעשית:</strong> בפעם הבאה שתתגברו על יצר הרע קטן (עצלנות, כעס),
+דמיינו שאתם בונים בזה כתר לה'.
+</p>
+</div>
+
+<p data-a="01-150" class="mini-box">
+<strong>עוגן: "אֲשֶׁר הִכָּה מֹשֶׁה"</strong> — שוב עולה יסוד שראינו בתחנות 7–9: משה עצמו לא רצה שנייחס לו כוחות עצמאיים.
+"אני כלום — כל מה שאני עושה זה אבא שבשמים שעושה למענכם". גם ניצחונותינו האישיים, ולא רק של משה, הם תמיד מתנה מה'.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-151" id="s17">17. וַיִּקְרָא מֹשֶׁה — פנים בפנים</h2>
+<p data-a="01-152" class="perek-ref">דברים ה, א–ד</p>
+<div class="verse-box">
+וַיִּקְרָא מֹשֶׁה אֶל כָּל יִשְׂרָאֵל וַיֹּאמֶר אֲלֵהֶם שְׁמַע יִשְׂרָאֵל אֶת הַחֻקִּים וְאֶת הַמִּשְׁפָּטִים אֲשֶׁר אָנֹכִי דֹּבֵר בְּאָזְנֵיכֶם הַיּוֹם וּלְמַדְתֶּם אֹתָם וּשְׁמַרְתֶּם לַעֲשֹׂתָם. יְהוָה אֱלֹהֵינוּ כָּרַת עִמָּנוּ בְּרִית בְּחֹרֵב. לֹא אֶת אֲבֹתֵינוּ כָּרַת יְהוָה אֶת הַבְּרִית הַזֹּאת כִּי אִתָּנוּ אֲנַחְנוּ אֵלֶּה פֹה הַיּוֹם כֻּלָּנוּ חַיִּים. <span class="emphasis">פָּנִים בְּפָנִים דִּבֶּר יְהוָה עִמָּכֶם בָּהָר מִתּוֹךְ הָאֵשׁ</span>.
+</div>
+
+<div class="idea-title">רעיון: "כלי המתכון" — לשמור בדיוק, לא לאלתר</div>
+<p data-a="01-153"><span class="anchor-tag">עוגן:</span> "וּשְׁמַרְתֶּם לַעֲשֹׂתָם"</p>
+<p data-a="01-154">
+בהמשך הפרשה (שראינו בתחנה 4) לומדים "רק עם חכם ונבון" — רק "כשתעשום על אמיתתם". הרב דיסקין מדגיש: אם בני אדם יתחילו
+"לשפר" את ההלכה בהרגשים מומצאים, בסגולות שאינן במקומן, הם מעוותים את המצווה ומחמיצים את החכמה שבה.
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> אם תרכיבו לגו יקר או אופניים לפי הוראות היצרן בדיוק — הכל יעבוד מושלם. אבל אם תחליטו שבא לכם
+"להרגיש יצירתיים" ותחברו את הגלגל לגג — האופניים לא ייסעו. כך גם עוגת שוקולד מדהימה לפי מתכון של שף גדול: אם תוסיפו
+מלח במקום סוכר כי "זה נראה נחמד", העוגה תיהרס. המצוות הן "הוראות היצרן" של הנשמה — ה' יודע הכי טוב מה יביא לנו שמחה אמיתית.
+</div>
+<div class="love-box">
+<h4 data-a="01-155">חיבור לאהבת ה'</h4>
+<p data-a="01-156">
+לשמור על המתכון המדויק של ה', בלי "לתקן" אותו, זה סימן לביטחון עמוק שה' יודע הכי טוב מה טוב לנו. <strong>פעולה מעשית:</strong>
+במצווה הקטנה הבאה, עשו אותה בדיוק לפי ההלכה, בלי "שיפורים" — ותרגישו את הביטחון שבפשטות.
+</p>
+</div>
+
+<p data-a="01-157" class="mini-box">
+<strong>עוגן: "אֲשֶׁר אָנֹכִי דֹּבֵר בְּאָזְנֵיכֶם הַיּוֹם" / "פָּנִים בְּפָנִים"</strong> — כאן, ממש לפני עשרת הדברות בפעם השנייה,
+מהדהדים שני יסודות שכבר פגשנו: ה"היום" האישי (נעמיק בתחנה 26) וההנהגה הישירה בלי מתווכים (תחנה 8) — "פנים בפנים", לא
+דרך שום שר או כוכב.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-158" id="s18">18. אָנֹכִי עֹמֵד בֵּין ה' — עשרת הדברות (א)</h2>
+<p data-a="01-159" class="perek-ref">דברים ה, ה–ח</p>
+<div class="verse-box">
+אָנֹכִי עֹמֵד בֵּין יְהוָה וּבֵינֵיכֶם בָּעֵת הַהִוא לְהַגִּיד לָכֶם אֶת דְּבַר יְהוָה כִּי יְרֵאתֶם מִפְּנֵי הָאֵשׁ וְלֹא עֲלִיתֶם בָּהָר לֵאמֹר. <span class="emphasis">אָנֹכִי יְהוָה אֱלֹהֶיךָ אֲשֶׁר הוֹצֵאתִיךָ מֵאֶרֶץ מִצְרַיִם מִבֵּית עֲבָדִים</span> לֹא יִהְיֶה לְךָ אֱלֹהִים אֲחֵרִים עַל פָּנָיַ. לֹא תַעֲשֶׂה לְךָ פֶסֶל כָּל תְּמוּנָה אֲשֶׁר בַּשָּׁמַיִם מִמַּעַל וַאֲשֶׁר בָּאָרֶץ מִתָּחַת וַאֲשֶׁר בַּמַּיִם מִתַּחַת לָאָרֶץ.
+</div>
+
+<p data-a="01-160">
+כאן, לראשונה בפרשה, אנו שומעים בעצמנו את עשרת הדברות — לא תיאור עליהן, אלא את המילים המקוריות עצמן, כפי שנאמרו בהר סיני.
+זו נקודת עצירה משמעותית: כל מה שלמדנו על "פנים בפנים" ועל קול ה' שנשמע ישירות (תחנות 6, 17) מקבל כאן ביטוי קונקרטי —
+אלו המילים עצמן.
+</p>
+
+<div class="idea-title">רעיון: "אנכי ה' אלוקיך" — פנייה בלשון יחיד</div>
+<p data-a="01-161"><span class="anchor-tag">עוגן:</span> "אָנֹכִי יְהוָה אֱלֹהֶיךָ אֲשֶׁר הוֹצֵאתִיךָ"</p>
+<p data-a="01-162">
+שימו לב: הדיבר הראשון כולו בלשון יחיד — "אלוהיך", "הוצאתיך" — לא "אלוהיכם". חז"ל למדו מכך שבשעה שה' דיבר לכל
+עם ישראל יחד, כל אחד ואחת שמעו זאת כפנייה אישית אליהם, כאילו הם היחידים העומדים שם. זו אינה הצהרה כללית — היא ברית
+אישית בין ה' לבין כל יהודי ויהודי, אז ולתמיד.
+</p>
+<div class="love-box">
+<h4 data-a="01-163">חיבור לאהבת ה'</h4>
+<p data-a="01-164">
+עשרת הדברות לא נאמרו "לעם" באופן מופשט — הן נאמרו לכל אחד מכם, אישית, בלשון יחיד. כשאתם קוראים אותן, זה כאילו ה'
+פונה אליכם היום ממש. <strong>פעולה מעשית:</strong> קראו הערב את עשרת הדברות (או חלק מהן) ונסו לשים לב ללשון היחיד —
+זה מכוון אליכם אישית.
+</p>
+</div>
+
+<p data-a="01-165" class="mini-box">
+<strong>עוגן: "לֹא יִהְיֶה לְךָ אֱלֹהִים אֲחֵרִים"</strong> — זהו הביטוי המדויק והמלא ביותר של יסוד הקשר הישיר שראינו לאורך
+כל המסע (תחנות 8, 13, 17): אין צורך במתווכים, כי ה' עצמו קרוב אלינו "כמפה לאוזן" (תחנה 4).
+</p>
+<p data-a="01-166" class="mini-box">
+<strong>עוגן: "לֹא תַעֲשֶׂה לְךָ פֶסֶל... אָנֹכִי עֹמֵד בֵּין ה' וּבֵינֵיכֶם"</strong> — משה מדגיש "אנכי עומד <em>בין</em>" —
+הוא רק שליח, לא מקור הכוח, בדיוק כפי שראינו לגבי חשש ההגשמה של משה עצמו (תחנות 7, 9, 16).
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-167" id="s19">19. לֹא תִשְׁתַּחֲוֶה — שם ה' וערך השבת</h2>
+<p data-a="01-168" class="perek-ref">דברים ה, ט–יב</p>
+<div class="verse-box">
+לֹא תִשְׁתַּחֲוֶה לָהֶם וְלֹא תָעָבְדֵם כִּי אָנֹכִי יְהוָה אֱלֹהֶיךָ אֵל קַנָּא פֹּקֵד עֲוֺן אָבוֹת עַל בָּנִים וְעַל שִׁלֵּשִׁים וְעַל רִבֵּעִים לְשֹׂנְאָי. וְעֹשֶׂה חֶסֶד לַאֲלָפִים לְאֹהֲבַי וּלְשֹׁמְרֵי מִצְוֺתָי. <span class="emphasis">לֹא תִשָּׂא אֶת שֵׁם יְהוָה אֱלֹהֶיךָ לַשָּׁוְא</span> כִּי לֹא יְנַקֶּה יְהוָה אֵת אֲשֶׁר יִשָּׂא אֶת שְׁמוֹ לַשָּׁוְא. <span class="emphasis">שָׁמוֹר אֶת יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ</span> כַּאֲשֶׁר צִוְּךָ יְהוָה אֱלֹהֶיךָ שֵׁשֶׁת יָמִים תַּעֲבֹד וְעָשִׂיתָ כָּל מְלַאכְתֶּךָ.
+</div>
+
+<div class="idea-title">רעיון א: שם ה' — הכוח הכי חזק בבריאה</div>
+<p data-a="01-169"><span class="anchor-tag">עוגן:</span> "לֹא תִשָּׂא אֶת שֵׁם ה' אֱלֹהֶיךָ לַשָּׁוְא"</p>
+<p data-a="01-170">
+כפי שראינו בתחנה 10 לגבי הפסל המדבר של נבוכדנצר, שם ה' המפורש הוא כוח החיים המחיה את הבריאה כולה — עד כדי כך שהוא
+הצליח להפעיל אף פסל דומם. האיסור "לא תשא לשוא" אינו רק איסור אמירה בעלמא — הוא אזהרה שלא לקחת את הכוח הרוחני העצום
+ביותר בבריאה ולהשתמש בו לדברי הבל וריקנות.
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> תארו לכם סוללת-על יקרה ומשוכללת שיכולה להאיר עיר שלמה. האם הייתם משתמשים בה כדי להפעיל צעצוע
+זול שזורקים לפח? שם ה' הוא הכוח הכי חזק שיש — כשמשתמשים בו בברכה ובכוונה, מאירים עולם; כשמשתמשים בו "לשוא", לוקחים
+את הדבר היקר ביותר וזורקים אותו לבוץ.
+</div>
+<div class="love-box">
+<h4 data-a="01-171">חיבור לאהבת ה'</h4>
+<p data-a="01-172">
+כל פעם שאתם מברכים ברכה בכוונה ובכובד ראש, אתם משתמשים ב"סוללת העל" הזו בדיוק כפי שנועדה — להוסיף אהבה וקדושה בעולם.
+<strong>פעולה מעשית:</strong> בברכה הקרובה, נסו לומר את שם ה' לאט וברצינות, ולא כ"הרגל" חטוף.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="idea-title">רעיון ב: ערך המצווה = הערך שאתם נותנים לה</div>
+<p data-a="01-173"><span class="anchor-tag">עוגן:</span> "שָׁמוֹר אֶת יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ"</p>
+<p data-a="01-174">
+"לקדשו" משמעו לייקר ולהבדיל שיהיה בעל הערך הגבוה ביותר. הרב דיסקין מבאר בשם החפץ חיים יסוד עצום: שכר המצוות בעולם
+האמת נקבע לפי הערך שהאדם עצמו נתן להן בעולם הזה. מי שמוכן לוותר על רווח עצום כדי לא לפגוע בשבת — קובע למפרע ששבת שווה
+לו יותר מכל הון, וכל השבתות שקיים בחייו מקבלות ערך רוחני עצום.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> הרב דיסקין נשאל: מה הדין אם וילה עולה באש בשבת, ובה כספת עם עשרות מיליוני דולרים, בלי
+שום סכנת נפשות — האם מותר לכבות? ההלכה: אסור, כי הפסד ממון אינו דוחה שבת. הסביר הרב: אם אותו עשיר יכבה את האש, הוא
+יוכיח שהשבת שווה לו פחות מהכסף שבכספת. אך אם יעמוד ויאמר "אינני מחלל שבת בעד שום סכום שבעולם" — באותו רגע הוא קובע
+תג מחיר חדש לכל שבת ושבת ששמר בחייו, וכל אחת מהן תיחשב בשמים כיהלום בשווי עצום.
+</div>
+<div class="love-box">
+<h4 data-a="01-175">חיבור לאהבת ה'</h4>
+<p data-a="01-176">
+תארו אבן שנראית כזכוכית — אולי תחליפו אותה בשקית במבה. אבל אם יהלומן יגלה שזה יהלום נדיר, פתאום תשמרו עליה בכספת.
+כשאתם מראים שהשבת (או כל מצווה) שווה לכם יותר מכל דבר גשמי, ה' אומר: "הילד הזה מעריך את המצווה שלי!". <strong>פעולה
+מעשית:</strong> בשבת הקרובה, נסו לזכור רגע אחד לתת לה ערך מיוחד — לא רק "לעבור אותה".
+</p>
+</div>
+
+<p data-a="01-177" class="mini-box">
+<strong>עוגן: "וְעֹשֶׂה חֶסֶד לַאֲלָפִים לְאֹהֲבַי"</strong> — הד ליסוד ה"היום ממש" של אהבת ה' שנרחיב בו במלואו בתחנה 26:
+מי שאוהב את ה' ניגש לכל מצווה כאילו היא היחידה ופנייה אישית אליו עכשיו.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-178" id="s20">20. וְיוֹם הַשְּׁבִיעִי — מנוחת הנפש</h2>
+<p data-a="01-179" class="perek-ref">דברים ה, יג–טו</p>
+<div class="verse-box">
+<span class="emphasis">וְיוֹם הַשְּׁבִיעִי שַׁבָּת לַיהוָה אֱלֹהֶיךָ לֹא תַעֲשֶׂה כָל מְלָאכָה</span> אַתָּה וּבִנְךָ וּבִתֶּךָ וְעַבְדְּךָ וַאֲמָתֶךָ וְשׁוֹרְךָ וַחֲמֹרְךָ וְכָל בְּהֶמְתֶּךָ וְגֵרְךָ אֲשֶׁר בִּשְׁעָרֶיךָ <span class="emphasis">לְמַעַן יָנוּחַ עַבְדְּךָ וַאֲמָתְךָ כָּמוֹךָ</span>. וְזָכַרְתָּ כִּי עֶבֶד הָיִיתָ בְּאֶרֶץ מִצְרַיִם וַיֹּצִאֲךָ יְהוָה אֱלֹהֶיךָ מִשָּׁם בְּיָד חֲזָקָה וּבִזְרֹעַ נְטוּיָה עַל כֵּן צִוְּךָ יְהוָה אֱלֹהֶיךָ לַעֲשׂוֹת אֶת יוֹם הַשַּׁבָּת.
+</div>
+
+<div class="idea-title">רעיון א: לחם הפנים של היהודי התמים</div>
+<p data-a="01-180">
+בהמשך ליסוד ערך המצוות שראינו בתחנה הקודמת, מספר הרב דיסקין סיפור נפלא הממחיש אהבה תמימה לשבת.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> בעיר צפת בתקופת האר"י הקדוש חי יהודי פשוט ותמים. פעם שמע דרשה על "לחם הפנים" שהיו מקריבים
+במקדש, ואמר לעצמו: "ה' כל כך אוהב לחם — אני אתן לו!". מדי שישי חסך מכספו הדל, קנה קמח משובח, ואשתו אפתה שתי חלות
+נפלאות. הוא היה מגיע לבית הכנסת, פותח את ארון הקודש, מניח בו את החלות ואומר: "זה בשבילך!". השמש היה לוקח את החלות
+לביתו, והיהודי היה בטוח שה' עצמו אכל אותן — ומאושר. יום אחד תפס אותו הרב וגער בו: "השמש לוקח את זה!". היהודי בכה
+והפסיק. מיד הגיע האר"י הקדוש ואמר לרב: "משעה שחרב בית המקדש, לא היה לקב"ה נחת רוח כה גדול כמו מהלחמים של היהודי
+התמים הזה, שעשה זאת מתוך לב טהור ואהבה ענקית".
+</div>
+<div class="love-box">
+<h4 data-a="01-181">חיבור לאהבת ה'</h4>
+<p data-a="01-182">
+לפעמים אנחנו חושבים שצריך "לדעת הרבה" כדי לאהוב את ה' נכון. אבל הסיפור הזה מלמד שכוונת הלב התמימה שווה לה' יותר
+מהכל. <strong>פעולה מעשית:</strong> תעשו היום מעשה קטן לכבוד ה' מתוך לב פשוט וטהור, בלי לחשוב יותר מדי — ותאמינו שזה יקר לו.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="idea-title">רעיון ב: מנוחת הנפש — לא מנוחה של חמור</div>
+<p data-a="01-183"><span class="anchor-tag">עוגן:</span> "לְמַעַן יָנוּחַ עַבְדְּךָ וַאֲמָתְךָ כָּמוֹךָ... וְשׁוֹרְךָ וַחֲמֹרְךָ"</p>
+<p data-a="01-184">
+יש הבדל עצום בין שביתת בהמה לשביתת אדם: מנוחת החמור היא פשוט הפסקת עבודה — קושרים אותו לאבוס ונותנים לו עשב. אך
+השבת של היהודי היא מנוחה של הנפש ("וינפש") — מנוחה רוחנית. דווקא הניתוק מהשליטה בטבע ומהמסכים מביא לשלוות נפש אמיתית
+וקדושה, שאף חופשה גשמית אינה יכולה לספק.
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> אדם הנוסע לחופשה במלון מפואר — כבר בבוקר האחרון הוא יושב על המזוודות, לחוץ מהמונית שאמורה
+לאסוף אותו, וכל המנוחה נהרסת. לעומתו, יהודי בסעודת שבת חווה "זיקוקין די נור של נפש" — מנותק מהמזוודות, מהרכבים ומהלחץ.
+</div>
+<div class="love-box">
+<h4 data-a="01-185">חיבור לאהבת ה'</h4>
+<p data-a="01-186">
+כשאנחנו מכבים מסכים, לא נוסעים, ושרים יחד בשולחן שבת — הנשמה שלנו מקבלת חיבוק מה' שאף חופשה בעולם לא יכולה לתת.
+<strong>פעולה מעשית:</strong> בשבת הקרובה, שימו לב לרגע אחד של שקט אמיתי — ותרגישו את "מנוחת הנפש" שה' נתן במתנה.
+</p>
+</div>
+
+<p data-a="01-187" class="mini-box">
+<strong>עוגן: "עַל כֵּן צִוְּךָ ה' לַעֲשׂוֹת אֶת יוֹם הַשַּׁבָּת"</strong> — הד נוסף ליסוד ה"פנייה האישית עכשיו" שנעמיק בו
+בתחנה 26: אל תחשבו שה' נתן את השבת רק לפני אלפי שנים — בכל שבוע מחדש היא ניתנת לכם כמתנה אישית.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-188" id="s21">21. אֶת אָבִיךָ וְאֶת אִמֶּךָ — הורים כמתנה</h2>
+<p data-a="01-189" class="perek-ref">דברים ה, טז–יז</p>
+<div class="verse-box">
+<span class="emphasis">אֶת אָבִיךָ וְאֶת אִמֶּךָ</span> כַּאֲשֶׁר צִוְּךָ יְהוָה אֱלֹהֶיךָ לְמַעַן יַאֲרִיכֻן יָמֶיךָ וּלְמַעַן יִיטַב לָךְ עַל הָאֲדָמָה אֲשֶׁר יְהוָה אֱלֹהֶיךָ נֹתֵן לָךְ. לֹא תִּרְצָח. וְלֹא תִּנְאָף. וְלֹא תִּגְנֹב. וְלֹא תַעֲנֶה בְרֵעֲךָ עֵד שָׁוְא. וְלֹא תַחְמֹד אֵשֶׁת רֵעֶךָ וְלֹא תִתְאַוֶּה בֵּית רֵעֶךָ שָׂדֵהוּ וְעַבְדּוֹ וַאֲמָתוֹ שׁוֹרוֹ וַחֲמֹרוֹ וְכֹל אֲשֶׁר לְרֵעֶךָ. אֶת הַדְּבָרִים הָאֵלֶּה דִּבֶּר יְהוָה אֶל כָּל קְהַלְכֶם בָּהָר מִתּוֹךְ הָאֵשׁ הֶעָנָן וְהָעֲרָפֶל קוֹל גָּדוֹל וְלֹא יָסָף וַיִּכְתְּבֵם עַל שְׁנֵי לֻחֹת אֲבָנִים וַיִּתְּנֵם אֵלָי.
+</div>
+
+<div class="idea-title">רעיון: הורים — מציאות שנבראה בשביל מצווה אחת</div>
+<p data-a="01-190"><span class="anchor-tag">עוגן:</span> "אֶת אָבִיךָ וְאֶת אִמֶּךָ"</p>
+<p data-a="01-191">
+בדרך כלל תופסים את כיבוד הורים כחובה שכלית: הם הביאו אותנו לעולם, אז ראוי להכיר להם טובה. אך יש כאן עומק גדול יותר:
+התורה קדמה לבריאת העולם ("אסתכל באורייתא וברא עלמא"). הקב"ה רצה לזכות אותנו במצווה היקרה של "כבד את אביך ואת אמך" —
+ולשם כך היה צריך לברוא בעולם את המציאות עצמה של הורים וילדים! מציאות ההורות נבראה במיוחד כדי לשמש פלטפורמה לקיום
+רצון ה'.
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> תארו מלך שהכין פרס יקר למי שיפתור חידה מסוימת. המלך לא חיכה שמישהו אחר ימציא חידה — הוא בעצמו
+תכנן, המציא ועיצב אותה, רק כדי להעניק לבנו את הפרס כשיפתור אותה. כך ה' "המציא" את הורינו — מתנה וחידה שנוצרה רק עבורנו.
+</div>
+<div class="love-box">
+<h4 data-a="01-192">חיבור לאהבת ה'</h4>
+<p data-a="01-193">
+הרבה פעמים אנחנו מכבדים הורים כי זה מנומס. אבל האמת מדהימה יותר: ה' ממש "המציא" את הרעיון של אבא ואמא כדי שנוכל
+להתחבר אליו. <strong>פעולה מעשית:</strong> תגידו היום להורה משהו אחד באמת מהלב — לא רק מנומס — ותרגישו שאתם מקיימים
+תוכנית עתיקה של ה' עצמו.
+</p>
+</div>
+
+<p data-a="01-194" class="mini-box">
+<strong>עוגן: "כַּאֲשֶׁר צִוְּךָ ה'"</strong> — כפי שנרחיב במלואו בתחנה 26, גם כאן "צִוְּךָ" בלשון יחיד מלמד שהציווי הוא
+פנייה ישירה ואישית אליכם, לא רק חלק מרשימת חוקים לעם שלם.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-195" id="s22">22. וַיְהִי כְּשָׁמְעֲכֶם — היום הזה ראינו</h2>
+<p data-a="01-196" class="perek-ref">דברים ה, יח–כא</p>
+<div class="verse-box">
+וַיְהִי כְּשָׁמְעֲכֶם אֶת הַקּוֹל מִתּוֹךְ הַחֹשֶׁךְ וְהָהָר בֹּעֵר בָּאֵשׁ וַתִּקְרְבוּן אֵלַי כָּל רָאשֵׁי שִׁבְטֵיכֶם וְזִקְנֵיכֶם. וַתֹּאמְרוּ הֵן הֶרְאָנוּ יְהוָה אֱלֹהֵינוּ אֶת כְּבֹדוֹ וְאֶת גָּדְלוֹ <span class="emphasis">וְאֶת קֹלוֹ שָׁמַעְנוּ מִתּוֹךְ הָאֵשׁ הַיּוֹם הַזֶּה רָאִינוּ</span> כִּי יְדַבֵּר אֱלֹהִים אֶת הָאָדָם וָחָי. וְעַתָּה לָמָּה נָמוּת כִּי תֹאכְלֵנוּ הָאֵשׁ הַגְּדֹלָה הַזֹּאת אִם יֹסְפִים אֲנַחְנוּ לִשְׁמֹעַ אֶת קוֹל יְהוָה אֱלֹהֵינוּ עוֹד וָמָתְנוּ.
+</div>
+
+<div class="idea-title">רעיון: "היום הזה ראינו" — ראייה שיוצרת קשר נצחי</div>
+<p data-a="01-197"><span class="anchor-tag">עוגן:</span> "הַיּוֹם הַזֶּה רָאִינוּ" / "הֵן הֶרְאָנוּ ה' אֶת כְּבֹדוֹ"</p>
+<p data-a="01-198">
+כפי שראינו כמה פעמים לאורך המסע (תחנות 1, 2, 5, 13), לכוח הראייה סגולה עצומה של יצירת חיבור רוחני. כאשר בני ישראל
+אומרים "היום הזה ראינו", הם מבטאים את החיבור הנצחי שנוצר בינם לבין ה' בעקבות הראייה הרוחנית של כבודו בהר סיני — חיבור
+בלתי ניתן לניתוק.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> מסופר על האר"י הקדוש שלקח את תלמידו רבי חיים ויטאל לשיט בסירה על הכנרת, הראה לו היכן
+נמצאת "בארה של מרים" (הבאר הנסית שליוותה את ישראל במדבר ושקעה בים כנרת), וביקש ממנו להסתכל לשם. כותב החיד"א שמעצם
+הראייה של הבאר הקדושה, מיד נפתחו מעיינות החכמה של רבי חיים ויטאל, וזכה לקדושה ולתורה עצומה. ראייה של קדושה — ממש מדבקת!
+</div>
+<div class="love-box">
+<h4 data-a="01-199">חיבור לאהבת ה'</h4>
+<p data-a="01-200">
+כשאתם מסתכלים על דברים קדושים — אותיות של ספר תורה, אדם צדיק, או אפילו רגע יפה של חסד — הראייה הזו מחברת אתכם לה'
+ומכניסה קדושה ממשית לנשמה. <strong>פעולה מעשית:</strong> חפשו היום משהו קדוש להסתכל עליו בכוונה (נר שבת, ספר תורה,
+מעשה טוב) — ותרגישו את החיבור.
+</p>
+</div>
+
+<p data-a="01-201" class="mini-box">
+<strong>עוגן: "אֶת קֹלוֹ שָׁמַעְנוּ" / "כִּי יְדַבֵּר אֱלֹהִים אֶת הָאָדָם וָחָי"</strong> — בני ישראל פחדו שהקרבה לה'
+תשרוף אותם, אך כפי שראינו בתחנה 4, קרבת ה' בתפילה היא "כמפה לאוזן" — מקור חיים ולא סכנה. הדיבור עם ה' לא נועד להפחיד;
+הוא נותן כוח, שמחה וחיים.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-202" id="s23">23. כִּי מִי כָל בָּשָׂר — היטיבו כל אשר דברו</h2>
+<p data-a="01-203" class="perek-ref">דברים ה, כב–כה</p>
+<div class="verse-box">
+כִּי מִי כָל בָּשָׂר אֲשֶׁר שָׁמַע קוֹל אֱלֹהִים חַיִּים מְדַבֵּר מִתּוֹךְ הָאֵשׁ כָּמֹנוּ וַיֶּחִי. קְרַב אַתָּה וּשֲׁמָע אֵת כָּל אֲשֶׁר יֹאמַר יְהוָה אֱלֹהֵינוּ וְאַתְּ תְּדַבֵּר אֵלֵינוּ אֵת כָּל אֲשֶׁר יְדַבֵּר יְהוָה אֱלֹהֵינוּ אֵלֶיךָ <span class="emphasis">וְשָׁמַעְנוּ וְעָשִׂינוּ</span>. וַיִּשְׁמַע יְהוָה אֶת קוֹל דִּבְרֵיכֶם בְּדַבֶּרְכֶם אֵלָי וַיֹּאמֶר יְהוָה אֵלַי שָׁמַעְתִּי אֶת קוֹל דִּבְרֵי הָעָם הַזֶּה אֲשֶׁר דִּבְּרוּ אֵלֶיךָ <span class="emphasis">הֵיטִיבוּ כָּל אֲשֶׁר דִּבֵּרוּ</span>.
+</div>
+
+<div class="idea-title">רעיון: "היטיבו כל אשר דברו" — תפילה כוח שפועל</div>
+<p data-a="01-204"><span class="anchor-tag">עוגן:</span> "וַיִּשְׁמַע ה' אֶת קוֹל דִּבְרֵיכֶם... הֵיטִיבוּ כָּל אֲשֶׁר דִּבֵּרוּ"</p>
+<p data-a="01-205">
+כפי שראינו כבר בתחילת המסע (תחנה 1) ובתחנה 4, תפילה אינה רק הגשת בקשה שנידונה בבית דין של מעלה — היא כוח עצום בטבע
+הבריאה, ות ה' קרוב אלינו "כמפה לאוזן" גם כשהמרחק לרקיע הוא אלפי שנות הליכה. כאן, ה' עצמו מעיד על דברי העם: "היטיבו
+כל אשר דברו" — כל דיבור שיוצא מהלב באמת מתקבל באהבה עצומה אצל בורא עולם.
+</p>
+<div class="love-box">
+<h4 data-a="01-206">חיבור לאהבת ה'</h4>
+<p data-a="01-207">
+כשאתם מדברים אל ה' מהלב, גם במילים פשוטות משלכם, ה' כביכול אומר "היטיבו כל אשר דברו" — איזה מילים יפות ומתוקות!
+<strong>פעולה מעשית:</strong> דברו היום עם ה' רגע במילים שלכם ממש, ותדעו: זה בדיוק מה שהכי משמח אותו.
+</p>
+</div>
+
+<p data-a="01-208" class="mini-box">
+<strong>עוגן: "וְשָׁמַעְנוּ וְעָשִׂינוּ"</strong> — כאן חוזר היסוד של "לעשות ולא רק להצליח" שהרחבנו בו במלואו בתחנה 15
+(הסטייפלר על אברהם אבינו): הקדימה של "נעשה" ל"נשמע" מבטאת מסירות שאינה תלויה בהבנה מלאה מראש — ה' מסתכל על עצם הנכונות
+לעשות, לא רק על התוצאה.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-209" id="s24">24. מִי יִתֵּן וְהָיָה — לא תסורו ימין ושמאל</h2>
+<p data-a="01-210" class="perek-ref">דברים ה, כו–ל</p>
+<div class="verse-box">
+מִי יִתֵּן וְהָיָה לְבָבָם זֶה לָהֶם לְיִרְאָה אֹתִי וְלִשְׁמֹר אֶת כָּל מִצְוֺתַי כָּל הַיָּמִים לְמַעַן יִיטַב לָהֶם וְלִבְנֵיהֶם לְעֹלָם. לֵךְ אֱמֹר לָהֶם שׁוּבוּ לָכֶם לְאָהֳלֵיכֶם. וְאַתָּה פֹּה עֲמֹד עִמָּדִי וַאֲדַבְּרָה אֵלֶיךָ אֵת כָּל הַמִּצְוָה וְהַחֻקִּים וְהַמִּשְׁפָּטִים אֲשֶׁר תְּלַמְּדֵם וְעָשׂוּ בָאָרֶץ אֲשֶׁר אָנֹכִי נֹתֵן לָהֶם לְרִשְׁתָּהּ. וּשְׁמַרְתֶּם לַעֲשׂוֹת כַּאֲשֶׁר צִוָּה יְהוָה אֱלֹהֵיכֶם אֶתְכֶם <span class="emphasis">לֹא תָסֻרוּ יָמִין וּשְׂמֹאל</span>.
+</div>
+
+<div class="idea-title">רעיון: אהבה פשוטה — בלי להמציא תוספות</div>
+<p data-a="01-211"><span class="anchor-tag">עוגן:</span> "לֹא תָסֻרוּ יָמִין וּשְׂמֹאל"</p>
+<p data-a="01-212">
+לפעמים דווקא מתוך אהבה גדולה לה', מתחשק לנו "להמציא" מבצע מיוחד, סגולה חדשה, או ריגוש חיצוני שנדמה לנו קדוש יותר.
+אך התורה מזהירה "לא תסורו ימין ושמאל" — האהבה והחכמה האמיתית הן לקיים את התורה בדיוק כפי שהיא מופיעה בהלכה, בלי
+"הרגשים" מומצאים.
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> ילד כל כך אוהב את אמא שלו, שבמקום לסדר את החדר כפי שהיא ביקשה, מחליט לצייר לה ציור ענק על
+הקיר הלבן של הסלון. הכוונה טובה — אבל אמא לא תשמח. היא תשמח רק אם הוא "לא יסור ימין ושמאל" ופשוט יקיים את הבקשה
+המקורית שלה באהבה.
+</div>
+<div class="love-box">
+<h4 data-a="01-213">חיבור לאהבת ה'</h4>
+<p data-a="01-214">
+מה הכי משמח את ה'? שאתם פשוט עושים את מה שהוא ביקש, בהלכה, בחיוך ובפשטות — לקום בבוקר, ליטול ידיים, להתפלל, לכבד
+הורים — בלי להמציא המצאות. ה' אוהב את היהדות הפשוטה והישרה שלכם. <strong>פעולה מעשית:</strong> במקום "לחדש" משהו
+גדול היום, נסו לעשות מצווה קטנה ורגילה בדיוק כמו שצריך — וזה כבר גדול מספיק.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-215" id="s25">25. בְּכָל הַדֶּרֶךְ — וזאת המצוה</h2>
+<p data-a="01-216" class="perek-ref">דברים ה, ל – ו, ג</p>
+<div class="verse-box">
+בְּכָל הַדֶּרֶךְ אֲשֶׁר צִוָּה יְהוָה אֱלֹהֵיכֶם אֶתְכֶם תֵּלֵכוּ לְמַעַן תִּחְיוּן וְטוֹב לָכֶם וְהַאֲרַכְתֶּם יָמִים בָּאָרֶץ אֲשֶׁר תִּירָשׁוּן. וְזֹאת הַמִּצְוָה הַחֻקִּים וְהַמִּשְׁפָּטִים אֲשֶׁר צִוָּה יְהוָה אֱלֹהֵיכֶם לְלַמֵּד אֶתְכֶם לַעֲשׂוֹת בָּאָרֶץ אֲשֶׁר אַתֶּם עֹבְרִים שָׁמָּה לְרִשְׁתָּהּ. לְמַעַן תִּירָא אֶת יְהוָה אֱלֹהֶיךָ לִשְׁמֹר אֶת כָּל חֻקֹּתָיו וּמִצְוֺתָיו אֲשֶׁר אָנֹכִי מְצַוֶּךָ אַתָּה וּבִנְךָ וּבֶן בִּנְךָ כֹּל יְמֵי חַיֶּיךָ וּלְמַעַן יַאֲרִכֻן יָמֶיךָ.
+</div>
+
+<div class="idea-title">רעיון: "בכל הדרך" — ללכת, לא רק להגיע</div>
+<p data-a="01-217"><span class="anchor-tag">עוגן:</span> "בְּכָל הַדֶּרֶךְ אֲשֶׁר צִוָּה ה' אֱלֹהֵיכֶם אֶתְכֶם תֵּלֵכוּ"</p>
+<p data-a="01-218">
+שימו לב למילה "תלכו" — לא רק "תגיעו". התורה אינה מבטיחה רק יעד טוב בסוף הדרך; היא מבטיחה שהדרך עצמה, ה"הליכה" היום־יומית
+במצוות, היא כבר "למען תחיון וטוב לכם". זהו המשך ישיר ליסוד "לעשות" שראינו בתחנה 15 — לא רק התוצאה הסופית קובעת, אלא
+כל צעד וצעד בדרך.
+</p>
+<div class="love-box">
+<h4 data-a="01-219">חיבור לאהבת ה'</h4>
+<p data-a="01-220">
+לא צריך לחכות "לסיים" משהו גדול כדי להרגיש קרוב לה' — כל צעד קטן בדרך הנכונה, כל מצווה בודדת, כבר שווה בפני עצמו.
+<strong>פעולה מעשית:</strong> היום, תנו לעצמכם קרדיט על צעד קטן אחד שעשיתם בדרך הנכונה, גם אם עדיין רחוקים מה"יעד".
+</p>
+</div>
+
+<p data-a="01-221" class="mini-box">
+כשאר מילות התחנה הזו ("אֲשֶׁר אָנֹכִי מְצַוֶּךָ", "לְלַמֵּד אֶתְכֶם לַעֲשׂוֹת") מהדהדות שוב את יסוד ה"היום ממש" ואת יסוד
+"לעשות ולא רק להצליח" שראינו לאורך המסע — נגיע כעת לתחנה המרכזית שבה שני היסודות הללו מתגלים במלוא עוצמתם: קריאת שמע.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-222" id="s26">26. שְׁמַע יִשְׂרָאֵל וְאָהַבְתָּ — היום ממש, ובכל נפשך</h2>
+<p data-a="01-223" class="perek-ref">דברים ו, ד–ז</p>
+<div class="verse-box">
+וְשָׁמַעְתָּ יִשְׂרָאֵל וְשָׁמַרְתָּ לַעֲשׂוֹת אֲשֶׁר יִיטַב לְךָ וַאֲשֶׁר תִּרְבּוּן מְאֹד כַּאֲשֶׁר דִּבֶּר יְהוָה אֱלֹהֵי אֲבֹתֶיךָ לָךְ אֶרֶץ זָבַת חָלָב וּדְבָשׁ. <span class="emphasis">שְׁמַע יִשְׂרָאֵל יְהוָה אֱלֹהֵינוּ יְהוָה אֶחָד</span>. וְאָהַבְתָּ אֵת יְהוָה אֱלֹהֶיךָ בְּכָל לְבָבְךָ <span class="emphasis">וּבְכָל נַפְשְׁךָ</span> וּבְכָל מְאֹדֶךָ. וְהָיוּ הַדְּבָרִים הָאֵלֶּה <span class="emphasis">אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם</span> עַל לְבָבֶךָ. וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ.
+</div>
+
+<div class="opening-box">
+<h3 data-a="01-224">💜 תחנת הלב של המסע</h3>
+<p data-a="01-225">
+לאורך כל הפרשה — כמעט בכל תחנה — פגשנו הבזקים של אותו יסוד יסודי אחד: שה' פונה אלינו לא "פעם אחת בהיסטוריה", אלא
+<span class="emphasis">היום, ממש עכשיו, באופן אישי</span>. הגיע הזמן לעצור כאן, בפסוק שהוא הבית של הרעיון הזה, ולהעמיק בו במלואו.
+</p>
+</div>
+
+<div class="idea-title">רעיון א: "אשר אנכי מצוך היום" — המצווה היחידה, שלי, עכשיו</div>
+<p data-a="01-226"><span class="anchor-tag">עוגן:</span> "וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם"</p>
+<p data-a="01-227">
+החפץ חיים מלמד יסוד עצום המסביר מדוע לעיתים חסרה לנו התלהבות בקיום המצוות. חמש "מניעות" פסיכולוגיות מקררות אותנו:
+</p>
+<div class="highlight-box">
+<p data-a="01-228">
+<strong>1.</strong> אנו לא שומעים את המצווה מפי הגבורה, אלא קוראים עליה בספרי הלכה.<br>
+<strong>2.</strong> זו לא המצווה היחידה — יש עוד תרי"ג מצוות.<br>
+<strong>3.</strong> אנחנו לא היחידים שנצטווינו — כלל ישראל כולו מצווה בה.<br>
+<strong>4.</strong> המצווה נוהגת גם אתמול וגם מחר — יוצרת שגרה.<br>
+<strong>5.</strong> המצווה ניתנה לפני למעלה מ-3,300 שנה — תחושת "התיישנות".
+</p>
+</div>
+<p data-a="01-229">
+אבל בעולם הרוחני <strong>אין חוק התיישנות</strong>. כנגד המניעות הללו באות דווקא המילים "אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם":
+<span class="emphasis">אנכי</span> — לא דרך שרשרת ארוכה, אני בכבודי ובעצמי מצווה אותך; <span class="emphasis">מצוך</span> —
+בלשון יחיד, כאילו אתה האדם היחיד בעולם; <span class="emphasis">היום</span> — כאילו המצווה ניתנה ממש היום, והיא היחידה
+שיש לעשות כעת. מי שחי בתחושה שכל מצווה היא ציווי אישי וישיר מה' אליו ברגע זה — מקיים אותה בשמחה ובמסירות נפש עצומה.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> כשפרצה מלחמת העולם השנייה בשנת תרצ"ט, הפציץ חיל האוויר הגרמני את העיר ורשה שבפולין ללא
+רחם, ואזרחים ופליטים רבים נהרגו. לקראת חג הסוכות, בתוך כל ההפגזות והפחד, יצא "הרב מבריסק" (רבי יצחק זאב סולובייצ'יק)
+יחד עם בנו, והלך יום שלם כדי לחפש "הדסים משולשים" — לא הסתפק ב"רוב משולש" הכשר בדיעבד, אלא חיפש הדר שכולו משולש.
+הגאון רבי מנחם זמבה שאל אותו בפליאה: "עד כדי כך?! במצב של סכנת מוות ופליטים נשפכים כמים, צריך להקפיד על הידור כזה?".
+התשובה: הרב מבריסק הרגיש את המצווה כאילו ה' ניצב מולו ממש עכשיו, ציווה עליו אישית, וזו המצווה היחידה בעולם. כשמרגישים
+כך, מוסרים את הנפש באהבה על כל פרט קטן.
+</div>
+<div class="love-box">
+<h4 data-a="01-230">חיבור לאהבת ה'</h4>
+<p data-a="01-231">
+תארו לעצמכם שמלך העולם היה דופק בדלת ביתכם, מסתכל לכם בעיניים ואומר: "בחרתי רק בך, מכל הילדים בעולם, לתת לך משימה
+אחת מיוחדת וסודית — היום". איך הייתם קמים בבוקר? הייתם טסים לעשות אותה הכי יפה שאפשר. הסוד לאהבת ה' הוא לעצור רגע
+לפני ברכה או תפילה ולחשוב: "ה' מדבר אליי עכשיו! הוא נתן לי אישית את המשימה הזו היום!". <strong>פעולה מעשית:</strong>
+לפני המצווה הבאה שלכם — ברכה, תפילה, תפילין — עצרו שנייה אחת ותגידו לעצמכם: "זו הפעם הראשונה שה' מבקש ממני את זה,
+היום ממש".
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="idea-title">רעיון ב: "ובכל נפשך" — כשהמעשה נותן תוקף למחשבה</div>
+<p data-a="01-232"><span class="anchor-tag">עוגן:</span> "וּבְכָל נַפְשְׁךָ"</p>
+<p data-a="01-233">
+בכל יום קורא יהודי קריאת שמע פעמיים, ומכוון למסור את נפשו על קדושת ה'. אך איך יודעים שכוונה זו אינה "מזויפת"? הרי
+במבחן המציאות ייתכן שהאדם לא היה עומד בכך בפועל. התשובה: כאשר אדם זוכה בפועל למסור את נפשו (או לעמוד בניסיון קשה
+של יצר או ממון), הוא לא רק מרוויח את המעשה החד-פעמי — הוא נותן "קיום" ואישור אמת לכל רבבות קריאות השמע שקרא בימי חייו.
+המעשה בפועל מעלה את כל המחשבות של חייו למדרגת מעשה גמור.
+</p>
+<div class="love-box">
+<h4 data-a="01-234">חיבור לאהבת ה'</h4>
+<p data-a="01-235">
+כל פעם שאתם מתגברים על ניסיון קטן — לוותר לחבר, להתאפק מכעס, לומר אמת גם כשקשה — אתם לא רק עושים מעשה בודד: אתם
+נותנים תוקף אמיתי לכל התפילות והכוונות הטובות שהיו לכם עד עכשיו. <strong>פעולה מעשית:</strong> בפעם הבאה שתעמדו
+בניסיון קטן, זכרו: זה "מקיים" את כל קריאות השמע הקודמות שלכם.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-236" id="s27">27. וְאָכַלְתָּ וְשָׂבָעְתָּ — סכנת השובע</h2>
+<p data-a="01-237" class="perek-ref">דברים ו, י–יב</p>
+<div class="verse-box">
+וְהָיָה כִּי יְבִיאֲךָ יְהוָה אֱלֹהֶיךָ אֶל הָאָרֶץ אֲשֶׁר נִשְׁבַּע לַאֲבֹתֶיךָ... בָּתִּים מְלֵאִים כָּל טוּב אֲשֶׁר לֹא מִלֵּאתָ... <span class="emphasis">וְאָכַלְתָּ וְשָׂבָעְתָּ</span>. הִשָּׁמֶר לְךָ פֶּן תִּשְׁכַּח אֶת יְהוָה אֲשֶׁר הוֹצִיאֲךָ מֵאֶרֶץ מִצְרַיִם מִבֵּית עֲבָדִים.
+</div>
+
+<div class="idea-title">רעיון: השובע שעלול לטמטם את הלב</div>
+<p data-a="01-238"><span class="anchor-tag">עוגן:</span> "וְאָכַלְתָּ וְשָׂבָעְתָּ"</p>
+<p data-a="01-239">
+המשך חכמה עומד על כך שמיד לאחר ההבטחה על "בתים מלאים כל טוב... ואכלת ושבעת", מזהירה התורה בפסוק הסמוך: "השמר לך
+פן תשכח את ה'". חז"ל אף לומדים מ"אשר לא מילאת" שבשעת הכיבוש הותר לישראל לאכול משלל האויבים דברים גסים, כדי לבטא
+שליטת הקדושה על הטומאה — אך אכילה כה חומרית גורמת בהכרח ל"טמטום הלב". דווקא ברגע של שובע גשמי מקסימלי, האדם נמצא
+בסכנת ניתוק רוחני וזקוק לאזהרה החריפה ביותר.
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> מלך שקונה לבנו האהוב חדר עצום מלא צעצועים, מסכים וממתקים מכל העולם, מתוך רצון שישמח. אך הדבר
+שהכי יכאיב למלך הוא אם הבן ישקע כל כך עמוק במשחקים והממתקים, יינעל בחדרו, ויישכח לגמרי לומר לאבא "בוקר טוב" ו"תודה".
+ה' נותן "בתים מלאים כל טוב" כדי שהשפע יחבר אותנו אליו מתוך אהבה — לא כדי שנשבע, נירדם ונשכח אותו.
+</div>
+<div class="love-box">
+<h4 data-a="01-240">חיבור לאהבת ה'</h4>
+<p data-a="01-241">
+דווקא כשאנחנו הכי שבעים, נהנים ושמחים, אנחנו צריכים לפקוח עיניים ולב, להגיד תודה ענקית לה', ולזכור שהשפע הוא כלי
+שנותן לנו כוח לאהוב אותו ולעשות מצוות בשמחה — לא מטרה בפני עצמה. <strong>פעולה מעשית:</strong> בארוחה הבאה שתאכלו
+עד שביעה, אמרו ברכת המזון בכוונה מיוחדת, בלי למהר.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-242" id="s28">28. הִשָּׁמֶר לְךָ פֶּן תִּשְׁכַּח — לשמה, ולא תנסו</h2>
+<p data-a="01-243" class="perek-ref">דברים ו, יב–טז</p>
+<div class="verse-box">
+הִשָּׁמֶר לְךָ פֶּן תִּשְׁכַּח אֶת יְהוָה אֲשֶׁר הוֹצִיאֲךָ מֵאֶרֶץ מִצְרַיִם מִבֵּית עֲבָדִים. אֶת יְהוָה אֱלֹהֶיךָ תִּירָא <span class="emphasis">וְאֹתוֹ תַעֲבֹד</span> וּבִשְׁמוֹ תִּשָּׁבֵעַ. לֹא תֵלְכוּן אַחֲרֵי אֱלֹהִים אֲחֵרִים מֵאֱלֹהֵי הָעַמִּים אֲשֶׁר סְבִיבוֹתֵיכֶם. כִּי אֵל קַנָּא יְהוָה אֱלֹהֶיךָ בְּקִרְבֶּךָ פֶּן יֶחֱרֶה אַף יְהוָה אֱלֹהֶיךָ בָּךְ וְהִשְׁמִידְךָ מֵעַל פְּנֵי הָאֲדָמָה. <span class="emphasis">לֹא תְנַסּוּ אֶת יְהוָה אֱלֹהֵיכֶם כַּאֲשֶׁר נִסִּיתֶם בַּמַּסָּה</span>.
+</div>
+
+<div class="idea-title">רעיון א: לעשות מצוות "לשמה" — מאהבה, לא לשכר</div>
+<p data-a="01-244"><span class="anchor-tag">עוגן:</span> "וְאֹתוֹ תַעֲבֹד"</p>
+<p data-a="01-245">
+החפץ חיים מלמד שיש דרגות רבות בעבודת ה'. יש מי שמקיים מצוות לשכר גשמי בעולם הזה, יש מי שמכוון לעולם הבא, ויש את
+הדרגה העליונה — עשיית המצווה אך ורק לכבוד ה' ("לשמה"), בלי ציפייה לשכר כלל. שכר מצווה כזו כה עצום, שאין אפשרות לשלם
+עליו בעולם הזה כלל.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> נבוכדנצר, רשע גדול, רץ פעם שלוש פסיעות אך ורק לכבוד ה' (כדי לתקן איגרת שנכתבה בזלזול
+כלפיו). על מעשה קטן זה, שנעשה נטו לכבוד ה', קיבל שכר דמיוני בעולם הזה — שבעים שנות שלטון על כל העולם! זה ממחיש איזו
+עוצמה יש למעשה קטן שנעשה אך ורק מתוך אהבה טהורה.
+</div>
+<div class="love-box">
+<h4 data-a="01-246">חיבור לאהבת ה'</h4>
+<p data-a="01-247">
+כשאתם עוזרים בבית לא כדי לקבל דמי כיס, אלא פשוט כי אתם אוהבים ורוצים לשמח — זו הדרגה הכי מרגשת שיש. <strong>פעולה
+מעשית:</strong> תעשו היום מעשה אחד קטן בלי לחשוב "מה אני אקבל מזה" — רק מאהבה.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="idea-title">רעיון ב: "לא תנסו" — מי באמת מצליח בשבילנו</div>
+<p data-a="01-248"><span class="anchor-tag">עוגן:</span> "לֹא תְנַסּוּ אֶת ה' אֱלֹהֵיכֶם כַּאֲשֶׁר נִסִּיתֶם בַּמַּסָּה"</p>
+<p data-a="01-249">
+"מסה ומריבה" קשורים לחטא מי מריבה: הרמב"ן (בשם רבנו חננאל) מבאר שמשה ואהרן אמרו "המן הסלע הזה נוציא לכם מים" —
+לשון שעלולה להישמע כאילו הם עצמם מוציאים את המים בכוחם. ההבדל בין הכאה בסלע לדיבור אליו הוא מהותי: ההכאה נראית כאילו
+הצדיק קיבל כוח לפעול, ואילו הדיבור מראה שהוא רק צינור — וה' הוא הפועל היחיד.
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> ילד קטן נוסע במכונית פעצוצים עם הגה צעצוע שאינו מחובר לכלום. הוא מסובב את ההגה ובטוח שהוא
+מסיע את המכונית, בלי לשים לב שאבא עומד מאחור עם שלט רחוק ומכוון אותו באהבה. ההגה של ההצלחות שלנו נמצא תמיד בידי אבא שבשמים.
+</div>
+<div class="love-box">
+<h4 data-a="01-250">חיבור לאהבת ה'</h4>
+<p data-a="01-251">
+כשאתם מצליחים במבחן קשה או קולעים גול מדהים, קל להרגיש "וואו, איזה כוח יש לי". התורה מזהירה שלא "להכות בסלע" ולומר
+"אני עשיתי". <strong>פעולה מעשית:</strong> בפעם הבאה שתצליחו במשהו, אמרו תודה לה' לפני שאתם מתגאים בעצמכם.
+</p>
+</div>
+
+<p data-a="01-252" class="mini-box">
+<strong>עוגן: "אֶת ה' אֱלֹהֶיךָ" / "לֹא תֵלְכוּן אַחֲרֵי אֱלֹהִים אֲחֵרִים"</strong> — פנייה בלשון יחיד, פנייה ישירה
+בלי מתווכים — הדים ליסודות שהרחבנו בהם בתחנות 8 ו-26.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-253" id="s29">29. שָׁמוֹר תִּשְׁמְרוּן — הישר והטוב</h2>
+<p data-a="01-254" class="perek-ref">דברים ו, יז–כא</p>
+<div class="verse-box">
+שָׁמוֹר תִּשְׁמְרוּן אֶת מִצְוֺת יְהוָה אֱלֹהֵיכֶם וְעֵדֹתָיו וְחֻקָּיו אֲשֶׁר צִוָּךְ. <span class="emphasis">וְעָשִׂיתָ הַיָּשָׁר וְהַטּוֹב בְּעֵינֵי יְהוָה</span> לְמַעַן יִיטַב לָךְ וּבָאתָ וְיָרַשְׁתָּ אֶת הָאָרֶץ הַטֹּבָה אֲשֶׁר נִשְׁבַּע יְהוָה לַאֲבֹתֶיךָ. לַהֲדֹף אֶת כָּל אֹיְבֶיךָ מִפָּנֶיךָ כַּאֲשֶׁר דִּבֶּר יְהוָה. כִּי יִשְׁאָלְךָ בִנְךָ מָחָר לֵאמֹר מָה הָעֵדֹת וְהַחֻקִּים וְהַמִּשְׁפָּטִים אֲשֶׁר צִוָּה יְהוָה אֱלֹהֵינוּ אֶתְכֶם. וְאָמַרְתָּ לְבִנְךָ <span class="emphasis">עֲבָדִים הָיִינוּ לְפַרְעֹה בְּמִצְרָיִם וַיּוֹצִיאֵנוּ יְהוָה מִמִּצְרַיִם בְּיָד חֲזָקָה</span>.
+</div>
+
+<div class="idea-title">רעיון: "ספר הישר" — לחיות בלי חשבונות</div>
+<p data-a="01-255"><span class="anchor-tag">עוגן:</span> "וְעָשִׂיתָ הַיָּשָׁר וְהַטּוֹב בְּעֵינֵי ה'"</p>
+<p data-a="01-256">
+חומש דברים נקרא במסכת עבודה זרה "ספר הישר" — על שם פסוק זה, המהווה מעין מפתח לכל התורה. הרמב"ן מסביר שזהו ציווי
+לנהוג "לפנים משורת הדין": התורה לא יכלה לפרט כל מצב אפשרי, ולכן נתנה כלל — תיישר את מידותיך ותעשה את הטוב. הרמב"ם
+מגדיר אדם נעלה כמי שפרק מעליו "חשבונות רבים" והולך "ישר כמו שעשהו האלוקים" (על פי קהלת: "האלוקים עשה את האדם ישר
+והמה בקשו חשבונות רבים"). קנאה, תחרות וכבוד הם ה"חשבונות" שמרחיקים אותנו מהשמחה הטבעית.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> שאל הרב מבריסק: מדוע ילדים קטנים שמחים ומאושרים כמעט תמיד, ולעומתם למבוגרים אין שמחת
+חיים כזו? ענו לו: "לילדים אין דאגות פרנסה". דחה הרב מבריסק תשובה זו — הרי גם מבוגרים עשירים ומסודרים אינם שמחים
+כמו ילדים! ההסבר: ה' ברא את האדם ישר ושמח. רק כשהוא גדל ומתחיל בחשבונות של קנאה ותחרות ("למה לזה יש ולי אין") — הוא
+מאבד את שמחת החיים הטהורה שלו.
+</div>
+<div class="love-box">
+<h4 data-a="01-257">חיבור לאהבת ה'</h4>
+<p data-a="01-258">
+ה' ברא אתכם כדי שתהיו שמחים וישרים. כשאתם לא מקנאים ולא בודקים "מי קיבל יותר", הלב נשאר נקי ומאושר. <strong>פעולה
+מעשית:</strong> היום, כשתרגישו קנאה קטנה עולה בלב — עצרו רגע ותזכרו: זה בדיוק ה"חשבון" שגונב לכם את השמחה שה' רצה שתהיה לכם.
+</p>
+</div>
+
+<p data-a="01-259" class="mini-box">
+<strong>עוגן: "עֲבָדִים הָיִינוּ לְפַרְעֹה... בְּיָד חֲזָקָה"</strong> — כשהילד שואל "מה העדות והחוקים", התשובה אינה
+רק שיעור היסטוריה — היא סיפור ה"כור הברזל" שהרחבנו בו בתחנה 8: ה' התיך אותנו מחדש במצרים כדי שנהיה עם המונהג ישירות
+על ידו, מעל לחוקי הטבע.
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-260" id="s30">30. וַיִּתֵּן ה' אוֹתֹת — וצדקה תהיה לנו</h2>
+<p data-a="01-261" class="perek-ref">דברים ו, כב–כה</p>
+<div class="verse-box">
+וַיִּתֵּן יְהוָה אוֹתֹת וּמֹפְתִים גְּדֹלִים וְרָעִים בְּמִצְרַיִם בְּפַרְעֹה וּבְכָל בֵּיתוֹ לְעֵינֵינוּ. וְאוֹתָנוּ הוֹצִיא מִשָּׁם לְמַעַן הָבִיא אֹתָנוּ לָתֶת לָנוּ אֶת הָאָרֶץ אֲשֶׁר נִשְׁבַּע לַאֲבֹתֵינוּ. <span class="emphasis">וַיְצַוֵּנוּ יְהוָה לַעֲשׂוֹת אֶת כָּל הַחֻקִּים הָאֵלֶּה</span> לְיִרְאָה אֶת יְהוָה אֱלֹהֵינוּ לְטוֹב לָנוּ כָּל הַיָּמִים לְחַיֹּתֵנוּ כְּהַיּוֹם הַזֶּה. <span class="emphasis">וּצְדָקָה תִּהְיֶה לָּנוּ כִּי נִשְׁמֹר לַעֲשׂוֹת אֶת כָּל הַמִּצְוָה הַזֹּאת</span> לִפְנֵי יְהוָה אֱלֹהֵינוּ כַּאֲשֶׁר צִוָּנוּ.
+</div>
+
+<div class="idea-title">רעיון: מצווה אחת "נטו" — מפתח לחיי נצח</div>
+<p data-a="01-262"><span class="anchor-tag">עוגן:</span> "וּצְדָקָה תִּהְיֶה לָּנוּ כִּי נִשְׁמֹר לַעֲשׂוֹת אֶת כָּל הַמִּצְוָה הַזֹּאת... כַּאֲשֶׁר צִוָּנוּ"</p>
+<p data-a="01-263">
+שימו לב ללשון היחיד: "כל <em>המצווה הזאת</em>", ולא "מצוות". הרמב"ם (בפירוש המשנה, סוף מסכת מכות) מבאר שמתוך תרי"ג
+מצוות לאורך שנות חיים ארוכות, המטרה היא שיזדמן לאדם בחייו לקיים לפחות <span class="emphasis">מצווה אחת בשלמות</span> —
+"לשמה מאהבה", בלי שום פנייה של שכר בעולם הזה או בעולם הבא, נטו לכבוד ה'. מצווה אחת כזו היא כבר מפתח לחיי נצח — כפי
+שראינו בסיפור נבוכדנצר בתחנה הקודמת (תחנה 28): שלוש פסיעות למען כבוד ה' בלבד הביאו שכר של שבעים שנות מלכות.
+</p>
+<div class="love-box">
+<h4 data-a="01-264">חיבור לאהבת ה'</h4>
+<p data-a="01-265">
+לא צריך לקיים את כל תרי"ג המצוות בשלמות מוחלטת כדי לזכות בעולם הבא — מספיקה מצווה אחת קטנה, שנעשית באמת לשם ה' בלבד,
+בלי לחשוב על שום פרס. <strong>פעולה מעשית:</strong> תבחרו היום מעשה טוב קטן אחד, ותנסו לעשות אותו "נטו" — רק כי אתם
+אוהבים את ה', בלי לספר לאף אחד.
+</p>
+</div>
+
+<p data-a="01-266" class="mini-box">
+<strong>עוגן: "וַיְצַוֵּנוּ ה' לַעֲשׂוֹת... כְּהַיּוֹם הַזֶּה"</strong> — עוד הד ל"פנייה אישית עכשיו" (תחנה 26); ו"לַעֲשׂוֹת"
+מהדהד את יסוד "לעשות, לא רק להצליח" שהרחבנו בו בתחנה 15 (הסטייפלר על אברהם אבינו, "אני פועל של ה', לא קבלן").
+</p>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-267" id="s31">31. כִּי יְבִיאֲךָ — לא תחנם, רבים ועצומים</h2>
+<p data-a="01-268" class="perek-ref">דברים ז, א–ג</p>
+<div class="verse-box">
+כִּי יְבִיאֲךָ יְהוָה אֱלֹהֶיךָ אֶל הָאָרֶץ אֲשֶׁר אַתָּה בָא שָׁמָּה לְרִשְׁתָּהּ וְנָשַׁל גּוֹיִם רַבִּים מִפָּנֶיךָ הַחִתִּי וְהַגִּרְגָּשִׁי וְהָאֱמֹרִי וְהַכְּנַעֲנִי וְהַפְּרִזִּי וְהַחִוִּי וְהַיְבוּסִי שִׁבְעָה גוֹיִם <span class="emphasis">רַבִּים וַעֲצוּמִים מִמֶּךָּ</span>. וּנְתָנָם יְהוָה אֱלֹהֶיךָ לְפָנֶיךָ וְהִכִּיתָם הַחֲרֵם תַּחֲרִים אֹתָם לֹא תִכְרֹת לָהֶם בְּרִית <span class="emphasis">וְלֹא תְחָנֵּם</span>. וְלֹא תִתְחַתֵּן בָּם.
+</div>
+
+<div class="idea-title">רעיון א: לנקות עד הפירור האחרון — בלי "הסכמי שלום" עם הרע</div>
+<p data-a="01-269"><span class="anchor-tag">עוגן:</span> "הַחֲרֵם תַּחֲרִים אֹתָם לֹא תִכְרֹת לָהֶם בְּרִית"</p>
+<p data-a="01-270">
+הרב אלישיב זצ"ל מבאר שההוראה להכרית לחלוטין את שבעת העממים אינה רק מלחמה פיזית, אלא ציווי להכניע את כוח הרע והטומאה
+בצורה המוחלטת ביותר — "לשים רגליים על צווארי המלכים", בלי להשאיר שום קשר או פשרה איתם. ככל שמבטלים את הרע לגמרי, בלי
+פשרות, כך מאירה הקדושה יותר.
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> כשמנקים חדר מבוץ ולכלוך, לא משאירים ערימה קטנה בפינה ואומרים "בואו נעשה שלום עם הלכלוך הזה" —
+מנקים עד הפירור האחרון, כדי שהחדר יהיה נקי ונוצץ.
+</div>
+<div class="love-box">
+<h4 data-a="01-271">חיבור לאהבת ה'</h4>
+<p data-a="01-272">
+לפעמים היצר הרע אומר לנו: "בואו נעשה פשרה, רק קצת מותר". התורה מלמדת: עם הרגלים לא טובים לא עושים "הסכמי שלום" חלקיים.
+<strong>פעולה מעשית:</strong> חשבו על הרגל קטן שהייתם רוצים לשפר — ונסו היום "לנקות" אותו לגמרי, ולא רק "קצת פחות".
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="idea-title">רעיון ב: "לא תחנם" — לא ליתן חן לתרבות זרה</div>
+<p data-a="01-273"><span class="anchor-tag">עוגן:</span> "וְלֹא תְחָנֵּם"</p>
+<p data-a="01-274">
+כפי שראינו לגבי "חלק ה'" (תחנה 8), לכל אומה יש שר או מזל שהשפע עובר דרכו, בעוד עם ישראל מונהג ישירות על ידי הקב"ה.
+לכן, "לא תחנם" — אל תמצאו חן בעיני עצמכם בתרבות של אומות העולם: היופי האמיתי שלנו הוא בתורה ובמצוות, לא בברק החיצוני
+שמסביב.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> תרגום יונתן בן עוזיאל מתאר שכאשר 12,000 חיילי משה יצאו למלחמה מול מדין, קישטו המדיינים
+את בנותיהם בתכשיטי זהב כדי להכשיל את חיילי ישראל. אך חיילי ישראל, אנשי קודש, לא נתנו "חן" לשום דבר שם, ולא הפנו מבט
+אפילו לרגע — כי ידעו שקדושתם יפה הרבה יותר מכל תכשיט נוצץ.
+</div>
+<div class="love-box">
+<h4 data-a="01-275">חיבור לאהבת ה'</h4>
+<p data-a="01-276">
+כשמשהו בעולם מנסה "למשוך את העין" בברק חיצוני, זכרו: היופי האמיתי שלכם נמצא בתורה, בשבת ובמצוות. <strong>פעולה
+מעשית:</strong> בפעם שמשהו נוצץ ינסה לפתות אתכם, עצרו רגע ותחשבו על יופי פנימי אחר, אמיתי יותר, שיש לכם.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="idea-title">רעיון ג: "רבים ועצומים ממך" — ניצחון מעל הטבע</div>
+<p data-a="01-277"><span class="anchor-tag">עוגן:</span> "רַבִּים וַעֲצוּמִים מִמֶּךָּ"</p>
+<p data-a="01-278">
+הפסוק מדגיש שהגויים היו "רבים ועצומים" — בדרך הטבע, לעם ישראל מעולם לא היה סיכוי לנצח מולם. יצירתו וקיומו של עם
+ישראל הם מעל לטבע ולמזלות. כפי שאברהם ושרה, שהיו עקרים לחלוטין, לא יכלו להוליד לפי הביולוגיה, כך עם ישראל כלל אינו
+אמור להתקיים לפי חוקי הטבע והכוכבים — הניצחון שלו הוא נס מוחלט מעל הטבע.
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> "אזרח בלתי חוקי" במדינה — בלי תעודת זהות, לא רשום, לא יכול לקבל שירות — לפי החוקים הוא בעצם
+"לא קיים". כך עם ישראל, בתוך מערכת "החוקים" של העולם והכוכבים, הוא כביכול "אזרח בלתי חוקי" שלא אמור לשרוד. הסיבה
+היחידה שאנחנו כאן, מאושרים ומנצחים, היא שמלך העולם הולך איתנו ונושא אותנו על כפיים.
+</div>
+<div class="love-box">
+<h4 data-a="01-279">חיבור לאהבת ה'</h4>
+<p data-a="01-280">
+כשמרגישים "קטנים מדי" מול קושי שנראה "רב ועצום" — כמו מבחן קשה, או פחד גדול — זכרו שהניצחון שלנו כעם אף פעם לא היה
+לפי חוקי הטבע. <strong>פעולה מעשית:</strong> בפעם הבאה שתרגישו "קטנים מול משהו גדול", תזכרו את סיפור עם ישראל — ותבקשו
+מה' עזרה מעל הטבע.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-281" id="s32">32. כִּי יָסִיר אֶת בִּנְךָ — עם סגולה, כתר מלכות</h2>
+<p data-a="01-282" class="perek-ref">דברים ז, ד–ז</p>
+<div class="verse-box">
+כִּי יָסִיר אֶת בִּנְךָ מֵאַחֲרַי וְעָבְדוּ אֱלֹהִים אֲחֵרִים וְחָרָה אַף יְהוָה בָּכֶם וְהִשְׁמִידְךָ מַהֵר. כִּי אִם כֹּה תַעֲשׂוּ לָהֶם <span class="emphasis">מִזְבְּחֹתֵיהֶם תִּתֹּצוּ וּמַצֵּבֹתָם תְּשַׁבֵּרוּ</span> וַאֲשֵׁירֵהֶם תְּגַדֵּעוּן וּפְסִילֵיהֶם תִּשְׂרְפוּן בָּאֵשׁ. כִּי עַם קָדוֹשׁ אַתָּה לַיהוָה אֱלֹהֶיךָ <span class="emphasis">בְּךָ בָּחַר יְהוָה אֱלֹהֶיךָ לִהְיוֹת לוֹ לְעַם סְגֻלָּה</span> מִכֹּל הָעַמִּים אֲשֶׁר עַל פְּנֵי הָאֲדָמָה. לֹא מֵרֻבְּכֶם מִכָּל הָעַמִּים חָשַׁק יְהוָה בָּכֶם וַיִּבְחַר בָּכֶם כִּי אַתֶּם הַמְעַט מִכָּל הָעַמִּים.
+</div>
+
+<div class="idea-title">רעיון א: "עם סגולה" — אין מזל לישראל</div>
+<p data-a="01-283"><span class="anchor-tag">עוגן:</span> "לִהְיוֹת לוֹ לְעַם סְגֻלָּה מִכֹּל הָעַמִּים"</p>
+<p data-a="01-284">
+כפי שהרחבנו בתחנה 8, כל אומות העולם מונהגות באמצעות שרים, כוכבים ומזלות — צינורות שהשפע עובר דרכם. עם ישראל, לעומת
+זאת, הוא "חלק ה'" — "אין מזל לישראל" — ומונהג ומושגח ישירות על ידי הקב"ה עצמו. המילה "סגולה" כאן אינה רק "אהוב" אלא
+ממש שייכות ישירה, בלי שום מתווך בדרך.
+</p>
+<div class="love-box">
+<h4 data-a="01-285">חיבור לאהבת ה'</h4>
+<p data-a="01-286">
+לשום עם אחר בעולם אין את הזכות הזו — קשר ישיר, בלי מזל ובלי מתווך. אנחנו הילדים שה' בעצמו מטפל בהם, לא מעביר לטיפול
+של אף אחד אחר. <strong>פעולה מעשית:</strong> הזכירו לעצמכם היום פעם אחת: "אני חלק ישיר של ה', לא רק עוד ילד בעולם".
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<p data-a="01-287" class="mini-box">
+<strong>עוגן: "בְּךָ בָּחַר ה'"</strong> — כמו שהרחבנו בתחנה 26, "בך" בלשון יחיד מלמד שה' בוחר בכם אישית בכל מצווה, לא
+רק כחלק מעם שלם. תחשבו: מיליוני יהודים מברכים באותו רגע — אבל "בך בחר ה'" מלמד שהברכה שלכם, ממש שלכם, חשובה לו אישית.
+</p>
+
+<div class="idea-title">רעיון ב: הפיכת הרע לכתר מלכות</div>
+<p data-a="01-288"><span class="anchor-tag">עוגן:</span> "מִזְבְּחֹתֵיהֶם תִּתֹּצוּ וּמַצֵּבֹתָם תְּשַׁבֵּרוּ"</p>
+<p data-a="01-289">
+כפי שראינו בתחנה 16 לגבי כתר מלכות בית דוד — שנוצר מזהב עבודה זרה שבוטלה והפכה לקדושה — גם כאן ההריסה איננה סוף
+הסיפור, אלא תחילת בניית קדושה חדשה במקום שהיה טמא. הניצחון האמיתי אינו רק בסילוק הרע, אלא בלקיחת מקומו ובנייה עליו
+של דבר קדוש.
+</p>
+<div class="love-box">
+<h4 data-a="01-290">חיבור לאהבת ה'</h4>
+<p data-a="01-291">
+כשאתם מפסיקים הרגל לא טוב, נסו למלא את המקום שהתפנה במשהו טוב וקדוש — לא להשאיר חלל ריק. <strong>פעולה מעשית:</strong>
+במקום הרגל אחד שהחלטתם להיפטר ממנו, בחרו הרגל טוב חדש שייכנס למקומו.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-292" id="s33">33. כִּי מֵאַהֲבַת ה' — האל הנאמן</h2>
+<p data-a="01-293" class="perek-ref">דברים ז, ח–י</p>
+<div class="verse-box">
+כִּי מֵאַהֲבַת יְהוָה אֶתְכֶם וּמִשָּׁמְרוֹ אֶת הַשְּׁבֻעָה אֲשֶׁר נִשְׁבַּע לַאֲבֹתֵיכֶם הוֹצִיא יְהוָה אֶתְכֶם בְּיָד חֲזָקָה וַיִּפְדְּךָ מִבֵּית עֲבָדִים מִיַּד פַּרְעֹה מֶלֶךְ מִצְרָיִם. וְיָדַעְתָּ כִּי יְהוָה אֱלֹהֶיךָ הוּא הָאֱלֹהִים <span class="emphasis">הָאֵל הַנֶּאֱמָן שֹׁמֵר הַבְּרִית וְהַחֶסֶד לְאֹהֲבָיו וּלְשֹׁמְרֵי מִצְוֺתָיו</span> לְאֶלֶף דּוֹר. <span class="emphasis">וּמְשַׁלֵּם לְשֹׂנְאָיו אֶל פָּנָיו</span> לְהַאֲבִידוֹ לֹא יְאַחֵר לְשֹׂנְאוֹ אֶל פָּנָיו יְשַׁלֶּם לוֹ.
+</div>
+
+<div class="idea-title">רעיון א: למה רשעים מקבלים שכר בעולם הזה</div>
+<p data-a="01-294"><span class="anchor-tag">עוגן:</span> "וּמְשַׁלֵּם לְשֹׂנְאָיו אֶל פָּנָיו"</p>
+<p data-a="01-295">
+החפץ חיים נשאל: מדוע נבוכדנצר, שרץ שלוש פסיעות לכבוד ה' (כפי שראינו בתחנה 28), קיבל שכר עצום של שבעים שנות שלטון —
+בעוד יהודים המקיימים מצוות רבות אינם זוכים לשכר כזה בעולם הזה? התשובה: מי שעושה מצווה אך ורק לעשות נחת רוח לה', בלי
+שום פנייה של שכר — אין בכלל מציאות לשלם לו כאן, כי השכר האינסופי מחכה לו בעולם הבא. נבוכדנצר, שהיה רשע חסר עולם הבא,
+"נאלץ" לקבל את שכרו כאן. בנוסף, ה' משלם לאדם ב"מטבע" שהוא מעריך — מי שמעריך את העולם הזה, מקבל שכרו בו.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> חסיד עני בכה לפני רבו שאין לו כסף לחתן את בנותיו. הרבי נתן לו רובל אחד, וביקש שאת העסקה
+הראשונה שיציעו לו בדרך — יעשה. בדרך פגש "משכיל" שלעג לדתו ואמר בזלזול: "אתה מאמין בעולם הבא? תמכור לי אותו ברובל!".
+החסיד מכר לו, בשטר חתום. כשהמשכיל סיפר בשמחה לאשתו איך "צחק" על החסיד, נבהלה אשתו: "אם אין לך עולם הבא, אני לא נשארת
+איתך! לך תבטל את זה!". המשכיל חזר, אך החסיד דרש כעת 800 רובל — וכך שילם. שאל החסיד את רבו: "האם העולם הבא של אותו
+משכיל באמת שווה 800 רובל?" ענה הרבי: "כשהוא זלזל ומכר אותו ברובל אחד — זה כל מה שהיה שווה. אבל כשהוא בכה והיה מוכן
+לשלם 800 רובל — זה נהיה שווה מיליארדים!".
+</div>
+<div class="love-box">
+<h4 data-a="01-296">חיבור לאהבת ה'</h4>
+<p data-a="01-297">
+כפי שאנחנו מעריכים את המצוות והעולם הבא, כך בדיוק הם שווים בשמים. כשאתם עושים מצווה בלי לחשוב "מה אני מרוויח פה
+בעולם הזה", היא שווה מיליארדים בשמים. <strong>פעולה מעשית:</strong> עשו מצווה אחת היום מתוך מחשבה: "אני עושה את זה
+כי אני אוהב את ה', והוא אבא שלי" — לא בשביל שום פרס.
+</p>
+</div>
+
+<p data-a="01-298" class="mini-box">
+<strong>עוגן: "וּלְשֹׁמְרֵי מִצְוֺתָיו"</strong> — עוד הד ליסוד "היחיד המיוחד" שהרחבנו בתחנה 26: מי ששומר מצוות מתוך
+תודעה שהוא היחיד המצווה, ושהיא ניתנת לו היום, מקיים אותה במסירות עצומה.
+</p>
+
+<div class="section-divider"></div>
+
+<div class="idea-title">רעיון ב: רועה נאמן שנושא אותנו בזרועו</div>
+<p data-a="01-299"><span class="anchor-tag">עוגן:</span> "הָאֵל הַנֶּאֱמָן שֹׁמֵר הַבְּרִית וְהַחֶסֶד"</p>
+<div class="quote-box">
+"כְּרֹעֶה עֶדְרוֹ יִרְעֶה בִּזְרֹעוֹ יְקַבֵּץ טְלָאִים וּבְחֵיקוֹ יִשָּׂא" <span class="source-tag">ישעיהו מ, יא</span>
+</div>
+<p data-a="01-300">
+הנביא ישעיהו מתאר את הגאולה: הקב"ה נוהג בבעלי תשובה ובמי שמחפש את האמת ממש כרועה הנושא את הטלה הקטן והעייף על ידיו.
+כל יהודי שמחפש באמת את ה', רואה כיצד "האל הנאמן" מוביל אותו צעד אחר צעד, מראה לו השגחה פרטית מפעימה, ואינו עוזב אותו.
+</p>
+<div class="story-box">
+<strong>סיפור המחשה:</strong> בתחילת תנועת התשובה בישיבת "אור שמח" למד בחור, קיבוצניק לשעבר, שהתקשה מאוד להאמין שחז"ל
+יכולים לקבוע בוודאות שעורבים אוכלים כל פירור מחצר. הוא נכנס למשבר אמונה קשה, ישב מתוסכל במרפסת ליד כיכר לחם, והתחנן
+לה' בלב קרוע שיראה לו את האמת. פתאום נחתה להקת עורבים ותוך רגעים חיסלה את כל הכיכר עד הפירור האחרון! "האל הנאמן" הראה
+לו מיד שהוא שומע ואוחז בו. (שנים אחר כך, תלמיד אחר באותה ישיבה שנכנס למשבר חלם על אותה להקת עורבים בליל תשעה באב —
+ולמחרת הרב דיסקין הגיע וסיפר בדיוק את הסיפור הזה, מבלי לדעת על החלום. הבחור הבין שקיבל מסר אישי מה', נשאר בישיבה,
+והפך למקרב יהודים רבים.)
+</div>
+<div class="love-box">
+<h4 data-a="01-301">חיבור לאהבת ה'</h4>
+<p data-a="01-302">
+כשקשה לכם להיות טובים, ללמוד, או להתגבר על יצר — ה' לא משאיר אתכם לבד. הוא לוקח אתכם על הידיים כמו רועה שנושא טלה
+עייף, ונותן "קריצות" קטנות משמים כדי להראות: "אני כאן איתך". <strong>פעולה מעשית:</strong> בפעם שתרגישו שקשה לכם עם
+משהו רוחני, בקשו מה' בכנות עזרה — ושימו לב ל"קריצות" הקטנות שיגיעו.
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<h2 data-a="01-303" id="s34">34. וְשָׁמַרְתָּ אֶת הַמִּצְוָה — סיכום: לעשותם על אמתתם</h2>
+<p data-a="01-304" class="perek-ref">דברים ז, יא</p>
+<div class="verse-box">
+<span class="emphasis">וְשָׁמַרְתָּ אֶת הַמִּצְוָה וְאֶת הַחֻקִּים וְאֶת הַמִּשְׁפָּטִים</span> אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם <span class="emphasis">לַעֲשׂוֹתָם</span>.
+</div>
+
+<div class="idea-title">רעיון: לשמור בדיוק — "על אמתתם", כמו חייל בעמדתו</div>
+<p data-a="01-305"><span class="anchor-tag">עוגן:</span> "וְשָׁמַרְתָּ אֶת הַמִּצְוָה וְאֶת הַחֻקִּים וְאֶת הַמִּשְׁפָּטִים"</p>
+<p data-a="01-306">
+פרשת ואתחנן, שהחלה בתחנונו האישיים של משה, מסתיימת בפסוק תמציתי זה — כמו חתימה על כל המסע שעברנו. כפי שראינו כבר
+בכמה תחנות (4, 17, 24), רש"י מלמד שאומות העולם יכירו בחכמת ישראל רק "כשתעשום על אמיתתם" — כאשר נשמור את המצוות בדיוק
+כפי שנמסרו, בלי תוספות ובלי גריעות. כאן, בסוף הפרשה, מתכנס כל הרעיון הזה למילה אחת: "לַעֲשׂוֹתָם" — לא לפרש, לא לשפר,
+לא להמציא — פשוט לעשות, בנאמנות מלאה.
+</p>
+<div class="story-box">
+<strong>דימוי:</strong> חייל שקיבל פקודה מפורשת מהרמטכ"ל לשמור בעמדה מסוימת בלילה, ומחליט ש"יותר נחמד ומרגש" לשמור
+מהגבעה השנייה כי יש משם נוף יפה יותר — במקום להיות חייל מצטיין, הוא מסכן את כולם. החייל הכי חכם והכי אוהב את מדינתו
+הוא זה שעומד בדיוק, אבל בדיוק, בנקודה שהעמידו אותו, ושומר על הכללים בלי לשנות פסיק. כך אנחנו — "חיילי" הקב"ה — שומרים
+את המצוות בדיוק כפי שנכתבו.
+<p></p>
+</div>
+<div class="love-box">
+<h4 data-a="01-307">חיבור לאהבת ה'</h4>
+<p data-a="01-308">
+המסע שלנו לאורך כל פרשת ואתחנן — מתחינת משה ועד כאן — גילה שוב ושוב אותה אמת אחת: אין לנו מתווכים, יש לנו קשר ישיר
+עם ה', וכל מצווה שאנחנו מקיימים היא פנייה אישית שהוא פונה בה אלינו, היום ממש. הדרך לשמור על הקשר הזה חי ובוער היא
+לא "להמציא" אהבה חדשה בכל פעם, אלא לעשות בדיוק את מה שהתבקשנו — באמונה, בשמחה, ובנאמנות של חייל שאוהב את מלכו.
+<strong>פעולה מעשית לסיום המסע:</strong> בחרו הערב מצווה אחת קטנה וקבועה שאתם עושים כל יום, ועשו אותה הלילה בדיוק,
+במלואה, מתוך מחשבה: "זו הפנייה האישית של ה' אליי, היום".
+</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="closing-box">
+<h3 data-a="01-309">🕊️ סיכום המסע: מסע אחד, קול אחד</h3>
+<p data-a="01-310">
+פרשת ואתחנן פותחת בתחינה אישית של משה רבנו ומסתיימת בציווי "לעשותם" — ובין שתי הנקודות הללו עברנו מסע של שלושים
+וארבע תחנות, שבו אותו קול אחד חוזר שוב ושוב בלבושים שונים: <span class="emphasis">אין לנו שום מתווך בינינו לבין ה'</span> —
+לא כוכב, לא מזל, ואפילו לא משה רבנו עצמו. אנחנו, כל אחד ואחת מאיתנו, זוכים לקשר ישיר, קרוב, "פנים בפנים" ו"כמפה
+לאוזן", עם מלך מלכי המלכים. וכל מצווה שאנחנו מקיימים — קטנה כגדולה — היא לא "עוד חוק ישן", אלא בקשה אישית וטרייה
+שה' פונה בה אלינו, היום ממש. זו התשובה האמיתית לשאלה איך שומרים על התלהבות ואהבה בקיום מצוות שנה אחר שנה: לא בהמצאת
+ריגושים חדשים, אלא בזכירה מתמדת שמי שמדבר אלינו הוא לא "מסורת", אלא אבא חי שאוהב אותנו ומחכה למצווה הבאה שלנו.
+</p>
+</div>
+
+<div class="sources">
+<h3>📚 מקורות ומראי מקומות</h3>
+<ol>
+<li>הרב חיים שמואלביץ זצ"ל — על עוצמת התפילה ("אל תוסף דבר אלי")</li>
+<li>מדרש תנחומא; האדמו"ר מזידיטשוב, "זכרון אלעזר" — "רב לך" כרמז לרות ובועז</li>
+<li>הספורנו, פרשת ויחי — כוח הראייה כיוצר חיבור וברכה</li>
+<li>הגאון רבי שלמה זלמן אוירבך זצ"ל — סיפור העין הטובה בביקור אצל הרב דינקל</li>
+<li>חז"ל — "מה אני בחינם אף אתם בחינם"; הגרי"ש אלישיב זצ"ל על שכר לימוד תורה</li>
+<li>ספר "דגל מחנה אפרים" — "אתם" ו"אמת", רמ"ח תיבות בקריאת שמע</li>
+<li>הגאון מווילנא, "אדרת אליהו" — בל תוסיף; ומדרש שיר השירים על נבוכדנצר והציץ</li>
+<li>הרב חיים שמואלביץ זצ"ל — חטא בעל פעור כ"פריצת מסגרות"</li>
+<li>גמרא שבת עה. — חכמת חישוב תקופות ומזלות; תלמוד ירושלמי ברכות פרק ט — קרבת ה' בתפילה</li>
+<li>המשך חכמה (רבי מאיר שמחה מדווינסק) — הסיבה שמשה לא נכנס לארץ</li>
+<li>הרב משה שפירא זצ"ל — מצרים כ"כור הברזל"</li>
+<li>הגאון מווילנא — אלילי עץ ואבן ומדרש נבוכדנצר והציץ</li>
+<li>הגאון מווילנא — "ובקשתם... ומצאת", תפילה שלמה (ראש השנה יח.)</li>
+<li>ר' שמשון מאוסטרופולי — "בגיא" כראשי תיבות; הרב אלישיב זצ"ל — כתר מלכות בית דוד</li>
+<li>רש"י — "מצווה שאפשר לקיימה אקיימנה"; רבי ישראל מסלנטר — "לעשות ולא להצליח"</li>
+<li>ה"סטייפלר" זצ"ל (רבי יעקב ישראל קניבסקי) — אברהם אבינו וסדום</li>
+<li>גמרא מכות י ע"א; פיוט "ברוך ה' יום יום" — שרו של אדום וערי המקלט</li>
+<li>הרב דיסקין — סיפורי "הרב מבריסק" (רבי יצחק זאב סולובייצ'יק) על הידור מצוות ההדסים במלחמת העולם השנייה</li>
+<li>החפץ חיים זצ"ל — חמש המניעות הפסיכולוגיות ו"אשר אנכי מצוך היום"; דין מצווה לשמה</li>
+<li>הרמב"ם, פירוש המשנה סוף מכות — מצווה אחת לשמה</li>
+<li>הרב דיסקין — סיפורים אישיים (הילד וכוס המים; שאלת הכספת בשבת)</li>
+<li>האר"י הקדוש — סיפור "לחם הפנים" של היהודי התמים; וסיפור רבי חיים ויטאל בכנרת</li>
+<li>הרמב"ן; הרמב"ם, סוף הלכות שמיטה ויובל — "ועשית הישר והטוב", "ישר כמו שעשהו האלוקים"</li>
+<li>הרב מבריסק (רבי יצחק זאב סולובייצ'יק) — שאלת שמחת הילדים</li>
+<li>תרגום יונתן בן עוזיאל — תכשיטי בנות מדין</li>
+<li>הרב אלישיב זצ"ל — החרם המוחלט על שבעת העממים</li>
+<li>ישעיהו מ, יא; סיפור ישיבת "אור שמח" והעורבים</li>
+<li>סיפור החסיד שמכר "עולם הבא" ברובל</li>
+</ol>
+</div>
+
+<div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+    <div style="margin-top: 20px; font-size: 0.9em; color: #6b7280;">
+        המאמר הוכן על בסיס שיעוריו התורניים של הרב אליהו דיסקין שליט"א על פרשת ואתחנן, ועובד ונערך למסע פסוקים רציף
+        להוראה בכיתה ו', תוך שילוב פרשנויות נוספות והרחבות.
+    </div>
+</div>
+
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('a[href^="#"]');
+  links.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var targetId = this.getAttribute('href').substring(1);
+      var target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  var scrollBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) {
+      scrollBtn.style.display = 'flex';
+    } else {
+      scrollBtn.style.display = 'none';
+    }
+  });
+});
+</script>
+
+<script>
+/* =============================================================================
+   קול תודה — מנוע הקראה למאמרים תורניים   |   tts.js   v2.0
+   -----------------------------------------------------------------------------
+   העתק את הקובץ הזה כמות שהוא לתוך תגית <script> בסוף ה-HTML.
+   אין לכתוב אותו מחדש, לקצר או "לשפר" תוך כדי יצירת מאמר — הוא נבדק כך.
+   Web Speech API בלבד: בלי API חיצוני, בלי מפתח, בלי רשת, בלי עלות.
+   ============================================================================= */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    var NS       = 'koltoda.tts.';
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false, noHeVoice = false;
+    var clickToRead = true;
+
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+    function readPos() { try { return parseInt(localStorage.getItem(POS_KEY) || '0', 10) || 0; } catch (e) { return 0; } }
+
+    var G = '["\\u05f4\\u201d\\u2033]';
+    var R = "['\\u05f3\\u2019]";
+
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' ');
+        t = t.replace(/־/g, ' ');
+        t = t.replace(/\s*[–—]\s*/g, ', ');
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function chapterLabel(h) {
+        var d = h.getAttribute && h.getAttribute('data-chapter');
+        if (d && d.trim()) return d.trim();
+        var p = h.previousElementSibling;
+        if (p && p.classList && p.classList.contains('chapter-label')) {
+            return p.textContent.replace(/\s+/g, ' ').trim();
+        }
+        return '';
+    }
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (n.closest(SKIP)) return;
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            if (n.tagName === 'H2') {
+                var lbl = chapterLabel(n);
+                if (lbl && raw.indexOf(lbl) !== 0) raw = lbl + '. ' + raw;
+            }
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    function hint() {
+        if (noHeVoice) {
+            return 'לא נמצא קול עברי במחשב — ההקראה תישמע משובשת. ' +
+                   'ב-Windows: הגדרות ← שעה ושפה ← דיבור ← נהל קולות ← הוסף קולות ← עברית.';
+        }
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = readPos();
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        var was = noHeVoice;
+        noHeVoice = !he.length;
+        if (noHeVoice !== was && !isOn) say(hint());
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;
+                if (e.target.closest('a')) return;
+                if (window.getSelection && String(window.getSelection()).length) return;
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    var FS_MIN = 0.85, FS_MAX = 1.75, FS_STEP = 0.15, fontScale = 1;
+
+    function applyFontScale() {
+        document.documentElement.style.setProperty('--fs', String(fontScale));
+        var out = document.getElementById('fontScaleValue');
+        if (out) out.textContent = Math.round(fontScale * 100) + '%';
+        var dec = document.getElementById('fontSmaller'), inc = document.getElementById('fontBigger');
+        if (dec) dec.disabled = fontScale <= FS_MIN + 0.001;
+        if (inc) inc.disabled = fontScale >= FS_MAX - 0.001;
+    }
+
+    window.setFontScale = function (dir) {
+        fontScale = Math.min(FS_MAX, Math.max(FS_MIN, +(fontScale + dir * FS_STEP).toFixed(2)));
+        store('fs', String(fontScale));
+        applyFontScale();
+    };
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var savedFs = parseFloat(store('fs') || '1');
+        if (savedFs >= FS_MIN && savedFs <= FS_MAX) fontScale = savedFs;
+        applyFontScale();
+        if (readPos() > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+<script data-audio-cues="" type="application/json">{"01":[0.1,3.03,6.49,43.31,48.75,52.06,55.4,103.89,106.25,138.69,141.03,166.88,169.24,195.08,224.71,227.04,258,263.2,267.83,270.65,298.28,300.59,318.96,321.56,344,346.3,368.9,388.54,393.37,396.98,402.52,422.19,424.52,448.18,473.43,476.44,501,503.33,528.69,532.98,552.98,555.29,573.13,578.42,582,586.27,610.77,613.08,632.84,658.32,663.1,681.24,683.54,704.47,708.64,712.08,716.62,745.47,747.79,768.51,790.5,811.31,814.71,818.16,821.81,851.08,853.4,872.97,899.32,903.97,907.33,911.12,943.38,945.87,965.46,985.29,1000.98,1005.42,1008.81,1015.42,1039.59,1041.91,1059.28,1062.46,1090.58,1092.91,1106.49,1121.34,1125.22,1128.49,1136.81,1173.05,1175.37,1194.92,1212.47,1216.82,1220.24,1225.01,1259.25,1261.61,1288.07,1302.21,1313.39,1317.49,1321.01,1326.84,1359.31,1361.64,1387.21,1412.73,1417.17,1420.77,1444.73,1447.04,1466.24,1484.48,1488.89,1492.31,1495.32,1523.97,1526.45,1544.49,1561.21,1566.6,1569.99,1573.41,1608.34,1610.66,1634.63,1651.73,1656.7,1660.18,1665.81,1706.63,1708.93,1730.09,1754.78,1759.62,1790.18,1792.5,1810.48,1814.83,1818.23,1821.25,1841.59,1843.92,1861.57,1865.69,1894.13,1896.44,1916.91,1936.42,1940.35,1943.86,1946.9,1964.71,1967.02,1983.32,2003.27,2008.93,2012.08,2034.32,2038.16,2060.92,2063.25,2084.53,2101.38,2118.61,2122.98,2126.38,2130.07,2150.43,2152.74,2169.23,2172.55,2196.33,2198.63,2225.38,2238.04,2241.93,2244.98,2253.11,2255.41,2273.77,2280.33,2302.59,2305.08,2323.4,2337.87,2342.3,2345.6,2348.71,2377.22,2379.58,2399.31,2411.86,2416.1,2419.27,2423.67,2444.72,2447.03,2468.1,2487.05,2491.61,2494.67,2501.21,2525.29,2527.6,2544.67,2561.85,2566.37,2569.49,2572.64,2591.71,2594.02,2621.11,2625.19,2629.29,2634.06,2655.72,2658.04,2676.25,2692.49,2698.1,2701.94,2704.44,2722.59,2727.09,2736.63,2763.26,2793.06,2795.37,2836.22,2838.82,2871.61,2873.93,2896.19,2900.76,2904.27,2907.41,2938.36,2940.67,2962.41,2967.92,2971.37,2974.01,2995.67,2997.99,3012.96,3017.41,3040.55,3042.86,3060.85,3072.37,3076.66,3080.01,3084.17,3118.92,3121.22,3140.95,3159.05,3163.46,3166.73,3173.95,3209.3,3211.62,3231.91,3250.3,3255.51,3259.16,3263.4,3284.24,3286.55,3305.89,3308.43,3328.83,3331.15,3349.45,3352.5,3377.27,3379.58,3398.67,3403.88,3407.59,3411.29,3434.53,3436.85,3456.89,3476.54,3480.89,3500.6,3502.9,3518.14,3522.44,3525.89,3529.23,3567.67,3569.98,3590.82,3603.67,3607.42,3626.55,3628.87,3652.4,3658.26,3660.81,3665.31,3700.67,3703,3742.46,3746.22]}</script><script data-audio-player="">
+/* =============================================================================
+   audio-player.js — נגן ההקלטה (MP3 שהופק מראש ב-edge-tts)
+   הדבק מילה במילה. נפרד לגמרי מ-tts.js (ההקראה החיה של הדפדפן).
+   ============================================================================= */
+(function () {
+    var box = document.querySelector('.audio-player');
+    if (!box) return;
+
+    var audio  = box.querySelector('audio');
+    var select = box.querySelector('.audio-chapter-select');
+    if (!audio || !select) return;
+
+    var KEY = 'koltoda.audio.ch.' + (document.title || '');
+
+    /* מפת תזמונים: { "01": [0, 3.2, 9.7, ...] } — זמן תחילת כל פסקה בקטע.
+       נוצרת ב-make-audio.mjs מקובצי ה-SRT של edge-tts. */
+    var CUES = {};
+    var tag = document.querySelector('script[data-audio-cues]');
+    if (tag) { try { CUES = JSON.parse(tag.textContent || '{}'); } catch (e) {} }
+
+    var seg = null;      // מזהה הקטע הפעיל, למשל "01"
+    var line = -1;       // אינדקס הפסקה המודגשת
+
+    /* ---------- הדגשה ---------- */
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+        line = -1;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+
+        /* בספר מתחלף — מדפדפים לעמוד של הפסקה, כמו בהקראה החיה */
+        var pg = el.closest ? el.closest('.page') : null;
+        if (pg && !pg.classList.contains('active') && window.bookGo) {
+            var pages = [].slice.call(document.querySelectorAll('#book .page'));
+            var i = pages.indexOf(pg);
+            if (i > -1) { window.bookGo(i); return; }
+        }
+
+        /* גוללים רק אם הפסקה מחוץ למסך, כדי לא לחטוף את הדף מהקורא */
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    /* איזו פסקה נאמרת עכשיו — האחרונה שזמן ההתחלה שלה כבר עבר */
+    function lineAt(starts, t) {
+        var lo = 0, hi = starts.length - 1, ans = 0;
+        while (lo <= hi) {
+            var mid = (lo + hi) >> 1;
+            if (starts[mid] <= t) { ans = mid; lo = mid + 1; } else { hi = mid - 1; }
+        }
+        return ans;
+    }
+
+    audio.addEventListener('timeupdate', function () {
+        var starts = CUES[seg];
+        if (!starts || !starts.length) return;
+        var i = lineAt(starts, audio.currentTime);
+        if (i === line) return;
+        line = i;
+        var el = document.querySelector('[data-a="' + seg + '-' + i + '"]');
+        if (el) highlight(el);
+    });
+
+    /* ---------- קבצים שנבחרו מהמחשב ----------
+       דפדפן לא יכול לקרוא נתיב מקומי מעצמו (תיקיית ההורדות חסומה לו), אבל
+       קובץ שהמשתמש בוחר בעצמו מותר. ממפים לפי שם הקובץ, כך שאפשר לבחור את
+       כל פרקי הספר בבת אחת. ההדגשה עובדת גם ככה — התזמונים כבר בדף. */
+    var picked = {};
+    var note   = box.querySelector('.audio-note');
+    var input  = box.querySelector('.audio-pick-input');
+    var pickBtn = box.querySelector('.audio-pick-btn');
+
+    function say(msg) { if (note) note.textContent = msg || ''; }
+
+    /* קישור הורדה שלא מולא עדיין מוסתר מהקורא — אין טעם ב"לחץ כאן" מת.
+       הבדיקה היא על ה-href עצמו, כך שברגע שמדביקים כתובת הוא מופיע לבד. */
+    var dl = box.querySelector('.audio-download');
+    if (dl && (dl.getAttribute('href') || '#') === '#') dl.style.display = 'none';
+
+    function baseName(u) {
+        try { u = decodeURIComponent(u); } catch (e) {}
+        return u.split('/').pop();
+    }
+
+    function srcFor(opt) {
+        return picked[baseName(opt.value)] || opt.value;
+    }
+
+    if (pickBtn && input) {
+        pickBtn.addEventListener('click', function () { input.click(); });
+        input.addEventListener('change', function () {
+            var files = [].slice.call(input.files || []);
+            if (!files.length) return;
+            var names = {};
+            for (var i = 0; i < select.options.length; i++) names[baseName(select.options[i].value)] = true;
+
+            var matched = 0, spare = [];
+            files.forEach(function (f) {
+                if (names[f.name]) { picked[f.name] = URL.createObjectURL(f); matched++; }
+                else spare.push(f);
+            });
+            /* קובץ יחיד בשם אחר — מניחים שהוא של הפרק המוצג */
+            if (!matched && spare.length === 1) {
+                picked[baseName(select.options[select.selectedIndex].value)] = URL.createObjectURL(spare[0]);
+                matched = 1;
+            }
+            say(matched ? 'נטענו ' + matched + ' קבצים מהמחשב.' : 'שמות הקבצים לא תואמים לפרקים.');
+            if (matched) load(select.selectedIndex, true);
+        });
+    }
+
+    /* הקובץ לא נמצא בנתיב היחסי — מכוונים להורדה ולבחירה ידנית */
+    audio.addEventListener('error', function () {
+        if (!audio.getAttribute('src')) return;
+        say('קובץ השמע לא נמצא לצד הדף. הורד אותו ואז בחר אותו כאן.');
+    });
+
+    /* ---------- ניווט בין פרקים ---------- */
+    function load(i, autoplay) {
+        var opt = select.options[i];
+        if (!opt) return;
+        select.selectedIndex = i;
+        seg = opt.getAttribute('data-seg');
+        clearHighlight();
+        audio.src = srcFor(opt);
+        try { localStorage.setItem(KEY, String(i)); } catch (e) {}
+        if (autoplay) {
+            var p = audio.play();
+            /* דפדפן שחוסם ניגון אוטומטי זורק — לא נשאיר Promise תלוי */
+            if (p && p.catch) p.catch(function () {});
+        }
+    }
+
+    select.addEventListener('change', function () { load(select.selectedIndex, true); });
+
+    /* סיום פרק — מנקה הדגשה וממשיך לבא אחריו מעצמו, כמו בהקראה החיה.
+       (השהיה לעומת זאת משאירה את ההדגשה — היא מסמנת איפה עצרנו.) */
+    audio.addEventListener('ended', function () {
+        clearHighlight();
+        if (select.selectedIndex < select.options.length - 1) {
+            load(select.selectedIndex + 1, true);
+        } else {
+            try { localStorage.removeItem(KEY); } catch (e) {}
+        }
+    });
+
+    /* חוזרים לפרק שבו עצרנו — בלי לנגן מעצמו */
+    var saved = 0;
+    try { saved = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (e) {}
+    if (saved < 0 || saved >= select.options.length) saved = 0;
+    load(saved, false);
+})();
+
+</script></body>
+</html>
