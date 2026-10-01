@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="torah-html-article 2.7.0">
+<title>קריאת שמע – עיון ועומק בפשט ובמפרשים</title>
+<style>
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #1f2937;
+    line-height: 1.8;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffdfb;
+    padding: 60px 80px;
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    position: relative;
+}
+.main-title {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+.subtitle {
+    text-align: center;
+    font-size: 1.3em;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+.author {
+    text-align: center;
+    font-size: 1.1em;
+    color: #9333ea;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+h2 {
+    font-size: 2.2em;
+    color: #7e22ce;
+    border-right: 6px solid #7e22ce;
+    padding-right: 20px;
+    margin-top: 55px;
+    margin-bottom: 20px;
+}
+h3 {
+    font-size: 1.6em;
+    color: #2563eb;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+h4 {
+    font-size: 1.3em;
+    color: #059669;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+p, li {
+    font-size: 1.12em;
+    line-height: 1.85;
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+.emphasis { color: #7e22ce; font-weight: 700; }
+em { color: #2563eb; font-style: italic; }
+strong { font-weight: 700; }
+
+.verse-box {
+    background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    border-right: 6px solid #7e22ce;
+    border-radius: 10px;
+    padding: 28px 30px;
+    margin: 25px 0;
+    font-size: 1.25em;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.highlight-box {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    border-right: 6px solid #2563eb;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-right: 6px solid #f59e0b;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    font-style: italic;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box .source-tag {
+    display: block;
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: 700;
+    color: #b45309;
+}
+.story-box {
+    background: linear-gradient(135deg, #d1fae5 0%, #ecfccb 100%);
+    border-right: 6px solid #059669;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.qa-box {
+    background: #fdf2f8;
+    border: 2px dashed #ec4899;
+    border-radius: 10px;
+    padding: 22px 28px;
+    margin: 25px 0;
+}
+.qa-box .q { color: #be185d; font-weight: 700; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+
+.section-divider {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 45px 0;
+    box-shadow: 0 5px 15px rgba(126,34,206,0.15);
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 25px 0;
+}
+.col-purple, .col-gold {
+    border-radius: 10px;
+    padding: 22px;
+}
+.col-purple { background: #f3e8ff; border-right: 5px solid #7e22ce; }
+.col-gold { background: #fef3c7; border-right: 5px solid #f59e0b; }
+@media (max-width: 768px) {
+    .two-columns { grid-template-columns: 1fr; }
+    .container { padding: 30px 20px; }
+    .main-title { font-size: 2.1em; }
+    h2 { font-size: 1.6em; }
+}
+
+.toc {
+    background: #f3e8ff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 30px 0 45px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.toc h3 { margin-top: 0; color: #7e22ce; }
+.toc ul { list-style: none; padding-right: 10px; margin: 0; }
+.toc li { margin-bottom: 10px; font-size: 1.05em; }
+.toc a { color: #4a0080; text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+.sources {
+    background: #f3f4f6;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin-top: 50px;
+    font-size: 0.98em;
+    color: #4b5563;
+}
+.sources h3 { margin-top: 0; color: #374151; }
+.sources ol { padding-right: 20px; }
+.sources li { margin-bottom: 8px; }
+
+.footer {
+    margin-top: 55px;
+    padding-top: 30px;
+    border-top: 2px solid #e5e7eb;
+    text-align: center;
+    color: #374151;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: linear-gradient(135deg, #7e22ce, #ec4899);
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.4em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.taub-banner {
+    margin: 35px 0;
+    padding: 22px 26px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #7e22ce 60%, #ec4899 100%);
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    border: 2px solid #fde68a;
+}
+.taub-banner a {
+    color: #fff9db;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+    .scroll-top { display: none !important; }
+    h2 { page-break-before: always; break-before: page; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box, .taub-banner {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+    h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+    .footer { page-break-before: always; break-before: page; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+
+  /* ---------- סרגל ההאזנה (נוסף אוטומטית) ---------- */
+  :root{
+    --lb-purple:#7e22ce; --lb-blue:#2563eb; --lb-green:#059669;
+    --lb-gold:#f59e0b; --lb-pink:#ec4899; --lb-muted:#6b7280;
+    --fs: 1;
+  }
+  .listen-bar{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid var(--lb-gold);
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+  }
+  .listen-btn-group{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .listen-btn{
+    display:flex; align-items:center; gap:8px;
+    background:linear-gradient(135deg, var(--lb-purple) 0%, var(--lb-pink) 100%);
+    color:#fff; border:none; border-radius:30px; padding:10px 22px;
+    font-size:1em; font-weight:bold; font-family:inherit; cursor:pointer;
+    transition:transform .15s, box-shadow .15s;
+  }
+  .listen-btn:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,.3); }
+  .listen-btn:active{ transform:translateY(0); }
+  .listen-stop-btn, .listen-skip-btn, .listen-size-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 16px; font-size:.95em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .listen-skip-btn{ padding:8px 12px; }
+  .listen-stop-btn:hover, .listen-skip-btn:hover,
+  .listen-size-btn:hover:not(:disabled){ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-size{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-size-btn{ padding:6px 12px; line-height:1; }
+  .listen-size-btn:disabled{ opacity:.35; cursor:default; border-color:#d1d5db; color:var(--lb-muted); }
+  .listen-size-btn.big{ font-size:1.25em; }
+  .listen-size output{ font-weight:bold; min-width:3.4em; text-align:center; }
+  .listen-toggle-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 14px; font-size:.88em; font-weight:bold;
+    font-family:inherit; cursor:pointer; white-space:nowrap;
+    transition:transform .15s, background .15s, opacity .15s;
+  }
+  .listen-toggle-btn:hover{ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-toggle-btn[aria-pressed="false"]{
+    color:var(--lb-muted); border-color:#d1d5db; background:#f9fafb; opacity:.8;
+  }
+  .listen-toggle-btn:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+  .listen-skip-btn:focus-visible, .listen-size-btn:focus-visible,
+  .listen-voice select:focus-visible,
+  .listen-rate input:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-status{ font-size:.95em; color:#78350f; flex:1 1 200px; }
+  .listen-progress{ font-size:.9em; color:#78350f; font-weight:bold; white-space:nowrap; }
+  .listen-rate, .listen-voice{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-rate input{ accent-color:var(--lb-purple); }
+  .listen-rate output{ font-weight:bold; min-width:2.6em; }
+  .listen-voice select{
+    border-radius:20px; border:1px solid var(--lb-gold); padding:4px 10px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:190px;
+  }
+  .tts-clickable{ cursor:pointer; transition:background .2s; border-radius:6px; }
+  .tts-clickable:hover{ background:rgba(245,158,11,.10); }
+  .reading-highlight{
+    background:linear-gradient(135deg,#e0e7ff 0%,#fce7f3 100%); border-radius:8px;
+    box-shadow:0 0 0 3px var(--lb-pink) inset; transition:background .3s;
+    padding-right:14px; padding-left:14px;
+    margin-right:-14px; margin-left:-14px;
+  }
+  .audio-player{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid #f59e0b;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  }
+  .audio-player-title{ font-size:1.05em; font-weight:bold; color:#92400e; flex:1 1 100%;}
+  .audio-player audio{ flex:1 1 260px; min-width:220px; height:40px;}
+  .audio-chapter-select{
+    border-radius:20px; border:1px solid #f59e0b; padding:6px 12px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:260px;
+  }
+  .audio-get{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; flex:1 1 100%;}
+  .audio-download{
+    display:inline-flex; align-items:center; gap:6px;
+    background:linear-gradient(135deg,#7e22ce 0%,#ec4899 100%);
+    color:#fff; text-decoration:none; border-radius:30px; padding:8px 18px;
+    font-size:0.95em; font-weight:bold; transition:transform .15s, box-shadow .15s;
+  }
+  .audio-download:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,0.3);}
+  .audio-pick-btn{
+    background:#fff; color:#7e22ce; border:2px solid #7e22ce;
+    border-radius:30px; padding:7px 16px; font-size:0.9em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .audio-pick-btn:hover{ transform:translateY(-2px); background:#f3e8ff;}
+  .audio-note{ font-size:0.9em; color:#92400e;}
+  h2.reading-highlight{ padding-right:34px; }
+  @media(max-width:768px){
+    .listen-bar{ padding:15px; gap:10px; }
+    .listen-status{ flex:1 1 100%; }
+    .listen-voice select{ max-width:140px; }
+  }
+  @media print{
+    .listen-bar{ display:none !important; }
+    .audio-player { display: none !important; }
+    .reading-highlight{ box-shadow:none !important; background:none !important; }
+    .tts-clickable{ cursor:auto; }
+  }
+  /* fs scaling for plain body paragraphs/list items, applied additively so it
+     doesn't fight whatever base font-size the article already declares */
+  .container p, .container li{ font-size: calc(1em * var(--fs)); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1 data-a="01-0" class="main-title" id="top">קריאת שמע</h1>
+<div class="subtitle">עיון בפשט ובמפרשים – יחוד ה', אהבתו ועבודתו</div>
+<div class="author">מאת: הרב יהודה טאוב</div>
+
+
+  <div class="listen-bar">
+      <div class="listen-btn-group">
+          <button class="listen-btn" id="listenBtn" onclick="toggleListen()" aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן למאמר</button>
+          <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+          <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+          <button class="listen-skip-btn" onclick="skipListen(1)" aria-label="פסקה הבאה" title="פסקה הבאה">⏭</button>
+          <button class="listen-skip-btn" onclick="skipChapter(1)" aria-label="פרק הבא" title="פרק הבא">⏩</button>
+          <button class="listen-stop-btn" onclick="stopListen()" aria-label="עצור הקראה">⏹ עצור</button>
+          <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()" aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+      </div>
+      <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+      <span class="listen-progress" id="listenProgress"></span>
+      <div class="listen-rate">
+          <label for="rateRange">מהירות:</label>
+          <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1" oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)" aria-label="מהירות הקראה">
+          <output id="rateValue" for="rateRange">1.0×</output>
+      </div>
+      <div class="listen-voice">
+          <label for="voiceSelect">קול:</label>
+          <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+      </div>
+      <div class="listen-size">
+          <span>גודל טקסט:</span>
+          <button class="listen-size-btn" id="fontSmaller" onclick="setFontScale(-1)" aria-label="הקטן את הטקסט" title="הקטן את הטקסט">א−</button>
+          <output id="fontScaleValue">100%</output>
+          <button class="listen-size-btn big" id="fontBigger" onclick="setFontScale(1)" aria-label="הגדל את הטקסט" title="הגדל את הטקסט">א+</button>
+      </div>
+  </div><div class="audio-player no-tts">
+    <div class="audio-player-title">🎧 האזנה להקלטה — קול הילה</div>
+    <select class="audio-chapter-select" aria-label="בחירת פרק להאזנה" hidden>
+        <option value="audio/%D7%9E%D7%90%D7%9E%D7%A8_%D7%A7%D7%A8%D7%99%D7%90%D7%AA_%D7%A9%D7%9E%D7%A2_%D7%94%D7%A8%D7%91_%D7%99%D7%94%D7%95%D7%93%D7%94_%D7%98%D7%90%D7%95%D7%91.mp3" data-seg="01">א. שְׁמַע יִשְׂרָאֵל, יסוד האמונה · ב. בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ, מה אנו מבקשים? · ג. וְאָהַבְתָּ, שלוש דרכים לאהבת השם · ד. וְהָיוּ הַדְּבָרִים. . . וְשִׁנַּנְתָּם, לימוד תורה והעברתו הלאה · ה. תפילין ומזוזה, סימנים ליחוד השם · ו. פרשה שנייה: וְהָיָה אִם שָׁמֹעַ, מאהבה לעבודה · ז. הִשָּׁמְרוּ לָכֶם, אזהרת השובע והפיתוי · ח. פרשת ציצית, זכרון תמידי למצוות</option>
+    </select>
+    <audio controls preload="none"></audio>
+    <div class="audio-get">
+        <a class="audio-download" href="#" data-download-placeholder="" target="_blank" rel="noopener">📥 להורדת קובץ השמיעה לחץ כאן</a>
+        <button type="button" class="audio-pick-btn">📂 בחר את הקובץ שהורדת</button>
+        <input type="file" class="audio-pick-input" accept="audio/*" multiple hidden>
+        <span class="audio-note"></span>
+    </div>
+</div>
+
+<div class="taub-banner">
+    🌐 <strong>עוד אתרים נפלאים ללימוד ולמשחקים תורניים</strong><br>
+    <a href="https://sites.google.com/view/yuda-taub-parashat-hashavua/אתרים-נוספים-למשחקים" target="_blank">לחצו כאן לאתר של הרב יהודה טאוב</a>
+</div>
+
+<div class="toc">
+<h3>📑 תוכן העניינים</h3>
+<ul>
+<li><a href="#section1">א. שְׁמַע יִשְׂרָאֵל – יסוד האמונה</a></li>
+<li><a href="#section2">ב. בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ – מה אנו מבקשים?</a></li>
+<li><a href="#section3">ג. וְאָהַבְתָּ – שלוש דרכים לאהבת ה'</a></li>
+<li><a href="#section4">ד. וְהָיוּ הַדְּבָרִים... וְשִׁנַּנְתָּם – לימוד תורה והעברתו הלאה</a></li>
+<li><a href="#section5">ה. וּקְשַׁרְתָּם... וּכְתַבְתָּם – תפילין ומזוזה</a></li>
+<li><a href="#section6">ו. פרשה שנייה: וְהָיָה אִם שָׁמֹעַ – מאהבה לעבודה</a></li>
+<li><a href="#section7">ז. הִשָּׁמְרוּ לָכֶם – אזהרת השובע והפיתוי</a></li>
+<li><a href="#section8">ח. פרשת ציצית – זכרון תמידי למצוות</a></li>
+</ul>
+</div>
+
+<h2 data-a="01-1" id="section1">א. שְׁמַע יִשְׂרָאֵל – יסוד האמונה</h2>
+
+<p data-a="01-2">לפני קריאת שמע, נוהג היחיד לומר "אֵל מֶלֶךְ נֶאֱמָן". קודם הקריאה כדאי לכוון לקיים שלוש מצוות עשה:</p>
+<ul>
+<li data-a="01-3"><strong>מצוות קריאת שמע</strong> עצמה.</li>
+<li data-a="01-4"><strong>מצוות ייחוד השם</strong> – להכריז על אחדות ה'.</li>
+<li data-a="01-5"><strong>מצוות קידוש השם</strong> – לכוון במחשבה למסור את הנפש.</li>
+</ul>
+
+<div class="verse-box">
+שְׁמַע יִשְׂרָאֵל ה' אֱלֹהֵינוּ ה' אֶחָד
+</div>
+
+<p data-a="01-6">הפסוק הראשון מבטא את מה שנדרש מהאדם בעיקר בחייו: <span class="emphasis">אמונה חזקה בה'</span>. "ה' אחד" משמעו שאין עוד מלבדו, ואין לשום דבר בעולם שליטה עצמאית – הכול נתון לרצונו של ה' בלבד.</p>
+
+<h3 data-a="01-7">בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ – בלחש</h3>
+
+<div class="verse-box">
+בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד
+</div>
+
+<h2 data-a="01-8" id="section2">ב. בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ – מה אנו מבקשים?</h2>
+
+<div class="qa-box">
+<p data-a="01-9" class="q">מה פירוש המילה "ברוך"?</p>
+<p data-a="01-10" class="a">בהרבה ברכות מוסבר ש"ברוך" הוא מלשון "מקור הברכות". האם ניתן לפרש כך גם כאן? נראה שכאן הכוונה שונה – ש"ברוך" משמעו שיתברך, כלומר <em>שיתרבה</em>.</p>
+</div>
+
+<div class="qa-box">
+<p data-a="01-11" class="q">אם כן, מדוע לא נאמר בפירוש "שיתרבה כבוד מלכותו"?</p>
+<p data-a="01-12" class="a">המלבי"ם (נחמיה ט, ה) מבאר שאין אנו משיגים את ה' עצמו כדי לברכו, וכפי שאמר דוד המלך: "אֲרוֹמִמְךָ אֱלוֹהַי הַמֶּלֶךְ וַאֲבָרֲכָה שִׁמְךָ לְעוֹלָם וָעֶד". "שמו" – הכוונה להנהגתו בעולם, וזאת אנו יכולים להשיג במקצת בלבד.</p>
+</div>
+
+<div class="highlight-box">
+<h4 data-a="01-13">מהי "כבוד מלכותו"?</h4>
+<p data-a="01-14">נפרק את הביטוי לשני חלקים:</p>
+<p data-a="01-15"><strong>מלכות</strong> – כפי שאנו אומרים באשרי "מלכותך מלכות כל עולמים", "מלך" משמעו שיש הרוצים במלכותו. לה' המלוכה על ישראל, והוא מושל בגויים.</p>
+<p data-a="01-16"><strong>כבוד</strong> – יש מלך שמולך אך אין העם שמח במלכותו. אנו מבקשים שה' ימלוך <em>בכבוד</em>, שנשמח במלכותו – כלשון "כְּבוֹד מַלְכוּתְךָ יֹאמֵרוּ" (וְחֲסִידֶיךָ יְבָרְכוּכָה, באשרי).</p>
+</div>
+
+<p data-a="01-17"><strong>סיכום:</strong> אנו מבקשים שתתרבה הנהגת השמחה במלכות ה', על ידי כך שעוד ועוד בני אדם ידעו על כך.</p>
+
+<div class="qa-box">
+<p data-a="01-18" class="q">"לְעוֹלָם וָעֶד" – עד מתי זה?</p>
+<p data-a="01-19" class="a">בעירובין (דף נד ע"א) תנא דבי רבי אליעזר בן יעקב: כל מקום שנאמר "נצח", "סלה" ו"ועד" – אין לו הפסק לעולם, שנאמר "ה' יִמְלֹךְ לְעֹלָם וָעֶד".</p>
+</div>
+
+<p data-a="01-20">יש מקבילה דומה לשבח זה בקדיש – "יְהֵא שְׁמֵהּ רַבָּא". כדאי להתבונן בהבדלים שבין שני הנוסחים, ולהפיק מכך לקח טוב לחיים של תורה בימי בין המצרים.</p>
+
+<div class="section-divider">וְאָהַבְתָּ אֵת ה' אֱלֹהֶיךָ</div>
+
+<h2 data-a="01-21" id="section3">ג. וְאָהַבְתָּ – שלוש דרכים לאהבת ה'</h2>
+
+<p data-a="01-22">בכל יום אנו אומרים שדבר ראשון שה' מבקש מאיתנו הוא <span class="emphasis">לאהוב אותו</span>. השאלה המתבקשת: כיצד ניתן לאהוב דבר שאינו מוחשי?</p>
+
+<div class="quote-box">
+שאהבת הא-ל יתברך… היא תכלית התכונות וסוף המעלות במדרגות אנשי העבודה, וכל המעלות והמידות הן כולן מעלות ומדרגות אל העניין העליון הזה, והוא תכליתן וסופן – אין מדרגה למעלה ממנו ולא אחריו
+<span class="source-tag">חובת הלבבות, תחילת שער אהבת ה' (בשינוי לשון קצת)</span>
+</div>
+
+<p data-a="01-23">אם זו תכלית המטרה של יהודי בחייו – כיצד ייתכן שלא יקדיש לה לפחות 15 דקות ביום? ושמא תאמר שמדרגה זו שמורה רק לצדיקים עליונים – כבר תירצו על כך שיש הרבה מדרגות באהבת ה', ולמדרגה הקטנה יכול גם נער בן 13 להגיע.</p>
+
+<p data-a="01-24">נחלק את הדרכים לאהבת ה' לשלוש, כפי שרומזים בהם שלושת הביטויים בפסוק:</p>
+
+<h3 data-a="01-25">1. בְּכָל לְבָבְךָ – התבוננות בתורה</h3>
+
+<div class="quote-box">
+רבי אומר, לפי שנאמר "וְאָהַבְתָּ אֵת ה' אֱלֹהֶיךָ בְּכָל לְבָבְךָ", איני יודע כיצד אוהבים את המקום? תלמוד לומר "וְהָיוּ הַדְּבָרִים הָאֵלֶּה... עַל לְבָבֶךָ" – תן את הדברים על לבך, שמתוך כך אתה מכיר את מי שאמר והיה העולם ומתדבק בדרכיו
+<span class="source-tag">ספרי, דברים פיסקא לג</span>
+</div>
+
+<p data-a="01-26">ספר החינוך והרמב"ם מבארים שעל ידי התבוננות בתורה תתיישב האהבה בלב מאליה. יש לצרף לכך פירוש נוסף: לימוד <em>אגדה</em> מביא להכרת הבורא.</p>
+
+<div class="quote-box">
+דורשי רשומות אומרים: רצונך שתכיר מי שאמר והיה העולם – למד הגדה, שמתוך כך אתה מכיר את הקב"ה ומתדבק בדרכיו
+<span class="source-tag">ספרי, פרשת עקב פסקא יג</span>
+</div>
+
+<p data-a="01-27">וכן מצינו לריב"ל במדרש שוחר טוב על תהלים (פכ"ח), שפירש את הפסוק "כִּי לֹא יָבִינוּ אֶל פְּעֻלֹּת ה'" – שהכוונה לאגדות; מכיוון שלא למדו אגדות, לא זכו להבין את פעולות ה'. באותו אופן, לימוד טעמי המצוות וגודל שכרן מביא אף הוא לאהבת ה'.</p>
+
+<div class="qa-box">
+<p data-a="01-28" class="q">כבר שאל החפץ חיים: כיצד דווקא על ידי לימוד תורה מגיע אדם לאהבת ה'?</p>
+<p data-a="01-29" class="a">
+שים לב: החינוך לא כתב "על ידי לימוד תורה" אלא "על ידי <em>התבוננות</em>". החפץ חיים משיב (שם עולם, פרק י"ב) שאם אדם יתבונן בעומק שיש בתורה, עד כמה היא גדולה – זה יביא לאהבה. שהרי אי אפשר להבין בשכל האנושי כיצד מקטע גמרא קטן ניתן לבנות מהלכים, קושיות ותירוצים לשעות ארוכות, לולא שה' נותן חכמה מפיו דעת ותבונה.
+</p>
+</div>
+
+<div class="highlight-box">
+<p data-a="01-30">דרכים נוספות המובאות להתבוננות:</p>
+<ul>
+<li data-a="01-31">הכרת הטוב על ההנאה שבלימוד עצמו – "מי נתן לי הנאה זו? ה' יתברך" – וממילא אוהב את המיטיב עמו.</li>
+<li data-a="01-32">התבוננות במידות הטובות שהתורה מלמדת: בלא תורה האדם כשור פרא, ועל ידי התורה הוא נהיה אדם ישר, אהוב ונעים – המראה על חכמת נותן התורה שידע כיצד לרסן את יצרי האדם (ראו: <em>דע את עצמך</em>, פרק "לבי ובשרי ירננו", על ההבדל בין הפסיכולוגיה ליהדות בשאלת "כיצד הכי טוב לחיות").</li>
+<li data-a="01-33">בעלי שור (חלק ב, פרק "הרז שבתורה") מציע שהכוונה היא שאדם הלומד מתוך רצון לדעת מה ה' רוצה ממנו במקרה מסוים, ובודק את הדברים לעומק וחוזר עליהם כדי שלא ישכח – ממילא אהבת ה' מתיישבת בו.</li>
+</ul>
+</div>
+
+<p data-a="01-34">נראה שעיקר העניין: מי שבסיום לימודו עוצר להתבונן כיצד הלימוד מוביל לעבודת הבורא, ילמד עם הזמן להגיע מתוך הלימוד לאהבת ה'. זהו דבר הדורש אימון והרגל. ויש להוסיף: ככל שיהיה לאדם רצון עצום להגיע לאהבת ה' – מתוך הבנה שזו תכלית חייו – כך ימצא את הדרך אליה גם מתוך הלימוד.</p>
+
+<div class="quote-box">
+ה' תלה השפעה בתורה – זה באופן סגולי, אך כדי לזכות לכך יש צורך ב: (1) הרגשת יראה מה', (2) תיקון המידות, (3) כפי דרגת העיון
+<span class="source-tag">מסילת ישרים / דרך ה', חלק ד פרק שני</span>
+</div>
+
+<p data-a="01-35">גם ה"נפש החיים" כותב שלפני הלימוד יש לחשוב מעט ביראת ה' – להתבונן כיצד בורא כל העולמות נתן לנו את תורתו, ולבקש בתפילת ר' נחוניה שיזכה לכוון לאמת.</p>
+
+<div class="highlight-box">
+<strong>סיכום שלוש הבחינות ב"בכל לבבך":</strong>
+<ol>
+<li data-a="01-36">גודל עומק התורה – "וְהָיוּ הַדְּבָרִים הָאֵלֶּה"</li>
+<li data-a="01-37">יראה מהעיסוק בדבר כה גדול – "אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם"</li>
+<li data-a="01-38">לימוד מתוך רצון לדעת ולזכור את רצון ה' – "עַל לְבָבֶךָ"</li>
+</ol>
+</div>
+
+<h3 data-a="01-39">2. וּבְכָל נַפְשְׁךָ – התבוננות בבריאה</h3>
+
+<p data-a="01-40">הדרך השנייה לאהוב את ה' היא להתבונן בבריאה המופלאה. דרך זו שויכה למילים "בכל נפשך", שכן הרמב"ם כותב בלשונו "מיד הוא… ומתאווה לידע ה' הגדול" – ותאווה מקורה בנפש.</p>
+
+<div class="quote-box">
+והיאך היא הדרך לאהבתו ויראתו? בשעה שיתבונן האדם במעשיו וברואיו הנפלאים הגדולים, ויראה מהן חכמתו שאין לה ערך ולא קץ – מיד הוא אוהב ומשבח ומפאר ומתאווה תאווה גדולה לידע השם הגדול, כמו שאמר דוד: "צָמְאָה נַפְשִׁי לֵאלֹהִים לְאֵל חָי". וכשמחשב בדברים האלו עצמן, מיד הוא נרתע לאחוריו ויפחד, ויודע שהוא בריה קטנה שפלה אפלה, עומדת בדעת קלה מעוטה לפני תמים דעות, כמו שאמר דוד: "כִּי אֶרְאֶה שָׁמֶיךָ מַעֲשֵׂה אֶצְבְּעֹתֶיךָ מָה אֱנוֹשׁ כִּי תִזְכְּרֶנּוּ"
+<span class="source-tag">רמב"ם, הלכות יסודי התורה פרק ב הלכה ב</span>
+</div>
+
+<div class="qa-box">
+<p data-a="01-41" class="q">מהו הביאור הפשוט למילים "בכל נפשך"?</p>
+<p data-a="01-42" class="a">בספר "תנה בני לבך לי" (עמ' קמ"ב) מבואר שהכוונה למסור את כל הנפש הבהמית – שיש לה רצונות של קנאה, תאווה וכבוד – למען בורא עולם. זה יכול להיות ויתור על כבוד למען ה', או ויתור על התאווה לישון וכדומה. חז"ל הוסיפו "אפילו נוטל את נפשך" – שהרצון הגדול ביותר של הנפש הוא לחיות, והכוונה שאהבת ה' תגבר אף על הרצון לחיות עצמו. לפי זה, "מסירות נפש" משמעה מסירת הרצונות למען ה'.</p>
+</div>
+
+<h3 data-a="01-43">3. וּבְכָל מְאֹדֶךָ – הכרת הטוב</h3>
+
+<p data-a="01-44">הדרך השלישית להגיע לאהבת ה' היא על ידי הסתכלות בריבוי הטובות שעשה עמו ה', להכיר לו טובה, ומתוך רצון להשיב לו כביכול קצת – לעשות את מצוותיו.</p>
+
+<div class="quote-box">
+זו הדרך שכדאי להתחיל בה להגיע לאהבת ה', והיא דרך קלה מאוד ומועילה מהר: שיעמוד אדם כל יום כ-15 דקות ויספר לה' את חסדיו שעשה עמו, ולפני שיעשה מצווה – יחשוב כמה הכרת הטוב יש לו לבורא, ומתוך כך יעשה את המצווה
+<span class="source-tag">מכתב מאליהו, סוף קונטרס החסד</span>
+</div>
+
+<p data-a="01-45">ניתן לעיין בכך בספרים "חובת האדם בעולמו" (חלק א) ו"בלבבי משכן אבנה" (חלק א).</p>
+
+<div class="qa-box">
+<p data-a="01-46" class="q">מדוע דווקא כאן, ב"בכל מאודך", מקומה של דרך זו?</p>
+<p data-a="01-47" class="a">משום שר' עקיבא (בעל המימרא "כל מה שה' עושה – הכל לטובה") דורש כאן: "ר' עקיבא אומר: 'בְּכָל מְאֹדֶךָ' – בכל מידה ומידה שהוא מודד לך, בכל – הווי מודה לו במאוד מאוד".</p>
+</div>
+
+<div class="two-columns">
+<div class="col-purple">
+<h4 data-a="01-48" style="color:#7e22ce;">שלוש הדרכים</h4>
+<p data-a="01-49">בכל לבבך – התבוננות בתורה<br>
+ובכל נפשך – התבוננות בבריאה<br>
+ובכל מאודך – הכרת הטוב</p>
+</div>
+<div class="col-gold">
+<h4 data-a="01-50" style="color:#b45309;">התוצאה בלב</h4>
+<p data-a="01-51">הכרת גדולת נותן התורה<br>
+יראה ואהבה מתוך התבוננות<br>
+תודה על כל חסד וחסד</p>
+</div>
+</div>
+
+<h2 data-a="01-52" id="section4">ד. וְהָיוּ הַדְּבָרִים... וְשִׁנַּנְתָּם – לימוד תורה והעברתו הלאה</h2>
+
+<div class="verse-box">
+וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל לְבָבֶךָ
+</div>
+
+<p data-a="01-53">נראה דבר נפלא: כאשר אדם לומד על מצווה עד כמה היא חשובה, כך שהדברים מתיישבים על לבו ומתעורר בו חשק ורצון לעשותה – אזי בעשיית המצווה יש בו אהבת ה' רבה. זהו דבר בדוק ומנוסה. ניתן לומר שזו כל מטרת מצוות לימוד התורה – ללמוד <em>כדי</em> שהדברים יהיו על ליבו, כלומר שיהיה לו חשק ורצון לעשות את המצוות.</p>
+
+<h4 data-a="01-54">שני הסברים נוספים</h4>
+<div class="two-columns">
+<div class="col-purple">
+<h4 data-a="01-55" style="color:#7e22ce;">אור החיים הקדוש</h4>
+<p data-a="01-56">"וְהָיוּ הַדְּבָרִים הָאֵלֶּה" – הדרכים המביאות לידי אהבת ה'. "עַל לְבָבֶךָ" – תתבונן בהם. כל יום יש לעצור ולהתבונן בדברים המביאים לאהבת ה'.</p>
+</div>
+<div class="col-gold">
+<h4 data-a="01-57" style="color:#b45309;">פשוטו של מקרא</h4>
+<p data-a="01-58">"וְהָיוּ הַדְּבָרִים הָאֵלֶּה" – אהבת ה' וייחודו יעמדו על לבבך תמיד; תחדיר את הדברים ללבך, וזו תהיה תשוקתך בחיים – להשיג עוד אמונה, עוד אהבת ה'.</p>
+</div>
+</div>
+
+<div class="qa-box">
+<p data-a="01-59" class="q">נצטווינו פעמיים בפרשה על לימוד תורה – "וְהָיוּ הַדְּבָרִים" ו"וְשִׁנַּנְתָּם" – ואילו הרמב"ם והחינוך למדו את עצם מצוות לימוד תורה מ"וְשִׁנַּנְתָּם". אם כן, מהו הציווי "וְהָיוּ"?</p>
+<p data-a="01-60" class="a">
+נראה שכאן מכוון החפץ חיים לשלושה דברים שיש לחשוב לפני הלימוד או קיום המצווה:
+<br>1. שזו המצווה היחידה שיש לו לעשות ("וְהָיוּ הַדְּבָרִים הָאֵלֶּה" – רק אלה).
+<br>2. שבורא עולם בעצמו ציווה, ורק אותו לעשות ("אֲשֶׁר אָנֹכִי מְצַוְּךָ").
+<br>3. שמחר הוא עשוי למות, וזה היום היחיד שיש לו לקיים את המצווה ("הַיּוֹם").
+<br>סיכום: המצווה היחידה, האדם היחיד, והזמן היחיד. וזו אינה בגדר דמיון בלבד – לכל אדם יש תפקיד שאף אחד אחר אינו יכול לעשות, ולכל יום שניתן לו יש תפקיד מסוים בבריאה.
+</p>
+</div>
+
+<div class="verse-box">
+וְשִׁנַּנְתָּם לְבָנֶיךָ
+</div>
+
+<p data-a="01-61">מי שאוהב את ה' אינו דואג רק שהוא עצמו יקיים את המצוות, אלא גם שאחרים יקיימו. חז"ל דרשו: "בניך" – אלו תלמידיך.</p>
+
+<div class="quote-box">
+כשם שחייב אדם ללמד את בנו, כך הוא חייב ללמד את בן בנו, שנאמר "וְהוֹדַעְתָּם לְבָנֶיךָ וְלִבְנֵי בָנֶיךָ"; ולא בנו ובן בנו בלבד, אלא מצווה על כל חכם וחכם מישראל ללמד את כל התלמידים אף על פי שאינם בניו, שנאמר "וְשִׁנַּנְתָּם לְבָנֶיךָ" – מפי השמועה למדו: בניך אלו תלמידיך, שהתלמידים קרויים בנים
+<span class="source-tag">רמב"ם, הלכות תלמוד תורה פרק א הלכה ב</span>
+</div>
+
+<p data-a="01-62">בספר המצוות (עשין ג) כתוב שעלינו לקרוא לכל בני האדם לעבודתו – מי שאוהב איש אחד, מספר בשבחיו ומרבה בהם, ובכך מזמין אחרים לאהוב אותו.</p>
+
+<h3 data-a="01-63">וְדִבַּרְתָּ בָּם... – זמני הלימוד וסוגיו</h3>
+
+<div class="verse-box">
+וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ וּבְשָׁכְבְּךָ וּבְקוּמֶךָ
+</div>
+
+<p data-a="01-64">בפסוק זה נרמזות צורות לימוד וזמני לימוד שונים:</p>
+<ol>
+<li data-a="01-65"><strong>לימוד בעיון</strong> – נלמד מ"וְשִׁנַּנְתָּם", לשון "משונן וחריף", לימוד לעומק, בשבתו בביתו.</li>
+<li data-a="01-66"><strong>לימוד בקיאות</strong> – נרמז ב"וּבְלֶכְתְּךָ בַדֶּרֶךְ", שבדרך אין לומדים בעיון, כפי שציווה יוסף את אחיו: "אַל תִּרְגְּזוּ בַּדֶּרֶךְ".</li>
+<li data-a="01-67"><strong>לימוד יום ולילה</strong>:</li>
+</ol>
+
+<div class="quote-box">
+כל איש ישראל חייב בתלמוד תורה, בין עני בין עשיר, בין שלם בגופו בין בעל ייסורים, בין בחור בין זקן גדול. אפילו עני המחזר על הפתחים, אפילו בעל אישה ובנים – חייב לקבוע לו זמן לתלמוד תורה ביום ובלילה, שנאמר: "וְהָגִיתָ בּוֹ יוֹמָם וָלַיְלָה"
+<span class="source-tag">שולחן ערוך, יורה דעה סימן רמו</span>
+</div>
+
+<p data-a="01-68">ניתן לפרש את הפסוק גם על אהבת ה' ויראתו – שבכל פעולה, בין בשבתו בביתו ובין באכילתו ובשכיבתו, יחשוב אדם איזה רצון אלוקי מתגלם בה, שכל מעשיו יהיו לשם שמים.</p>
+
+<h2 data-a="01-69" id="section5">ה. תפילין ומזוזה – סימנים ליחוד ה'</h2>
+
+<p data-a="01-70">לסיום פרשת "שמע" חוזרים שוב על שלושה דברים המקרבים אותנו לה':</p>
+
+<div class="highlight-box">
+<ul>
+<li data-a="01-71"><strong>תפילין של יד</strong> – כנגד "עַל לְבָבֶךָ".</li>
+<li data-a="01-72"><strong>תפילין של ראש ("לְטֹטָפֹת בֵּין עֵינֶיךָ")</strong> – כנגד "עַל נַפְשְׁךָ", שיתכן ומשכן הנפש הוא במוח.</li>
+<li data-a="01-73"><strong>מזוזה</strong> – כנגד "בְּכָל מְאֹדֶךָ", שמניחים אותה בכניסה לרכושו, לזכור שכל רכושו מאת ה' ומשועבד לו.</li>
+</ul>
+</div>
+
+<h4 data-a="01-74">ארבע מטרות למצוות מזוזה</h4>
+<ol>
+<li data-a="01-75">לזכור שיש בורא והוא משגיח, שהרי הוציאנו ממצרים (רמב"ן).</li>
+<li data-a="01-76">לפני הכניסה לביתו, יזכור שהעולם הזה עראי והטרקלין האמיתי הוא העולם הבא (רמב"ם).</li>
+<li data-a="01-77">כל מה שיש לנו – מאיתו, והוא שומרנו ומצילנו (ילקוט מעם לועז).</li>
+<li data-a="01-78">ביתו של יהודי הוא מקום בו שורה השכינה (דבר בעיתו, הרב שוורץ).</li>
+</ol>
+
+<p data-a="01-79">בפשוטו, מטרת מצוות תפילין ומזוזה לעזור לאדם לזכור תמיד את ייחוד ה' ואהבתו.</p>
+
+<div class="section-divider">וְהָיָה אִם שָׁמֹעַ תִּשְׁמְעוּ אֶל מִצְוֹתַי</div>
+
+<h2 data-a="01-80" id="section6">ו. פרשה שנייה: וְהָיָה אִם שָׁמֹעַ – מאהבה לעבודה</h2>
+
+<div class="qa-box">
+<p data-a="01-81" class="q">רש"י: מדוע "שָׁמֹעַ" בלשון עבר?</p>
+<p data-a="01-82" class="a">התורה רוצה שנחזור על מה שכבר למדנו, ועל ידי כך יזכה אותנו ה' לשמוע דברים חדשים.</p>
+</div>
+
+<div class="qa-box">
+<p data-a="01-83" class="q">"אֲשֶׁר אָנֹכִי מְצַוֶּה אֶתְכֶם הַיּוֹם" – לכאורה יש כאן כפילות עם הפסוק הקודם?</p>
+<p data-a="01-84" class="a">
+תירוץ א (הארת התפילה בשם הרמב"ם): ציוויתי אתכם את המצוות כדי להגיע לאהבת ה' – כלומר, שמרו את המצוות שציוויתי אתכם לשמוע להם, כדי שתאהבו את ה'.
+<br>תירוץ ב: יש לעשות את המצוות לא מפני ששכלכם מבין שזה טוב, אלא מפני שאני ציוויתי.
+</p>
+</div>
+
+<div class="verse-box">
+לְאַהֲבָה אֶת ה' אֱלֹהֵיכֶם וּלְעָבְדוֹ
+</div>
+
+<p data-a="01-85">שים לב: כאן נוסף חלק שלא מופיע בפרשה הראשונה – לא רק לאהוב את ה' בלב, אלא גם <span class="emphasis">לעבוד אותו בלב</span>.</p>
+
+<h3 data-a="01-86">בְּכָל לְבַבְכֶם – עבודה שבלב</h3>
+
+<div class="quote-box">
+שיעשה המצוות עם כוונה, ולא מלומדה
+<span class="source-tag">ספר חרדים</span>
+</div>
+
+<div class="qa-box">
+<p data-a="01-87" class="q">חז"ל אמרו ש"תפילה" היא ה"עבודה שבלב" – אך הרי מדאורייתא יוצאים ידי חובה בבקשה אחת בלבד, ובזה אין קושי לכוון?</p>
+<p data-a="01-88" class="a">
+נ.ב. החיי אדם כתב שיש להקפיד, בנוסף לשמונה עשרה, לבקש בקשה במילים משלו על דבר הנצרך לו – שבה ודאי יכוון, לעומת שמונה עשרה שאם לא ביקש כראוי לא קיים את המצווה.
+<br>שפתי חיים מתרץ: להרגיש בלב שרק ה' יכול לתת לי את צרכי – זו עבודה גדולה בפני עצמה.
+</p>
+</div>
+
+<h3 data-a="01-89">וּבְכָל נַפְשְׁכֶם – עבודה עם הנפש</h3>
+<ul>
+<li data-a="01-90">לעשות את המצווה ברוב חשק ושמחה, ולהשתוקק "מתי אזכה לקיים את המצווה".</li>
+<li data-a="01-91">חז"ל במדרש דרשו: עד מיצוי הנפש – לעבוד את ה' בכל הכוחות.</li>
+</ul>
+
+<div class="quote-box">
+שורש כל עניין העבודה הוא היות האדם פונה תמיד לבוראו, שידע ויבין שלא נברא אלא להיות מתדבק בבוראו, ולא הושם בעולם הזה אלא להיות כובש את יצרו ומשעבד עצמו לבוראו בכוח השכל, ולהנהיג את כל פעולותיו להשגת התכלית הזו
+<span class="source-tag">דרך ה', חלק א פרק ד</span>
+</div>
+
+<p data-a="01-92">נראה שכאן רמוזים שני חלקים: לשם מה עושים מצוות – להגיע לאהבת ה'; ועצם עשיית המצווה היא מטרה בפני עצמה, שיעשה אותה בכל לבבו ונפשו.</p>
+
+<h3 data-a="01-93">ארבע המתנות ומקבילותיהן</h3>
+
+<p data-a="01-94">התורה מונה ארבע מתנות טובות (בשני זוגות):</p>
+
+<div class="two-columns">
+<div class="col-purple">
+<h4 data-a="01-95" style="color:#7e22ce;">מתנה א'</h4>
+<p data-a="01-96">"וְנָתַתִּי מְטַר אַרְצְכֶם בְּעִתּוֹ" ← "וְאָסַפְתָּ דְגָנֶךָ וְתִירֹשְׁךָ וְיִצְהָרֶךָ"</p>
+</div>
+<div class="col-gold">
+<h4 data-a="01-97" style="color:#b45309;">מתנה ב'</h4>
+<p data-a="01-98">"וְנָתַתִּי עֵשֶׂב בְּשָׂדְךָ לִבְהֶמְתֶּךָ" ← "וְאָכַלְתָּ וְשָׂבָעְתָּ"</p>
+</div>
+</div>
+
+<div class="qa-box">
+<p data-a="01-99" class="q">מה הקשר בין מזון הבהמה לשובע האדם?</p>
+<p data-a="01-100" class="a">
+כמה תשובות: (א) אסור לאדם לאכול קודם שיאכיל את בהמתו – אם לא יהיה לה מזון, מותר לו לאכול אך לא לשבוע (הגר"ח קניבסקי). (ב) "תאכל" – הכוונה לוולדות הבהמות (רמב"ן). (ג) לבהמות יהיה כוח לעבוד בשדה, וממילא תהיה תבואה מרובה.
+</p>
+</div>
+
+<div class="highlight-box">
+<h4 data-a="01-101">מבנה מקביל בפרשה</h4>
+<p data-a="01-102"><strong>המצווה:</strong> אהבת ה' ועבודתו – בלב ובנפש<br>
+<strong>השכר:</strong> מטר ועשב בשדה ← אוכל, אכילה ושובע<br>
+<strong>האזהרה:</strong> יפתה לבך / תסור מהתורה ← עבודה זרה / השתחוויה<br>
+<strong>העונש:</strong> עצירת השמים / האדמה אינה מצמיחה ← אין גשם / גירוש מהארץ<br>
+<strong>הפתרון:</strong> לשים הדברים בלב ובנפש, באמצעות תפילין של יד ותפילין של ראש<br>
+<strong>השכר הסופי:</strong> "יִרְבּוּ יְמֵיכֶם וִימֵי בְנֵיכֶם" בארץ, לעולם</p>
+</div>
+
+<h2 data-a="01-103" id="section7">ז. הִשָּׁמְרוּ לָכֶם – אזהרת השובע והפיתוי</h2>
+
+<div class="verse-box">
+הִשָּׁמְרוּ לָכֶם פֶּן יִפְתֶּה לְבַבְכֶם
+</div>
+
+<div class="quote-box">
+"השמרו לכם" – כיוון שתהיו אוכלים ושבעים, השמרו לכם שלא תבעטו, שאין אדם מורד בהקב"ה אלא מתוך שביעה, שנאמר "פֶּן תֹּאכַל וְשָׂבָעְתָּ... וְרָם לְבָבְךָ וְשָׁכַחְתָּ"
+<span class="source-tag">רש"י, על פי דברים ח, יב–יד</span>
+</div>
+
+<p data-a="01-104">יש המסבירים ש"יפתה" מלשון "יתרחב", כמו "יַפְתְּ אֱלֹהִים לְיֶפֶת" שרש"י מפרש "ירחיב". ומכאן אולי גם הכוונה בברכת "נִשְׁמַת" – "מְכַלְכֵּל חַיִּים בְּחֶסֶד" – שלא נאכל יותר מדי, שמא יפתה לבבנו. בימינו, שיש שפע רב, יש לכוון שהשפע לא יעביר אותנו מעבודת ה'; אמרו חז"ל שניסיון העושר גדול מניסיון העוני.</p>
+
+<div class="verse-box">
+וְסַרְתֶּם וַעֲבַדְתֶּם אֱלֹהִים אֲחֵרִים וְהִשְׁתַּחֲוִיתֶם לָהֶם
+</div>
+
+<div class="quote-box">
+"וסרתם" – לפרוש מן התורה, ומתוך כך "ועבדתם אלהים אחרים", שכיוון שאדם פורש מן התורה הולך ומתדבק בעבודה זרה. וכן דוד אמר: "כִּי גֵרְשׁוּנִי הַיּוֹם מֵהִסְתַּפֵּחַ בְּנַחֲלַת ה' לֵאמֹר לֵךְ עֲבֹד" – ומי אמר לו כן? אלא כיוון שאני מגורש מלעסוק בתורה, הריני קרוב לעבוד אלהים אחרים
+<span class="source-tag">רש"י, על פי הספרי</span>
+</div>
+
+<p data-a="01-105">המוסר מכאן מבהיל: דוד המלך היה אנוס בלבד, שלא למד – ומסתמא למד עדיין קצת בדרך – ואף על פי כן אמר שבלא בית המדרש הוא מרגיש קרוב לעבודה זרה. הפסוק מתאר תהליך של התדרדרות: תחילה הנאה מעושר, אחר כך הפסקת לימוד, אחר כך עבודה זרה, ולבסוף השתחוויה – כניעה מוחלטת.</p>
+
+<div class="qa-box">
+<p data-a="01-106" class="q">הגר"א שואל: "וְחָרָה אַף ה'" – הרי כאן עונש, ומדוע לא נכתב "אלוקים" (מידת הדין)?</p>
+<p data-a="01-107" class="a">היסורים הם מתוך רחמי ה', לעורר את בנו, כפי שכתוב: "וְיָדַעְתָּ עִם לְבָבֶךָ כִּי כַּאֲשֶׁר יְיַסֵּר אִישׁ אֶת בְּנוֹ ה' אֱלֹהֶיךָ מְיַסְּרֶךָּ" (דברים ח).</p>
+</div>
+
+<div class="qa-box">
+<p data-a="01-108" class="q">אם אין יבול, כיצד תיתכן גלות כתוצאה נוספת ("וַאֲבַדְתֶּם מְהֵרָה")?</p>
+<p data-a="01-109" class="a">רש"י אינו רואה בכך תוצאה טבעית של חוסר היבול, אלא עונש בפני עצמו, נפרד.</p>
+</div>
+
+<div class="highlight-box">
+<h4 data-a="01-110">מבנה תנאי כפול – כתנאי בני גד וראובן</h4>
+<ul>
+<li data-a="01-111"><strong>תנאי כפול:</strong> "אִם שָׁמֹעַ... וְנָתַתִּי" / "וְסַרְתֶּם... וְעָצַר"</li>
+<li data-a="01-112"><strong>הן קודם ללאו:</strong> "אִם שָׁמֹעַ תִּשְׁמְעוּ" ורק אחר כך "פֶּן יִפְתֶּה לְבַבְכֶם"</li>
+<li data-a="01-113"><strong>תנאי קודם למעשה:</strong> "אִם שָׁמֹעַ" – ואז השכר; "אִם תָּסוּרוּ" – ואז העונש</li>
+</ul>
+<p data-a="01-114">שינוי אחד מהמבנה הרגיל: התורה לא כתבה "ואם לא תשמעו" אלא "הִשָּׁמְרוּ לָכֶם פֶּן יִפְתֶּה" – משום שה' אוהב אותנו, וכותב לנו כעצה: "היזהרו, זה לא כדאי".</p>
+</div>
+
+<div class="verse-box">
+וְשַׂמְתֶּם אֶת דְּבָרַי אֵלֶּה עַל לְבַבְכֶם וְעַל נַפְשְׁכֶם
+</div>
+
+<p data-a="01-115">למדנו כבר על אהבת ה' בלב ועבודתו בלב, ועתה מתווסף ציווי <span class="emphasis">לשים</span> את הדברים על הלב – על ידי התבוננות בדברים ולא רק קריאתם, ועל ידי חזרה מרובה בהתבוננות, עד שהדברים חודרים ללב, כמים המחלחלים באבנים.</p>
+
+<div class="qa-box">
+<p data-a="01-116" class="q">מדוע דווקא כאן מצווה התורה "לשים" ולא רק "שיהיו"?</p>
+<p data-a="01-117" class="a">הדרשנים ביארו: גם אם נדמה לך שהאדם שאתה מוכיח ומלמד אינו שומע, אל תתייאש – הדברים מונחים על ליבו, וביום שהלב ייפתח, הם יחדרו.</p>
+</div>
+
+<div class="qa-box">
+<p data-a="01-118" class="q">כיצד ניתן "לשים דברים על הנפש", אם נצטווינו לאהוב את ה' יותר מכפי שאנו אוהבים את נפשנו?</p>
+<p data-a="01-119" class="a">
+מחלוקת מפרשים בשאלה "מהי הנפש" ו"מהו הלב" בפסוק זה:
+<br><strong>רמב"ם ורמב"ן</strong> – "לב" הוא כוח המתאווה, "נפש" היא הנפש המשכלת (השכל).
+<br><strong>הראב"ד</strong> – להיפך: "לב" הוא השכל ("חֲכַם לֵב יִקַּח מִצְוֹת"), "נפש" היא התאווה ("וְאָכַלְתָּ עֲנָבִים כְּנַפְשְׁךָ שָׂבְעֶךָ").
+<br><strong>אורחות צדיקים</strong> (שער יראת שמים) – "רוח" היא הלב, המחפשת שררה ומלכות; "נפש" היא הכבד, המתאווה לאכול ולשתות; ואילו הנשמה משכנה במוח.
+</p>
+</div>
+
+<p data-a="01-120">הוספה: "לשים על הנפש" – שהרצון הפנימי ירצה לעשות מצוות (ניתן לראות זאת מכך שכשמדברים דברים בטלים אדם קשוב, ובדברי תורה מחשבתו נודדת – סימן לרצונו הפנימי). "לשים על הלב", כלשון ספר חרדים (פרק ט, סעיף מ"ג) – הסכמה פנימית מוחלטת לעשות את המצוות, גם אם בפועל האדם נכשל לעיתים.</p>
+
+<div class="verse-box">
+וּקְשַׁרְתֶּם אֹתָם לְאוֹת עַל יֶדְכֶם וְהָיוּ לְטוֹטָפֹת בֵּין עֵינֵיכֶם
+</div>
+
+<div class="quote-box">
+מפני שבתפילין שבראש אדם משעבד לבורא יתברך את הנשמה שהיא במוח, ובתפילין שבזרוע אדם משעבד את גופו; ומפני כך ציווה לשים אותה כנגד הלב, שהלב הוא עיקר התאוות והמחשבות
+<span class="source-tag">בית יוסף, אורח חיים סימן כה, בשם רבינו יונה</span>
+</div>
+
+<p data-a="01-121">המקור לכך הוא הקבלת "עַל יֶדְכֶם" כנגד "עַל לְבַבְכֶם", ו"בֵּין עֵינֵיכֶם" כנגד "עַל נַפְשְׁכֶם" – שלמד מכאן שהנפש היא המוח.</p>
+
+<h3 data-a="01-122">וְלִמַּדְתֶּם אֹתָם אֶת בְּנֵיכֶם לְדַבֵּר בָּם</h3>
+
+<p data-a="01-123">בפרשה הראשונה נכתב "וְדִבַּרְתָּ" – ציווי על האב עצמו ללמוד. בפרשה השנייה, "וְלִמַּדְתֶּם" – ציווי ללמד את הילדים לדבר דברי תורה בכל מצב.</p>
+
+<p data-a="01-124">רש"י מפרש: תלמד את הילד לשון הקודש – לא יאמר "אבא" ו"אמא" תחילה, אלא ילמדנו לומר "תורה ציווה לנו משה", וכך ילמד לדבר. יש דנים אם הרמב"ם חולק, שהרי כתב רק שילמדו תורה כשידע לדבר (סוכה מב:), ומכל מקום למדנו שיש עניין בכך שהילד ידבר דברי תורה אף בטרם יבין את משמעם. מדין תורה אין חיוב "חינוך" על האב אלא מדרבנן ("חַנֹּךְ לַנַּעַר"); דבר אחד בלבד חייבים בו מדאורייתא – והוא לימוד תורה.</p>
+
+<p data-a="01-125">הפרשה חוזרת גם על "וּכְתַבְתָּם עַל מְזוּזֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ" – ויש הרבה כוונות למזוזה, וכדאי לחלק את הכוונה בין שתי הפרשיות. וחותמת: "לְמַעַן יִרְבּוּ יְמֵיכֶם וִימֵי בְנֵיכֶם עַל הָאֲדָמָה אֲשֶׁר נִשְׁבַּע ה' לַאֲבֹתֵיכֶם לָתֵת לָהֶם, כִּימֵי הַשָּׁמַיִם עַל הָאָרֶץ".</p>
+
+<h2 data-a="01-126" id="section8">ח. פרשת ציצית – זכרון תמידי למצוות</h2>
+
+<div class="verse-box">
+וַיֹּאמֶר ה' אֶל מֹשֶׁה לֵּאמֹר: דַּבֵּר אֶל בְּנֵי יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵהֶם וְעָשׂוּ לָהֶם צִיצִת עַל כַּנְפֵי בִגְדֵיהֶם לְדֹרֹתָם, וְנָתְנוּ עַל צִיצִת הַכָּנָף פְּתִיל תְּכֵלֶת
+</div>
+
+<div class="verse-box">
+וְהָיָה לָכֶם לְצִיצִת וּרְאִיתֶם אֹתוֹ וּזְכַרְתֶּם אֶת כָּל מִצְוֹת ה' וַעֲשִׂיתֶם אֹתָם, וְלֹא תָתוּרוּ אַחֲרֵי לְבַבְכֶם וְאַחֲרֵי עֵינֵיכֶם אֲשֶׁר אַתֶּם זֹנִים אַחֲרֵיהֶם
+</div>
+
+<div class="verse-box">
+לְמַעַן תִּזְכְּרוּ וַעֲשִׂיתֶם אֶת כָּל מִצְוֹתָי וִהְיִיתֶם קְדֹשִׁים לֵאלֹהֵיכֶם. אֲנִי ה' אֱלֹהֵיכֶם אֲשֶׁר הוֹצֵאתִי אֶתְכֶם מֵאֶרֶץ מִצְרַיִם לִהְיוֹת לָכֶם לֵאלֹהִים, אֲנִי ה' אֱלֹהֵיכֶם – אֱמֶת
+</div>
+
+<p data-a="01-127">פרשת ציצית חותמת את קריאת שמע במעגל שלם: כשם שהזכרנו בפרשות הקודמות אמצעים לזכירה תמידית – תפילין ומזוזה – כך הציצית משמשת "אות" ראייה יומיומי, המחבר בין הראייה החיצונית לזכירה הפנימית של כל מצוות ה', ומזכיר את יסוד היציאה ממצרים – שה' הוא אלוקינו באמת.</p>
+
+<div class="sources">
+<h3>📚 מקורות ומראי מקומות</h3>
+<ol>
+<li>ספרי, דברים (פיסקאות לג, ופרשת עקב יג)</li>
+<li>רש"י על התורה, פרשת ואתחנן ופרשת עקב</li>
+<li>מלבי"ם, נחמיה ט, ה</li>
+<li>חובת הלבבות, שער אהבת ה'</li>
+<li>ספר החינוך; רמב"ם, הלכות יסודי התורה פרק ב; הלכות תלמוד תורה פרק א</li>
+<li>מדרש שוחר טוב, תהלים פרק כח</li>
+<li>חפץ חיים, שם עולם פרק י"ב</li>
+<li>ספר "דע את עצמך", פרק "לבי ובשרי ירננו"</li>
+<li>בעלי שור, חלק ב, "הרז שבתורה"</li>
+<li>דרך ה', חלק א פרק ד; חלק ד פרק שני</li>
+<li>נפש החיים</li>
+<li>ספר "תנה בני לבך לי"</li>
+<li>מכתב מאליהו, קונטרס החסד</li>
+<li>חובת האדם בעולמו; בלבבי משכן אבנה, חלקים א, ה, ו</li>
+<li>ספר חרדים, פרק ט</li>
+<li>שפתי חיים; חיי אדם</li>
+<li>גמרא עירובין נד ע"א; תענית ג ע"ב; סוכה מב ע"ב</li>
+<li>שולחן ערוך, יורה דעה סימן רמו</li>
+<li>הגר"א; בית יוסף, אורח חיים סימן כה (בשם רבינו יונה); רמב"ן, ואתחנן ד, ה</li>
+<li>אורחות צדיקים, שער יראת שמים</li>
+<li>ילקוט מעם לועז; "דבר בעיתו" לרב שוורץ</li>
+</ol>
+</div>
+
+<div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+</div>
+
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+window.addEventListener('scroll', function() {
+    var btn = document.getElementById('scrollTop');
+    if (window.scrollY > 400) {
+        btn.style.display = 'flex';
+    } else {
+        btn.style.display = 'none';
+    }
+});
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+</script>
+
+<script>
+/* =============================================================================
+   קול תודה — מנוע הקראה למאמרים תורניים   |   tts.js   v2.0
+   -----------------------------------------------------------------------------
+   העתק את הקובץ הזה כמות שהוא לתוך תגית <script> בסוף ה-HTML.
+   אין לכתוב אותו מחדש, לקצר או "לשפר" תוך כדי יצירת מאמר — הוא נבדק כך.
+   Web Speech API בלבד: בלי API חיצוני, בלי מפתח, בלי רשת, בלי עלות.
+   ============================================================================= */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    var NS       = 'koltoda.tts.';
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false, noHeVoice = false;
+    var clickToRead = true;
+
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+    function readPos() { try { return parseInt(localStorage.getItem(POS_KEY) || '0', 10) || 0; } catch (e) { return 0; } }
+
+    var G = '["\\u05f4\\u201d\\u2033]';
+    var R = "['\\u05f3\\u2019]";
+
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' ');
+        t = t.replace(/־/g, ' ');
+        t = t.replace(/\s*[–—]\s*/g, ', ');
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function chapterLabel(h) {
+        var d = h.getAttribute && h.getAttribute('data-chapter');
+        if (d && d.trim()) return d.trim();
+        var p = h.previousElementSibling;
+        if (p && p.classList && p.classList.contains('chapter-label')) {
+            return p.textContent.replace(/\s+/g, ' ').trim();
+        }
+        return '';
+    }
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (n.closest(SKIP)) return;
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            if (n.tagName === 'H2') {
+                var lbl = chapterLabel(n);
+                if (lbl && raw.indexOf(lbl) !== 0) raw = lbl + '. ' + raw;
+            }
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    function hint() {
+        if (noHeVoice) {
+            return 'לא נמצא קול עברי במחשב — ההקראה תישמע משובשת. ' +
+                   'ב-Windows: הגדרות ← שעה ושפה ← דיבור ← נהל קולות ← הוסף קולות ← עברית.';
+        }
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = readPos();
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        var was = noHeVoice;
+        noHeVoice = !he.length;
+        if (noHeVoice !== was && !isOn) say(hint());
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;
+                if (e.target.closest('a')) return;
+                if (window.getSelection && String(window.getSelection()).length) return;
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    var FS_MIN = 0.85, FS_MAX = 1.75, FS_STEP = 0.15, fontScale = 1;
+
+    function applyFontScale() {
+        document.documentElement.style.setProperty('--fs', String(fontScale));
+        var out = document.getElementById('fontScaleValue');
+        if (out) out.textContent = Math.round(fontScale * 100) + '%';
+        var dec = document.getElementById('fontSmaller'), inc = document.getElementById('fontBigger');
+        if (dec) dec.disabled = fontScale <= FS_MIN + 0.001;
+        if (inc) inc.disabled = fontScale >= FS_MAX - 0.001;
+    }
+
+    window.setFontScale = function (dir) {
+        fontScale = Math.min(FS_MAX, Math.max(FS_MIN, +(fontScale + dir * FS_STEP).toFixed(2)));
+        store('fs', String(fontScale));
+        applyFontScale();
+    };
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var savedFs = parseFloat(store('fs') || '1');
+        if (savedFs >= FS_MIN && savedFs <= FS_MAX) fontScale = savedFs;
+        applyFontScale();
+        if (readPos() > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+<script data-audio-cues="" type="application/json">{"01":[0.1,1.74,5.51,14.1,16.43,20.29,24.98,39.09,42.41,46.35,48.85,61.41,66.1,83.65,86.01,88.84,100.01,114.06,121.91,124.84,137.07,148.53,152.81,162.96,179.94,185.85,189.45,201.03,219.63,225.45,250.53,253.49,262,282.45,296.92,318.79,330.04,333.49,338.22,342.83,346.7,361.45,364.92,395.21,398.94,410.17,418.14,422.81,436.7,438.59,445.91,447.91,453.62,460.6,483.34,485.7,488.01,500.12,502.07,513.32,525.65,565.01,575.12,586.7,590.39,594.3,601.99,611.12,613.11,625.81,629.75,634.86,638.29,645.6,653.57,656.39,662.4,669.54,675.97,681.97,688.34,693.15,696.4,703.2,708.31,726.62,734.51,737.67,746.12,766.42,769.79,775.68,781.44,792.45,795.33,799.5,801.02,806.5,808.22,812.54,816.02,837.79,840.15,866.55,870.78,894.15,916.1,923.77,934.24,940.25,946.63,950.53,958.28,963.36,970.19,981.73,996.55,1000.45,1011.18,1017.84,1049.29,1072.69,1081.04,1084.34,1095.93,1125.99,1143.69,1147.86]}</script><script data-audio-player="">
+/* =============================================================================
+   audio-player.js — נגן ההקלטה (MP3 שהופק מראש ב-edge-tts)
+   הדבק מילה במילה. נפרד לגמרי מ-tts.js (ההקראה החיה של הדפדפן).
+   ============================================================================= */
+(function () {
+    var box = document.querySelector('.audio-player');
+    if (!box) return;
+
+    var audio  = box.querySelector('audio');
+    var select = box.querySelector('.audio-chapter-select');
+    if (!audio || !select) return;
+
+    var KEY = 'koltoda.audio.ch.' + (document.title || '');
+
+    /* מפת תזמונים: { "01": [0, 3.2, 9.7, ...] } — זמן תחילת כל פסקה בקטע.
+       נוצרת ב-make-audio.mjs מקובצי ה-SRT של edge-tts. */
+    var CUES = {};
+    var tag = document.querySelector('script[data-audio-cues]');
+    if (tag) { try { CUES = JSON.parse(tag.textContent || '{}'); } catch (e) {} }
+
+    var seg = null;      // מזהה הקטע הפעיל, למשל "01"
+    var line = -1;       // אינדקס הפסקה המודגשת
+
+    /* ---------- הדגשה ---------- */
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+        line = -1;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+
+        /* בספר מתחלף — מדפדפים לעמוד של הפסקה, כמו בהקראה החיה */
+        var pg = el.closest ? el.closest('.page') : null;
+        if (pg && !pg.classList.contains('active') && window.bookGo) {
+            var pages = [].slice.call(document.querySelectorAll('#book .page'));
+            var i = pages.indexOf(pg);
+            if (i > -1) { window.bookGo(i); return; }
+        }
+
+        /* גוללים רק אם הפסקה מחוץ למסך, כדי לא לחטוף את הדף מהקורא */
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    /* איזו פסקה נאמרת עכשיו — האחרונה שזמן ההתחלה שלה כבר עבר */
+    function lineAt(starts, t) {
+        var lo = 0, hi = starts.length - 1, ans = 0;
+        while (lo <= hi) {
+            var mid = (lo + hi) >> 1;
+            if (starts[mid] <= t) { ans = mid; lo = mid + 1; } else { hi = mid - 1; }
+        }
+        return ans;
+    }
+
+    audio.addEventListener('timeupdate', function () {
+        var starts = CUES[seg];
+        if (!starts || !starts.length) return;
+        var i = lineAt(starts, audio.currentTime);
+        if (i === line) return;
+        line = i;
+        var el = document.querySelector('[data-a="' + seg + '-' + i + '"]');
+        if (el) highlight(el);
+    });
+
+    /* ---------- קבצים שנבחרו מהמחשב ----------
+       דפדפן לא יכול לקרוא נתיב מקומי מעצמו (תיקיית ההורדות חסומה לו), אבל
+       קובץ שהמשתמש בוחר בעצמו מותר. ממפים לפי שם הקובץ, כך שאפשר לבחור את
+       כל פרקי הספר בבת אחת. ההדגשה עובדת גם ככה — התזמונים כבר בדף. */
+    var picked = {};
+    var note   = box.querySelector('.audio-note');
+    var input  = box.querySelector('.audio-pick-input');
+    var pickBtn = box.querySelector('.audio-pick-btn');
+
+    function say(msg) { if (note) note.textContent = msg || ''; }
+
+    /* קישור הורדה שלא מולא עדיין מוסתר מהקורא — אין טעם ב"לחץ כאן" מת.
+       הבדיקה היא על ה-href עצמו, כך שברגע שמדביקים כתובת הוא מופיע לבד. */
+    var dl = box.querySelector('.audio-download');
+    if (dl && (dl.getAttribute('href') || '#') === '#') dl.style.display = 'none';
+
+    function baseName(u) {
+        try { u = decodeURIComponent(u); } catch (e) {}
+        return u.split('/').pop();
+    }
+
+    function srcFor(opt) {
+        return picked[baseName(opt.value)] || opt.value;
+    }
+
+    if (pickBtn && input) {
+        pickBtn.addEventListener('click', function () { input.click(); });
+        input.addEventListener('change', function () {
+            var files = [].slice.call(input.files || []);
+            if (!files.length) return;
+            var names = {};
+            for (var i = 0; i < select.options.length; i++) names[baseName(select.options[i].value)] = true;
+
+            var matched = 0, spare = [];
+            files.forEach(function (f) {
+                if (names[f.name]) { picked[f.name] = URL.createObjectURL(f); matched++; }
+                else spare.push(f);
+            });
+            /* קובץ יחיד בשם אחר — מניחים שהוא של הפרק המוצג */
+            if (!matched && spare.length === 1) {
+                picked[baseName(select.options[select.selectedIndex].value)] = URL.createObjectURL(spare[0]);
+                matched = 1;
+            }
+            say(matched ? 'נטענו ' + matched + ' קבצים מהמחשב.' : 'שמות הקבצים לא תואמים לפרקים.');
+            if (matched) load(select.selectedIndex, true);
+        });
+    }
+
+    /* הקובץ לא נמצא בנתיב היחסי — מכוונים להורדה ולבחירה ידנית */
+    audio.addEventListener('error', function () {
+        if (!audio.getAttribute('src')) return;
+        say('קובץ השמע לא נמצא לצד הדף. הורד אותו ואז בחר אותו כאן.');
+    });
+
+    /* ---------- ניווט בין פרקים ---------- */
+    function load(i, autoplay) {
+        var opt = select.options[i];
+        if (!opt) return;
+        select.selectedIndex = i;
+        seg = opt.getAttribute('data-seg');
+        clearHighlight();
+        audio.src = srcFor(opt);
+        try { localStorage.setItem(KEY, String(i)); } catch (e) {}
+        if (autoplay) {
+            var p = audio.play();
+            /* דפדפן שחוסם ניגון אוטומטי זורק — לא נשאיר Promise תלוי */
+            if (p && p.catch) p.catch(function () {});
+        }
+    }
+
+    select.addEventListener('change', function () { load(select.selectedIndex, true); });
+
+    /* סיום פרק — מנקה הדגשה וממשיך לבא אחריו מעצמו, כמו בהקראה החיה.
+       (השהיה לעומת זאת משאירה את ההדגשה — היא מסמנת איפה עצרנו.) */
+    audio.addEventListener('ended', function () {
+        clearHighlight();
+        if (select.selectedIndex < select.options.length - 1) {
+            load(select.selectedIndex + 1, true);
+        } else {
+            try { localStorage.removeItem(KEY); } catch (e) {}
+        }
+    });
+
+    /* חוזרים לפרק שבו עצרנו — בלי לנגן מעצמו */
+    var saved = 0;
+    try { saved = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (e) {}
+    if (saved < 0 || saved >= select.options.length) saved = 0;
+    load(saved, false);
+})();
+
+</script></body>
+</html>
