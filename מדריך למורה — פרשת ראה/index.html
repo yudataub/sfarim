@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="torah-html-article 2.7.0">
+<title>מדריך למורה — רעיונות חינוכיים לפרשת ראה</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px;
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #1f2937; line-height: 1.8;
+  }
+  .container {
+    max-width: 900px; margin: 0 auto; background: #fffefc;
+    border-radius: 18px; padding: 60px 80px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  }
+  h1.main-title {
+    font-size: 2.6em; font-weight: 800; text-align: center; margin-bottom: 6px;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .subtitle { text-align: center; font-size: 1.2em; color: #6b21a8; margin-bottom: 4px; }
+  .author { text-align: center; color: #555; margin-bottom: 30px; font-size: 1.05em; }
+  h2 {
+    font-size: 1.9em; color: #7e22ce; border-right: 6px solid #7e22ce;
+    padding-right: 20px; margin-top: 55px; margin-bottom: 18px;
+  }
+  h2 .chnum { font-size: 0.55em; display: block; color: #ec4899; font-weight: 600; margin-bottom: 4px; }
+  h3 { font-size: 1.4em; color: #2563eb; margin-top: 30px; }
+  h4 { font-size: 1.2em; color: #059669; }
+  p, li { font-size: 1.08em; line-height: 1.8; }
+  .verse-box {
+    background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    border: 2px solid #a78bfa; border-radius: 14px; padding: 26px 30px;
+    font-size: 1.18em; text-align: center; line-height: 2.1; margin: 20px 0 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  }
+  .verse-box .ref { display:block; font-size: 0.6em; color:#7e22ce; font-weight:700; margin-bottom:10px; }
+  .hl {
+    background: linear-gradient(135deg,#fde68a,#fbbf24); padding: 1px 6px; border-radius: 5px;
+    font-weight: 800; color: #7c2d12;
+  }
+  .highlight-box {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    border-right: 6px solid #2563eb; border-radius: 12px; padding: 22px 26px; margin: 18px 0;
+  }
+  .quote-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-right: 6px solid #f59e0b; border-radius: 12px; padding: 22px 26px; margin: 18px 0; font-style: italic;
+  }
+  .story-box {
+    background: linear-gradient(135deg, #dcfce7 0%, #f0fdf4 100%);
+    border-right: 6px solid #059669; border-radius: 12px; padding: 22px 26px; margin: 18px 0;
+  }
+  .qa-box {
+    background: #fdf4ff; border: 2px dashed #ec4899; border-radius: 12px; padding: 20px 26px; margin: 18px 0;
+  }
+  .two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 18px 0; }
+  .col-purple { background: linear-gradient(135deg,#f3e8ff,#fae8ff); border-radius: 12px; padding:18px 20px; border-right:5px solid #7e22ce;}
+  .col-gold { background: linear-gradient(135deg,#fef9c3,#fde68a); border-radius: 12px; padding:18px 20px; border-right:5px solid #f59e0b;}
+  @media (max-width: 700px) { .two-columns { grid-template-columns: 1fr; } }
+  .toolbox-item { background:#fff; border:2px solid #d8b4fe; border-radius:10px; padding:14px 18px; margin:10px 0; }
+  .toolbox-item b { color:#7e22ce; }
+  .checklist { background:#f3f4f6; border-radius:12px; padding:18px 26px; margin-top:20px; }
+  .checklist li { list-style:none; margin-bottom:6px; }
+  .checklist li:before { content:"☐ "; color:#7e22ce; font-weight:700; }
+  .section-divider {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    color:#fff; text-align:center; padding:14px; border-radius:10px; font-weight:700; font-size:1.2em; margin:45px 0 25px;
+  }
+  .toc { background:#f5f0ff; border:2px solid #d8b4fe; border-radius:14px; padding:24px 30px; margin:30px 0; }
+  .toc h3 { margin-top:0; color:#7e22ce; }
+  .toc ul { columns:2; -webkit-columns:2; margin:0; padding-right:20px; }
+  .toc li { margin-bottom:6px; }
+  .toc a { color:#4c1d95; text-decoration:none; }
+  .toc a:hover { text-decoration:underline; }
+  .taub-banner {
+    background: linear-gradient(135deg,#7e22ce,#ec4899,#f59e0b);
+    border-radius:16px; padding:3px; margin:30px 0;
+  }
+  .taub-banner-inner { background:#fff; border-radius:13px; padding:22px 26px; text-align:center; }
+  .taub-banner-inner a {
+    display:inline-block; margin-top:10px; padding:10px 22px; border-radius:30px;
+    background:linear-gradient(135deg,#7e22ce,#ec4899); color:#fff; font-weight:700; text-decoration:none;
+  }
+  .sources { background:#f3f4f6; border-radius:12px; padding:22px 28px; margin-top:40px; font-size:0.95em; color:#374151;}
+  .footer { text-align:center; margin-top:50px; padding-top:30px; border-top:2px solid #e5e7eb; color:#4b5563; }
+  .scroll-top {
+    position:fixed; bottom:25px; left:25px; width:46px; height:46px; border-radius:50%;
+    background:linear-gradient(135deg,#7e22ce,#ec4899); color:#fff; display:flex; align-items:center; justify-content:center;
+    text-decoration:none; font-size:1.3em; box-shadow:0 4px 12px rgba(0,0,0,0.25); opacity:0; transition:opacity .3s;
+  }
+  .anchor-icon { color:#f59e0b; font-weight:700; }
+  @media print {
+    @page { size: A4 portrait; margin: 18mm 16mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background:#fff !important; padding:0 !important; font-size:11pt; }
+    .container { max-width:100% !important; padding:0 !important; box-shadow:none !important; }
+    .scroll-top { display:none !important; }
+    h2 { page-break-before: always; break-before: page; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box, .toolbox-item {
+      page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size:24pt !important; -webkit-text-fill-color:#4a0080 !important; background:none !important; }
+    h2 { font-size:15pt !important; } h3 { font-size:12.5pt !important; } p, li { font-size:10.5pt !important; }
+    .footer { page-break-before: always; break-before: page; }
+    [style*="display: flex"], [style*="display: grid"] { display:block !important; }
+  }
+
+  /* ---------- סרגל ההאזנה (נוסף אוטומטית) ---------- */
+  :root{
+    --lb-purple:#7e22ce; --lb-blue:#2563eb; --lb-green:#059669;
+    --lb-gold:#f59e0b; --lb-pink:#ec4899; --lb-muted:#6b7280;
+    --fs: 1;
+  }
+  .listen-bar{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid var(--lb-gold);
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+  }
+  .listen-btn-group{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .listen-btn{
+    display:flex; align-items:center; gap:8px;
+    background:linear-gradient(135deg, var(--lb-purple) 0%, var(--lb-pink) 100%);
+    color:#fff; border:none; border-radius:30px; padding:10px 22px;
+    font-size:1em; font-weight:bold; font-family:inherit; cursor:pointer;
+    transition:transform .15s, box-shadow .15s;
+  }
+  .listen-btn:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,.3); }
+  .listen-btn:active{ transform:translateY(0); }
+  .listen-stop-btn, .listen-skip-btn, .listen-size-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 16px; font-size:.95em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .listen-skip-btn{ padding:8px 12px; }
+  .listen-stop-btn:hover, .listen-skip-btn:hover,
+  .listen-size-btn:hover:not(:disabled){ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-size{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-size-btn{ padding:6px 12px; line-height:1; }
+  .listen-size-btn:disabled{ opacity:.35; cursor:default; border-color:#d1d5db; color:var(--lb-muted); }
+  .listen-size-btn.big{ font-size:1.25em; }
+  .listen-size output{ font-weight:bold; min-width:3.4em; text-align:center; }
+  .listen-toggle-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 14px; font-size:.88em; font-weight:bold;
+    font-family:inherit; cursor:pointer; white-space:nowrap;
+    transition:transform .15s, background .15s, opacity .15s;
+  }
+  .listen-toggle-btn:hover{ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-toggle-btn[aria-pressed="false"]{
+    color:var(--lb-muted); border-color:#d1d5db; background:#f9fafb; opacity:.8;
+  }
+  .listen-toggle-btn:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+  .listen-skip-btn:focus-visible, .listen-size-btn:focus-visible,
+  .listen-voice select:focus-visible,
+  .listen-rate input:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-status{ font-size:.95em; color:#78350f; flex:1 1 200px; }
+  .listen-progress{ font-size:.9em; color:#78350f; font-weight:bold; white-space:nowrap; }
+  .listen-rate, .listen-voice{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-rate input{ accent-color:var(--lb-purple); }
+  .listen-rate output{ font-weight:bold; min-width:2.6em; }
+  .listen-voice select{
+    border-radius:20px; border:1px solid var(--lb-gold); padding:4px 10px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:190px;
+  }
+  .tts-clickable{ cursor:pointer; transition:background .2s; border-radius:6px; }
+  .tts-clickable:hover{ background:rgba(245,158,11,.10); }
+  .reading-highlight{
+    background:linear-gradient(135deg,#e0e7ff 0%,#fce7f3 100%); border-radius:8px;
+    box-shadow:0 0 0 3px var(--lb-pink) inset; transition:background .3s;
+    padding-right:14px; padding-left:14px;
+    margin-right:-14px; margin-left:-14px;
+  }
+  .audio-player{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid #f59e0b;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  }
+  .audio-player-title{ font-size:1.05em; font-weight:bold; color:#92400e; flex:1 1 100%;}
+  .audio-player audio{ flex:1 1 260px; min-width:220px; height:40px;}
+  .audio-chapter-select{
+    border-radius:20px; border:1px solid #f59e0b; padding:6px 12px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:260px;
+  }
+  .audio-get{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; flex:1 1 100%;}
+  .audio-download{
+    display:inline-flex; align-items:center; gap:6px;
+    background:linear-gradient(135deg,#7e22ce 0%,#ec4899 100%);
+    color:#fff; text-decoration:none; border-radius:30px; padding:8px 18px;
+    font-size:0.95em; font-weight:bold; transition:transform .15s, box-shadow .15s;
+  }
+  .audio-download:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,0.3);}
+  .audio-pick-btn{
+    background:#fff; color:#7e22ce; border:2px solid #7e22ce;
+    border-radius:30px; padding:7px 16px; font-size:0.9em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .audio-pick-btn:hover{ transform:translateY(-2px); background:#f3e8ff;}
+  .audio-note{ font-size:0.9em; color:#92400e;}
+  h2.reading-highlight{ padding-right:34px; }
+  @media(max-width:768px){
+    .listen-bar{ padding:15px; gap:10px; }
+    .listen-status{ flex:1 1 100%; }
+    .listen-voice select{ max-width:140px; }
+  }
+  @media print{
+    .listen-bar{ display:none !important; }
+    .audio-player { display: none !important; }
+    .reading-highlight{ box-shadow:none !important; background:none !important; }
+    .tts-clickable{ cursor:auto; }
+  }
+  /* fs scaling for plain body paragraphs/list items, applied additively so it
+     doesn't fight whatever base font-size the article already declares */
+  .container p, .container li{ font-size: calc(1em * var(--fs)); }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 data-a="01-0" class="main-title" id="top">מדריך למורה — פרשת ראה</h1>
+  <div class="subtitle">רעיונות חינוכיים לפי סדר הפרשה, לכיתה ו' — אהבת ה', שמחה והכרת הטוב</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+
+  <div class="listen-bar">
+      <div class="listen-btn-group">
+          <button class="listen-btn" id="listenBtn" onclick="toggleListen()" aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן למאמר</button>
+          <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+          <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+          <button class="listen-skip-btn" onclick="skipListen(1)" aria-label="פסקה הבאה" title="פסקה הבאה">⏭</button>
+          <button class="listen-skip-btn" onclick="skipChapter(1)" aria-label="פרק הבא" title="פרק הבא">⏩</button>
+          <button class="listen-stop-btn" onclick="stopListen()" aria-label="עצור הקראה">⏹ עצור</button>
+          <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()" aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+      </div>
+      <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+      <span class="listen-progress" id="listenProgress"></span>
+      <div class="listen-rate">
+          <label for="rateRange">מהירות:</label>
+          <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1" oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)" aria-label="מהירות הקראה">
+          <output id="rateValue" for="rateRange">1.0×</output>
+      </div>
+      <div class="listen-voice">
+          <label for="voiceSelect">קול:</label>
+          <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+      </div>
+      <div class="listen-size">
+          <span>גודל טקסט:</span>
+          <button class="listen-size-btn" id="fontSmaller" onclick="setFontScale(-1)" aria-label="הקטן את הטקסט" title="הקטן את הטקסט">א−</button>
+          <output id="fontScaleValue">100%</output>
+          <button class="listen-size-btn big" id="fontBigger" onclick="setFontScale(1)" aria-label="הגדל את הטקסט" title="הגדל את הטקסט">א+</button>
+      </div>
+  </div><div class="audio-player no-tts">
+    <div class="audio-player-title">🎧 האזנה להקלטה — קול הילה</div>
+    <select class="audio-chapter-select" aria-label="בחירת פרק להאזנה" hidden>
+        <option value="audio/%D7%9E%D7%93%D7%A8%D7%99%D7%9A_%D7%9C%D7%9E%D7%95%D7%A8%D7%94_%D7%A8%D7%A2%D7%99%D7%95%D7%A0%D7%95%D7%AA_%D7%A4%D7%A8%D7%A9%D7%AA_%D7%A8%D7%90%D7%94_%D7%94%D7%A8%D7%91_%D7%99%D7%94%D7%95%D7%93%D7%94_%D7%98%D7%90%D7%95%D7%91.mp3" data-seg="01">פתיחה ארגז הכלים הקבוע של המורה · פרק 1 · דברים יא, כו-לברְאֵה אָנֹכִי נֹתֵן לִפְנֵיכֶם הַיּוֹם בְּרָכָה וּקְלָלָה · פרק 2 · דברים יב, א-זאֵלֶּה הַחֻקִּים וְהַמִּשְׁפָּטִים · פרק 3 · דברים יב, ח-ידהַמָּקוֹם אֲשֶׁר יִבְחַר השם · פרק 4 · דברים יב, טו-כא (ראשית)בְּכָל אַוַּת נַפְשְׁךָ תִּזְבַּח · פרק 5 · דברים יב, כא-כחרַק חֲזַק לְבִלְתִּי אֲכֹל הַדָּם · פרק 6 · דברים יא, כט-לא + יג, א-דכִּי יַכְרִית השם. . . וְנָבִיא הַשֶּׁקֶר · פרק 7 · דברים יג, ה-יאַחֲרֵי השם אֱלֹהֵיכֶם תֵּלֵכוּ · פרק 8 · דברים יג, יא-יחעִיר הַנִּדַּחַת · פרק 9 · דברים יג, יט - יד, זבָּנִים אַתֶּם לַהשם אֱלֹהֵיכֶם · פרק 10 · דברים יד, ח-כאמַאֲכָלוֹת אֲסוּרוֹת וּמֻתָּרוֹת · פרק 11 · דברים יד, כב-כזעַשֵּׂר תְּעַשֵּׂר · פרק 12 · דברים יד, כח - טו, המַעֲשַׂר עָנִי וּשְׁמִטַּת כְּסָפִים · פרק 13 · דברים טו, ו-יאפָּתֹחַ תִּפְתַּח אֶת יָדְךָ · פרק 14 · דברים טו, יב-יטעֶבֶד עִבְרִי וּבְכוֹר בְּהֵמָה · פרק 15 · דברים טו, יט - טז, דקָרְבַּן פֶּסַח וְחַג הַמַּצּוֹת · פרק 16 · דברים טז, ה-יאחַג הַשָּׁבֻעוֹת וְהָעֲלִיָּה לָרֶגֶל · פרק 17 · דברים טז, יב-יזחַג הַסֻּכּוֹת, וְהָיִיתָ אַךְ שָׂמֵחַ</option>
+    </select>
+    <audio controls preload="none"></audio>
+    <div class="audio-get">
+        <a class="audio-download" href="#" data-download-placeholder="" target="_blank" rel="noopener">📥 להורדת קובץ השמיעה לחץ כאן</a>
+        <button type="button" class="audio-pick-btn">📂 בחר את הקובץ שהורדת</button>
+        <input type="file" class="audio-pick-input" accept="audio/*" multiple hidden>
+        <span class="audio-note"></span>
+    </div>
+</div>
+
+  <div class="toc">
+    <h3>📑 תוכן העניינים</h3>
+    <ul>
+      <li><a href="#toolbox">🧰 ארגז הכלים הקבוע של המורה</a></li>
+      <li><a href="#s1">פרק 1 — רְאֵה אָנֹכִי נֹתֵן (יא, כו-לב)</a></li>
+      <li><a href="#s2">פרק 2 — אֵלֶּה הַחֻקִּים (יב, א-ז)</a></li>
+      <li><a href="#s3">פרק 3 — הַמָּקוֹם אֲשֶׁר יִבְחַר (יב, ח-יד)</a></li>
+      <li><a href="#s4">פרק 4 — בְּכָל אַוַּת נַפְשְׁךָ (יב, טו-כא)</a></li>
+      <li><a href="#s5">פרק 5 — רַק חֲזַק לְבִלְתִּי (יב, כא-כח)</a></li>
+      <li><a href="#s6">פרק 6 — כִּי יַכְרִית / נָבִיא שֶׁקֶר (יא, כט - יג, ד)</a></li>
+      <li><a href="#s7">פרק 7 — אַחֲרֵי ה' תֵּלֵכוּ (יג, ה-י)</a></li>
+      <li><a href="#s8">פרק 8 — עִיר הַנִּדַּחַת (יג, יא-יח)</a></li>
+      <li><a href="#s9">פרק 9 — בָּנִים אַתֶּם (יג, יט - יד, ז)</a></li>
+      <li><a href="#s10">פרק 10 — מַאֲכָלוֹת אֲסוּרוֹת (יד, ח-כא)</a></li>
+      <li><a href="#s11">פרק 11 — עַשֵּׂר תְּעַשֵּׂר (יד, כב-כז)</a></li>
+      <li><a href="#s12">פרק 12 — מַעֲשַׂר עָנִי וּשְׁמִטָּה (יד, כח - טו, ה)</a></li>
+      <li><a href="#s13">פרק 13 — פָּתֹחַ תִּפְתַּח (טו, ו-יא)</a></li>
+      <li><a href="#s14">פרק 14 — עֶבֶד עִבְרִי וּבְכוֹר (טו, יב-יט)</a></li>
+      <li><a href="#s15">פרק 15 — קָרְבָּן פֶּסַח (טו, יט - טז, ד)</a></li>
+      <li><a href="#s16">פרק 16 — שָׁבוּעוֹת וְעֲלִיָּה לָרֶגֶל (טז, ה-יא)</a></li>
+      <li><a href="#s17">פרק 17 — סֻכּוֹת וְאַךְ שָׂמֵחַ (טז, יב-יז)</a></li>
+      <li><a href="#sources">📚 מקורות</a></li>
+    </ul>
+  </div>
+
+  <div class="taub-banner">
+    <div class="taub-banner-inner">
+      <div style="font-size:1.3em;">🎲 עוד אתרים ומשחקים תורניים לפרשת השבוע</div>
+      <div style="margin-top:6px;">אוסף אתרים נוסף של הרב יהודה טאוב — משחקים, פעילויות וחומרי העשרה לפי סדר הפרשה</div>
+      <a href="https://sites.google.com/view/yuda-taub-parashat-hashavua/אתרים-נוספים-למשחקים" target="_blank">🔗 לאתרים הנוספים למשחקים</a>
+    </div>
+  </div>
+
+  <h2 data-a="01-1" id="toolbox"><span class="chnum">פתיחה</span>🧰 ארגז הכלים הקבוע של המורה</h2>
+  <p data-a="01-2">לפני שנצא למסע לאורך פרשת ראה, הנה שישה "כלים" פדגוגיים שחוזרים שוב ושוב לאורך המקורות. בכל מקום בהמשך הספר שהכלי חוזר, יופיע סימון 🧰 קצר בלבד — כדי לא לשכפל את ההסבר המלא פעמיים-עשרה.</p>
+
+  <div class="toolbox-item">
+    <b>1. 🧰 פנקס הודיה</b> — כל תלמיד כותב/אומר בכל יום 2-3 דברים שהוא מודה עליהם לה'. הרגל יומי שהופך הכרת טוב לטבע שני.
+  </div>
+  <div class="toolbox-item">
+    <b>2. 🧰 משל הנעליים (הגרש"ז אוירבך זצ"ל)</b> — ילד שאל למה יש כל כך הרבה מצוות. השיב הרב: ממילא אתה נועל שתי נעליים בזו אחר זו — אז ה' "צירף" מצווה גם לפעולה הפשוטה (ימין קודם), כדי לזכות אותנו בעוד שכר על מה שאנחנו ממילא עושים.
+  </div>
+  <div class="toolbox-item">
+    <b>3. 🧰 משל ה-GPS</b> — המצוות הן כמו מכשיר ניווט. היעד המוזן במכשיר הוא "אהבת ה'", והחוקים והמשפטים הם המסלול הבטוח שמוביל אליו.
+  </div>
+  <div class="toolbox-item">
+    <b>4. 🧰 עין טובה מול עין רעה</b> — אברהם אבינו הביט בעולם ב"עין טובה" וראה תמיד את הברכה; המן הרשע הביט ב"עין רעה" וראה תמיד את החיסרון. הבחירה במבט שלנו קובעת אם נהיה שמחים.
+  </div>
+  <div class="toolbox-item">
+    <b>5. 🧰 משל אלף השקלים</b> — מישהו נותן לנו 1,000 ש"ח במתנה ומבקש שנעביר ממנה 100 ש"ח לעני שהוא אוהב. איש לא ייתן את ה-100 בעצבות — קיבלנו הרבה יותר משהתבקשנו לתת.
+  </div>
+  <div class="toolbox-item">
+    <b>6. 🧰 "חַג ה' לָנוּ"</b> — פרעה אמר למשה "לְכוּ נָא הַגְּבָרִים וְעִבְדוּ אֶת ה'" (בלי ילדים), ומשה השיב: "בִּנְעָרֵינוּ וּבִזְקֵנֵינוּ נֵלֵךְ... כִּי חַג ה' לָנוּ". עבודת ה' היא חגיגת משפחה, לא עול למבוגרים בלבד.
+  </div>
+
+  <div class="section-divider">📖 המסע לאורך הפרשה</div>
+
+  <!-- ===== CHAPTER 1 ===== -->
+  <h2 data-a="01-3" id="s1"><span class="chnum">פרק 1 · דברים יא, כו-לב</span>רְאֵה אָנֹכִי נֹתֵן לִפְנֵיכֶם הַיּוֹם בְּרָכָה וּקְלָלָה</h2>
+  <div class="verse-box">
+    <p data-a="01-4"><span class="ref">דברים יא, כו-לב</span>
+    <span class="hl">רְאֵה</span> אָנֹכִי נֹתֵן לִפְנֵיכֶם <span class="hl">הַיּוֹם</span> בְּרָכָה וּקְלָלָה: אֶת הַבְּרָכָה <span class="hl">אֲשֶׁר תִּשְׁמְעוּ</span> אֶל מִצְוֹת ה' אֱלֹהֵיכֶם אֲשֶׁר אָנֹכִי מְצַוֶּה אֶתְכֶם הַיּוֹם: וְ<span class="hl">הַקְּלָלָה אִם לֹא תִשְׁמְעוּ</span> אֶל מִצְוֹת ה' אֱלֹהֵיכֶם וְסַרְתֶּם מִן הַדֶּרֶךְ אֲשֶׁר אָנֹכִי מְצַוֶּה אֶתְכֶם הַיּוֹם לָלֶכֶת אַחֲרֵי אֱלֹהִים אֲחֵרִים אֲשֶׁר לֹא יְדַעְתֶּם: וְהָיָה כִּי יְבִיאֲךָ ה' אֱלֹהֶיךָ אֶל הָאָרֶץ אֲשֶׁר אַתָּה בָא שָׁמָּה לְרִשְׁתָּהּ וְנָתַתָּה אֶת <span class="hl">הַבְּרָכָה עַל הַר גְּרִזִּים וְאֶת הַקְּלָלָה עַל הַר עֵיבָל</span>: הֲלֹא הֵמָּה בְּעֵבֶר הַיַּרְדֵּן אַחֲרֵי דֶּרֶךְ מְבוֹא הַשֶּׁמֶשׁ בְּאֶרֶץ הַכְּנַעֲנִי הַיּשֵׁב בָּעֲרָבָה מוּל הַגִּלְגָּל אֵצֶל אֵלוֹנֵי מֹרֶה: כִּי אַתֶּם עֹבְרִים אֶת הַיַּרְדֵּן לָבֹא לָרֶשֶׁת אֶת הָאָרֶץ אֲשֶׁר ה' אֱלֹהֵיכֶם נֹתֵן לָכֶם וִ<span class="hl">ירִשְׁתֶּם אֹתָהּ וִישַׁבְתֶּם בָּהּ</span>: וּשְׁמַרְתֶּם לַעֲשׂוֹת אֵת כָּל הַחֻקִּים וְאֶת הַמִּשְׁפָּטִים אֲשֶׁר אָנֹכִי נֹתֵן לִפְנֵיכֶם הַיּוֹם.</p>
+  </div>
+
+  <h3 data-a="01-5">1. "רְאֵה" — הבחירה במשקפיים שדרכם מסתכלים על החיים</h3>
+  <p data-a="01-6">הפרשה נפתחת במילה "רְאֵה" בלשון יחיד, אף שממשיכה מיד "לִפְנֵיכֶם" בלשון רבים — התורה פונה לכל ילד וילדה באופן אישי. אותה מציאות אפשר לראות דרך "עין טובה" (🧰 עין טובה מול עין רעה) שרואה ברכה, או דרך "עין רעה" שרואה תמיד חיסרון.</p>
+  <div class="highlight-box"><b>יישום בכיתה:</b> לבקש מהתלמידים לכתוב או להגיד בקול 3 דברים טובים שהם "רואים" היום בחייהם — תרגול קצר של "עין טובה".</div>
+
+  <h3 data-a="01-7">2. "אֲשֶׁר תִּשְׁמְעוּ" מול "אִם לֹא תִשְׁמְעוּ" — אמון מלא</h3>
+  <p data-a="01-8">בפסוק הברכה נכתב "אֲשֶׁר תִּשְׁמְעוּ" — לשון ודאות, ואילו בקללה נכתב "אִם לֹא תִשְׁמְעוּ" — לשון של אפשרות רחוקה בלבד. ההבדל הדקדוקי הזה מלמד שה' מאמין בנו ובטוח שנבחר בטוב, ולא מנסה להפחיד.</p>
+
+  <div class="two-columns">
+    <div class="col-purple"><h4 data-a="01-9" style="margin-top:0;">הר גְּרִזִּים — הברכה</h4><p data-a="01-10">ה' מבקש לתת את הברכה על הר גדול ובולט, שרואים אותו למרחוק — אהבת ה' צריכה להיות "הר" גלוי לעין כול.</p></div>
+    <div class="col-gold"><h4 data-a="01-11" style="margin-top:0;">הר עֵיבָל — הקללה</h4><p data-a="01-12">דווקא בהר הקללה נצטווינו בהמשך חומש דברים להקים מזבח ולשמוח — כי אהבת ה' האמיתית מתגלה גם כשיש קושי, לא רק כשהכול חלק.</p></div>
+  </div>
+
+  <h3 data-a="01-13">3. "וִירִשְׁתֶּם... וִישַׁבְתֶּם" — להרגיש בבית של אבא</h3>
+  <p data-a="01-14">המילה "וירשתם" (ירושה) מלמדת על קשר משפחתי — ירושה מקבלים מאבא. התורה בכוונה לא כתבה רק "תכבשו", אלא "תירשו": ארץ ישראל היא לא סתם כיבוש, אלא ירושת בית מאבא אוהב, וממילא גם "הַחֻקִּים וְהַמִּשְׁפָּטִים" שמופיעים מיד לאחר מכן הם כללי הבית של אבא, לא חוקי מלך זר.</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-15">לסמן על הלוח את המילה "הַיּוֹם" ולדבר על התחדשות יומיומית.</li>
+      <li data-a="01-16">להשוות "אֲשֶׁר" מול "אִם" — ולהראות איך ה' מאמין בנו.</li>
+      <li data-a="01-17">לצייר שני הרים — ולדבר על שמחה גם בהר הקושי.</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 2 ===== -->
+  <h2 data-a="01-18" id="s2"><span class="chnum">פרק 2 · דברים יב, א-ז</span>אֵלֶּה הַחֻקִּים וְהַמִּשְׁפָּטִים</h2>
+  <div class="verse-box">
+    <p data-a="01-19"><span class="ref">דברים יב, א-ז</span>
+    אֵלֶּה הַחֻקִּים וְהַמִּשְׁפָּטִים אֲשֶׁר תִּשְׁמְרוּן לַעֲשׂוֹת בָּאָרֶץ <span class="hl">אֲשֶׁר נָתַן ה' אֱלֹהֵי אֲבֹתֶיךָ לְךָ</span> לְרִשְׁתָּהּ... אַבֵּד תְּאַבְּדוּן אֶת כָּל הַמְּקֹמוֹת אֲשֶׁר עָבְדוּ שָׁם הַגּוֹיִם... תַּחַת כָּל עֵץ רַעֲנָן... לֹא תַעֲשׂוּן כֵּן לַה' אֱלֹהֵיכֶם: כִּי אִם אֶל הַמָּקוֹם אֲשֶׁר יִבְחַר ה' אֱלֹהֵיכֶם... <span class="hl">לְשִׁכְנוֹ תִדְרְשׁוּ וּבָאתָ שָׁמָּה</span>: וַהֲבֵאתֶם שָׁמָּה עֹלֹתֵיכֶם וְזִבְחֵיכֶם... וַ<span class="hl">אֲכַלְתֶּם שָׁם לִפְנֵי ה' אֱלֹהֵיכֶם וּשְׂמַחְתֶּם</span> בְּכֹל מִשְׁלַח יֶדְכֶם אַתֶּם וּבָתֵּיכֶם <span class="hl">אֲשֶׁר בֵּרַכְךָ ה' אֱלֹהֶיךָ</span>.</p>
+  </div>
+
+  <h3 data-a="01-20">1. "אֲשֶׁר נָתַן... לְךָ" — מתנה חדשה, לא ירושה מהעבר</h3>
+  <p data-a="01-21">הפסוק מזכיר שה' נתן את הארץ לאבותינו, אך מוסיף מיד את המילה "לְךָ" — כדי שכל ילד וילדה ירגישו שהמתנה ניתנת להם באופן אישי, ממש היום, ולא כמשהו "ישן" שירשו מהעבר.</p>
+
+  <h3 data-a="01-22">2. "לְשִׁכְנוֹ תִדְרְשׁוּ" — לחפש את ה' מתוך תשוקה</h3>
+  <p data-a="01-23">לעומת הגויים שעבדו "תַּחַת כָּל עֵץ רַעֲנָן" — איפה שנוח, מתוך הרגל — התורה מצווה "לְשִׁכְנוֹ תִדְרְשׁוּ": לחפש ולבקש את הקרבה לה' באופן אקטיבי, כמו מי שמחפש אוצר.</p>
+  <div class="story-box">בורא עולם אינו "כספומט" למשאלות; הוא אבא שמחכה שנרצה להתקרב אליו. המילה "תדרשו" מלמדת חיפוש מתמשך, לא סימון חובה.</div>
+
+  <h3 data-a="01-24">3. "וַאֲכַלְתֶּם... וּשְׂמַחְתֶּם... אֲשֶׁר בֵּרַכְךָ" — סוד השמחה שבהודיה</h3>
+  <p data-a="01-25">איך אפשר "לצוות" על שמחה? התשובה נמצאת בהמשך הפסוק עצמו: "אֲשֶׁר בֵּרַכְךָ". השמחה מגיעה כשמתבוננים במה שה' כבר נתן ומודים עליו — האכילה הפשוטה הופכת ל"לִפְנֵי ה'" כשהיא מלווה בהודיה.</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-26">למצוא בפסוקים את מילות השמחה והמתנה.</li>
+      <li data-a="01-27">לדון: איך תחושת "מתנה" משנה את היחס לנותן?</li>
+      <li data-a="01-28">לתת משימה: לעצור לפני ארוחה ולהודות על הטעם.</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 3 ===== -->
+  <h2 data-a="01-29" id="s3"><span class="chnum">פרק 3 · דברים יב, ח-יד</span>הַמָּקוֹם אֲשֶׁר יִבְחַר ה'</h2>
+  <div class="verse-box">
+    <p data-a="01-30"><span class="ref">דברים יב, ח-יד</span>
+    לֹא תַעֲשׂוּן כְּכֹל אֲשֶׁר אֲנַחְנוּ עֹשִׂים פֹּה הַיּוֹם אִישׁ כָּל הַיָּשָׁר בְּעֵינָיו: כִּי לֹא בָאתֶם עַד עָתָּה אֶל <span class="hl">הַמְּנוּחָה וְאֶל הַנַּחֲלָה</span> אֲשֶׁר ה' אֱלֹהֶיךָ נֹתֵן לָךְ: וַעֲבַרְתֶּם אֶת הַיַּרְדֵּן וִישַׁבְתֶּם בָּאָרֶץ... וְהֵנִיחַ לָכֶם מִכָּל אֹיְבֵיכֶם מִסָּבִיב וִישַׁבְתֶּם בֶּטַח: וְהָיָה הַמָּקוֹם אֲשֶׁר יִבְחַר ה' אֱלֹהֵיכֶם בּוֹ... שָׁמָּה תָבִיאוּ אֵת כָּל אֲשֶׁר אָנֹכִי מְצַוֶּה אֶתְכֶם... וְ<span class="hl">כֹל מִבְחַר נִדְרֵיכֶם</span> אֲשֶׁר תִּדְּרוּ לַה': וּ<span class="hl">שְׂמַחְתֶּם לִפְנֵי ה' אֱלֹהֵיכֶם אַתֶּם וּבְנֵיכֶם וּבְנֹתֵיכֶם</span> וְעַבְדֵיכֶם וְאַמְהֹתֵיכֶם וְ<span class="hl">הַלֵּוִי אֲשֶׁר בְּשַׁעֲרֵיכֶם כִּי אֵין לוֹ חֵלֶק וְנַחֲלָה אִתְּכֶם</span>: הִשָּׁמֶר לְךָ פֶּן תַּעֲלֶה עֹלֹתֶיךָ בְּכָל מָקוֹם אֲשֶׁר תִּרְאֶה: כִּי אִם בַּמָּקוֹם אֲשֶׁר יִבְחַר ה'...</p>
+  </div>
+
+  <h3 data-a="01-31">1. "אֲתֶּם וּבְנֵיכֶם וּבְנֹתֵיכֶם" — הילדים אורחי הכבוד</h3>
+  <p data-a="01-32">למה התורה מדגישה דווקא שהבנים והבנות ישמחו? (🧰 "חג ה' לנו" — פרעה ביקש "לְכוּ נָא הַגְּבָרִים" בלי ילדים, ומשה השיב "בִּנְעָרֵינוּ... כִּי חַג ה' לָנוּ"). עבודת ה' היא חגיגת משפחה, לא עול שמור למבוגרים.</p>
+
+  <h3 data-a="01-33">2. "אֶל הַמְּנוּחָה וְאֶל הַנַּחֲלָה" — מתנת אהבה מאבא</h3>
+  <p data-a="01-34">ארץ ישראל מתוארת כאן כ"מנוחה" וכ"נחלה" — לא סתם שטח גיאוגרפי, אלא מתנה אישית ואוהבת. ה"וְהֵנִיחַ לָכֶם... וִישַׁבְתֶּם בֶּטַח" הבא מיד אחריה מלמד שהביטחון ניתן לנו כדי שנוכל להתרכז בקיום המצוות מתוך רוגע ושמחה, לא כדי "שיהיה לנו נוח" גרידא.</p>
+
+  <h3 data-a="01-35">3. "כֹּל מִבְחַר נִדְרֵיכֶם" לעומת "וְהַלֵּוִי... כִּי אֵין לוֹ" — שתי דרכים לאהבת ה'</h3>
+  <p data-a="01-36">מצד אחד "מִבְחַר נִדְרֵיכֶם" — נתינה מרצון ומתוך נדבת לב; מצד שני חובה מפורשת לשתף בשמחה את הלוי חסר הנחלה. אהבת ה' מתבטאת גם בהתנדבות פנימית וגם בדאגה לחלש שלצדנו.</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-37">לשאול: איך אפשר "לשכן שמו שם" בכיתה שלנו?</li>
+      <li data-a="01-38">לבקש מהתלמידים לעשות היום מצווה אחת בחיוך גלוי.</li>
+      <li data-a="01-39">לשוחח על מי ה"לוי" של הכיתה — מי שקצת לבד.</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 4 ===== -->
+  <h2 data-a="01-40" id="s4"><span class="chnum">פרק 4 · דברים יב, טו-כא (ראשית)</span>בְּכָל אַוַּת נַפְשְׁךָ תִּזְבַּח</h2>
+  <div class="verse-box">
+    <p data-a="01-41"><span class="ref">דברים יב, טו-כא</span>
+    רַק בְּכָל אַוַּת נַפְשְׁךָ תִּזְבַּח וְאָכַלְתָּ בָשָׂר <span class="hl">כְּבִרְכַּת ה' אֱלֹהֶיךָ אֲשֶׁר נָתַן לְךָ</span> בְּכָל שְׁעָרֶיךָ... רַק הַדָּם לֹא תֹאכֵלוּ עַל הָאָרֶץ תִּשְׁפְּכֶנּוּ כַּמָּיִם... כִּי אִם לִפְנֵי ה' אֱלֹהֶיךָ תֹּאכְלֶנּוּ בַּמָּקוֹם אֲשֶׁר יִבְחַר ה' אֱלֹהֶיךָ בּוֹ אַתָּה וּבִנְךָ וּבִתֶּךָ וְעַבְדְּךָ וַאֲמָתֶךָ וְהַלֵּוִי אֲשֶׁר בִּשְׁעָרֶיךָ וְ<span class="hl">שָׂמַחְתָּ לִפְנֵי ה' אֱלֹהֶיךָ בְּכֹל מִשְׁלַח יָדֶךָ</span>: הִשָּׁמֶר לְךָ <span class="hl">פֶּן תַּעֲזֹב אֶת הַלֵּוִי</span> כָּל יָמֶיךָ עַל אַדְמָתֶךָ: כִּי <span class="hl">יַרְחִיב ה' אֱלֹהֶיךָ אֶת גְּבֻלְךָ</span>...</p>
+  </div>
+
+  <h3 data-a="01-42">1. "כְּבִרְכַּת ה'... אֲשֶׁר נָתַן לְךָ" — האוכל כמכתב אהבה</h3>
+  <p data-a="01-43">למה קורא הכתוב לבשר "בִּרְכַּת ה'"? ה' יכול היה לברוא מזון תפל שממלא רק אנרגיה, אך העניק טעם וריח כדי שנרגיש דרך ההנאה כמה הוא אוהב אותנו.</p>
+
+  <h3 data-a="01-44">2. "וְשָׂמַחְתָּ לִפְנֵי ה'... בְּכֹל מִשְׁלַח יָדֶךָ" — השמחה היא מצווה שלמה</h3>
+  <p data-a="01-45">לא "בונוס" נחמד, אלא ציווי מפורש. "בְּכֹל מִשְׁלַח יָדֶךָ" מבטיח שהשמחה תלווה כל מה שנעשה בחיים כשהיא נובעת מהכרת הטוב.</p>
+
+  <h3 data-a="01-46">3. "פֶּן תַּעֲזֹב אֶת הַלֵּוִי" — אי אפשר לשמוח לבד</h3>
+  <p data-a="01-47">מיד לאחר ציווי השמחה מגיעה אזהרה מפורשת לא לשכוח את הלוי חסר הנחלה. שמחה אמיתית "לפני ה'" היא שמחה שמשתפים.</p>
+
+  <h3 data-a="01-48">4. "כִּי יַרְחִיב ה'... אֶת גְּבֻלְךָ" — לב מרחיב מזמין הרחבה</h3>
+  <p data-a="01-49">כשלב האדם מתרחב בהכרת הטוב ובשמחה, ה' — כאבא אוהב — מרחיב לו עוד יותר את השפע.</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-50">לחלק פתקי "פנקס הודיה" (🧰) — לרשום ברכה אישית אחת.</li>
+      <li data-a="01-51">לדון: מה ההבדל בין לחטוף אוכל לבין לאכול "לפני ה'"?</li>
+      <li data-a="01-52">למצוא בהפסקה חבר לשתף — "פן תעזוב את הלוי".</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 5 ===== -->
+  <h2 data-a="01-53" id="s5"><span class="chnum">פרק 5 · דברים יב, כא-כח</span>רַק חֲזַק לְבִלְתִּי אֲכֹל הַדָּם</h2>
+  <div class="verse-box">
+    <p data-a="01-54"><span class="ref">דברים יב, כא-כח</span>
+    ...וְ<span class="hl">אָכַלְתָּ בִּשְׁעָרֶיךָ בְּכֹל אַוַּת נַפְשֶׁךָ</span>: אַךְ כַּאֲשֶׁר יֵאָכֵל אֶת הַצְּבִי וְאֶת הָאַיָּל כֵּן תֹּאכְלֶנּוּ... רַק <span class="hl">חֲזַק לְבִלְתִּי אֲכֹל הַדָּם כִּי הַדָּם הוּא הַנָּפֶשׁ</span> וְלֹא תֹאכַל הַנֶּפֶשׁ עִם הַבָּשָׂר... לֹא תֹּאכְלֶנּוּ <span class="hl">לְמַעַן יִיטַב לְךָ וּלְבָנֶיךָ אַחֲרֶיךָ כִּי תַעֲשֶׂה הַיָּשָׁר בְּעֵינֵי ה'</span>: רַק קָדָשֶׁיךָ אֲשֶׁר יִהְיוּ לְךָ וּנְדָרֶיךָ תִּשָּׂא וּבָאתָ אֶל הַמָּקוֹם אֲשֶׁר יִבְחַר ה'... שְׁמֹר וְשָׁמַעְתָּ אֵת כָּל הַדְּבָרִים הָאֵלֶּה... <span class="hl">לְמַעַן יִיטַב לְךָ וּלְבָנֶיךָ אַחֲרֶיךָ עַד עוֹלָם</span> כִּי תַעֲשֶׂה הַטּוֹב וְהַיָּשָׁר בְּעֵינֵי ה' אֱלֹהֶיךָ.</p>
+  </div>
+
+  <h3 data-a="01-55">1. "בְּכֹל אַוַּת נַפְשֶׁךָ" — הנאה כדרך לאהבת ה'</h3>
+  <p data-a="01-56">ה' התיר ליהנות "בכל אוות נפשך" — לא לשרוד בלבד, אלא להתענג. עצירה קטנה לפני האכילה, מתוך מחשבה "מי נתן לי את ההנאה הזו?", הופכת פעולה גשמית לרגע של קרבה.</p>
+
+  <h3 data-a="01-57">2. "רַק חֲזַק לְבִלְתִּי אֲכֹל הַדָּם" — כוח ההתגברות</h3>
+  <p data-a="01-58">למה צריך "חוזק" דווקא כדי להימנע ממשהו שרוב בני האדם ממילא לא מתאווים לו? (🧰 משל הנעליים — למה כל כך הרבה מצוות: ה' "שותל" לנו מצוות גם במקומות קלים, כדי להרעיף עוד ועוד שכר ואהבה).</p>
+
+  <h3 data-a="01-59">3. "לְמַעַן יִיטַב לְךָ" (חוזר פעמיים) — המצוות הן לטובתנו בלבד</h3>
+  <p data-a="01-60">התורה חוזרת פעמיים על אותו ביטוי: המטרה של כל המצוות שקיבלנו היא רק שייטב לנו. (🧰 משל ה-GPS — היעד המוזן הוא "אהבת ה'").</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-61">להדגיש על הלוח: "בכל אוות נפשך", "למען ייטב לך".</li>
+      <li data-a="01-62">לחלק פרי/ממתק ולתרגל עצירה של הודיה לפני האכילה.</li>
+      <li data-a="01-63">לשתף רגע שבו "התגברתי" למען מצווה — קרבן אהבה קטן.</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 6 ===== -->
+  <h2 data-a="01-64" id="s6"><span class="chnum">פרק 6 · דברים יא, כט-לא + יג, א-ד</span>כִּי יַכְרִית ה'... וְנָבִיא הַשֶּׁקֶר</h2>
+  <div class="verse-box">
+    <p data-a="01-65"><span class="ref">דברים יא, כט-לא; יג, א-ד</span>
+    כִּי <span class="hl">יַכְרִית ה' אֱלֹהֶיךָ אֶת הַגּוֹיִם</span> אֲשֶׁר אַתָּה בָא שָׁמָּה לָרֶשֶׁת אוֹתָם מִפָּנֶיךָ וְ<span class="hl">יָרַשְׁתָּ אֹתָם וְיָשַׁבְתָּ בְּאַרְצָם</span>... <span class="hl">לֹא תַעֲשֶׂה כֵן לַה' אֱלֹהֶיךָ כִּי כָל תּוֹעֲבַת ה' אֲשֶׁר שָׂנֵא</span> עָשׂוּ לֵאלֹהֵיהֶם כִּי גַם אֶת בְּנֵיהֶם וְאֶת בְּנֹתֵיהֶם יִשְׂרְפוּ בָאֵשׁ לֵאלֹהֵיהֶם: אֵת כָּל הַדָּבָר אֲשֶׁר אָנֹכִי מְצַוֶּה אֶתְכֶם אֹתוֹ תִשְׁמְרוּ לַעֲשׂוֹת <span class="hl">לֹא תֹסֵף עָלָיו וְלֹא תִגְרַע מִמֶּנּוּ</span>: כִּי יָקוּם בְּקִרְבְּךָ נָבִיא... כִּי <span class="hl">מְנַסֶּה ה' אֱלֹהֵיכֶם אֶתְכֶם לָדַעַת הֲיִשְׁכֶם אֹהֲבִים אֶת ה' אֱלֹהֵיכֶם</span> בְּכָל לְבַבְכֶם וּבְכָל נַפְשְׁכֶם.</p>
+  </div>
+
+  <h3 data-a="01-66">1. "וְיָרַשְׁתָּ אֹתָם וְיָשַׁבְתָּ בְּאַרְצָם" — הכנה של אבא אוהב</h3>
+  <p data-a="01-67">ה' "מכרית את הגויים מפניך" ומכין עבורנו את הארץ, כמו הורה שמכין ומסדר חדר לילדו — הישיבה בארץ היא עצמה ביטוי מתמשך לאהבת ה' אלינו.</p>
+
+  <h3 data-a="01-68">2. "כִּי כָל תּוֹעֲבַת ה' אֲשֶׁר שָׂנֵא" — פחד מול אהבה</h3>
+  <p data-a="01-69">הגויים עבדו מתוך פחד אכזרי; ה' "שונא" זאת. עבודתנו נעשית מתוך שמחה, שירה והכרת טוב — ההפך המוחלט.</p>
+
+  <h3 data-a="01-70">3. "לֹא תֹסֵף... וְלֹא תִגְרַע" — המתכון המדויק</h3>
+  <p data-a="01-71">מי שאוהב מישהו באמת, עושה בדיוק את מה שביקש — לא פחות ולא יותר. הדיוק במצוות מבטא אמון מלא שה' יודע בדיוק מה טוב לנו.</p>
+
+  <h3 data-a="01-72">4. "לָדַעַת הֲיִשְׁכֶם אֹהֲבִים" — מבחן האהבה</h3>
+  <p data-a="01-73">נביא השקר אינו מגיע כדי להכשיל, אלא כדי לחשוף ולהגדיל את האהבה שכבר בתוכנו — הזדמנות לבחור שוב בה'.</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-74">לדון בהבדל בין מתנה שנותנים מפחד למתנה שנותנים מאהבה.</li>
+      <li data-a="01-75">להביא שתי עוגות — מושלמת ואחת "עם תוספת" — להמחשת "לא תוסף".</li>
+      <li data-a="01-76">לצייר "נס" (דגל) גבוה — כל קושי הוא תורן להניף עליו אהבה.</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 7 ===== -->
+  <h2 data-a="01-77" id="s7"><span class="chnum">פרק 7 · דברים יג, ה-י</span>אַחֲרֵי ה' אֱלֹהֵיכֶם תֵּלֵכוּ</h2>
+  <div class="verse-box">
+    <p data-a="01-78"><span class="ref">דברים יג, ה-י</span>
+    <span class="hl">אַחֲרֵי ה' אֱלֹהֵיכֶם תֵּלֵכוּ</span> וְאֹתוֹ תִירָאוּ וְאֶת מִצְוֹתָיו תִּשְׁמֹרוּ וּבְקֹלוֹ תִשְׁמָעוּ וְאֹתוֹ תַעֲבֹדוּ וּ<span class="hl">בוֹ תִדְבָּקוּן</span>: וְהַנָּבִיא הַהוּא... כִּי דִבֶּר סָרָה עַל ה' אֱלֹהֵיכֶם <span class="hl">הַמּוֹצִיא אֶתְכֶם מֵאֶרֶץ מִצְרַיִם וְהַפֹּדְךָ מִבֵּית עֲבָדִים</span>... כִּי יְסִיתְךָ אָחִיךָ בֶן אִמֶּךָ אוֹ בִנְךָ אוֹ בִתְּךָ אוֹ אֵשֶׁת חֵיקֶךָ אוֹ <span class="hl">רֵעֲךָ אֲשֶׁר כְּנַפְשְׁךָ</span> בַּסֵּתֶר לֵאמֹר נֵלְכָה וְנַעַבְדָה אֱלֹהִים אֲחֵרִים... <span class="hl">לֹא תֹאבֶה לוֹ וְלֹא תִשְׁמַע אֵלָיו</span> וְלֹא תָחוֹס עֵינְךָ עָלָיו וְלֹא תַחְמֹל וְלֹא תְכַסֶּה עָלָיו.</p>
+  </div>
+
+  <h3 data-a="01-79">1. "אַחֲרֵי ה'... וּבוֹ תִדְבָּקוּן" — נדבקים במעשים ובמידות</h3>
+  <p data-a="01-80">איך אפשר להידבק בה' הרוחני? על ידי חיקוי מעשיו — כשם שה' נטע גן בעדן, כך אנו יוצרים וטובים; כשם שהוא "חנון ורחום", כך גם אנחנו.</p>
+
+  <h3 data-a="01-81">2. "הַמּוֹצִיא אֶתְכֶם... מִבֵּית עֲבָדִים" — כוחה של הכרת הטוב</h3>
+  <p data-a="01-82">דווקא כאן, באזהרה מפני נביא שקר, מזכירה התורה את יציאת מצרים. זכירת החסד היא המבצר האמיתי נגד כל ניסיון להרחיק אותנו מה'.</p>
+
+  <h3 data-a="01-83">3. "רֵעֲךָ אֲשֶׁר כְּנַפְשְׁךָ" — גבורה מול לחץ חברתי</h3>
+  <p data-a="01-84">התורה מונה דווקא את הקרובים ביותר — אח, בן, בת, החבר הכי טוב. "לֹא תֹאבֶה לוֹ וְלֹא תִשְׁמַע אֵלָיו" הוא ניצחון של אהבת ה' על פני כל לחץ, אפילו מהחבר האהוב ביותר.</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-85">לדבר על מעשי חסד קטנים כ"הליכה אחרי ה'".</li>
+      <li data-a="01-86">לתרגל: לפני מעשה לשאול "האם זה משמח את ה'?"</li>
+      <li data-a="01-87">לדון על עמידה מול חבר שמנסה למשוך למעשה לא טוב.</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 8 ===== -->
+  <h2 data-a="01-88" id="s8"><span class="chnum">פרק 8 · דברים יג, יא-יח</span>עִיר הַנִּדַּחַת</h2>
+  <div class="verse-box">
+    <p data-a="01-89"><span class="ref">דברים יג, יא-יח</span>
+    וּסְקַלְתּוֹ בָאֲבָנִים וָמֵת כִּי בִקֵּשׁ לְהַדִּיחֲךָ מֵעַל ה' אֱלֹהֶיךָ <span class="hl">הַמּוֹצִיאֲךָ מֵאֶרֶץ מִצְרַיִם מִבֵּית עֲבָדִים</span>... כִּי תִשְׁמַע בְּאַחַת עָרֶיךָ <span class="hl">אֲשֶׁר ה' אֱלֹהֶיךָ נֹתֵן לְךָ לָשֶׁבֶת שָׁם</span>... יָצְאוּ אֲנָשִׁים בְּנֵי בְלִיַּעַל... וְ<span class="hl">דָרַשְׁתָּ וְחָקַרְתָּ וְשָׁאַלְתָּ הֵיטֵב</span> וְהִנֵּה אֱמֶת נָכוֹן הַדָּבָר... הַכֵּה תַכֶּה אֶת ישְׁבֵי הָעִיר הַהִוא לְפִי חָרֶב... לְמַעַן יָשׁוּב ה' מֵחֲרוֹן אַפּוֹ וְ<span class="hl">נָתַן לְךָ רַחֲמִים וְרִחַמְךָ וְהִרְבֶּךָ</span> כַּאֲשֶׁר נִשְׁבַּע לַאֲבֹתֶיךָ.</p>
+  </div>
+
+  <h3 data-a="01-90">1. "הַמּוֹצִיאֲךָ מֵאֶרֶץ מִצְרַיִם" — הכרת הטוב כבסיס לאהבה</h3>
+  <p data-a="01-91">למה חוזרת התורה שוב על יציאת מצרים דווקא בהקשר של עונש חמור? כי זכירת החסד היא הבסיס שמונע מאיתנו להיות כפויי טובה.</p>
+
+  <h3 data-a="01-92">2. "אֲשֶׁר ה' אֱלֹהֶיךָ נֹתֵן לְךָ לָשֶׁבֶת שָׁם" — מתנה שאסור להרוס</h3>
+  <p data-a="01-93">העיר עצמה היא חלק ממתנת ארץ ישראל. עיר הנידחת היא טרגדיה של אנשים שהורסים בעצמם מתנה שקיבלו באהבה.</p>
+
+  <h3 data-a="01-94">3. "וְדָרַשְׁתָּ וְחָקַרְתָּ וְשָׁאַלְתָּ הֵיטֵב" — לחקור לפני שפוטטים</h3>
+  <p data-a="01-95">התורה לא מרשה להעניש עיר על סמך שמועה — יש לחקור לעומק. אפשר להפוך את אותה מילה עצמה לכיוון חיובי: לחקור ולחפש דווקא את החסדים שה' עושה איתנו בכל יום.</p>
+
+  <h3 data-a="01-96">4. "וְנָתַן לְךָ רַחֲמִים וְרִחַמְךָ וְהִרְבֶּךָ" — הכל מסתיים ברחמים</h3>
+  <p data-a="01-97">אחרי כל מילות הדין הקשות, הפרשייה מסתיימת במילים הרכות ביותר: רחמים, רחמים, והתרבות. גם מה שנראה קשה נועד בסופו של דבר להיטיב עמנו.</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-98">לשחק "טלפון שבור" — להמחיש למה חוקרים לפני שמאמינים לשמועה.</li>
+      <li data-a="01-99">לכתוב 3 דברים שמודים עליהם לה' (הכרת הטוב מיציאת מצרים).</li>
+      <li data-a="01-100">לדבר על כך שגם דברים שנראים קשים מסתיימים ברחמים.</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 9 ===== -->
+  <h2 data-a="01-101" id="s9"><span class="chnum">פרק 9 · דברים יג, יט - יד, ז</span>בָּנִים אַתֶּם לַה' אֱלֹהֵיכֶם</h2>
+  <div class="verse-box">
+    <p data-a="01-102"><span class="ref">דברים יג, יט - יד, ז</span>
+    כִּי תִשְׁמַע בְּקוֹל ה' אֱלֹהֶיךָ לִשְׁמֹר אֶת כָּל מִצְוֹתָיו... <span class="hl">לַעֲשׂוֹת הַיָּשָׁר בְּעֵינֵי ה' אֱלֹהֶיךָ</span>: <span class="hl">בָּנִים אַתֶּם לַה' אֱלֹהֵיכֶם</span> לֹא תִתְגֹּדְדוּ וְלֹא תָשִׂימוּ קָרְחָה בֵּין עֵינֵיכֶם לָמֵת: כִּי <span class="hl">עַם קָדוֹשׁ אַתָּה לַה' אֱלֹהֶיךָ וּבְךָ בָּחַר ה' לִהְיוֹת לוֹ לְעַם סְגֻלָּה</span> מִכֹּל הָעַמִּים אֲשֶׁר עַל פְּנֵי הָאֲדָמָה... זֹאת הַבְּהֵמָה אֲשֶׁר תֹּאכֵלוּ שׁוֹר שֶׂה כְשָׂבִים וְשֶׂה עִזִּים...</p>
+  </div>
+
+  <h3 data-a="01-103">1. "בָּנִים אַתֶּם" — יחסי אב ובנים, לא אדון ועבד</h3>
+  <p data-a="01-104">הקשר עם ה' הוא של אב רחמן לבנו האהוב, לא של שוטר לאזרח. גם כשיש חוקים שנראים מגבילים (כמו "לֹא תִתְגֹּדְדוּ"), הם מגיעים מאהבת אב.</p>
+
+  <h3 data-a="01-105">2. "עַם קָדוֹשׁ... עַם סְגֻלָּה" — אנחנו היהלום של ה'</h3>
+  <p data-a="01-106">"סְגֻלָּה" — אוצר יקר ערך. מתוך כל העמים בעולם, ה' בחר בנו. הידיעה הזו צריכה למלא בהודיה ובשמחה, לא בגאווה ריקה.</p>
+
+  <h3 data-a="01-107">3. "זֹאת הַבְּהֵמָה אֲשֶׁר תֹּאכֵלוּ" — תפריט של בני מלוכה</h3>
+  <p data-a="01-108">מיד לאחר "בנים אתם" ו"עם סגולה" ממשיכה התורה בפירוט דיני הכשרות — לא בכדי. הכשרות היא תזונה רוחנית מיוחדת לבני המלך, לא רשימת איסורים סתמית.</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-109">לצייר כתר ולכתוב בתוכו "בנים אתם לה' אלהיכם".</li>
+      <li data-a="01-110">לדבר על אהבת הורים ולהשליך על אהבת ה' האינסופית.</li>
+      <li data-a="01-111">להסביר שכשרות היא זכות, לא הפסד.</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 10 ===== -->
+  <h2 data-a="01-112" id="s10"><span class="chnum">פרק 10 · דברים יד, ח-כא</span>מַאֲכָלוֹת אֲסוּרוֹת וּמֻתָּרוֹת</h2>
+  <div class="verse-box">
+    <p data-a="01-113"><span class="ref">דברים יד, ח-כא</span>
+    וְאֶת הַחֲזִיר כִּי מַפְרִיס פַּרְסָה הוּא וְלֹא גֵרָה טָמֵא הוּא לָכֶם... <span class="hl">אֶת זֶה תֹּאכְלוּ מִכֹּל אֲשֶׁר בַּמָּיִם</span> כֹּל אֲשֶׁר לוֹ סְנַפִּיר וְקַשְׂקֶשֶׂת תֹּאכֵלוּ... <span class="hl">כָּל צִפּוֹר טְהֹרָה תֹּאכֵלוּ</span>: וְזֶה אֲשֶׁר לֹא תֹאכְלוּ מֵהֶם הַנֶּשֶׁר וְהַפֶּרֶס וְהָעָזְנִיָּה... וְהַחֲסִידָה וְהָאֲנָפָה לְמִינָהּ... לֹא תֹאכְלוּ כָל נְבֵלָה לַגֵּר אֲשֶׁר בִּשְׁעָרֶיךָ תִּתְּנֶנָּה וַאֲכָלָהּ אוֹ מָכֹר לְנָכְרִי כִּי <span class="hl">עַם קָדוֹשׁ אַתָּה לַה' אֱלֹהֶיךָ</span> <span class="hl">לֹא תְבַשֵּׁל גְּדִי בַּחֲלֵב אִמּוֹ</span>.</p>
+  </div>
+
+  <h3 data-a="01-114">1. "אֶת זֶה תֹּאכְלוּ... כָּל צִפּוֹר טְהֹרָה תֹּאכֵלוּ" — לראות את השפע המותר</h3>
+  <p data-a="01-115">לפני פירוט האסור, מקדימה התורה את המותר. ה' ברא מגוון עצום של דגים, עופות וחיות טהורות בשלל טעמים — לא רק כדי שנשרוד, אלא כדי לשמח.</p>
+
+  <h3 data-a="01-116">2. "כִּי עַם קָדוֹשׁ אַתָּה" — הכשרות כביטוי לזהות, לא כהפסד</h3>
+  <p data-a="01-117">הפרשה חוזרת ומדגישה "עַם קָדוֹשׁ אַתָּה" ממש ליד דיני הכשרות — התכלית היא לא רק "מה אסור", אלא זהות מיוחדת שאנו זוכים לה.</p>
+
+  <h3 data-a="01-118">3. "לֹא תְבַשֵּׁל גְּדִי בַּחֲלֵב אִמּוֹ" — רגישות ורחמנות</h3>
+  <p data-a="01-119">האיסור לחבר חלב (סמל אימהות וחיים) עם בשר הגדי (סוף חיים) מלמד רגישות מוסרית עדינה — ה' רוצה שנידבק במידותיו הרחומות.</p>
+
+  <div class="story-box"><b>🧰 תוספת מהמקורות:</b> החסידה, למרות שמה, נמנית בין העופות הטמאים — משום שהיא עושה חסד רק עם חברותיה, ולא עם עופות אחרים. ה' רוצה חסד כלפי כולם, לא רק כלפי ה"חבורה" הקרובה.</div>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-120">להתמקד תחילה במה שמותר, לא רק במה שאסור.</li>
+      <li data-a="01-121">לדבר על כשרות כזכות וזהות, לא כהפסד.</li>
+      <li data-a="01-122">ליזום מעשה חסד עם ילד שאינו במעגל החברים הקרוב (לעומת החסידה).</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 11 ===== -->
+  <h2 data-a="01-123" id="s11"><span class="chnum">פרק 11 · דברים יד, כב-כז</span>עַשֵּׂר תְּעַשֵּׂר</h2>
+  <div class="verse-box">
+    <p data-a="01-124"><span class="ref">דברים יד, כב-כז</span>
+    <span class="hl">עַשֵּׂר תְּעַשֵּׂר</span> אֵת כָּל תְּבוּאַת זַרְעֶךָ הַיֹּצֵא הַשָּׂדֶה שָׁנָה שָׁנָה: וְ<span class="hl">אָכַלְתָּ לִפְנֵי ה' אֱלֹהֶיךָ</span> בַּמָּקוֹם אֲשֶׁר יִבְחַר לְשַׁכֵּן שְׁמוֹ שָׁם... <span class="hl">לְמַעַן תִּלְמַד לְיִרְאָה אֶת ה' אֱלֹהֶיךָ</span> כָּל הַיָּמִים: וְכִי יִרְבֶּה מִמְּךָ הַדֶּרֶךְ כִּי לֹא תוּכַל שְׂאֵתוֹ כִּי יִרְחַק מִמְּךָ הַמָּקוֹם... כִּי <span class="hl">יְבָרֶכְךָ ה' אֱלֹהֶיךָ</span>... וְנָתַתָּה בַּכֶּסֶף... וְ<span class="hl">שָׂמַחְתָּ אַתָּה וּבֵיתֶךָ</span>: וְ<span class="hl">הַלֵּוִי אֲשֶׁר בִּשְׁעָרֶיךָ לֹא תַעַזְבֶנּוּ</span> כִּי אֵין לוֹ חֵלֶק וְנַחֲלָה עִמָּךְ.</p>
+  </div>
+
+  <h3 data-a="01-125">1. "עַשֵּׂר תְּעַשֵּׂר" — לזכור שההצלחה מתנה, לא "כוחי ועוצם ידי"</h3>
+  <p data-a="01-126">דווקא בתבואה שעליה עבד האדם קשה מצווה התורה לתת מעשר — כדי לזכור שההצלחה אינה שלנו בלבד, אלא שפע מאבא שבשמים.</p>
+
+  <h3 data-a="01-127">2. "וְאָכַלְתָּ לִפְנֵי ה'... לְמַעַן תִּלְמַד לְיִרְאָה" — אכילה שמובילה לאהבה</h3>
+  <p data-a="01-128">איך אכילה של אוכל טעים הופכת אותנו ליראי-אהובי ה'? כשעוצרים לרגע, מברכים ומכוונים, האכילה הגשמית הופכת להתעלות רוחנית.</p>
+
+  <h3 data-a="01-129">3. "כִּי יְבָרֶכְךָ ה'" — הדרך הכבדה היא סימן ברכה, לא תלונה</h3>
+  <p data-a="01-130">הפסוק מתאר מצב שבו יש כל כך הרבה תבואה שקשה לשאת אותה — והתורה מיד מבארת: זה בגלל השפע! (🧰 עין טובה מול עין רעה — לראות ברכה מאחורי הקושי, לא רק את הכובד).</p>
+
+  <h3 data-a="01-131">4. "וְהַלֵּוִי... לֹא תַעַזְבֶנּוּ" — שמחה שמשתפים</h3>
+  <p data-a="01-132">מיד אחרי "וְשָׂמַחְתָּ אַתָּה וּבֵיתֶךָ" מגיעה הדאגה ללוי חסר הנחלה — שמחה שלמה היא שמחה שמזמינה גם אחרים.</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-133">בפעם הבאה שאני אוכל מאכל אהוב — לחשוב: ה' נתן לי את זה כי הוא אוהב אותי.</li>
+      <li data-a="01-134">למצוא משהו ש"כבד" לי מרוב שיש לי ממנו — ולהגיד תודה.</li>
+      <li data-a="01-135">לחפש חבר לשתף בשמחה או במשחק.</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 12 ===== -->
+  <h2 data-a="01-136" id="s12"><span class="chnum">פרק 12 · דברים יד, כח - טו, ה</span>מַעֲשַׂר עָנִי וּשְׁמִטַּת כְּסָפִים</h2>
+  <div class="verse-box">
+    <p data-a="01-137"><span class="ref">דברים יד, כח - טו, ה</span>
+    מִקְצֵה שָׁלֹשׁ שָׁנִים תּוֹצִיא אֶת כָּל מַעְשַׂר תְּבוּאָתְךָ... וְהִנַּחְתָּ בִּשְׁעָרֶיךָ: וּבָא הַלֵּוִי כִּי אֵין לוֹ חֵלֶק וְנַחֲלָה עִמָּךְ וְהַגֵּר וְהַיָּתוֹם וְהָאַלְמָנָה אֲשֶׁר בִּשְׁעָרֶיךָ וְ<span class="hl">אָכְלוּ וְשָׂבֵעוּ לְמַעַן יְבָרֶכְךָ ה' אֱלֹהֶיךָ</span> בְּכָל מַעֲשֵׂה יָדְךָ אֲשֶׁר תַּעֲשֶׂה: מִקֵּץ שֶׁבַע שָׁנִים תַּעֲשֶׂה שְׁמִטָּה: וְזֶה דְּבַר הַשְּׁמִטָּה <span class="hl">שָׁמוֹט כָּל בַּעַל מַשֵּׁה יָדוֹ</span>... לֹא יִגֹּשׂ אֶת רֵעֵהוּ וְאֶת אָחִיו כִּי קָרָא שְׁמִטָּה לַה'... אֶפֶס כִּי לֹא יִהְיֶה בְּךָ אֶבְיוֹן כִּי <span class="hl">בָרֵךְ יְבָרֶכְךָ ה' בָּאָרֶץ</span> אֲשֶׁר ה' אֱלֹהֶיךָ נֹתֵן לְךָ נַחֲלָה לְרִשְׁתָּהּ: רַק אִם <span class="hl">שָׁמוֹעַ תִּשְׁמַע בְּקוֹל ה' אֱלֹהֶיךָ</span> לִשְׁמֹר לַעֲשׂוֹת אֶת כָּל הַמִּצְוָה הַזֹּאת.</p>
+  </div>
+
+  <h3 data-a="01-138">1. "וְאָכְלוּ וְשָׂבֵעוּ לְמַעַן יְבָרֶכְךָ" — הזכות להיות "הידיים של ה'"</h3>
+  <p data-a="01-139">למה לא מוריד ה' אוכל ישירות לעניים? כי הוא מכבד אותנו בזכות להיות שליחיו לחסד — הברכה "למען יברכך" מגיעה כשהנתינה נעשית בשמחה.</p>
+
+  <h3 data-a="01-140">2. "שָׁמוֹט כָּל בַּעַל מַשֵּׁה יָדוֹ" — לוותר מתוך ביטחון</h3>
+  <p data-a="01-141">הוויתור על חוב בשנת השמיטה נראה קשה, אך הוא הזדמנות להראות שאנחנו בוטחים בה' שהוא זה שמפרנס אותנו, לא הכסף שהלווינו.</p>
+
+  <h3 data-a="01-142">3. "בָרֵךְ יְבָרֶכְךָ ה' בָּאָרֶץ" — מצוות התלויות בארץ כמתנה</h3>
+  <p data-a="01-143">הברכה מובטחת דווקא "בָּאָרֶץ" — מצוות שמיטה ומעשרות אינן "מס", אלא הדרך שלנו להתחבר לקדושת ארץ ישראל.</p>
+
+  <h3 data-a="01-144">4. "רַק אִם שָׁמוֹעַ תִּשְׁמַע" — מהירות וחשק</h3>
+  <p data-a="01-145">הכפילות "שָׁמוֹעַ תִּשְׁמַע" ו"לִשְׁמֹר לַעֲשׂוֹת" מלמדת שהעיקר אינו רק קיום המצווה היבש, אלא השמחה וההתלהבות המלווה אותה.</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-146">להמחיש שנתינת מעשר עני היא זכות, לא הפסד.</li>
+      <li data-a="01-147">להדגיש "איך נותנים" (בחיוך) ולא רק "מה נותנים".</li>
+      <li data-a="01-148">לסיים במסר: כל מצווה מחברת אותנו באהבה לאבא שבשמים.</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 13 ===== -->
+  <h2 data-a="01-149" id="s13"><span class="chnum">פרק 13 · דברים טו, ו-יא</span>פָּתֹחַ תִּפְתַּח אֶת יָדְךָ</h2>
+  <div class="verse-box">
+    <p data-a="01-150"><span class="ref">דברים טו, ו-יא</span>
+    כִּי <span class="hl">ה' אֱלֹהֶיךָ בֵּרַכְךָ</span> כַּאֲשֶׁר דִּבֶּר לָךְ... כִּי יִהְיֶה בְךָ אֶבְיוֹן <span class="hl">מֵאַחַד אַחֶיךָ</span> בְּאַחַד שְׁעָרֶיךָ בְּאַרְצְךָ אֲשֶׁר ה' אֱלֹהֶיךָ נֹתֵן לָךְ לֹא תְאַמֵּץ אֶת לְבָבְךָ וְלֹא תִקְפֹּץ אֶת יָדְךָ מֵאָחִיךָ הָאֶבְיוֹן: כִּי <span class="hl">פָתֹחַ תִּפְתַּח אֶת יָדְךָ לוֹ</span> וְהַעֲבֵט תַּעֲבִיטֶנּוּ דֵּי מַחְסֹרוֹ... הִשָּׁמֶר לְךָ פֶּן יִהְיֶה דָבָר עִם לְבָבְךָ בְלִיַּעַל... וְרָעָה עֵינְךָ בְּאָחִיךָ הָאֶבְיוֹן וְלֹא תִתֵּן לוֹ... <span class="hl">נָתוֹן תִּתֵּן לוֹ וְלֹא יֵרַע לְבָבְךָ בְּתִתְּךָ לוֹ</span> כִּי בִּגְלַל הַדָּבָר הַזֶּה יְבָרֶכְךָ ה' אֱלֹהֶיךָ בְּכָל מַעֲשֶׂךָ וּבְכֹל מִשְׁלַח יָדֶךָ: כִּי לֹא יֶחְדַּל אֶבְיוֹן מִקֶּרֶב הָאָרֶץ...</p>
+  </div>
+
+  <h3 data-a="01-151">1. "כִּי ה' אֱלֹהֶיךָ בֵּרַכְךָ" — הכרת הטוב כמנוע לנתינה</h3>
+  <p data-a="01-152">לפני שהתורה מבקשת ממנו לתת, היא מזכירה לו שהוא כבר בורך. (🧰 משל אלף השקלים — נתינה קטנה מתוך שפע גדול שכבר קיבלנו).</p>
+
+  <h3 data-a="01-153">2. "מֵאַחַד אַחֶיךָ" — העני הוא אח, לא זר</h3>
+  <p data-a="01-154">התורה בכוונה לא קוראת לו "איש", אלא "אחיך" — נתינה מתוך תחושת אחווה פותחת את הלב באופן טבעי.</p>
+
+  <h3 data-a="01-155">3. "פָתֹחַ תִּפְתַּח... נָתוֹן תִּתֵּן" — כפילות של התלהבות</h3>
+  <p data-a="01-156">הלשון הכפולה מלמדת שהנתינה צריכה להיעשות בהתלהבות ובזריזות, לא בעצלות — לפתוח את היד בגדול ובחיוך.</p>
+
+  <h3 data-a="01-157">4. "וְלֹא יֵרַע לְבָבְךָ... כִּי בִּגְלַל הַדָּבָר הַזֶּה יְבָרֶכְךָ" — הברכה תלויה בשמחה</h3>
+  <p data-a="01-158">הברכה המובטחת אינה תלויה רק בעצם הנתינה הפיזית, אלא בשמחה שמלווה אותה — "עיקר שכר המצווה תלוי בשמחה".</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-159">משחק תפקידים: לתת מתנה עם פנים כועסות מול פנים שמחות.</li>
+      <li data-a="01-160">קופת חסד כיתתית — נתינה חוזרת ("נתון תתן") מדי יום.</li>
+      <li data-a="01-161">לשתף בדבר אחד ש"ה' ברכני בו" ("כי ה' אלהיך ברכך").</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 14 ===== -->
+  <h2 data-a="01-162" id="s14"><span class="chnum">פרק 14 · דברים טו, יב-יט</span>עֶבֶד עִבְרִי וּבְכוֹר בְּהֵמָה</h2>
+  <div class="verse-box">
+    <p data-a="01-163"><span class="ref">דברים טו, יב-יט</span>
+    כִּי יִמָּכֵר לְךָ אָחִיךָ הָעִבְרִי... וַעֲבָדְךָ שֵׁשׁ שָׁנִים וּבַשָּׁנָה הַשְּׁבִיעִת תְּשַׁלְּחֶנּוּ חָפְשִׁי מֵעִמָּךְ... <span class="hl">הַעֲנֵיק תַּעֲנִיק לוֹ</span> מִצֹּאנְךָ וּמִגָּרְנְךָ וּמִיִּקְבֶךָ <span class="hl">אֲשֶׁר בֵּרַכְךָ ה' אֱלֹהֶיךָ תִּתֶּן לוֹ</span>: וְ<span class="hl">זָכַרְתָּ כִּי עֶבֶד הָיִיתָ בְּאֶרֶץ מִצְרַיִם וַיִּפְדְּךָ ה' אֱלֹהֶיךָ</span>... וְהָיָה כִּי יֹאמַר אֵלֶיךָ לֹא אֵצֵא מֵעִמָּךְ <span class="hl">כִּי אֲהֵבְךָ וְאֶת בֵּיתֶךָ כִּי טוֹב לוֹ עִמָּךְ</span>... <span class="hl">לֹא יִקְשֶׁה בְעֵינֶךָ בְּשַׁלֵּחֲךָ אֹתוֹ חָפְשִׁי</span> מֵעִמָּךְ כִּי מִשְׁנֶה שְׂכַר שָׂכִיר עֲבָדְךָ שֵׁשׁ שָׁנִים וּבֵרַכְךָ ה' אֱלֹהֶיךָ בְּכֹל אֲשֶׁר תַּעֲשֶׂה: כָּל הַבְּכוֹר אֲשֶׁר יִוָּלֵד בִּבְקָרְךָ וּבְצֹאנְךָ הַזָּכָר תַּקְדִּישׁ לַה' אֱלֹהֶיךָ.</p>
+  </div>
+
+  <h3 data-a="01-164">1. "הַעֲנֵיק תַּעֲנִיק לוֹ... אֲשֶׁר בֵּרַכְךָ" — צינור להעברת הברכה</h3>
+  <p data-a="01-165">למה נותנים לעבד היוצא מתנות פרידה? כי הצאן, הגורן והיקב הם מתנה שה' בירך אותנו בה — אנחנו רק מעבירים אותה הלאה.</p>
+
+  <h3 data-a="01-166">2. "וְזָכַרְתָּ כִּי עֶבֶד הָיִיתָ... וַיִּפְדְּךָ ה'" — אהבה מתוך זיכרון החסד</h3>
+  <p data-a="01-167">זיכרון היותנו עבדים ופדות ה' אותנו הוא הבסיס שממנו מקיימים את מצוות השחרור מתוך אהבה, לא רק מתוך חובה טכנית.</p>
+
+  <h3 data-a="01-168">3. "כִּי אֲהֵבְךָ וְאֶת בֵּיתֶךָ כִּי טוֹב לוֹ עִמָּךְ" — טוב לי עם ה'</h3>
+  <p data-a="01-169">העבד בוחר להישאר כי הוא אוהב את האדון. כך גם אנחנו: להרגיש ש"טוב לי עם ה'" הופך את המצוות מעול לרצון.</p>
+
+  <h3 data-a="01-170">4. "לֹא יִקְשֶׁה בְעֵינֶךָ" — לא בכבדות לב</h3>
+  <p data-a="01-171">הברכה המובטחת ("וּבֵרַכְךָ ה'... בְּכֹל אֲשֶׁר תַּעֲשֶׂה") מותנית בכך שהמצווה לא תיעשה מתוך כבדות, אלא בשמחה.</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-172">לחפש היום הזדמנות לתת משהו משלי, מכל הלב ("הענק תעניק").</li>
+      <li data-a="01-173">לכתוב פנקס תודות (🧰) בהשראת "וזכרת כי עבד היית".</li>
+      <li data-a="01-174">לעשות מצווה אחת בלי פרצוף קשה, אלא עם חיוך גדול.</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 15 ===== -->
+  <h2 data-a="01-175" id="s15"><span class="chnum">פרק 15 · דברים טו, יט - טז, ד</span>קָרְבַּן פֶּסַח וְחַג הַמַּצּוֹת</h2>
+  <div class="verse-box">
+    <p data-a="01-176"><span class="ref">דברים טו, יט - טז, ד</span>
+    <span class="hl">לִפְנֵי ה' אֱלֹהֶיךָ תֹאכְלֶנּוּ</span> שָׁנָה בְשָׁנָה בַּמָּקוֹם אֲשֶׁר יִבְחַר ה' <span class="hl">אַתָּה וּבֵיתֶךָ</span>: וְכִי יִהְיֶה בוֹ מוּם פִּסֵּחַ אוֹ עִוֵּר <span class="hl">כֹּל מוּם רָע לֹא תִזְבָּחֶנּוּ</span> לַה' אֱלֹהֶיךָ... שָׁמוֹר אֶת חֹדֶשׁ הָאָבִיב וְעָשִׂיתָ פֶּסַח לַה' אֱלֹהֶיךָ כִּי בְּחֹדֶשׁ הָאָבִיב <span class="hl">הוֹצִיאֲךָ ה' אֱלֹהֶיךָ מִמִּצְרַיִם לָיְלָה</span>... כִּי בְחִפָּזוֹן יָצָאתָ מֵאֶרֶץ מִצְרַיִם <span class="hl">לְמַעַן תִּזְכֹּר אֶת יוֹם צֵאתְךָ מֵאֶרֶץ מִצְרַיִם כֹּל יְמֵי חַיֶּיךָ</span>.</p>
+  </div>
+
+  <h3 data-a="01-177">1. "לִפְנֵי ה'... אַתָּה וּבֵיתֶךָ" — חגיגה משפחתית של שמחה</h3>
+  <p data-a="01-178">(🧰 "חג ה' לנו" — עבודת ה' אינה עול למבוגרים בלבד, אלא חגיגת כל המשפחה יחד, "אתה וביתך".)</p>
+
+  <h3 data-a="01-179">2. "כֹּל מוּם רָע לֹא תִזְבָּחֶנּוּ" — לתת לה' את הכי טוב שלנו</h3>
+  <p data-a="01-180">כשמכינים מתנה למישהו אהוב, לא נותנים דבר פגום. איסור המום מלמד להביא לה' את המושלם ביותר — מתפילה בכוונה ועד חסד מכל הלב.</p>
+
+  <h3 data-a="01-181">3. "הוֹצִיאֲךָ ה'... לָיְלָה" — אור בתוך החושך</h3>
+  <p data-a="01-182">דווקא ב"לילה", בזמן החושך והפחד, ה' בא להוציא אותנו — סימן שה' נמצא איתנו גם בלב הקושי, לא רק כשקל.</p>
+
+  <h3 data-a="01-183">4. "לְמַעַן תִּזְכֹּר... כֹּל יְמֵי חַיֶּיךָ" — הודיה יומיומית</h3>
+  <p data-a="01-184">(🧰 פנקס הודיה — זיכרון יומיומי של החסדים הוא הכלי המעשי לקיים "כל ימי חייך".)</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-185">לשאול: איך חוגגים יום הולדת למישהו שאוהבים? ולהשליך על "אתה וביתך".</li>
+      <li data-a="01-186">לדבר על תת רגע של "חושך" אישי — וה' נמצא גם שם.</li>
+      <li data-a="01-187">להתחיל "פנקס הודיה" יומי — משפט אחד בכל יום.</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 16 ===== -->
+  <h2 data-a="01-188" id="s16"><span class="chnum">פרק 16 · דברים טז, ה-יא</span>חַג הַשָּׁבֻעוֹת וְהָעֲלִיָּה לָרֶגֶל</h2>
+  <div class="verse-box">
+    <p data-a="01-189"><span class="ref">דברים טז, ה-יא</span>
+    לֹא תוּכַל לִזְבֹּחַ אֶת הַפֶּסַח בְּאַחַד שְׁעָרֶיךָ... כִּי אִם <span class="hl">אֶל הַמָּקוֹם אֲשֶׁר יִבְחַר ה' אֱלֹהֶיךָ לְשַׁכֵּן שְׁמוֹ שָׁם</span>... <span class="hl">שִׁבְעָה שָׁבֻעֹת תִּסְפָּר לָךְ</span> מֵהָחֵל חֶרְמֵשׁ בַּקָּמָה... וְעָשִׂיתָ חַג שָׁבֻעוֹת לַה' אֱלֹהֶיךָ <span class="hl">מִסַּת נִדְבַת יָדְךָ אֲשֶׁר תִּתֵּן כַּאֲשֶׁר יְבָרֶכְךָ ה' אֱלֹהֶיךָ</span>: וְ<span class="hl">שָׂמַחְתָּ לִפְנֵי ה' אֱלֹהֶיךָ</span> אַתָּה וּבִנְךָ וּבִתֶּךָ וְעַבְדְּךָ וַאֲמָתֶךָ וְהַלֵּוִי אֲשֶׁר בִּשְׁעָרֶיךָ וְ<span class="hl">הַגֵּר וְהַיָּתוֹם וְהָאַלְמָנָה אֲשֶׁר בְּקִרְבֶּךָ</span> בַּמָּקוֹם אֲשֶׁר יִבְחַר ה' אֱלֹהֶיךָ לְשַׁכֵּן שְׁמוֹ שָׁם.</p>
+  </div>
+
+  <h3 data-a="01-190">1. "אֶל הַמָּקוֹם אֲשֶׁר יִבְחַר... לְשַׁכֵּן שְׁמוֹ שָׁם" — הזמנה אישית לארמון</h3>
+  <p data-a="01-191">אסור להביא את הפסח סתם "בְּאַחַד שְׁעָרֶיךָ" — ה' מזמין אותנו דווקא למקום שבו הוא שוכן, כאורחים אישיים בארמונו.</p>
+
+  <h3 data-a="01-192">2. "שִׁבְעָה שָׁבֻעֹת תִּסְפָּר לָךְ" — ציפייה מתוך אהבה</h3>
+  <p data-a="01-193">כשמחכים למשהו אהוב במיוחד, סופרים את הימים בהתרגשות. ספירת השבועות מבטאת את החשק שלנו להגיע ליום מתן תורה, לא חובה יבשה.</p>
+
+  <h3 data-a="01-194">3. "מִסַּת נִדְבַת יָדְךָ... כַּאֲשֶׁר יְבָרֶכְךָ" — נתינה מרצון</h3>
+  <p data-a="01-195">הנתינה בחג השבועות היא לפי "נִדְבַת יָדְךָ" — מתוך הבנה שכל מה שיש לנו הוא ברכה מה', הנתינה הופכת קלה ומלאת אהבה.</p>
+
+  <h3 data-a="01-196">4. "וְשָׂמַחְתָּ... וְהַגֵּר וְהַיָּתוֹם וְהָאַלְמָנָה" — סוד השמחה השלמה</h3>
+  <p data-a="01-197">השמחה האישית שלנו כרוכה מיד בדאגה לגר, ליתום ולאלמנה — אי אפשר לשמוח לפני ה' באמת בזמן שילדיו האחרים עצובים.</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק:</b>
+    <ul>
+      <li data-a="01-198">לשתף מתי ספרתי ימים מרוב התרגשות (חיבור ל"תספר לך").</li>
+      <li data-a="01-199">לעשות בבית מעשה "נדבה" — טוב שלא ביקשו ממני.</li>
+      <li data-a="01-200">לשאול בהפסקה: את מי אני יכול לשתף היום בשמחה שלי?</li>
+    </ul>
+  </div>
+
+  <!-- ===== CHAPTER 17 ===== -->
+  <h2 data-a="01-201" id="s17"><span class="chnum">פרק 17 · דברים טז, יב-יז</span>חַג הַסֻּכּוֹת — וְהָיִיתָ אַךְ שָׂמֵחַ</h2>
+  <div class="verse-box">
+    <p data-a="01-202"><span class="ref">דברים טז, יב-יז</span>
+    וְ<span class="hl">זָכַרְתָּ כִּי עֶבֶד הָיִיתָ בְּמִצְרָיִם</span> וְשָׁמַרְתָּ וְעָשִׂיתָ אֶת הַחֻקִּים הָאֵלֶּה: חַג הַסֻּכֹּת תַּעֲשֶׂה לְךָ שִׁבְעַת יָמִים <span class="hl">בְּאָסְפְּךָ מִגָּרְנְךָ וּמִיִּקְבֶךָ</span>: וְשָׂמַחְתָּ בְּחַגֶּךָ אַתָּה וּבִנְךָ וּבִתֶּךָ... וְהַלֵּוִי וְהַגֵּר וְהַיָּתוֹם וְהָאַלְמָנָה אֲשֶׁר בִּשְׁעָרֶיךָ: שִׁבְעַת יָמִים תָּחֹג לַה' אֱלֹהֶיךָ בַּמָּקוֹם אֲשֶׁר יִבְחַר ה' כִּי יְבָרֶכְךָ ה' אֱלֹהֶיךָ בְּכֹל תְּבוּאָתְךָ וּבְכֹל מַעֲשֵׂה יָדֶיךָ וְ<span class="hl">הָיִיתָ אַךְ שָׂמֵחַ</span>: שָׁלוֹשׁ פְּעָמִים בַּשָּׁנָה יֵרָאֶה כָל זְכוּרְךָ אֶת פְּנֵי ה' אֱלֹהֶיךָ... וְלֹא יֵרָאֶה אֶת פְּנֵי ה' רֵיקָם: <span class="hl">אִישׁ כְּמַתְּנַת יָדוֹ כְּבִרְכַּת ה' אֱלֹהֶיךָ אֲשֶׁר נָתַן לָךְ</span>.</p>
+  </div>
+
+  <h3 data-a="01-203">1. "וְזָכַרְתָּ כִּי עֶבֶד הָיִיתָ" — משורש הגלות אל האהבה</h3>
+  <p data-a="01-204">שוב, ולפני מצוות החוקים, מקדים הכתוב את זיכרון היציאה מעבדות. ככל שזוכרים את הקושי שהיה, כך גדלה תחושת השמחה וההודיה כיום.</p>
+
+  <h3 data-a="01-205">2. "בְּאָסְפְּךָ מִגָּרְנְךָ וּמִיִּקְבֶךָ" — לאסוף את החסדים אל הלב</h3>
+  <p data-a="01-206">חג האסיף מלמד לא רק לאסוף פירות, אלא לאסוף פנימה, אל הלב, את כל החסדים שנעשו איתנו לאורך השנה — פרי שלא נאסף הולך לאיבוד, וכך גם חסד שלא מודים עליו.</p>
+
+  <h3 data-a="01-207">3. "וְהָיִיתָ אַךְ שָׂמֵחַ" — הבטחה, לא רק ציווי</h3>
+  <p data-a="01-208">מפרשים מבארים שזו הבטחה: מי שמכניס שמחה של מצווה בחג, זוכה שהשמחה תלווה אותו כל השנה — "מצבר" שמחה.</p>
+
+  <h3 data-a="01-209">4. "אִישׁ כְּמַתְּנַת יָדוֹ כְּבִרְכַּת ה'... אֲשֶׁר נָתַן לָךְ" — ה' רוצה את הלב</h3>
+  <p data-a="01-210">ה' אינו זקוק לרכוש שלנו — "לִי הַכֶּסֶף וְלִי הַזָּהָב". הנתינה היא הזדמנות שלנו להראות שאנו זוכרים שהכל הגיע ממנו, מתוך לב אוהב.</p>
+
+  <div class="checklist">
+    <b>צ'ק ליסט לפרק וסיכום הפרשה:</b>
+    <ul>
+      <li data-a="01-211">ללמד את הילדים "להחליף הרגל בציפייה" — לצפות למצווה בהתרגשות.</li>
+      <li data-a="01-212">להסביר שהיציאה לסוכה בזמן השפע מלמדת הכרת טוב ולא גאווה.</li>
+      <li data-a="01-213">להדגיש: הדרך הבטוחה ביותר לשמוח היא לשמח מישהו אחר.</li>
+      <li data-a="01-214">לסכם: כל הפרשה, מ"רְאֵה" ועד "אֲשֶׁר נָתַן לָךְ", מספרת סיפור אחד — מתנה, הכרת טוב, ושמחה שחוזרת אל הנותן באהבה.</li>
+    </ul>
+  </div>
+
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות (עיקריים)</h3>
+    <ol>
+      <li>רמב"ם, מורה נבוכים / הלכות תשובה — תכלית המצוות להגעה לאהבת ה'.</li>
+      <li>ספר העיקרים — מטרת המצוות ומעלת השמחה בעשייתן.</li>
+      <li>החפץ חיים — התבוננות יומית בטובות ה'.</li>
+      <li>ספר חרדים — שמחה במצוות ארץ ישראל.</li>
+      <li>האר"י הקדוש — סוד האותיות "קללה" ⇄ "הלל".</li>
+      <li>המגיד מטריסק — "אשר תשמעו" — לשמוע את הברכות בעצמנו.</li>
+      <li>רש"י, פירוש על החומש — במקומות שונים לאורך הפרשה.</li>
+      <li>הרמב"ן — פירוש על החומש; ייחודיות הקשר עם ה'.</li>
+      <li>ספר החינוך — טעמי המצוות וקניין המידות.</li>
+      <li>ה"תפארת שלמה" — פירוש על "ונתן לך רחמים".</li>
+      <li>סיפור הרב שלמה זלמן אוירבך זצ"ל — משל הנעליים לריבוי המצוות.</li>
+      <li>מדרשים שונים על חיבת ארץ ישראל ("חביבה עלי ארץ ישראל").</li>
+      <li>ה"כוזרי" לרבי יהודה הלוי — מצוות השמחה בטובה.</li>
+      <li>אבן עזרא — פירוש על "בנים אתם" ו"והיית אך שמח".</li>
+      <li>המהר"ל — ביאור עניין הבכור וה"ראשית".</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+  </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+  const btn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    btn.style.opacity = window.scrollY > 400 ? '1' : '0';
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) t.scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+
+<script>
+/* =============================================================================
+   קול תודה — מנוע הקראה למאמרים תורניים   |   tts.js   v2.0
+   -----------------------------------------------------------------------------
+   העתק את הקובץ הזה כמות שהוא לתוך תגית <script> בסוף ה-HTML.
+   אין לכתוב אותו מחדש, לקצר או "לשפר" תוך כדי יצירת מאמר — הוא נבדק כך.
+   Web Speech API בלבד: בלי API חיצוני, בלי מפתח, בלי רשת, בלי עלות.
+   ============================================================================= */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    var NS       = 'koltoda.tts.';
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false, noHeVoice = false;
+    var clickToRead = true;
+
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+    function readPos() { try { return parseInt(localStorage.getItem(POS_KEY) || '0', 10) || 0; } catch (e) { return 0; } }
+
+    var G = '["\\u05f4\\u201d\\u2033]';
+    var R = "['\\u05f3\\u2019]";
+
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' ');
+        t = t.replace(/־/g, ' ');
+        t = t.replace(/\s*[–—]\s*/g, ', ');
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function chapterLabel(h) {
+        var d = h.getAttribute && h.getAttribute('data-chapter');
+        if (d && d.trim()) return d.trim();
+        var p = h.previousElementSibling;
+        if (p && p.classList && p.classList.contains('chapter-label')) {
+            return p.textContent.replace(/\s+/g, ' ').trim();
+        }
+        return '';
+    }
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (n.closest(SKIP)) return;
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            if (n.tagName === 'H2') {
+                var lbl = chapterLabel(n);
+                if (lbl && raw.indexOf(lbl) !== 0) raw = lbl + '. ' + raw;
+            }
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    function hint() {
+        if (noHeVoice) {
+            return 'לא נמצא קול עברי במחשב — ההקראה תישמע משובשת. ' +
+                   'ב-Windows: הגדרות ← שעה ושפה ← דיבור ← נהל קולות ← הוסף קולות ← עברית.';
+        }
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = readPos();
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        var was = noHeVoice;
+        noHeVoice = !he.length;
+        if (noHeVoice !== was && !isOn) say(hint());
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;
+                if (e.target.closest('a')) return;
+                if (window.getSelection && String(window.getSelection()).length) return;
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    var FS_MIN = 0.85, FS_MAX = 1.75, FS_STEP = 0.15, fontScale = 1;
+
+    function applyFontScale() {
+        document.documentElement.style.setProperty('--fs', String(fontScale));
+        var out = document.getElementById('fontScaleValue');
+        if (out) out.textContent = Math.round(fontScale * 100) + '%';
+        var dec = document.getElementById('fontSmaller'), inc = document.getElementById('fontBigger');
+        if (dec) dec.disabled = fontScale <= FS_MIN + 0.001;
+        if (inc) inc.disabled = fontScale >= FS_MAX - 0.001;
+    }
+
+    window.setFontScale = function (dir) {
+        fontScale = Math.min(FS_MAX, Math.max(FS_MIN, +(fontScale + dir * FS_STEP).toFixed(2)));
+        store('fs', String(fontScale));
+        applyFontScale();
+    };
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var savedFs = parseFloat(store('fs') || '1');
+        if (savedFs >= FS_MIN && savedFs <= FS_MAX) fontScale = savedFs;
+        applyFontScale();
+        if (readPos() > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+<script data-audio-cues="" type="application/json">{"01":[0.1,2.96,6.16,21,27.34,69.9,74.94,92.53,97.04,97.04,112.19,112.19,123.3,123.3,135.63,135.63,162.35,166.68,170.79,175.34,175.34,213.38,213.38,233.02,233.02,250,265.4,265.4,273.52,276.94,281.12,281.12,330.46,330.46,345.69,345.69,376.42,376.42,393.06,398.46,402.47,406.84,406.84,445.66,455.42,463.59,470.77,474.49,485.22,490.89,497.69,501.24,508.83,513.22,517.89,553.19,556.66,556.66,573.48,591.43,600.6,606.74,606.74,613.1,617.4,627.24,627.24,665.28,665.28,677.07,677.07,687.15,687.15,701.83,713.37,718.14,722.63,722.63,730.83,768.53,777.52,783.15,785.88,785.88,801.53,818.82,823.47,830.24,830.24,837.22,867.65,870.54,886.67,891.92,896.78,901.33,915.6,921.46,933.84,939.41,939.41,947.81,957.07,957.07,994.11,998.22,1003.46,1003.46,1014.66,1032.82,1037.51,1037.51,1043.46,1049.16,1076.66,1082.8,1094.19,1101.09,1101.09,1113.38,1113.38,1127.55,1132.59,1132.59,1143.64,1172.34,1180.39,1180.39,1192.6,1192.6,1207.5,1225.35,1231.25,1238.97,1244.94,1244.94,1258.45,1264.66,1302.97,1307.23,1307.23,1317.96,1317.96,1333.63,1333.63,1347.08,1352.69,1352.69,1360.82,1365.19,1373.56,1410.79,1414.44,1414.44,1428.66,1439.16,1444.57,1449.21,1456.25,1456.25,1471.27,1478.95,1478.95,1487.39,1487.39,1533.79,1533.79,1546.18,1562.66,1566.11,1566.11,1578.38,1586.92,1586.92,1592.21,1600.03,1606.21,1606.21,1640.29,1647.89,1654.02,1654.02,1668.52,1678.21,1684.69,1690.58,1699.33,1702.17,1702.17,1712.01,1747,1747,1747,1763.6,1763.6,1778.31,1788.22,1793.96,1793.96,1809.47,1812.32,1812.32,1825.6,1825.6,1874.07,1874.07,1880.36,1896.88,1902.28,1902.28,1914.43,1927.64,1931.62,1935.09,1939.69]}</script><script data-audio-player="">
+/* =============================================================================
+   audio-player.js — נגן ההקלטה (MP3 שהופק מראש ב-edge-tts)
+   הדבק מילה במילה. נפרד לגמרי מ-tts.js (ההקראה החיה של הדפדפן).
+   ============================================================================= */
+(function () {
+    var box = document.querySelector('.audio-player');
+    if (!box) return;
+
+    var audio  = box.querySelector('audio');
+    var select = box.querySelector('.audio-chapter-select');
+    if (!audio || !select) return;
+
+    var KEY = 'koltoda.audio.ch.' + (document.title || '');
+
+    /* מפת תזמונים: { "01": [0, 3.2, 9.7, ...] } — זמן תחילת כל פסקה בקטע.
+       נוצרת ב-make-audio.mjs מקובצי ה-SRT של edge-tts. */
+    var CUES = {};
+    var tag = document.querySelector('script[data-audio-cues]');
+    if (tag) { try { CUES = JSON.parse(tag.textContent || '{}'); } catch (e) {} }
+
+    var seg = null;      // מזהה הקטע הפעיל, למשל "01"
+    var line = -1;       // אינדקס הפסקה המודגשת
+
+    /* ---------- הדגשה ---------- */
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+        line = -1;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+
+        /* בספר מתחלף — מדפדפים לעמוד של הפסקה, כמו בהקראה החיה */
+        var pg = el.closest ? el.closest('.page') : null;
+        if (pg && !pg.classList.contains('active') && window.bookGo) {
+            var pages = [].slice.call(document.querySelectorAll('#book .page'));
+            var i = pages.indexOf(pg);
+            if (i > -1) { window.bookGo(i); return; }
+        }
+
+        /* גוללים רק אם הפסקה מחוץ למסך, כדי לא לחטוף את הדף מהקורא */
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    /* איזו פסקה נאמרת עכשיו — האחרונה שזמן ההתחלה שלה כבר עבר */
+    function lineAt(starts, t) {
+        var lo = 0, hi = starts.length - 1, ans = 0;
+        while (lo <= hi) {
+            var mid = (lo + hi) >> 1;
+            if (starts[mid] <= t) { ans = mid; lo = mid + 1; } else { hi = mid - 1; }
+        }
+        return ans;
+    }
+
+    audio.addEventListener('timeupdate', function () {
+        var starts = CUES[seg];
+        if (!starts || !starts.length) return;
+        var i = lineAt(starts, audio.currentTime);
+        if (i === line) return;
+        line = i;
+        var el = document.querySelector('[data-a="' + seg + '-' + i + '"]');
+        if (el) highlight(el);
+    });
+
+    /* ---------- קבצים שנבחרו מהמחשב ----------
+       דפדפן לא יכול לקרוא נתיב מקומי מעצמו (תיקיית ההורדות חסומה לו), אבל
+       קובץ שהמשתמש בוחר בעצמו מותר. ממפים לפי שם הקובץ, כך שאפשר לבחור את
+       כל פרקי הספר בבת אחת. ההדגשה עובדת גם ככה — התזמונים כבר בדף. */
+    var picked = {};
+    var note   = box.querySelector('.audio-note');
+    var input  = box.querySelector('.audio-pick-input');
+    var pickBtn = box.querySelector('.audio-pick-btn');
+
+    function say(msg) { if (note) note.textContent = msg || ''; }
+
+    /* קישור הורדה שלא מולא עדיין מוסתר מהקורא — אין טעם ב"לחץ כאן" מת.
+       הבדיקה היא על ה-href עצמו, כך שברגע שמדביקים כתובת הוא מופיע לבד. */
+    var dl = box.querySelector('.audio-download');
+    if (dl && (dl.getAttribute('href') || '#') === '#') dl.style.display = 'none';
+
+    function baseName(u) {
+        try { u = decodeURIComponent(u); } catch (e) {}
+        return u.split('/').pop();
+    }
+
+    function srcFor(opt) {
+        return picked[baseName(opt.value)] || opt.value;
+    }
+
+    if (pickBtn && input) {
+        pickBtn.addEventListener('click', function () { input.click(); });
+        input.addEventListener('change', function () {
+            var files = [].slice.call(input.files || []);
+            if (!files.length) return;
+            var names = {};
+            for (var i = 0; i < select.options.length; i++) names[baseName(select.options[i].value)] = true;
+
+            var matched = 0, spare = [];
+            files.forEach(function (f) {
+                if (names[f.name]) { picked[f.name] = URL.createObjectURL(f); matched++; }
+                else spare.push(f);
+            });
+            /* קובץ יחיד בשם אחר — מניחים שהוא של הפרק המוצג */
+            if (!matched && spare.length === 1) {
+                picked[baseName(select.options[select.selectedIndex].value)] = URL.createObjectURL(spare[0]);
+                matched = 1;
+            }
+            say(matched ? 'נטענו ' + matched + ' קבצים מהמחשב.' : 'שמות הקבצים לא תואמים לפרקים.');
+            if (matched) load(select.selectedIndex, true);
+        });
+    }
+
+    /* הקובץ לא נמצא בנתיב היחסי — מכוונים להורדה ולבחירה ידנית */
+    audio.addEventListener('error', function () {
+        if (!audio.getAttribute('src')) return;
+        say('קובץ השמע לא נמצא לצד הדף. הורד אותו ואז בחר אותו כאן.');
+    });
+
+    /* ---------- ניווט בין פרקים ---------- */
+    function load(i, autoplay) {
+        var opt = select.options[i];
+        if (!opt) return;
+        select.selectedIndex = i;
+        seg = opt.getAttribute('data-seg');
+        clearHighlight();
+        audio.src = srcFor(opt);
+        try { localStorage.setItem(KEY, String(i)); } catch (e) {}
+        if (autoplay) {
+            var p = audio.play();
+            /* דפדפן שחוסם ניגון אוטומטי זורק — לא נשאיר Promise תלוי */
+            if (p && p.catch) p.catch(function () {});
+        }
+    }
+
+    select.addEventListener('change', function () { load(select.selectedIndex, true); });
+
+    /* סיום פרק — מנקה הדגשה וממשיך לבא אחריו מעצמו, כמו בהקראה החיה.
+       (השהיה לעומת זאת משאירה את ההדגשה — היא מסמנת איפה עצרנו.) */
+    audio.addEventListener('ended', function () {
+        clearHighlight();
+        if (select.selectedIndex < select.options.length - 1) {
+            load(select.selectedIndex + 1, true);
+        } else {
+            try { localStorage.removeItem(KEY); } catch (e) {}
+        }
+    });
+
+    /* חוזרים לפרק שבו עצרנו — בלי לנגן מעצמו */
+    var saved = 0;
+    try { saved = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (e) {}
+    if (saved < 0 || saved >= select.options.length) saved = 0;
+    load(saved, false);
+})();
+
+</script></body>
+</html>
