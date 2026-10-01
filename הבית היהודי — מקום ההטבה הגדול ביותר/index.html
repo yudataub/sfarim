@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="torah-html-article 2.7.0">
+<title>הבית היהודי — מקום ההטבה הגדול ביותר</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #1f2937;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffefc;
+    padding: 60px 80px;
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  }
+  h1.main-title {
+    font-size: 3em;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 1.35em;
+    color: #6b21a8;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .author {
+    text-align: center;
+    font-size: 1.05em;
+    color: #6b7280;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 2.2em;
+    color: #7e22ce;
+    border-right: 6px solid #7e22ce;
+    padding-right: 20px;
+    margin-top: 50px;
+    line-height: 1.3;
+  }
+  h2:first-of-type { margin-top: 0; }
+  h3 {
+    font-size: 1.8em;
+    color: #2563eb;
+    margin-top: 40px;
+  }
+  h4 {
+    font-size: 1.5em;
+    color: #059669;
+    margin-top: 30px;
+  }
+  p, li { font-size: 1.15em; line-height: 1.8; }
+  p { margin: 20px 0; }
+  .emphasis { color: #7e22ce; font-weight: 700; }
+  em { color: #2563eb; font-style: italic; }
+  strong { font-weight: 700; }
+
+  /* chapter label above h2 */
+  .chapter-label {
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #ec4899;
+    letter-spacing: 2px;
+    margin-top: 50px;
+  }
+  .chapter-label + h2 { margin-top: 8px; }
+
+  /* "בפרק זה" catalog box */
+  .in-chapter-box {
+    background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+    border: 2px solid #d8b4fe;
+    border-radius: 14px;
+    padding: 22px 28px;
+    margin: 25px 0 40px 0;
+    box-shadow: 0 3px 10px rgba(126,34,206,0.12);
+  }
+  .in-chapter-box h4 {
+    margin: 0 0 12px 0;
+    color: #7e22ce;
+    font-size: 1.25em;
+  }
+  .in-chapter-box ul { margin: 0; padding-right: 22px; }
+  .in-chapter-box li { font-size: 1.05em; line-height: 1.9; color: #4c1d95; }
+
+  /* boxes */
+  .verse-box {
+    background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    border-right: 6px solid #7e22ce;
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin: 30px 0;
+    font-size: 1.2em;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .highlight-box {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    border-right: 6px solid #2563eb;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 30px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .quote-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-right: 6px solid #f59e0b;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 30px 0;
+    font-style: italic;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .quote-box .source-tag {
+    display: block;
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: 700;
+    color: #b45309;
+    font-size: 0.9em;
+  }
+  .story-box {
+    background: linear-gradient(135deg, #d1fae5 0%, #f0fdf4 100%);
+    border-right: 6px solid #059669;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 30px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .qa-box {
+    background: #fdf2f8;
+    border: 2px dashed #ec4899;
+    border-radius: 12px;
+    padding: 22px 28px;
+    margin: 30px 0;
+  }
+  .qa-box .q { color: #be185d; font-weight: 700; }
+  .qa-box .a { color: #1f2937; margin-top: 10px; }
+  .two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 30px 0;
+  }
+  .two-columns .col-purple {
+    background: #f3e8ff;
+    border-right: 5px solid #7e22ce;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .two-columns .col-gold {
+    background: #fef3c7;
+    border-right: 5px solid #f59e0b;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  @media (max-width: 768px) {
+    .two-columns { grid-template-columns: 1fr; }
+    .container { padding: 30px 20px; }
+    h1.main-title { font-size: 2em; }
+    h2 { font-size: 1.6em; }
+    h3 { font-size: 1.35em; }
+  }
+
+  /* chapter card - full screen stop */
+  .chapter-card {
+    width: 100%;
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    border-radius: 20px;
+    margin: 70px 0 0 0;
+    text-align: center;
+    color: #fff;
+    padding: 40px 20px;
+    box-shadow: 0 10px 30px rgba(126,34,206,0.25);
+  }
+  .chapter-card .chapter-num {
+    font-size: 6em;
+    font-weight: 800;
+    line-height: 1;
+    opacity: 0.95;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  .chapter-card .chapter-title {
+    font-size: 1.9em;
+    font-weight: 700;
+    margin-top: 20px;
+    max-width: 700px;
+    line-height: 1.4;
+  }
+
+  /* decorative divider between chapter-card and h2 */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 45px 0 45px 0;
+  }
+  .section-divider .line {
+    flex: 1;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #f59e0b, #ec4899, transparent);
+    border-radius: 2px;
+  }
+  .section-divider .icon {
+    font-size: 1.6em;
+    margin: 0 20px;
+  }
+
+  .toc {
+    background: linear-gradient(135deg, #f3e8ff 0%, #eef2ff 100%);
+    border: 1px solid #d8b4fe;
+    border-radius: 14px;
+    padding: 30px 35px;
+    margin: 40px 0;
+  }
+  .toc h3 { margin-top: 0; color: #7e22ce; }
+  .toc ul { list-style: none; padding-right: 0; margin: 0; }
+  .toc li { margin: 10px 0; }
+  .toc a {
+    color: #4c1d95;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05em;
+  }
+  .toc a:hover { text-decoration: underline; color: #ec4899; }
+  .toc .toc-sub { padding-right: 20px; font-weight: 400; font-size: 0.92em; }
+
+  .sources {
+    background: #f3f4f6;
+    border-radius: 12px;
+    padding: 30px 35px;
+    margin: 50px 0 30px 0;
+  }
+  .sources h3 { color: #374151; margin-top: 0; }
+  .sources ol { padding-right: 22px; }
+  .sources li { font-size: 1em; color: #4b5563; line-height: 1.7; }
+
+  .footer {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 3px solid #e5e7eb;
+    text-align: center;
+    font-size: 1.1em;
+    color: #374151;
+  }
+
+  .scroll-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.3em;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .scroll-top.visible { opacity: 1; pointer-events: auto; }
+
+  html { scroll-behavior: smooth; }
+
+  @media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+    .scroll-top { display: none !important; }
+    h2 { page-break-before: always; break-before: page; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box, .in-chapter-box, .chapter-card {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .chapter-card { min-height: auto; padding: 25px; }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+    h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+    .footer { page-break-before: always; break-before: page; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+    .section-divider { page-break-before: avoid; break-before: avoid; }
+  }
+
+  /* ---------- סרגל ההאזנה (נוסף אוטומטית) ---------- */
+  :root{
+    --lb-purple:#7e22ce; --lb-blue:#2563eb; --lb-green:#059669;
+    --lb-gold:#f59e0b; --lb-pink:#ec4899; --lb-muted:#6b7280;
+    --fs: 1;
+  }
+  .listen-bar{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid var(--lb-gold);
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+  }
+  .listen-btn-group{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .listen-btn{
+    display:flex; align-items:center; gap:8px;
+    background:linear-gradient(135deg, var(--lb-purple) 0%, var(--lb-pink) 100%);
+    color:#fff; border:none; border-radius:30px; padding:10px 22px;
+    font-size:1em; font-weight:bold; font-family:inherit; cursor:pointer;
+    transition:transform .15s, box-shadow .15s;
+  }
+  .listen-btn:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,.3); }
+  .listen-btn:active{ transform:translateY(0); }
+  .listen-stop-btn, .listen-skip-btn, .listen-size-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 16px; font-size:.95em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .listen-skip-btn{ padding:8px 12px; }
+  .listen-stop-btn:hover, .listen-skip-btn:hover,
+  .listen-size-btn:hover:not(:disabled){ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-size{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-size-btn{ padding:6px 12px; line-height:1; }
+  .listen-size-btn:disabled{ opacity:.35; cursor:default; border-color:#d1d5db; color:var(--lb-muted); }
+  .listen-size-btn.big{ font-size:1.25em; }
+  .listen-size output{ font-weight:bold; min-width:3.4em; text-align:center; }
+  .listen-toggle-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 14px; font-size:.88em; font-weight:bold;
+    font-family:inherit; cursor:pointer; white-space:nowrap;
+    transition:transform .15s, background .15s, opacity .15s;
+  }
+  .listen-toggle-btn:hover{ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-toggle-btn[aria-pressed="false"]{
+    color:var(--lb-muted); border-color:#d1d5db; background:#f9fafb; opacity:.8;
+  }
+  .listen-toggle-btn:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+  .listen-skip-btn:focus-visible, .listen-size-btn:focus-visible,
+  .listen-voice select:focus-visible,
+  .listen-rate input:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-status{ font-size:.95em; color:#78350f; flex:1 1 200px; }
+  .listen-progress{ font-size:.9em; color:#78350f; font-weight:bold; white-space:nowrap; }
+  .listen-rate, .listen-voice{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-rate input{ accent-color:var(--lb-purple); }
+  .listen-rate output{ font-weight:bold; min-width:2.6em; }
+  .listen-voice select{
+    border-radius:20px; border:1px solid var(--lb-gold); padding:4px 10px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:190px;
+  }
+  .tts-clickable{ cursor:pointer; transition:background .2s; border-radius:6px; }
+  .tts-clickable:hover{ background:rgba(245,158,11,.10); }
+  .reading-highlight{
+    background:linear-gradient(135deg,#e0e7ff 0%,#fce7f3 100%); border-radius:8px;
+    box-shadow:0 0 0 3px var(--lb-pink) inset; transition:background .3s;
+    padding-right:14px; padding-left:14px;
+    margin-right:-14px; margin-left:-14px;
+  }
+  .audio-player{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid #f59e0b;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  }
+  .audio-player-title{ font-size:1.05em; font-weight:bold; color:#92400e; flex:1 1 100%;}
+  .audio-player audio{ flex:1 1 260px; min-width:220px; height:40px;}
+  .audio-chapter-select{
+    border-radius:20px; border:1px solid #f59e0b; padding:6px 12px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:260px;
+  }
+  .audio-get{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; flex:1 1 100%;}
+  .audio-download{
+    display:inline-flex; align-items:center; gap:6px;
+    background:linear-gradient(135deg,#7e22ce 0%,#ec4899 100%);
+    color:#fff; text-decoration:none; border-radius:30px; padding:8px 18px;
+    font-size:0.95em; font-weight:bold; transition:transform .15s, box-shadow .15s;
+  }
+  .audio-download:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,0.3);}
+  .audio-pick-btn{
+    background:#fff; color:#7e22ce; border:2px solid #7e22ce;
+    border-radius:30px; padding:7px 16px; font-size:0.9em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .audio-pick-btn:hover{ transform:translateY(-2px); background:#f3e8ff;}
+  .audio-note{ font-size:0.9em; color:#92400e;}
+  h2.reading-highlight{ padding-right:34px; }
+  @media(max-width:768px){
+    .listen-bar{ padding:15px; gap:10px; }
+    .listen-status{ flex:1 1 100%; }
+    .listen-voice select{ max-width:140px; }
+  }
+  @media print{
+    .listen-bar{ display:none !important; }
+    .audio-player { display: none !important; }
+    .reading-highlight{ box-shadow:none !important; background:none !important; }
+    .tts-clickable{ cursor:auto; }
+  }
+  /* fs scaling for plain body paragraphs/list items, applied additively so it
+     doesn't fight whatever base font-size the article already declares */
+  .container p, .container li{ font-size: calc(1em * var(--fs)); }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 data-a="01-0" class="main-title" id="top">הבית היהודי</h1>
+  <div class="subtitle">מקום ההטבה הגדול ביותר — שלום בית, השראת השכינה וגאולת ישראל</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+  <div class="listen-bar">
+      <div class="listen-btn-group">
+          <button class="listen-btn" id="listenBtn" onclick="toggleListen()" aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן למאמר</button>
+          <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+          <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+          <button class="listen-skip-btn" onclick="skipListen(1)" aria-label="פסקה הבאה" title="פסקה הבאה">⏭</button>
+          <button class="listen-skip-btn" onclick="skipChapter(1)" aria-label="פרק הבא" title="פרק הבא">⏩</button>
+          <button class="listen-stop-btn" onclick="stopListen()" aria-label="עצור הקראה">⏹ עצור</button>
+          <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()" aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+      </div>
+      <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+      <span class="listen-progress" id="listenProgress"></span>
+      <div class="listen-rate">
+          <label for="rateRange">מהירות:</label>
+          <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1" oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)" aria-label="מהירות הקראה">
+          <output id="rateValue" for="rateRange">1.0×</output>
+      </div>
+      <div class="listen-voice">
+          <label for="voiceSelect">קול:</label>
+          <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+      </div>
+      <div class="listen-size">
+          <span>גודל טקסט:</span>
+          <button class="listen-size-btn" id="fontSmaller" onclick="setFontScale(-1)" aria-label="הקטן את הטקסט" title="הקטן את הטקסט">א−</button>
+          <output id="fontScaleValue">100%</output>
+          <button class="listen-size-btn big" id="fontBigger" onclick="setFontScale(1)" aria-label="הגדל את הטקסט" title="הגדל את הטקסט">א+</button>
+      </div>
+  </div><div class="audio-player no-tts">
+    <div class="audio-player-title">🎧 האזנה להקלטה — קול הילה</div>
+    <select class="audio-chapter-select" aria-label="בחירת פרק להאזנה" hidden>
+        <option value="audio/%D7%94%D7%91%D7%99%D7%AA_%D7%94%D7%99%D7%94%D7%95%D7%93%D7%99_%D7%9E%D7%A7%D7%95%D7%9D_%D7%94%D7%94%D7%98%D7%91%D7%94_%D7%94%D7%92%D7%93%D7%95%D7%9C_%D7%91%D7%99%D7%95%D7%AA%D7%A8.mp3" data-seg="01">הקדמות · אל גינת אגוז ירדתי · שלום בית, חיבור בין הקדוש ברוך הוא לכנסת ישראל: מקורות · עצת הגמרא לחיים מאושרים · סיפורים מחכמינו זכרונם לברכה · לעשות לשם שמים · ההשפעה הגדולה ביותר · מקורות מהתורה לחשיבות האחדות בבית היהודי · האוצר לא מתחת לגשר · סיכומים · הסכמות הרבנים</option>
+    </select>
+    <audio controls preload="none"></audio>
+    <div class="audio-get">
+        <a class="audio-download" href="#" data-download-placeholder="" target="_blank" rel="noopener">📥 להורדת קובץ השמיעה לחץ כאן</a>
+        <button type="button" class="audio-pick-btn">📂 בחר את הקובץ שהורדת</button>
+        <input type="file" class="audio-pick-input" accept="audio/*" multiple hidden>
+        <span class="audio-note"></span>
+    </div>
+</div>
+
+  <div style="text-align:center; color:#9ca3af; font-size:0.95em; margin-bottom:40px;">לעילוי נשמת יהודית בת יהודה אריה ז"ל</div>
+
+  <div class="toc">
+    <h3>📑 תוכן העניינים</h3>
+    <ul>
+      <li><a href="#section1">פרק א — הקדמות</a></li>
+      <li><a href="#section2">פרק ב — אל גינת אגוז ירדתי</a></li>
+      <li><a href="#section3">פרק ג — שלום בית: חיבור בין הקב"ה לכנסת ישראל</a></li>
+      <li><a href="#section4">פרק ד — עצת הגמרא לחיים מאושרים</a></li>
+      <li><a href="#section5">פרק ה — סיפורים מחכמינו זכרונם לברכה</a></li>
+      <li><a href="#section6">פרק ו — לעשות לשם שמים</a></li>
+      <li><a href="#section7">פרק ז — ההשפעה הגדולה ביותר</a></li>
+      <li><a href="#section8">פרק ח — מקורות מהתורה לחשיבות האחדות בבית היהודי</a></li>
+      <li><a href="#section9">פרק ט — האוצר לא מתחת לגשר</a></li>
+      <li><a href="#section10">פרק י — סיכומים</a></li>
+      <li><a href="#hascamot">הסכמות הרבנים</a></li>
+    </ul>
+  </div>
+
+  <!-- ===================== CHAPTER 1 ===================== -->
+  <div class="chapter-card">
+    <div class="chapter-num">א</div>
+    <div class="chapter-title">הקדמות</div>
+  </div>
+  <div class="section-divider"><div class="line"></div><div class="icon">📖</div><div class="line"></div></div>
+
+  <div class="chapter-label">פרק א</div>
+  <h2 data-a="01-1" id="section1">הקדמות</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-2">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-3">מטרת החוברת — לא עצות, אלא הרגשת חשיבות המצווה</li>
+      <li data-a="01-4">סודו של הגרש"ז אויערבאך זצ"ל</li>
+      <li data-a="01-5">מהי באמת הגדרת "שלום בית"?</li>
+      <li data-a="01-6">מדוע לימוד עניני המצווה הוא עצה חזקה להצלחה</li>
+      <li data-a="01-7">האדם משפיע במעשיו על הבריאה כולה</li>
+      <li data-a="01-8">אהבת איש ואשתו משפיעה על כל העולם במיוחד</li>
+      <li data-a="01-9">"דע מה למעלה ממך"</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-10" style="margin:0;">חוברת זו נכתבה מתוך תחושה עמוקה: רבים מאיתנו יודעים ש"שלום בית" חשוב, אך מעטים מבינים <span class="emphasis">עד כמה</span> הוא חשוב, ומדוע דווקא הוא, מכל מעשי האדם, נבחר להיות הכלי המרכזי להשראת שכינה ולגאולת ישראל. הפרק הפותח הזה אינו בא ללמד "עצות" לשלום בית, אלא לבנות תשתית של הבנה והרגשה — כדי שכל מעשה קטן בבית ייעשה מתוך ידיעה ברורה של ערכו.</p>
+  </div>
+
+  <h3 data-a="01-11">מטרת החוברת</h3>
+
+  <p data-a="01-12">חוברת זו אין מטרתה לתת עצות טובות לשלום בית, אלא:</p>
+
+  <ol>
+    <li data-a="01-13">לחזק את ההרגשה של <span class="emphasis">חשיבות</span> השמחה והאהבה בבית — שזוהי מצווה גדולה, לא פחות מאכילת מצה בליל הסדר. וכלשון מסילת ישרים (פרק טז): "כי אין די לאדון ברוך הוא במעשים לבדם שיהיו מעשי מצוה, אלא העיקר לפניו שהלב יהיה טהור לכוין בה לעבודה אמיתית... והנה הלב הוא המלך לכל חלקי הגוף ונוהג בם, ואם הוא אינו מביא עצמו אל עבודתו יתברך, אין עבודת שאר האברים כלום".</li>
+    <li data-a="01-14">לתת לאדם את <span class="emphasis">השמחה במצווה</span> — כפי שאמר החזון איש: "עיקר עשית מצווה היא שמחתה, שזכינו לכך". פירוש הדברים: עשייה ללא שמחה — העיקר בה חסר.</li>
+    <li data-a="01-15">לדעת את <span class="emphasis">כוונת המצווה</span>: לעשות נחת רוח לבורא, ולהיטיב לעם ישראל — נלמד להלן כיצד על ידי השלום בביתו נמשך שפע טוב לכל עם ישראל.</li>
+    <li data-a="01-16">לדעת את ה<span class="emphasis">דרך</span> לעשות נחת רוח לה'. מצווה שזו מטרתה, ערכה עולה לאין שיעור, ועושה אותו לנקרא "חסיד" (מסילת ישרים).</li>
+    <li data-a="01-17">אם יחיה אדם דברים אלו ויכוון בכוונות אלו — מעשיו ישוו פי מאה.</li>
+  </ol>
+
+  <p data-a="01-18">מי שזוכה לכך, זוכה להיות <strong>בן אהוב וחביב לבורא</strong> — וזוהי מטרת הצדיקים בעולם (שערי תשובה) — וזוכה לשכינה בביתו ולילדים צדיקים, הנקראים "בנין דקב"ה" (זוהר).</p>
+
+  <div class="qa-box">
+    <p data-a="01-19" class="q">איך מפנימים דברים כאלה, שאינם מוחשים בחוש?</p>
+    <p data-a="01-20" class="a">"יגעת ומצאת תאמין" — לא ביום אחד נבנתה רומא; רק על ידי לימוד ושינון רב יחדרו הדברים ללב. מים שחקו אבנים. לכן, אם נלמד בעיון את החוברת, לאט לאט יחדרו הדברים ללב, ונזכה בעז"ה לקבל תחושה אמיתית של עשיית רצון ה' ושמחה בתוך הבית.</p>
+  </div>
+
+  <h3 data-a="01-21">סודו של הגרש"ז</h3>
+
+  <div class="story-box">
+    <p data-a="01-22" style="margin-top:0;">מסופר כי בלוויית אשתו אמר הגרש"ז אויערבאך זצ"ל: "איני צריך לבקש ממנה מחילה, משום שמעולם, בכל חיינו המשותפים, לא אמרתי מילה העלולה לצער אותה". ותמהו רבים: מהו כוחו? (הגרש"ז התגורר בדירת חדר וחצי, ובה גידל את עשרת ילדיו).</p>
+    <p data-a="01-23">מספר אברך: ליוויתי את הגרש"ז לביתו. לפני שנכנס, נעמד הגרש"ז, יישר מעט את כובעו ואת חליפתו, כדי שייראה מסודר. אמרתי לו: "מבין אני כי הגיעו אליכם אורחים, נמשיך אפוא בשיחתנו פעם אחרת". "מנין לך שישנם אורחים בביתי?" תמה הגרש"ז. השבתי: "לשם מה סידרת את בגדיך?". אמר לי הגרש"ז זצ"ל: "הנני מתכונן לקבלת פני שכינה — לקדם פני אשתי הממתינה לי, ולשם כך עלי לדאוג להופעה מסודרת ומכובדת".</p>
+    <p data-a="01-24" style="margin-bottom:0;">כותב הרב עזריאל טאובר שליט"א (הבית היהודי עמוד עז): "לעניות דעתי עובדה זו יש בה מן השבח והמעלה יותר מכל התארים, יותר מ'חריף ובקי', 'סיני ועוקר הרים', 'בוצינא קדישא' וכו'. כאשר יהודי חי, ובליבו אמונה שלימה וטבעית שדברי חז"ל אינם מליצות ודרושים, אלא הם אמת פשוטה וברורה — שהשכינה שורה בבית כעין בית המקדש, וזילזול ברעייתו הוא בחינת חורבן בית המקדש — אין פלא כי הוא יכול להעיד על עצמו מה שהעיד".</p>
+  </div>
+
+  <p data-a="01-25">כדי <strong>להרגיש</strong> ששכינה בביתנו, נצא ללמוד את הסוגיה לעומק: מהי שכינה? מדוע היא מגיעה? היכן רואים בתורה כי סיבת הגעתה היא אשתו? מדוע רוצה הקב"ה כל כך שהיהודי ישמח את ביתו — עד ששם שמים נמחק בשביל זה (שזו בחינת חילול שם שמים, העבירה החמורה ביותר)? מדוע רק בשמחת חתן וכלה מברכים "שהשמחה במעונו"? ועוד — שאלות שהחוברת כולה תלך ותברר.</p>
+
+  <h3 data-a="01-26">הגדרת שלום בית</h3>
+
+  <p data-a="01-27">יש החושבים שאם אין מריבה — יש שלום בית. אך צריך לדעת: שלום בית אין פירושו הסרת קטטה, אלא "אוהבה כגופו". כתב הרב דוב קוק שליט"א (בספר ויצא יצחק לשוח): "ועל זה ידוו כל הדווים, שלכן היום כמעט ולא מצוי שלום בית, ואפילו אדם שעושה ועוזר הרבה בביתו וקונה לאשתו הרבה דברים... כל זה לא נעשה מתוך אהבה! 'אוהבה כגופו' פירושו הוא עושה את הכול מתוך אהבה, ומי שיזכה לדבר כזה שלא מתוך אינטרס — הוא בודאי צדיק גדול מאוד!"</p>
+
+  <div class="verse-box">
+    <p data-a="01-28">"שִׁמְעוּ אֵלַי רֹדְפֵי צֶדֶק מְבַקְשֵׁי ה' הַבִּיטוּ אֶל צוּר חֻצַּבְתֶּם... הַבִּיטוּ אֶל אַבְרָהָם אֲבִיכֶם וְאֶל שָׂרָה תְּחוֹלֶלְכֶם <strong>כִּי אֶחָד קְרָאתִיו</strong> וַאֲבָרְכֵהוּ וְאַרְבֵּהוּ"
+    <span class="source-tag" style="display:block; margin-top:10px; font-size:0.7em; color:#7e22ce;">ישעיהו נא, א–ב</span></p>
+  </div>
+
+  <p data-a="01-29">מהו "כי אחד קראתיו"? כתב המהר"ל (חידושי אגדות ח"ג עמוד פב), על פי הגמרא (בבא בתרא נח.) שראו את אברהם ושרה מאוחדים במערת המכפלה: דע כי אברהם ושרה <strong>מתאחדים מצד עצמם יותר מכל איש ואשה בעולם</strong>, וזה שהכתוב אומר "כי אחד קראתיו" — כי אברהם עם שרה הוא אחד. הנביא מצווה על "רודפי צדק מבקשי ה'" להביט וללמוד דווקא ממעלה זו של אברהם ושרה — האחדות המלאה היא, אם כן, לא תוצר לוואי של הצדקות, אלא חלק מהותי ממנה.</p>
+
+  <h3 data-a="01-30">לימוד עניני המצווה הוא עצה חזקה להצלחה</h3>
+
+  <p data-a="01-31">"הנה אף שלימוד התורה הוא כל מה שהאדם לומד, אפילו בקדשים ובטהרות, הוא מקיים מצוות עשה של תלמוד תורה, מכל מקום עיקר לימוד האדם צריך להיות <strong>בלימוד המביא לידי מעשה</strong>... 'ומה ילמד האדם מתחילה — אשר יעשה', היינו לימודים הנוגעים למעשה בכל יום מימי חייו" (מתוך ההקדמה למשנה ברורה).</p>
+
+  <p data-a="01-32">ואין לך לימוד הנוגע למעשה יותר מענייני שלום בית, הנוגע יום יום למעשה. חוברת זו אינה עוסקת בעצות מעשיות, אלא בלימוד טעמי המצווה וגדריה — גודל וסיבת חשיבות החיוב לאהוב את רעייתו, וכן מדוע גאולת ישראל תלויה בזה. כאשר ידע זאת, ירצה וישתוקק ויתפלל לזה, ואין לך עצה יותר טובה לשלום בית מאשר רצון ותפילה.</p>
+
+  <div class="quote-box">
+    <p data-a="01-33">"הנשגב והעיקר בשימוש רפואות התורה לתחלואי היצר, הוא ללמוד בעוז ועיון עמוק היטב דיני העבירה עצמה... כי השתנות הטבע תולד <strong>רק מלימוד והרגל רב</strong>. ולכן היסוד העיקרי... הוא רק הלימוד הרב בהלכה זו הנוגעת למצוה זו, ובפרט בעיון הדק היטב, כי זה הלימוד עושה קנין חזק בנפש."</p>
+    <span class="source-tag">אגרת המוסר לר' ישראל סלנטר זצ"ל</span>
+  </div>
+
+  <h3 data-a="01-34">האדם משפיע במעשיו על הבריאה כולה</h3>
+
+  <p data-a="01-35">יסוד עמוק, המהווה את הבסיס לכל הנאמר בחוברת זו, הוא שהאדם אינו רק "מקיים מצוות" לעצמו — מעשיו, דיבוריו ומחשבותיו פועלים ממש בעולמות עליונים:</p>
+
+  <div class="quote-box">
+    <p data-a="01-36">"כן בדמיון זה כביכול ברא הוא יתברך את האדם, והשליטו על ריבי רבבות כוחות ועולמות אין מספר... שיהא הוא המדבר והמנהיג אותם על פי כל פרטי תנועות מעשיו ודיבוריו ומחשבותיו... כי במעשיו ודיבוריו ומחשבותיו הטובים הוא מקיים ונותן כח בכמה כוחות ועולמות עליונים הקדושים, ומוסיף בהם קדושה ואור... ובהיפוך חס ושלום... הוא מהרס רחמנא ליצלן כמה כוחות ועולמות עליונים הקדושים לאין ערוך ושיעור."</p>
+    <span class="source-tag">נפש החיים, שער א פרק ג</span>
+  </div>
+
+  <p data-a="01-37">יסוד זה מבואר גם בטעם בריאת האדם בצלם אלוקים: כשם שהקב"ה מנהיג את כל הכוחות בכל העולמות ומסדרם כרצונו בכל רגע, כך הפקיד רצונו יתברך בידי האדם להיות "הפותח והסוגר" של כמה אלפי רבבות כוחות ועולמות, לפי כל פרטי הנהגותיו. וכפי שדרשו חז"ל (איכה רבתי): "בזמן שישראל עושין רצונו של מקום — מוסיפין כח בגבורה של מעלה... ובזמן שאין ישראל עושין רצונו של מקום — כביכול מתישין כח גדול של מעלה".</p>
+
+  <h3 data-a="01-38">אהבת איש ואשתו משפיעה על כל העולם במיוחד</h3>
+
+  <p data-a="01-39">אם כל מעשה משפיע על העולמות העליונים, מדוע נבחרה דווקא אהבת איש ואשתו להיות הזירה המרכזית לכך? כתב בפלא יועץ (ערך שנאה): "לפי גודל מעלת מצות 'ואהבת לרעך כמוך', שהיא כלל גדול בתורה, ראוי לאדם להתחזק ברוב עוז ותעצומות... להעביר שנאה מלבו ולהיות מוציא מצה ומכניס אהבה, בפרט עם אשתו... כי הדברים עתיקים, ומעובדא דלתתא איתער עובדא דלעילא — או בונה עולמות או מחריבן. והשנאה והמחלוקת מעורר מדנים וקטגוריא ופירוד למעלה, ועל ידי אהבה ואחווה שלום ורעות מעורר אהבת דודים למעלה ועושה שלום במרומים, דגורם יחוד קודשא בריך הוא ושכינתיה — <strong>וזהו הטעם שבזה תלוי גאולתנו ופדות נפשנו</strong>".</p>
+
+  <div class="qa-box">
+    <p data-a="01-40" class="q">מדוע דווקא אהבת איש ואשה בונה או מחריבה עולמות, עד כדי שבה תלויה הגאולה — יותר מאשר אהבת כל ישראל בכלל?</p>
+    <p data-a="01-41" class="a">זוהי בדיוק השאלה שהפרקים הבאים באים לענות עליה, החל מהיסוד שאיש ואשתו אינם רק "משל" למערכת היחסים בין הקב"ה לכנסת ישראל — אלא <em>השורש</em> לה, כפי שיתבאר בפרק הבא.</p>
+  </div>
+
+  <h3 data-a="01-42">דע מה למעלה ממך</h3>
+
+  <div class="quote-box">
+    <p data-a="01-43">"וזאת תורת האדם: כל איש ישראל אל יאמר בלבו חס ושלום, כי מה אני ומה כחי לפעול במעשי השפלים שום ענין בעולם. אמנם יבין וידע ויקבע במחשבות לבו, שכל פרטי מעשיו ודיבוריו ומחשבותיו כל עת ורגע לא אתאבידו חס ושלום... וקרוב לשמוע שגם זה בכלל כוונתם ז"ל באבות: 'דע מה למעלה ממך' — ר"ל אם כי אינך רואה בעיניך הענינים הנוראים הנעשים ממעשיך, אבל תדע נאמנה, כי כל מה שנעשה למעלה בעולמות העליונים גבוהי גבוהים — הכל ממך הוא, על פי מעשיך לאן נוטים, על פיהם יצאו ויבואו."</p>
+    <span class="source-tag">נפש החיים</span>
+  </div>
+
+  <p data-a="01-44">בפרק הבא נעמיק בהבנת היסוד המרכזי: לא רק ש"או"א הם משל" למערכת היחסים העליונה, אלא שהם <strong>השורש</strong> ממש — ומכאן נבין מדוע כל תוספת אהבה בבית משפיעה ישירות על העולם כולו.</p>
+
+  <!-- ===================== CHAPTER 2 ===================== -->
+  <div class="chapter-card">
+    <div class="chapter-num">ב</div>
+    <div class="chapter-title">אל גינת אגוז (א-גוז = זוג אחד) ירדתי</div>
+  </div>
+  <div class="section-divider"><div class="line"></div><div class="icon">🌰</div><div class="line"></div></div>
+
+  <div class="chapter-label">פרק ב</div>
+  <h2 data-a="01-45" id="section2">אל גינת אגוז ירדתי</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-46">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-47">איש ואשתו: לא רק משל — שורש המשפיע על הנמשל</li>
+      <li data-a="01-48">"זה כנגד זה עשה האלוקים" ודוגמאות מהבריאה</li>
+      <li data-a="01-49">מהי "כנסת ישראל"?</li>
+      <li data-a="01-50">"לשם יחוד קב"ה ושכינתיה" — מה פירוש הנוסח המוכר?</li>
+      <li data-a="01-51">איש ואישה נבראו דוגמת העולמות העליונים</li>
+      <li data-a="01-52">הבית היהודי — מקום שנותן לקב"ה כוח להשפיע טוב לעולם</li>
+      <li data-a="01-53">סיפור: המשגיח שליט"א</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-54" style="margin:0;">בפרק הקודם עמדנו על כך שאהבת איש ואשה משפיעה על העולם כולו. בפרק זה נגלה <span class="emphasis">מדוע</span>: איש ואשתו אינם רק "משל" נוח להמחשת הקשר בין הקב"ה לכנסת ישראל, כפי שנוטים לחשוב על פי שיר השירים ומתן תורה — אלא הם ה<span class="emphasis">שורש</span> עצמו. שינוי המבט הזה משנה לגמרי את המשמעות של כל רגע בבית היהודי.</p>
+  </div>
+
+  <h3 data-a="01-55">איש ואשתו — משל המשפיע על הנמשל</h3>
+
+  <p data-a="01-56">דברים אלו יקרים עד מאוד, וכל מי שנגעה יראת השם בלבבו יבין שמצבו של עם ישראל וחיי עולם הבא תלויים בם. זהו שינוי מבט על חיי היהודי: בידך לעשות נחת רוח לקב"ה בביתך, בידך להוסיף אהבה בין הקב"ה לבניו. <strong>מי שיזכה לחיות זאת כל שעה בביתו — ערכה יעלה פי מאה ויותר!</strong></p>
+
+  <p data-a="01-57">עד היום התייחסנו לאיש ואשה כ<em>משל</em> להקב"ה וכנסת ישראל, כפי שרואים בשיר השירים, במתן תורה, בקודש הקודשים ובכרובים. וכן בברכת הנישואין תיקנו לברך "שׂוֹשׂ תָּשִׂישׂ וְתָגֵל הָעֲקָרָה... בָּרוּךְ אַתָּה ה' מְשַׂמֵּחַ צִיּוֹן בְּבָנֶיהָ" — שהרי שמחת ירושלים העתידה נמשלה לזיווג חתן וכלה, שנאמר: "וּמְשׂוֹשׂ חָתָן עַל כַּלָּה יָשִׂישׂ עָלַיִךְ אֱלֹהָיִךְ".</p>
+
+  <div class="qa-box">
+    <p data-a="01-58" class="q">וכאן נראה כי טעינו! האם הנישואין הם באמת רק "משל"?</p>
+    <p data-a="01-59" class="a">אין הנישואין משל בלבד, אלא <strong>השורש</strong> ל<strong>התנהגות הקב"ה כלפי עם ישראל</strong>.</p>
+  </div>
+
+  <div class="story-box">
+    <p data-a="01-60" style="margin:0;">נסביר במשל מהחיים: אדם קנה מפסקים לארון חשמל. המפסקים בקופסה שבידו דומים מאוד למפסקים בארון החשמל — אבל רק <em>דומים</em>. אלו שבארון החשמל גורמים לכבות (או להדליק) את כל החשמל בבית, ואילו המפסקים שבידו אינם פועלים כלום. אנו רגילים לראות את הנישואין כמפסקים שבקופסה, הדומים לאלו שבארון החשמל. וכאן טעותנו: איש ואישה אינם מפסקים שבקופסה, אלא הם מפסקים בתוך ארון החשמל עצמו. כשהם מוסיפים אהבה — הם מרימים את הכפתור הראשי בחברת החשמל, הגורם להדליק אור בכל ארץ ישראל. וחלילה, מי שלא — גורם לכבות. הכרובים בקודש הקודשים מלמדים: כשזוכים, הבית ממש קודש הקודשים.</p>
+  </div>
+
+  <h3 data-a="01-61">זה כנגד זה עשה האלוקים</h3>
+
+  <p data-a="01-62">שברא הקב"ה את עולמו — ברא אותו מהאצילות ועד עולם הזה הגשמי, כולם באותה צורה, כמו שאמרו רבותינו ז"ל (ברכות נה.): "מלכותא דארעא כעין מלכותא דרקיעא" — אלא שככל שיותר למעלה, הדבר יותר רוחני, וככל שיותר למטה, הדבר יותר גשמי. כך כתוב בספר הבהיר, אמר רבי עקיבא: כל מה שברא הקדוש ברוך הוא בעולמו ברא זה כנגד זה, שנאמר "גם את זה לעומת זה עשה האלוקים".</p>
+
+  <p data-a="01-63">וכך כתב בנפש החיים (שער ד פרק כז): העולמות העליונים, אף שקדושתם רבה מאד, כאשר נשתלשלו וירדו דרך השתלשלות והדרגות עצומות — בכל עולם נצטייר ונחתם בו כל סדרי העולם שמעליו, בדמותו כצלמו ממש, כידוע. "כשם שיש למעלה יש למטה", וכל העולמות אחוזים זה בזה.</p>
+
+  <h3 data-a="01-64">דוגמאות מהבריאה</h3>
+
+  <p data-a="01-65">ניתן לראות לכך דוגמאות רבות: ירושלים של מטה מכוונת כנגד ירושלים של מעלה; בשם הוי"ה יש כפל אות ה' וגם האות ו' היא הארכה של הי'; יש ברית הלשון וברית המאור; פסח בט"ו בניסן וסוכות בט"ו בתשרי (שניהם ט"ו בחודש הראשון לתקופתם); ט"ו בשבט וט"ו באב, שניהם 45 יום לפני סיום השנה; שבעה שבועות לאחר פסח — שבועות, שבעה ימים לאחר סוכות — שמחת תורה; סופרים ששה ימים ועושים שבת, סופרים שש שנים ועושים שמיטה.</p>
+
+  <p data-a="01-66">ובטבע הבריאה: שמש (חמה) וירח (לבנה) כנגד איש (מוח) ואשה (לב, רגש) — מוח שמאיר ללב, וזהו "וְיָדַעְתָּ הַיּוֹם" (במוח) "וַהֲשֵׁבֹתָ אֶל לְבָבֶךָ" (ללב), וזהו תפילין של ראש ותפילין של יד; וכן יד ימין ויד שמאל (ולכן תפילין של יד מניחים ביד שמאל); וכן יום ולילה.</p>
+
+  <h4 data-a="01-67">רבינו בחיי: העולם שלמטה — דוגמת העולם שלמעלה</h4>
+
+  <p data-a="01-68">וראה גם ראה מעלת מין האדם, שהרי השי"ת ציווה בתורתו לעשות כלים גופניים במשכן ובמקדש, היותם ציורים ודוגמה לדברים שכליים שבעולם העליון, כדי להשכין שכינתו ולהיות דירתו בתחתונים. זהו שדרשו ז"ל: כל מה שברא הקב"ה למעלה ברא למטה — למעלה זבול ולמטה זבול, למעלה ערפל ולמטה ערפל, למעלה שרפים עומדים ולמטה עצי שיטים עומדים, למעלה כרובים ולמטה כרובים, למעלה היכל ה' ולמטה היכל ה'... ולא עוד, אלא <strong>שחביבין שלמטה משל מעלה</strong>, שהרי הניח של מעלה וירד בשל מטה, שנאמר "וְעָשׂוּ לִי מִקְדָּשׁ" (רבינו בחיי).</p>
+
+  <h3 data-a="01-69">מהי כנסת ישראל?</h3>
+
+  <p data-a="01-70">כמו שיש לאדם מפסק לכל מנורת חשמל שבבית, ויש מפסק ראשי לכל הבית כולו — כך יש לכל יהודי נשמה, ויש <strong>נשמה אחת בעליונים הכוללת את כל נשמות ישראל</strong>, הנקראת כנסת ישראל (שכל נשמות ישראל מכונסות בה).</p>
+
+  <p data-a="01-71">מצאנו את המושג בתורה (ויקרא כ, ב-ג) לגבי הנותן מזרעו למולך: "כִּי מִזַּרְעוֹ נָתַן לַמֹּלֶךְ <strong>לְמַעַן טַמֵּא אֶת מִקְדָּשִׁי</strong>". רש"י: "למען טמא את מקדשי — את כנסת ישראל שהיא מקודשת לי". מסביר הגור אריה (מהר"ל): לא מקדש ממש, אלא כלל ישראל הנקראים "מקדש", מפני שכנסת ישראל מקודשת לשמו יתברך.</p>
+
+  <div class="highlight-box">
+    <p data-a="01-72" style="margin:0;">למדנו מכאן: כמו שיש לאדם למטה אישה המקודשת לו, כך כביכול יש למעלה לקב"ה בת זוג המקודשת לו — בתורה נקראת "מקדש" (מלשון קידושין), בלשון חז"ל "כנסת ישראל" (כלולה מכל נשמות ישראל), ובלשון ספרי הקבלה "שכינתיה" או "ספירת המלכות" (היות ואור ה' שוכן בה, ובה מתגלית מלכות ה' בעולם).</p>
+  </div>
+
+  <p data-a="01-73">וכך כתוב בתומר דבורה (פרק ראשון, מידה ד): "הנה הקב"ה מתנהג עם ישראל בדרך זה, לומר, מה אעשה לישראל והם קרובי, שאר בשר לי עמהם, <strong>שהם בת זוג להקב"ה</strong>, וקורא לה (לכנסת ישראל) בתי, אחותי, אמי".</p>
+
+  <h3 data-a="01-74">לשם יחוד קב"ה ושכינתיה</h3>
+
+  <p data-a="01-75">מכאן מובן נוסח מוכר שרבים אומרים מבלי לדעת פשר עומקו: "לשם יחוד קודשא בריך הוא ושכינתיה" — פירושו לגרום יחוד בין הקב"ה לכנסת ישראל (שהם כנגד איש ואשתו שלמטה, ובלשון הקבלה נקרא "זו"נ דאצילות"). לכן שלום בית הנעשה לשם שמים גורם יחוד קב"ה ושכינתיה גדול מאוד — וזהו בדיוק מה שהתפילה המוכרת מבקשת שנפעל בכל מעשה.</p>
+
+  <h3 data-a="01-76">איש ואשתו נבראו דוגמת עולמות העליונים</h3>
+
+  <p data-a="01-77">לפי כל האמור, מובן מדוע דווקא איש ואשה — ולא כל זוגיות אנושית אחרת — נבחרו להיות ה"דוגמה" (במובן העמוק, לא רק המשלי) של הקשר בין הקב"ה לכנסת ישראל: הבריאה כולה בנויה במבנה של "זה כנגד זה", ומכיוון שהעולם העליון ביותר שאנו מכירים בנוי מהיחס בין הקב"ה לכנסת ישראל, גם המבנה האנושי היסודי ביותר — איש ואשתו — נברא כדוגמתו.</p>
+
+  <h4 data-a="01-78">איש ללא אשה — אינו "אדם" במובן המלא</h4>
+
+  <p data-a="01-79">מכאן גם מובן מדוע חז"ל הפליגו כל כך בחומרת מצב האדם ללא בת זוג: "צלם אלוקים" משפיע על כל העולמות העליונים דווקא כשהוא שלם, איש ואשתו יחדיו — שהרי הצורה השלמה של "אדם" בבריאה הראשונה כללה זכר ונקבה יחד ("זָכָר וּנְקֵבָה בְּרָאָם").</p>
+
+  <div class="section-divider" style="margin: 40px 0;"><div class="line"></div><div class="icon">✡</div><div class="line"></div></div>
+
+  <h3 data-a="01-80">הבית היהודי — מקום שנותן לקב"ה כוח להשפיע טוב לעולם כולו</h3>
+
+  <p data-a="01-81">אם אכן איש ואשתו הם דוגמת קב"ה וכנסת ישראל, ולא רק משל — נובעת מכך מסקנה מעשית עצומה: הבית היהודי אינו רק מקום מגורים פרטי, אלא זירה שבה נקבע, במידה רבה, שיעור השפע שיורד לעולם כולו. כל תוספת אהבה, כבוד ורוך בין בני הזוג — פועלת "למעלה" ומעוררת "יחוד קודשא בריך הוא ושכינתיה", וממנו נשפע טוב לכל עם ישראל.</p>
+
+  <h3 data-a="01-82">דברי הרב אביגדור נבנצל שליט"א</h3>
+
+  <div class="quote-box" style="font-style: normal;">
+    <p data-a="01-83" style="margin:0;">כפי שיובא בהמשך החוברת בהסכמתו הכתובה: "ראיתי את החוברת... המסבירה איך אהבה ואחווה ושלום ורעות בין איש לאשתו גורמים שפע טוב של הקב"ה לכנסת ישראל, והדברים מאירים ומעוררים".</p>
+  </div>
+
+  <h3 data-a="01-84">סיפור: מעשה באחד המשגיחים שליט"א</h3>
+
+  <div class="story-box">
+    <p data-a="01-85" style="margin:0;">מסופר על אחד המשגיחים הידועים, שהקפיד תמיד — עוד לפני שנכנס לביתו בסוף היום, לאחר שעות ארוכות של השגחה על תלמידיו וטיפול בענייני הישיבה — לעצור רגע בפתח הבית, "להחליף כובע" בליבו פנימה, ולהיכנס אל אשתו לא כמי שממשיך לשאת את עול הישיבה, אלא כמי שנכנס לחדר שבו שוכנת השכינה. תלמידיו למדו ממנו: הזהירות בכבוד הבית אינה "הפסקה" מהעבודה הרוחנית — היא שיאה.</p>
+  </div>
+
+  <p data-a="01-86">נסיים פרק זה במה שפתחנו בו: אם איש ואשתו הם השורש ולא המשל, הרי שכל רגע קטן בבית — שיחה, חיוך, עזרה בעבודות הבית — אינו "עוד יום רגיל", אלא הזדמנות ממשית להוסיף אור בעולמות העליונים. בפרקים הבאים נראה כיצד יסוד זה מבואר במקורות רבים לאורך כל התורה, מהתורה שבכתב ועד דברי חז"ל, הזוהר והפוסקים.</p>
+
+  <!-- ===================== CHAPTER 3 ===================== -->
+  <div class="chapter-card">
+    <div class="chapter-num">ג</div>
+    <div class="chapter-title">שלום בית — חיבור בין הקב"ה לכנסת ישראל: מקורות</div>
+  </div>
+  <div class="section-divider"><div class="line"></div><div class="icon">📚</div><div class="line"></div></div>
+
+  <div class="chapter-label">פרק ג</div>
+  <h2 data-a="01-87" id="section3">שלום בית — חיבור בין הקב"ה לכנסת ישראל: מקורות</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-88">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-89">פלא יועץ, עבודת הקודש להחיד"א, תומר דבורה, ריקאנטי — הגאולה תלויה בשלום בית</li>
+      <li data-a="01-90">סיפור: כבוד אשתי הוא כבוד השכינה</li>
+      <li data-a="01-91">איש ואשה שזכו — קודש הקודשים כדוגמת שני הכרובים</li>
+      <li data-a="01-92">עצה נפלאה לחינוך הילדים דרך השראת השכינה</li>
+      <li data-a="01-93">מקורות מהזוהר וליקוטי מוהר"ן — יחוד למטה גורם יחוד למעלה</li>
+      <li data-a="01-94">טעם מצוות פרו ורבו וסוד "הילד היהודי משכן לה'"</li>
+      <li data-a="01-95">"רעייתך היא האתרוג שלך"</li>
+      <li data-a="01-96">"כאילו משים שלום בכל ישראל"</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-97" style="margin:0;">לאחר שביססנו בפרק הקודם את היסוד העקרוני — איש ואשתו כשורש ליחסי הקב"ה וכנסת ישראל — פרק זה מביא <span class="emphasis">מבחר עשיר של מקורות</span>: מהפוסקים, מהזוהר, מהחסידות ומהמדרשים, המראים כיצד יסוד זה חוזר ונשנה לאורך כל שכבות התורה שבעל פה. כל מקור מוסיף זווית משלו, וכולם יחד בונים תמונה אחת ברורה.</p>
+  </div>
+
+  <h3 data-a="01-98">ספר פלא יועץ — הגאולה תלויה בשלום בית</h3>
+
+  <div class="quote-box">
+    <p data-a="01-99">"ולפי גודל מעלת מצות ואהבת לרעך כמוך... ראוי לאדם להתחזק ברוב עז ותעצומות... להיות מוציא מצה ומכניס אהבה, ובפרט עם אשתו, אפילו אם היא אשה רעה... יתגבר ויתחזק מאד חיילים יגבר לאהוב אותה כגופו... כי הדברים עתיקים, ומעובדא דלתתא איתער עובדא דלעילא, או בונה עולמות או מחריבן... ועושה שלום במרומים דגורם יחוד קודשא בריך הוא ושכינתיה — <strong>וזהו הטעם שבזה תלוי גאולתנו ופדות נפשנו</strong>."
+    <span class="source-tag">פלא יועץ, ערך שנאה</span></p>
+  </div>
+
+  <h3 data-a="01-100">ספר עבודת הקודש להחיד"א — יכוון בביתו לכבוד השכינה</h3>
+
+  <div class="quote-box">
+    <p data-a="01-101">"בקש שלום ורדפהו, וזו מדת אהרן הכהן אוהב שלום ורודף שלום, והיא סמא דחיי, ואם כך אמרו לבקש שלום אחרים — הדברים קל וחומר לבקש שלום אנשי ביתו וקרוביו. ודע שבמקום שיש מחלוקות השכינה מסתלקת חס ושלום, כי היא 'אימא שלום'... וביותר יהיה לו שלום עם אשתו ויזהר לכבדה, <strong>ויכוון בכל פרט לכבוד השכינה</strong>."</p>
+    <span class="source-tag">עבודת הקודש, מורה באצבע סימן א</span>
+  </div>
+
+  <h3 data-a="01-102">ספר תומר דבורה — כל תיקוני הבית הם תיקוני השכינה</h3>
+
+  <p data-a="01-103">פירשו בזוהר (בראשית מט, א) שיצר טוב נברא לאדם עצמו, לצרכו, ויצר הרע — לצורך אשתו. לצורך אשתו יעורר את יצרו בנחת, כגון להלבישה, לתקן לה את הבית, ויאמר: "הרי בזה שאני מלבישה, אני מתקן את השכינה".</p>
+
+  <div class="quote-box">
+    <p data-a="01-104">"לפיכך <strong>כל תיקוני הבית הם תיקוני השכינה</strong>, שהיא מתמתקת מצד יצר הרע, הנברא לעשות רצון קונו לא זולת."</p>
+    <span class="source-tag">תומר דבורה, פרק ששי</span>
+  </div>
+
+  <h3 data-a="01-105">פירוש הריקאנטי על התורה — סוד זיווג חתן וכלה</h3>
+
+  <div class="quote-box">
+    <p data-a="01-106">"ומכאן תבין סוד זיווג חתן וכלה ומצות פריה ורביה... כל ההוויות (החיבורים) הם כמער איש ולוויות, כאיש המעורה בלווייתו... ועל כן אמרו רבותינו ז"ל 'אוהבה כגופו ומכבדה יותר מגופו' — לרמוז לבת זוג אדם העליון יתברך ויתעלה (כנסת ישראל כלפי הקב"ה)."</p>
+    <span class="source-tag">ריקאנטי, פרשת בראשית</span>
+  </div>
+
+  <h3 data-a="01-107">סיפור: כבוד אשתי הוא כבוד השכינה</h3>
+
+  <div class="story-box">
+    <p data-a="01-108" style="margin-top:0;">הגאון ר' דוד יונגרייז אב"ד ירושלים זצ"ל היה איש מורם מעם, גאון עצום בכל מכמני התורה, ענוותן ושפל ברך. נהג פלא היה לו: כאשר שוחח עם רעייתו — היה פונה אליה בתוארי כבוד ובדרך ארץ, כדבר נער קטן אל אחד מגדולי הדור.</p>
+    <p data-a="01-109">יום אחד נאלץ רבי דוד לצאת מן הארץ עם זוגתו לדרוש ברופאים בווינה. כשבא לקבל ברכת פרידה מאביו, ביקש ממנו האב שתי בקשות: הראשונה, שיפגין את ידיעותיו בתורה לפני עשירי וינה התומכים בכוללם, כהכרת הטוב. השנייה — שיוותר, בארץ זרה שאין מכירים את הנהגתו, על מנהגו לדבר עם רעייתו בתוארי כבוד מופלגים, שמא יהיה ללעג בעיני הזרים.</p>
+    <p data-a="01-110" style="margin-bottom:0;">השיב רבי דוד לאביו בענוות חן: "את בקשתך הראשונה אמלא לשביעות רצונך, אך את הבקשה השנייה לא אוכל למלא, שכן אינני בעלים על כך — אין זה כבודה, אלא <strong>כבוד השכינה הקדושה</strong> השרויה עם רעייתי, ולכן לא אוכל לוותר על כך!" (מובא בספר "הבית היהודי" מאת הרב עזריאל טאובר שליט"א)</p>
+  </div>
+
+  <p data-a="01-111">ומעשה שהיה אצל מרן הגראמ"ש זצוק"ל: הגיע לאזניו סיפור על בני זוג שנפרדו מחמת מריבה על לא דבר. הוא קרא לבעל ואמר לו שחובתו לדבר ולהתייחס אל האישה כמו אליו. ללמדנו שגודל החובה של הבעל כלפי אשתו הוא כגודל חובת הכיבוד לגדול הדור בזקנותו.</p>
+
+  <h3 data-a="01-112">איש ואשה שזכו — קודש הקודשים דוגמת שני הכרובים</h3>
+
+  <p data-a="01-113">איתא במסכת סוטה (יז.): דרש רבי עקיבא — איש ואישה שזכו, שכינה שרויה ביניהם. פירש רש"י: שהרי חלק את שמו ושיכנו ביניהם — יו"ד באיש וה"א באשה.</p>
+
+  <div class="qa-box">
+    <p data-a="01-114" class="q">היכן ניתן למצוא מקור נוסף מהתורה עצמה, לא רק מדברי חז"ל, לכך ש"זכו — שכינה שרויה ביניהם"?</p>
+    <p data-a="01-115" class="a">בכרובים שעל הארון: "וְעָשִׂיתָ שְׁנַיִם כְּרֻבִים זָהָב... וּפְנֵיהֶם אִישׁ אֶל אָחִיו... <strong>וְנוֹעַדְתִּי לְךָ שָׁם וְדִבַּרְתִּי אִתְּךָ מֵעַל הַכַּפֹּרֶת מִבֵּין שְׁנֵי הַכְּרֻבִים</strong>" (שמות כה). רבנו בחיי: "שנים כרובים זכר ונקבה היו, להודיע כמה ישראל חביבין לפני הקב"ה כחיבת זכר ונקבה". וכן דרשו חז"ל (יומא נד.): "בשעה שישראל עולים לרגל, היו מגלים להם את הפרוכת ומראים להם הכרובים שהם מעורים זה בזה, ואומרים: ראו חיבתכם לפני המקום כחיבת זכר עם נקבה".</p>
+  </div>
+
+  <div class="qa-box">
+    <p data-a="01-116" class="q">האם הכרובים הם רק משל, או שהם משל המשפיע על הנמשל?</p>
+    <p data-a="01-117" class="a">כתב בנפש החיים (שער א פרק ד): תכלית כוונת ה' במשכן וכליו אינה רק במבנה החיצוני, אלא רמז: "שממנו תראו וכן תעשו אתם את עצמכם" — שתהיו כתבנית המשכן וכליו, ראויים להשראת שכינה. למדנו יסוד גדול: כשם שבמקדש שרתה השכינה על הכרובים — זכר ונקבה באחדות — כך גם אנחנו, כשנהיה באחדות ובקדושה, תשרה עלינו השכינה. וכתב בראשית חכמה (שער הענווה פרק ה): כשיש שלום בין איש לאשתו, הם מרכבה למקום העליון; ואם אין ביניהם שלום — אוי להם, שהם גורמים פירוד.</p>
+  </div>
+
+  <p data-a="01-118">נוסיף לפי זה: הבית היהודי הוא ממש דוגמת בית המקדש — כשם שהיו מקריבים ואוכלים קרבנות לשם השי"ת, כך בבית היהודי, כאשר חושבים לתת לקב"ה כוח להשפיע על עם ישראל, כל עזרה היא כקרבן ממש; ארוחת ערב יחדיו — "גדולה לגימה שמקרבת את הלבבות" — היא כאכילת קרבנות הגורמת נחת להשי"ת; והאיחוד ביניהם הוא כקודש הקודשים, שהיה הכהן הגדול נכנס לשם רק אחת בשנה, ביום כיפור.</p>
+
+  <h3 data-a="01-119">עצה נפלאה לחינוך הילדים: השכינה שורה בדרך נס</h3>
+
+  <p data-a="01-120">תלמוד בבלי מגילה (י:): אמר רבי לוי, דבר זה מסורת בידינו מאבותינו — מקום הארון אינו מן המידה. הארון עצמו היה עשר אמות, כרוחב הדביר עשרים אמה, וכנפי שני הכרובים — עשר אמות כל אחת — נמצא שאין מקום לארון גופו, אלא <strong>בנס היה עומד</strong>.</p>
+
+  <div class="highlight-box">
+    <p data-a="01-121" style="margin:0;">מבאר המהרש"א (בבא בתרא צט.): לפי ששם השכינה שורה, "ואינו גשם — לא יכילהו מקום ומידה". אנו רוצים שילדינו (הרמוזים בלוחות שבארון, מתחת לכרובים ההורים) יתחנכו בדרך ה' ולא יושפעו מהנסיונות, לכן נדאג שהשכינה תשרה בבית — ואז יקוים בנו "שאינו גשם לא יכילהו מקום ומידה": כאשר המקום רוחני, גם ההתנהלות נעשית ניסית.</p>
+  </div>
+
+  <p data-a="01-122">ומצאנו מקור לכך במפורש בפרקי דרבי אליעזר (פרק יב): "מה עשה הקדוש ברוך הוא? נתן שמו ביניהם, יו"ד ה"א. אם הולכים בדרכי ושומרים מצוותי — הרי שמי נתון ביניהם, <strong>ומציל אותם מכל צרה וצוקה</strong>; ואם לאו — הריני נוטלו מביניהם".</p>
+
+  <h3 data-a="01-123">מקורות הזוהר: יחוד למטה גורם יחוד למעלה</h3>
+
+  <p data-a="01-124">כתוב בזוהר (במדבר קיח:): "הקב"ה נותן מיטתו בין צפון לדרום, ונאחזת המלכות (כנסת ישראל) שהיא המיטה לכאן ולכאן... ובכל דבר צריך לעשות המעשה כדוגמת מעלה, וכפי שמראה ועושה האדם את מעשיו למטה — כך מעורר שורש המעשה למעלה". ומוסיף הריקאנטי: "כפי הפעולה הנעשית למטה, כך נעשית למעלה, ועל כן דימה הקדוש ברוך הוא את ישראל לחתן ולכלה".</p>
+
+  <p data-a="01-125">ולהיפך — מזהיר הזוהר (חלק ג מד:) שהמפריד בין איש לאשתו (הבא על אשת איש) פוגם את הזיווג העליון: "מַאן דְּמִתְחַבָּר בְּאִנְתּוּ דְּאָחֳרָא, כְּאִילּוּ מְשַׁקֵּר בֵּיהּ בְּקוּדְשָׁא בְּרִיךְ הוּא וּבִכְּנֶסֶת יִשְׂרָאֵל" — כאילו משקר בהקב"ה ובכנסת ישראל גם יחד.</p>
+
+  <div class="quote-box">
+    <p data-a="01-126">"וְדַע, שֶׁיֵּשׁ יִחוּדָא תַּתָּאָה שֶׁבְּזֶה הָעוֹלָם, שֶׁהוּא בְּכַשְׁרוּת גָּדוֹל בִּקְדֻשָּׁה וּבְטָהֳרָה כָּל כָּךְ, עַד שֶׁבּוֹ תָּלוּי יִחוּדָא עִלָּאָה... כִּי 'אִישׁ וְאִשָּׁה, זָכוּ שְׁכִינָה שְׁרוּיָה בֵּינֵיהֶם'... וְזֶה הַזִּוּוּג וְהַיִּחוּדָא תַּתָּאָה הוּא יָקָר מְאֹד מְאֹד."</p>
+    <span class="source-tag">ליקוטי מוהר"ן, מהדורא בתרא סימן לב</span>
+  </div>
+
+  <h3 data-a="01-127">טעם מצוות פרו ורבו — הילד היהודי משכן לה'</h3>
+
+  <div class="quote-box">
+    <p data-a="01-128">"חייב כל אדם לישא אשה כדי לפרות ולרבות. וכל מי שאינו עוסק בפריה ורביה — כאילו שופך דמים, וממעט את הדמות, וגורם לשכינה שתסתלק מישראל."</p>
+    <span class="source-tag">שולחן ערוך, אבן העזר סימן א סעיף א</span>
+  </div>
+
+  <div class="qa-box">
+    <p data-a="01-129" class="q">למדנו שאדם מתחתן כדי לאחד את הקב"ה עם כנסת ישראל ולהוריד שפע אלוקי לעולם — מדוע כתב השו"ע שהעניין הוא "פרו ורבו"?</p>
+    <p data-a="01-130" class="a">חז"ל השוו את הנישואין למתן תורה — זיווג בין הקב"ה לעם ישראל. לאחר מתן תורה ניתנו הלוחות: הילד היהודי הנולד הוא בחינת הלוחות, "וְהַלֻּחֹת מַעֲשֵׂה אֱלֹהִים הֵמָּה". האיש הוא בחינת משה המוריד את הלוחות לאשתו-עמ"י, והם מונחים בארון שהוא הבית היהודי, ומעליו איש ואשתו, פניהם איש אל אחיו.</p>
+  </div>
+
+  <p data-a="01-131">ככל שהאיחוד בין הקב"ה לכנסת ישראל גדול יותר, כך יורד שפע אלוקי גדול יותר — ולכן ככל שהאיחוד בין האיש לאשתו גדול יותר, כך יורד ילד יהודי עם נשמה קדושה יותר. וכתב בחסד לאברהם (מעין ב, נהר סד): מצוות פרו ורבו קודמת לכל המצוות, "כי אין שכינה מתפשטת בענפיה בתחתונים אלא על ידי התפשטות נשמות עליונות למטה... נמצא לפי זה במצות פריה ורביה <strong>כלולה מכל בחינות שאר המצות</strong>".</p>
+
+  <h3 data-a="01-132">רעייתך היא האתרוג שלך</h3>
+
+  <p data-a="01-133">כתב בתורת המנחה (דרשה פג): באדם ששה איברים כנגד ששת מיני הלולב (הדס, ערבה ולולב, פעמיים) — אך אין בהם פרי, כי הפרי הוא תכלית האילן. האבר השביעי שיש באדם — היא אשתו, "עצם מעצמיו ובשר מבשרו", <strong>והיא כנגד האתרוג</strong> וכנגד מלכות שמים (כנסת ישראל), "היפה בנשים", תכלית הכול.</p>
+
+  <div class="highlight-box">
+    <p data-a="01-134" style="margin:0;"><strong>באור הדברים:</strong> תכלית הכול היא לגלות מלכות ה' בעולם, ככתוב "וְהָיָה ה' לְמֶלֶךְ עַל כָּל הָאָרֶץ". וזה יקרה כאשר ה' יאיר בכנסת ישראל — והאדם גורם במעשיו כאשר "מחבר לולב לאתרוג", וקל וחומר שהוא מביא לכך על ידי שמשמח את רעייתו, שהיא כנגד כנסת ישראל. ולכן קוראים לאישה "כלה" — שהיא כנגד תכלית הכול.</p>
+  </div>
+
+  <h3 data-a="01-135">שמחה ואהבה בתוך הבית גורמים שפע טוב לעולם</h3>
+
+  <p data-a="01-136">בזוהר (ח"ב רלא.) מסופר על בריאת אדם וחוה: תחילה נבראו "דָּא עִם דָּא קִשׁוּרָא" — גב אל גב, עד שניסר אותם הקב"ה והעמידם פנים בפנים. "וְכֵיוָן דְּאִסְתַּכְּלוּ אַנְפִּין בְּאַנְפִּין, כְּדֵין אִתְסָגֵּי רְחִימוּתָא בְּעָלְמָא" — <strong>כיוון שהסתכלו פנים בפנים, אז התרבתה אהבה בעולם</strong>. למדנו: יש קונה עולם בחיוך אחד.</p>
+
+  <h3 data-a="01-137">"כאילו משים שלום בכל ישראל"</h3>
+
+  <div class="quote-box">
+    <p data-a="01-138">"רשב"ג אומר: כל המשים שלום בתוך ביתו — מעלה עליו הכתוב כאילו משים שלום בישראל על כל אחד ואחד. וכל המטיל קנאה ותחרות בתוך ביתו — מעלה עליו הכתוב כאילו מטיל קנאה ותחרות בישראל, לפי שכל אחד ואחד מלך בתוך ביתו."</p>
+    <span class="source-tag">אבות דרבי נתן, פרק כח</span>
+  </div>
+
+  <p data-a="01-139">כיצד שלום בביתו גורם שלום בכל ישראל? כאשר האדם מוסיף אהבה בביתו, הוא גורם שה' יאהב את כל כנסת ישראל, שנאמר שהטיל שלום על כל ישראל. ומה שאמרו "כל אחד מלך בביתו" — משום שכל איש בבית הוא משל להקב"ה לעומת כנסת ישראל, ולכן הוא משפיע על כולם — ואולי לכן השלום שקול כנגד הכול, כמו שאנו אומרים "עושה שלום ובורא את הכול".</p>
+
+  <p data-a="01-140">מרבית המקורות בפרק זה עסקו בעקרונות ובמושגים. בפרק הבא נעבור לזווית שונה — מבט אנושי, פשוט וקרוב, דרך עצה אחת של הגמרא לחיים מאושרים.</p>
+
+  <!-- ===================== CHAPTER 4 ===================== -->
+  <div class="chapter-card">
+    <div class="chapter-num">ד</div>
+    <div class="chapter-title">עצת הגמרא לחיים מאושרים</div>
+  </div>
+  <div class="section-divider"><div class="line"></div><div class="icon">💍</div><div class="line"></div></div>
+
+  <div class="chapter-label">פרק ד</div>
+  <h2 data-a="01-141" id="section4">עצת הגמרא לחיים מאושרים</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-142">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-143">"מצא" או "מוצא"? — שיר החתונה המפתיע מבבל</li>
+      <li data-a="01-144">ביאור הגאון מווילנא: עבר מול הווה</li>
+      <li data-a="01-145">הכלי לשימור האהבה לאורך ימים</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-146" style="margin:0;">אחרי שני פרקים עמוסי יסודות עיוניים, פרק קצר זה עוצר לרגע ומביא עצה מעשית ופסיכולוגית עמוקה מן הגמרא עצמה — מנהג עתיק שנועד לצייד כל חתן וכלה בכלי המרכזי ביותר לשימור האהבה לאורך שנים.</p>
+  </div>
+
+  <p data-a="01-147">מאמר מאת הרה"ג מרגולין שליט"א: הגמרא במסכת ברכות מביאה מנהג מעניין: "במערבא, כי נסיב איניש איתתא, אמרי ליה הכי" — בבבל, כשאיש נשא אישה, היו שרים לו: <strong>"מצא"</strong> או <strong>"מוצא"</strong>? "מצא" — על פי הכתוב "מָצָא אִשָּׁה מָצָא טוֹב". "מוצא" — על פי הכתוב "וּמוֹצֵא אֲנִי מַר מִמָּוֶת אֶת הָאִשָּׁה".</p>
+
+  <div class="qa-box">
+    <p data-a="01-148" class="q">מה חשבו אנשי מערבא כששרו לחתן, ביום חופתו דווקא, "מצא או מוצא"? האם התכוונו לרמוז שהוא "מוצא" מר ממוות?</p>
+    <p data-a="01-149" class="a">מסביר הגאון מווילנא: "מצא" לשון עבר, "מוצא" לשון הווה. בדרך כלל העבר תמיד מצטייר טוב ומלא יותר מן ההווה, ואילו את ההווה מעריכים כרע יותר. אדם מתרגל לטוב ולוקח אותו כמובן מאליו, אך לרע קשה לו עד בלתי אפשרי להתרגל — ובוודאי שהוא לא נלקח כמובן מאליו.</p>
+  </div>
+
+  <div class="story-box">
+    <p data-a="01-150" style="margin:0;">"כשמעמיקים בדברים", מסביר הרה"ג מרגולין, "מוצאים כי רוצים לתת לחתן כלי שיוכל בעזרתו לשמר את השלום בבית לאורך ימים — כלי שיחזיק את האהבה, האחווה, השלום והרעות". כיצד? מה שגורם לבעיות הוא, שאדם לוקח את מעלות בן זוגו כמובנות מאליהן: "וודאי שאשתי יודעת לאפות שטרודלים טעימים, והיא מצליחה לארגן את הילדים נקיים ללימודים — אבל זה, נו, זה כל אישה יכולה". לעומת זאת, הרע מתחדש והולך: "שוב היא לא התקשרה לשאול לשלום אימא שלי?..." ממילא הכעסים מתעבים. הטוב אינו זקוק למחמאות, שכן הוא מובן מאליו וטבעי, רק הרע הוא זה המתמשך ומתחדש וראוי לכל נזיפה אפשרית.</p>
+  </div>
+
+  <p data-a="01-151">ביום החתונה מוצאים לנכון להזכיר לחתן הנרגש והמאושר את התופעה האנושית הזו, כי ה"מצא טוב" נדחק לעבר ונשכח, ו"המוצא מר ממוות" מתמשך והולך... ואומרים לחתן: אל תתן למהלך הזה להוביל אותך. היה ער לסכנה זו של כפיות הטובה, ההורסת כל חלקת שלווה בבית הנבנה. כאשר תמשיך את ה"מצא" (לראות את הטוב) אל ההווה — יימשכו חיי הנישואין ללא שחיקה מתמדת.</p>
+
+  <div class="highlight-box">
+    <p data-a="01-152" style="margin:0;">היסוד הפשוט הזה — להעביר את הטוב מן העבר אל ההווה, ולא לתת לרגילות "לבלוע" אותו — הוא, למעשה, יישום מעשי מדויק של כל מה שלמדנו בפרקים הקודמים: כל פעם שאדם עוצר ו<em>שם לב</em> לטוב שיש לו, ומודה עליו במקום לקחתו כמובן מאליו, הוא בעצם מוסיף שמחה ואהבה בבית — וכפי שלמדנו, זו בדיוק הפעולה המעוררת שפע למעלה.</p>
+  </div>
+
+  <!-- ===================== CHAPTER 5 ===================== -->
+  <div class="chapter-card">
+    <div class="chapter-num">ה</div>
+    <div class="chapter-title">סיפורים מחכמינו זכרונם לברכה</div>
+  </div>
+  <div class="section-divider"><div class="line"></div><div class="icon">🔥</div><div class="line"></div></div>
+
+  <div class="chapter-label">פרק ה</div>
+  <h2 data-a="01-153" id="section5">סיפורים מחכמינו זכרונם לברכה</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-154">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-155">רב רחומי — כאשר לומדים על חשבון שלום בית</li>
+      <li data-a="01-156">עמוד האש שמגיע כשמשמחים "בת מלך"</li>
+      <li data-a="01-157">עמוד האש שהגיע לבית יהודה בריה דר' חייא</li>
+      <li data-a="01-158">נס פורים בזכות שמרדכי דרש בשלום אסתר רעייתו</li>
+      <li data-a="01-159">חסרון בשלום בית — חמור מלירוק בפני גדול הדור</li>
+      <li data-a="01-160">הרב שך חרד לשלום בית</li>
+      <li data-a="01-161">המכתב מאליהו וויתר על הידור לכבוד רעייתו</li>
+      <li data-a="01-162">שמחת כלה כלימוד תורה</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-163" style="margin:0;">אחרי שני פרקים של יסודות ומקורות עיוניים, פרק זה עובר למישור אחר: סיפורי מעשה מהגמרא ומגדולי ישראל בדורות האחרונים, שבהם היסוד התיאורטי — "שלום בית מעורר שפע עצום" — מקבל ביטוי דרמטי וממשי. בכל סיפור, גודל השכר או גודל האזהרה חושף את עומק העניין.</p>
+  </div>
+
+  <h3 data-a="01-164">רב רחומי — המוסר השכל</h3>
+
+  <div class="story-box">
+    <p data-a="01-165" style="margin:0;">חז"ל מספרים (כתובות סב:) על רב רחומי, שהיה רגיל לבוא לביתו בערב יום הכיפורים. באחת השנים היה שקוע בלימודו, ורעייתו ישבה בבית וציפתה מתי יגיע. כאשר התאחר הזמן ולא הגיע — הורידה האישה דמעה מעיניה מרוב צער. באותה עת נפלה העלייה שבה ישב רב רחומי, ונפטר.</p>
+  </div>
+
+  <div class="qa-box">
+    <p data-a="01-166" class="q">רבי חיים שאל בשיחתו: וכי כאשר איבדה את בעלה הגדול לא בכתה?</p>
+    <p data-a="01-167" class="a">והשיב: "בין אדם לחברו — זה אש, וכשהולכים באש, נשרפים!"</p>
+  </div>
+
+  <p data-a="01-168"><strong>באור הדברים</strong> לפי מה שלמדנו: רב רחומי גרם צער לא רק לאשתו, אלא — כביכול — לבת זוגו של הקב"ה (כנסת ישראל), ומחמת זה נגרם בעולם חורבן גדול מאוד. לכן, למרות שאשתו ודאי הייתה רוצה שימשיך לחיות, מידת הדין כעסה מאוד על החורבן שנגרם מחמת אי-זהירותו. נלמד: כפי גודל הרעה הפוטנציאלית, כך גדולה המידה הטובה — וכמה שפע טוב נגרם בעולם כאשר אדם זוכה לשמח את בת זוגו, שהיא כנגד בת זוגו של הקב"ה.</p>
+
+  <h3 data-a="01-169">עמוד אש מגיע כשמשמחים "בת מלך"</h3>
+
+  <div class="story-box">
+    <p data-a="01-170" style="margin:0;">כתובות (יז.): מסופר על רב שמואל בר יצחק שהיה מרקד לפני הכלה בשלושה בדי הדס, לשמח אותה. רבי זירא לא הייתה דעתו נוחה מכך, שראה זאת כקלות ראש וכזלזול בתלמידי חכמים. אולם כאשר נפטר רב שמואל בר יצחק, הפסיק עמוד אש בינו לבין מלוויו — זכות השמורה לאחד או שניים בדור. ואמר ר' זירא: "הועילו לו שיטתו ומנהגו!" כתב המהרש"א: בדבר קל יזכה הצדיק למעלה כזאת.</p>
+  </div>
+
+  <p data-a="01-171">מדוע זכה לכזה דבר גדול בדבר קל לכאורה? יתכן שכשם ששימח את הכלה, כיוון בכך לשמח את כנסת ישראל שלמעלה, ובזה גרם שפע עצום לעם ישראל וזכה למה שזכה. למדנו: בדבר קל — לשמח בבית — אפשר לזכות למעלה גדולה מאוד.</p>
+
+  <h3 data-a="01-172">עמוד האש שהגיע לבית יהודה בריה דר' חייא</h3>
+
+  <div class="story-box">
+    <p data-a="01-173" style="margin:0;">מצאנו סיפור דומה (כתובות סב:): יהודה בן רבי חייא היה יושב בבית המדרש במשך השבוע, וביום שישי היה מגיע לביתו. כשהיה מגיע, ראה חמיו ר' ינאי עמוד אש לפניו. יום שישי אחד שקע בסוגיה ושכח לבוא. ראה ר' ינאי חמיו שאין עמוד אש, אמר: "כנראה חתני יהודה מת, שאם היה חי — לא היה מבטל עונתו". כיוון שיצא כך מפיו — מת חתנו יהודה.</p>
+  </div>
+
+  <p data-a="01-174">כתב הב"ח (או"ח סימן רפ): נראה שבא ללמד שצריך ליזהר, שקודם שיגיע הלילה חייב להראות תוספת חיבה ואהבה עם זוגתו... וסימנא דעמודא דנורא מקמי שבא לביתו, הוא סימן להתפשטות אור וקדושת השכינה <strong>שתהא מתייחדת לליל שבת ומזדווגת בהקב"ה</strong>. מבאר הב"ח: עמוד האש הוא סימן לאור הגדול של הקב"ה שיורד לעם ישראל, על ידי מעשיו של ר' יהודה, שבשלום ביתו הוא גורם שכנסת ישראל תתאחד עם הקב"ה.</p>
+
+  <h3 data-a="01-175">נס פורים בזכות שמרדכי דרש בשלום אסתר רעייתו</h3>
+
+  <p data-a="01-176">מדוע זכה מרדכי שעל ידו יינצלו עם ישראל? כתוב במדרש רבה (אסתר ו, ח): "ובכל יום ויום מרדכי מתהלך לפני חצר בית הנשים... לדעת את שלום אסתר... אמר לו הקב"ה: אתה דרשת שלום נפש אחת לדעת את שלום אסתר, חייך — סופך לדרוש שלום אומה שלימה, הדא הוא דכתיב: 'דּוֹרֵשׁ טוֹב לְעַמּוֹ וְדֹבֵר שָׁלוֹם לְכָל זַרְעוֹ'".</p>
+
+  <div class="highlight-box">
+    <p data-a="01-177" style="margin:0;">כאשר התאמץ מרדכי לשלום אסתר רעייתו — כמו שאמרו חז"ל (מגילה יג.) "ובמות אביה ואמה לקחה מרדכי לו לבת... אל תקרי לבת אלא לבית" (ומרדכי היה מתייחס לרעייתו בכבוד כמו לכנסת ישראל) — גרם שגם הקב"ה יתאמץ לשלום עם ישראל, רעייתו. זכה מרדכי שיתגלגל על ידו נס פורים. אף הנס עצמו התחיל בכך: "וּמָרְדֳּכַי ישֵׁב בְּשַׁעַר הַמֶּלֶךְ" — כדי להיות סמוך לרעייתו שלא תרגיש לבדה, ודרך כך שמע את דברי בגתן ותרש, ומכאן התגלגל שורש הנס.</p>
+  </div>
+
+  <h3 data-a="01-178">חסרון בשלום בית — חמור מלירוק בפני גדול הדור</h3>
+
+  <div class="story-box">
+    <p data-a="01-179" style="margin-top:0;">מעשה ברבי מאיר, שהיה רגיל לדרוש בליל שבת. פעם אחת נשתהה מעט. אחת מן הנשים ששמעה את דרשתו הלכה לביתה ומצאה את בעלה ממתין, שהנר כבה. אמר לה: היכן היית? השיבה: בדרשה של רבי מאיר. הוציאה מביתו ואמר לה: לא תיכנסי לביתי עד שתלכי ותרקי בפניו של רבי מאיר.</p>
+    <p data-a="01-180">צפה הדבר רבי מאיר ברוח הקודש, ועשה עצמו חולה, ואמר לאנשי שכונתו: צאו ובקשו לי אישה שיודעת להסיר עין הרע. הגיעו לחצר אותה אישה, אמרו לה השכנות: לכי ותנצלי מן מחלוקת בעלך. הלכה ועשתה לו כדרך שעושין הנשים לחולה, וירקה בעיניו. אמר לה: עשי כך שבע פעמים. אחר כך אמר לה: לכי אמרי לבעלך — הוא אמר פעם אחת, ואת רקקת שבע.</p>
+    <p data-a="01-181" style="margin-bottom:0;">אמרו לו תלמידיו: <strong>כך מבזים את התורה?!</strong> אמר להם: "ולא דיו למאיר להיות כרבו שציווה למחות שמו על המים כדי לשים שלום בין איש לאשתו".</p>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-182" style="margin:0;">מוסר השכל עצום: כל פעם שאדם חושב שעשו דבר לא ראוי בביתו, וראוי להחסיר בגללו משלום הבית, יתבונן מעט: האם בשביל דבר זה היה יורק בפני גדול הדור? אם לא — יידע שלגרום חסרון בשלום הבית גרוע מלירוק בפני גדול הדור, למרות בזיון כבוד התורה. ואחד מהטעמים לכך: פירוד בין קב"ה לכנסת ישראל הוא חורבן שאין דומה לו.</p>
+  </div>
+
+  <p data-a="01-183">ולהיפך — שקונה לרעייתו פרחים לכבוד שבת, זה לא סתם פרחים; זה גורם חיבור עצום בין קב"ה לכנסת ישראל, וחלק מהגאולה השלמה. אשת חייל המכינה סלט טעים לבעלה — אין זה רק סלט ירקות, זה אור עצום בבריאה כולה, שעמוד אש יכול לרדת משמים בשבילו.</p>
+
+  <h3 data-a="01-184">הרב שך חרד לשלום בית</h3>
+
+  <div class="story-box">
+    <p data-a="01-185" style="margin:0;">סיפר הגה"צ ר' דן סגל שליט"א: אברך שהתפלל כוותיקין נותר בבית המדרש ללמוד מעט לפני שישוב לביתו, ונרדם. כשהתעורר ראה שהשעה כבר אחת עשרה! רץ מהר לביתו, והנה הגראמ"ש זצ"ל לקראתו. שאלו הרב שך: לאן ממהר אתה? השיבו האברך: נרדמתי על הגמרא, ועכשיו ממהר אני הביתה לקדש... נרעש הרב שך: "מה?! ואשתך מחכה לך בבית, ואינה יודעת מה אירע! בוא, אלווה אותך הביתה — אני בא יחד איתך כדי להרגיעה".</p>
+  </div>
+
+  <h3 data-a="01-186">המכתב מאליהו וויתר על הידור לכבוד רעייתו</h3>
+
+  <div class="story-box">
+    <p data-a="01-187" style="margin:0;">סיפר הגר"י זילברשטיין שליט"א: הגר"א דסלר זצ"ל קידש כל ימיו בגביע בשיעור קטן. אולם בשבת שלאחר פטירת רעייתו, ביקש שיביאו לו גביע בשיעור חזון איש. לתמיהת מקורביו הסביר: "כל זמן שחיה אשתי, קידשתי על הגביע שהביאה מבית אביה, אף שהיה בו שיעור קטן, כדי לכבדה. עתה, משנפטרה — ודאי לא תקפיד עלי". הרב דסלר ויתר על ההידור למען כבוד אשתו — גם כשלא הייתה עוד לצדו.</p>
+  </div>
+
+  <h3 data-a="01-188">שמחת כלה כלימוד תורה</h3>
+
+  <p data-a="01-189">מנחות (צט.): אמר ריש לקיש: פעמים שביטולה של תורה זהו יסודה, דכתיב "אֲשֶׁר שִׁבַּרְתָּ" — אמר לו הקב"ה למשה: יישר כוחך ששיברת. רש"י: ביטולה של תורה — כגון שמבטל תורה להוצאת המת ולהכנסת כלה — <strong>מקבל שכר כאילו יושב ומייסדה ועוסק בה</strong>. ומהר"ם מרוטנבורג (בתשב"ץ): "חתן" על "כלה" גימטרייה כ"התורה" — שכל המשמח חתן וכלה כאילו עסק בתורה.</p>
+
+  <div class="quote-box">
+    <p data-a="01-190">"שוב מעשה בר' יהודה בר' אלעאי שהיה יושב ושונה לתלמידיו, ועברה כלה לפניו. אמר: מהו זה? אמרו לו: כלה שעברה. אמר להם: בני, עמדו והתעסקו בכלה — שכן מצינו בהקב"ה שנתעסק בכלה, הוא נתעסק בכלה אנו עאכ"ו!"</p>
+    <span class="source-tag">אבות דרבי נתן, פרק ד</span>
+  </div>
+
+  <p data-a="01-191">סיפורים אלו, כל אחד מזווית שונה, חוזרים ומדגישים אותו יסוד: מעשה קטן של שמחה, כבוד או תשומת לב לבת הזוג — נחשב בשמים כמעשה גדול ביותר. בפרק הבא נשאל שאלה עמוקה יותר: מה קובע את שיעור השכר על מעשה כזה — האם המעשה עצמו, או הכוונה שבו?</p>
+
+  <!-- ===================== CHAPTER 6 ===================== -->
+  <div class="chapter-card">
+    <div class="chapter-num">ו</div>
+    <div class="chapter-title">לעשות לשם שמים — ומקום ההטבה הגדול ביותר</div>
+  </div>
+  <div class="section-divider"><div class="line"></div><div class="icon">🏠</div><div class="line"></div></div>
+
+  <div class="chapter-label">פרק ו</div>
+  <h2 data-a="01-192" id="section6">לעשות לשם שמים</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-193">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-194">שלוש הפסיעות של נבוכדנצר — שכר עצום על מעט כבוד</li>
+      <li data-a="01-195">קושיית בנו של החפץ חיים ותירוצו המדהים</li>
+      <li data-a="01-196">מחשבה טובה של אחד מצטרפת לשני</li>
+      <li data-a="01-197">חסידיך הם זוכים לברך אותך</li>
+      <li data-a="01-198"><strong>מקום ההטבה הגדול ביותר — הבית היהודי:</strong> "לא טוב היות האדם לבדו", בית ספר לאדם טוב, מידת החסד ומידת האהבה, דוגמאות מגדולי ישראל</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-199" style="margin:0;">פרק זה בנוי משני חלקים המשלימים זה את זה: החלק הראשון עוסק בעיקרון הכללי — שמעשה הנעשה "לשם שמים" שכרו גדול לאין שיעור ממעשה זהה שנעשה סתם כך. החלק השני, "מקום ההטבה הגדול ביותר", מיישם עיקרון זה על הבית היהודי דווקא, ומראה מדוע הוא בית הספר הטוב ביותר לקניית מידת האהבה — המידה שדרכה, לדברי חז"ל, נקנית שלמות האדם כולה.</p>
+  </div>
+
+  <h3 data-a="01-200">שלוש הפסיעות של נבוכדנצר</h3>
+
+  <div class="story-box">
+    <p data-a="01-201" style="margin-top:0;">הגמרא בסנהדרין (צו.) מספרת: בעת ההיא מלך על העולם מְרוֹדַךְ בַּלְאֲדָן. כשראה שהעולם הלך עשר מעלות אחורה (השמש שעמדה לשקוע חזרה אחורה עשר שעות, בנס שנעשה לחזקיהו), שאל את עבדיו מה קרה, והשיבו לו על חזקיהו. אמר: הרי אדם כה גדול ולא נתנו לו שלום? מיד שלחו לו מכתב: "שלום למלך חזקיהו, שלום לעיר ירושלים, ושלום לאלוקים הגדולים".</p>
+    <p data-a="01-202">בזמן כתיבת המכתב לא נכח נבוכדנצר, סופר המלך. כשהגיע ושאל מה כתבו, ואמרו לו — אמר: אתם כותבים "אלוקים גדולים" בסוף?! היה לכם לכתוב אותו ראשון! אמר לו המלך: אתה שהצעת — אתה תתקן. רץ נבוכדנצר אחר השליח שלוש פסיעות. בא גבריאל והעמידו על מקומו.</p>
+    <p data-a="01-203" style="margin-bottom:0;">אמר רבי יוחנן: אלמלא בא גבריאל והעמידו על מקומו, לא הייתה תקנה לשונאיהם של ישראל (שהיה שכרו מרובה כל כך, שהיה ניתן לו כוח לאבד את שארית עם ישראל, פירש רש"י). ובזכות שלוש הפסיעות שעשה נבוכדנצר לכבוד ה' — זכה למלוך על כל העולם. הוא, בנו, ונכדו — על כל צעד קיבל דור נוסף של מלכות עולמית.</p>
+  </div>
+
+  <h3 data-a="01-204">קושיית בנו של החפץ חיים ותירוצו המדהים</h3>
+
+  <div class="qa-box">
+    <p data-a="01-205" class="q">שאל בנו של החפץ חיים את אביו: אם רשע כנבוכדנצר מקבל שכר כה רב על שלוש פסיעות בלבד — כדי לאבדו מהעולם הבא — הרי ליהודי צדיק יש מצוות רבות יותר משלוש פסיעות; אם על שלוש פסיעות מקבלים כל כך הרבה, כמה צריך להיות שכרם?</p>
+    <p data-a="01-206" class="a">ענה לו החפץ חיים: <strong>העולם כולו</strong>.</p>
+  </div>
+
+  <h3 data-a="01-207">כיצד תוכל להעלות את ערך ואיכות מצוותיך?</h3>
+
+  <p data-a="01-208">למדנו מדבריו גודל שכר מצווה הנעשית לכבוד שמים — ששכרה פי כמה וכמה ממצווה שלא נעשתה לכבוד שמים, עד כדי שלא ניתן לשלם עליה בעולם הזה. לפי זה, אדם שבא הביתה לא רק מחמת הרגלו, אלא בשביל (או לפחות גם בשביל) לשמח ולתת כוח לבורא עולם להיטיב עם בריותיו — שכרו גדול פי כמה וכמה, עד כדי שבעבור שלוש פסיעות שטורח, מגיע לו "מלכות על כל העולם כולו".</p>
+
+  <h3 data-a="01-209">מחשבה טובה של אחד מצטרפת לשני</h3>
+
+  <div class="qa-box">
+    <p data-a="01-210" class="q">אם רק האישה חשבה לשם שמים והאיש לא, האם גם אז הדברים גורמים איחוד בשמים?</p>
+    <p data-a="01-211" class="a">כתוב בנועם אלימלך (פרשת מצורע): הקב"ה מצרף מחשבה טובה למעשה — ולכן אם אדם חשב לעשות מצווה ונאנס, ואדם אחר עשה בפועל אך ללא כוונה טהורה, "מצרף הקב"ה את העובדא הזאת למחשבתו של הצדיק, והוי כאילו הוא עושה המעשה ההוא". כך גם כאן: למרות שרק הכלה חשבה — הקב"ה מצרף את מחשבתה למעשה החתן, ונוצר יחוד שלם.</p>
+  </div>
+
+  <h3 data-a="01-212">חסידיך הם זוכים לברך אותך</h3>
+
+  <p data-a="01-213">"יוֹדוּךָ ה' כָּל מַעֲשֶׂיךָ וַחֲסִידֶיךָ יְבָרְכוּכָה" (תהלים קמה) — מפרש המלבי"ם: אנשים רגילים רק מודים לה', ואילו החסידים "ימשיכו מאתך שפע הברכה". מפרש מסילת ישרים (פרק יט): החסיד הוא מי שכוונתו "רק למען אשר כבודו של האדון ברוך הוא יגדל וירבה", ולא אפילו לשם קניית עולם הבא לעצמו.</p>
+
+  <div class="highlight-box">
+    <p data-a="01-214" style="margin:0;"><strong>לסיכום:</strong> חסיד הוא מי שמתכוון במצוותיו — ובהנהגות השלום שבביתו — לעשות נחת רוח לה' יתברך, על ידי החיבור בין ה' לכנסת ישראל. וכפי שממחיש משל האב שביקש מבנו לחמניה: יש שמחה כפולה — שהבן מכבד ומקיים בזריזות, ושיש לו לחמניה לאכול. כלפי הקב"ה, שאין לו "תועלת" חומרית ממעשינו, נשארת רק הנחת רוח — ולכן צריך האדם לחשוב הרבה על עשיית הנחת רוח לבורא, שזהו עיקר עשיית המצווה.</p>
+  </div>
+
+  <div class="story-box">
+    <p data-a="01-215" style="margin:0;">שאל חסיד: מה ההבדל ביני לאדמו"ר, שנינו מברכים ואוכלים? השיבו לו: הבדל גדול יש ביניכם: אתה רוצה לאכול תפוח, ולכן מברך; ואילו האדמו"ר רוצה לתת לקב"ה ברכה, לכן לוקח תפוח לברך עליו. כך גם בענייננו: יש מי שרוצה לבוא הביתה לנוח וליהנות; ויש מי שרוצה לעשות טוב לבריות, לגדלם לעבודת ה'; <strong>ויש דרגה גדולה מזו</strong> — הרוצה לתת לקב"ה כוח להשפיע על כל עם ישראל.</p>
+  </div>
+
+  <div class="section-divider" style="margin: 55px 0;"><div class="line"></div><div class="icon">🕊</div><div class="line"></div></div>
+
+  <h3 data-a="01-216" style="color:#7e22ce; font-size:1.9em; border-right: 5px solid #7e22ce; padding-right:16px;">מקום ההטבה הגדול ביותר — הבית היהודי</h3>
+
+  <h4 data-a="01-217">לא טוב היות האדם לבדו</h4>
+
+  <div class="verse-box">
+    <p data-a="01-218">"וַיֹּאמֶר ה' אֱלֹהִים לֹא טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ אֶעֱשֶׂה לּוֹ עֵזֶר כְּנֶגְדּוֹ"
+    <span style="display:block; margin-top:10px; font-size:0.7em; color:#7e22ce;">בראשית ב, יח</span></p>
+  </div>
+
+  <div class="qa-box">
+    <p data-a="01-219" class="q">הרי חז"ל אמרו שהאדם נברא תחילה שני פרצופים דבוקים בגבם — אם כן מה פירוש "לא טוב היות האדם לבדו"? הוא הרי לא היה ממש לבדו!</p>
+    <p data-a="01-220" class="a">מתרץ הזוהר הקדוש (ח"ג מד:): כשהיו דבוקים בגבם ולא רואים פנים בפנים — לא הייתה סמיכה ואהבה ביניהם, וזה עצמו נחשב "לבדו". לכן הפריד ה' וחילקם לשניים, שיוכלו להתדבק פנים בפנים מרצונם. באור הדברים: "לא טוב לבדו" פירושו — לא טוב שאדם נמצא ללא אהבה, אחווה, שלום ורעות עם רעייתו.</p>
+  </div>
+
+  <h4 data-a="01-221">המקום שבו אדם מטיב ביותר לעולם — זה בביתו</h4>
+
+  <p data-a="01-222">למדנו שברא ה' את האיש מול אשתו (כנגדו) כדי להיות "טוב". מהו אדם טוב? אדם הזוכה להיות באהבה ואחווה שלום ורעות עם רעייתו — שכן "טוב" פירושו אדם שמטיב לבריות (קידושין מ.), כמו הקב"ה שהוא טוב ומטיב לכול.</p>
+
+  <div class="qa-box">
+    <p data-a="01-223" class="q">מדוע היה צריך להפריד את האדם לשניים דווקא, אם המטרה היא לאהוב ולהיטיב — מדוע לא עם שאר בריותיו של ה'?</p>
+    <p data-a="01-224" class="a">המקום שבו יכול האדם להטיב ביותר לעולם כולו זה בתוך ביתו — שם זוכים לתת לקב"ה כוח להשפיע שפע טוב על עם ישראל. הבית, כצלם אלוקים כדוגמת הקב"ה וכנסת ישראל, כל חיבור וקשר בו גורם חיבור למעלה, שפירושו תוספת שפע עצום בעולם.</p>
+  </div>
+
+  <p data-a="01-225">ולכן פסק השו"ע (אבן העזר א, ט): "אף על פי שקיים פריה ורביה, אסור לו לעמוד בלא אשה". וכן אמרו במסכת בבא מציעא (נט.): "לעולם יהא אדם זהיר בכבוד אשתו, שאין ברכה מצויה בתוך ביתו של אדם אלא בשביל אשתו". ולכן אמרו חז"ל שאפילו אברהם אבינו, שהיה גומל חסדים עם כל העולם ומחזיר בתשובה אלפי אנשים — הסיבה שה' מטיב עמו היא בגלל שהוא מכבד ואוהב את אשתו: "וּלְאַבְרָם הֵיטִיב בַּעֲבוּרָהּ" (בעבור שרה).</p>
+
+  <h4 data-a="01-226">הבית היהודי — בית הספר לאדם טוב</h4>
+
+  <p data-a="01-227">המקום שבו האדם עושה טוב לעולם יותר מהכול — זה בתוך ביתו. ועכשיו נלמד יסוד נוסף: המקום הטוב ביותר שבו יכול האדם לעשות את עצמו להיות <strong>אדם טוב</strong> — זה גם בתוך ביתו. ואין סתירה בין הדברים: הקב"ה ברחמיו נתן לאדם מתנה נפלאה — המקום שבו לומדים להיות טוב, הוא המקום שבו גם ישפיע טוב לעולם יותר מהכול, והוא המקום שבו המצוות שוות לעולם הבא יותר מהכול.</p>
+
+  <h4 data-a="01-228">משלוח מנות ומתנות לאביונים — מידת החסד ומידת האהבה</h4>
+
+  <p data-a="01-229">שתי מצוות בפורים, ובשתיהן נותנים שתי מתנות: במשלוח מנות אמרו חז"ל לתת את שתי המתנות <em>לאדם אחד</em>, ואילו מתנות לאביונים — לתת לכל עני מתנה אחת, כלומר לחלק ל<em>יותר</em> אנשים.</p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <strong>מידת החסד והרחמים</strong> (נובעת מנפש האדם)<br><br>
+      ככל שתיתן ליותר אנשים — כך תתפתח יותר מידת החסד והרחמנות. לכן מתנות לאביונים עדיף לחלק לכמה עניים.
+    </div>
+    <div class="col-gold">
+      <strong>מידת האהבה</strong> (נובעת מלב האדם)<br><br>
+      לקנות אהבה עדיף להשקיע באדם אחד הרבה, ועל ידי כך תקנה את מידת האהבה ותוכל בסוף לאהוב את כולם. לכן משלוח מנות — לאדם אחד.
+    </div>
+  </div>
+
+  <p data-a="01-230">וכך מבאר רבנו יונה (אבות ב, יב) את המשנה "איזו היא דרך ישרה שידבק בה האדם... רבי יהושע אומר חבר טוב": "טוב לאדם לאחוז במידה אחת בשלמות" — להיות "חבר טוב בלב שלם" לאדם אחד, "ומתוך זה יבוא לאהוב את כל הבריות". ואין לך "חבר טוב" יותר ממי שהנביא כתב עליו: "וְהִיא חֲבֶרְתְּךָ וְאֵשֶׁת בְּרִיתֶךָ" (מלאכי ב).</p>
+
+  <div class="quote-box">
+    <p data-a="01-231">"מידת אהבה אינה מפותחת אצלנו כראוי, אבל יש לדעת <strong>שכל שלימות האדם נקנית רק על ידי מידה זו</strong>... וע"י האהבה שבין איש לאשתו מקיים האדם מצוות ואהבת לרעך כמוך בשלמותה, ויוכל להגיע לקיום מצוות אהבת ה' ע"י פיתוח האהבה בענין ביתו."</p>
+    <span class="source-tag">ר' איזיק שר, כתב יד</span>
+  </div>
+
+  <p data-a="01-232">כשם שאדם יכול לפתח שריר, ואז בנקל יכול לעשות תרגילים קשים — כך יכול האדם לפתח בליבו את מידת האהבה, ואז בנקל יוכל לאהוב כל אדם ולקיים "ואהבת לרעך כמוך" ו"ואהבת את ה' אלוקיך". והיכן המקום הטוב ביותר לפתח מידה זו? בתוך הבית — בית ספר שברא הקב"ה במיוחד לכל אדם, בשביל לקנות בו את מידת האהבה שהיא, כדברי ר' איזיק שר, "כל שלימות האדם, ובה מקיים את כל התורה כולה".</p>
+
+  <h4 data-a="01-233">דוגמאות מגדולי ישראל</h4>
+
+  <p data-a="01-234">מעניין לראות ששני גדולי ישראל שמספרים עליהם סיפור נפלא בעניין שלום ביתם, היו גם גדולים מאוד באהבת ישראל שלהם:</p>
+
+  <div class="story-box">
+    <p data-a="01-235" style="margin-top:0;"><strong>ר' אריה לוין זצ"ל</strong>, בעל הסיפור הידוע "הרגל של אשתי כואבת לנו", ואהבת ישראל שלו הייתה גדולה עד למאוד — כמו הסיפור הידוע על האסיר שנשבע לחדול לעשן בשבת בעקבות ליטוף ידו של הרב.</p>
+    <p data-a="01-236" style="margin-bottom:0;"><strong>ר' שלמה זלמן אויערבך זצוק"ל</strong> — צהריים אחד ליווה מגיד שיעור שביקש לצאת מוקדם כדי לראות דירה חדשה. הרב סייר בכל חדר ושאל למה הוא משמש. כששאלוהו לפשר הדבר, ענה: "אני רוצה לתת בביתך עין טובה" — כשם שעין רעה מזיקה, כך אדם בעל עין טובה, הרוצה שיהיה טוב לחברו, משפיע עליו טובה הרבה.</p>
+  </div>
+
+  <h4 data-a="01-237">מרדכי הצדיק, "דובר שלום לכל זרעו"</h4>
+
+  <p data-a="01-238">מרדכי הצדיק, שזכה להציל את עם ישראל ולזכות לדרגה הנפלאה "וְדֹבֵר שָׁלוֹם לְכָל זַרְעוֹ" — זכה לכך בזכות שהיה אכפת לו מאוד מרעייתו ודאג לשלומה כל יום (כמבואר בפרק ה). כדאי מאוד לעיין בדברי הגר"א בסוף מגילת אסתר על פסוק זה: "דורש טוב הוא מעשים טובים ומידות טובות... ושלום הוא הכלי לכל המידות, והוא הלבוש של כל המידות... לא מצא הקב"ה כלי מחזיק ברכה לישראל אלא השלום — היינו שהכלי שצריך שיהיה יכול לקבל הכול, ולא מצא הקב"ה מי שיהיה יכול לקבל אלא השלום". ומהו שלום? לקחת שני דברים שונים ולעשות מהם אחד — ואין לך מקום גדול מאשר הבית היהודי.</p>
+
+  <h4 data-a="01-239">"על כן יעזוב איש את אביו ואת אמו"</h4>
+
+  <p data-a="01-240">כתוב בתורה (בראשית ב, כג-כד): "זֹאת הַפַּעַם עֶצֶם מֵעֲצָמַי... עַל כֵּן יַעֲזָב אִישׁ אֶת אָבִיו וְאֶת אִמּוֹ וְדָבַק בְּאִשְׁתּוֹ וְהָיוּ לְבָשָׂר אֶחָד". מדוע צריך האדם לעזוב את אביו ואת אמו כדי לדבוק באשתו? יתכן: אם רוצה אדם לקנות את מידת האהבה — יש להשקיע זמן מסוים לאהוב רק את רעייתו, לעזוב זמנית את האהבה לאביו ולאמו ולהשקיע בעיקר ברעייתו, ועל ידי זה יזכה לקנות את מידת האהבה ולאהוב את כולם הרבה מאוד.</p>
+
+  <h4 data-a="01-241">"והלכת בדרכיו" — הדרך לשלמות האדם</h4>
+
+  <p data-a="01-242">בפרשת עקב מצאנו שלוש פעמים את הביטוי "ללכת בדרכיו", כל פעם בהקשר אחר: לפני יראה (ח, ו), אחרי יראה ולפני אהבה (י, יב), ואחרי אהבה ולפני דביקות (יא, כב). מסביר החפץ חיים (בספרו אהבת חסד): "והלכת בדרכיו" הוא המפתח לכל אחת מהמעלות — ליראה, לאהבה ולדביקות. והמקום שבו מקיים האדם "והלכת בדרכיו" ביותר — הוא בביתו, ששם תפקידו להתנהג ממש כמו שהבורא מתנהג לברואיו.</p>
+
+  <h4 data-a="01-243">באור נפלא בטעם שנראו תחילה דו-פרצופין</h4>
+
+  <p data-a="01-244">הרמח"ל (כללים ראשונים, כלל כח) מבאר: מדוע נברא האדם תחילה דו-פרצופין, ורק לאחר מכן נפרדו להיות פנים מול פנים? כשם שאיש ואשתו היו מתחילה דבוקים בגבם, כך הייתה כל נשמה דבוקה בבורא — אך "אחור באחור", בבושת פנים. הפריד הקב"ה את הנשמה מן הבורא ושׂם אותה בעולם, כדי שתזכה, על ידי מעשיה הטובים, להתקרב ולהידבק בבורא מחדש, ללא בושה, כשותפה של ממש "בקיום עולמו והשלמתו".</p>
+
+  <div class="highlight-box">
+    <p data-a="01-245" style="margin:0;">המתבונן יראה: לא ניתן לשער כמה שווה להשקיע בבית היהודי — שאין לך מקום שהשקעה בו נותנת רווח כל כך גדול, גם לאדם עצמו וגם לעולם כולו.</p>
+  </div>
+
+  <p data-a="01-246">אחרי שהבנו מדוע דווקא הבית הוא המקום הטוב ביותר להטיב, בפרק הבא נעמיק עוד יותר בעצם "ההשפעה" הזו — ונגלה שהיא, לדעת הרמב"ם, גדולה אף ממצוות חביבות במיוחד כמו נר חנוכה.</p>
+
+  <!-- ===================== CHAPTER 7 ===================== -->
+  <div class="chapter-card">
+    <div class="chapter-num">ז</div>
+    <div class="chapter-title">ההשפעה הגדולה ביותר</div>
+  </div>
+  <div class="section-divider"><div class="line"></div><div class="icon">🕯</div><div class="line"></div></div>
+
+  <div class="chapter-label">פרק ז</div>
+  <h2 data-a="01-247" id="section7">ההשפעה הגדולה ביותר</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-248">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-249">נר ביתו קודם לנר חנוכה — פסק הרמב"ם</li>
+      <li data-a="01-250">"כל התורה ניתנה לעשות שלום בעולם"</li>
+      <li data-a="01-251">מדוע שם ה' נמחק דווקא לצורך שלום בית</li>
+      <li data-a="01-252">שנאת חינם מול תוספת אחדות — יחס הפוך</li>
+      <li data-a="01-253">חמישה יסודות מסכמים</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-254" style="margin:0;">פרק זה מגיע לשיא הטענה של החוברת כולה: לא רק ששלום בית משפיע — הוא משפיע <span class="emphasis">יותר</span> מאשר מצוות חביבות ביותר, ואפילו יותר מכבוד שם ה' עצמו. הרמב"ם עצמו הוא זה שקובע זאת, בפסק הלכה מפורש.</p>
+  </div>
+
+  <div class="quote-box" style="font-style: normal;">
+    <p data-a="01-255">"הָיָה לְפָנָיו נֵר בֵּיתוֹ וְנֵר חֲנֻכָּה, אוֹ נֵר בֵּיתוֹ וְקִדּוּשׁ הַיּוֹם — נֵר בֵּיתוֹ קוֹדֵם, מִשּׁוּם שְׁלוֹם בֵּיתוֹ, שֶׁהֲרֵי שֵׁם הַשֵּׁם נִמְחָק לַעֲשׂוֹת שָׁלוֹם בֵּין אִישׁ לְאִשְׁתּוֹ. גָּדוֹל הַשָּׁלוֹם, שֶׁכָּל הַתּוֹרָה נִתְּנָה לַעֲשׂוֹת שָׁלוֹם בָּעוֹלָם, שֶׁנֶּאֱמַר: 'דְּרָכֶיהָ דַרְכֵי נֹעַם וְכָל נְתִיבוֹתֶיהָ שָׁלוֹם'."</p>
+    <span class="source-tag">רמב"ם, הלכות חנוכה פרק ד הלכה יד</span>
+  </div>
+
+  <h3 data-a="01-256">כל התורה ניתנה לעשות שלום בעולם</h3>
+
+  <div class="qa-box">
+    <p data-a="01-257" class="q">אם השלום הוא מטרת התורה כולה, היכן מצוות שבין אדם למקום?</p>
+    <p data-a="01-258" class="a">"שלום בעולם" כולל שני פירושים: שלום בין איש לרעהו, ושלום בין הקב"ה לכנסת ישראל — ועל ידי זה יש שלום <strong>לכל העולם</strong>, שהרי כל העדר הטוב הוא מחמת שאין הארת פני ה' בעולם, וכשה' יאיר פניו יהיה הכול טוב ושלם. וכן אמרו חז"ל: למה נקרא שמן של קרבנות "שלמים"? שמטילים שלום בעולם — שלום בין מביא הקרבן לאביו שבשמים, ושלום בין הכהן, הישראל והמזבח.</p>
+  </div>
+
+  <div class="qa-box">
+    <p data-a="01-259" class="q">אם כן, מדוע נר שבת קודם לנר חנוכה? הרי גם נר חנוכה מוסיף שלום — בין ישראל לקב"ה — ושלום זה חשוב יותר משלום בין איש לאשתו (עיין שבת קטז.)?</p>
+    <p data-a="01-260" class="a">ישנה טעות יסודית בהבנת המצוות: אין לחשוב שמצוות בין אדם למקום מקרבות לה', ומצוות בין אדם לחברו מקרבות רק בין איש לרעהו. האמת היא שמצוות בין אדם לחברו — ובמיוחד בין איש לרעייתו — מקרבות את הבריאה לה' <strong>עוד יותר</strong> ממצוות שבין אדם למקום. ולכן תוספת אחדות בין איש לאשתו "מוסיפה שלום בעולם יותר מהכול": תוספת האחדות שתיגרם מאור נר השבת תקרב את ישראל לאביהם שבשמים יותר מנר חנוכה.</p>
+  </div>
+
+  <h3 data-a="01-261">התורה לימדה אותנו ששלום בית חשוב מהכול</h3>
+
+  <div class="qa-box">
+    <p data-a="01-262" class="q">מנין לקח הרמב"ם שתוספת אחדות בין איש לאשתו חשובה לבורא עולם עוד יותר מנר חנוכה — עד שצריך למכור כסותו בשבילה, מה שלא נאמר בשאר מצוות?</p>
+    <p data-a="01-263" class="a">הקב"ה בעצמו גילה לנו סוד זה כאשר ציווה למחוק את שמו כדי להרבות שלום — בפרשת סוטה, שם כותבים את שם ה' ואת פסוקי התורה על קלף (כמבואר ברמב"ם הלכות סוטה פרק ג) ואחר כך מוחקים אותם במים המרים. אף שיש בזה קצת חילול שם שמים (העוון החמור ביותר), רצה הקב"ה ללמד: יש דבר הגורם לו נחת ושמחה יותר מכבוד שמו הקדוש עצמו — <strong>תוספת שלום הגורמת חיבור בין כנסת ישראל לקב"ה, יותר מהכול</strong>.</p>
+  </div>
+
+  <h3 data-a="01-264">גם עבור יום אחד של שלום בית שווה להשקיע הרבה</h3>
+
+  <div class="qa-box">
+    <p data-a="01-265" class="q">אולי התירה התורה למחוק שם שמים רק כדי לברר אישה שנחשדה שנאסרה לגמרי לבעלה — ולא לכל עניין אחר?</p>
+    <p data-a="01-266" class="a">מבואר בגמרא (חולין קמא.) שאפילו לגבי מצוות שילוח הקן — מצוות עשה רגילה — היו דוחים לא-תעשה ועשה כדי לזרז את המצורע להיטהר מהר יותר ולחזור לאשתו, "הואיל ואמר מר: גדול שלום שבין איש לאשתו, שהרי אמרה תורה שמו של הקב"ה שנכתב בקדושה ימחה על המים". רואים מהגמרא: גדול השלום פירושו כל תוספת אחדות, גם באדם רגיל, לא רק במקרה קיצוני.</p>
+  </div>
+
+  <p data-a="01-267">מצאנו בעוד מקום שאחדות היא דבר גדול עוד יותר מהרבה מצוות: "מקדש שני שהיו עוסקין בתורה ובמצוות ובגמילות חסדים... מפני מה חרב? מפני שהייתה בו שנאת חינם — ללמדך ששקולה שנאת חינם כנגד שלוש עבירות: עבודה זרה, גילוי עריות ושפיכות דמים" (יומא ט:). מדוע שנאת חינם חמורה כמו שלוש העבירות החמורות? כי הפגם הנגרם בעולם מחמת חוסר אחדות שווה לפגם שנגרם מהעבירות יחדיו — ולא הועילו התורה והמצוות שעסקו בהם, כי שלום משפיע יותר מהכול.</p>
+
+  <div class="highlight-box">
+    <h4 data-a="01-268" style="margin-top:0; color:#2563eb;">לסיכום — מצאנו לגבי השלום דבר מיוחד מאוד:</h4>
+    <ol style="margin-bottom:0;">
+      <li data-a="01-269">אם יש שלום, הקב"ה שורה בעם ישראל, אפילו אם ישנם חטאים גדולים.</li>
+      <li data-a="01-270">כשאין שלום — אפילו יש תורה ומצוות, הקב"ה אינו שורה בעם ישראל.</li>
+      <li data-a="01-271">שלום חשוב לבורא עולם יותר מכבוד שמו.</li>
+      <li data-a="01-272">תוספת שלום בבית חשובה ומשפיעה בעולם יותר מנר חנוכה, שהיא מצווה חביבה עד למאוד.</li>
+      <li data-a="01-273">הטעם: כל התורה ניתנה לעשות שלום בין ישראל לאביהם שבשמים, והדבר שמשפיע על כך יותר מהכול הוא השלום — ובמיוחד השלום בין איש לאשתו, שמכוון בדיוק כנגד זה.</li>
+    </ol>
+  </div>
+
+  <p data-a="01-274">לאחר שהוכחנו ממקור ההלכה עצמו — פסק הרמב"ם — את מרכזיות שלום הבית, נעבור בפרק הבא למקורות נוספים מגוף התורה, המראים כיצד אפילו "חיסרון קל" של אהבה נחשב בעיני התורה כ"שנאה".</p>
+
+  <!-- ===================== CHAPTER 8 ===================== -->
+  <div class="chapter-card">
+    <div class="chapter-num">ח</div>
+    <div class="chapter-title">מקורות מהתורה לחשיבות העצומה שיש להוספת אחדות בבית היהודי</div>
+  </div>
+  <div class="section-divider"><div class="line"></div><div class="icon">📜</div><div class="line"></div></div>
+
+  <div class="chapter-label">פרק ח</div>
+  <h2 data-a="01-275" id="section8">מקורות מהתורה לחשיבות האחדות בבית היהודי</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-276">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-277">לאה ורחל — חסרון קל של אהבה נקרא בתורה "שנאה"</li>
+      <li data-a="01-278">ראובן ושמעון — ראייה מול שמיעה</li>
+      <li data-a="01-279">למה נקרא שמו לוי?</li>
+      <li data-a="01-280">למה נקרא שמו יוסף?</li>
+      <li data-a="01-281">מוסר השכל</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-282" style="margin:0;">אחרי שראינו בפרק הקודם שגדול השלום מהכול, פרק זה יורד לרזולוציה עדינה עוד יותר: לא מדובר רק בפגיעות גדולות וגלויות, אלא גם בחסרונות דקים ביותר — כאלה שרק ה' "הרואה מסתרי הלב" יכול להבחין בהם. דווקא מסיפור לידת שבטי ישראל, נלמד עד כמה כל ניואנס נספר.</p>
+  </div>
+
+  <h3 data-a="01-283">חסרון קל של אהבה בבית היהודי מוגדר בתורה כשנאה</h3>
+
+  <div class="verse-box">
+    <p data-a="01-284">"וַיַּרְא ה' <strong>כִּי שְׂנוּאָה</strong> לֵאָה וַיִּפְתַּח אֶת רַחְמָהּ וְרָחֵל עֲקָרָה"
+    <span style="display:block; margin-top:10px; font-size:0.7em; color:#7e22ce;">בראשית כט, לא</span></p>
+  </div>
+
+  <div class="qa-box">
+    <p data-a="01-285" class="q">כיצד יתכן לומר שיעקב אבינו, מהאבות הקדושים, שנא את אשתו לאה? ועוד: יש איסור להוליד ילדים מאישה שנואה (נדרים כ:) — כיצד הוליד יעקב שבטי י-ה מלאה? והזוהר (ח"א קנד.) מקשה: אם היא שנואה, כיצד יצאו ממנה בנים כה מעולים?</p>
+    <p data-a="01-286" class="a">מתרצים רבנו בחיי והרמב"ן: חס ושלום שישנא יעקב את לאה, אלא היא "שנואה" <em>בערך</em> רחל, שהייתה אהובה ביותר — והפסוק עצמו מעיד שיעקב "וַיֶּאֱהַב גַּם אֶת רָחֵל מִלֵּאָה", כלומר אהב את שתיהן, אלא שאת רחל אהב יותר. למדנו מכאן: חסרון אהבה — ולו יחסי בלבד — בין איש לאשתו, מוגדר בתורה כ"שנאה".</p>
+  </div>
+
+  <h3 data-a="01-287">ראובן ושמעון</h3>
+
+  <div class="verse-box" style="text-align:right; font-size:1.05em;">
+    <p data-a="01-288">"וַתִּקְרָא שְׁמוֹ רְאוּבֵן כִּי אָמְרָה כִּי <strong>רָאָה</strong> ה' בְּעָנְיִי כִּי עַתָּה יֶאֱהָבַנִי אִישִׁי... וַתִּקְרָא שְׁמוֹ שִׁמְעוֹן" — <strong>כִּי שָׁמַע</strong> ה' כִּי שְׂנוּאָה אָנֹכִי וַיִּתֶּן לִי גַּם אֶת זֶה"
+    <span style="display:block; margin-top:10px; font-size:0.7em; color:#7e22ce;">בראשית כט</span></p>
+  </div>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <strong>שאלה א׳ — סדר הפוך</strong><br><br>
+      ראוי היה שהבן הראשון יסיר את השנאה, והשני יביא אהבה. אך לאה אמרה בבן הראשון "יאהבני אישי" (מדבר על אהבה עתידית), ובשני "שנואה אנוכי" (עדיין מדברת על שנאה)! מדוע ההיפך?
+    </div>
+    <div class="col-gold">
+      <strong>שאלה ב׳ — ראייה מול שמיעה</strong><br><br>
+      מדוע אצל ראובן נאמר לשון "ראה" ואצל שמעון לשון "שמע"?
+    </div>
+  </div>
+
+  <p data-a="01-289"><strong>תשובה (על פי הרב מחבר "תולדות יצחק"):</strong> בבן הראשון, עדיין הרגישה לאה בעצמה שחסר אהבה בינה לבין יעקב — היה זה חיסרון <em>גלוי</em>, שניתן לראותו בעיני בשר ודם, ולכן אמרה "ראה ה' בעניי". אבל בבן השני, לאה עצמה לא הרגישה שום חיסרון גלוי — אלא שאמרה: אם ה' נתן לי בן נוסף, סימן שעדיין יש חיסרון אהבה <em>דק</em> שרק ה' "השומע מסתרי הלב" חש בו — "כי שמע ה'".</p>
+
+  <div class="highlight-box">
+    <p data-a="01-290" style="margin:0;">וגם לחיסרון דק כזה — שאפילו האישה עצמה לא חשה בו במודע — קוראת התורה "שנואה אנוכי". נלמד מכאן כמה חשוב בעיני ה' כל תוספת, ולו הקטנה ביותר, של אהבה בין איש לאשתו.</p>
+  </div>
+
+  <h3 data-a="01-291">למה נקרא שמו לוי?</h3>
+
+  <div class="story-box">
+    <p data-a="01-292" style="margin:0;">כתב בספר הפרשיות (אליהו כי טוב): בבן השלישי אמרה לאה: "עַתָּה הַפַּעַם יִלָּוֶה אִישִׁי אֵלַי כִּי יָלַדְתִּי לוֹ שְׁלֹשָׁה בָנִים" — הפעם השלמתי כל ייעודי, ואין זאת אלא שחפץ הקב"ה להחזיר לי גם בעד ימי הצער שעברו עלי, ולעשות אותי דבוקה בו לעולם, "בעולם הזה ובעולם הבא". וכתב האור החיים: הזוגות מתלווים בעולם העליון בתמידות, וזאת מרמז השם "יִלָּוֶה". כתב ר' חיים שמואלביץ: לוי זכה להיות הבן שהשלים את האהבה בין לאה ליעקב, ולכן זכה להיות שבט עובדי ה' במקדש, וממנו יצא אהרן — "אוהב שלום ורודף שלום".</p>
+  </div>
+
+  <h3 data-a="01-293">למה נקרא שמו יוסף?</h3>
+
+  <div class="story-box">
+    <p data-a="01-294" style="margin:0;">רבי חיים שמואלביץ זצ"ל הדגיש בשיחותיו את הקפידה הנדרשת בדברים שבין אדם לחברו, אפילו הקטנים ביותר. הביא ראיה מדברי חז"ל: יוסף נקרא כך על שם "אָסַף אֱלֹהִים אֶת חֶרְפָּתִי" — כי מי שאין לה בן, אין לה במי לתלות את חסרונה, ומשיש לה בן, תולה בו: "מי שבר את הכלי? — בנך". והתמיהה: היתכן שזו הייתה תחושתה של רחל כלפי יעקב, שעבד למענה ארבע עשרה שנה, עד כדי כך שביום גדול זה של פקידתה אחרי עקרות ארוכה, היא רואה רק פרט קטן זה?! אלא — אמר רבי חיים — האבות והאמהות הקדושים ידעו מה זה "בין אדם לחברו". ואם הוסרה אפשרות של כל קפידה, ולו הדקה ביותר, שרק בורא עולם מכיר בה — זוהי השמחה הגדולה!</p>
+  </div>
+
+  <h3 data-a="01-295">מוסר השכל</h3>
+
+  <div class="highlight-box">
+    <p data-a="01-296" style="margin:0;">מדוע היום לא נמצא אישה שקוראת לבתה "אהובה" על שם שבעלה אוהב אותה עכשיו? משום שאנחנו לא מבינים עד כמה חשוב בעיני התורה כל תוספת אהבה בבית היהודי; אין אנו מבינים שכל תוספת אחדות בבית פירושה תוספת אחדות בין הקב"ה לכנסת ישראל; אין אנחנו מבינים עד כמה צריך לשמוח על כל משהו של אהבה שיש בין בני הזוג — כזה שגם רק לעצמם, בשקט, בין שני אנשים, יש לו ערך עצום בשמים.</p>
+  </div>
+
+  <p data-a="01-297">מהמקורות המרוכזים בפרק זה עולה תמונה עקבית: התורה עצמה, בכל שכבותיה, מתעדת חסרונות דקים כביטוי לחשיבות המצווה. בפרק הבא נחזור למבט הכולל — משל פשוט שממחיש שהאוצר הגדול ביותר שאנו מחפשים כבר נמצא, ממש, אצלנו בבית.</p>
+
+  <!-- ===================== CHAPTER 9 ===================== -->
+  <div class="chapter-card">
+    <div class="chapter-num">ט</div>
+    <div class="chapter-title">האוצר לא מתחת לגשר</div>
+  </div>
+  <div class="section-divider"><div class="line"></div><div class="icon">💎</div><div class="line"></div></div>
+
+  <div class="chapter-label">פרק ט</div>
+  <h2 data-a="01-298" id="section9">האוצר לא מתחת לגשר</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-299">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-300">סיפור איזיק והאוצר — האוצר קרוב אליך מאוד</li>
+      <li data-a="01-301">כיצד נציל את עצמנו ואת עם ישראל כולו מהצרות</li>
+      <li data-a="01-302">שלושה יסודות: כיצד הופכים פעולה רגילה למצווה גדולה</li>
+      <li data-a="01-303">סיפור: "יותר בין אדם לחברו"</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-304" style="margin:0;">פרק זה חוזר, אחרי שמונה פרקים של יסודות ומקורות, למסר הפשוט ביותר: כל מה שלמדנו איננו רחוק או תיאורטי — הוא כבר נמצא אצלנו בבית. בסופו נלמד שלושה כללים מעשיים שיהפכו כל פעולת חסד רגילה למצווה בעלת ערך עצום.</p>
+  </div>
+
+  <h3 data-a="01-305">האוצר קרוב אליך מאוד</h3>
+
+  <div class="story-box">
+    <p data-a="01-306" style="margin-top:0;">ישנו סיפור מפורסם על יהודי בשם איזיק, שחלם חלום שמתחת לגשר יש אוצר גדול מאוד של כסף. נסע איזיק לגשר, חיכה עד אמצע הלילה וירד לחפור מתחתיו. פתאום הגיע השומר ושאל לפשר מעשיו. ענה לו איזיק שחלם על אוצר מתחת לגשר. צחק השומר ואמר: "מי מתייחס לחלומות? גם אני חלמתי הלילה שמתחת התנור בבית של איזיק בן יעקב מקרקוב יש אוצר, וכי בגלל זה אלך לחפש?" שמח איזיק לשמע דבריו, כשהשומר כלל לא ידע שהעומד לפניו הוא אותו איזיק בן יעקב מקרקוב. חזר לביתו, חפר מתחת לתנור ומצא אוצר נפלא.</p>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-307" style="margin:0;">ואנו למדים מכך רבות: פעמים שהאוצר בתוך ביתך, ואתה נוסע רחוק. דע — הוא לא מעבר לים, הוא קרוב אליך מאוד. יהודי יקר, אתה רוצה לזכות להיות בן אהוב לה' יתברך, רוצה לקרב את עם ישראל לאביהם שבשמים — לא צריך ללכת רחוק, הכול בתוך הבית: בעל שישמח את אשתו, ואשה שתעשה רצון בעלה, לכבוד בורא עולם, לתת לו כוח להשפיע על עם ישראל.</p>
+  </div>
+
+  <p data-a="01-308">וכפי שאמרו חז"ל: "גדול השלום, שהוא שקול כנגד הכל, אנו אומרים 'עושה שלום ובורא את הכל'. רבי אלעזר בנו של רבי אלעזר הקפר אומר: אפילו ישראל עובדים עבודה זרה ושלום ביניהם — כביכול אמר הקב"ה: אין השטן נוגע בהם" (במדבר רבה יא, ז). ובספר הליקוטים לרבי חיים ויטאל זצ"ל (פרשת עקב, פרק ח) כתב: "מעלה גדולה יש לאשה... שאם יאהב אותה כגופו, יקיים מצות ואהבת לרעך כמוך ששם נכלל כל התורה... אם תקיים זה, כאילו קיימת כל התורה כולה".</p>
+
+  <h3 data-a="01-309">כיצד נציל את עצמנו ואת עם ישראל כולו מהצרות?</h3>
+
+  <div class="quote-box">
+    <p data-a="01-310">"שאלו תלמידיו את רבי אליעזר הגדול: מה יעשה האדם ויינצל מחבלו של משיח? אמר להם: יעסוק בתורה ובגמילות חסדים."</p>
+    <span class="source-tag">תנא דבי אליהו זוטא, מובא בשם עולם לחפץ חיים ח"א פרק כו</span>
+  </div>
+
+  <div class="qa-box">
+    <p data-a="01-311" class="q">והלוא כל ישראל עוסקים במצוות תמיד, ומצווה מגנה ומצילה — מדוע דווקא תורה וגמילות חסדים?</p>
+    <p data-a="01-312" class="a">כח הדין נמשל לאש: כשההתגברות מעטה, מועיל מעט מים לכבותה. כשמתגברת הרבה, צריך את "מכבי האש" הגדולים ביותר. תלמידי רבי אליעזר ראו שלפני ביאת המשיח יתגבר כח הדין כל כך, עד שלא תועיל שום זכות אחרת — ורק זכות התורה והחסד, המיוחדים בעוצמתם, מועילה אף בעת צרה כזו.</p>
+  </div>
+
+  <p data-a="01-313">וכתב החפץ חיים (מכתבי החפץ חיים, סימן יג): צריך "לעסוק" בתורה ובחסד ולא לרפות מהם — כשם שאדם בעסקיו מחפש עצות ותחבולות ולא נח ולא שוקט, כך יש לחפש תמיד אופנים שונים כדי להרבות זכויות. "והעיקר בזה — שיראה האדם לעסוק בחסד בכל יכולתו, הן בגופו הן בממונו... בזה הוא מעורר מידת החסד לפני הקב"ה, שיש בכוחה להפוך מידת הדין הקשה לרחמים".</p>
+
+  <div class="highlight-box">
+    <p data-a="01-314" style="margin:0;">אין מקום שבו החסד משפיע על העולם כולו כמו בתוך הבית. הביא הרב וולבה זצ"ל בשם ר' חיים ויטאל זצ"ל: <strong>"מידותיו של האדם נמדדות לפי יחסו אל אשתו"</strong>. ועל פי זה כתב: אדם הגומל חסד עם אנשים — מלווה, מבקר חולים, מנחם אבלים, משמח חתן — בוודאי ישחק ליום אחרון, כי זכויות רבות לו. אבל ידע נאמנה: בשמים בודקים איך התנהג עם אשתו. אם גם עימה גמל חסד כל ימיו — אשריו וטוב לו. אך אם אותה הקניט והזניח — מכריע הדבר את דינו, ולא ייזכרו לו כל חסדיו שעשה עם אחרים.</p>
+  </div>
+
+  <p data-a="01-315">הרב פינקוס זצ"ל מביא בשם ר' יחזקאל לוינשטיין זצ"ל שאמר כהדרכה לחתן: "בכל יום ויום עצור וחשוב: מה עשיתי היום בשביל שלום בית שלי?" לעסוק בגמילות חסדים פירושו לעשות "עסק" מחיי הנישואין, ולא לתת לזה להיות מהלך המתנהל מעצמו.</p>
+
+  <h3 data-a="01-316">כיצד תוכל להרוויח מאות מצוות ביום ללא מאמץ?</h3>
+  <p data-a="01-317" style="margin-top:-10px; color:#6b7280; font-style:italic;">איך הופכים פעולה רגילה למצווה גדולה?</p>
+
+  <h4 data-a="01-318">יסוד א: מצוות ללא כוונה — לא יוצאים בהם ידי חובה</h4>
+
+  <p data-a="01-319">האם כל פעולת חסד שעושים נחשבת מצווה? "מצווה" מלשון ציווי — שחושבים לעשות רצון המצווה. אנו אומרים כל יום בפרשת ציצית: "וּזְכַרְתֶּם אֶת כָּל מִצְוֹת ה' וַעֲשִׂיתֶם אֹתָם" — לפני עשיית המצווה חייבים לזכור שזהו רצון ה', ורק אז "וִהְיִיתֶם קְדֹשִׁים לֵאלֹהֵיכֶם".</p>
+
+  <div class="highlight-box">
+    <p data-a="01-320" style="margin:0;">אין הכוונה שיעשה חסד לחברו רק מחמת ציווי ה' ולא מחמת שליבו מרחם עליו — שכך אמר הסבא מסלבודקה: "ואהבת לרעך כמוך" — כמו שאתה אוהב את עצמך ללא שזו מצווה, כך צריכה להיות אהבתנו לזולת — אלא הכוונה שיכוון שמיטיב לחברו בכל ליבו, מחמת שכך רצון ה'.</p>
+  </div>
+
+  <p data-a="01-321"><strong>דוגמאות:</strong> משגיח כשרות שמכוון להציל יהודים מאיסורים — עבודתו מצווה. אמא שמלבישה את ילדיה ומכוונת "לעזור לבן של הקב"ה" — עבודתה קודש. אבא הלומד עם בנו למבחן, אמירת שלום, הקשבה לחבר, מענה בטלפון — נחשוב רגע אחד לעשות רצון ה', והמעשה שלנו שודרג והועלה בדרגה.</p>
+
+  <h4 data-a="01-322">יסוד ב: מהי המטרה של מצוות חסד?</h4>
+
+  <div class="qa-box">
+    <p data-a="01-323" class="q">האם חסד מטרתו להיטיב לשני, או עצם הנתינה — שאני אהיה טוב יותר בעקבותיה?</p>
+    <p data-a="01-324" class="a">טורנוסרופוס הרשע שאל את רבי עקיבא (בבא בתרא י.): אם אלוקיכם אוהב עניים, מדוע אינו מפרנסם? אמר לו: "כדי שניצול אנו בהן מדינה של גיהנום". אם מטרת החסד היא רק להשלים חסר אצל הזולת — לה' דרכים רבות אחרות; אלא מטרת החסד היא תיקון נפשו של הנותן על ידי הנתינה. ראיה: אברהם מגיש לשלושת המלאכים אוכל שאינו נצרך להם כלל — ובכל זאת פרשה זו היא הסמל בתורה לעשיית חסד.</p>
+  </div>
+
+  <p data-a="01-325">"הכול לפי רוב המעשה" (אבות ג, טו) — מפרש הרמב"ם: עדיף לתת מאה שקלים למאה עניים ולא לעני אחד הכול, שכך יתקן עצמו יותר. בתורה אין מצווה "לעשות חסד" באופן כללי, אלא מצוות "ואהבת לרעך כמוך" ו"והלכת בדרכיו" — להיות דומה במידותיו לה'. לסיכום: מעשה החסד הוא אמצעי לקנות בליבנו שתי מידות טובות — אהבת ישראל, ואהבת חסד (לב שנהנה לעשות חסד).</p>
+
+  <h4 data-a="01-326">יסוד ג: שכר המצוות לפי הערך שמעריכים אותם</h4>
+
+  <p data-a="01-327">שני אנשים עשו אותה פעולת חסד בדיוק — האם לשניהם אותו שכר? יתכן שיש ביניהם הבדל עצום, לא בגלל שאחד התאמץ יותר, אלא בגלל שאחד מעריך יותר את הפעולה שעשה, ומבין כמה היא חשובה לבורא עולם.</p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <strong>עשיו מכר את הבכורה</strong><br><br>
+      בנזיד עדשים — האם זהו שוויה האמיתי? ברור שלא, אלא עשיו הוא זה שהעריך אותה כך, ולכן זה היה "שוויה" בעולמו.
+    </div>
+    <div class="col-gold">
+      <strong>הרשעים מקבלים שכרם בעולם הזה</strong><br><br>
+      והרי "שכר מצווה בהאי עלמא ליכא"? אלא לפי הערך המועט שהם מעריכים את מצוותם, שכר העולם הזה מספיק להם.
+    </div>
+  </div>
+
+  <p data-a="01-328">"לפי רוב השמחה במצווה יגדל שכרו" (חרדים). וכתב החזון איש: "עיקר עשיית מצווה היא שמחתה שזכינו לכך" — כי ככל שמעריכים יותר את המצווה, כך גדל ערכה. לכן, אם נעריך את מעשינו, יגדל ערכם, והמינימום לכך הוא שבכלל נשים לב שאנו ניגשים לעשות רצון ה'.</p>
+
+  <h3 data-a="01-329">סיפור: יותר בין אדם למקום בבין אדם לחברו</h3>
+
+  <div class="story-box">
+    <p data-a="01-330" style="margin:0;">כשמרן הגה"צ רבי מאיר חדש זצוק"ל הגיע להסתופף בחודש אלול בישיבת סלבודקה, נהוג היה שרק בוגרי הישיבה נכנסים לשיחותיו של הסבא מסלבודקה. רבי מאיר, בעקשנותו, לא ויתר ופילס את דרכו פנימה. בימי החגים, כשפגש בו הסבא, אמר לו: "יודע אני שנכנס אתה לשיחות. האם הבנת דבר מה מהן?" השיב רבי מאיר בפשטות: "הרבה לא הבנתי... אבל דבר אחד ברור הבנתי מכלל השיחות: הרבה יותר 'בין אדם למקום' יש ב'בין אדם לחברו', מאשר 'בין אדם למקום' יש ב'בין אדם למקום'". אורו פניו של הסבא ואמר: "אכן הבנת כראוי".</p>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-331" style="margin:0;">כמה עומק במשפט תמציתי זה: הקב"ה שש ושמח בקיום מצוות שבין אדם למקום, אך שמח הוא <strong>יותר</strong> בקיום מצוות שבין אדם לחברו — שבהן, מלבד קיום המצווה כלפי הבורא, אף מיטיב עם ברואיו ומקיים את רצון ה' להיטיב להם. וכתב הרא"ש (על המשנה הראשונה בפאה): "טוב לשמים וטוב לבריות — זה צדיק טוב", שהקב"ה חפץ יותר במצוות שיש בהן גם רצון הבריות, מבמצוות שבין אדם לקונו בלבד.</p>
+  </div>
+
+  <p data-a="01-332">הגענו עתה לסיום החלק העיוני של החוברת. בפרק העשירי והאחרון נסכם את כל היסודות שלמדנו, פרק אחר פרק — כדי שיהיו נגישים לחזרה ולשינון.</p>
+
+  <!-- ===================== CHAPTER 10 ===================== -->
+  <div class="chapter-card">
+    <div class="chapter-num">י</div>
+    <div class="chapter-title">סיכומים</div>
+  </div>
+  <div class="section-divider"><div class="line"></div><div class="icon">📝</div><div class="line"></div></div>
+
+  <div class="chapter-label">פרק י</div>
+  <h2 data-a="01-333" id="section10">סיכומים</h2>
+
+  <div class="highlight-box">
+    <p data-a="01-334" style="margin:0;">פרק זה מרכז את היסודות המרכזיים מכל אחד מתשעת הפרקים, כדי לאפשר חזרה מהירה ושינון. מומלץ לחזור על נקודות אלו מדי פעם — כלשונה של החוברת עצמה: "יגעת ומצאת תאמין, לא ביום אחד נבנתה רומא".</p>
+  </div>
+
+  <h4 data-a="01-335">פרק א — הקדמות</h4>
+  <ol>
+    <li data-a="01-336">מי שחי <strong>באמונה שלימה</strong> ששלום בין איש ואשה מביא שכינה, ופירוד ביניהם כמוהו כחורבן בית המקדש וכחטא העגל — יכול לחיות חמישים שנה ולא לפגוע ברעייתו.</li>
+    <li data-a="01-337"><strong>שלום בית פירושו "אוהבה כגופו"</strong> — כל הפעולות בבית נעשות מתוך אהבה, וזו דרגה גדולה מאוד, שנאמרה על אברהם אבינו שזכה להגיע לאחדות שלמה עם שרה.</li>
+    <li data-a="01-338">לימוד הנוגע למעשה קודם לכל הלימודים; ללמוד בעיון את עניני המצווה עושה קניין חזק בנפש.</li>
+    <li data-a="01-339">האדם במעשיו כביכול כאלוקים — בונה עולמות או מחריבם, ובדיבור יכול לבנות את העולם.</li>
+    <li data-a="01-340">אהבת איש ואשה בונה עולמות, מעוררת אהבת דודים, גורמת יחוד קב"ה ושכינתיה — ובזה תלויה הגאולה.</li>
+    <li data-a="01-341">דע: כל מה שקורה למעלה — הכל ממך, מחמת מעשיך.</li>
+  </ol>
+
+  <h4 data-a="01-342">פרק ב — אל גינת אגוז ירדתי</h4>
+  <ol>
+    <li data-a="01-343">איש ואשה אינם רק משל לקב"ה וכנסת ישראל, אלא משפיעים על הנמשל — על התנהלות ה' עם עם ישראל.</li>
+    <li data-a="01-344">האדם, כדוגמת העליונים — צלם אלוקים; איש ואשה הם דוגמת קב"ה וכנסת ישראל.</li>
+    <li data-a="01-345">כנסת ישראל פירושה הנשמה הכוללת את כל נשמות ישראל — בתורה נקראת "מקדש", בלשון חז"ל "כנסת ישראל", בקבלה "שכינתיה" או "ספירת המלכות".</li>
+    <li data-a="01-346">"לשם יחוד קב"ה ושכינתיה" פירושו לגרום יחוד בין הקב"ה לכנסת ישראל, שהם כנגד איש ואשה שלמטה — לכן שלום בית לשם שמים גורם יחוד גדול מאוד.</li>
+  </ol>
+
+  <h4 data-a="01-347">פרק ג — שלום בית: חיבור בין הקב"ה לכנסת ישראל</h4>
+  <ol>
+    <li data-a="01-348">הפוסקים והמקובלים לדורותיהם (פלא יועץ, החיד"א, תומר דבורה, הריקאנטי) חוזרים ומדגישים: כל תיקון בבית הוא תיקון בשכינה.</li>
+    <li data-a="01-349">איש ואשה שזכו — שכינה שרויה ביניהם, כדוגמת שני הכרובים על הארון, "פניהם איש אל אחיו".</li>
+    <li data-a="01-350">יחוד למטה גורם יחוד למעלה (זוהר, ליקוטי מוהר"ן) — וכן, חלילה, פירוד למטה גורם פירוד למעלה.</li>
+    <li data-a="01-351">מצוות פרו ורבו קשורה ביסודה לאותו עניין: הילד היהודי הוא כעין "הלוחות" הניתנים בבית היהודי.</li>
+  </ol>
+
+  <h4 data-a="01-352">פרק ד — עצת הגמרא לחיים מאושרים</h4>
+  <ol>
+    <li data-a="01-353">מנהג "מצא או מוצא" מלמד: יש לקחת את הטוב מן העבר ולהעבירו אל ההווה, ולא לתת לו להפוך "מובן מאליו".</li>
+    <li data-a="01-354">הרע, בניגוד לטוב, נוטה להתחדש ולהצטבר בתודעה — ולכן דורש תשומת לב מודעת מיוחדת כדי לא להשתלט.</li>
+  </ol>
+
+  <h4 data-a="01-355">פרק ה — סיפורים מחכמינו זכרונם לברכה</h4>
+  <ol>
+    <li data-a="01-356">סיפורי עמוד האש (רב שמואל בר יצחק, יהודה בריה דרבי חייא) מלמדים ששכר עצום ניתן על מעשה קטן של שמחה או חיבה כלפי בת הזוג.</li>
+    <li data-a="01-357">נס פורים החל בדאגתו התמידית של מרדכי לשלום אסתר — יסוד ל"דובר שלום לכל זרעו".</li>
+    <li data-a="01-358">חסרון בשלום בית חמור מלירוק בפני גדול הדור (מעשה רבי מאיר).</li>
+    <li data-a="01-359">גדולי ישראל בדורות האחרונים (הרב שך, בעל המכתב מאליהו) הקפידו על שלום בית עד כדי מסירות נפש.</li>
+  </ol>
+
+  <h4 data-a="01-360">פרק ו — לעשות לשם שמים, ומקום ההטבה הגדול ביותר</h4>
+  <ol>
+    <li data-a="01-361">מעשה הנעשה לשם שמים שכרו לאין שיעור ממעשה זהה שנעשה סתם (שלוש הפסיעות של נבוכדנצר).</li>
+    <li data-a="01-362">"לא טוב היות האדם לבדו" — פירושו לא טוב ללא אהבה, אחווה, שלום ורעות בבית.</li>
+    <li data-a="01-363">הבית היהודי הוא בית הספר הטוב ביותר לקניית מידת האהבה — המידה שבה, כדברי ר' איזיק שר, נקנית שלמות האדם כולה.</li>
+    <li data-a="01-364">גדולי ישראל שהצטיינו בשלום ביתם (ר' אריה לוין, הגרש"ז אויערבך) הצטיינו גם באהבת ישראל שלהם — אין זה מקרה.</li>
+  </ol>
+
+  <h4 data-a="01-365">פרק ז — ההשפעה הגדולה ביותר</h4>
+  <ol>
+    <li data-a="01-366">נר ביתו קודם לנר חנוכה — "משום שלום ביתו, שהרי שם השם נמחק לעשות שלום בין איש לאשתו" (רמב"ם).</li>
+    <li data-a="01-367">גדול השלום שכל התורה ניתנה לעשותו, ותוספת אחדות בין איש לאשתו מכוונת בדיוק כנגד תכלית זו.</li>
+    <li data-a="01-368">שנאת חינם שקולה כנגד שלוש העבירות החמורות — ולהיפך, אחדות שקולה כנגד קיום כל התורה.</li>
+  </ol>
+
+  <h4 data-a="01-369">פרק ח — מקורות מהתורה לחשיבות האחדות</h4>
+  <ol>
+    <li data-a="01-370">גם חיסרון קל, שרק ה' "הרואה מסתרי לב" מבחין בו, נקרא בתורה "שנאה" (לאה ורחל).</li>
+    <li data-a="01-371">שמות השבטים (ראובן, שמעון, לוי, יוסף) מלמדים על רגישות עצומה של האבות והאמהות לניואנסים הדקים ביותר בשלום הבית.</li>
+  </ol>
+
+  <h4 data-a="01-372">פרק ט — האוצר לא מתחת לגשר</h4>
+  <ol>
+    <li data-a="01-373">האוצר הגדול ביותר שאנו מחפשים כבר נמצא בבית — אין צורך לחפש הרחק.</li>
+    <li data-a="01-374">תורה וגמילות חסדים מצילים מחבלי משיח, ואין מקום שהחסד משפיע בו יותר מבתוך הבית.</li>
+    <li data-a="01-375">שלושה יסודות הופכים כל פעולה רגילה למצווה גדולה: כוונה מפורשת, הבנת מטרת החסד (תיקון הנותן), והערכת שווי המעשה.</li>
+    <li data-a="01-376">"יותר בין אדם למקום יש בבין אדם לחברו, מאשר בין אדם למקום בבין אדם למקום."</li>
+  </ol>
+
+  <div class="section-divider" style="margin: 60px 0;"><div class="line"></div><div class="icon">✡</div><div class="line"></div></div>
+
+  <div class="chapter-label">נספח</div>
+  <h2 data-a="01-377" id="hascamot">הסכמות הרבנים</h2>
+
+  <p data-a="01-378" style="color:#6b7280; font-style:italic;">ההסכמות ניתנו למהדורה קודמת של החוברת, ולרעיון הכללי של הדברים.</p>
+
+  <div class="quote-box" style="font-style:normal;">
+    <p></p><h4 data-a="01-379" style="margin-top:0; color:#b45309;">הסכמת הרב אביגדור נבנצל שליט"א</h4>
+    <p data-a="01-380">"יקר סהדותא — ראיתי את החוברת 'שלום בית' המסבירה איך אהבה ואחוה ושלום ורעות בין איש לאשתו גורמים שפע טוב של הקב"ה לכנסת ישראל, והדברים מאירים ומעוררים. יזכה הרב המחבר שליט"א לעורר כל בית ישראל בזה, ונזכה שהקב"ה... יחזיר את גרושתו במהרה בימינו."</p><p></p>
+    <span class="source-tag">כעתירת צעיר הלויים, אביגדור נבנצל</span>
+  </div>
+
+  <div class="quote-box" style="font-style:normal;">
+    <p></p><h4 data-a="01-381" style="margin-top:0; color:#b45309;">הסכמת הרב דב יפה שליט"א, משגיח דישיבת כנסת חזקיהו</h4>
+    <p data-a="01-382">"ההסכמה החשובה של הגאון הרב נבנצל שליט"א אינה צריכה חיזוק, ויזכה הרב המחבר הנכבד לעורר רבים לטובה."</p><p></p>
+    <span class="source-tag">דב יפה</span>
+  </div>
+
+  <div class="quote-box" style="font-style:normal;">
+    <p></p><h4 data-a="01-383" style="margin-top:0; color:#b45309;">הסכמת הרב יואל שוורץ שליט"א, ר"מ בישיבת דבר ירושלים</h4>
+    <p data-a="01-384">"הנה ידידי הרב החשוב יהודה טאוב שליט"א הביא לפני את כתביו בנושא שלום בית, והפליא ללקט את דברי רבותינו הקדושים בענין חשוב זה המקשר את הקב"ה וכנסת ישראל, במעשה החסד והאהבה שבין איש לאשתו. על כן ראוי לכל איש מישראל ללמוד את המקורות שבלקט היקר הזה, ויוסיף להוסיף לקח, ללמד את חובת כל אדם מישראל."</p><p></p>
+    <span class="source-tag">המברכו בכל לב, יואל שוורץ</span>
+  </div>
+
+  <p data-a="01-385" style="color:#6b7280; font-style:italic;">בנוסף לאלו, ניתנה לחוברת גם הסכמת הרב אהרן זכאי שליט"א.</p>
+
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות עיקריים</h3>
+    <ol>
+      <li>תנ"ך: בראשית, שמות, ויקרא, במדבר, דברים; ישעיהו; מלאכי; תהלים; אסתר.</li>
+      <li>תלמוד בבלי: ברכות, שבת, מגילה, יומא, יבמות, כתובות, סוטה, בבא מציעא, בבא בתרא, חולין, מנחות, סנהדרין, נדרים.</li>
+      <li>מדרשים: בראשית רבה, במדבר רבה, ויקרא רבה, אבות דרבי נתן, פרקי דרבי אליעזר, תנא דבי אליהו רבה וזוטא.</li>
+      <li>זוהר הקדוש — פרשות בראשית, במדבר; זוהר חלק ב וחלק ג.</li>
+      <li>ליקוטי מוהר"ן לרבי נחמן מברסלב.</li>
+      <li>ראשונים: רש"י, רבנו בחיי, הרמב"ן, הרמב"ם (משנה תורה ופירוש המשניות), הריקאנטי על התורה.</li>
+      <li>פוסקים: שולחן ערוך (אבן העזר, אורח חיים) והנושאי כלים; הבית חדש (ב"ח).</li>
+      <li>ספרי מוסר וחסידות: מסילת ישרים, נפש החיים, אגרת המוסר לר' ישראל סלנטר, תומר דבורה, חסד לאברהם, שם עולם לחפץ חיים, אהבת חסד לחפץ חיים, חובת הלבבות, שערי תשובה, נועם אלימלך, ראשית חכמה.</li>
+      <li>אחרונים ובני דורנו: פלא יועץ, עבודת הקודש להחיד"א, פתח עינים להחיד"א, יביע אומר, חתם סופר, מלבי"ם, ר' חיים שמואלביץ, הרב וולבה, הרב פינקוס, הגר"ח קניבסקי.</li>
+      <li>סיפורי גדולי ישראל: הגרש"ז אויערבך זצ"ל, ר' אריה לוין זצ"ל, הגראמ"ש זצוק"ל, הגר"א דסלר זצ"ל, וגדולי מוסר נוספים.</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+  </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+  window.addEventListener('scroll', function() {
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+  });
+</script>
+
+<script>
+/* =============================================================================
+   קול תודה — מנוע הקראה למאמרים תורניים   |   tts.js   v2.0
+   -----------------------------------------------------------------------------
+   העתק את הקובץ הזה כמות שהוא לתוך תגית <script> בסוף ה-HTML.
+   אין לכתוב אותו מחדש, לקצר או "לשפר" תוך כדי יצירת מאמר — הוא נבדק כך.
+   Web Speech API בלבד: בלי API חיצוני, בלי מפתח, בלי רשת, בלי עלות.
+   ============================================================================= */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    var NS       = 'koltoda.tts.';
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false, noHeVoice = false;
+    var clickToRead = true;
+
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+    function readPos() { try { return parseInt(localStorage.getItem(POS_KEY) || '0', 10) || 0; } catch (e) { return 0; } }
+
+    var G = '["\\u05f4\\u201d\\u2033]';
+    var R = "['\\u05f3\\u2019]";
+
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' ');
+        t = t.replace(/־/g, ' ');
+        t = t.replace(/\s*[–—]\s*/g, ', ');
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function chapterLabel(h) {
+        var d = h.getAttribute && h.getAttribute('data-chapter');
+        if (d && d.trim()) return d.trim();
+        var p = h.previousElementSibling;
+        if (p && p.classList && p.classList.contains('chapter-label')) {
+            return p.textContent.replace(/\s+/g, ' ').trim();
+        }
+        return '';
+    }
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (n.closest(SKIP)) return;
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            if (n.tagName === 'H2') {
+                var lbl = chapterLabel(n);
+                if (lbl && raw.indexOf(lbl) !== 0) raw = lbl + '. ' + raw;
+            }
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    function hint() {
+        if (noHeVoice) {
+            return 'לא נמצא קול עברי במחשב — ההקראה תישמע משובשת. ' +
+                   'ב-Windows: הגדרות ← שעה ושפה ← דיבור ← נהל קולות ← הוסף קולות ← עברית.';
+        }
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = readPos();
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        var was = noHeVoice;
+        noHeVoice = !he.length;
+        if (noHeVoice !== was && !isOn) say(hint());
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;
+                if (e.target.closest('a')) return;
+                if (window.getSelection && String(window.getSelection()).length) return;
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    var FS_MIN = 0.85, FS_MAX = 1.75, FS_STEP = 0.15, fontScale = 1;
+
+    function applyFontScale() {
+        document.documentElement.style.setProperty('--fs', String(fontScale));
+        var out = document.getElementById('fontScaleValue');
+        if (out) out.textContent = Math.round(fontScale * 100) + '%';
+        var dec = document.getElementById('fontSmaller'), inc = document.getElementById('fontBigger');
+        if (dec) dec.disabled = fontScale <= FS_MIN + 0.001;
+        if (inc) inc.disabled = fontScale >= FS_MAX - 0.001;
+    }
+
+    window.setFontScale = function (dir) {
+        fontScale = Math.min(FS_MAX, Math.max(FS_MIN, +(fontScale + dir * FS_STEP).toFixed(2)));
+        store('fs', String(fontScale));
+        applyFontScale();
+    };
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var savedFs = parseFloat(store('fs') || '1');
+        if (savedFs >= FS_MIN && savedFs <= FS_MAX) fontScale = savedFs;
+        applyFontScale();
+        if (readPos() > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+<script data-audio-cues="" type="application/json">{"01":[0.1,2,3.83,5.48,10.41,14.24,17.08,21.13,24.45,28.34,30.41,54.61,56.58,61.19,88.05,100.53,110.49,121.03,126.48,139.34,143.46,163.35,165.5,186.15,221.77,250.74,280.61,282.85,316.37,329.01,361.14,364.8,385.63,410.09,433.29,436.62,447.84,478.55,508.64,512.64,558.09,566.36,578.99,581.11,617.33,629.84,632.26,633.92,638.78,642.53,644.96,649.29,652.76,657.53,660.51,682.21,685.92,707.61,733.5,738.85,744.87,794.4,797.11,826.91,847.84,850.01,880.11,904.95,909.66,950.8,952.9,968.32,991.99,1013.71,1031.94,1034.74,1059.14,1062.55,1088.53,1092.03,1108.65,1113.67,1137.8,1141.13,1155.82,1159.6,1185.85,1209.79,1215.28,1217.12,1224.53,1227.99,1232.63,1236.39,1241.4,1245.87,1248.29,1251.2,1274.28,1278.34,1313.99,1318.88,1342.89,1347.47,1366.95,1374.9,1379.07,1401.19,1404.72,1423.76,1449.98,1470.26,1490.64,1495.14,1510.43,1518.41,1554.73,1559.39,1595.69,1623.33,1628.1,1648.2,1674.87,1693.89,1697.85,1727.07,1744.9,1762.65,1767.24,1779.77,1789.28,1811.38,1840.6,1843.05,1866.62,1889.78,1893.65,1917.26,1920.17,1936.97,1962.39,1974.21,1977.05,1978.7,1983.79,1987.15,1990.39,2003.68,2026.53,2036.43,2057.04,2102.26,2130.6,2153.7,2156.81,2158.61,2162.81,2166.12,2169.94,2173.9,2178.41,2181.09,2184.89,2187.5,2207.46,2210.47,2233.49,2238.65,2245.16,2277.7,2280.9,2312.36,2331.56,2335.42,2365.71,2396.4,2400.36,2426.47,2462.65,2467.15,2492.48,2522.15,2532.96,2557.83,2576.77,2579.42,2618.36,2622.13,2654.19,2656.79,2686.35,2707.13,2726.85,2729.1,2730.8,2735.48,2739.39,2742.7,2745.65,2756.43,2781.45,2784.18,2812.29,2837.85,2862.37,2866.3,2881.99,2885.42,2889,2915.89,2919.2,2925.04,2950.57,2953.56,2974.23,3005.24,3034.86,3038.74,3041.23,3047.5,3057.46,3081.65,3085.96,3104.04,3111.95,3129.92,3162.83,3166.38,3193.37,3198.39,3211.85,3237.22,3255.18,3284.44,3286.88,3295.04,3308.76,3333.66,3337.26,3380.7,3383.69,3414.04,3417.91,3451.55,3455.09,3486.85,3497.5,3510.68,3513.09,3514.79,3518.66,3521.81,3525.56,3529.69,3532.3,3547.26,3566.48,3569.59,3574.54,3602.44,3615.01,3644.28,3647.99,3658.04,3686.95,3690.82,3698.15,3724.34,3759.75,3763.92,3770.16,3776.49,3780.02,3786.6,3798.67,3811.69,3815.5,3817.2,3821.57,3824.94,3827.14,3829.5,3831.51,3851.32,3855.62,3861.43,3881.42,3903.96,3906.02,3917.3,3944.07,3957.75,3959.95,3996.86,3999.34,4046.37,4048.22,4074.74,4093.25,4096.02,4097.68,4102.08,4106.5,4111.22,4114.49,4131.17,4133.74,4175.72,4203.08,4242.7,4246.82,4257.19,4264.37,4286.97,4314.52,4355.58,4373.12,4377.13,4380.27,4385.18,4404.95,4424.05,4447.85,4451.54,4457.59,4487.89,4516.89,4521.58,4536.77,4558.27,4562.76,4605.31,4633.59,4645.34,4647.08,4662.8,4665.64,4676.56,4687.18,4694.25,4701.31,4709.54,4715.04,4718.43,4726.04,4733.13,4743.66,4754.38,4760.09,4770.89,4778.14,4786.95,4794.25,4798.13,4806.25,4814.74,4818.65,4828.6,4835.22,4840.75,4849.37,4854.65,4862.08,4868.78,4877.78,4887.2,4890.7,4898.87,4906.14,4913.53,4917.59,4925.14,4935.92,4939.52,4945.5,4952.23,4962.25,4968.92,4971.17,4976.9,4980.37,5001.38,5006.51,5014.76,5019.7,5042.06]}</script><script data-audio-player="">
+/* =============================================================================
+   audio-player.js — נגן ההקלטה (MP3 שהופק מראש ב-edge-tts)
+   הדבק מילה במילה. נפרד לגמרי מ-tts.js (ההקראה החיה של הדפדפן).
+   ============================================================================= */
+(function () {
+    var box = document.querySelector('.audio-player');
+    if (!box) return;
+
+    var audio  = box.querySelector('audio');
+    var select = box.querySelector('.audio-chapter-select');
+    if (!audio || !select) return;
+
+    var KEY = 'koltoda.audio.ch.' + (document.title || '');
+
+    /* מפת תזמונים: { "01": [0, 3.2, 9.7, ...] } — זמן תחילת כל פסקה בקטע.
+       נוצרת ב-make-audio.mjs מקובצי ה-SRT של edge-tts. */
+    var CUES = {};
+    var tag = document.querySelector('script[data-audio-cues]');
+    if (tag) { try { CUES = JSON.parse(tag.textContent || '{}'); } catch (e) {} }
+
+    var seg = null;      // מזהה הקטע הפעיל, למשל "01"
+    var line = -1;       // אינדקס הפסקה המודגשת
+
+    /* ---------- הדגשה ---------- */
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+        line = -1;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+
+        /* בספר מתחלף — מדפדפים לעמוד של הפסקה, כמו בהקראה החיה */
+        var pg = el.closest ? el.closest('.page') : null;
+        if (pg && !pg.classList.contains('active') && window.bookGo) {
+            var pages = [].slice.call(document.querySelectorAll('#book .page'));
+            var i = pages.indexOf(pg);
+            if (i > -1) { window.bookGo(i); return; }
+        }
+
+        /* גוללים רק אם הפסקה מחוץ למסך, כדי לא לחטוף את הדף מהקורא */
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    /* איזו פסקה נאמרת עכשיו — האחרונה שזמן ההתחלה שלה כבר עבר */
+    function lineAt(starts, t) {
+        var lo = 0, hi = starts.length - 1, ans = 0;
+        while (lo <= hi) {
+            var mid = (lo + hi) >> 1;
+            if (starts[mid] <= t) { ans = mid; lo = mid + 1; } else { hi = mid - 1; }
+        }
+        return ans;
+    }
+
+    audio.addEventListener('timeupdate', function () {
+        var starts = CUES[seg];
+        if (!starts || !starts.length) return;
+        var i = lineAt(starts, audio.currentTime);
+        if (i === line) return;
+        line = i;
+        var el = document.querySelector('[data-a="' + seg + '-' + i + '"]');
+        if (el) highlight(el);
+    });
+
+    /* ---------- קבצים שנבחרו מהמחשב ----------
+       דפדפן לא יכול לקרוא נתיב מקומי מעצמו (תיקיית ההורדות חסומה לו), אבל
+       קובץ שהמשתמש בוחר בעצמו מותר. ממפים לפי שם הקובץ, כך שאפשר לבחור את
+       כל פרקי הספר בבת אחת. ההדגשה עובדת גם ככה — התזמונים כבר בדף. */
+    var picked = {};
+    var note   = box.querySelector('.audio-note');
+    var input  = box.querySelector('.audio-pick-input');
+    var pickBtn = box.querySelector('.audio-pick-btn');
+
+    function say(msg) { if (note) note.textContent = msg || ''; }
+
+    /* קישור הורדה שלא מולא עדיין מוסתר מהקורא — אין טעם ב"לחץ כאן" מת.
+       הבדיקה היא על ה-href עצמו, כך שברגע שמדביקים כתובת הוא מופיע לבד. */
+    var dl = box.querySelector('.audio-download');
+    if (dl && (dl.getAttribute('href') || '#') === '#') dl.style.display = 'none';
+
+    function baseName(u) {
+        try { u = decodeURIComponent(u); } catch (e) {}
+        return u.split('/').pop();
+    }
+
+    function srcFor(opt) {
+        return picked[baseName(opt.value)] || opt.value;
+    }
+
+    if (pickBtn && input) {
+        pickBtn.addEventListener('click', function () { input.click(); });
+        input.addEventListener('change', function () {
+            var files = [].slice.call(input.files || []);
+            if (!files.length) return;
+            var names = {};
+            for (var i = 0; i < select.options.length; i++) names[baseName(select.options[i].value)] = true;
+
+            var matched = 0, spare = [];
+            files.forEach(function (f) {
+                if (names[f.name]) { picked[f.name] = URL.createObjectURL(f); matched++; }
+                else spare.push(f);
+            });
+            /* קובץ יחיד בשם אחר — מניחים שהוא של הפרק המוצג */
+            if (!matched && spare.length === 1) {
+                picked[baseName(select.options[select.selectedIndex].value)] = URL.createObjectURL(spare[0]);
+                matched = 1;
+            }
+            say(matched ? 'נטענו ' + matched + ' קבצים מהמחשב.' : 'שמות הקבצים לא תואמים לפרקים.');
+            if (matched) load(select.selectedIndex, true);
+        });
+    }
+
+    /* הקובץ לא נמצא בנתיב היחסי — מכוונים להורדה ולבחירה ידנית */
+    audio.addEventListener('error', function () {
+        if (!audio.getAttribute('src')) return;
+        say('קובץ השמע לא נמצא לצד הדף. הורד אותו ואז בחר אותו כאן.');
+    });
+
+    /* ---------- ניווט בין פרקים ---------- */
+    function load(i, autoplay) {
+        var opt = select.options[i];
+        if (!opt) return;
+        select.selectedIndex = i;
+        seg = opt.getAttribute('data-seg');
+        clearHighlight();
+        audio.src = srcFor(opt);
+        try { localStorage.setItem(KEY, String(i)); } catch (e) {}
+        if (autoplay) {
+            var p = audio.play();
+            /* דפדפן שחוסם ניגון אוטומטי זורק — לא נשאיר Promise תלוי */
+            if (p && p.catch) p.catch(function () {});
+        }
+    }
+
+    select.addEventListener('change', function () { load(select.selectedIndex, true); });
+
+    /* סיום פרק — מנקה הדגשה וממשיך לבא אחריו מעצמו, כמו בהקראה החיה.
+       (השהיה לעומת זאת משאירה את ההדגשה — היא מסמנת איפה עצרנו.) */
+    audio.addEventListener('ended', function () {
+        clearHighlight();
+        if (select.selectedIndex < select.options.length - 1) {
+            load(select.selectedIndex + 1, true);
+        } else {
+            try { localStorage.removeItem(KEY); } catch (e) {}
+        }
+    });
+
+    /* חוזרים לפרק שבו עצרנו — בלי לנגן מעצמו */
+    var saved = 0;
+    try { saved = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (e) {}
+    if (saved < 0 || saved >= select.options.length) saved = 0;
+    load(saved, false);
+})();
+
+</script></body>
+</html>
