@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ביכורים לראש השנה - הרב יהודה טאוב</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #1f2937; line-height: 1.8; padding: 40px 20px; }
+.container { max-width: 900px; margin: 0 auto; background: #fffefb; border-radius: 18px; padding: 60px 80px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+.main-title { font-size: 2.8em; font-weight: 800; text-align: center; background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 15px; line-height: 1.3; }
+.subtitle { text-align: center; font-size: 1.3em; color: #6b21a8; margin-bottom: 10px; }
+.author { text-align: center; font-size: 1.05em; color: #6b7280; margin-bottom: 40px; }
+h2 { font-size: 2.2em; color: #7e22ce; border-right: 6px solid #7e22ce; padding-right: 20px; margin-top: 50px; margin-bottom: 25px; }
+h2:first-of-type { margin-top: 20px; }
+h3 { font-size: 1.8em; color: #2563eb; margin-top: 35px; margin-bottom: 18px; }
+h4 { font-size: 1.5em; color: #059669; margin-top: 25px; margin-bottom: 15px; }
+p, li { font-size: 1.15em; line-height: 1.8; color: #1f2937; margin-bottom: 20px; }
+ul, ol { margin-right: 30px; margin-bottom: 20px; }
+strong { font-weight: 700; }
+em { color: #2563eb; font-style: italic; }
+.emphasis { color: #7e22ce; font-weight: 700; }
+.toc { background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%); border: 1px solid #e9d5ff; border-radius: 14px; padding: 25px 30px; margin-bottom: 40px; }
+.toc h3 { margin-top: 0; color: #7e22ce; font-size: 1.4em; }
+.toc ul { list-style: none; margin-right: 0; }
+.toc li { margin-bottom: 10px; font-size: 1.05em; }
+.toc a { color: #6b21a8; text-decoration: none; transition: color 0.2s; }
+.toc a:hover { color: #ec4899; text-decoration: underline; }
+.verse-box { background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%); border-right: 6px solid #7e22ce; border-radius: 12px; padding: 28px 30px; margin: 30px 0; font-size: 1.25em; text-align: center; font-style: italic; color: #4c1d95; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.highlight-box { background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-right: 6px solid #2563eb; border-radius: 12px; padding: 25px 30px; margin: 25px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.quote-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 6px solid #f59e0b; border-radius: 12px; padding: 25px 30px; margin: 25px 0; font-style: italic; color: #78350f; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.quote-box .source-tag { display: block; margin-top: 12px; font-style: normal; font-size: 0.9em; color: #92400e; font-weight: 600; }
+.story-box { background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%); border-right: 6px solid #059669; border-radius: 12px; padding: 28px 30px; margin: 25px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.qa-box { background: #fdf2f8; border: 2px dashed #ec4899; border-radius: 12px; padding: 25px 30px; margin: 25px 0; }
+.qa-box .q { color: #be185d; font-weight: 700; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+.section-divider { background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%); color: #fff; text-align: center; padding: 18px; border-radius: 12px; font-size: 1.3em; font-weight: 700; margin: 45px 0; box-shadow: 0 5px 15px rgba(126,34,206,0.15); }
+.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+.two-columns > div { border-radius: 12px; padding: 22px 24px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.col-purple { background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%); border-right: 6px solid #7e22ce; }
+.col-gold { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 6px solid #f59e0b; }
+.sources { background: #f3f4f6; border-radius: 14px; padding: 25px 30px; margin-top: 50px; }
+.sources h3 { margin-top: 0; color: #374151; }
+.sources ol { margin-right: 25px; }
+.sources li { font-size: 1em; color: #4b5563; margin-bottom: 8px; }
+.footer { margin-top: 60px; padding-top: 35px; border-top: 3px solid #e9d5ff; text-align: center; color: #4b5563; font-size: 1.05em; line-height: 2; }
+.footer h4 { color: #2563eb; margin-top: 0; }
+.footer a { color: #7e22ce; }
+.scroll-top { position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px; background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.3em; box-shadow: 0 4px 15px rgba(0,0,0,0.2); opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; z-index: 100; }
+.scroll-top.visible { opacity: 1; visibility: visible; }
+@media (max-width: 768px) {
+ body { padding: 15px 8px; } .container { padding: 30px 22px; border-radius: 12px; } .main-title { font-size: 2em; }
+ h2 { font-size: 1.5em; padding-right: 14px; } h3 { font-size: 1.3em; } h4 { font-size: 1.15em; } p, li { font-size: 1.05em; }
+ .two-columns { grid-template-columns: 1fr; } .scroll-top { left: 15px; bottom: 15px; width: 44px; height: 44px; }
+}
+@media print {
+ @page { size: A4 portrait; margin: 20mm 18mm; }
+ * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+ body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+ .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+ .scroll-top { display: none !important; }
+ h2 { page-break-before: always; break-before: page; }
+ h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+ h3, h4 { page-break-after: avoid; break-after: avoid; }
+ .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box { page-break-inside: avoid; break-inside: avoid; }
+ .toc { page-break-after: always; break-after: page; }
+ .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+ h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+ .footer { page-break-before: always; break-before: page; }
+ [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;top:12px;right:12px;z-index:9999;background:#5b21b6;color:#fff;padding:7px 14px;border-radius:20px;font:600 14px Heebo,Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)" class="kt-back">📚 לכל השיעורים</a><style>@media print{.kt-back{display:none!important}}</style>
+<div class="container">
+ <h1 class="main-title" id="top">ביכורים לראש השנה</h1>
+ <div class="subtitle">מדוע קוראים בפרשת הביכורים לפני ראש השנה, וכיצד יום הדין הופך את מתנת החיים לדבר הראוי לשמחה</div>
+ <div class="author">מאת: הרב יהודה טאוב</div>
+
+ <div class="toc">
+ <h3>📑 תוכן העניינים</h3>
+ <ul>
+ <li><a href="#section1">א. "הגדתי היום לה' אלוקיך" - הכרת הטוב שאינה כפויה</a></li>
+ <li><a href="#section2">ב. איך יום הדין הופך לחג</a></li>
+ <li><a href="#section3">ג. זיכרון ליום הראשון - התכלית שלשמה נברא האדם</a></li>
+ </ul>
+ </div>
+
+ <h2 id="section1">א. "הגדתי היום לה' אלוקיך" - הכרת הטוב שאינה כפויה</h2>
+
+ <p>מנהג ישראל לקרוא בקריאת התורה בסמוך לראש השנה את פרשת הביכורים (דברים כו). ובוודאי יש קשר בין מצוות ביכורים לבין ראש השנה. מצוות ביכורים מצווה שהאדם מביא מראשית פרי אדמתו לבית המקדש, ומציג את הפירות לפני הכהן, ואומר לו: "הִגַּדְתִּי הַיּוֹם לַה' אֱלֹקֶיךָ, כִּי בָאתִי אֶל הָאָרֶץ אֲשֶׁר נִשְׁבַּע ה' לַאֲבֹתֵינוּ לָתֶת לָנוּ".</p>
+
+ <div class="highlight-box">
+ <p style="margin-bottom:0">מפרש רש"י על "וְעָנִיתָ וְאָמַרְתָּ": "מִלָּמֵד שֶׁאֵינָךְ כְּפוּי טוֹבָה" - אדם המביא ביכורים לכהן ואומר את הפרשה כולה, בעצם אומר לכהן: אינני כפוי טובה. אני מודה לקדוש ברוך הוא שהביא אותי לארץ ישראל ונתן לי את הפירות.</p>
+ </div>
+
+ <p>ואז הוא מספר, בגוף פרשת הביכורים, איך הקדוש ברוך הוא עשה כל כך הרבה חסדים עם ישראל - מזמן יעקב אבינו, שלבן רצה להרוג אותו; אחר כך במצרים, שהמצרים רצו לשעבד את עם ישראל לעולם, והקדוש ברוך הוא עשה חסדים והוציא את עם ישראל ממצרים. כלומר, הוא מכיר את החסדים לא רק על הפירות שהוא מביא כרגע לבית המקדש, אלא על כל ההשתלשלות שקדמה לכך - כל הדברים שגרמו לו להיות מסוגל להיכנס בכלל לארץ ישראל, על כל החסדים של כל הדורות.</p>
+
+ <div class="verse-box">
+ "וְעַתָּה הִנֵּה הֵבֵאתִי אֶת רֵאשִׁית פְּרִי הָאֲדָמָה אֲשֶׁר נָתַתָּה לִּי ה'" — הוא אינו כפוי טובה לא רק על הפירות, אלא על כל מה שקרה לו בעבר, מדור אבותיו ועד היום הזה.
+ </div>
+
+ <p>וזהו-הוא, אם כן, עניינה של ראש השנה: כשם שמביא הביכורים מודה לא רק על התוצר האחרון, אלא על כל ההשתלשלות שהביאה אותו לכאן - כך גם בראש השנה עלינו להודות לא רק על מה שקרה השנה, אלא להכיר את כל ההשתלשלות של חסדי ה' שהביאה אותנו עד הלום.</p>
+
+ <h2 id="section2">ב. איך יום הדין הופך לחג</h2>
+
+ <div class="qa-box">
+ <div class="q">ראש השנה, מצד אחד, הוא חג - "כֶּסֶה לְיוֹם חַגֵּנוּ", יום שמחה. מצד שני, הוא יום הדין, שבו הקדוש ברוך הוא חותך חיים לכל חי, "מִי יִחְיֶה וּמִי יָמוּת". כיצד מתיישבים שני הדברים - שהוא גם יום המשפט וגם חג?</div>
+ <div class="a">אדם בדרך כלל אינו מעריך את מתנת החיים - היא מובנת לו מאליה, "ככה זה, זה בא ממילא". אך בראש השנה, כשדנים על בן האדם אם להמשיך ולתת לו חיים או לא, ממילא מגיע האדם להכרה שהחיים אינם דבר מובן מאליו, אלא דבר שצריך לבקש עבורו. וכך הוא מתחיל להעריך את החיים, את מתנת החיים - ואז הוא יכול לשמוח במתנת החיים. היום העיקרי שבו אדם יכול לשמוח בעצם החיים, הוא בדיוק היום שבו החיים נמצאים על כפות המאזניים.</div>
+ </div>
+
+ <div class="highlight-box">
+ <p style="margin-bottom:0">ואז, מתוך אותה הכרה, יכול האדם לומר לקדוש ברוך הוא שהוא לא כפוי טובה - שהוא מודה לו על האהבה, על כל מה שעשה עמו עד עכשיו, על כל ההשתלשלות, על כל הדרך שעבר מילדות ועד היום, ועל כל החסדים שהשם עשה איתו לאורך כל הדרך. הוא מעריך את החיים שהשם נתן לו, ומבקש מהשם שימשיך לתת לו - מתוך הכרה שחיים הם מתנה, ומי שמכיר שהחיים הם מתנה ואינו כפוי טובה, זוהי הזכות לבקש עוד שנה של חיים.</p>
+ </div>
+
+ <h2 id="section3">ג. זיכרון ליום הראשון - התכלית שלשמה נברא האדם</h2>
+
+ <p>ראש השנה הוא היום שבו ברא הקדוש ברוך הוא את האדם - "זֶה הַיּוֹם תְּחִלַּת מַעֲשֶׂיךָ, זִכָּרוֹן לְיוֹם רִאשׁוֹן". והקדוש ברוך הוא ברא את האדם במטרה שיכיר את חסדיו. וכיוון שראש השנה הוא זיכרון ליום הראשון, ליום שבו נברא האדם - והסיבה שהשם ברא אותו הייתה כדי שיודה לו - הרי שבראש השנה יש להתעורר ולהבין שוב: צריכים להודות להשם על החיים, שזוהי הסיבה שהשם ברא את האדם מלכתחילה.</p>
+
+ <div class="highlight-box">
+ <p style="margin-bottom:0">ואדם צריך לעמוד ולמלא את התפקיד הזה כראוי: להראות לקדוש ברוך הוא שהוא מבין את הסיבה שהוא נברא - שהוא נברא כדי להודות - ולהודות לה' על האהבה, על כל מה שעשה עמו עד עכשיו, מתוך הבנה שכל מה שהשם ייתן מכאן ואילך הוא ג"כ מתנה. כך מקיים האדם בראש השנה, שהוא זיכרון ליום הראשון, את עיקר התכלית שלשמה ברא אותו השם - להודות לו, לשבח אותו, ולא להיות כפוי טובה.</p>
+ </div>
+
+ <p>נמצא, אם כן, שקריאת פרשת הביכורים לפני ראש השנה אינה מקרית: כשם שמביא הביכורים עומד לפני הכהן ומכריז שאינו כפוי טובה על כל ההשתלשלות שהביאה אותו עד הפירות שבידיו, כך עומד כל יהודי בראש השנה - יום זיכרון ליום הראשון, יום בריאת האדם - ומכריז לפני בורא עולם שהוא מכיר בכל החסדים שליוו אותו מיום היוולדו ועד עתה, ומבקש שימשיך השם לתת לו את מתנת החיים לשנה נוספת, מתוך שמחה על עצם הזכות להיות חי ולהודות.</p>
+
+ <div class="sources">
+ <h3>📚 מקורות ומראי מקומות</h3>
+ <ol>
+ <li>דברים כ"ו, א-יא - פרשת הביכורים.</li>
+ <li>רש"י, דברים כ"ו, ה - "מלמד שאינך כפוי טובה".</li>
+ <li>תהלים פ"א, ד - "כסה ליום חגנו".</li>
+ <li>מוסף לראש השנה - "זה היום תחילת מעשיך, זכרון ליום ראשון".</li>
+ <li>ראש השנה, פרק א - בריאת אדם הראשון בראש השנה.</li>
+ </ol>
+ </div>
+
+ <div class="footer">
+ <strong>נכתב ונערך על ידי:</strong><br>
+ <strong>הרב יהודה טאוב</strong><br>
+ קרית אתא<br>
+ 📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+ <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+ <h4>🎧 שיעורים נוספים של הרב</h4>
+ <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+ <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+ <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+ </div>
+ </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+ link.addEventListener('click', function(e) {
+ e.preventDefault();
+ var target = document.querySelector(this.getAttribute('href'));
+ if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+ });
+});
+var scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function() {
+ if (window.scrollY > 400) { scrollTopBtn.classList.add('visible'); } else { scrollTopBtn.classList.remove('visible'); }
+});
+</script>
+</body>
+</html>
