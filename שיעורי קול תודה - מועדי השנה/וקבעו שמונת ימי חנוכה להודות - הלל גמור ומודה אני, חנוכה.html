@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>וקבעו שמונת ימי חנוכה להודות - חנוכה</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #1f2937; line-height: 1.8; padding: 40px 20px; }
+.container { max-width: 900px; margin: 0 auto; background: #fffefb; border-radius: 18px; padding: 60px 80px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+.main-title { font-size: 3em; font-weight: 800; text-align: center; background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 15px; line-height: 1.3; }
+.subtitle { text-align: center; font-size: 1.3em; color: #6b21a8; margin-bottom: 10px; }
+.author { text-align: center; font-size: 1.05em; color: #6b7280; margin-bottom: 40px; }
+h2 { font-size: 2.2em; color: #7e22ce; border-right: 6px solid #7e22ce; padding-right: 20px; margin-top: 50px; margin-bottom: 25px; }
+h2:first-of-type { margin-top: 20px; }
+h3 { font-size: 1.8em; color: #2563eb; margin-top: 35px; margin-bottom: 18px; }
+h4 { font-size: 1.5em; color: #059669; margin-top: 25px; margin-bottom: 15px; }
+p, li { font-size: 1.15em; line-height: 1.8; color: #1f2937; margin-bottom: 20px; }
+ul, ol { margin-right: 30px; margin-bottom: 20px; }
+strong { font-weight: 700; }
+em { color: #2563eb; font-style: italic; }
+.emphasis { color: #7e22ce; font-weight: 700; }
+.toc { background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%); border: 1px solid #e9d5ff; border-radius: 14px; padding: 25px 30px; margin-bottom: 40px; }
+.toc h3 { margin-top: 0; color: #7e22ce; font-size: 1.4em; }
+.toc ul { list-style: none; margin-right: 0; }
+.toc li { margin-bottom: 10px; font-size: 1.05em; }
+.toc a { color: #6b21a8; text-decoration: none; transition: color 0.2s; }
+.toc a:hover { color: #ec4899; text-decoration: underline; }
+.verse-box { background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%); border-right: 6px solid #7e22ce; border-radius: 12px; padding: 28px 30px; margin: 30px 0; font-size: 1.25em; text-align: center; font-style: italic; color: #4c1d95; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.highlight-box { background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-right: 6px solid #2563eb; border-radius: 12px; padding: 25px 30px; margin: 25px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.quote-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 6px solid #f59e0b; border-radius: 12px; padding: 25px 30px; margin: 25px 0; font-style: italic; color: #78350f; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.quote-box .source-tag { display: block; margin-top: 12px; font-style: normal; font-size: 0.9em; color: #92400e; font-weight: 600; }
+.story-box { background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%); border-right: 6px solid #059669; border-radius: 12px; padding: 28px 30px; margin: 25px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.qa-box { background: #fdf2f8; border: 2px dashed #ec4899; border-radius: 12px; padding: 25px 30px; margin: 25px 0; }
+.qa-box .q { color: #be185d; font-weight: 700; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+.section-divider { background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%); color: #fff; text-align: center; padding: 18px; border-radius: 12px; font-size: 1.3em; font-weight: 700; margin: 45px 0; box-shadow: 0 5px 15px rgba(126,34,206,0.15); }
+.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+.two-columns > div { border-radius: 12px; padding: 22px 24px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.col-purple { background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%); border-right: 6px solid #7e22ce; }
+.col-gold { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 6px solid #f59e0b; }
+.sources { background: #f3f4f6; border-radius: 14px; padding: 25px 30px; margin-top: 50px; }
+.sources h3 { margin-top: 0; color: #374151; }
+.sources ol { margin-right: 25px; }
+.sources li { font-size: 1em; color: #4b5563; margin-bottom: 8px; }
+.footer { margin-top: 60px; padding-top: 35px; border-top: 3px solid #e9d5ff; text-align: center; color: #4b5563; font-size: 1.05em; line-height: 2; }
+.footer h4 { color: #2563eb; margin-top: 0; }
+.footer a { color: #7e22ce; }
+.scroll-top { position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px; background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.3em; box-shadow: 0 4px 15px rgba(0,0,0,0.2); opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; z-index: 100; }
+.scroll-top.visible { opacity: 1; visibility: visible; }
+@media (max-width: 768px) { body { padding: 15px 8px; } .container { padding: 30px 22px; border-radius: 12px; } .main-title { font-size: 2em; } h2 { font-size: 1.5em; padding-right: 14px; } h3 { font-size: 1.3em; } h4 { font-size: 1.15em; } p, li { font-size: 1.05em; } .two-columns { grid-template-columns: 1fr; } .scroll-top { left: 15px; bottom: 15px; width: 44px; height: 44px; } }
+@media print { @page { size: A4 portrait; margin: 20mm 18mm; } * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } body { background: #fff !important; padding: 0 !important; font-size: 11pt; } .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; } .scroll-top { display: none !important; } h2 { page-break-before: always; break-before: page; } h2:first-of-type { page-break-before: avoid; break-before: avoid; } h3, h4 { page-break-after: avoid; break-after: avoid; } .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box { page-break-inside: avoid; break-inside: avoid; } .toc { page-break-after: always; break-after: page; } .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; } h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; } .footer { page-break-before: always; break-before: page; } [style*="display: flex"], [style*="display: grid"] { display: block !important; } }
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;top:12px;right:12px;z-index:9999;background:#5b21b6;color:#fff;padding:7px 14px;border-radius:20px;font:600 14px Heebo,Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)" class="kt-back">📚 לכל השיעורים</a><style>@media print{.kt-back{display:none!important}}</style>
+<div class="container">
+<h1 class="main-title" id="top">וקבעו שמונת ימי חנוכה להודות</h1>
+<div class="subtitle">הלל גמור בחנוכה, מזמור שיר חנוכת הבית, וסוד המילה "מודה"</div>
+<div class="author">מאת: הרב יהודה טאוב</div>
+<div class="toc">
+<h3>📋 תוכן העניינים</h3>
+<ul>
+<li><a href="#section1">א. הלל גמור בכל שמונת הימים</a></li>
+<li><a href="#section2">ב. מזמור שיר חנוכת הבית לדוד</a></li>
+<li><a href="#section3">ג. מודה אני - המילה הראשונה</a></li>
+</ul>
+</div>
+<h2 id="section1">הלל גמור בכל שמונת הימים</h2>
+<p>בנוסח "על הנסים" אנו אומרים "וְקָבְעוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵלּוּ לְהוֹדוֹת וּלְהַלֵּל". רואים בלשון חז"ל בתפילה זו את מהות הימים - מהות של הלל והודיה. ואכן תקנו חז"ל לומר הלל שלם, הלל גמור, בכל יום מימי חנוכה.</p>
+<div class="quote-box">
+"ויזהר בהלל של חנוכה, כי אפילו בחג המצות אין אומרים הלל גמור... וכאן אומרים הלל גמור בחנוכה שמונה ימים. על כן יאמר אותו בכוונה ובשמחה רבה."
+<span class="source-tag">בן איש חי, שנה ראשונה, סוף פרשת וישב, סעיף כ"ח</span>
+</div>
+<div class="highlight-box">
+<p>נקודה מעניינת: מלבד הדלקת נרות ואמירת הלל, לא קבעו לנו חז"ל בחנוכה שום מצווה נוספת - אין סעודה מיוחדת (הסעודות שעושים הן סעודות רשות, ואומרים בהן דברי תורה). כלומר, <span class="emphasis">עצם ההודיה וההלל היא המצווה המרכזית והיסודית</span> של הימים האלה, יותר מכל סעודה.</p>
+</div>
+<h2 id="section2">מזמור שיר חנוכת הבית לדוד</h2>
+<p>נהוג לומר לאחר הדלקת הנרות ואחרי שיר של יום את "מִזְמוֹר שִׁיר חֲנֻכַּת הַבַּיִת לְדָוִד". דוד המלך אמר את המזמור הזה ברוח קודשו על חנוכת בית המקדש, אף שהוא עצמו לא בנה אותו אלא רק הכין את הדרוש לבניינו.</p>
+<div class="verse-box">
+"ה' אֱלֹקַי שִׁוַּעְתִּי אֵלֶיךָ וַתִּרְפָּאֵנִי... זַמְּרוּ לַה' חֲסִידָיו וְהוֹדוּ לְזֵכֶר קָדְשׁוֹ"
+<span class="source-tag">תהילים ל'</span>
+</div>
+<p>לכאורה היה מקום לחשוב שזה מזמור רק על חנוכת הבית עצמו, אבל דוד מודה שם על הרבה דברים אחרים שקרו לו בחייו - מודה על הכל. וכך בפרט בימים האלה, ימי הלל והודיה, כשמתכנסים ועושים איזו התכנסות, זה המקום והזמן להודות לקדוש ברוך הוא על כל הטובות שעושה איתנו, באופן כללי ובאופן פרטי.</p>
+<h2 id="section3">מודה אני - המילה הראשונה</h2>
+<p>הרב פינקוס בספרו "נפש שמשון" מדגיש את המילה הראשונה שיהודי אומר עם פקיחת עיניו: "מוֹדֶה אֲנִי". חז"ל לא תיקנו לומר "אֲנִי מוֹדֶה", שהמילה הראשונה תהיה "אני" - כדרך הטבע שאדם קודם כל בודק את עצמו.</p>
+<div class="two-columns">
+<div class="col-purple">
+<h4>מודה - קודם כל</h4>
+<p>אלא "מוֹדֶה" באה ראשונה - להיות איש הודיה, להרגיש שכולו מודה להשם יתברך. וכפי שאמר הרבי אלימלך מליזענסק, במילה "מודה" נכנס האדם ל"עולם התהילה", שם אין שום קטרוגים.</p>
+</div>
+<div class="col-gold">
+<h4>נשמה יהודית</h4>
+<p>המקובלים כתבו שהשם שומר את נשמת האדם בעת השינה. לכן אומרים "שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי" - נשמתי דווקא, ולא נשמה סתם, כי בכל לילה עלולה הנשמה שלא לחזור אותה נשמה עצמה.</p>
+</div>
+</div>
+<p>מובא בשם הגר"ש אוירבך זצ"ל שנשים יוצאות ידי חובת שבח ובקשה והודיה שבתפילה (שלפי הרמב"ם עיקר סדר התפילה) באמירת "מודה אני" בבוקר, ואחר כך מוסיפות פסוק בקשה. כך גם מובא מהמשגיח שאי אפשר סתם לגשת אל המלך, אלא "לעולם יסדר אדם שבחו של מקום ואחר כך יתפלל" - צורת הדברים בונה את הקשר: תחילה שבח, אחר כך בקשה, ולבסוף שוב הודיה.</p>
+<div class="section-divider">
+✨ מהמילה הראשונה "מודה" נבנה הקשר עם מלך מלכי המלכים ✨
+</div>
+<div class="sources">
+<h3>📚 מקורות ומראי מקומות</h3>
+<ol>
+<li>נוסח "על הנסים" - "וקבעו שמונת ימי חנוכה אלו להודות ולהלל"</li>
+<li>בן איש חי, שנה ראשונה, סוף פרשת וישב, סעיף כ"ח</li>
+<li>תהילים ל' - "מזמור שיר חנוכת הבית לדוד"</li>
+<li>הרב שמשון פינקוס, "נפש שמשון"</li>
+<li>הרבי אלימלך מליז'ענסק - עולם התהילה</li>
+<li>ספר "יוסף תודה" - שמירת הנשמה בשינה</li>
+<li>הרמב"ם - סדר התפילה: שבח, בקשה, הודיה</li>
+</ol>
+</div>
+<div class="footer">
+<h4>קול תודה - שיעורי הרב יהודה טאוב</h4>
+<p>הרב יהודה טאוב, קרית אתא | 0527139520</p>
+<p>קול הלשון - קול תודה: 03-6171190</p>
+<p><a href="https://www.kol-toda.co.il">kol-toda.co.il</a></p>
+</div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+});
+var scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) { scrollTopBtn.classList.add('visible'); } else { scrollTopBtn.classList.remove('visible'); }
+});
+</script>
+</body>
+</html>
