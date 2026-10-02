@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>לצום בשמחה - הרב יהודה טאוב</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #1f2937; line-height: 1.8; padding: 40px 20px; }
+.container { max-width: 900px; margin: 0 auto; background: #fffefb; border-radius: 18px; padding: 60px 80px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+.main-title { font-size: 2.8em; font-weight: 800; text-align: center; background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 15px; line-height: 1.3; }
+.subtitle { text-align: center; font-size: 1.3em; color: #6b21a8; margin-bottom: 10px; }
+.author { text-align: center; font-size: 1.05em; color: #6b7280; margin-bottom: 40px; }
+h2 { font-size: 2.2em; color: #7e22ce; border-right: 6px solid #7e22ce; padding-right: 20px; margin-top: 50px; margin-bottom: 25px; }
+h2:first-of-type { margin-top: 20px; }
+h3 { font-size: 1.8em; color: #2563eb; margin-top: 35px; margin-bottom: 18px; }
+h4 { font-size: 1.5em; color: #059669; margin-top: 25px; margin-bottom: 15px; }
+p, li { font-size: 1.15em; line-height: 1.8; color: #1f2937; margin-bottom: 20px; }
+ul, ol { margin-right: 30px; margin-bottom: 20px; }
+strong { font-weight: 700; }
+em { color: #2563eb; font-style: italic; }
+.emphasis { color: #7e22ce; font-weight: 700; }
+.toc { background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%); border: 1px solid #e9d5ff; border-radius: 14px; padding: 25px 30px; margin-bottom: 40px; }
+.toc h3 { margin-top: 0; color: #7e22ce; font-size: 1.4em; }
+.toc ul { list-style: none; margin-right: 0; }
+.toc li { margin-bottom: 10px; font-size: 1.05em; }
+.toc a { color: #6b21a8; text-decoration: none; transition: color 0.2s; }
+.toc a:hover { color: #ec4899; text-decoration: underline; }
+.verse-box { background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%); border-right: 6px solid #7e22ce; border-radius: 12px; padding: 28px 30px; margin: 30px 0; font-size: 1.25em; text-align: center; font-style: italic; color: #4c1d95; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.highlight-box { background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-right: 6px solid #2563eb; border-radius: 12px; padding: 25px 30px; margin: 25px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.quote-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 6px solid #f59e0b; border-radius: 12px; padding: 25px 30px; margin: 25px 0; font-style: italic; color: #78350f; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.quote-box .source-tag { display: block; margin-top: 12px; font-style: normal; font-size: 0.9em; color: #92400e; font-weight: 600; }
+.story-box { background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%); border-right: 6px solid #059669; border-radius: 12px; padding: 28px 30px; margin: 25px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.qa-box { background: #fdf2f8; border: 2px dashed #ec4899; border-radius: 12px; padding: 25px 30px; margin: 25px 0; }
+.qa-box .q { color: #be185d; font-weight: 700; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+.section-divider { background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%); color: #fff; text-align: center; padding: 18px; border-radius: 12px; font-size: 1.3em; font-weight: 700; margin: 45px 0; box-shadow: 0 5px 15px rgba(126,34,206,0.15); }
+.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+.two-columns > div { border-radius: 12px; padding: 22px 24px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.col-purple { background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%); border-right: 6px solid #7e22ce; }
+.col-gold { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 6px solid #f59e0b; }
+.sources { background: #f3f4f6; border-radius: 14px; padding: 25px 30px; margin-top: 50px; }
+.sources h3 { margin-top: 0; color: #374151; }
+.sources ol { margin-right: 25px; }
+.sources li { font-size: 1em; color: #4b5563; margin-bottom: 8px; }
+.footer { margin-top: 60px; padding-top: 35px; border-top: 3px solid #e9d5ff; text-align: center; color: #4b5563; font-size: 1.05em; line-height: 2; }
+.footer h4 { color: #2563eb; margin-top: 0; }
+.footer a { color: #7e22ce; }
+.scroll-top { position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px; background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.3em; box-shadow: 0 4px 15px rgba(0,0,0,0.2); opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; z-index: 100; }
+.scroll-top.visible { opacity: 1; visibility: visible; }
+@media (max-width: 768px) {
+    body { padding: 15px 8px; } .container { padding: 30px 22px; border-radius: 12px; } .main-title { font-size: 2em; }
+    h2 { font-size: 1.5em; padding-right: 14px; } h3 { font-size: 1.3em; } h4 { font-size: 1.15em; } p, li { font-size: 1.05em; }
+    .two-columns { grid-template-columns: 1fr; } .scroll-top { left: 15px; bottom: 15px; width: 44px; height: 44px; }
+}
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+    .scroll-top { display: none !important; }
+    h2 { page-break-before: always; break-before: page; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box { page-break-inside: avoid; break-inside: avoid; }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 22pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+    h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+    .footer { page-break-before: always; break-before: page; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;top:12px;right:12px;z-index:9999;background:#5b21b6;color:#fff;padding:7px 14px;border-radius:20px;font:600 14px Heebo,Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)" class="kt-back">📚 לכל השיעורים</a><style>@media print{.kt-back{display:none!important}}</style>
+<div class="container">
+  <h1 class="main-title" id="top">לצום בשמחה</h1>
+  <div class="subtitle">מאמר עצום מבעל "יסוד ושורש העבודה" - כיצד הכוונה בעת הצום הופכת אותו לזכות פי מיליון</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+  <div class="toc">
+    <h3>📑 תוכן העניינים</h3>
+    <ul>
+      <li><a href="#section1">א. עינוי כמצוות עשה, לא כעונש</a></li>
+      <li><a href="#section2">ב. "אַשְׁרֵיכֶם יִשְׂרָאֵל" - הדבקות שמסלקת את החטא</a></li>
+      <li><a href="#section3">ג. יום הכיפורים - "יוֹם חֲתֻנָּתוֹ"</a></li>
+      <li><a href="#section4">ד. הכוונה שמכפילה את השכר פי מיליון</a></li>
+      <li><a href="#section5">ה. "אשריך שאתה מתקן את עולמו של הקדוש ברוך הוא"</a></li>
+    </ul>
+  </div>
+
+  <h2 id="section1">א. עינוי כמצוות עשה, לא כעונש</h2>
+  <p>אנו עומדים ממש בסמוך ליום העצום והנפלא, יום הכיפורים. ורוצים לקרוא מאמר עצום שכתב בעל "יסוד ושורש העבודה", שרבים אמרו שהמאמר הזה נתן להם הסתכלות אחרת על הצום, נתן להם הרבה כוח לצום - זה "הצום קל" שלו, התרופה הנפלאה לצום קל. וכותב בעל יסוד ושורש העבודה שמי שיחיה את הכוונה הזאת, הצום שלו יהיה שווה פי מיליון.</p>
+  <div class="quote-box">
+    "הֵן יָדַעְתָּ שֶׁעִנּוּי זֶה מֵאֲכִילָה וּשְׁתִיָּה הֵם מִצְוַת עֲשֵׂה וְלֹא תַעֲשֶׂה, כִּי כָּתוּב בַּתּוֹרָה 'תְּעַנּוּ אֶת נַפְשֹׁתֵיכֶם' וְ'כָל הַנֶּפֶשׁ אֲשֶׁר לֹא תְעֻנֶּה'. וּפָשׁוּט הוּא שֶׁמִּצְוַת עֲשֵׂה שֶׁל הָעִנּוּיִים הָאֵלֶּה צִוָּה יוֹצְרֵנוּ וּבוֹרְאֵנוּ יִתְבָּרֵךְ שְׁמוֹ עָלֵינוּ בְּחַסְדּוֹ וְרַחֲמָיו הַגְּדוֹלִים, שֶׁעַל יְדֵי עִנּוּיִים אֵלּוּ יְרַחֵם עָלֵינוּ וִיכַפֵּר לָנוּ אֶת חַטָּאתֵנוּ".
+    <span class="source-tag">יסוד ושורש העבודה, שער העינוי</span>
+  </div>
+  <p>מטרת העינוי אינה כדי שנסבול חלילה, אלא כדי לכפר על חטאינו - כמו שכתוב בתורה: "וְהָיְתָה לָכֶם לְחֻקַּת עוֹלָם, בַּחֹדֶשׁ הַשְּׁבִיעִי בֶּעָשׂוֹר לַחֹדֶשׁ תְּעַנּוּ אֶת נַפְשֹׁתֵיכֶם... כִּי בַיּוֹם הַזֶּה יְכַפֵּר עֲלֵיכֶם לְטַהֵר אֶתְכֶם, מִכֹּל חַטֹּאתֵיכֶם לִפְנֵי ה' תִּטְהָרוּ" - הרי מפורש שכפרת עוונות ביום הזה היא בשביל העינוי.</p>
+
+  <h2 id="section2">ב. "אַשְׁרֵיכֶם יִשְׂרָאֵל" - הדבקות שמסלקת את החטא</h2>
+  <p>מדוע על ידי העינוי מתכפרים העוונות? מביא מאמר נפלא של המהר"ל בדרשה לשבת תשובה. רבי עקיבא אומר, במשנה האחרונה של מסכת יומא (כדאי מאוד לשיר את זה לפני יום כיפור): "אַשְׁרֵיכֶם יִשְׂרָאֵל, לִפְנֵי מִי אַתֶּם מִטַּהֲרִים, וּמִי מְטַהֵר אֶתְכֶם - אֲבִיכֶם שֶׁבַּשָּׁמַיִם".</p>
+  <div class="highlight-box">
+    <p style="margin-bottom: 0;">מסביר המהר"ל: מה שישראל מטהרים ביום הכיפורים - הוא בשביל שיש לישראל דבקות בו יתעלה, כדכתיב "וְאַתֶּם הַדְּבֵקִים בַּה' אֱלֹקֵיכֶם". ועל זה אמר "אַשְׁרֵיכֶם יִשְׂרָאֵל, לִפְנֵי מִי אַתֶּם מִטַּהֲרִים" - כי אין מעלה יותר מזה; "וּמִי מְטַהֵר אֶתְכֶם - אֲבִיכֶם שֶׁבַּשָּׁמַיִם" - שבשביל שישראל דבקים לגמרי בו, לו דבר זה עצמו הוא הסרת החטא מישראל. מאחר שהוא יתעלה, לא שייך אצלו חטא - מסלק החטא מן הדבקים בו.</p>
+  </div>
+  <p>כלומר, כאשר אנו דבקים בבורא, אנו נהיים כביכול כמו הבורא עולם - וכמו שבבורא עולם אין חטא, כך גם אנו מסתלקים מהחטא, כי אנו דבקים בו. ולכך ביום הכיפורים - "מִפְּנֵי עִנּוּי נֶפֶשׁ וְהִסְתַּלְּקוּת הַגַּשְׁמִיּוּת מִיִּשְׂרָאֵל" - יש לישראל דבקות בו יתעלה, ודבר זה מסלק את החטא. איך מקווה מטהר? מבאר המהר"ל: המקווה מטהר את הטמא כאשר הוא נדבק בו לגמרי, בלי שום חציצה - שאין בו טומאה כלל, כמו שכתוב "אַךְ מַעְיָן וּבוֹר מִקְוֵה מַיִם יִהְיֶה טָהוֹר". כך גם הקדוש ברוך הוא מטהר את ישראל, כיוון שהם דבקים בו יתעלה לגמרי, ללא שום חציצה.</p>
+
+  <h2 id="section3">ג. יום הכיפורים - "יוֹם חֲתֻנָּתוֹ"</h2>
+  <div class="highlight-box">
+    <p style="margin-bottom: 0;">לפי זה מובנת המשנה בסוף מסכת תענית: "לֹא הָיוּ יָמִים טוֹבִים לְיִשְׂרָאֵל כַּחֲמִשָּׁה עָשָׂר בְּאָב וּכְיוֹם הַכִּפּוּרִים... שֶׁנֶּאֱמַר 'צְאֶינָה וּרְאֶינָה בְּנוֹת צִיּוֹן בַּמֶּלֶךְ שְׁלֹמֹה, בָּעֲטָרָה שֶׁעִטְּרָה לּוֹ אִמּוֹ בְּיוֹם חֲתֻנָּתוֹ וּבְיוֹם שִׂמְחַת לִבּוֹ'". יום כיפור נקרא "יום חתונתו". למה חתונה? כי ביום זה עם ישראל מתדבקים בבורא עולם, כביכול מתחתנים עם בורא עולם - כפי שהסביר המהר"ל, שעל ידי זה מסתלק החטא.</p>
+  </div>
+  <p>ולכן מיד לאחר יום כיפור אנו הולכים לבנות סוכה - כמו שאחרי החתונה נהוגים שבע ברכות, כך אחרי החתונה ביום הכיפורים הולכים לעשות שבע ברכות, שבעה ימים של שמחה והודיה לבורא עולם שזיכה אותנו להתחתן עם מלך מלכי המלכים.</p>
+
+  <h2 id="section4">ד. הכוונה שמכפילה את השכר פי מיליון</h2>
+  <p>מוסיף בעל יסוד ושורש העבודה: "וְאָחִי וְרֵעַי, הִתְבּוֹנֵן כָּל אָדָם בְּשִׂכְלוֹ שֶׁמֵּהָרָאוּי וְטוֹב לוֹ לִשְׂמוֹחַ שִׂמְחָה עֲצוּמָה מְאֹד בְּכָל רֶגַע שֶׁסּוֹבֵל צַעַר עִנּוּי אֲכִילָה וּשְׁתִיָּה, עַל קִיּוּם מִצְוַת עֲשֵׂה מִן הַתּוֹרָה שֶׁמְּקַיֵּם". איך לא ישמח, בכל רגע של עינוי, על קיום מצוות הבורא? הוא כותב: מעת שאדם נעשה חלש מהעינוי, יכניס שמחה עצומה בליבו על קיום מצוות עשה - ובכל שעה שיתגדל העינוי, תתגדל ותתעצם השמחה בליבו: "הוֹדוּ לַה' כִּי טוֹב, הֲרֵי עַכְשָׁו אֲנִי זוֹכֶה לְקַיֵּם מִצְוַת עֲשֵׂה מִן הַתּוֹרָה".</p>
+  <div class="story-box">
+    <p style="margin-bottom:0;">משל בן חביב: התקוע בליבו גודל אהבתו של אביו, בכל עת שהוא עושה משהו שגורם קורת רוח לאביו, הוא שמח וטוב לב מאוד על גודל הנחת שהוא עושה לאביו. וככל שמתקרב להשלמת השימוש - הוא מצטער בליבו, כי קרוב הוא להימנע מלעשות עוד קורת רוח לאביו. כך בן למקום ברוך הוא: כל ירא ה' חפץ מאוד בתשוקה עצומה, ומצטער בליבו כל עוד שמתקרב הזמן שבו יעבור, ולא יוכל עוד לעשות נחת רוח לפני ה' יתברך.</p>
+  </div>
+  <div class="quote-box">
+    "אַתֶּם שׁוֹמְעִים מַה זֶּה? בְּכַוָּנָה הַזֹּאת אַתָּה זוֹכֶה לְהַרְוִיחַ פִּי מִלְיוֹן, עַל יְדֵי שֶׁאַתָּה חוֹשֵׁב 'הוֹדוּ לַה' כִּי טוֹב' שֶׁאֲנִי זוֹכֶה עוֹד דַּקָּה וְעוֹד דַּקָּה לַעֲשׂוֹת רְצוֹן בּוֹרְאִי".
+    <span class="source-tag">יסוד ושורש העבודה</span>
+  </div>
+  <p>וממשיך: "וַדָּאִי שֶׁמִּי שֶׁעוֹשֶׂה כָּכָה יִזְכֶּה לִשְׂכַר פִּי מִלְיוֹן מֵאֲשֶׁר מִי שֶׁצָּם צוֹם רָגִיל". גם מי שלא חושב על זה כלל, סובל את הצום ומצפה שיעבור מהר - שכרו נמוך בהרבה ממי ששמח בכל רגע ורגע של העינוי, מתוך הכרה שהוא מקיים מצוות עשה מן התורה.</p>
+
+  <h2 id="section5">ה. "אשריך שאתה מתקן את עולמו של הקדוש ברוך הוא"</h2>
+  <div class="story-box">
+    <p>סיפור נפלא, המופיע בספר "צדיק יסוד עולם" על רבי אריה לוין. הצדיק היה מבקש לתאר את ליבו לפני בוראו. סיפר יהודה ארוש, מנקה רחובות בשכונת "משכנות" בירושלים: בוקר אחד ניגש אליי רבי אריה, ואמר: "אתה יודע, טוב אתה ממני. אשריך וטוב לך, מקנא אני בך". השבתי: "מה אתה שח, כבוד הרב? אתה חכם וצדיק, עוסק כל היום בתורה ומצוות, ואילו אני אדם פשוט, מנקה רחובות". השיב לי רבי אריה: "אינך יודע את מעלתך. סמוך עליי, אני מבטיחך נאמנה - טוב אתה ממני. אתה מתקן את העולם, מנקה את חוצותיה של ירושלים במו ידיך, עושה את עולמו של הקדוש ברוך הוא טוב יותר, נקי יותר. מקנא אני בך".</p>
+    <p style="margin-bottom:0;">כשפנה רבי אריה ללכת, ואני נותרתי לבדי עם המטאטא ומגלת הזבל - נעשה לי לפתע טוב על הלב. הרגשתי כמו בן מלך, בפעם הראשונה בחיי.</p>
+  </div>
+  <div class="story-box">
+    <p style="margin-bottom:0;">המשך נפלא לסיפור זה: יום אחד קיבל שמחה רז מכתב מאדם מראשון לציון, שסיפר על עצמו: בילדותו היה לו קשה בלימודים, וכאשר גדל והלך ללמוד בבית ספר חקלאי, נכשל בלימודיו, ובעקבות כך עזב אותם, והפך לעובד הניקיון של בית הספר. זה גרם לו להרגיש עצמו ככישלון, כמי שאינו שווה שום דבר. יום אחד הגיע לידו הספר "צדיק יסוד עולם" על רבי אריה לוין, וקרא את הסיפור שבו הצדיק אומר לעובד הניקיון שהוא טוב ממנו, שמעשיו חשובים ועקריים עד מאוד, שהוא מתקן את עולמו של הקדוש ברוך הוא. אז הרגיש מהפך בכל חייו: "אינני כישלון שלא שווה שום דבר - הרי מה שאני עושה הוא דבר גדול ונפלא, תיקון העולם, וזה חשוב ויקר מאוד בעיני ה' יתברך". התמלא שמחה, חייו התמלאו משמעות. עד שהחליט להתנדב, בנוסף לעבודתו הרגילה, כעובד ניקיון בישיבה - להוסיף ולתקן את העולם.</p>
+  </div>
+  <div class="highlight-box">
+    <p style="margin-bottom: 0;">וזה הלימוד ליום הכיפורים: אנחנו בן ובת המלך. הקדוש ברוך הוא שוכן בליבנו פנימה, ככתוב "לְשָׁכְנִי בְּתוֹכָם". בורא עולם מאוד מצטער שאנחנו מלוכלכים בעוונות - זה קשה לו מאוד, העוונות מרחיקים אותנו ממנו, ובורא עולם רוצה "לשכני בתוכם", וזה מאוד לא נעים לו לשכון איתנו בתוך טומאתנו. יש לנו הזדמנות היום שמגיע היום הנפלא הזה - לנקות את עולמו של בורא עולם. בואו נלך בשמחה ליום הכיפורים, לנקות את עולמו של מלך מלכי המלכים.</p>
+  </div>
+
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות</h3>
+    <ol>
+      <li>יסוד ושורש העבודה, שער העינוי, פרק י'.</li>
+      <li>ויקרא ט"ז, כט-ל.</li>
+      <li>מהר"ל, דרשה לשבת תשובה; מסכת יומא, פ"ה ע"ב - "אשריכם ישראל".</li>
+      <li>דברים י', כ - "וְאַתֶּם הַדְּבֵקִים בַּה' אֱלֹקֵיכֶם".</li>
+      <li>ויקרא י"א, לו - "אַךְ מַעְיָן וּבוֹר מִקְוֵה מַיִם יִהְיֶה טָהוֹר".</li>
+      <li>מסכת תענית, סוף פרק ד'; שיר השירים ג', יא.</li>
+      <li>ספר "לעובדך באמת" לרב דוב יפה, בשם הרב יחזקאל לוינשטיין.</li>
+      <li>ספר "צדיק יסוד עולם" - סיפור רבי אריה לוין ויהודה ארוש.</li>
+      <li>שמות כ"ט, מו - "לְשָׁכְנִי בְּתוֹכָם".</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+  </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+});
+var scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) { scrollTopBtn.classList.add('visible'); } else { scrollTopBtn.classList.remove('visible'); }
+});
+</script>
+</body>
+</html>
