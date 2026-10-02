@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>יום טוב של הודיה - סוד קבעום ועשאום בהלל ובהודיה</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #1f2937; line-height: 1.8; padding: 40px 20px; }
+.container { max-width: 900px; margin: 0 auto; background: #fffefb; border-radius: 18px; padding: 60px 80px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+.main-title { font-size: 3em; font-weight: 800; text-align: center; background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 15px; line-height: 1.3; }
+.subtitle { text-align: center; font-size: 1.3em; color: #6b21a8; margin-bottom: 10px; }
+.author { text-align: center; font-size: 1.05em; color: #6b7280; margin-bottom: 40px; }
+h2 { font-size: 2.2em; color: #7e22ce; border-right: 6px solid #7e22ce; padding-right: 20px; margin-top: 50px; margin-bottom: 25px; }
+h2:first-of-type { margin-top: 20px; }
+h3 { font-size: 1.8em; color: #2563eb; margin-top: 35px; margin-bottom: 18px; }
+h4 { font-size: 1.5em; color: #059669; margin-top: 25px; margin-bottom: 15px; }
+p, li { font-size: 1.15em; line-height: 1.8; color: #1f2937; margin-bottom: 20px; }
+ul, ol { margin-right: 30px; margin-bottom: 20px; }
+strong { font-weight: 700; }
+em { color: #2563eb; font-style: italic; }
+.emphasis { color: #7e22ce; font-weight: 700; }
+.toc { background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%); border: 1px solid #e9d5ff; border-radius: 14px; padding: 25px 30px; margin-bottom: 40px; }
+.toc h3 { margin-top: 0; color: #7e22ce; font-size: 1.4em; }
+.toc ul { list-style: none; margin-right: 0; }
+.toc li { margin-bottom: 10px; font-size: 1.05em; }
+.toc a { color: #6b21a8; text-decoration: none; transition: color 0.2s; }
+.toc a:hover { color: #ec4899; text-decoration: underline; }
+.verse-box { background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%); border-right: 6px solid #7e22ce; border-radius: 12px; padding: 28px 30px; margin: 30px 0; font-size: 1.25em; text-align: center; font-style: italic; color: #4c1d95; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.highlight-box { background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-right: 6px solid #2563eb; border-radius: 12px; padding: 25px 30px; margin: 25px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.quote-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 6px solid #f59e0b; border-radius: 12px; padding: 25px 30px; margin: 25px 0; font-style: italic; color: #78350f; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.quote-box .source-tag { display: block; margin-top: 12px; font-style: normal; font-size: 0.9em; color: #92400e; font-weight: 600; }
+.story-box { background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%); border-right: 6px solid #059669; border-radius: 12px; padding: 28px 30px; margin: 25px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.qa-box { background: #fdf2f8; border: 2px dashed #ec4899; border-radius: 12px; padding: 25px 30px; margin: 25px 0; }
+.qa-box .q { color: #be185d; font-weight: 700; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+.section-divider { background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%); color: #fff; text-align: center; padding: 18px; border-radius: 12px; font-size: 1.3em; font-weight: 700; margin: 45px 0; box-shadow: 0 5px 15px rgba(126,34,206,0.15); }
+.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+.two-columns > div { border-radius: 12px; padding: 22px 24px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.col-purple { background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%); border-right: 6px solid #7e22ce; }
+.col-gold { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 6px solid #f59e0b; }
+.sources { background: #f3f4f6; border-radius: 14px; padding: 25px 30px; margin-top: 50px; }
+.sources h3 { margin-top: 0; color: #374151; }
+.sources ol { margin-right: 25px; }
+.sources li { font-size: 1em; color: #4b5563; margin-bottom: 8px; }
+.footer { margin-top: 60px; padding-top: 35px; border-top: 3px solid #e9d5ff; text-align: center; color: #4b5563; font-size: 1.05em; line-height: 2; }
+.footer h4 { color: #2563eb; margin-top: 0; }
+.footer a { color: #7e22ce; }
+.scroll-top { position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px; background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.3em; box-shadow: 0 4px 15px rgba(0,0,0,0.2); opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; z-index: 100; }
+.scroll-top.visible { opacity: 1; visibility: visible; }
+@media (max-width: 768px) { body { padding: 15px 8px; } .container { padding: 30px 22px; border-radius: 12px; } .main-title { font-size: 2em; } h2 { font-size: 1.5em; padding-right: 14px; } h3 { font-size: 1.3em; } h4 { font-size: 1.15em; } p, li { font-size: 1.05em; } .two-columns { grid-template-columns: 1fr; } .scroll-top { left: 15px; bottom: 15px; width: 44px; height: 44px; } }
+@media print { @page { size: A4 portrait; margin: 20mm 18mm; } * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } body { background: #fff !important; padding: 0 !important; font-size: 11pt; } .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; } .scroll-top { display: none !important; } h2 { page-break-before: always; break-before: page; } h2:first-of-type { page-break-before: avoid; break-before: avoid; } h3, h4 { page-break-after: avoid; break-after: avoid; } .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box { page-break-inside: avoid; break-inside: avoid; } .toc { page-break-after: always; break-after: page; } .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; } h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; } .footer { page-break-before: always; break-before: page; } [style*="display: flex"], [style*="display: grid"] { display: block !important; } }
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;top:12px;right:12px;z-index:9999;background:#5b21b6;color:#fff;padding:7px 14px;border-radius:20px;font:600 14px Heebo,Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)" class="kt-back">📚 לכל השיעורים</a><style>@media print{.kt-back{display:none!important}}</style>
+<div class="container">
+<h1 class="main-title" id="top">יום טוב של הודיה</h1>
+<div class="subtitle">סוד "קבעום ועשאום ימים טובים בהלל ובהודיה"</div>
+<div class="author">מאת: הרב יהודה טאוב</div>
+
+<div class="highlight-box">
+<p><strong>הערת עריכה:</strong> ספר זה מאחד שלושה שיעורים - "חודש טבת: טוב להודות להשם", "יום טוב של הודיה", ו"יום טוב של חנוכה" - השלושה סובבים סביב אותה דרשה בדיוק של השפת אמת על דיוק לשון הגמרא "קבעום ועשאום ימים טובים בהלל ובהודיה" (מדוע חנוכה נקרא "יום טוב" בלי דיני יום טוב רגילים, ומדוע "בהלל ובהודיה" ולא "להלל ולהודות"). כל שיעור מוסיף חומר תומך שונה - ולכן צורפו לספר אחד תלת-פרקי.</p>
+</div>
+
+<div class="toc">
+<h3>📑 תוכן העניינים</h3>
+<ul>
+<li><a href="#section1">פרק א: "יום טוב" - כשמודים, היום נהיה טוב</a></li>
+<li><a href="#section2">פרק ב: האורח הטוב, הנחש שאוכל עפר, וגימטרייה "חי"</a></li>
+<li><a href="#section3">פרק ג: "פתחו לי שערי צדק" - סיפור הצלת הרב שטיינמן</a></li>
+</ul>
+</div>
+
+<h2 id="section1">פרק א: "יום טוב" - כשמודים, היום נהיה טוב</h2>
+
+<p>הגמרא (שבת כא, ע"ב) מסיימת את סיפור נס חנוכה: "לְשָׁנָה אַחֶרֶת קְבָעוּם וַעֲשָׂאוּם יָמִים טוֹבִים בְּהַלֵּל וְהוֹדָאָה". שואלים המפרשים: במה בדיוק חנוכה הוא "יום טוב"? אין בו איסור מלאכה, אין חובת סעודה, אין חובת לבישת בגדים לבנים - במה הוא נקרא "יום טוב"?</p>
+
+<div class="quote-box">
+<p>מבאר השפת אמת: "מִזְמוֹר שִׁיר לְיוֹם הַשַּׁבָּת, טוֹב לְהוֹדוֹת לַה'" - הפסוק לא אומר "חובה" להודות, אלא "טוֹב" להודות. כאשר אדם מודה לקדוש ברוך הוא מקירות ליבו, מתוך כוונת הלב - אין כמוה כדי להציף את הלב ברגשי שמחה והודיה. כאשר אדם מודה - הוא מרגיש טוב. וזהו פירוש "קבעום ועשאום ימים טובים בהלל והודאה": על ידי ההלל וההודיה, היום נהיה יום טוב - זהו הפירוש המילולי!</p>
+<span class="source-tag">שפת אמת לחנוכה</span>
+</div>
+
+<p>הרמב"ם (הלכות מגילה וחנוכה ג, ג) משנה את לשון הגמרא: במקום "ימים טובים" הוא כותב "שְׁמוֹנַת הַיָּמִים... יְמֵי שִׂמְחָה וְהַלֵּל". הרמב"ם מלמד אותנו: כשמודים לקדוש ברוך הוא, היום נהיה יום שמח - השמחה וההודיה הולכות ביחד, כמו "מזמור לתודה... עבדו את ה' בשמחה". ולכן מברכים "חנוכה שמח" (ולא "חנוכה טוב") - כי בחנוכה כולנו מודים לה', וכשמודים - נהיים שמחים.</p>
+
+<div class="highlight-box">
+<p>ומכאן טעם שם "טֵבֵת": כותב השפת אמת (חנוכה, תרנ"ג) שראש חודש טבת חל תמיד בתוך חנוכה, ומקבל את הארת הנרות על כל ימי החודש (כי "בראש תלוי כל החודש"). וכיוון שחנוכה הוא יום טוב מפני ההודיה, כל חודש טבת יונק מהארת ימי הטוב הללו - ולכן נקרא "טבת", מלשון "טוֹב לְהוֹדוֹת לַה'".</p>
+</div>
+
+<h2 id="section2">פרק ב: האורח הטוב, הנחש שאוכל עפר, וגימטרייה "חי"</h2>
+
+<p>בגמרא (ברכות נח, ע"א) מובא הבדל בין אורח טוב לאורח רע: האורח הטוב אומר "כל מה שטרח בעל הבית, לא טרח אלא בשבילי" - ומודה על הכל. האורח הרע אומר "כל מה שטרח בעל הבית, לא טרח אלא בשביל עצמו" - ואינו מודה. מי צודק? באמת אף אחד לא יודע בוודאות בשביל מי טרח בעל הבית - אך האורח הטוב נהנה להודות על כל דבר, וזהו התענוג שלו, זהו היום הטוב שלו.</p>
+
+<div class="quote-box">
+<p>הגמרא (סנהדרין נט, ע"ב) אומרת: "שִׁדְרוֹ שֶׁל אָדָם שֶׁלֹּא מוֹדֶה - נַעֲשָׂה נָחָשׁ." מבאר ספר "מתוק האור": אדם שאינו מודה לקדוש ברוך הוא, כל מה שהוא אוכל בעולם הזה - זה אותו טעם, כמו הנחש שנאמר עליו "וְנָחָשׁ עָפָר לַחְמוֹ" - כל מה שהוא אוכל, טעם עפר. לעומתו, על המודה נאמר בישעיה "חַי חַי הוּא יוֹדֶךָ" - כפל הלשון "חי חי" מלמד שהמודה מלא חיות ושמחה.</p>
+<span class="source-tag">גמרא סנהדרין נט, ע"ב; ישעיה לח, יט</span>
+</div>
+
+<div class="highlight-box">
+<p>מספר הימים שבהם אומרים הלל שלם בברכה בכל השנה: פסח (יום אחד), שבועות (יום אחד), סוכות (שמונה ימים), חנוכה (שמונה ימים) - סך הכל 18 ("חי")! מי שמודה לקדוש ברוך הוא נקרא "חי" - חי בעולם הזה, וממשיך לחיות בעולם הבא, כמו דוד המלך שנקרא "חי" מפני שלא היה כמוהו בהודיה, ועליו נאמר "דָּוִד מֶלֶךְ יִשְׂרָאֵל חַי וְקַיָּם".</p>
+</div>
+
+<div class="story-box">
+<p>מסופר על אישה חולה במחלה קשה, שהרופאים אמדו את חייה בשישה חודשים, אך חיה בשמחה ואופטימיות תשע שנים נוספות - פי 18 ממה שאמדו לה! היא הייתה סמל ליכולת לראות את הטוב גם בתוך הקושי. ברמז: אדם שמודה לקדוש ברוך הוא, "חַי חַי" - חי כפול פי 18 ממה שמצפים ממנו.</p>
+</div>
+
+<h2 id="section3">פרק ג: "פתחו לי שערי צדק" - סיפור הצלת הרב שטיינמן</h2>
+
+<div class="story-box">
+<p>מסופר על מורנו הרב שטיינמן זצ"ל, שניצל מהשואה בזכות שיחרור מפולין לשוויץ עוד לפני המלחמה. בהיותו שם, בודד לגמרי, ללא קרוב או מכר, ולא יודע מה עלה בגורל משפחתו - נכנס פעם בליל שבת לבית מדרש ושמע את השיר "יִגְדַּל אֱלֹקִים חַי" מושר בציבור. כששמע את המילים "וְאֵין יָחִיד לְפַדּוֹת מְחַכֶּה קֵץ יְשׁוּעָתוֹ", נכנסה בליבו אמונה יוקדת שהוא נמצא עם הקדוש ברוך הוא, ושה' יפדה אותו מצרתו. השיר הזה חיזק אותו במשך כל שנות הגלות, וזכינו שהיה למנהיג הדור.</p>
+</div>
+
+<div class="quote-box">
+<p>מדייק השפת אמת בלשון הגמרא: מדוע "קבעום ועשאום"? לכאורה מספיק "עשאום ימים טובים בהלל ובהודיה" - מה מוסיף "קבעום"? אלא "קבעום" - החכמים קבעו והסכימו איתם למעלה שהימים יהיו קדושים. "עשאום" - הם פעלו שהלב יפתח באמת להודות. וזהו "פִּתְחוּ לִי שַׁעֲרֵי צֶדֶק, אָבֹא בָם אוֹדֶה יָּהּ" - כשם שבבית המקדש נפתח הלב להודות, כך גם בחנוכה נפתחים הלבבות, ולכן מדליקים נרות חנוכה בפתח - לרמז לפתיחת הלב.</p>
+<span class="source-tag">שפת אמת; תהלים קיח, יט-כא</span>
+</div>
+
+<div class="section-divider">חנוכה - יום טוב לא בגלל דיני יום טוב, אלא כי ההודיה עצמה הופכת את היום ואת האדם ל"טוב" ו"חי"</div>
+
+<div class="sources">
+<h3>📚 מקורות ומראי מקומות</h3>
+<ol>
+<li>גמרא שבת כא, ע"ב - "קבעום ועשאום ימים טובים בהלל והודאה"</li>
+<li>תהלים צב - "מִזְמוֹר שִׁיר לְיוֹם הַשַּׁבָּת, טוֹב לְהוֹדוֹת לַה'"</li>
+<li>רמב"ם, הלכות מגילה וחנוכה ג, ג - "ימי שמחה והלל"</li>
+<li>שפת אמת לחנוכה, תרנ"ג - טעם שם "טבת"</li>
+<li>גמרא ברכות נח, ע"א - אורח טוב ואורח רע</li>
+<li>גמרא סנהדרין נט, ע"ב; ישעיה נא, ו - "שדרו של אדם שלא מודה נעשה נחש"</li>
+<li>ישעיה לח, יט - "חַי חַי הוּא יוֹדֶךָ"</li>
+<li>תהלים קיח, יט-כא - "פִּתְחוּ לִי שַׁעֲרֵי צֶדֶק"</li>
+</ol>
+</div>
+
+<div class="footer">
+<h4>הרב יהודה טאוב</h4>
+<p>קרית אתא | 0527139520</p>
+<p>קול הלשון - קול תודה: 03-6171190</p>
+<p><a href="http://kol-toda.co.il">kol-toda.co.il</a></p>
+</div>
+
+</div>
+
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+});
+var scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) { scrollTopBtn.classList.add('visible'); } else { scrollTopBtn.classList.remove('visible'); }
+});
+</script>
+</body>
+</html>
