@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>לשדרג את ההלל — הודיה אישית מתוך פנקס ההודיה</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #1f2937;
+  line-height: 1.8;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fefefe;
+  border-radius: 18px;
+  padding: 60px 80px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  position: relative;
+}
+.main-title {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.subtitle {
+  text-align: center;
+  font-size: 1.3em;
+  color: #4b5563;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+.author {
+  text-align: center;
+  font-size: 1.1em;
+  color: #7e22ce;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+h2 {
+  font-size: 2.2em;
+  color: #7e22ce;
+  border-right: 6px solid #7e22ce;
+  padding-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+h2:first-of-type { margin-top: 20px; }
+h3 {
+  font-size: 1.8em;
+  color: #2563eb;
+  margin-top: 35px;
+  margin-bottom: 18px;
+}
+h4 {
+  font-size: 1.5em;
+  color: #059669;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+p, li {
+  font-size: 1.15em;
+  line-height: 1.8;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+ul, ol { padding-right: 30px; margin-bottom: 20px; }
+.emphasis { color: #7e22ce; font-weight: bold; }
+em { color: #2563eb; font-style: italic; }
+strong { font-weight: bold; }
+
+.verse-box {
+  background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+  border: 2px solid #7e22ce;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 30px 0;
+  text-align: center;
+  font-size: 1.25em;
+  font-style: italic;
+  box-shadow: 0 5px 15px rgba(126,34,206,0.15);
+}
+.highlight-box {
+  background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+  border-right: 6px solid #2563eb;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-right: 6px solid #f59e0b;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+  font-style: italic;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box .source-tag {
+  display: block;
+  margin-top: 12px;
+  font-style: normal;
+  font-weight: bold;
+  color: #b45309;
+  font-size: 0.9em;
+}
+.story-box {
+  background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+  border-right: 6px solid #059669;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.section-divider {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+  color: #fff;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 22px;
+  border-radius: 12px;
+  margin: 40px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 30px 0;
+}
+.two-columns > div {
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.col-purple { background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 100%); border-right: 5px solid #7e22ce; }
+.col-gold { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 5px solid #f59e0b; }
+.qa-box {
+  background: #fdf2f8;
+  border: 2px dashed #ec4899;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+}
+.qa-box .q { color: #be185d; font-weight: bold; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+.toc {
+  background: linear-gradient(135deg, #f3e8ff 0%, #fdf4ff 100%);
+  border: 2px solid #d8b4fe;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin: 35px 0 45px;
+}
+.toc h3 { margin-top: 0; color: #7e22ce; }
+.toc ul { list-style: none; padding-right: 10px; }
+.toc li { margin-bottom: 10px; }
+.toc a {
+  color: #6d28d9;
+  text-decoration: none;
+  font-size: 1.05em;
+  transition: color 0.2s;
+}
+.toc a:hover { color: #ec4899; text-decoration: underline; }
+.sources {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin: 45px 0 20px;
+}
+.sources h3 { margin-top: 0; color: #4b5563; }
+.sources ol { color: #374151; }
+.footer {
+  margin-top: 50px;
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+  border-radius: 14px;
+  font-size: 1.05em;
+  color: #374151;
+}
+.footer strong { color: #7e22ce; }
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.3em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 100;
+}
+.scroll-top.visible { opacity: 1; visibility: visible; }
+
+@media (max-width: 768px) {
+  body { padding: 15px 8px; }
+  .container { padding: 30px 20px; }
+  .main-title { font-size: 2em; }
+  h2 { font-size: 1.6em; padding-right: 14px; border-right-width: 4px; }
+  h3 { font-size: 1.35em; }
+  h4 { font-size: 1.2em; }
+  p, li { font-size: 1.05em; }
+  .two-columns { grid-template-columns: 1fr; }
+  .scroll-top { left: 15px; bottom: 15px; width: 44px; height: 44px; }
+}
+
+@media print {
+  @page { size: A4 portrait; margin: 20mm 18mm; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+  .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+  .scroll-top { display: none !important; }
+  h2 { page-break-before: always; break-before: page; }
+  h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+  h3, h4 { page-break-after: avoid; break-after: avoid; }
+  .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box {
+    page-break-inside: avoid; break-inside: avoid;
+  }
+  .toc { page-break-after: always; break-after: page; }
+  .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+  h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+  .footer { page-break-before: always; break-before: page; }
+  [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;top:12px;right:12px;z-index:9999;background:#5b21b6;color:#fff;padding:7px 14px;border-radius:20px;font:600 14px Heebo,Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)" class="kt-back">📚 לכל השיעורים</a><style>@media print{.kt-back{display:none!important}}</style>
+<div class="container">
+  <h1 class="main-title" id="top">לשדרג את ההלל<br>הודיה אישית מתוך פנקס ההודיה</h1>
+  <div class="subtitle">כיצד לסמן בהלל את פסוקי הישועה הפרטית שלך, ולהפוך את אמירת ההלל בראש חודש למשהו אישי ומעורר רגש</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+  <div class="toc">
+    <h3>📖 תוכן העניינים</h3>
+    <ul>
+      <li><a href="#section1">חלק א: פנקס ההודיה — לבחור מילים בהלל המזכירות ישועה פרטית</a></li>
+      <li><a href="#section2">חלק ב: שלוש דוגמאות — כאבים, פרנסה, ותפילה נענית</a></li>
+      <li><a href="#section3">חלק ג: "הפורים שלך" — לכל אחד יש יום גדול משלו</a></li>
+    </ul>
+  </div>
+
+  <h2 id="section1">חלק א: פנקס ההודיה — לבחור מילים בהלל המזכירות ישועה פרטית</h2>
+
+  <p>היום ראש חודש, ואנו רוצים להגיש דבר נפלא העתיד לראות אור בקרוב: <span class="emphasis">"פנקס ההודיה", מהדורה חמישית</span>. הרעיון: כיצד משדרגים את אמירת ההלל — לא רק בפורים הכללי של עם ישראל כולו, אלא גם ב"פורים שלך", כשם שיש קהילות ברחבי העולם שקבעו לעצמן יום הודיה מיוחד לזכר נס שאירע להן במשך הדורות — כך יש גם לכל אחד ואחד "פורים" פרטי, אישי משלו.</p>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0">מובא בפנקס ההודיה, מהדורה חמישית: ישועות שכדאי לקבוע עליהן הודיה בהלל — לבחור כמה מילים בהלל המזכירות את הישועה הפרטית שחווית, ולסמן את הפסוק הזה. מכאן ולהבא, בכל פעם שתאמר את ההלל ותגיע לפסוק הזה, הוא ישמש לך תזכורת לישועה הפרטית ההיא — להודות להשם עליה.</p>
+  </div>
+
+  <p>הרעיון פשוט אך עמוק: תוך כדי אמירת ההלל, שהוא טקסט לא ארוך, מוטמנים בתוכו תזכורות מתקופות שונות בחיים. בכל תקופה ותקופה עמד לצדך השם, כדבר הכתוב "לֹא נִשְׁאַל הַמֶּלֶךְ". המפגש החודשי של אמירת ההלל הוא הזדמנות להיזכר באירועי ההשגחה הפרטית שזכינו לראות בעינינו במשך החיים, ולהלל להשם עליהם — מומלץ בחום.</p>
+
+  <h2 id="section2">חלק ב: שלוש דוגמאות — כאבים, פרנסה, ותפילה נענית</h2>
+
+  <p>נביא שלוש דוגמאות למקרים שכדאי לסמן בהלל, כפי שהובאו:</p>
+
+  <div class="story-box">
+    <h4 style="margin-top:0">דוגמה ראשונה: תקופת כאבים כרוניים קשים</h4>
+    <p style="margin-bottom:0">הייתה לך תקופה של כאבים כרוניים קשים, שהיית בטוח: "זהו, אני לא אצא מזה, ואין לי סיכוי". התפללת, וברוך השם — הישועה הגיעה, והכול עבר. תסמן את הפסוק:</p>
+  </div>
+
+  <div class="verse-box">
+    "אֲפָפוּנִי חֶבְלֵי מָוֶת... צָרָה וְיָגוֹן אֶמְצָא... חַנּוּן ה' וְצַדִּיק, וֵאלֹקֵינוּ מְרַחֵם"
+  </div>
+
+  <p>מעכשיו, כל פעם שתאמר את הפסוק הזה, תיזכר באותה ישועה עצמה.</p>
+
+  <div class="story-box">
+    <h4 style="margin-top:0">דוגמה שנייה: מצוקה כספית</h4>
+    <p style="margin-bottom:0">הייתה לך תקופה של מצוקה כספית, ואז הגיעה סייעתא דשמיא, הערת חסד עליון. מאז עברו כמה שנים טובות — ולכן, מה? בגלל שעבר זמן, האם יש לשכוח את החסד הנפלא שקיבלת משמיים? הזיכרון וההודיה יפתחו בשבילך את שערי החסד מחדש. תקבע לישועה הזו את הפסוק:</p>
+  </div>
+
+  <div class="verse-box">
+    "טוֹב לַחֲסוֹת בַּה' מִבְּטֹחַ בָּאָדָם"
+  </div>
+
+  <p>הפסוק הזה יזכיר לך את הישועה הזו בכל פעם מחדש.</p>
+
+  <div class="story-box">
+    <h4 style="margin-top:0">דוגמה שלישית: תפילה שנענתה</h4>
+    <p style="margin-bottom:0">התפללת וזכית לראות במוחש כיצד תפילה נענית. קח את המילים:</p>
+  </div>
+
+  <div class="verse-box">
+    "אָהַבְתִּי כִּי יִשְׁמַע ה' אֶת קוֹלִי תַּחֲנוּנָי"
+  </div>
+
+  <p>כשתאמר מילים אלו בהלל, תיזכר באהבת השם שהרגשת, בנוכחותך ששמע השם את תפילתך.</p>
+
+  <div class="section-divider">אנשים שניסו רעיון זה מודים שהוא שדרג בשבילם את אמירת ההלל, והפך אותו למשהו מאוד אישי ומעורר רגש</div>
+
+  <h2 id="section3">חלק ג: "הפורים שלך" — לכל אחד יש יום גדול משלו</h2>
+
+  <p>הרי בתוך טקסט לא ארוך מוטמנות תזכורות מתקופות שונות וטובות בחיים; בכל תקופה עמד עמך השם, כדלית נשלה. המפגש החודשי של ראש חודש הוא הזדמנות להיזכר באירועי ההשגחה הפרטית שזכינו לראות בעינינו במשך החיים, ולהלל להשם עליהם.</p>
+
+  <p>וזה בדיוק הרעיון של "הפורים שלך" — כמו שיש פורים של עם ישראל כולו, כך יש קהילות שונות שקבעו לעצמן יום ניסי מיוחד, כגון "פורים פרשבורג" וכן פורימים מיוחדים בקהילות שונות שנוסדו לזכר ישועות שאירעו להן במשך השנים — כך יש גם לכל אדם, ולכל משפחה, "פורים" פרטי משלו, יום שבו קרתה לו ישועה אישית. וכדאי שיהיו לכל אחד כמה מילים בהלל שבהן הוא מזכיר את "הפורים שלו" — ועל ידי כך ההלל יהיה שמח יותר, ויהיה לכולנו, בעזרת השם, חודש מלא שמחה והודיה.</p>
+
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות</h3>
+    <ol>
+      <li>פנקס ההודיה, מהדורה חמישית — רעיון סימון פסוקי הלל לזכר ישועות אישיות.</li>
+      <li>תהילים קטז, ג-ה — "אָפְפוּנִי חֶבְלֵי מָוֶת... חַנּוּן ה' וְצַדִּיק וֵאלֹקֵינוּ מְרַחֵם".</li>
+      <li>תהילים קיח, ח — "טוֹב לַחֲסוֹת בַּה' מִבְּטֹחַ בָּאָדָם".</li>
+      <li>תהילים קטז, א — "אָהַבְתִּי כִּי יִשְׁמַע ה' אֶת קוֹלִי תַּחֲנוּנָי".</li>
+      <li>מנהגי קהילות ישראל — "פורים" מקומיים שנקבעו לזכר ישועות פרטיות (כגון פורים פרשבורג).</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+      <h4>🎧 שיעורים נוספים של הרב</h4>
+      <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+      <p>📞 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+      <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+  </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+(function () {
+  var scrollTopBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 400) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var targetId = this.getAttribute('href').slice(1);
+      var target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
