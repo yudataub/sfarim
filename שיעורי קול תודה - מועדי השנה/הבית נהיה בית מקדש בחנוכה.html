@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>הבית נהיה בית מקדש בחנוכה</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #1f2937;
+  line-height: 1.8;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fefefe;
+  border-radius: 18px;
+  padding: 60px 80px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  position: relative;
+}
+.main-title {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.subtitle {
+  text-align: center;
+  font-size: 1.3em;
+  color: #4b5563;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+.author {
+  text-align: center;
+  font-size: 1.1em;
+  color: #7e22ce;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+h2 {
+  font-size: 2.2em;
+  color: #7e22ce;
+  border-right: 6px solid #7e22ce;
+  padding-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+h2:first-of-type { margin-top: 20px; }
+h3 {
+  font-size: 1.8em;
+  color: #2563eb;
+  margin-top: 35px;
+  margin-bottom: 18px;
+}
+h4 {
+  font-size: 1.5em;
+  color: #059669;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+p, li {
+  font-size: 1.15em;
+  line-height: 1.8;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+ul, ol { padding-right: 30px; margin-bottom: 20px; }
+.emphasis { color: #7e22ce; font-weight: bold; }
+em { color: #2563eb; font-style: italic; }
+strong { font-weight: bold; }
+
+.verse-box {
+  background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+  border: 2px solid #7e22ce;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 30px 0;
+  text-align: center;
+  font-size: 1.25em;
+  font-style: italic;
+  box-shadow: 0 5px 15px rgba(126,34,206,0.15);
+}
+.highlight-box {
+  background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+  border-right: 6px solid #2563eb;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-right: 6px solid #f59e0b;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+  font-style: italic;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box .source-tag {
+  display: block;
+  margin-top: 12px;
+  font-style: normal;
+  font-weight: bold;
+  color: #b45309;
+  font-size: 0.9em;
+}
+.story-box {
+  background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+  border-right: 6px solid #059669;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.section-divider {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+  color: #fff;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 22px;
+  border-radius: 12px;
+  margin: 40px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 30px 0;
+}
+.two-columns > div {
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.col-purple { background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 100%); border-right: 5px solid #7e22ce; }
+.col-gold { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 5px solid #f59e0b; }
+.qa-box {
+  background: #fdf2f8;
+  border: 2px dashed #ec4899;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+}
+.qa-box .q { color: #be185d; font-weight: bold; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+.toc {
+  background: linear-gradient(135deg, #f3e8ff 0%, #fdf4ff 100%);
+  border: 2px solid #d8b4fe;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin: 35px 0 45px;
+}
+.toc h3 { margin-top: 0; color: #7e22ce; }
+.toc ul { list-style: none; padding-right: 10px; }
+.toc li { margin-bottom: 10px; }
+.toc a {
+  color: #6d28d9;
+  text-decoration: none;
+  font-size: 1.05em;
+  transition: color 0.2s;
+}
+.toc a:hover { color: #ec4899; text-decoration: underline; }
+.sources {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin: 45px 0 20px;
+}
+.sources h3 { margin-top: 0; color: #4b5563; }
+.sources ol { color: #374151; }
+.footer {
+  margin-top: 50px;
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+  border-radius: 14px;
+  font-size: 1.05em;
+  color: #374151;
+}
+.footer strong { color: #7e22ce; }
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.3em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 100;
+}
+.scroll-top.visible { opacity: 1; visibility: visible; }
+
+@media (max-width: 768px) {
+  body { padding: 15px 8px; }
+  .container { padding: 30px 20px; }
+  .main-title { font-size: 2em; }
+  h2 { font-size: 1.6em; padding-right: 14px; border-right-width: 4px; }
+  h3 { font-size: 1.35em; }
+  h4 { font-size: 1.2em; }
+  p, li { font-size: 1.05em; }
+  .two-columns { grid-template-columns: 1fr; }
+  .scroll-top { left: 15px; bottom: 15px; width: 44px; height: 44px; }
+}
+
+@media print {
+  @page { size: A4 portrait; margin: 20mm 18mm; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+  .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+  .scroll-top { display: none !important; }
+  h2 { page-break-before: always; break-before: page; }
+  h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+  h3, h4 { page-break-after: avoid; break-after: avoid; }
+  .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box {
+    page-break-inside: avoid; break-inside: avoid;
+  }
+  .toc { page-break-after: always; break-after: page; }
+  .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+  h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+  .footer { page-break-before: always; break-before: page; }
+  [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;top:12px;right:12px;z-index:9999;background:#5b21b6;color:#fff;padding:7px 14px;border-radius:20px;font:600 14px Heebo,Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)" class="kt-back">📚 לכל השיעורים</a><style>@media print{.kt-back{display:none!important}}</style>
+<div class="container">
+  <h1 class="main-title" id="top">הבית נהיה בית מקדש בחנוכה</h1>
+  <div class="subtitle">יסוד הרמב"ן: נר חנוכה הוא המשך מנורת בית המקדש, המדליק — כהן גדול, והבית — מקדש מעט</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+  <div class="highlight-box">
+    <strong>הערת עריכה:</strong> ספר זה מאחד שלושה שיעורים העוסקים <span class="emphasis">ממש באותה דרשה יסודית</span> — יסוד הרמב"ן שנרות חנוכה הם המשך מנורת המקדש. הפרק הראשון הוא מסירת היסוד המלאה על דרך הקושיות; הפרק השני הוא הרחבתו בשיחת לימוד (שאלות ותשובות) המוסיפה כמה פרטים; והפרק השלישי סיכום קצר שנמסר בנפרד וחוזר על אותו יסוד עצמו בקיצור. משום שלושתם עוסקים ממש באותה דרשה, רוכזו כאן כפרקי ספר אחד.
+  </div>
+
+  <div class="toc">
+    <h3>📑 תוכן העניינים</h3>
+    <ul>
+      <li><a href="#section1">פרק א: מצווה חביבה עד מאוד — ארבע קושיות ופתרונן</a></li>
+      <li><a href="#section2">פרק ב: מה נשתנה חנוכה מכל החגים — הרחבה</a></li>
+      <li><a href="#section3">פרק ג: בית של שמחה, אהבה וקדושה</a></li>
+    </ul>
+  </div>
+
+  <h2 id="section1">פרק א: מצווה חביבה עד מאוד — ארבע קושיות ופתרונן</h2>
+
+  <p>כתב הרמב"ם משפט שלא כתב על אף מצווה אחרת מכל מצוות התורה: <span class="emphasis">"מִצְוַת נֵר חֲנֻכָּה מִצְוָה חֲבִיבָה הִיא עַד מְאֹד"</span>. אין זה רק תיאור באגדה, אלא הלכה למעשה: נר חנוכה חמור יותר מהלכות תפילין ומזוזה. אדם שאין לו כסף — ההלכה קובעת שאדם צריך להוציא בשביל מצווה עד חומש מנכסיו; אם המזוזה עולה יותר מחמישית ממה שיש לו, הוא פטור. אך בהלכות חנוכה נאמר: אם אין לו כסף, צריך לחזר על הפתחים כדי להשיג נר חנוכה. זוהי חומרה שאין כדוגמתה בכל מצוות עשה שבתורה.</p>
+
+  <p>ויש להבין: מה כל כך חמור בנר חנוכה?</p>
+
+  <div class="quote-box">
+    שאל הגאון רבי יחזקאל לוינשטיין זצ"ל: מדוע התפעל הרמב"ם דווקא ממצוות חנוכה? כל המצוות שלנו יקרות וחביבות — מה ראה הרמב"ם לתת "ציון" מיוחד לנר חנוכה?
+    <span class="source-tag">מובא בשם הגאון רבי יחזקאל לוינשטיין</span>
+  </div>
+
+  <h3>קושיה שנייה: דווקא בפתח הבית</h3>
+
+  <p>כל מצווה שבתורה ניתן לקיים בכל מקום שירצה האדם: את המצה אוכלים היכן שרוצים, בסוכה יושבים בכל סוכה, במגילה יוצאים ידי חובה בכל מקום שקוראים אותה. ואילו בנר חנוכה נפסקה הלכה: מדליקים <span class="emphasis">רק בפתח ביתו של האדם</span> — לא אצל הסבא, לא בבית הכנסת, לא בשום מקום אחר.</p>
+
+  <h3>קושיה שלישית: "אשתו כגופו"</h3>
+
+  <p>בנר חנוכה מצאנו דבר יוצא דופן: אדם שאינו נמצא בביתו יכול לבקש מאשתו שתדליק, והוא יוצא ידי חובה — ואף להפך. לא מצאנו כזה דבר בשום מצווה אחרת: לא בליל הסדר, לא בקריאת מגילה, לא בשום מצווה שכל אחד חייב בה בעצמו.</p>
+
+  <h3>קושיה רביעית: "הנרות הללו קודש הם"</h3>
+
+  <p>מיד לאחר ההדלקה שרים: <span class="emphasis">"הַנֵּרוֹת הַלָּלוּ קֹדֶשׁ הֵם"</span>. מהי הקדושה הזו? קודש, כידוע, הוא רק דבר שנכתב או נעשה בו שם ה' — כתפילין, ספר תורה. אך שמן ופתילות פשוטים — כיצד הם נהיים "קודש"?</p>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0">ארבע הקושיות: (א) למה נר חנוכה חביב עד למאוד? (ב) למה חובה דווקא בפתח הבית? (ג) איך ייתכן ש"אשתו כגופו" מוציאה ידי חובה? (ד) איך נעשים הנרות "קודש"?</p>
+  </div>
+
+  <h3>יסוד הרמב"ן: הכהן הגדול שלא הקריב</h3>
+
+  <div class="story-box">
+    <p>מובא בשם הרמב"ן (בריש פרשת בהעלותך): לאחר שהקריבו הנשיאים את קרבנם בחנוכת המשכן, הצטער אהרן הכהן מאוד — מדוע לא זכה הוא להשתתף עם כל הנשיאים? אמר לו הקדוש ברוך הוא: "אַל תִּתְיָרֵא, לְגָדוֹל מִזֶּה אַתָּה מְתֻקָּן... לְךָ אֲנִי נוֹתֵן גְּדֻלָּה שֶׁהִיא גְּדוֹלָה מִזּוֹ: שֶׁהַקָּרְבָּנוֹת כָּל זְמַן שֶׁבֵּית הַמִּקְדָּשׁ קַיָּם הֵן נוֹהֲגִין, אֲבָל הַנֵּרוֹת — לְעוֹלָם אֶל מוּל פְּנֵי הַמְּנוֹרָה יָאִירוּ."</p>
+    <p style="margin-bottom:0">כיוון שכן, מיד לאחר חנוכת הנשיאים מופיעה בתורה שוב פרשת המנורה (פרשת בהעלותך) — לנחם את אהרן. אלא שיש כאן קושיה עצומה: איזה "לעולם"? הרי נחרב בית המקדש, ואין לנו היום מנורה כלל!</p>
+  </div>
+
+  <div class="quote-box">
+    "ועניין האגדה הזו לדרוש רמז מן הפרשה על חנוכת נרות שהייתה בבית שני, כולן על יד כהנים צדיקים חשמונאי ובניו... יש חנוכה אחרת שאני עושה בה נס לעם ישראל ויקדש שמי בהם"
+    <span class="source-tag">מובא בשם הרמב"ן, פרשת בהעלותך</span>
+  </div>
+
+  <p>כלומר: כאשר אנו הולכים להדליק את החנוכייה, החנוכייה ממשיכה את המנורה של בית המקדש! נתן לנו הקדוש ברוך הוא מתנה — שיהיה המשך למנורה שבבית המקדש. כל כלי המקדש נחרבו, אך המנורה ממשיכה לעלות ולהאיר — בחנוכייה שלנו. אתה, המדליק, נהיה כהן גדול. חנוכייתך היא המנורה. ואתה הולך להדליק אותה — עתה מובן מדוע אנו אומרים "הַנֵּרוֹת הַלָּלוּ קֹדֶשׁ הֵם": הם ממש קודש, כמו המנורה בבית המקדש, ולכן מקפידים על הרבה הלכות שידמו למנורת המקדש — מדליקים דווקא בשמן זית, ומקפידים להתפלל מנחה מוקדם ביום שישי לפני ההדלקה, כדוגמת הקרבת קרבן התמיד של בין הערביים לפני הדלקת המנורה בבית המקדש.</p>
+
+  <h3>פתרון הקושיות: איפה בית המקדש היום</h3>
+
+  <p>ועדיין יש להבין: המדליק הוא אהרן, החנוכייה היא המנורה — אך היכן בית המקדש? התשובה טמונה בפסוק "וְעָשׂוּ לִי מִקְדָּשׁ וְשָׁכַנְתִּי בְּתוֹכָם" — לא נאמר "בְּתוֹכוֹ" אלא "בְּתוֹכָם", בתוך כל אחד ואחד. איפה זוכים היום להשראת שכינה כזו? "אִישׁ וְאִשָּׁה זָכוּ — שְׁכִינָה בֵּינֵיהֶם", כלשון חז"ל: י' של איש וה' של אשה. זהו בית המקדש של ימינו: הבית היהודי.</p>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0">מכאן פתרון ארבע הקושיות כאחת: נר חנוכה חייב להידלק דווקא בבית — לא בבית הכנסת, לא בשום מקום אחר — כי בבית המקדש מדליקים את המנורה רק במקדש עצמו, ובית המקדש שלנו כיום הוא הבית היהודי. וכן מובן מדוע "אשתו כגופו": כשם שהדלקת המנורה בבית המקדש פוטרת את כל עם ישראל, כך הדלקה אחת בבית המקדש הביתי פוטרת את כל בני הבית — האיש והאישה, הבנים והבנות, ששייכים כולם לאותו "מקדש". וזה גם הטעם ל"מצווה חביבה היא עד מאוד": כי אין לך זכות גדולה מזו — שבוע אחד בשנה נותן לנו הקדוש ברוך הוא להיות כהנים גדולים בבית המקדש הפרטי שלנו.</p>
+  </div>
+
+  <p>ומה עושים בבית המקדש? היו הלוויים שרים ומשוררים לה'. כך גם צריך בבית שלנו לאחר ההדלקה: כל בני הבית, גדולים וקטנים, שרים ומודים ומהללים לבורא עולם שהפך את ביתם לבית המקדש. וזהו שנאמר בהלכה שלוש פעמים בלבד בשולחן ערוך "צריך להיזהר בה מאוד" — בברכת התורה, בנר חנוכה, ובכיבוד הורים; והמכנה המשותף לשלושתם הוא הכרת הטוב.</p>
+
+  <h2 id="section2">פרק ב: מה נשתנה חנוכה מכל החגים — הרחבה</h2>
+
+  <p>בשיחת לימוד שהתקיימה סביב יסוד זה, חזרו ונבחנו אותן ארבע קושיות ("מה נשתנה חנוכה מכל החגים"), ונוספו עליהן כמה פרטים מאלפים המחזקים את היסוד שהחנוכייה היא באמת המשך המנורה.</p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <h4 style="margin-top:0">מנחה מוקדמת בערב שבת חנוכה</h4>
+      <p style="margin-bottom:0">רבים נוהגים להתפלל מנחה מוקדם ביום שישי של חנוכה, כדי להדליק נרות מיד לאחר התפילה, לפני כניסת השבת. הטעם: נרות חנוכה הם זכר למנורת המקדש, שהיו מדליקים אותה תמיד אחרי הקרבת קרבן התמיד של בין הערביים — ולא לפניו. לכן, כדי לשמור על סדר "קודם קרבן, אחר כך מנורה", מתפללים תחילה מנחה (המקבילה לקרבן התמיד), ורק לאחר מכן מדליקים את הנרות.</p>
+    </div>
+    <div class="col-gold">
+      <h4 style="margin-top:0">"הדלקה כשרה בזר"</h4>
+      <p style="margin-bottom:0">במקדש, הדלקת המנורה הייתה כשרה גם בכהן פשוט ("זר" ביחס לכהן גדול), ואילו רק ה"הטבה" (ניקוי וסידור) הייתה מיוחדת לכהן גדול. כך גם בבית: כל אחד מבני הבית יכול להדליק (וכפי המבואר, לפי הרמב"ם אף אישה יכולה להדליק ולהוציא ידי חובה), אך ה"הכנה" הארוכה — הכנת השמן, הפתילות, הניקיון — נמשכת זמן רב יותר מעצם ההדלקה, ומרמזת שחנוכה הוא בעיקרו חג של הכנה.</p>
+    </div>
+  </div>
+
+  <p>ועוד נקודה יסודית עלתה בשיחה: מדוע דווקא בחנוכה, ולא בשום חג אחר, כמעט כל בית בישראל שר ורוקד מיד לאחר קיום המצווה? לא מצאנו שאחרי אכילת מצה שרים, ולא אחרי נטילת לולב. חנוכה, לעומת זאת — מיד לאחר ההדלקה, ברוב בתי ישראל שרים "הַנֵּרוֹת הַלָּלוּ", "מָעוֹז צוּר", ו"מִזְמוֹר שִׁיר חֲנֻכַּת הַבַּיִת". התשובה נעוצה באותו יסוד: כיוון שהבית נהיה בית מקדש, וכל אחד נהיה כהן גדול ולוי כאחד — טבעי הדבר שהמשפחה שרה, כדרך הלוויים ששרו ליד המנורה בבית המקדש.</p>
+
+  <div class="quote-box">
+    "אמרו חז"ל: כל יחיד מישראל צורתו חקוקה תחת כיסא הכבוד" — וכשם שבמקדש היה המקום שבו נפתח הלב לשירה, כך גם הבית שלנו בחנוכה נהיה מקום שנפתח בו הלב לשירה ולהודיה.
+  </div>
+
+  <p>גם הרמז לכינוי "סופגניה" נדרש כאן על אותו יסוד: "סופגניה" — אותיות "סוֹף גַּן כ"ה" — לרמז שסופו של אדם שומר תורה ומצוות להיות בגן עדן, בבחינת "גן ה'". וכך גם המילה "חנוכה" עצמה נדרשת מלשון "חינוך" — חינוכו וייעודו של הבית היהודי להיות מקום השראת שכינה.</p>
+
+  <h2 id="section3">פרק ג: בית של שמחה, אהבה וקדושה</h2>
+
+  <p>נסכם כאן שוב, בקצרה, את עיקרי היסוד: חנוכה שונה מכל חגי ישראל — הוא היחיד שבו כל עניינו הלל והודיה לקדוש ברוך הוא, כלשון הפיוט "בְּנֵי בִינָה יְמֵי שְׁמוֹנָה, קָבְעוּ שִׁיר וּרְנָנִים". וגם ההלכה שנר חנוכה חייב להידלק דווקא בבית (ולא בשום מקום אחר, בניגוד לכל שאר המצוות) מתפרשת על אותו יסוד עצמו.</p>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0">היסוד: חנוכה זה המשך מנורה. איפה בית המקדש? הבית היהודי. אתה כהן גדול, החנוכייה שלך היא המנורה. ומה עושים בבית המקדש? שרים ומודים לקדוש ברוך הוא.</p>
+  </div>
+
+  <p>לכן אומרים אחרי ההדלקה "אָז יָגְמֹר בְּשִׁיר מִזְמוֹר חֲנֻכַּת הַמִּזְבֵּחַ" — ה"שיר מזמור" הנרמז כאן הוא מזמור לתודה, הנקרא בגמרא (שבועות טו, ע"ב) "שִׁיר שֶׁל תּוֹדָה". וטוב ונפלא לשיר מדי יום בחנוכה את מזמור לתודה, ולהגיש בו הודיה לקדוש ברוך הוא, שמקדש אותנו ומחזק אותנו. יהי רצון שנזכה כולנו שהבית שלנו יעשה לבית מקדש, ומתוך כך יהיה לנו כל השנה כולה בית של שמחה, אהבה וקדושה.</p>
+
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות</h3>
+    <ol>
+      <li>רמב"ם, הלכות מגילה וחנוכה פרק ד — "מצוות נר חנוכה מצווה חביבה היא עד מאוד".</li>
+      <li>מובא בשם הרמב"ן, ריש פרשת בהעלותך — ניחום אהרן הכהן, "הנרות לעולם אל מול פני המנורה".</li>
+      <li>שולחן ערוך והלכות חנוכה — דין נר איש וביתו, "אשתו כגופו".</li>
+      <li>נוסח "הנרות הללו" — לאחר הדלקת הנרות.</li>
+      <li>מסכת שבועות דף טו עמוד ב — "שיר של תודה" ומזמור לתודה.</li>
+      <li>תהלים פרק ל — "מזמור שיר חנוכת הבית לדוד".</li>
+      <li>שולחן ערוך — מנהג תפילת מנחה מוקדמת בערב שבת חנוכה, זכר לקרבן התמיד.</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+      <h4>🎧 שיעורים נוספים של הרב</h4>
+      <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+      <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+      <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+  </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+(function () {
+  var scrollTopBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 400) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var targetId = this.getAttribute('href').slice(1);
+      var target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
