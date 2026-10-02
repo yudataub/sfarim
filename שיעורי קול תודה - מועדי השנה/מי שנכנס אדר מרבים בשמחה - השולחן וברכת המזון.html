@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מי שנכנס אדר מרבים בשמחה — השולחן וברכת המזון</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #1f2937;
+    line-height: 1.8;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fefefe;
+    border-radius: 18px;
+    padding: 60px 80px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    position: relative;
+}
+.main-title {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+.subtitle {
+    text-align: center;
+    font-size: 1.3em;
+    color: #4b5563;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+.author {
+    text-align: center;
+    font-size: 1.1em;
+    color: #7e22ce;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+h2 {
+    font-size: 2.2em;
+    color: #7e22ce;
+    border-right: 6px solid #7e22ce;
+    padding-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+h2:first-of-type { margin-top: 20px; }
+h3 {
+    font-size: 1.8em;
+    color: #2563eb;
+    margin-top: 35px;
+    margin-bottom: 18px;
+}
+h4 {
+    font-size: 1.5em;
+    color: #059669;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+p, li {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+ul, ol { padding-right: 30px; margin-bottom: 20px; }
+.emphasis { color: #7e22ce; font-weight: bold; }
+em { color: #2563eb; font-style: italic; }
+strong { font-weight: bold; }
+
+.verse-box {
+    background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    border: 2px solid #7e22ce;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: center;
+    font-size: 1.25em;
+    font-style: italic;
+    box-shadow: 0 5px 15px rgba(126,34,206,0.15);
+}
+.highlight-box {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    border-right: 6px solid #2563eb;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-right: 6px solid #f59e0b;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    font-style: italic;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box .source-tag {
+    display: block;
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: bold;
+    color: #b45309;
+    font-size: 0.9em;
+}
+.story-box {
+    background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    border-right: 6px solid #059669;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.section-divider {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    color: #fff;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 22px;
+    border-radius: 12px;
+    margin: 40px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 30px 0;
+}
+.two-columns > div {
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.col-purple { background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 100%); border-right: 5px solid #7e22ce; }
+.col-gold { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 5px solid #f59e0b; }
+.qa-box {
+    background: #fdf2f8;
+    border: 2px dashed #ec4899;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+}
+.qa-box .q { color: #be185d; font-weight: bold; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+.toc {
+    background: linear-gradient(135deg, #f3e8ff 0%, #fdf4ff 100%);
+    border: 2px solid #d8b4fe;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 35px 0 45px;
+}
+.toc h3 { margin-top: 0; color: #7e22ce; }
+.toc ul { list-style: none; padding-right: 10px; }
+.toc li { margin-bottom: 10px; }
+.toc a {
+    color: #6d28d9;
+    text-decoration: none;
+    font-size: 1.05em;
+    transition: color 0.2s;
+}
+.toc a:hover { color: #ec4899; text-decoration: underline; }
+.sources {
+    background: #f3f4f6;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 45px 0 20px;
+}
+.sources h3 { margin-top: 0; color: #4b5563; }
+.sources ol { color: #374151; }
+.footer {
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+    border-radius: 14px;
+    font-size: 1.05em;
+    color: #374151;
+}
+.footer strong { color: #7e22ce; }
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.3em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 100;
+}
+.scroll-top.visible { opacity: 1; visibility: visible; }
+
+@media (max-width: 768px) {
+    body { padding: 15px 8px; }
+    .container { padding: 30px 20px; }
+    .main-title { font-size: 2em; }
+    h2 { font-size: 1.6em; padding-right: 14px; border-right-width: 4px; }
+    h3 { font-size: 1.35em; }
+    h4 { font-size: 1.2em; }
+    p, li { font-size: 1.05em; }
+    .two-columns { grid-template-columns: 1fr; }
+    .scroll-top { left: 15px; bottom: 15px; width: 44px; height: 44px; }
+}
+
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+    .scroll-top { display: none !important; }
+    h2 { page-break-before: always; break-before: page; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+    h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+    .footer { page-break-before: always; break-before: page; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;top:12px;right:12px;z-index:9999;background:#5b21b6;color:#fff;padding:7px 14px;border-radius:20px;font:600 14px Heebo,Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)" class="kt-back">📚 לכל השיעורים</a><style>@media print{.kt-back{display:none!important}}</style>
+<div class="container">
+  <h1 class="main-title" id="top">מי שנכנס אדר<br>מרבים בשמחה</h1>
+  <div class="subtitle">פרשת תרומה, שולחנו של אדם כמזבח, וסודות ברכת המזון בכוונה — כיצד שולחן הבית הופך למשכן להשם</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+  <div class="toc">
+    <h3>📑 תוכן העניינים</h3>
+    <ul>
+      <li><a href="#section1">"ויקחו לי תרומה" — נתינה מתוך שמחה, לא מתוך חובה</a></li>
+      <li><a href="#section2">הבריח התיכון — עץ אברהם אבינו, מלמד ההודיה</a></li>
+      <li><a href="#section3">השולחן — "זהב טהור" כרמז לברכת המזון</a></li>
+      <li><a href="#section4">שולחנו של אדם מכפר לו כמזבח — ברכת המזון כחומה מגינה</a></li>
+    </ul>
+  </div>
+
+  <h2 id="section1">"ויקחו לי תרומה" — נתינה מתוך שמחה, לא מתוך חובה</h2>
+
+  <p>ערב שבת פרשת תרומה. "משנכנס אדר מרבים בשמחה, מרבים בהודיה" — כותב המאירי שראוי להודות להשם יתברך בכל עת ובכל זמן, כפי הניסים והנפלאות שנראו לעם ישראל באותו הזמן, וכך כתב זאת לעניין פורים.</p>
+
+  <div class="qa-box">
+    <div class="q">בפרשתנו כתוב "וְיִקְחוּ לִי תְּרוּמָה" — לכאורה היה צריך לכתוב "וְיִתְּנוּ לִי תְּרוּמָה"? הרי מדובר בנתינה, לא בלקיחה!</div>
+    <div class="a">אומר הבן איש חי: אדם צריך להביא את נדבתו מתוך שמחה. אילו הייתה התורה מצווה להביא רק זהב, היו כאלה שהיו מביאים זאת שלא מתוך שמחה גדולה, לא בשלמות הלב. אבל כשאדם מביא משלמות הלב — מזה אפשר לבנות משכן. וזהו "וְיִקְחוּ לִי" ולא "וְיִתְּנוּ לִי": שאדם היודע שכל מה שבידו הוא מתנת השם, אינו "נותן משלו" — הוא רק "לוקח" את מה שהשם כבר נתן לו. וזה מה שחשוב בעיני השם: שאדם זוכר תמיד שכל מה שיש לו הוא מהשם יתברך, ולכן הוא תמיד מודה להשם על כל דבר ודבר. כמו שכתוב: "מִי עָשָׂה לִי מְזוּזָה" — לא "מי עשיתי". אדם יכול להתפאר: "איזו מזוזה מהודרת ויפה עשיתי!" אבל מי נתן לו את הבית שבו יוכל לעשות את המזוזה מלכתחילה?</div>
+  </div>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0">והנה, המשכן שהוא בית השם, לכאורה היה צריך להיבנות כולו מזהב טהור — ובכל זאת, אנו רואים שהוא נבנה מ-15 סוגים שונים של נדבות: זהב, כסף, נחושת, תכלת, ארגמן, תולעת שני, שש, עיזים, עורות אילים מאדמים, עורות תחשים, עצי שיטים, שמן, בשמים ואבני שוהם. הבן איש חי מיישב זאת עם אותו יסוד: אדם נותן משלמות הלב, כל אחד לפי מה שבידו, וכשזה מגיע מתוך שמחה — מזה אפשר לבנות משכן.</p>
+  </div>
+
+  <h2 id="section2">הבריח התיכון — עץ אברהם אבינו, מלמד ההודיה</h2>
+
+  <p>עוד עניין מעניין בפרשה: עמדת המשכן, על "הַבְּרִיחַ הַתִּיכֹן" שעומד מן הקצה לקצה. מהו אותו הבריח? אומרים חז"ל: הוא הסתובב בדרך נס מהקצה לקצה. ומה מקורו של עץ זה?</p>
+
+  <div class="story-box">
+    <p style="margin-bottom:0">אומרים חז"ל: זהו אותו עץ שאברהם אבינו נטע, ותחתיו הכניס את אורחיו ולימד אותם להודות: "ממי אכלת? ממי שתית? מהשם — תודה לו, תברך אותו". אותו עץ נשאו אבותינו ממצרים, וממנו עשו את הבריח התיכון — כי זהו עץ הראוי להשראת שכינה, עץ שתחתיו התקרבו בני אדם להשם והודו לו. עץ שדרכו אפשר, בעצם, להתקרב להשם יתברך.</p>
+  </div>
+
+  <h2 id="section3">השולחן — "זהב טהור" כרמז לברכת המזון</h2>
+
+  <p>כל המפרשים על פרשתנו מתעכבים על עניין מיוחד: "וְצִפִּיתָ אֹתוֹ זָהָב טָהוֹר" — מה עניינו של השולחן, ומה עניינה של ציפוי הזהב הטהור?</p>
+
+  <div class="verse-box">
+    "זָהָב" — ז' (זָן), ה' (הָאָרֶץ), ב' (בּוֹנֶה יְרוּשָׁלַיִם) — רֶמֶז לְשָׁלוֹשׁ בִּרְכוֹת הַמָּזוֹן דְּאוֹרַיְיתָא. וְ"זֵר זָהָב" רֶמֶז לְמַלְכוּת בֵּית דָּוִד.
+    <span class="source-tag">רבנו בחיי</span>
+  </div>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0">כמה מפרשים — הגבול בנימין (רבי בנימין ויטלי); תורת משה למהר"ם אלשיך; פרדס המלך (רבי פנחס בן רבי דוד); כבוד שמיים (רבי אברהם שטרן) — מסכימים כולם על יסוד אחד: לכל יהודי שיש לו שולחן בביתו, השולחן "מכפר לו כמזבח". שולחנו של אדם הוא כמו משכן, וזהו "הַשֻּׁלְחָן אֲשֶׁר לִפְנֵי השם" — כל שולחן של בן אדם הוא כמו לפני השם.</p>
+  </div>
+
+  <div class="quote-box">
+    "אֵין אָדָם בּוֹעֵט אֶלָּא מִתּוֹךְ אֲכִילָה וּשְׁתִיָּה" — "אָכַלְתָּ שָׂבַעְתָּ" — האכילה והשתייה משכיחות מהאדם את הבורא, ומקרבות אותו אל היֵּצֶר. לכן נכתב מיד לאחר מכן "וּבֵרַכְתָּ": שתזכור שכל השפע שיש לך הוא מהשם יתברך.
+    <span class="source-tag">חז"ל, מסכת ברכות לב ע"א</span>
+  </div>
+
+  <p>אומר הפרדס המלך: כדי שהשולחן יכפר לך כמזבח, פשוט מאוד — תברך ברכת המזון בכוונה. אל תזכור מי משפיע לך — אלא זכור! תזכור שהקדוש ברוך הוא הוא זה שמשפיע לך את הבריאות, את הטעם ליהנות מהאוכל, את השפע כולו, ותברך אותו בכוונה גדולה.</p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <h4 style="margin-top:0">עמה וחצי — קרבה ורחוק</h4>
+      <p style="margin-bottom:0">השולחן היה גובהו רק אמה וחצי — תשעה טפחים — כי "אֵין שְׁכִינָה שׁוֹרָה לְמַטָּה מֵעֲשָׂרָה". ככל שאדם רחוק מהעשרה טפחים במאכלו, הוא רחוק מהשכינה — אלא אם כן הוא מקרב עצמו על ידי ברכה בכוונה (הפרדס המלך; רבי בנימין מסטניסלב).</p>
+    </div>
+    <div class="col-gold">
+      <h4 style="margin-top:0">גימטריות בשולחן</h4>
+      <p style="margin-bottom:0">"וְעָשִׂיתָ שֻׁלְחָן עֲצֵי שִׁטִּים" — "שיטים" בגימטריה "ארץ חיים". "אַמָּתַיִם אָרְכּוֹ" — שש ברכות אמה, כמניין שישה טפחים שיש באמה: כנגד ברכת נטילת ידיים, ברכת המוציא, וארבע ברכות ברכת המזון (המהר"ם אלשיך). "וְעָשִׂיתָ לּוֹ אַרְבַּע טַבְּעֹת זָהָב" — "טבעות" מלשון "מטבע" — רמז לארבע ברכות ברכת המזון, "מטבע שטבעו חכמים" (הגבול בנימין).</p>
+    </div>
+  </div>
+
+  <p>ה"זהב" בגימטריה 14, לרמז שיש לברך את שלוש הברכות (או ארבע, כולל דרבנן) ארבע עשרה פעם בשבוע: שתי סעודות ביום חול, שלוש בשבת (הסעודה השלישית לעיתים יוצאים בה במעין ברכה אחרת). כל זה רמוז בפרשתנו, שהיא כולה — השולחן, הטבעות, הזהב — רומזת לעניין "וְעָשׂוּ לִי מִקְדָּשׁ וְשָׁכַנְתִּי בְּתוֹכָם": בתוך כל אחד ואחד, בתנאי אחד — שיברך בכוונה, מילה במילה.</p>
+
+  <div class="story-box">
+    <p style="margin-bottom:0">הרב שך היה ממליץ לאנשים שחיפשו קבלה טובה: "תברך ברכת המזון בכוונה, תברך לאט". פותח הדבר לאדם השפעות טובות רבות כל כך. "שֻׁלְחָנוֹ שֶׁל אָדָם מְכַפֵּר לוֹ כְּמִזְבֵּחַ" — זו הבטחת חז"ל, וזה מה שרמוז בפרשתנו.</p>
+  </div>
+
+  <h2 id="section4">שולחנו של אדם מכפר לו כמזבח — ברכת המזון כחומה מגינה</h2>
+
+  <p>המשכן נבנה מן התרומות והצדקות שנתנו בני ישראל לכבוד השם — כי כשיהודי זוכר שכל מה שיש לו הוא מהשם, הוא מביא את מתנתו מתוך רגשי הודיה ושבח לשם על כל הטובות שיש לו, ואז מובטח לו שהשם ישכין שכינתו עליו: "וְעָשׂוּ לִי מִקְדָּשׁ וְשָׁכַנְתִּי בְּתוֹכָם" — בתוך כל אחד ואחד, בפרט על ידי ברכת המזון.</p>
+
+  <div class="quote-box">
+    בברכת המזון אין את האות "פ" הסופית — ללמדנו שהמלאך המקטרג הנקרא "אַף" (שצף קצף, "ענף") אינו שולט במי שמברך ברכת המזון בכוונה. ברכת המזון עומדת כמו חומה בצורה, מגינה על האדם מכל הכיוונים.
+    <span class="source-tag">מובא בשם השל"ה הקדוש (סימן שט"ו)</span>
+  </div>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0">אדם יכול להיגזר עליו גזרה קשה — אי אפשר לדעת מה יקרה עוד רגע. אך כשמביאים את ברכת המזון שלו לשמיים, ורואים איך בירך אותה — המלאכים, מלאכי החבלה, כל המקטרגים, אומרים: "אמנם נגזרה עליו גזרה, אך אין רשות להתקרב אליו". ברכת המזון עומדת כחומה, ומגינה עליו.</p>
+  </div>
+
+  <p>אדם שמברך ברכת המזון בכוונה זוכה לחומת מגן, זוכה להגנה מכל הפורענויות, זוכה להתעלות. ולפי האר"י ז"ל, אין התעלות גדולה יותר לנפשו של האדם מברכת המזון בכוונה — אפילו יותר מכוונות התפילה עצמה, כי התפילה היא מדרבנן וברכת המזון היא מדאורייתא — גבוהה יותר. אומר האר"י ז"ל שברכת המזון בכוונה עושה ייחודים ותיקונים בעולמות העליונים, ממשיכה שפע למטה, ומעלה פרי למעלה.</p>
+
+  <p>אנשים מחפשים סגולות רבות להגנה — והנה יש לנו דבר שאנו עושים אותו לפחות פעמיים ביום, ובשבת שלוש וארבע פעמים — ומי שעושה זאת בכוונה, זוכה לחומת מגן ולהתעלות עצומה. יהי רצון שנזכה לברך תמיד כל ברכה וברכה בכוונה גדולה, ובזכות זה ישרה הקדוש ברוך הוא שכינתו עלינו, ונזכה לגאולת עולמים במהרה בימינו, אמן.</p>
+
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות</h3>
+    <ol>
+      <li>שמות פרק כה — פרשת תרומה: "ויקחו לי תרומה", עשיית השולחן והבריח התיכון.</li>
+      <li>הבן איש חי — טעם "ויקחו" ולא "ויתנו", וריבוי סוגי הנדבות.</li>
+      <li>חז"ל על עץ אברהם אבינו והבריח התיכון.</li>
+      <li>רבנו בחיי — "זהב" רמז לברכות המזון ולמלכות בית דוד.</li>
+      <li>הגבול בנימין (רבי בנימין ויטלי), תורת משה (מהר"ם אלשיך), פרדס המלך (רבי פנחס בן רבי דוד), כבוד שמיים (רבי אברהם שטרן) — פירושי מידות השולחן.</li>
+      <li>גמרא, מסכת ברכות לב ע"א — "אין אדם בועט אלא מתוך אכילה ושתייה".</li>
+      <li>המאירי — חובת הודיה כפי הניסים שבכל זמן וזמן, ופורים.</li>
+      <li>של"ה הקדוש, סימן שט"ו — אין אות פ' סופית בברכת המזון.</li>
+      <li>האר"י ז"ל — מעלת ברכת המזון בכוונה, ודברי הרב שך בעניין.</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+  </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+(function () {
+    var scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 400) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            var targetId = this.getAttribute('href').slice(1);
+            var target = document.getElementById(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+})();
+
+</script>
+</body>
+</html>
