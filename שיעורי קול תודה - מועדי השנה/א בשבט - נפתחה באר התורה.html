@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="torah-html-article 2.12.0">
+<meta name="description" content="שיעור לא׳ בשבט על פתיחת באר התורה, פירות החידושים והודיה על מתיקות הלימוד.">
+<title>א׳ בשבט — נפתחה באר התורה</title>
+<style>
+/* =============================================================================
+   קול תודה — סגנון בית למאמרים תורניים   |   base.css   v2.0
+   העתק כמות שהוא לתוך <style>. מותר להוסיף אחריו כללים ייחודיים למאמר,
+   אסור לשנות את הקיים.
+   ============================================================================= */
+
+:root {
+    --purple: #7e22ce;  --blue: #2563eb;   --green: #059669;
+    --gold:   #f59e0b;  --pink: #ec4899;   --ink:   #1f2937;
+    --paper:  #ffffff;  --muted: #6b7280;  --line:  rgba(0,0,0,.08);
+    --g-page:      linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --g-verse:     linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    --g-highlight: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    --g-quote:     linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    --g-story:     linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    --g-divider:   linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    --g-title:     linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    /* מכפיל גודל הטקסט הנקרא. נשלט בכפתורי א−/א+ שבסרגל ונשמר ב-localStorage.
+       חל על גוף הטקסט בלבד ולא על הכותרות — הגדלת h1 של 3em הייתה שוברת
+       את הפריסה במקום לעזור. */
+    --fs: 1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0; padding: 40px 20px;
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: var(--g-page);
+    color: var(--ink);
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 900px; margin: 0 auto;
+    padding: 60px 80px;
+    background: var(--paper);
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.1);
+}
+
+/* ---------- כותרות ---------- */
+.main-title {
+    font-size: 3em; font-weight: bold; text-align: center; margin: 0 0 10px;
+    background: var(--g-title); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: var(--purple);
+}
+.subtitle { text-align: center; font-size: 1.25em; color: var(--muted); margin-bottom: 8px; }
+.author   { text-align: center; font-size: 1.05em; color: var(--purple); font-weight: bold; margin-bottom: 10px; }
+
+h2 { font-size: 2.2em; color: var(--purple); border-right: 6px solid var(--purple);
+     padding-right: 20px; margin: 50px 0 20px; }
+h3 { font-size: 1.8em; color: var(--blue);  margin: 35px 0 15px; }
+h4 { font-size: 1.5em; color: var(--green); margin: 25px 0 12px; }
+/* יישור לשני הצדדים — חובה בסגנון הבית, נותן מראה של ספר מודפס. */
+p, li { font-size: calc(1.15em * var(--fs)); line-height: 1.8; margin: 0 0 20px; text-align: justify; text-justify: inter-word; }
+li { margin-bottom: 10px; }
+.verse-box p, .section-divider, .chapter-card p, .footer p { text-align: center; }
+.toc li, .listen-bar p { text-align: right; }
+
+.emphasis { color: var(--purple); font-weight: bold; }
+em { color: var(--blue); font-style: italic; }
+
+/* ---------- מעבר בין פרקים ---------- */
+/* כרטיס הפרק מחליף על המסך את תחושת "הדף החדש" שיש בספר מודפס.
+   בהדפסה הוא מיותר — שם יש מעבר עמוד אמיתי — ולכן הוא מוסתר. */
+.chapter-card {
+    min-height: 55vh; margin: 60px -80px 0; padding: 40px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: var(--g-title); color: #fff; text-align: center;
+}
+.chapter-card .num { font-size: 5.5em; font-weight: bold; line-height: 1; opacity: .85; }
+.chapter-card .name { font-size: 2.2em; font-weight: bold; margin-top: 18px; max-width: 18ch; }
+.chapter-divider {
+    display: flex; align-items: center; gap: 15px; margin: 45px 0;
+    color: var(--gold); font-size: 1.4em;
+}
+.chapter-divider::before, .chapter-divider::after {
+    content: ''; flex: 1; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.chapter-label {
+    display: inline-block; margin-bottom: 6px; padding: 3px 14px;
+    background: var(--purple); color: #fff; border-radius: 20px;
+    font-size: .55em; font-weight: bold; letter-spacing: .5px; vertical-align: middle;
+}
+.in-this-chapter {
+    background: var(--g-highlight); border-right: 6px solid var(--blue);
+    border-radius: 12px; padding: 22px 26px; margin: 22px 0 32px;
+}
+.in-this-chapter h4 { margin: 0 0 10px; font-size: 1.1em; color: var(--blue); }
+.in-this-chapter ul { margin: 0; padding-right: 20px; }
+.in-this-chapter li { font-size: 1em; margin-bottom: 6px; text-align: right; }
+
+.story-title { display: block; font-size: 1.25em; font-weight: bold; color: var(--green); margin-bottom: 12px; }
+
+/* ---------- קופסאות תוכן ---------- */
+.verse-box, .highlight-box, .quote-box, .story-box, .qa-box {
+    padding: 28px; margin: 30px 0; border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.verse-box     { background: var(--g-verse); border: 2px solid var(--purple);
+                 text-align: center; font-size: 1.3em; font-weight: 600; color: var(--purple); }
+.verse-box p   { font-size: calc(1em * var(--fs)); margin: 0; }
+.highlight-box { background: var(--g-highlight); border-right: 6px solid var(--blue);
+                 box-shadow: 0 5px 15px rgba(126,34,206,.15); }
+.quote-box     { background: var(--g-quote); border-right: 6px solid var(--gold); font-style: italic; }
+.story-box     { background: var(--g-story); border-right: 6px solid var(--green); }
+.qa-box        { background: #fff; border: 2px dashed var(--pink); }
+.verse-box p:last-child, .highlight-box p:last-child, .quote-box p:last-child,
+.story-box p:last-child, .qa-box p:last-child { margin-bottom: 0; }
+
+.source-tag { display: block; margin-top: 12px; font-size: .9em; font-style: normal;
+              color: var(--muted); font-weight: bold; }
+
+.section-divider {
+    background: var(--g-divider); color: #fff; text-align: center;
+    padding: 18px 25px; margin: 45px 0; border-radius: 10px;
+    font-size: 1.3em; font-weight: bold; letter-spacing: .5px;
+}
+
+.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 30px 0; }
+.two-columns > div { padding: 25px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,.1); }
+.col-purple { background: var(--g-verse);  border-top: 5px solid var(--purple); }
+.col-gold   { background: var(--g-quote);  border-top: 5px solid var(--gold); }
+
+/* ---------- תוכן עניינים / מקורות / חתימה ---------- */
+.toc { background: #faf5ff; border: 2px solid #e9d5ff; border-radius: 12px; padding: 25px 30px; margin: 30px 0; }
+.toc h3 { margin-top: 0; color: var(--purple); }
+.toc ul { list-style: none; padding: 0; margin: 0; }
+.toc li { margin-bottom: 8px; }
+.toc a { color: var(--blue); text-decoration: none; font-size: 1.05em; }
+.toc a:hover { text-decoration: underline; color: var(--purple); }
+/* מפתח עניינים היררכי: כותרת הפרק בבולד, ומתחתיה שורה מעומעמת של תתי-הסעיפים,
+   כשכל אחד מהם קישור עצמאי. */
+.toc > ul > li { margin-bottom: 14px; }
+.toc-chapter { font-weight: bold; font-size: 1.1em; color: var(--purple); }
+.toc-subs { display: block; margin-top: 3px; font-size: .9em; color: var(--muted); line-height: 1.7; }
+.toc-subs a { font-size: 1em; color: var(--muted); }
+.toc-subs a:hover { color: var(--blue); }
+.toc-subs span { margin: 0 6px; opacity: .5; }
+
+/* ---------- מבט-על: רשת הפרקים ----------
+   בא *לפני* מפתח העניינים המפורט. תפקידו שונה: לא ניווט מדויק אלא תחושה
+   מיידית של היקף הספר — כמה פרקים יש ומה מכסה כל אחד. */
+.chapter-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 22px;
+    background: linear-gradient(160deg, #fffdf7 0%, #fdf8ee 100%);
+    border: 1px solid #efe4cd; border-radius: 18px;
+    padding: 34px 30px; margin: 30px 0;
+}
+.chapter-grid .grid-title {
+    grid-column: 1 / -1; text-align: center; margin: 0 0 14px;
+    font-size: 1.6em; color: var(--purple); letter-spacing: 1px;
+    border: none; padding: 0;   /* מבטל את הפס הסגול שיורש מ-h2 */
+}
+.chapter-chip {
+    display: flex; align-items: center; gap: 12px;
+    color: var(--ink); text-decoration: none; font-size: 1.02em; line-height: 1.45;
+    padding: 6px 8px; border-radius: 10px; transition: background .18s, transform .18s;
+}
+.chapter-chip:hover { background: rgba(245,158,11,.12); transform: translateX(-3px); }
+.chapter-chip .n {
+    flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #c9982f; color: #fff; font-size: .82em; font-weight: bold;
+}
+/* הקדמה, מבוא, נספחים — לא ממוספרים, ומסומנים אחרת */
+.chapter-chip.is-front .n { background: #1e2a5a; font-size: .7em; }
+
+@media (max-width: 900px) { .chapter-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .chapter-grid { grid-template-columns: 1fr; padding: 24px 18px; } }
+
+.sources { background: #f9fafb; border-radius: 12px; padding: 25px 30px; margin-top: 50px; border: 1px solid var(--line); }
+.sources h3 { margin-top: 0; }
+.sources li { font-size: calc(1em * var(--fs)); }
+
+.footer { margin-top: 55px; padding-top: 30px; border-top: 3px solid var(--gold);
+          text-align: center; font-size: 1.05em; }
+.footer a { color: var(--blue); }
+/* קופסת "שיעורים נוספים" שבתוך החתימה. הייתה גרדיאנט תכלת קשיח בתוך ה-HTML,
+   ולכן במצב כהה היא זהרה כמלבן בהיר בתחתית עמוד כהה. */
+.footer-more { margin-top: 30px; padding: 25px; border-radius: 10px;
+               background: var(--g-highlight); color: var(--ink); }
+.footer-more h4 { margin-top: 0; }
+
+.scroll-top {
+    position: fixed; bottom: 30px; left: 30px; z-index: 50;
+    width: 50px; height: 50px; border-radius: 50%;
+    background: var(--g-title); color: #fff; text-decoration: none;
+    display: none; align-items: center; justify-content: center;
+    font-size: 1.3em; box-shadow: 0 5px 15px rgba(0,0,0,.25);
+}
+.scroll-top.visible { display: flex; }
+
+/* ---------- סרגל ההאזנה ---------- */
+.listen-bar {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 15px;
+    margin: 25px 0; padding: 18px 25px;
+    background: var(--g-quote); border-radius: 12px;
+    border-right: 6px solid var(--gold);
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.listen-btn-group { display: flex; gap: 8px; align-items: center; }
+.listen-btn {
+    display: flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
+    color: #fff; border: none; border-radius: 30px; padding: 10px 22px;
+    font-size: 1em; font-weight: bold; font-family: inherit; cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+}
+.listen-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(126,34,206,.3); }
+.listen-btn:active { transform: translateY(0); }
+.listen-stop-btn, .listen-skip-btn, .listen-size-btn {
+    background: #fff; color: var(--purple); border: 2px solid var(--purple);
+    border-radius: 30px; padding: 8px 16px; font-size: .95em; font-weight: bold;
+    font-family: inherit; cursor: pointer; transition: transform .15s, background .15s;
+}
+.listen-skip-btn { padding: 8px 12px; }
+.listen-stop-btn:hover, .listen-skip-btn:hover,
+.listen-size-btn:hover:not(:disabled) { transform: translateY(-2px); background: #f3e8ff; }
+
+/* גודל טקסט. ה-disabled בקצוות הוא מה שמונע לחיצות סרק על כפתור שכבר
+   הגיע לגבול, בלי שום משוב. */
+.listen-size { display: flex; align-items: center; gap: 6px; font-size: .9em; color: #78350f; }
+.listen-size-btn { padding: 6px 12px; line-height: 1; }
+.listen-size-btn:disabled { opacity: .35; cursor: default; border-color: #d1d5db; color: var(--muted); }
+.listen-size-btn.big { font-size: 1.25em; }
+.listen-size output { font-weight: bold; min-width: 3.4em; text-align: center; }
+
+/* מתג "לחיצה על פסקה מקריאה". כשהוא כבוי הוא נראה כבוי — אפור ודהוי — כדי
+   שיהיה ברור במבט אחד למה נגיעה בטקסט לא עושה כלום. */
+.listen-toggle-btn {
+    background: #fff; color: var(--purple); border: 2px solid var(--purple);
+    border-radius: 30px; padding: 8px 14px; font-size: .88em; font-weight: bold;
+    font-family: inherit; cursor: pointer; white-space: nowrap;
+    transition: transform .15s, background .15s, opacity .15s;
+}
+.listen-toggle-btn:hover { transform: translateY(-2px); background: #f3e8ff; }
+.listen-toggle-btn[aria-pressed="false"] {
+    color: var(--muted); border-color: #d1d5db; background: #f9fafb; opacity: .8;
+}
+.listen-toggle-btn:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+.listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+.listen-skip-btn:focus-visible, .listen-size-btn:focus-visible,
+.listen-voice select:focus-visible,
+.listen-rate input:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+
+.listen-status   { font-size: .95em; color: #78350f; flex: 1 1 200px; }
+.listen-progress { font-size: .9em; color: #78350f; font-weight: bold; white-space: nowrap; }
+.listen-rate, .listen-voice { display: flex; align-items: center; gap: 6px; font-size: .9em; color: #78350f; }
+.listen-rate input { accent-color: var(--purple); }
+.listen-rate output { font-weight: bold; min-width: 2.6em; }
+.listen-voice select {
+    border-radius: 20px; border: 1px solid var(--gold); padding: 4px 10px;
+    font-family: inherit; background: #fff; color: var(--ink); max-width: 190px;
+}
+
+.tts-clickable { cursor: pointer; transition: background .2s; border-radius: 6px; }
+.tts-clickable:hover { background: rgba(245,158,11,.10); }
+/* הטבעת הוורודה מצוירת *בתוך* גבול האלמנט (inset), ולפסקה אין ריפוד אופקי
+   משלה — ולכן בלעדי הריפוד כאן הטבעת יושבת ממש על האות הראשונה והאחרונה
+   בכל שורה. אנכית הבעיה לא קיימת, כי line-height 1.8 כבר משאיר אוויר.
+   המרג'ין השלילי הנגדי מחזיר את הטקסט למקומו המדויק, כך שהמעבר בין פסקה
+   מודגשת לרגילה לא מזיז את השורות. */
+.reading-highlight {
+    background: var(--g-verse); border-radius: 8px;
+    box-shadow: 0 0 0 3px var(--pink) inset; transition: background .3s;
+    padding-right: 14px; padding-left: 14px;
+    margin-right: -14px; margin-left: -14px;
+}
+/* ל-h2 יש כבר ריפוד ימני משלו (המרווח מהפס הסגול) — מוסיפים עליו, לא דורסים. */
+h2.reading-highlight { padding-right: 34px; }
+
+/* ---------- נייד ---------- */
+@media (max-width: 768px) {
+    body { padding: 15px 10px; }
+    .container { padding: 30px 22px; border-radius: 12px; }
+    .main-title { font-size: 2em; }
+    h2 { font-size: 1.6em; padding-right: 14px; margin-top: 35px; }
+    h3 { font-size: 1.35em; } h4 { font-size: 1.15em; }
+    p, li { font-size: calc(1.08em * var(--fs)); }
+    .two-columns { grid-template-columns: 1fr; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .qa-box { padding: 20px; }
+    /* ריפוד ה-h2 בנייד קטן יותר (14px), ולכן גם התוספת של טבעת ההקראה */
+    .reading-highlight { padding-right: 10px; padding-left: 10px;
+                         margin-right: -10px; margin-left: -10px; }
+    h2.reading-highlight { padding-right: 24px; }
+    .listen-bar { padding: 15px; gap: 10px; }
+    .listen-status { flex: 1 1 100%; }
+    .listen-voice select { max-width: 140px; }
+    .scroll-top { bottom: 18px; left: 18px; width: 44px; height: 44px; }
+    .chapter-card { margin-left: -22px; margin-right: -22px; min-height: 42vh; padding: 30px 20px; }
+    .chapter-card .num { font-size: 3.8em; }
+    .chapter-card .name { font-size: 1.5em; }
+}
+
+/* ---------- העדפת תנועה מופחתת ---------- */
+@media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .01ms !important; animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    .listen-btn:hover, .listen-stop-btn:hover, .listen-skip-btn:hover { transform: none; }
+}
+
+/* ---------- מצב כהה (קריאה בטלפון בלילה) ---------- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --paper: #1c1b22; --ink: #e8e6ef; --muted: #a8a4b8; --line: rgba(255,255,255,.10);
+        --purple: #c084fc; --blue: #7dd3fc; --green: #4ade80; --gold: #fbbf24; --pink: #f9a8d4;
+        --g-page:      linear-gradient(135deg, #14131a 0%, #221f2e 100%);
+        --g-verse:     linear-gradient(135deg, #2a2440 0%, #3a2436 100%);
+        --g-highlight: linear-gradient(135deg, #1e2c44 0%, #262244 100%);
+        --g-quote:     linear-gradient(135deg, #3a2f16 0%, #4a3a18 100%);
+        --g-story:     linear-gradient(135deg, #16332a 0%, #14291f 100%);
+    }
+    .container { box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+    .toc     { background: #241f33; border-color: #3d2f57; }
+    .chapter-grid { background: linear-gradient(160deg, #262133 0%, #201c2b 100%); border-color: #3d3350; }
+    .chapter-chip { color: var(--ink); }
+    .chapter-chip .n { background: #b08a2e; }
+    .chapter-chip.is-front .n { background: #3b4a86; }
+    .sources { background: #201f28; }
+    .qa-box  { background: #201f28; }
+    .listen-status, .listen-progress, .listen-rate, .listen-voice { color: #fde68a; }
+    .listen-size { color: #fde68a; }
+    .listen-stop-btn, .listen-skip-btn, .listen-toggle-btn, .listen-size-btn { background: #2a2438; color: #e9d5ff; border-color: #c084fc; }
+    .listen-size-btn:disabled { background: #232029; color: #8b8698; border-color: #3f3b4a; }
+    .listen-toggle-btn[aria-pressed="false"] { background: #232029; color: #8b8698; border-color: #3f3b4a; }
+    .listen-stop-btn:hover, .listen-skip-btn:hover { background: #3a3050; }
+    .listen-voice select { background: #2a2438; color: var(--ink); }
+    .tts-clickable:hover { background: rgba(251,191,36,.12); }
+}
+
+/* ---------- הדפסה A4 ---------- */
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; color: #000 !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important;
+                 box-shadow: none !important; border-radius: 0 !important; background: #fff !important; }
+    /* כרטיס הפרק והמפריד קיימים כדי לדמות "דף חדש" על המסך.
+       בנייר יש מעבר עמוד אמיתי, ולכן הם רק היו מבזבזים עמוד שלם. */
+    .scroll-top, .listen-bar, .chapter-card, .chapter-divider, .chapter-grid { display: none !important; }
+    .chapter-label { background: none !important; color: #4a0080 !important; padding: 0 !important; }
+    .in-this-chapter { page-break-inside: avoid; break-inside: avoid; }
+    p, li { text-align: justify; }
+    .reading-highlight { box-shadow: none !important; background: none !important; }
+    .tts-clickable { cursor: auto; }
+    /* מעבר העמוד יושב על .chapter-label ולא על ה-h2: התווית ("פרק ב") קודמת
+       ל-h2 ב-HTML, ובלי כלל משלה היא נשארת בסוף העמוד הקודם בזמן שה-h2 עצמו
+       פותח את העמוד החדש — הפרק מתחיל בלי לציין איזה פרק זה. ה-break-after
+       על התווית שומר אותה צמודה ל-h2 שאחריה, כך שהשניים תמיד עולים יחד.
+       ל-h2 של ה"הקדמה" אין .chapter-label לפניו, אבל הוא ממילא מתחיל בעמוד
+       חדש כי ה-toc שלפניו מסתיים ב-page-break-after: always. */
+    .chapter-label { page-break-before: always; break-before: page;
+                      page-break-after: avoid; break-after: avoid; }
+    h2 { font-size: 16pt !important; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    h3 { font-size: 13pt !important; } h4 { font-size: 12pt !important; }
+    p, li { font-size: 11pt !important; orphans: 3; widows: 3; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box, .section-divider {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; background: none !important;
+                  -webkit-text-fill-color: #4a0080 !important; color: #4a0080 !important; }
+    .footer { page-break-before: always; break-before: page; }
+    a { color: #000 !important; text-decoration: none; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #444; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+
+
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;top:12px;right:12px;z-index:9999;background:#5b21b6;color:#fff;padding:7px 14px;border-radius:20px;font:600 14px Heebo,Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)" class="kt-back">📚 לכל השיעורים</a><style>@media print{.kt-back{display:none!important}}</style>
+<div class="container">
+    <h1 class="main-title" id="top">א׳ בשבט<br>נפתחה באר התורה</h1>
+    <div class="subtitle">משה רבנו מבאר את התורה, האילן מצמיח פירות והדלי מלמד כיצד שואבים חידושי תורה</div>
+    <div class="author">מאת: הרב יהודה טאוב</div>
+
+    <div class="listen-bar">
+        <div class="listen-btn-group">
+            <button class="listen-btn" id="listenBtn" onclick="toggleListen()" aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן למאמר</button>
+            <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+            <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+            <button class="listen-skip-btn" onclick="skipListen(1)" aria-label="פסקה הבאה" title="פסקה הבאה">⏭</button>
+            <button class="listen-skip-btn" onclick="skipChapter(1)" aria-label="פרק הבא" title="פרק הבא">⏩</button>
+            <button class="listen-stop-btn" onclick="stopListen()" aria-label="עצור הקראה">⏹ עצור</button>
+            <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()" aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+        </div>
+        <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+        <span class="listen-progress" id="listenProgress"></span>
+        <div class="listen-rate">
+            <label for="rateRange">מהירות:</label>
+            <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1" oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)" aria-label="מהירות הקראה">
+            <output id="rateValue" for="rateRange">1.0×</output>
+        </div>
+        <div class="listen-voice">
+            <label for="voiceSelect">קול:</label>
+            <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+        </div>
+        <div class="listen-size">
+            <span>גודל טקסט:</span>
+            <button class="listen-size-btn" id="fontSmaller" onclick="setFontScale(-1)" aria-label="הקטן את הטקסט" title="הקטן את הטקסט">א−</button>
+            <output id="fontScaleValue">100%</output>
+            <button class="listen-size-btn big" id="fontBigger" onclick="setFontScale(1)" aria-label="הגדל את הטקסט" title="הגדל את הטקסט">א+</button>
+        </div>
+    </div>
+
+    <nav class="chapter-grid" aria-label="מבט על פרקי הספר">
+<h2 class="grid-title">פִּרְקֵי הַסֵּפֶר</h2>
+<a class="chapter-chip is-front" href="#intro"><span class="n">◆</span>הַקְדָּמָה</a>
+<a class="chapter-chip" href="#section1"><span class="n">1</span>היום שבו משה ביאר</a>
+<a class="chapter-chip" href="#section2"><span class="n">2</span>האילן ופירות התורה</a>
+<a class="chapter-chip" href="#section3"><span class="n">3</span>לשאוב בדלי של הודיה</a>
+<a class="chapter-chip" href="#section4"><span class="n">4</span>מא׳ בשבט לט״ו בשבט</a>
+</nav>
+<div class="toc"><h3>📑 תוכן העניינים</h3><ul>
+<li><a class="toc-chapter" href="#section1">היום שבו משה ביאר</a><span class="toc-subs"><a href="#sec1a">תאריך שהתורה מדגישה</a><span>·</span><a href="#sec1b">באר משה</a></span></li>
+<li><a class="toc-chapter" href="#section2">האילן ופירות התורה</a><span class="toc-subs"><a href="#sec2a">עץ חיים</a><span>·</span><a href="#sec2b">חידושי תורה כפירות</a></span></li>
+<li><a class="toc-chapter" href="#section3">לשאוב בדלי של הודיה</a><span class="toc-subs"><a href="#sec3a">בור, באר ומעיין</a><span>·</span><a href="#sec3b">ברכות התורה כברכות הנהנין</a></span></li>
+<li><a class="toc-chapter" href="#section4">מא׳ בשבט לט״ו בשבט</a><span class="toc-subs"><a href="#sec4a">הנותן והמקבל</a><span>·</span><a href="#sec4b">הפירות המתוקים ביותר</a></span></li>
+</ul></div>
+<h2 id="intro">הקדמה</h2>
+<div class="highlight-box"><p>התורה מציינת במדויק שבא׳ בשבט החל משה רבנו לבאר את התורה. אם נכתב התאריך, יש בו משמעות לדורות: בראש חודש שבט מתעורר כוח חדש של תורה שבעל פה, של ביאור ושל חידוש.</p></div>
+<p>מתוך היום הזה עולות ארבע שאלות: מדוע התחיל הביאור דווקא בא׳ בשבט? מה הקשר בין התורה לאילנות של ט״ו בשבט? מדוע מזל החודש הוא דלי? ומדוע המשנה אומרת „כדברי בית שמאי” בלשון יוצאת דופן? התשובות מתחברות למהלך אחד: שפע התורה ניתן מלמעלה, אך האדם צריך לשאוב אותו ולהודות עליו.</p>
+
+<span class="chapter-label">פרק א</span><h2 id="section1">היום שבו משה ביאר</h2>
+<div class="in-this-chapter"><h4>📖 בפרק זה:</h4><ul><li>התאריך המדויק בחומש דברים.</li><li>א׳ בשבט כזמן של השגת תורה שבעל פה.</li><li>זכרו של בעל „באר משה”.</li></ul></div>
+<h3 id="sec1a">תאריך שהתורה מדגישה</h3>
+<div class="verse-box">„וַיְהִי בְּאַרְבָּעִים שָׁנָה, בְּעַשְׁתֵּי עָשָׂר חֹדֶשׁ, בְּאֶחָד לַחֹדֶשׁ, דִּבֶּר מֹשֶׁה אֶל בְּנֵי יִשְׂרָאֵל... בֵּאֵר אֶת הַתּוֹרָה הַזֹּאת”.<span class="source-tag">דברים א, ג–ה</span></div>
+<p>לפי היסוד המובא בשם חידושי הרי״ם, התורה אינה מציינת תאריך ללא טעם. א׳ בשבט הוא יום המתאים בעצם מהותו לפתיחת הביאור. בחודש זה מתחילים להיפתח מעיינות ההשגה של תורה שבעל פה, וכוחו של משה רבנו המבאר מתחדש בכל נפש מישראל.</p>
+<h3 id="sec1b">„באר משה”</h3>
+<div class="story-box"><p>האדמו״ר רבי משה יחיאל הלוי מאוז׳רוב, מחבר סדרת הספרים „באר משה”, הסתלק בא׳ בשבט. על מצבתו הודגש כי עלה השמימה ביום שבו „הואיל משה באר את התורה הזאת”. שמו, ספרו ויום הסתלקותו התחברו כולם לבאר התורה של משה רבנו.</p></div>
+<p>הוא לימד שאדם אינו מסתפק בכך שהוא עצמו לומד. עליו להיות „פורה” בתורה: ללמד, לחנך ולהעמיד אחרים שיוכלו להרביץ תורה. פירות התורה אינם נשארים אצל הלומד לבדו.</p>
+
+<div class="chapter-card"><span class="num">ב</span><span class="name">האילן ופירות התורה</span></div><div class="chapter-divider">✡</div>
+<span class="chapter-label">פרק ב</span><h2 id="section2">האילן ופירות התורה</h2>
+<div class="in-this-chapter"><h4>📖 בפרק זה:</h4><ul><li>התורה כעץ חיים.</li><li>תורה שבכתב כגוף האילן.</li><li>חידושי תורה כפירות הצומחים ממנו.</li></ul></div>
+<h3 id="sec2a">„עץ חיים היא”</h3>
+<div class="verse-box">„עֵץ חַיִּים הִיא לַמַּחֲזִיקִים בָּהּ, וְתֹמְכֶיהָ מְאֻשָּׁר”.<span class="source-tag">משלי ג, יח</span></div>
+<p>העולם הגשמי משקף מציאויות רוחניות. כנגד התורה העליונה נברא כאן האילן. לכן בחג השבועות, זמן מתן תורתנו, נידונים גם על פירות האילן. כאשר מתחדש שפע התורה, מתברכים גם האילנות המכוונים כנגדה.</p>
+<h3 id="sec2b">חידושי תורה הם הפירות</h3>
+<p>בספר „אמרי צופים” מובא שתורה שבכתב היא כגוף האילן, תורה שבעל פה היא ענפיו ופירותיו, וחידושי התורה שישראל מחדשים הם הפירות המתוקים הצומחים ממנו. כאשר השרף מתחיל לעלות באילנות, מתעורר גם כוח הצמיחה הרוחני.</p>
+<div class="highlight-box"><p>א׳ בשבט הוא תחילת התנועה הפנימית; ט״ו בשבט הוא זמן הופעת הפירות. לכן משה מתחיל לבאר בא׳ בשבט, ומכאן ואילך נפתח זמן מסוגל לחידושים ולהעמקה.</p></div>
+
+<div class="chapter-card"><span class="num">ג</span><span class="name">לשאוב בדלי של הודיה</span></div><div class="chapter-divider">✡</div>
+<span class="chapter-label">פרק ג</span><h2 id="section3">לשאוב בדלי של הודיה</h2>
+<div class="in-this-chapter"><h4>📖 בפרק זה:</h4><ul><li>ההבדל בין בור, באר ומעיין.</li><li>מזל דלי כקריאה לעמל.</li><li>הודיה על הנאת התורה.</li></ul></div>
+<h3 id="sec3a">בור, באר ומעיין</h3>
+<div class="two-columns"><div class="col-purple"><h4>המתנה מלמעלה</h4><p>הבאר קיימת לפני השואב. המים אינם יצירה שלו. כך התורה ניתנת מאת הקדוש ברוך הוא.</p></div><div class="col-gold"><h4>העבודה מלמטה</h4><p>כדי ליהנות ממי הבאר צריך להביא דלי ולשאוב. כך נדרשים עמל, תפילה ורצון כדי לזכות באורה של תורה.</p></div></div>
+<p>בור נחפר ומתמלא בידי אדם; מעיין נובע מעצמו; באר כבר קיימת, אך צריך לשאוב ממנה. „באר התורה” מחברת מתנה אלוקית עם אחריות אנושית. חודש שבט, שמזלו דלי, מזכיר לנו לבוא אל הבאר עם הכלי הנכון.</p>
+<h3 id="sec3b">ברכות התורה כברכות הנהנין</h3>
+<p>הלבוש מדגיש את הזהירות בברכות התורה: על האדם להראות שהתורה חשובה בעיניו ושהוא נהנה ממנה. הוא משווה את ברכות העולה לתורה לברכה שלפני ההנאה ולאחריה. התורה איננה רק חובה; היא מתיקות ותענוג רוחני.</p>
+<div class="highlight-box"><p>הדרך לזכות לעוד חידושים היא להודות על מה שכבר קיבלנו. כל הבנה חדשה, כל קושיה שהתיישבה וכל פסוק שהאיר — הם מתנה. ההודיה מרחיבה את כלי הקבלה ומעמיקה את אהבת השם.</p></div>
+
+<div class="chapter-card"><span class="num">ד</span><span class="name">מא׳ בשבט לט״ו בשבט</span></div><div class="chapter-divider">✡</div>
+<span class="chapter-label">פרק ד</span><h2 id="section4">מא׳ בשבט לט״ו בשבט</h2>
+<div class="in-this-chapter"><h4>📖 בפרק זה:</h4><ul><li>מחלוקת בית שמאי ובית הלל.</li><li>השפע הניתן בתחילת החודש ומתגלה באמצעו.</li><li>תלמוד תורה כפירות בעולם הזה.</li></ul></div>
+<h3 id="sec4a">הנותן והמקבל</h3>
+<div class="quote-box">„בְּאֶחָד בִּשְׁבָט רֹאשׁ הַשָּׁנָה לָאִילָן, כְּדִבְרֵי בֵית שַׁמַּאי; בֵּית הִלֵּל אוֹמְרִים: בַּחֲמִשָּׁה עָשָׂר בּוֹ”.<span class="source-tag">משנה ראש השנה א, א</span></div>
+<p>אפשר לבאר שבית שמאי מתבוננים בשעת נתינת השפע: הוא יורד כבר בא׳ בשבט. בית הלל מתבוננים בשעת קבלתו וגילויו בעולם: בט״ו בשבט, כאשר הלבנה מלאה והצמיחה ניכרת יותר. אין כאן שני תהליכים נפרדים, אלא נתינה פנימית ולאחריה הופעה גלויה.</p>
+<h3 id="sec4b">הפירות המתוקים ביותר</h3>
+<div class="story-box"><p>מסופר שבט״ו בשבט התאספו אורחים רבים אצל אחד מצדיקי זידיטשוב, והפירות לא הספיקו לכולם. אמר הצדיק: אם פירות אתם מבקשים, לכו אל הדברים שאדם אוכל פירותיהם בעולם הזה והקרן קיימת לו לעולם הבא — „ותלמוד תורה כנגד כולם”. שם תמצאו פירות בלי דוחק.</p></div>
+<p>כשם שאנו מודים בט״ו בשבט על פירות הארץ ומבקשים ברכה לשנה הבאה, כך נודה על פירות התורה שכבר זכינו להם. מתוך ההודיה יצמחו בעזרת השם חידושים נוספים.</p>
+<div class="section-divider">הבאר מלאה — הביאו את הדלי, שאבו תורה והודו על כל טיפה</div>
+<div class="highlight-box"><h4>סיכום — מן הבאר אל הפירות</h4><p>בא׳ בשבט החל משה לבאר את התורה, ובאותו זמן מתחיל השרף לעלות באילנות. שני התהליכים מלמדים על שפע שכבר ניתן בפנים ומבקש לצאת אל הפועל: התורה היא עץ החיים, החידושים הם פירותיה, והאדם הוא השואב הבא אל הבאר עם דלי של עמל, תפילה והודיה. כשאנו מבחינים במתיקות שקיבלנו ומודים עליה, הלימוד חדל להיות משימה בלבד ונעשה מפגש עם נותן התורה. מן ההכרה במתנה צומחת מאליה אהבת השם.</p></div>
+<div class="sources"><h3>📚 מקורות ומראי מקומות</h3><ol>
+<li>דברים א, ג–ה — תחילת ביאור התורה בא׳ בשבט.</li>
+<li>משלי ג, יח — „עץ חיים היא למחזיקים בה”.</li>
+<li>משנה ראש השנה א, א — מחלוקת בית שמאי ובית הלל בראש השנה לאילן.</li>
+<li>תלמוד בבלי, ראש השנה טז ע״א — בחג השבועות נידונים על פירות האילן.</li>
+<li>חידושי הרי״ם — התעוררות השגת תורה שבעל פה בחודש שבט.</li>
+<li>לבוש, אורח חיים סימן מז — חשיבות ברכות התורה וההנאה מן התורה.</li>
+<li>משנה פאה א, א — „ותלמוד תורה כנגד כולם”.</li>
+</ol></div>
+
+    <div class="footer">
+        <strong>נכתב ונערך על ידי:</strong><br>
+        <strong>הרב יהודה טאוב</strong><br>
+        קרית אתא<br>
+        📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+        <div class="footer-more">
+            <h4>🎧 שיעורים נוספים של הרב</h4>
+            <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+            <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+            <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+        </div>
+    </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop" aria-label="חזרה לראש העמוד">▲</a>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+        var t = document.querySelector(this.getAttribute('href'));
+        if (!t) return;
+        e.preventDefault();
+        t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+window.addEventListener('scroll', function () {
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+});
+</script>
+<script>
+/* =============================================================================
+   קול תודה — מנוע הקראה למאמרים תורניים   |   tts.js   v2.2
+   -----------------------------------------------------------------------------
+   העתק את הקובץ הזה כמות שהוא לתוך תגית <script> בסוף ה-HTML.
+   אין לכתוב אותו מחדש, לקצר או "לשפר" תוך כדי יצירת מאמר — הוא נבדק כך.
+   Web Speech API בלבד: בלי API חיצוני, בלי מפתח, בלי רשת, בלי עלות.
+   ============================================================================= */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    /* ---------- הגדרות ---------- */
+    var NS       = 'koltoda.tts.';                 // מרחב שמות ב-localStorage, משותף לכל המאמרים
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;                           // תווים לכל אמירה — מתחת לסף הקטיעה של Chrome
+    // כל אלה הם ניווט או מטא-מידע, לא גוף המאמר. מי שמאזין לא רוצה לשמוע
+    // את מפתח העניינים, את רשימת המקורות או את "בפרק זה" לפני כל פרק.
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    /* ---------- מצב ---------- */
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false, noHeVoice = false;
+    var clickToRead = true;          // נטען מ-localStorage ב-init
+
+    /* ---------- אלמנטים ---------- */
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    // התווית ההתחלתית נלקחת מה-HTML ולא מקובעת בקוד, כדי שתבניות שונות
+    // (למשל "האזן" בספר מול "האזן למאמר" במאמר) יחזרו לטקסט הנכון שלהן.
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+    // POS_KEY הוא מפתח מלא ולא עובר דרך store(). גם הקריאה שלו חייבת try —
+    // בספארי פרטי ובקבצי file:// מסוימים localStorage.getItem זורק, וחריגה
+    // כאן הייתה משתקת את כפתור ההאזנה עצמו (הקריאה יושבת בתוך toggleListen).
+    function readPos() { try { return parseInt(localStorage.getItem(POS_KEY) || '0', 10) || 0; } catch (e) { return 0; } }
+
+    /* =========================================================================
+       1. עיבוד הטקסט להקראה
+       ========================================================================= */
+
+    var G = '["\\u05f4\\u201d\\u2033]';        // גרשיים על כל וריאציותיהם
+    var R = "['\\u05f3\\u2019]";               // גרש
+
+    // מילון ראשי תיבות. חל *רק* על הטקסט שנשלח למנוע הדיבור —
+    // הטקסט שעל המסך נשאר בדיוק כפי שנכתב.
+    // ה-([ובלכמשהד]{0,2}) הוא קריטי בעברית: ראשי תיבות כמעט תמיד מופיעים עם
+    // אות שימוש דבוקה — "בשו״ע", "ובמשנ״ב", "כשו״ת". בלי זה הכלל פשוט לא נורה
+    // ברוב המופעים האמיתיים. האות נשמרת ומוצמדת חזרה למילה המלאה.
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    // מנועי TTS עבריים נתקעים על גרשיים בתוך מילה — לפעמים מאייתים אות-אות.
+    // הסרתם הופכת את המילה לקריאה רציפה (רמב"ם → רמבם) וזה נשמע נכון בהרבה.
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    // "ה'" — מנוע ההקראה מבטא את זה כאות בודדת ("הא"), ולא כשמו של הקב"ה.
+    // מחליפים ל"השם". על המסך זה נשאר "ה'" כמובן — ההחלפה היא רק במה שנשלח
+    // למנוע הדיבור.
+    // המלכודת: אותו "ה'" הוא גם מספר — "פרק ה'", "יום ה'", "סימן ה'" — ושם
+    // דווקא נכון לקרוא "ה". לכן ההקשרים המספריים מוחרגים.
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = speakHebrewReferences(speakHebrewDates(text));
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');   // פעמיים, לרצפים כמו תשע"ג-תשע"ד
+        // גרשיים עוטפים ציטוט (למשל "כִּי יִהְיֶה...") — INWORD_G כבר מיזג את אלה שבתוך
+        // ראשי-תיבות כמו רמב"ם, אבל גרשיים פותחים/סוגרים ציטוט שלם נשארים כתו בודד,
+        // צמוד לנקודה או לתחילת/סוף המשפט. כשהם נופלים בגבול חיתוך לאמירה, המנוע
+        // מקבל אמירה שהיא רק התו הזה, ומקריא אותו מילולית כ"גרשיים". אין להם ערך
+        // קולי, ולכן פשוט מוסרים מהטקסט הנשלח למנוע (על המסך הם נשארים כרגיל).
+        t = t.replace(/["״“”″]/g, '');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');       // אימוג'י (זוגות surrogate)
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' '); // סמלים ודינגבטים
+        t = t.replace(/־/g, ' ');                               // מקף עברי → רווח
+        t = t.replace(/\s*[–—]\s*/g, ', ');                // מקף ארוך → פסיק (הפוגה טבעית)
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');                   // רווח אחרי סימן פיסוק
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    // תאריך עברי קצר נכתב בדרך כלל באותיות (א׳ בשבט, י״ב באדר). מנועי TTS
+    // רבים מקריאים את האות עצמה — "אלף בשבט" — במקום את מספר היום. ההמרה
+    // נעשית רק לטקסט הקולי; הכותרת הכתובה נשארת ללא שינוי.
+    var DATE_WORDS = {
+        'א':'אחד','ב':'שניים','ג':'שלושה','ד':'ארבעה','ה':'חמישה','ו':'שישה','ז':'שבעה','ח':'שמונה','ט':'תשעה',
+        'י':'עשרה','יא':'אחד עשר','יב':'שנים עשר','יג':'שלושה עשר','יד':'ארבעה עשר','טו':'חמישה עשר','טז':'שישה עשר',
+        'יז':'שבעה עשר','יח':'שמונה עשר','יט':'תשעה עשר','כ':'עשרים','כא':'עשרים ואחד','כב':'עשרים ושניים',
+        'כג':'עשרים ושלושה','כד':'עשרים וארבעה','כה':'עשרים וחמישה','כו':'עשרים ושישה','כז':'עשרים ושבעה',
+        'כח':'עשרים ושמונה','כט':'עשרים ותשעה','ל':'שלושים'
+    };
+    var DATE_MONTHS = '(?:תשרי|חשוון|מרחשוון|כסלו|טבת|שבט|אדר(?:\\s+[אב])?|ניסן|אייר|סיוון|סיון|תמוז|אב|אלול)';
+    var HEBREW_DATE = new RegExp('(^|[^א-ת])([א-ל](?:[\\u05f3\\u05f4\'"”׳״]?[א-ת])?[\\u05f3\'׳]?)\\s+ב(' + DATE_MONTHS + ')(?=$|[^א-ת])', 'g');
+    function speakHebrewDates(text) {
+        return text.replace(HEBREW_DATE, function (all, before, numeral, month) {
+            var key = numeral.replace(/[\\u05f3\\u05f4\'"”׳״]/g, '');
+            return DATE_WORDS[key] ? before + DATE_WORDS[key] + ' ב' + month : all;
+        });
+    }
+
+    // במראה מקום אין קוראים את הגימטרייה כמספר רגיל. "ירמיהו לג, יא" צריך
+    // להישמע "ירמיהו למד גימל, יוד אלף". הדבר נכון גם אחרי המילים פרק/פסוק.
+    // ההמרה קולית בלבד ואינה משנה את מראה המקום שעל המסך.
+    var LETTER_NAMES = {
+        'א':'אָלֶף','ב':'בית','ג':'גימל','ד':'דלת','ה':'הא','ו':'וו','ז':'זין','ח':'חית','ט':'טית',
+        'י':'יוד','כ':'כף','ך':'כף סופית','ל':'למד','מ':'מם','ם':'מם סופית','נ':'נון','ן':'נון סופית',
+        'ס':'סמך','ע':'עין','פ':'פה','ף':'פה סופית','צ':'צדי','ץ':'צדי סופית','ק':'קוף','ר':'ריש','ש':'שין','ת':'תו'
+    };
+    var REF_NUM = '[א-תךםןףץ](?:[א-תךםןףץ]|[\\u05f3\\u05f4\'"”׳״]){0,5}';
+    var TANACH_BOOK = '(?:בראשית|שמות|ויקרא|במדבר|דברים|יהושע|שופטים|שמואל(?:\\s+[אב])?|מלכים(?:\\s+[אב])?|ישעיהו|ירמיהו|יחזקאל|הושע|יואל|עמוס|עובדיה|יונה|מיכה|נחום|חבקוק|צפניה|חגי|זכריה|מלאכי|תהלים|משלי|איוב|שיר\\s+השירים|רות|איכה|קהלת|אסתר|דניאל|עזרא|נחמיה|דברי\\s+הימים(?:\\s+[אב])?)';
+    var TANACH_REF = new RegExp('(' + TANACH_BOOK + ')\\s+(' + REF_NUM + ')\\s*,\\s*(' + REF_NUM + '(?:\\s*[–—-]\\s*' + REF_NUM + ')?)', 'g');
+    var LABELED_REF = new RegExp('(^|[^א-ת])(פרק(?:ים)?|פסוק(?:ים)?)\\s+(' + REF_NUM + '(?:\\s*[–—-]\\s*' + REF_NUM + ')?)', 'g');
+
+    function spellHebrewLetters(token) {
+        return token.replace(/[\u05f3\u05f4'"”׳״]/g, '').split('').map(function (ch) {
+            return LETTER_NAMES[ch] || ch;
+        }).join(' ');
+    }
+    function spellReferencePart(part) {
+        return part.split(/\s*[–—-]\s*/).map(spellHebrewLetters).join(' עד ');
+    }
+    function speakHebrewReferences(text) {
+        return text
+            .replace(TANACH_REF, function (all, book, chapter, verse) {
+                return book + ' ' + spellHebrewLetters(chapter) + ', ' + spellReferencePart(verse);
+            })
+            .replace(LABELED_REF, function (all, before, label, numeral) {
+                return before + label + ' ' + spellReferencePart(numeral);
+            });
+    }
+
+    /* ---------- פיצול לאמירות קצרות ----------
+       זה הלב של התיקון: Chrome/Edge קוטעים אמירה שנמשכת יותר מ~15 שניות,
+       ולעיתים אף לא יורים onend — ההקראה פשוט מתה באמצע פסקה. פסקה תורנית
+       רגילה היא 400-800 תווים, הרבה מעל הסף. פיצול למשפטים של עד 180 תווים
+       מבטיח שאף אמירה לא מתקרבת לגבול.                                       */
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            // מילה בודדת ארוכה מהמכסה (כתובת אינטרנט, מחרוזת בלי רווחים) —
+            // חיתוך קשיח, אחרת הייתה חוזרת אמירה ענקית והבאג היה חוזר מהדלת האחורית.
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    /* =========================================================================
+       2. בניית תור ההקראה
+       ========================================================================= */
+
+    // בספר מתחלף מקריאים רק את העמוד המוצג. בגלילה רציפה — את כל המאמר.
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        // המשתמש הפך עמוד ידנית תוך כדי האזנה — עוברים להקריא את העמוד החדש.
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    // "פרק ג" יושב ב-<span class="chapter-label"> נפרד *מעל* ה-h2, והסריקה כאן
+    // מלקטת רק h1-h4/p/li — ולכן התווית נשמטה מההקראה לגמרי, והמאזין שמע פרק
+    // חדש מתחיל בלי שום הכרזה, כאילו זו המשך ישיר של הפרק הקודם.
+    // מצמידים אותה לכותרת. data-chapter קיים כדרך מפורשת לכותרות בלי תווית.
+    function chapterLabel(h) {
+        var d = h.getAttribute && h.getAttribute('data-chapter');
+        if (d && d.trim()) return d.trim();
+        var p = h.previousElementSibling;
+        if (p && p.classList && p.classList.contains('chapter-label')) {
+            return p.textContent.replace(/\s+/g, ' ').trim();
+        }
+        return '';
+    }
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll(
+            'h1, h2, h3, h4, p, li, .verse-box, .quote-box, .highlight-box, .story-box, .qa-box'
+        );
+        // מונה מספור לכל <ol> בנפרד. רשימה ממוספרת (<ol>) מציגה על המסך "1." "2."
+        // דרך ה-CSS של הדפדפן, לא כטקסט אמיתי — ולכן ה-textContent של ה-li לא כולל
+        // את המספר, וההקראה הייתה מדלגת עליו כליל. רשימת תבליטים (<ul>) לעומת זאת
+        // לא מקבלת מספר כאן בכוונה: אין לה סדר שמשתלם להכריז עליו, ורק <ol> שמעברו
+        // ל-SKIP (כמו מקורות ומראי מקומות) כבר לא מגיע לכאן מלכתחילה.
+        var olIndex = new Map();
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            // תוכן העניינים, רשימת המקורות, סרגל ההאזנה והחתימה אינם חלק מהמאמר המדובר.
+            if (n.closest(SKIP)) return;
+            // תיבה שיש בה פסקאות/כותרות פנימיות תיקרא באמצעות הילדים שלהן. תיבה
+            // שהפסוק או הציטוט כתובים בה ישירות חייבת להיקרא בעצמה; זה המקרה
+            // שבעבר גרם לדילוג מלא על המרובע של הפסוקים.
+            if (n.matches('.verse-box, .quote-box, .highlight-box, .story-box, .qa-box') &&
+                n.querySelector('h1, h2, h3, h4, p, li')) return;
+            // רשימה מקוננת כבר נקראת כחלק מה-li שמעליה — לא לקרוא פעמיים.
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            if (n.tagName === 'H2') {
+                var lbl = chapterLabel(n);
+                // הנקודה אחרי התווית היא מה שנותן את ההפוגה בין "פרק ג" לכותרת.
+                if (lbl && raw.indexOf(lbl) !== 0) raw = lbl + '. ' + raw;
+            }
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.tagName === 'OL') {
+                var num = (olIndex.get(n.parentElement) || 0) + 1;
+                olIndex.set(n.parentElement, num);
+                raw = num + '. ' + raw;
+            }
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    /* =========================================================================
+       3. ממשק
+       ========================================================================= */
+
+    function hint() {
+        // בלי קול עברי מותקן, המנוע יקריא עברית בקול לועזי — המאזין שומע ג'יבריש
+        // ואין לו שום דרך לנחש למה. עדיף להגיד לו, ולתת את הנתיב המדויק לתיקון.
+        if (noHeVoice) {
+            return 'לא נמצא קול עברי במחשב — ההקראה תישמע משובשת. ' +
+                   'ב-Windows: הגדרות ← שעה ושפה ← דיבור ← נהל קולות ← הוסף קולות ← עברית.';
+        }
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        // גוללים רק אם הפסקה באמת מחוץ למסך. אחרת ההקראה "חוטפת" את הדף
+        // מתחת לידיים של מי שקורא קצת קדימה בעצמו.
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    // בספר מתחלף העמוד עצמו הוא הסימנייה (paginated.js שומר אותו), אין טעם
+    // לשמור אינדקס פסקה שמתאפס בכל הפיכת עמוד.
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    /* =========================================================================
+       4. הקראה
+       ========================================================================= */
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            // סוף העמוד בספר מתחלף — הופכים לעמוד הבא וממשיכים ברצף.
+            // עמודים בלי תוכן להקראה (מקורות, חתימה) מדולגים במקום לעצור עליהם.
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            // 'canceled'/'interrupted' = אנחנו עצרנו בכוונה (מעבר לשונית, נעילת מסך,
+            // לחיצה על פסקה אחרת). אסור להתקדם — זה בדיוק מה שגרם ל"קפיצה לעמוד האחרון":
+            // כל הפסקאות הנותרות נכשלות ברצף תוך שברירי שנייה בזמן שהמסך כבוי.
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    /* ---------- שומר ראש ----------
+       גם עם פיצול לאמירות קצרות, Chrome מסוגל "למות" בשקט: לא מדבר, לא ממתין,
+       ו-onend לא נורה לעולם. הכפתור נשאר על "מקריא..." ואין קול. הבדיקה הזו
+       מזהה שתי שניות של שקט אמיתי ומקדמת הלאה במקום להיתקע.                  */
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    /* =========================================================================
+       5. פקדים
+       ========================================================================= */
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = readPos();
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        // בדיקת המצב האמיתי של המנוע (ולא רק הדגלים הפנימיים) היא מה שמונע
+        // כפתור "מת" אחרי מעבר לשונית וחזרה.
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                // באג ידוע: resume() נכשל לפעמים בשקט אחרי השהיה ארוכה.
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                // אין אמירה מושהית להחיות (למשל אחרי נעילת מסך שביטלה אותה).
+                // מדברים כאן ועכשיו, בתוך אירוע הלחיצה — ב-iOS הקראה שנדחית
+                // ל-setTimeout כבר לא נחשבת "מתוך מגע משתמש" ונחסמת בשקט.
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        // לחיצה ראשונה על "אחורה" מחזירה לתחילת הפסקה הנוכחית, כמו בכל נגן.
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    // דילוג לפרק הבא/הקודם — ב-h2 בלבד. בספר של מאות פסקאות, ⏮/⏭ לבד לא מספיקים.
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;   // האחרון שלפנינו
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    // שינוי המחוון יורה עשרות אירועי input בזמן גרירה. הערך מתעדכן מיד,
+    // אבל ההקראה מופעלת מחדש רק כשמשחררים (onchange) — אחרת זה גמגום רצוף.
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    /* =========================================================================
+       6. קולות
+       ========================================================================= */
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);   // נשמרות בכוונה — קול רב-לשוני לפעמים נשמע טוב יותר
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        // הקולות נטענים באיחור, ולכן הבדיקה חוזרת בכל ירייה של onvoiceschanged
+        // ולא רק פעם אחת בטעינה.
+        var was = noHeVoice;
+        noHeVoice = !he.length;
+        if (noHeVoice !== was && !isOn) say(hint());
+        // onvoiceschanged יורה יותר מפעם אחת (במיוחד ב-Edge, כשקולות הענן נטענים
+        // באיחור). בלי הדגל הזה כל ירייה כזו הייתה דורסת את בחירת המשתמש.
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    /* =========================================================================
+       7. לחיצה על פסקה = התחל להקריא מכאן
+       ========================================================================= */
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li, ' +
+            '.container .verse-box, .container .quote-box, .container .highlight-box, .container .story-box, .container .qa-box');
+        return Array.prototype.filter.call(nodes, function (el) {
+            if (el.closest(SKIP)) return false;
+            return !(el.matches('.verse-box, .quote-box, .highlight-box, .story-box, .qa-box') &&
+                     el.querySelector('h1, h2, h3, h4, p, li'));
+        });
+    }
+
+    // מי שקורא בשקט לא רוצה שנגיעה מקרית תתחיל פתאום לדבר. המתג נשמר
+    // ב-localStorage המשותף, כך שכיבוי אחד תופס לכל המאמרים והספרים.
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;                                             // המתג כבוי
+                if (e.target.closest('a')) return;                                    // קישורים עובדים כרגיל
+                if (window.getSelection && String(window.getSelection()).length) return; // סימון להעתקה עובד כרגיל
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    /* =========================================================================
+       8. מעבר לשונית / נעילת מסך
+       ========================================================================= */
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            // iOS חוסם הקראה שלא נולדה מתוך מגע של המשתמש. אם אחרי כשנייה עדיין
+            // אין קול — נעבור למצב מושהה גלוי, כדי שהקורא יקיש פעם אחת במקום
+            // לבהות בכפתור שכתוב עליו "מקריא..." בזמן שקט מוחלט.
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    // חזרה מ-bfcache: מאפסים לגמרי (כולל autoPaused — אחרת ה-visibilitychange
+    // שמגיע מיד אחרי היה מתחיל להקריא את המאמר מההתחלה מעצמו).
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    // pagehide ולא beforeunload — beforeunload מבטל את ה-bfcache ודווקא מחמיר
+    // את הבעיה של חזרה ללשונית.
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    /* =========================================================================
+       9. גודל טקסט
+       -------------------------------------------------------------------------
+       ספר מוסר נקרא לא פעם על ידי מי שהעיניים כבר לא מה שהיו. מחוון מהירות
+       ובחירת קול כבר יש; גודל טקסט חסר, והוא שווה יותר מכל רכיב עיצובי נוסף.
+       נשמר באותו namespace, ולכן תקף לכל המאמרים והספרים ולא רק לקובץ הנוכחי.
+       ========================================================================= */
+
+    var FS_MIN = 0.85, FS_MAX = 1.75, FS_STEP = 0.15, fontScale = 1;
+
+    function applyFontScale() {
+        document.documentElement.style.setProperty('--fs', String(fontScale));
+        var out = document.getElementById('fontScaleValue');
+        if (out) out.textContent = Math.round(fontScale * 100) + '%';
+        // חוסם לחיצות סרק על כפתור שכבר בקצה, במקום לחיצה בלי שום משוב.
+        var dec = document.getElementById('fontSmaller'), inc = document.getElementById('fontBigger');
+        if (dec) dec.disabled = fontScale <= FS_MIN + 0.001;
+        if (inc) inc.disabled = fontScale >= FS_MAX - 0.001;
+    }
+
+    window.setFontScale = function (dir) {
+        fontScale = Math.min(FS_MAX, Math.max(FS_MIN, +(fontScale + dir * FS_STEP).toFixed(2)));
+        store('fs', String(fontScale));
+        applyFontScale();
+    };
+
+    /* =========================================================================
+       10. אתחול
+       ========================================================================= */
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';   // ברירת מחדל: פעילה
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var savedFs = parseFloat(store('fs') || '1');
+        if (savedFs >= FS_MIN && savedFs <= FS_MAX) fontScale = savedFs;
+        applyFontScale();
+        if (readPos() > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+</body>
+</html>
