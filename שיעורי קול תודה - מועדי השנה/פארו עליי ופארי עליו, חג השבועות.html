@@ -1,0 +1,357 @@
+&lt;!DOCTYPE html&gt;
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פארו עליי ופארי עליו — חג השבועות</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #1f2937;
+    line-height: 1.8;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fefefe;
+    border-radius: 18px;
+    padding: 60px 80px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    position: relative;
+}
+.main-title {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+.subtitle {
+    text-align: center;
+    font-size: 1.3em;
+    color: #4b5563;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+.author {
+    text-align: center;
+    font-size: 1.1em;
+    color: #7e22ce;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+h2 {
+    font-size: 2.2em;
+    color: #7e22ce;
+    border-right: 6px solid #7e22ce;
+    padding-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+h2:first-of-type { margin-top: 20px; }
+h3 {
+    font-size: 1.8em;
+    color: #2563eb;
+    margin-top: 35px;
+    margin-bottom: 18px;
+}
+h4 {
+    font-size: 1.5em;
+    color: #059669;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+p, li {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+ul, ol { padding-right: 30px; margin-bottom: 20px; }
+.emphasis { color: #7e22ce; font-weight: bold; }
+em { color: #2563eb; font-style: italic; }
+strong { font-weight: bold; }
+
+.verse-box {
+    background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    border: 2px solid #7e22ce;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: center;
+    font-size: 1.25em;
+    font-style: italic;
+    box-shadow: 0 5px 15px rgba(126,34,206,0.15);
+}
+.highlight-box {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    border-right: 6px solid #2563eb;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-right: 6px solid #f59e0b;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    font-style: italic;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box .source-tag {
+    display: block;
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: bold;
+    color: #b45309;
+    font-size: 0.9em;
+}
+.story-box {
+    background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    border-right: 6px solid #059669;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.section-divider {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    color: #fff;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 22px;
+    border-radius: 12px;
+    margin: 40px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 30px 0;
+}
+.two-columns > div {
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.col-purple { background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 100%); border-right: 5px solid #7e22ce; }
+.col-gold { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 5px solid #f59e0b; }
+.qa-box {
+    background: #fdf2f8;
+    border: 2px dashed #ec4899;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+}
+.qa-box .q { color: #be185d; font-weight: bold; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+.toc {
+    background: linear-gradient(135deg, #f3e8ff 0%, #fdf4ff 100%);
+    border: 2px solid #d8b4fe;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 35px 0 45px;
+}
+.toc h3 { margin-top: 0; color: #7e22ce; }
+.toc ul { list-style: none; padding-right: 10px; }
+.toc li { margin-bottom: 10px; }
+.toc a {
+    color: #6d28d9;
+    text-decoration: none;
+    font-size: 1.05em;
+    transition: color 0.2s;
+}
+.toc a:hover { color: #ec4899; text-decoration: underline; }
+.sources {
+    background: #f3f4f6;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 45px 0 20px;
+}
+.sources h3 { margin-top: 0; color: #4b5563; }
+.sources ol { color: #374151; }
+.footer {
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+    border-radius: 14px;
+    font-size: 1.05em;
+    color: #374151;
+}
+.footer strong { color: #7e22ce; }
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.3em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 100;
+}
+.scroll-top.visible { opacity: 1; visibility: visible; }
+
+@media (max-width: 768px) {
+    body { padding: 15px 8px; }
+    .container { padding: 30px 20px; }
+    .main-title { font-size: 2em; }
+    h2 { font-size: 1.6em; padding-right: 14px; border-right-width: 4px; }
+    h3 { font-size: 1.35em; }
+    h4 { font-size: 1.2em; }
+    p, li { font-size: 1.05em; }
+    .two-columns { grid-template-columns: 1fr; }
+    .scroll-top { left: 15px; bottom: 15px; width: 44px; height: 44px; }
+}
+
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+    .scroll-top { display: none !important; }
+    h2 { page-break-before: always; break-before: page; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+    h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+    .footer { page-break-before: always; break-before: page; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;top:12px;right:12px;z-index:9999;background:#5b21b6;color:#fff;padding:7px 14px;border-radius:20px;font:600 14px Heebo,Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)" class="kt-back">📚 לכל השיעורים</a><style>@media print{.kt-back{display:none!important}}</style>
+<div class="container">
+  <h1 class="main-title" id="top">פארו עליי ופארי עליו</h1>
+  <div class="subtitle">מדוע קוראת התורה שבכתב לחג השבועות "חג הביכורים", בעוד שבתפילה אנו קוראים לו "זמן מתן תורתנו" — ומה בין שני השמות הללו לחג הפסח וחג המצות</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+  <div class="toc">
+    <h3>📑 תוכן העניינים</h3>
+    <ul>
+      <li><a href="#section1">פרק א: הסתירה שבין תורה שבכתב לתורה שבעל פה</a></li>
+      <li><a href="#section2">פרק ב: פארו עליי ופארי עליו — סוד הדדיות השבחים</a></li>
+      <li><a href="#section3">פרק ג: חג הביכורים וחג מתן תורה — כל אחד משבח את חברו</a></li>
+    </ul>
+  </div>
+
+  <h2 id="section1">פרק א: הסתירה שבין תורה שבכתב לתורה שבעל פה</h2>
+
+  <p>בחג השבועות קיימת, לכאורה, סתירה מעניינת בין התורה שבכתב לתורה שבעל פה. כאשר פותחים חומש ומחפשים מה נאמר על חג השבועות, מוצאים בו את השם "חג הביכורים" — כפי שאנו קוראים בהפטרת החג: "וּבְיוֹם הַבִּכּוּרִים בְּהַקְרִיבְכֶם מִנְחָה חֲדָשָׁה לַהשם". שם החג "מתן תורה" אינו מופיע כלל בתורה שבכתב.</p>
+
+  <p>לעומת זאת, כשפותחים את התורה שבעל פה, המצב הפוך לגמרי. הגמרא במסכת פסחים (סח ע"ב) אומרת: "אָמַר רַבִּי אֶלְעָזָר: הַכֹּל מוֹדִים בַּעֲצֶרֶת דְּבָעֵינַן נַמִּי לָכֶם... יוֹם שֶׁנִּיתְּנָה בּוֹ תוֹרָה". ובסידור אנו אומרים בתפילת שלוש רגלים: "וְתִתֶּן לָנוּ... אֶת יוֹם חַג הַשָּׁבֻעוֹת הַזֶּה, זְמַן מַתַּן תּוֹרָתֵנוּ". כל מקום שבו התורה שבעל פה מזכירה את חג השבועות, מוזכר "מתן תורה" — ולא "ביכורים" כלל.</p>
+
+  <div class="qa-box">
+    <div class="q">אם כן, מהו באמת חג השבועות — חג מתן תורה, או חג הביכורים? מדוע התורה שבכתב מזכירה רק ביכורים, ואילו התורה שבעל פה מזכירה רק מתן תורה?</div>
+    <div class="a">שאלה נפלאה זו שאל כבר סנגורם של ישראל, רבי לוי יצחק מברדיטשוב, על שאלה מקבילה בחג הפסח — ותשובתו הנפלאה, המתאימה בדיוק לאישיותו, מאירה גם את חג השבועות.</div>
+  </div>
+
+  <h2 id="section2">פרק ב: פארו עליי ופארי עליו — סוד הדדיות השבחים</h2>
+
+  <p>רבי לוי יצחק שאל: מדוע בכל מקום שהתורה שבכתב מזכירה את חג הפסח, היא קוראת לו "חג המצות", ואילו אנו, בתורה שבעל פה, קוראים לו בכל מקום "חג הפסח" (כפי שנקראת המסכת "פסחים")? מדוע התורה קוראת לחג בשם אחד, ואנו קוראים לו בשם אחר?</p>
+
+  <p>עונה רבי לוי יצחק: כתוב "אֲנִי לְדוֹדִי וְדוֹדִי לִי" — אני מחפש כל היום כיצד להודות ולשבח את דודי, הקדוש ברוך הוא, והקדוש ברוך הוא מחפש תמיד כיצד לספר כמה טובים הם דודיו, כיצד לפרסם את שבחם של ישראל. כך אנו רואים גם בפיוט "פָּאֲרוּ עָלַי" הנאמר בהנחת תפילין: "פָּאֲרוּ עָלַי וּפָאֲרִי עָלָיו... קְרוֹבִים אֵלַי בְּעֵת אֶקְרָא, פָּאֲרוּ עָלַי בְּעֵת צָרָה". על התפילין שלנו אנו מניחים "שְׁמַע יִשְׂרָאֵל" ו"וְהָיָה אִם שָׁמֹעַ" — פארם ותפארתם של ישראל; ואילו הקדוש ברוך הוא מניח, כביכול, את פארם של ישראל על תפיליו שלו. כל צד מחפש איך לשבח ולהודות לצד השני.</p>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0">חג המצות — כך קוראת התורה לחג הפסח, כדי לספר את שבחם של ישראל שיצאו ממצרים באמונה, אכלו עוגות מצות משום שלא הספיק בצקם להחמיץ, ועבדו קשה כל שבעת ימי החג שלא יראה ולא ימצא אצלם חמץ. הקדוש ברוך הוא, כביכול, מתפעל: "איזה יהודים נפלאים יש לי! איך הם מתאמצים בשבילי, לזרוק את כל החמץ, לאכול רק מצות, להאמין בי שאני אדאג להם".</p>
+  </div>
+
+  <p>ולעומת זאת אנו קוראים לחג "חג הפסח" — "זֶבַח פֶּסַח הוּא לַהשם, אֲשֶׁר פָּסַח עַל בָּתֵּי בְנֵי יִשְׂרָאֵל בְּמִצְרַיִם בְּנָגְפּוֹ אֶת מִצְרַיִם" — כי אנו רוצים לספר את שבחו של הקדוש ברוך הוא, שפסח על בתינו, שפסח על עוונותינו, שהציל אותנו. הקדוש ברוך הוא אומר: "ילדיי היקרים, אתם הגיבורים, אתם עשיתם, אתם שמחתם עליי, אתם הוצאתם את החמץ". ואנחנו אומרים: "ריבונו של עולם, אתה הגיבור, אתה עשית הכל, אתה פסחת עלינו, אתה הצלת אותנו". כל אחד רק רוצה לזכור ולפרסם את שבחי הצד השני.</p>
+
+  <div class="story-box">
+    <p style="margin-bottom:0">כתב אחד המחברים: המריבה היחידה שמותר שתהיה בבית של כל יהודי, היא שהבעל יגיד לאשתו "הכול בזכותך — כל הבית נקי בזכותך, העוגות בזכותך, איזה חג היה כאן בלעדייך", והאישה תשיב: "לא, בזכותך — לא היה כאן חג, לא היה תורה, לא היה על מה לחגוג". כל אחד רוצה להודות על מה שהשני עשה, וזה יוצא להודות על מה שזה עשה.</p>
+  </div>
+
+  <h2 id="section3">פרק ג: חג הביכורים וחג מתן תורה — כל אחד משבח את חברו</h2>
+
+  <p>נחזור אפוא לענייננו — לחג השבועות. עם ישראל קוראים לחג הזה "חג מתן תורה", כי אנו באים להודות לקדוש ברוך הוא: "ריבונו של עולם, מה נתת לנו! תורת אמת נתת לנו, חמדה יקרה, דברי תורה משמחי לב". יהודי אחד סיפר על חברו החילוני שאמר לו שהוא לעולם לא יבין אותו: "אתה רגיל, כל היום אתה עסוק בכל מיני אנשים ובכל מיני עניינים, ואילו אני — הולך, לומד שעה, וחוזר רגוע, שמח, טוב לב". "תּוֹרַת השם תְּמִימָה מְשִׁיבַת נָפֶשׁ" — "אני יצאתי מהעבודה עצבני פי שניים ממה שיצאתי אליה, ואילו אתה, כמה נפלא הקדוש ברוך הוא נתן לך!". על התורה הזאת אנו מודים לקדוש ברוך הוא בחג הזה.</p>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0">ומאידך, הקדוש ברוך הוא קורא לחג הזה "חג הביכורים": "אֵיזֶה יְלָדִים טוֹבִים יֵשׁ לִי! נָתַתִּי לָהֶם פֵּרוֹת — וּמָה הֵם עוֹשִׂים? מְבִיאִים רֵאשִׁית פְּרִי אֲדָמָה, בָּאִים וּמוֹדִים לִי עַל הַפֵּרוֹת שֶׁנָּתַתִּי לָהֶם, עַל הָאָרֶץ שֶׁנָּתַתִּי לָהֶם, עַל הַתְּבוּאָה שֶׁנָּתַתִּי לָהֶם — חַג הַבִּכּוּרִים! אֵיזֶה יְלָדִים מְתוּקִים, כָּל כָּךְ רוֹצִים לְהוֹדוֹת לִי". לכן קורא הקדוש ברוך הוא בתורתו לחג הזה "חג הביכורים".</p>
+  </div>
+
+  <p>יהי רצון שנזכה תמיד לחפש ולראות את הטוב שבזולת — לראות את טובו של בורא עולם, לשבח ולהודות עד בלי די. וכפי שכתב הרמב"ם: "כְּלָלוֹ שֶׁל דָּבָר, לְעוֹלָם יִצְעַק אָדָם וְיוֹדֶה וִישַׁבֵּחַ, וְכָל הַמַּרְבֶּה לְהוֹדוֹת הֲרֵי זֶה מְשֻׁבָּח".</p>
+
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות</h3>
+    <ol>
+      <li>פרשת פנחס (במדבר כח, כו) — "וביום הבכורים".</li>
+      <li>גמרא, מסכת פסחים דף סח ע"ב — "הכל מודים בעצרת דבעינן נמי לכם".</li>
+      <li>סידור התפילה — נוסח "זמן מתן תורתנו" בתפילת שלוש רגלים.</li>
+      <li>דברי רבי לוי יצחק מברדיטשוב, בדרך משל לחג הפסח — "חג המצות" ו"חג הפסח".</li>
+      <li>שיר "פארו עלי" — נאמר בהנחת תפילין.</li>
+      <li>שמות יב, כז — "זבח פסח הוא להשם אשר פסח על בתי בני ישראל במצרים".</li>
+      <li>תהלים יט, ח — "תורת השם תמימה משיבת נפש".</li>
+      <li>רמב"ם, הלכות ברכות, פרק י' הלכה כ"ג — "כללו של דבר... כל המרבה להודות הרי זה משובח".</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+  </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+(function () {
+    var scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 400) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            var targetId = this.getAttribute('href').slice(1);
+            var target = document.getElementById(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+})();
+
+</script>
+</body>
+</html>
