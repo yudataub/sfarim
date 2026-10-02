@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>שבתי בבית השם כל ימי חיי - הרב יהודה טאוב</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #1f2937; line-height: 1.8; padding: 40px 20px; }
+.container { max-width: 900px; margin: 0 auto; background: #fffefb; border-radius: 18px; padding: 60px 80px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+.main-title { font-size: 3em; font-weight: 800; text-align: center; background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 15px; line-height: 1.3; }
+.subtitle { text-align: center; font-size: 1.3em; color: #6b21a8; margin-bottom: 10px; }
+.author { text-align: center; font-size: 1.05em; color: #6b7280; margin-bottom: 40px; }
+h2 { font-size: 2.2em; color: #7e22ce; border-right: 6px solid #7e22ce; padding-right: 20px; margin-top: 50px; margin-bottom: 25px; }
+h2:first-of-type { margin-top: 20px; }
+h3 { font-size: 1.8em; color: #2563eb; margin-top: 35px; margin-bottom: 18px; }
+h4 { font-size: 1.5em; color: #059669; margin-top: 25px; margin-bottom: 15px; }
+p, li { font-size: 1.15em; line-height: 1.8; color: #1f2937; margin-bottom: 20px; }
+ul, ol { margin-right: 30px; margin-bottom: 20px; }
+strong { font-weight: 700; }
+em { color: #2563eb; font-style: italic; }
+.emphasis { color: #7e22ce; font-weight: 700; }
+.toc { background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%); border: 1px solid #e9d5ff; border-radius: 14px; padding: 25px 30px; margin-bottom: 40px; }
+.toc h3 { margin-top: 0; color: #7e22ce; font-size: 1.4em; }
+.toc ul { list-style: none; margin-right: 0; }
+.toc li { margin-bottom: 10px; font-size: 1.05em; }
+.toc a { color: #6b21a8; text-decoration: none; transition: color 0.2s; }
+.toc a:hover { color: #ec4899; text-decoration: underline; }
+.verse-box { background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%); border-right: 6px solid #7e22ce; border-radius: 12px; padding: 28px 30px; margin: 30px 0; font-size: 1.25em; text-align: center; font-style: italic; color: #4c1d95; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.highlight-box { background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-right: 6px solid #2563eb; border-radius: 12px; padding: 25px 30px; margin: 25px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.quote-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 6px solid #f59e0b; border-radius: 12px; padding: 25px 30px; margin: 25px 0; font-style: italic; color: #78350f; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.quote-box .source-tag { display: block; margin-top: 12px; font-style: normal; font-size: 0.9em; color: #92400e; font-weight: 600; }
+.story-box { background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%); border-right: 6px solid #059669; border-radius: 12px; padding: 28px 30px; margin: 25px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.qa-box { background: #fdf2f8; border: 2px dashed #ec4899; border-radius: 12px; padding: 25px 30px; margin: 25px 0; }
+.qa-box .q { color: #be185d; font-weight: 700; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+.section-divider { background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%); color: #fff; text-align: center; padding: 18px; border-radius: 12px; font-size: 1.3em; font-weight: 700; margin: 45px 0; box-shadow: 0 5px 15px rgba(126,34,206,0.15); }
+.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+.two-columns > div { border-radius: 12px; padding: 22px 24px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.col-purple { background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%); border-right: 6px solid #7e22ce; }
+.col-gold { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 6px solid #f59e0b; }
+.sources { background: #f3f4f6; border-radius: 14px; padding: 25px 30px; margin-top: 50px; }
+.sources h3 { margin-top: 0; color: #374151; }
+.sources ol { margin-right: 25px; }
+.sources li { font-size: 1em; color: #4b5563; margin-bottom: 8px; }
+.footer { margin-top: 60px; padding-top: 35px; border-top: 3px solid #e9d5ff; text-align: center; color: #4b5563; font-size: 1.05em; line-height: 2; }
+.footer h4 { color: #2563eb; margin-top: 0; }
+.footer a { color: #7e22ce; }
+.scroll-top { position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px; background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.3em; box-shadow: 0 4px 15px rgba(0,0,0,0.2); opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; z-index: 100; }
+.scroll-top.visible { opacity: 1; visibility: visible; }
+@media (max-width: 768px) {
+    body { padding: 15px 8px; } .container { padding: 30px 22px; border-radius: 12px; } .main-title { font-size: 2em; }
+    h2 { font-size: 1.5em; padding-right: 14px; } h3 { font-size: 1.3em; } h4 { font-size: 1.15em; } p, li { font-size: 1.05em; }
+    .two-columns { grid-template-columns: 1fr; } .scroll-top { left: 15px; bottom: 15px; width: 44px; height: 44px; }
+}
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+    .scroll-top { display: none !important; }
+    h2 { page-break-before: always; break-before: page; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box { page-break-inside: avoid; break-inside: avoid; }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+    h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+    .footer { page-break-before: always; break-before: page; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;top:12px;right:12px;z-index:9999;background:#5b21b6;color:#fff;padding:7px 14px;border-radius:20px;font:600 14px Heebo,Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)" class="kt-back">📚 לכל השיעורים</a><style>@media print{.kt-back{display:none!important}}</style>
+<div class="container">
+  <h1 class="main-title" id="top">שבתי בבית השם כל ימי חיי</h1>
+  <div class="subtitle">שני שיעורים על אותה בקשה עצמה של דוד המלך בתהלים - מהי "בית ה'", ואיך מגיעים אליו</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+  <div class="highlight-box">
+    <p style="margin-bottom: 0;"><strong>הערת עריכה:</strong> שני השיעורים המובאים כאן עוסקים באותה בקשה בדיוק - "אַחַת שָׁאַלְתִּי מֵאֵת ה' אוֹתָהּ אֲבַקֵּשׁ, שִׁבְתִּי בְּבֵית ה' כָּל יְמֵי חַיַּי" (תהלים כ"ז) - ולכן חוברו כאן לספר אחד דו-פרקי. הפרק הראשון מבאר את הבקשה דרך ההבחנה בין "שאלה" ל"בקשה" ודרך דברי הזוהר על בית המקדש; הפרק השני מבאר את אותה בקשה עצמה דרך הפסוק "אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי" בתהלים כ"ג, ומביא כמה סיפורים אישיים להמחשה. שני הפרקים מגיעים לאותה מסקנה בדיוק - שבית ה' אינו מקום אלא מצב לב - ומשלימים זה את זה.</p>
+  </div>
+
+  <div class="toc">
+    <h3>📑 תוכן העניינים</h3>
+    <ul>
+      <li><a href="#section1">פרק א: שאלה ובקשה - הזוהר על בית המקדש שבלב</a></li>
+      <li><a href="#section2">פרק ב: "אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי" - כיצד מגיעים לבית ה'</a></li>
+    </ul>
+  </div>
+
+  <h2 id="section1">פרק א: שאלה ובקשה - הזוהר על בית המקדש שבלב</h2>
+  <p>בחודש אלול אנו אומרים, אחרי תקיעת השופר, את המזמור הנפלא "לְדָוִד, ה' אוֹרִי וְיִשְׁעִי" (תהלים כ"ז). הנקודה המרכזית של המזמור היא הפסוק:</p>
+  <div class="verse-box">
+    "אַחַת שָׁאַלְתִּי מֵאֵת ה' אוֹתָהּ אֲבַקֵּשׁ, שִׁבְתִּי בְּבֵית ה' כָּל יְמֵי חַיַּי"
+  </div>
+  <p>מובא בשם <strong>המלבי"ם</strong> הבחנה נפלאה בין "שאלה" ל"בקשה". אדם המבקש מחברו: "האם תוכל לקחת אותי טרמפ לחתונה?" - הוא <em>שואל</em> טרמפ, אבל מה הוא <em>מבקש</em>? הוא מבקש להיות בחתונה. אין לו שום עניין בנסיעה עצמה; מבחינתו, אילו החתונה הייתה מתקיימת כאן ועכשיו, זה היה מספיק לו. כל רצונו הוא לשמח את החתן והכלה.</p>
+  <p>לעומת זאת, אדם צמא המבקש מים - הוא שואל מים, וזה בדיוק גם מה שהוא מבקש. דוגמה נוספת: אדם המבקש מחברו ספר - אין לו שום צורך בספר עצמו, כל רצונו הוא למצוא מידע מסוים שהוא מחפש. כאן הוא שואל ספר, ומבקש מידע.</p>
+  <div class="qa-box">
+    <div class="q">קושיה: דוד המלך אומר "אַחַת שָׁאַלְתִּי... שִׁבְתִּי בְּבֵית ה' כָּל יְמֵי חַיַּי" - כלומר, השאלה והבקשה זהות. האם דוד המלך, מלך ישראל, שיש לו תפקידים רבים - אנשים באים אליו, שואלים אותו, מתייעצים עמו - מבקש להתפטר מהכל ולברוח מכל תפקידיו, ובלבד שישב בבית ה' כל ימי חייו?</div>
+    <div class="a">התשובה נמצאת בפירוש נפלא בספר <strong>שערי אהבה</strong>. הגמרא במסכת סנהדרין אומרת: "אמר רבי יהושע בן לוי: כל האומר שירה בעולם הזה, זוכה ואומרה לעולם הבא, שנאמר: אַשְׁרֵי יוֹשְׁבֵי בֵיתֶךָ עוֹד יְהַלְלוּךָ סֶּלָה". והגמרא לומדת מכאן ש"עוֹד יְהַלְלוּךָ" - מוכיח שיאמר שירה לעולם הבא; אך מנין שהוא אומר שירה כבר בעולם הזה? היכן זה כתוב במילים "אַשְׁרֵי יוֹשְׁבֵי בֵיתֶךָ"?</div>
+  </div>
+  <p>כתוב בזוהר, בפירוש למילה "מקדשא", שכשהיה אדם מגיע לבית המקדש היה שוכח את כל הבעיות - הילדים שלא התחתנו, המשכנתא, החשבונות שצריך לשלם - היה שוכח הכל, ומרגיש רק דבר אחד: <span class="emphasis">חדוה במלכא קדישא</span>, שמחה בבורא עולם. "כמה טוב ה'! כמה בורא עולם אוהב אותי! אשרינו, מה טוב חלקנו!" - זה היה חש נפלא.</p>
+  <p>וזהו גם בית המקדש הרוחני שבתוך כל אדם. כשם שהיה בית מקדש בירושלים, כך יכול כל אדם לבנות לעצמו בית מקדש - במשכן ליבו. ומה יהיה בתוך אותו בית מקדש? "אַךְ טוֹב", חסד. כל הבית מקדש שלו יהיה: "כמה טוב ה', כם בורא עולם טוב ומטיב, כמה הכל נפלא, איזה עולם מתוקן". וכאשר כל תוכן הלב הוא "אַךְ טוֹב חֶסֶד", אז "וְשַׁבְתִּי בְּבֵית ה' לְאֹרֶךְ יָמִים" - כי בית ה' אינו מקום שהולכים אליו, אלא בית שבא אליך, כשאתה מרגיש בתוך ליבך מוקף בטוב ה'.</p>
+  <div class="highlight-box">
+    <p style="margin-bottom: 0;">איך נכנסים לבית ה'? המפתח הוא <strong>תודה</strong>. כאשר אדם אומר הודיה אמיתית ונרגשת להשם יתברך על החסדים הרבים והאישיים שקיבל ממנו - הוא זוכה להיכנס אל הבית הנפלא של בורא עולם.</p>
+  </div>
+
+  <h2 id="section2">פרק ב: "אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי" - כיצד מגיעים לבית ה'</h2>
+  <p>אותה בקשה עצמה, "אַחַת שָׁאַלְתִּי מֵאֵת ה'... שִׁבְתִּי בְּבֵית ה' כָּל יְמֵי חַיַּי", היא הפסוק המרכזי גם במזמור כ"ז, וכפי שכותב בעל <strong>מסילת ישרים</strong> בפרק א' מספרו: "וכשתתבונן עוד, תראה כי השלמות האמיתית היא רק הדבקות בו יתברך". וזהו בדיוק מה שביקש דוד המלך.</p>
+  <p>אך יש כאן שאלה נוספת: היכן בפסוק הזה מרומזת "דבקות"? מה שיושבים בבית ה' - האם זה בעצמו הופך את האדם לדבוק בה'? כל מי שנמצא בבית הכנסת נעשה דבק בה'? הלוואי שזה היה כה קל... מי שמכיר יודע שזה עוזר מאוד, אבל זו תחילת הדרך ולא סופה.</p>
+  <p>הבה נבדוק: אילו היה מישהו מציע לכם לבקש בקשה אחת, מה הייתם מבקשים? יש שהיו מבקשים "זַכֵּנִי לְלַמֵּד בְּשִׂמְחָה", "זַכֵּנִי לְלָמוֹד בְּהִתְלַהֲבוּת", "זַכֵּנִי לִזְכּוֹר אֶת הַלִּמּוּד". פתחו את פרק קי"ט בתהלים, "הפרק הגדול", ותראו כמה בקשות מבקש שם דוד המלך: "גַּל עֵינַי וְאַבִּיטָה נִפְלָאוֹת מִתּוֹרָתֶךָ", "תּוֹרָתְךָ אָהָבְתִּי" - מלא בקשות. אך בכל הפרק הארוך הזה, לא נמצא ולו פעם אחת בקשה מפורשת "שֶׁאֶזְכֶּה לָשֶׁבֶת בְּבֵית ה'". יש שם "חֲצוֹת לַיְלָה אָקוּם לְהוֹדוֹת לָךְ" - אבל לא את הבקשה "שִׁבְתִּי בְּבֵית ה'".</p>
+  <p>האמת היא, שאת הבקשה הזו מבקש דוד המלך גם במקומות נוספים, והמרכזי שבהם - שכולנו מכירים - הוא בפרק כ"ג:</p>
+  <div class="verse-box">
+    "אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי כָּל יְמֵי חַיָּי, וְשַׁבְתִּי בְּבֵית ה' לְאֹרֶךְ יָמִים"
+  </div>
+  <div class="qa-box">
+    <div class="q">מה הקשר בין "אַךְ טוֹב וָחֶסֶד" לבין "וְשַׁבְתִּי בְּבֵית ה'"? הרי לכאורה, מי שטוב לו בחיים אינו בהכרח מי שיושב בבית ה' - להפך, לעיתים דווקא מי שטוב לו נמצא בעסקים ובביזנס, ודווקא מי שרע לו נזכר ויודע מה התכלית האמיתית ומגיע לבית ה'.</div>
+    <div class="a">המילה "רָדוֹף" בתנ"ך משמעה: מישהו בורח ואתה רודף אחריו - "רְדוֹף אוֹיְבַי הִשִּׂיגֵם וְלֹא אָשׁוּב עַד כַּלּוֹתָם". דוד המלך אומר "אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי" - כלומר, הוא בורח מהטוב והחסד, ואילו הם רודפים אחריו! והתשובה: ריבונו של עולם, יש בחיים צרות, יש דברים קשים - תעזור לי שאני אזכה להבין ש"אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי", שכל מה שרודף אחריי בחיים - זה אך טוב וחסד. כל הצרות, כל הבעיות - הן לא באמת צרות; הן עצמן חלק מ"אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי כָּל יְמֵי חַיָּי".</div>
+  </div>
+  <div class="story-box">
+    <p>אביו של חתן רצה לסגור את בית הכנסת בסוף שבע ברכות, ולפתע - אוי ואבוי - אין מפתח. הוא מחפש ומחפש, אין מפתח, אין אפשרות לנעול. הוא מאוד חושש שאם בית הכנסת יישאר פתוח ויבוא מישהו, זה יהיה לא נעים מאוד. אין ברירה - כל המשפחה לא הצליחה למצוא את המפתח, ונאלץ להשאיר את בית הכנסת פתוח. כל אותו לילה הוא חיזק את עצמו: "אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי".</p>
+    <p style="margin-bottom:0;">למחרת בבוקר שאל אותו בנו: "נו, מה יהיה עם המפתח?" ענה לו: "מה אתה דואג, זה היה ניסיון מבורא עולם, לראות אם אני מאמין שאך טוב וחסד ירדפוני. ברגע שעמדתי בניסיון - המפתח יימצא". לא עברו שתי דקות, והמפתח נמצא במכנסיים של יום חול, שאותם החליף לפני שבא לאירוע, והמפתח נשאר שם. "אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי".</p>
+  </div>
+  <div class="story-box">
+    <p style="margin-bottom:0;">במוצאי שבת לא הספקתי להגיע לתחנת האוטובוס בזמן - סליחה, הגעתי, והיה מקום לעלות, אך הנהג לא הסכים שנעמוד. אמרתי לעצמי: "הכל לטובה, ברוך השם". חמש דקות אחר כך הגיע אוטובוס עם שלושה מושבים ריקים לכל אחד, נסע מהר, נעים ונוח. "אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי".</p>
+  </div>
+  <p>צריך אדם תמיד לדעת: "אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי". ומי שזוכה לחיות כך, שאך טוב וחסד רודפים אותו - הוא זוכה לקיים "וְשַׁבְתִּי בְּבֵית ה' לְאֹרֶךְ יָמִים". מהו בית ה'? בית ה' אינו איזשהו מקום - בית ה' הוא בתוך הלב. אדם שיודע לחיות בעולם הזה מתוך תחושה שהוא נמצא בבית ה', מרגיש שה' טוב ומטיב, שהוא חי בעולם שכולו טוב ומטיב, מתענג על טוב ה' - "איזה יופי ה' ברא, איך הכל פורח, איך העלים יפים".</p>
+  <p>הוא מגיע לבית המדרש ומתלהב מעצם האפשרות לשבת בכולל - "איזה פלא פלאים, גם לשבת גם ללמוד!" - ומזכיר את שאמר הלל הזקן: "משתלם" ממש בכניסה לבית המדרש. "מי היה מאמין - בחור ישיבה שיושב ולומד, מרגיש כמו בגן עדן; יושבים ומכינים לו, מגישים לו, אוכלים לו - הכל עושים בשבילו, ממש גן עדן. מה ברא הקדוש ברוך הוא!"</p>
+  <div class="highlight-box">
+    <p style="margin-bottom: 0;">"שִׁבְתִּי בְּבֵית ה'" אינה מקום, היא בליבו של האדם. דוד המלך מבקש: אני אזכה, בכל מקום שאהיה, להרגיש את טוב ה', את אהבת ה', את מצוות אהבת ה' בכל רגע מן החיים - זהו "שִׁבְתִּי בְּבֵית ה'". וכפי שכתב בעל המסילת ישרים: "השלמות האמיתית היא רק הדבקות בו יתברך".</p>
+  </div>
+  <p>ואיך מגיעים לזה? המפתח לבית ה' - כפי שהוכח בפרק הראשון מדברי הזוהר - הוא ההודיה. אדם שמתרגל להודות על כל דבר ודבר, המתרגש מכל דבר, הוא זה שזוכה ל"שֶׁבֶת בְּבֵית ה'". ואם אני אזכה להרגיש שהכל הוא "אַךְ טוֹב וָחֶסֶד" - אז יתקיים בי "וְשַׁבְתִּי בְּבֵית ה' לְאֹרֶךְ יָמִים". יהי רצון שנזכה כולנו לחזות בנועם ה', ולהרגיש את הנעימות שבטוב ה', "נִשְׂבְּעָה בְּטוּב בֵּיתֶךָ קְדֹשֶׁךָ".</p>
+
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות</h3>
+    <ol>
+      <li>תהלים כ"ז, ד - "אַחַת שָׁאַלְתִּי מֵאֵת ה' אוֹתָהּ אֲבַקֵּשׁ שִׁבְתִּי בְּבֵית ה' כָּל יְמֵי חַיַּי".</li>
+      <li>הבחנה בין שאלה לבקשה - מובא בשם המלבי"ם.</li>
+      <li>מסכת סנהדרין - "כל האומר שירה בעולם הזה זוכה ואומרה לעולם הבא".</li>
+      <li>תהלים פ"ד, ה - "אַשְׁרֵי יוֹשְׁבֵי בֵיתֶךָ עוֹד יְהַלְלוּךָ סֶּלָה".</li>
+      <li>ספר "שערי אהבה" - ביאור על אשרי יושבי ביתך.</li>
+      <li>זוהר הקדוש - "כל ארעורים שתכון בר ארעורה דחדוה דמלכא קדישא".</li>
+      <li>מסילת ישרים, פרק א'.</li>
+      <li>תהלים קי"ט - "גַּל עֵינַי וְאַבִּיטָה נִפְלָאוֹת מִתּוֹרָתֶךָ".</li>
+      <li>תהלים כ"ג, ו - "אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי כָּל יְמֵי חַיָּי וְשַׁבְתִּי בְּבֵית ה' לְאֹרֶךְ יָמִים".</li>
+      <li>תהלים ל"ה, ו - "רְדוֹף אוֹיְבַי הִשִּׂיגֵם וְלֹא אָשׁוּב עַד כַּלּוֹתָם".</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+  </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+});
+var scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) { scrollTopBtn.classList.add('visible'); } else { scrollTopBtn.classList.remove('visible'); }
+});
+</script>
+</body>
+</html>
