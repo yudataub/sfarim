@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>חג הסוכות - חג אהבת השם</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #1f2937; line-height: 1.8; padding: 40px 20px; }
+.container { max-width: 900px; margin: 0 auto; background: #fffefb; border-radius: 18px; padding: 60px 80px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+.main-title { font-size: 3em; font-weight: 800; text-align: center; background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 15px; line-height: 1.3; }
+.subtitle { text-align: center; font-size: 1.3em; color: #6b21a8; margin-bottom: 10px; }
+.author { text-align: center; font-size: 1.05em; color: #6b7280; margin-bottom: 40px; }
+h2 { font-size: 2.2em; color: #7e22ce; border-right: 6px solid #7e22ce; padding-right: 20px; margin-top: 50px; margin-bottom: 25px; }
+h2:first-of-type { margin-top: 20px; }
+h3 { font-size: 1.8em; color: #2563eb; margin-top: 35px; margin-bottom: 18px; }
+h4 { font-size: 1.5em; color: #059669; margin-top: 25px; margin-bottom: 15px; }
+p, li { font-size: 1.15em; line-height: 1.8; color: #1f2937; margin-bottom: 20px; }
+ul, ol { margin-right: 30px; margin-bottom: 20px; }
+strong { font-weight: 700; }
+em { color: #2563eb; font-style: italic; }
+.emphasis { color: #7e22ce; font-weight: 700; }
+.toc { background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%); border: 1px solid #e9d5ff; border-radius: 14px; padding: 25px 30px; margin-bottom: 40px; }
+.toc h3 { margin-top: 0; color: #7e22ce; font-size: 1.4em; }
+.toc ul { list-style: none; margin-right: 0; }
+.toc li { margin-bottom: 10px; font-size: 1.05em; }
+.toc a { color: #6b21a8; text-decoration: none; transition: color 0.2s; }
+.toc a:hover { color: #ec4899; text-decoration: underline; }
+.verse-box { background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%); border-right: 6px solid #7e22ce; border-radius: 12px; padding: 28px 30px; margin: 30px 0; font-size: 1.25em; text-align: center; font-style: italic; color: #4c1d95; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.highlight-box { background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-right: 6px solid #2563eb; border-radius: 12px; padding: 25px 30px; margin: 25px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.quote-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 6px solid #f59e0b; border-radius: 12px; padding: 25px 30px; margin: 25px 0; font-style: italic; color: #78350f; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.quote-box .source-tag { display: block; margin-top: 12px; font-style: normal; font-size: 0.9em; color: #92400e; font-weight: 600; }
+.story-box { background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%); border-right: 6px solid #059669; border-radius: 12px; padding: 28px 30px; margin: 25px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.qa-box { background: #fdf2f8; border: 2px dashed #ec4899; border-radius: 12px; padding: 25px 30px; margin: 25px 0; }
+.qa-box .q { color: #be185d; font-weight: 700; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+.section-divider { background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%); color: #fff; text-align: center; padding: 18px; border-radius: 12px; font-size: 1.3em; font-weight: 700; margin: 45px 0; box-shadow: 0 5px 15px rgba(126,34,206,0.15); }
+.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+.two-columns > div { border-radius: 12px; padding: 22px 24px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+.col-purple { background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%); border-right: 6px solid #7e22ce; }
+.col-gold { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 6px solid #f59e0b; }
+.sources { background: #f3f4f6; border-radius: 14px; padding: 25px 30px; margin-top: 50px; }
+.sources h3 { margin-top: 0; color: #374151; }
+.sources ol { margin-right: 25px; }
+.sources li { font-size: 1em; color: #4b5563; margin-bottom: 8px; }
+.footer { margin-top: 60px; padding-top: 35px; border-top: 3px solid #e9d5ff; text-align: center; color: #4b5563; font-size: 1.05em; line-height: 2; }
+.footer h4 { color: #2563eb; margin-top: 0; }
+.footer a { color: #7e22ce; }
+.scroll-top { position: fixed; bottom: 30px; left: 30px; width: 50px; height: 50px; background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.3em; box-shadow: 0 4px 15px rgba(0,0,0,0.2); opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; z-index: 100; }
+.scroll-top.visible { opacity: 1; visibility: visible; }
+@media (max-width: 768px) { body { padding: 15px 8px; } .container { padding: 30px 22px; border-radius: 12px; } .main-title { font-size: 2em; } h2 { font-size: 1.5em; padding-right: 14px; } h3 { font-size: 1.3em; } h4 { font-size: 1.15em; } p, li { font-size: 1.05em; } .two-columns { grid-template-columns: 1fr; } .scroll-top { left: 15px; bottom: 15px; width: 44px; height: 44px; } }
+@media print { @page { size: A4 portrait; margin: 20mm 18mm; } * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } body { background: #fff !important; padding: 0 !important; font-size: 11pt; } .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; } .scroll-top { display: none !important; } h2 { page-break-before: always; break-before: page; } h2:first-of-type { page-break-before: avoid; break-before: avoid; } h3, h4 { page-break-after: avoid; break-after: avoid; } .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box { page-break-inside: avoid; break-inside: avoid; } .toc { page-break-after: always; break-after: page; } .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; } h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; } .footer { page-break-before: always; break-before: page; } [style*="display: flex"], [style*="display: grid"] { display: block !important; } }
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;top:12px;right:12px;z-index:9999;background:#5b21b6;color:#fff;padding:7px 14px;border-radius:20px;font:600 14px Heebo,Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)" class="kt-back">📚 לכל השיעורים</a><style>@media print{.kt-back{display:none!important}}</style>
+<div class="container">
+<h1 class="main-title" id="top">חג הסוכות</h1>
+<div class="subtitle">חג אהבת השם - ענני כבוד, ארבעת המינים וקישוטי הסוכה</div>
+<div class="author">מאת: הרב יהודה טאוב</div>
+
+<div class="toc">
+<h3>📑 תוכן העניינים</h3>
+<ul>
+<li><a href="#section1">א. שתי מצוות החג - כפולות בחיבוק אחד</a></li>
+<li><a href="#section2">ב. ארבעת המינים - אגודה אחת של אהבת ישראל</a></li>
+<li><a href="#section3">ג. רבי טרפון והכוונה השלמה במצוות הסוכה</a></li>
+<li><a href="#section4">ד. ענני כבוד - חסד או אהבה?</a></li>
+<li><a href="#section5">ה. קישוטי הסוכה - מעבר למחויב</a></li>
+</ul>
+</div>
+
+<h2 id="section1">א. שתי מצוות החג - כפולות בחיבוק אחד</h2>
+
+<p>בחג הסוכות יש לנו שני סוגי מצוות: ישיבת סוכה וארבעת המינים. במשנה מסכת סוכה, פרקים א-ב עוסקים בסוכה, ופרקים ג-ד בארבעת המינים. גם בשולחן ערוך - סימנים תרכה עד תרלט עוסקים בישיבת סוכה, ורק אחר כך תר"מ ואילך בארבעת המינים. ואילו בתורה הסדר הפוך: קודם "וּלְקַחְתֶּם לָכֶם בַּיּוֹם הָרִאשׁוֹן פְּרִי עֵץ הָדָר..." (ארבעת המינים), ורק אחר כך "בַּסֻּכֹּת תֵּשְׁבוּ".</p>
+
+<p>מה הקשר בין שתי סוגי המצוות הללו, שהתאחדו יחד דווקא בחג הזה? התשובה: חג הסוכות הוא חג אהבת השם. מובא בשם האר"י ז"ל: חג הסוכות הוא הזמן שבו הקדוש ברוך הוא "מחבק" אותנו. כשמחבקים אדם - היד מתקפלת וכף היד יוצאת בשלושה טפחים משני הצדדים, כמו הענן שמחבק את הסכך. כך הקדוש ברוך הוא מחבק את עם ישראל בחג הסוכות - זהו חג של אהבת השם.</p>
+
+<h2 id="section2">ב. ארבעת המינים - אגודה אחת של אהבת ישראל</h2>
+
+<p>איך זוכים לאהבת השם? אחת הדרכים היא ארבעת המינים. הם מסמלים את אהבת ישראל: כידוע, האתרוג יש בו טעם וריח, הלולב טעם בלי ריח, ההדס ריח בלי טעם, והערבה לא טעם ולא ריח - ואת כולם אוגדים יחד באגודה אחת. הלולב עצמו צריך שיהיה זקוף וישר, ללא פירוד או חלוקה בעליו - סמל לכך שלא תהיה מחלוקת, אלא לב אחד ואגודה אחת.</p>
+
+<div class="highlight-box">
+<p>כשגר בא לפני הלל וביקש: "למדני את כל התורה כולה על רגל אחת", ענה לו הלל: "וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ - זו כל התורה כולה". על ידי אהבת ישראל - "ואהבת לרעך כמוך" - זוכים לאהבת השם. ולכן דווקא בחג הסוכות, שבו יש אהבת השם, צריך גם ביחד ללמוד על אהבת ישראל.</p>
+</div>
+
+<h2 id="section3">ג. רבי טרפון והכוונה השלמה במצוות הסוכה</h2>
+
+<div class="story-box">
+<p>מסופר על יהודי - "רבי טרפון" - שטרח כל חייו להכין סוכה כשרה, אפילו לפי כל החומרות והשיטות המחמירות. כשבא ידידו לבקרו, שאל אותו: "כיצד ייתכן שבסוכה הנפלאה שלך, יהודי בירך על מצוות ישיבת סוכה כדת וכדין, וכיוון מחשבתו לשם ייחוד קודשא בריך הוא ושכינתיה, ולמרות זאת לאחר מאה ועשרים שנה הסתבר לו שאת עיקר המצווה הוא לא קיים?"</p>
+</div>
+
+<div class="quote-box">
+<p>המשנה ברורה (סימן תרכה) כותב: "מצוות סוכה שונה משאר המצוות, שלא די בה לכוון שם קיום מצווה, אלא יש לכוון גם את טעם המצווה שציוונו הקדוש ברוך הוא לשם - זכר לענני כבוד שהושיב אותנו כשהוציאנו ממצרים... יורה כי עיקר המצווה וקיומה תלויה בכוונתה, שיכוון משמעות קיום המצווה". מי שישב בסוכה ולא חשב על טעם המצווה - חסר לו בעיקר המצווה.</p>
+<span class="source-tag">משנה ברורה, סימן תרכה</span>
+</div>
+
+<h2 id="section4">ד. ענני כבוד - חסד או אהבה?</h2>
+
+<p>מסביר ה"בני יששכר" בשם קדמונים, שגם מובא בשם ה"חיד"א": שלוש מתנות טובות נתן הקדוש ברוך הוא לישראל במדבר - מן, באר, וענני כבוד. מדוע דווקא ענני כבוד עושים "זכר" בסוכה, ולא זכר למן ולבאר?</p>
+
+<div class="story-box">
+<p>כשקרו שיטפונות בפלורידה, שלחו משלחות רבות לעזור, גם מישראל. האם הדבר מוכיח שאוהבים במיוחד את אנשי פלורידה? לא בהכרח - זהו רחמים על מצוקה, לא בהכרח אהבה. כל אדם הרואה סבל - הרחמים שלו מתעוררים, ולכן הולך לעזור. זה לא מראה על אהבה מיוחדת, אלא על רחמים טבעיים.</p>
+</div>
+
+<p>כותב ה"חיד"א": מן ובאר - מראים על רחמים. במדבר, בלי מים ומזון, אי אפשר להחזיק מעמד יום אחד. זה מראה רחמים, אך עדיין לא אהבה. אבל שהקדוש ברוך הוא הביא לנו ענני כבוד - מיזוג אוויר, הגנה מהשמש, ללא עליות וירידות, נוסעים על ענן ברוך בנוחות מוחלטת - זה מראה משהו מעבר לצורך: זה מראה על אהבה. "חיבה יתרה נודעת לישראל שהקיפם בענני כבוד."</p>
+
+<div class="highlight-box">
+<p>ענני "כבוד" - כי הם מראים כמה בורא עולם מכבד ואוהב אותנו. הנפש שלנו אוהבת כבוד, אך צריך כבוד אמיתי: כבוד מבורא עולם - להרגיש כמה אתה מכובד ואהוב בעיני בורא עולם. את זה משיגים כשמתבוננים כמה בורא עולם אוהב אותנו, "לְמַעַן יֵדְעוּ דֹרֹתֵיכֶם" - שאותו בורא עולם ממשיך גם היום לעטוף אותנו, רק שהיום צריך יותר התבוננות כדי לראות זאת.</p>
+</div>
+
+<h2 id="section5">ה. קישוטי הסוכה - מעבר למחויב</h2>
+
+<p>לא נהוג לקשט את השופר של ראש השנה או את המצה של פסח, אך בחג הסוכות כולם - מהילדים בגן ועד המבוגרים - מקשטים את הסוכה. כבר בגמרא מוזכר עניין נוי הסוכה. מדוע דווקא בחג הזה?</p>
+
+<p>כלל ידוע: "כמים הפנים לפנים, כן לב האדם לאדם" - כשם שהקדוש ברוך הוא בחג הסוכות לא נתן לנו רק את מה שחייבים, אלא עטף אותנו בענני כבוד לנוחות מלאה - כך גם אנחנו במצוות ישיבת סוכה רוצים להראות לבורא עולם שאיננו עושים רק את המחויב (שלוש דפנות וסכך כשר), אלא מוסיפים ומקשטים כביטוי לאהבתנו למצוותיו. זהו סוד קישוטי הסוכה: הם מראים איך אנחנו אוהבים את מצוות בורא עולם.</p>
+
+<div class="section-divider">חג הסוכות - חג אהבת השם, שבו מגלים כמה בורא עולם אוהב אותנו, וכמה גם אנו אוהבים את מצוותיו</div>
+
+<div class="sources">
+<h3>📚 מקורות ומראי מקומות</h3>
+<ol>
+<li>שולחן ערוך אורח חיים, סימנים תרכה-תרלט (סוכה) ותר"מ ואילך (ארבעת המינים)</li>
+<li>ויקרא כג, מ - "וּלְקַחְתֶּם לָכֶם בַּיּוֹם הָרִאשׁוֹן"</li>
+<li>מובא בשם האר"י ז"ל - סוד ה"חיבוק" של ענני הכבוד</li>
+<li>גמרא שבת לא, ע"א - הלל והגר, "ואהבת לרעך כמוך זו כל התורה כולה"</li>
+<li>משנה ברורה, סימן תרכה</li>
+<li>מובא בשם הבני יששכר ובשם החיד"א - טעם ענני הכבוד</li>
+<li>שולחן ערוך אורח חיים, תקכ"ט, ב - חובת השמחה במועד</li>
+</ol>
+</div>
+
+<div class="footer">
+<h4>הרב יהודה טאוב</h4>
+<p>קרית אתא | 0527139520</p>
+<p>קול הלשון - קול תודה: 03-6171190</p>
+<p><a href="http://kol-toda.co.il">kol-toda.co.il</a></p>
+</div>
+
+</div>
+
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+});
+var scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) { scrollTopBtn.classList.add('visible'); } else { scrollTopBtn.classList.remove('visible'); }
+});
+</script>
+</body>
+</html>
