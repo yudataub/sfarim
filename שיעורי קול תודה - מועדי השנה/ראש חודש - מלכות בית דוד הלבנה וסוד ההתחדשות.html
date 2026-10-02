@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ראש חודש — מלכות בית דוד, הלבנה וסוד ההתחדשות</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #1f2937;
+  line-height: 1.8;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fefefe;
+  border-radius: 18px;
+  padding: 60px 80px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  position: relative;
+}
+.main-title {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.subtitle {
+  text-align: center;
+  font-size: 1.3em;
+  color: #4b5563;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+.author {
+  text-align: center;
+  font-size: 1.1em;
+  color: #7e22ce;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+h2 {
+  font-size: 2.2em;
+  color: #7e22ce;
+  border-right: 6px solid #7e22ce;
+  padding-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+h2:first-of-type { margin-top: 20px; }
+h3 {
+  font-size: 1.8em;
+  color: #2563eb;
+  margin-top: 35px;
+  margin-bottom: 18px;
+}
+h4 {
+  font-size: 1.5em;
+  color: #059669;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+p, li {
+  font-size: 1.15em;
+  line-height: 1.8;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+ul, ol { padding-right: 30px; margin-bottom: 20px; }
+.emphasis { color: #7e22ce; font-weight: bold; }
+em { color: #2563eb; font-style: italic; }
+strong { font-weight: bold; }
+
+.verse-box {
+  background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+  border: 2px solid #7e22ce;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 30px 0;
+  text-align: center;
+  font-size: 1.25em;
+  font-style: italic;
+  box-shadow: 0 5px 15px rgba(126,34,206,0.15);
+}
+.highlight-box {
+  background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+  border-right: 6px solid #2563eb;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-right: 6px solid #f59e0b;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+  font-style: italic;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box .source-tag {
+  display: block;
+  margin-top: 12px;
+  font-style: normal;
+  font-weight: bold;
+  color: #b45309;
+  font-size: 0.9em;
+}
+.story-box {
+  background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+  border-right: 6px solid #059669;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.section-divider {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+  color: #fff;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 22px;
+  border-radius: 12px;
+  margin: 40px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 30px 0;
+}
+.two-columns > div {
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.col-purple { background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 100%); border-right: 5px solid #7e22ce; }
+.col-gold { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 5px solid #f59e0b; }
+.qa-box {
+  background: #fdf2f8;
+  border: 2px dashed #ec4899;
+  border-radius: 10px;
+  padding: 25px 30px;
+  margin: 25px 0;
+}
+.qa-box .q { color: #be185d; font-weight: bold; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+.toc {
+  background: linear-gradient(135deg, #f3e8ff 0%, #fdf4ff 100%);
+  border: 2px solid #d8b4fe;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin: 35px 0 45px;
+}
+.toc h3 { margin-top: 0; color: #7e22ce; }
+.toc ul { list-style: none; padding-right: 10px; }
+.toc li { margin-bottom: 10px; }
+.toc a {
+  color: #6d28d9;
+  text-decoration: none;
+  font-size: 1.05em;
+  transition: color 0.2s;
+}
+.toc a:hover { color: #ec4899; text-decoration: underline; }
+.sources {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin: 45px 0 20px;
+}
+.sources h3 { margin-top: 0; color: #4b5563; }
+.sources ol { color: #374151; }
+.footer {
+  margin-top: 50px;
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+  border-radius: 14px;
+  font-size: 1.05em;
+  color: #374151;
+}
+.footer strong { color: #7e22ce; }
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.3em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 100;
+}
+.scroll-top.visible { opacity: 1; visibility: visible; }
+
+@media (max-width: 768px) {
+  body { padding: 15px 8px; }
+  .container { padding: 30px 20px; }
+  .main-title { font-size: 2em; }
+  h2 { font-size: 1.6em; padding-right: 14px; border-right-width: 4px; }
+  h3 { font-size: 1.35em; }
+  h4 { font-size: 1.2em; }
+  p, li { font-size: 1.05em; }
+  .two-columns { grid-template-columns: 1fr; }
+  .scroll-top { left: 15px; bottom: 15px; width: 44px; height: 44px; }
+}
+
+@media print {
+  @page { size: A4 portrait; margin: 20mm 18mm; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+  .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+  .scroll-top { display: none !important; }
+  h2 { page-break-before: always; break-before: page; }
+  h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+  h3, h4 { page-break-after: avoid; break-after: avoid; }
+  .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box {
+    page-break-inside: avoid; break-inside: avoid;
+  }
+  .toc { page-break-after: always; break-after: page; }
+  .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+  h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+  .footer { page-break-before: always; break-before: page; }
+  [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;top:12px;right:12px;z-index:9999;background:#5b21b6;color:#fff;padding:7px 14px;border-radius:20px;font:600 14px Heebo,Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)" class="kt-back">📚 לכל השיעורים</a><style>@media print{.kt-back{display:none!important}}</style>
+<div class="container">
+  <h1 class="main-title" id="top">ראש חודש<br>מלכות בית דוד, הלבנה וסוד ההתחדשות</h1>
+  <div class="subtitle">מדוע אומרים הלל בראש חודש, מה הקשר בין הלבנה למלכות בית דוד, ומדוע אין לעם ישראל אור עצמי משלו</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+  <div class="toc">
+    <h3>📖 תוכן העניינים</h3>
+    <ul>
+      <li><a href="#section1">חלק א: שמחת הלבנה — הטעם לאמירת ההלל בראש חודש</a></li>
+      <li><a href="#section2">חלק ב: מלכות בית דוד נמשלה ללבנה</a></li>
+      <li><a href="#section3">חלק ג: אין לנו אור עצמי — כדברי הרמח"ל בדעת תבונות</a></li>
+    </ul>
+  </div>
+
+  <h2 id="section1">חלק א: שמחת הלבנה — הטעם לאמירת ההלל בראש חודש</h2>
+
+  <p>בספר "סדר היום" כותב בעל הספר את הטעם שאנו אומרים הלל בראש חודש: מטעם שמחת היום, שהוא "יום טוב ללבנה שנתחדש אורה, וצריכים אנו לשמוח בשמחתה — שישראל מונים ללבנה, ובשלמה יהיה לנו שלום". כלומר, אמירת ההלל בראש חודש נובעת מכך שיש לנו שמחה מיוחדת בהתחדשות הלבנה, ושמחת הלבנה היא שמחתנו אנו — שכן יש קשר ודמיון גדול בין עם ישראל לבין הלבנה: עם ישראל מונה את חודשיו ללבנה, וכפי שאנו אומרים בסוף ברכת קידוש הלבנה, עם ישראל עתיד להתחדש כמותה ולפאר ליוצרו.</p>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0">מבארים המפרשים סיבה נוספת לכך שאומרים הלל בראש חודש: הלבנה רומזת למלכות בית דוד, וחידוש הלבנה מדי חודש רומז להתחדשותה העתידה של מלכות בית דוד. ולכן אנו אומרים בראש חודש דווקא הלל — מזמורים מתהילים שחיבר דוד המלך עליו השלום.</p>
+  </div>
+
+  <p>ננסה היום להבין מה הכוונה שעם ישראל דומה ללבנה, ומה הכוונה שמלכות בית דוד דומה ללבנה, וכן להבין את עניין השמחה שיש בהתחדשות הלבנה — מדוע אנו שמחים בעצם היות הלבנה מתחדשת.</p>
+
+  <h2 id="section2">חלק ב: מלכות בית דוד נמשלה ללבנה</h2>
+
+  <p>הרמ"א בשולחן ערוך (אורח חיים סימן תכ"ו, סוף סעיף ב') כותב בעניין קידוש הלבנה:</p>
+
+  <div class="quote-box">
+    "ונוהגים לומר 'דָּוִד מֶלֶךְ יִשְׂרָאֵל חַי וְקַיָּם', שמלכותו נמשל ללבנה ועתיד להתחדש כמותה, וכנסת ישראל תחזור להידבק בבעלה שהוא הקדוש ברוך הוא, דוגמת הלבנה המתחדשת עם החמה, שנאמר 'שֶׁמֶשׁ וּמָגֵן ה''. ולכן עושים שמחות וריקודין בקידוש החודש דוגמת שמחת נישואין."
+    <span class="source-tag">הרמ"א, שולחן ערוך אורח חיים סימן תכ"ו סעיף ב'</span>
+  </div>
+
+  <p>כלומר, יש קשר מיוחד בין מלכות בית דוד ובין הלבנה: מלכות בית דוד נמשלה ללבנה, וכפי שכותב גם רש"י במסכת ראש השנה (דף כ' עמוד א') על הסיפור שרבי שלח את רבי חייא לקדש את החודש, ומסר לו סימן — את המשפט "דָּוִד מֶלֶךְ יִשְׂרָאֵל חַי וְקַיָּם" — לאחר שיקדש את החודש. מסביר שם רש"י, שדוד נמשל ללבנה משום שנאמר עליו הפסוק: "כִּסְאוֹ כַשֶּׁמֶשׁ נֶגְדִּי, כְּיָרֵחַ יִכּוֹן עוֹלָם" — וכן כנסת ישראל, כמו שאמר הרמ"א, נקראת גם היא בשם "דוד". וכך גם כותב רבנו בחיי בפרשת וישב, שזוהי הכוונה בפסוק בהושע: "וּבִקְשׁוּ אֶת ה' אֱלֹקֵיהֶם וְאֵת דָּוִד מַלְכָּם" — שכנסת ישראל נקראת גם כן בשם "דוד מלכות בית דוד".</p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <h4 style="margin-top:0">הלבנה מקבלת מהחמה</h4>
+      <p style="margin-bottom:0">כשם שאין ללבנה אור משלה, אלא כל אורה מגיע ממה שהחמה משפיעה בה, כך גם עם ישראל אין לו אור עצמי, אלא כל אורו מגיע מהקדוש ברוך הוא המאיר עליו.</p>
+    </div>
+    <div class="col-gold">
+      <h4 style="margin-top:0">המלכות מקבלת מהמידות</h4>
+      <p style="margin-bottom:0">דוד המלך עומד כנגד ספירת המלכות, שעליה נאמר "לית לה מגרמה כלום" — אין לה שום מקור אור עצמי, אלא היא מקבלת את אורה וכוחה מן המידות העליונות שמעליה.</p>
+    </div>
+  </div>
+
+  <p>וזהו הקשר בין הלבנה לבין עם ישראל ולבין מלכות בית דוד, הנקראת גם בשם "כנסת ישראל": כנסת ישראל עתידה להתחדש, כמו הלבנה המתחדשת בכל חודש — אך החידוש הזה אינו חידוש עצמי, אלא חידוש מכוח החמה, מכוח השמש, שהיא המשפיעה מאורה להאיר את הלבנה. ובמקביל, גם לעם ישראל אין אור עצמי, אלא כל אורו מגיע מאורו של הקדוש ברוך הוא, המאיר על עם ישראל.</p>
+
+  <h2 id="section3">חלק ג: אין לנו אור עצמי — כדברי הרמח"ל בדעת תבונות</h2>
+
+  <p>מסביר הרמח"ל בספרו "דעת תבונות" (סימן קנ"ח), ונביא את לשונו:</p>
+
+  <div class="quote-box">
+    "וְהִנֵּה עָשָׂה הַקָּדוֹשׁ בָּרוּךְ הוּא מְצִיאוּת הָאָדָם גָּדוֹל לְפִי הָאֱמֶת, אַךְ לֹא קָבַע טוּבוֹ בּוֹ שֶׁיִּהְיֶה תָּמִיד בְּעִקָּרוֹ... אֶלָּא עָשָׂה כַּלְּבָנָה, כַּלְּבָנָה הַזֹּאת שֶׁהִיא אֲפֵלָה וְהִיא צְרִיכָה לְקַבֵּל אוֹרָה מִן הַשֶּׁמֶשׁ, וְאָז הִיא מְאִירָה. כָּךְ הָאָדָם אֵינוֹ בְּכֹחוֹ מִצַּד עַצְמוֹ, אֶלָּא הַשְׁכָלוֹ בְּכֹחַ מִצַּד הִתְדַּבְּקוּתוֹ בּוֹ יִתְבָּרֵךְ, שֶׁיָּאִיר אֵלָיו בְּאוֹר פָּנָיו, וְאָז יִהְיֶה מֻשְׁלָם."
+    <span class="source-tag">הרמח"ל, דעת תבונות סימן קנ"ח</span>
+  </div>
+
+  <p>מבואר בדבריו, שכל האור של עם ישראל — כל האור של היהודי — אינו אור עצמי, אלא אור המגיע מהקדוש ברוך הוא. וזהו הדמיון שיש בין עם ישראל לבין הלבנה: כשם שאין ללבנה אור עצמי אלא כל אורה מגיע מן השמש, כך עם ישראל אין לו אור עצמי, אלא כל אורו מגיע מהקדוש ברוך הוא. וכן בדוד המלך, מלכות בית דוד, שדוד המלך עומד כנגד ספירת המלכות — שעליה נאמר "לית לה מגרמה כלום", אין לה שום מקור אור עצמי, אלא היא מקבלת את אורה וכוחה מן המידות העליונות הנמצאות מעליה, ומידת המלכות מוציאה אותם לפועל. וכך גם עניין מלכות בית דוד כולו — היא מביאה את שליטת הקדוש ברוך הוא, את מלכותו, אל העם. מי שרוצה להרחיב בעניין מידת המלכות, יעיין בתחילת הספר "שבת מלכתא" של הרב פינקוס, המבאר שם באופן נפלא ובצורה ברורה את כל עניין מידת המלכות.</p>
+
+  <div class="story-box">
+    <p style="margin-bottom:0">וזהו הפירוש למה שכתב הרמ"א: "כנסת ישראל תחזור להידבק בבעלה שהוא הקדוש ברוך הוא, דוגמת הלבנה המתחדשת עם החמה" — כלומר, שאין לנו אור עצמי, אלא כל האור שלנו הוא מאת הקדוש ברוך הוא, ולעתיד לבוא האור שיושפע עלינו יהיה בצורה מושלמת, שתהיה עלינו הארה שלמה מאת הקדוש ברוך הוא. וזו השמחה שיש לנו בראש חודש: חידוש הלבנה מראה לנו שהגאולה השלמה, בעזרת השם, תגיע בקרוב.</p>
+  </div>
+
+  <div class="section-divider">והשמחה הזו כמו שמחת נישואין — כביכול אנו רואים בכך את התחתנותנו עם הקדוש ברוך הוא</div>
+
+  <p>למרות שעכשיו האור הזה עדיין אינו שלם — ההארה שהקדוש ברוך הוא מאיר עלינו עדיין אינה בשלמותה — בכל זאת אנו שמחים בזה שאנו רואים כאן תחילת תהליך שמתחדש ומתקדם לעבר המטרה הנכספת: שנזכה שהקדוש ברוך הוא יחזור אלינו, ונזכה לחיות עם הקדוש ברוך הוא בדבקות גמורה, בשלמות. ואת זה אנו רואים בלבנה, שאנו אומרים תחילת התחדשות, שהלבנה מתחילה להאיר מחדש — וזה סימן בשבילנו שאנו בקרוב נזכה שהקדוש ברוך הוא גם כן יאיר עלינו יותר ויותר, עד להארה שלמה.</p>
+
+  <p>יהי רצון שנזכה שהקדוש ברוך הוא ימלא את פגימת הלבנה, ותהיה אור הלבנה כאור החמה — שהקדוש ברוך הוא יאיר עלינו מאור פניו בשלמות, ונזכה לגאולה השלמה בקרוב.</p>
+
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות</h3>
+    <ol>
+      <li>סדר היום — טעם אמירת הלל בראש חודש משום שמחת הלבנה.</li>
+      <li>שולחן ערוך, אורח חיים סימן תכ"ו סעיף ב', ופירוש הרמ"א — "דוד מלך ישראל חי וקיים", ומנהג השמחה בקידוש החודש.</li>
+      <li>גמרא, מסכת ראש השנה כ ע"א, ופרש"י שם — מעשה ברבי, רבי חייא, וסימן קידוש החודש.</li>
+      <li>תהילים פט, לח — "כִּסְאוֹ כַשֶּׁמֶשׁ נֶגְדִּי, כְּיָרֵחַ יִכּוֹן עוֹלָם".</li>
+      <li>רבנו בחיי, פרשת וישב — פירוש הפסוק בהושע ג, ה: "וּבִקְשׁוּ אֶת ה' אֱלֹקֵיהֶם וְאֵת דָּוִד מַלְכָּם".</li>
+      <li>רמח"ל, דעת תבונות סימן קנ"ח — משל הלבנה המקבלת אורה מהשמש, ותלות האדם בהתדבקותו בהשם.</li>
+      <li>הרב שמשון פינקוס, ספר "שבת מלכתא" — הרחבה על מידת המלכות.</li>
+      <li>נוסח ברכת קידוש הלבנה — "שֶׁמֶשׁ וּמָגֵן ה'".</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+      <h4>🎧 שיעורים נוספים של הרב</h4>
+      <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+      <p>📞 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+      <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+  </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+(function () {
+  var scrollTopBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 400) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var targetId = this.getAttribute('href').slice(1);
+      var target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
