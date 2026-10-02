@@ -1,0 +1,387 @@
+&lt;!DOCTYPE html&gt;
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>יום חתונתו — חג השבועות</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #1f2937;
+    line-height: 1.8;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fefefe;
+    border-radius: 18px;
+    padding: 60px 80px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    position: relative;
+}
+.main-title {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+.subtitle {
+    text-align: center;
+    font-size: 1.3em;
+    color: #4b5563;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+.author {
+    text-align: center;
+    font-size: 1.1em;
+    color: #7e22ce;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+h2 {
+    font-size: 2.2em;
+    color: #7e22ce;
+    border-right: 6px solid #7e22ce;
+    padding-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+h2:first-of-type { margin-top: 20px; }
+h3 {
+    font-size: 1.8em;
+    color: #2563eb;
+    margin-top: 35px;
+    margin-bottom: 18px;
+}
+h4 {
+    font-size: 1.5em;
+    color: #059669;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+p, li {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+ul, ol { padding-right: 30px; margin-bottom: 20px; }
+.emphasis { color: #7e22ce; font-weight: bold; }
+em { color: #2563eb; font-style: italic; }
+strong { font-weight: bold; }
+
+.verse-box {
+    background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    border: 2px solid #7e22ce;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: center;
+    font-size: 1.25em;
+    font-style: italic;
+    box-shadow: 0 5px 15px rgba(126,34,206,0.15);
+}
+.highlight-box {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    border-right: 6px solid #2563eb;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-right: 6px solid #f59e0b;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    font-style: italic;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box .source-tag {
+    display: block;
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: bold;
+    color: #b45309;
+    font-size: 0.9em;
+}
+.story-box {
+    background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    border-right: 6px solid #059669;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.section-divider {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    color: #fff;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 22px;
+    border-radius: 12px;
+    margin: 40px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 30px 0;
+}
+.two-columns > div {
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.col-purple { background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 100%); border-right: 5px solid #7e22ce; }
+.col-gold { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 5px solid #f59e0b; }
+.qa-box {
+    background: #fdf2f8;
+    border: 2px dashed #ec4899;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 25px 0;
+}
+.qa-box .q { color: #be185d; font-weight: bold; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+.toc {
+    background: linear-gradient(135deg, #f3e8ff 0%, #fdf4ff 100%);
+    border: 2px solid #d8b4fe;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 35px 0 45px;
+}
+.toc h3 { margin-top: 0; color: #7e22ce; }
+.toc ul { list-style: none; padding-right: 10px; }
+.toc li { margin-bottom: 10px; }
+.toc a {
+    color: #6d28d9;
+    text-decoration: none;
+    font-size: 1.05em;
+    transition: color 0.2s;
+}
+.toc a:hover { color: #ec4899; text-decoration: underline; }
+.sources {
+    background: #f3f4f6;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 45px 0 20px;
+}
+.sources h3 { margin-top: 0; color: #4b5563; }
+.sources ol { color: #374151; }
+.footer {
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+    border-radius: 14px;
+    font-size: 1.05em;
+    color: #374151;
+}
+.footer strong { color: #7e22ce; }
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.3em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 100;
+}
+.scroll-top.visible { opacity: 1; visibility: visible; }
+
+@media (max-width: 768px) {
+    body { padding: 15px 8px; }
+    .container { padding: 30px 20px; }
+    .main-title { font-size: 2em; }
+    h2 { font-size: 1.6em; padding-right: 14px; border-right-width: 4px; }
+    h3 { font-size: 1.35em; }
+    h4 { font-size: 1.2em; }
+    p, li { font-size: 1.05em; }
+    .two-columns { grid-template-columns: 1fr; }
+    .scroll-top { left: 15px; bottom: 15px; width: 44px; height: 44px; }
+}
+
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+    .scroll-top { display: none !important; }
+    h2 { page-break-before: always; break-before: page; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+    h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+    .footer { page-break-before: always; break-before: page; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;top:12px;right:12px;z-index:9999;background:#5b21b6;color:#fff;padding:7px 14px;border-radius:20px;font:600 14px Heebo,Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)" class="kt-back">📚 לכל השיעורים</a><style>@media print{.kt-back{display:none!important}}</style>
+<div class="container">
+  <h1 class="main-title" id="top">יום חתונתו</h1>
+  <div class="subtitle">מתן תורה כחתונת עם ישראל עם בורא עולם — מנהגי חופה שמקורם במעמד הר סיני, ומהו הקול החמישי שמביא את כל השפע</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+  <div class="highlight-box">
+    <strong>הערת עריכה:</strong> ספר זה מאחד שני שיעורים שנמסרו ברצף אחד, שבוע אחר שבוע, כהמשך מפורש זה לזה, סביב אותו יסוד — הדימוי בין מתן תורה לחתונה. הפרק הראשון עוסק בכיוון אחד: מה לומדים על מתן תורה מתוך משל הנישואין. הפרק השני, שנמסר שבוע לאחר מכן, הולך בכיוון ההפוך: מה לומדים מן החתונה על מתן תורה עצמו, ובפרט על "הקול החמישי" שבו זוכים לכל השפע. מאחר שמדובר בשני חלקים המשך ישיר זה לזה, רוכזו כאן כפרקי ספר אחד.
+  </div>
+
+  <div class="toc">
+    <h3>📑 תוכן העניינים</h3>
+    <ul>
+      <li><a href="#section1">פרק א: היום המיוחס — מתן תורה כיום נישואין</a></li>
+      <li><a href="#section2">פרק ב: מנהגי חתונה שמקורם במתן תורה, וסוד הקול החמישי</a></li>
+    </ul>
+  </div>
+
+  <h2 id="section1">פרק א: היום המיוחס — מתן תורה כיום נישואין</h2>
+
+  <p>ב' בסיוון נקרא "היום המיוחס". כך קוראים לתאריך הזה, על שם מה שאירע בו לפני מתן תורה, כשלושת אלפים שנה. כך מופיע בחומש שמות, פרק י"ט: "בַּחֹדֶשׁ הַשְּׁלִישִׁי לְצֵאת בְּנֵי יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם, בַּיּוֹם הַזֶּה בָּאוּ מִדְבַּר סִינָי" — בא' בסיוון הגיע עם ישראל למדבר סיני. למחרת, כפי שמבאר רש"י, עלה משה אל האלוקים, ויקרא אליו השם מן ההר לאמור: "כֹּה תֹאמַר לְבֵית יַעֲקֹב וְתַגֵּיד לִבְנֵי יִשְׂרָאֵל: אַתֶּם רְאִיתֶם אֲשֶׁר עָשִׂיתִי לְמִצְרַיִם, וָאֶשָּׂא אֶתְכֶם עַל כַּנְפֵי נְשָׁרִים וָאָבִא אֶתְכֶם אֵלָי... וְאַתֶּם תִּהְיוּ לִי מַמְלֶכֶת כֹּהֲנִים וְגוֹי קָדוֹשׁ".</p>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0">יש כאן הקדמה למתן תורה, וההקדמה הזו חשובה מאוד מאוד — בלעדיה יכול אדם לעשות הרבה מצוות ולהפסיד את העיקר. לפעמים ההקדמה לספר היא הדבר המכריע, שממנו מבינים לְמָה בכלל כתב המחבר את ספרו. אנו לומדים מהקדמה זו, שבשביל לבנות קשר טוב עם הבורא יתברך צריך תחילה להתבונן בכל החסדים והטובות שבורא עולם עשה עמנו. כך פותח בורא עולם: "אתם ראיתם אשר עשיתי למצרים" — הקדוש ברוך הוא מונה בפני עם ישראל את כל החסדים שעשה איתם.</p>
+  </div>
+
+  <p>והנה הקשר עם בורא עולם נמשל לכמה וכמה דמויים: לאחים, לבנים — "בָּנִים אַתֶּם לַהשם אֱלֹקֵיכֶם" — וגם לנישואין. וכפי שנאמר במשנה במסכת תענית על הפסוק "צְאֶינָה וּרְאֶינָה... בְּיוֹם חֲתֻנָּתוֹ" — "ביום חתונתו" זהו מתן תורה. מתן תורה נמשל ליום הנישואים עם בורא עולם, וזאת לשני הצדדים: לומדים ממתן תורה על נישואין. לכן החתן מגיע ראשון למעמד החופה, ומחכה לכלה שתגיע — כדרך שעשה הקדוש ברוך הוא. כפי שמבאר רש"י על הפסוק "השם מִסִּינַי בָּא": "יצא לקראתם כשבאו להתייצב בתחתית ההר, כחתן היוצא לקראת כלה". הקדוש ברוך הוא הגיע ראשון למעמד הר סיני, ואחר כך הגיעו עם ישראל.</p>
+
+  <p>עתה נלמד יסוד נפלא ההפוך — לא ללמוד ממתן תורה על נישואין, אלא ללמוד מן הנישואין על מתן תורה. וכך מובא בסוף קונטרס "יום חתונתו", לבעל הספר הנפלא "שערי אהבה" — הרב שלום פינקוס זצ"ל: "יש לחקור על מהות התורה והיהדות. שהרי מצוות התורה הן פרטי ההלכות של העסקה בין הקדוש ברוך הוא ועמו ישראל, בדומה לכתובה. אבל מה היא עצם מהות העסקה?" — זהו דבר שחשוב לכל יהודי לדעת יותר מהכל.</p>
+
+  <div class="qa-box">
+    <div class="q">מהי, אם כן, עצם מהותה של היהדות — מה בעצם "העסקה" שבינינו לבין הקדוש ברוך הוא?</div>
+    <div class="a">יש בתורה פרשה מיוחדת המתארת זאת, והיא ההקדמה למתן תורה: "כה תאמר לבית יעקב... אתם ראיתם... ושמרתם את בריתי... ואביא אתכם אלי". כאן פורטת התורה את מהות העסקה בינינו לבין השם יתברך. מהות היהדות אינה חוזה עבודה — לא "היא תביא לו מעשה ידיה והוא ייתן לה מזונות" — אלא כריתת ברית של אהבה. תכלית הנישואין היא לחיות חיים משותפים באהבה וחיבה, ולהיות קרובים זה לזה; כך גם תכלית התורה: לחיות חיים של אהבה עם בורא עולם, חיים של שמחה עם בורא עולם. זוהי מטרת התורה.</div>
+  </div>
+
+  <p>וכשם שבנישואין מטרתם היא לחיות חיים של שלום ושמחה, אהבה ואחווה, שלום ורעות — כך גם מטרת התורה. וזהו הלימוד מקבלת התורה: כמה חשוב שאדם יתבונן תמיד בטובות ובחסדים שבורא עולם עושה איתו, ידע להוקירם, יזכור אותם, ישמח בהם — כי כך אדם יוצר קשר של אהבה עם בורא עולם. וזהו מה שמסמל "יום חתונתו" — מתן תורה: יום של שמחה עצומה, להרגיש כמה טובה המתנה שנתן לנו בורא עולם, כמה טוב בורא עולם, ולחגוג מאוד. זהו יום הנישואים שלנו עם בורא עולם.</p>
+
+  <h2 id="section2">פרק ב: מנהגי חתונה שמקורם במתן תורה, וסוד הקול החמישי</h2>
+
+  <p>נמשיך בעזרת השם להתכונן "לחתונה הגדולה" — יום מתן תורה. הבה נביא כמה מנהגים נפלאים, המלמדים כי מתן תורה נחשב כעין חתונה, עד כדי כך שכתוב במהר"ם מרוטנבורג, נקדות הכלולות: כל מנהגי חתן וכלה הם כעין מתן תורה, שהקדוש ברוך הוא ראה עצמו כחתן כנגד הכלה, שהיא ישראל. ונביא ארבעה מנהגים נחמדים הנוהגים בחופה, שמקורם במתן תורה.</p>
+
+  <div class="two-columns">
+    <div class="col-purple">
+      <h4 style="margin-top:0">כ"ד תכשיטים לכלה</h4>
+      <p style="margin-bottom:0">אמרו חז"ל: כשם שהכלה מקושטת בעשרים וארבעה תכשיטים, כך אין תלמיד חכם בקיא כראוי אלא אם הוא בקיא בעשרים וארבעה ספרי התנ"ך.</p>
+    </div>
+    <div class="col-gold">
+      <h4 style="margin-top:0">עמידה בשעת החופה</h4>
+      <p style="margin-bottom:0">כתוב בתיקוני זוהר: כל מנהגי החופה נלמדים ממעמד הר סיני. במעמד הר סיני נאמר "וַיַּעַמְדוּ מֵרָחוֹק" — לכן נוהגים לעמוד גם בשעת החופה, שהיא כעין מעמד הר סיני.</p>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0"><strong>ברכת "מקדש עמו ישראל על ידי חופה וקידושין".</strong> שואלים המפרשים: וכי הקדוש ברוך הוא מקדש את עמו ישראל רק על ידי חופה? הרי כל מצווה מקדשת! אלא הכוונה, שהקדוש ברוך הוא קידש אותנו אליו בחופה — שהיא מתן תורה, שנתפרשה בחז"ל כפריסת חופה, וקידושין הם התורה עצמה: "תּוֹרָה צִוָּה לָנוּ מֹשֶׁה מוֹרָשָׁה" — אל תקרא "מוֹרָשָׁה" אלא "מְאֹרָסָה" — שאנו מאורסים לבורא עולם. ובעזרת השם, בהפטרת פרשת במדבר, נקרא: "וְאֵרַשְׂתִּיךְ לִי לְעוֹלָם... וְאֵרַשְׂתִּיךְ לִי בֶּאֱמוּנָה, וְיָדַעַתְּ אֶת השם".</p>
+  </div>
+
+  <p><strong>ספירת העומר.</strong> כשם שהאישה סופרת לטהרתה שבעה ימים, כך גם אנו סופרים. שואל בעל "אור החיים": מדוע שבע שבתות דווקא? מתרץ: כיוון שהייתה כאן טומאת מצרים, טומאה חזקה — לכן היה צריך שבע פעמים שבע.</p>
+
+  <p><strong>ברכות התורה.</strong> על מה שהקדוש ברוך הוא בחר בנו לכלה, אנו מודים להשם על כך בכל יום, בברכות התורה. למה מברכים דווקא שלוש ברכות, בעוד שעל כל מצווה מברכים ברכה אחת? אלא בתורה יש כל כך הרבה דברים נפלאים, עד שצריך להודות עליה לא רק ברכת המצוות — "אשר קידשנו במצוותיו וציוונו לעסוק בדברי תורה" — אלא יש לברך עליה גם ברכות שבח: "אשר בחר בנו מכל העמים... נתן לנו את תורתו" — זהו "מתן תורה" הנעשה מחדש בכל יום. ומהי ברכת "והערב נא"? זו ברכה שבה אנו מבקשים שיהיו דברי התורה נעימים, וזוהי ברכת שבח נוספת: "תּוֹרַת פִּיךָ מֵאַלְפֵי זָהָב וָכָסֶף" — איזה דבר מתוק! על כזה דבר אי אפשר לא להודות. אנו מודים לקדוש ברוך הוא, המלמד תורה לעמו ישראל, שנותן לנו כזה דבר מתוק — ובפרט בימים אלו, ראוי לזכור להודות מאוד על ברכות התורה: ברכת המצוות, ברכת ההנאה, וברכת השבח. זוהי הכנה נפלאה למתן תורה.</p>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0"><strong>שבעת ימי המילואים.</strong> כשם שבחנוכת המשכן היו שבעת ימי המילואים, שבהם הביאו כל יום קורבן מילואים — שהוא קורבן תודה, כדברי הרמב"ן — כך גם בחופה: אחרי החופה נוהגים שבעת ימי משתה, שהם שבע הברכות. ולפחות בשבעת הימים הראשונים, צריכים אלה להיות שבעה ימים שבהם מודים ומהללים לקדוש ברוך הוא.</p>
+  </div>
+
+  <p>עתה נעשה את הכיוון ההפוך: לא ממתן תורה לחופה, אלא מחופה למתן תורה. אם רוצים לזכות לששון ושמחה, חתן וכלה, לכל השפע — גילה, רינה, דיצה וחדווה, אהבה ואחווה, שלום ורעות — כיצד זוכים לכל זה? על ידי "הקול החמישי". הקול החמישי, מה הוא? הפסוק אומר: "קוֹל אוֹמְרִים הוֹדוּ" — על ידי ההודיה להשם זוכים לכל השפע ולמתנות — זהו בחתן וכלה, וכך גם בשבועות.</p>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0">כתוב בגמרא (מסכת שבת) שרבינא היה יושב בתענית כל השנה, חוץ מפורים, ערב יום הכיפורים, ושבועות — שבהם היה שותה ואוכל בשמחה. מדוע דווקא בימים אלו? כי בשבועות ניתנו הלוחות הראשונים, בערב יום הכיפורים ניתנו הלוחות השניות, ובפורים קיבלו מאהבה את מה שכבר קיבלו קודם ביראה. בחג השבועות היה ברור לרבינא שצריך לאכול ולשתות בשמחה.</p>
+  </div>
+
+  <p>ומדוע כך? ביום הנישואים, אם אתה רוצה להראות לרעייתך שאתה שמח שזכית בה — אפשר להודות לה במילים, לכתוב לה ברכה, להביא זר פרחים, וזה נפלא. אבל יש עוד דרך: כאשר אתה מכין סעודה נפלאה, מתוקה, משמחת מאוד — אשתך מקבלת הודיה מלאה, מאה אחוז, שאתה בטוח, שאתה שמח שזכית לה. כך גם בחג השבועות: כשאנו רוצים להודות לבורא עולם שבחר בנו לכלה, לא רק להודות במילים — כך ודאי גם צריך. יש עוד דרך: לשמוח, לקשט את הבית, לאכול מאכלי חלב וגבינה במעוטרתנו — בכל הדברים האלה, אנו אומרים לבורא עולם: אנחנו מאושרים שזכינו לך, אנחנו מרוצים שבחרת בנו. זוהי הדרך לזכות לכל המתנות הטובות.</p>
+
+  <div class="highlight-box">
+    <p style="margin-bottom:0">מובא בשם הרב אברהם פאם זצ"ל, ראש ישיבה בארצות הברית, ביאור נפלא בתפילת "נשמת כל חי": "אִלּוּ פִינוּ מָלֵא שִׁירָה כַּיָּם... וְעֵינֵינוּ מְאִירוֹת כַּשֶּׁמֶשׁ וְכַיָּרֵחַ". הרב שאל: אילו פינו מלא שירה כים היינו מודים כל היום, "ולשוננו רינה כהמון גליו" — לא מפסיקים להודות; אבל מה זו הודיה ב"עינינו מאירות כשמש וכירח"? ענה: יש להודות בשפתיים, ויש להודות בעיניים. כאשר יהודי זורח, כאשר יהודי רואה את חסדי השם וכולו שמח ועולז על חסדי השם עמו — זוהי הודיה בעיניים, וזוהי הודיה מתוקה ביותר.</p>
+  </div>
+
+  <p>יהי רצון שנברך את כולם, שנזכה כולנו להרגיש את השמחה העצומה שזכינו לחתן נפלא כזה, שזכינו ל"אשר בחר בנו מכל העמים", ונרגיש "כִּי טוֹב השם, לְעוֹלָם חַסְדּוֹ". חג שמח ושבת שלום.</p>
+
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות</h3>
+    <ol>
+      <li>שמות יט, א-ו — הקדמה למתן תורה, "אתם ראיתם אשר עשיתי למצרים".</li>
+      <li>משנה, מסכת תענית פרק ד' — "צאינה וראינה... ביום חתנתו זו מתן תורה".</li>
+      <li>רש"י, שמות יט, יז — "כחתן היוצא לקראת כלה".</li>
+      <li>קונטרס "יום חתונתו" — בסוף הספר "שערי אהבה".</li>
+      <li>מהר"ם מרוטנבורג — מנהגי חופה כעין מתן תורה.</li>
+      <li>תיקוני זוהר — "ויעמדו מרחוק" כמקור לעמידה בחופה.</li>
+      <li>דברים לג, ד — "תורה צוה לנו משה מורשה" (מורשה — מאורסה).</li>
+      <li>הפטרת פרשת במדבר, הושע ב, כא — "וארשתיך לי לעולם".</li>
+      <li>אור החיים הקדוש — טעם שבע שבתות בספירת העומר.</li>
+      <li>רמב"ן — קורבן המילואים כקורבן תודה.</li>
+      <li>גמרא, מסכת שבת — רבינא אוכל ושותה בשמחה בערב שבועות.</li>
+      <li>תפילת "נשמת כל חי" — "אילו פינו מלא שירה כים... ועינינו מאירות כשמש וכירח", בביאור הרב אברהם פאם זצ"ל.</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+  </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+(function () {
+    var scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 400) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            var targetId = this.getAttribute('href').slice(1);
+            var target = document.getElementById(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+})();
+
+</script>
+</body>
+</html>
