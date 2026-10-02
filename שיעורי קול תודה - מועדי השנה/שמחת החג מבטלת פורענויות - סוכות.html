@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>שמחת החג מבטלת פורענויות - סוכות</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #1f2937;
+    line-height: 1.8;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fffefb;
+    border-radius: 18px;
+    padding: 60px 80px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.main-title {
+    font-size: 3em;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.3em;
+    color: #6b21a8;
+    margin-bottom: 10px;
+}
+
+.author {
+    text-align: center;
+    font-size: 1.05em;
+    color: #6b7280;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: #7e22ce;
+    border-right: 6px solid #7e22ce;
+    padding-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+h2:first-of-type { margin-top: 20px; }
+
+h3 {
+    font-size: 1.8em;
+    color: #2563eb;
+    margin-top: 35px;
+    margin-bottom: 18px;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: #059669;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+p, li {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+ul, ol { margin-right: 30px; margin-bottom: 20px; }
+
+strong { font-weight: 700; }
+em { color: #2563eb; font-style: italic; }
+.emphasis { color: #7e22ce; font-weight: 700; }
+
+.toc {
+    background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+    border: 1px solid #e9d5ff;
+    border-radius: 14px;
+    padding: 25px 30px;
+    margin-bottom: 40px;
+}
+
+.toc h3 {
+    margin-top: 0;
+    color: #7e22ce;
+    font-size: 1.4em;
+}
+
+.toc ul { list-style: none; margin-right: 0; }
+
+.toc li { margin-bottom: 10px; font-size: 1.05em; }
+
+.toc a {
+    color: #6b21a8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.toc a:hover { color: #ec4899; text-decoration: underline; }
+
+.verse-box {
+    background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    border-right: 6px solid #7e22ce;
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin: 30px 0;
+    font-size: 1.25em;
+    text-align: center;
+    font-style: italic;
+    color: #4c1d95;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    border-right: 6px solid #2563eb;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.quote-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-right: 6px solid #f59e0b;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 25px 0;
+    font-style: italic;
+    color: #78350f;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.quote-box .source-tag {
+    display: block;
+    margin-top: 12px;
+    font-style: normal;
+    font-size: 0.9em;
+    color: #92400e;
+    font-weight: 600;
+}
+
+.story-box {
+    background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    border-right: 6px solid #059669;
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin: 25px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.qa-box {
+    background: #fdf2f8;
+    border: 2px dashed #ec4899;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 25px 0;
+}
+
+.qa-box .q { color: #be185d; font-weight: 700; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+
+.section-divider {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    color: #fff;
+    text-align: center;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 45px 0;
+    box-shadow: 0 5px 15px rgba(126,34,206,0.15);
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.two-columns > div {
+    border-radius: 12px;
+    padding: 22px 24px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.col-purple {
+    background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%);
+    border-right: 6px solid #7e22ce;
+}
+
+.col-gold {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-right: 6px solid #f59e0b;
+}
+
+.sources {
+    background: #f3f4f6;
+    border-radius: 14px;
+    padding: 25px 30px;
+    margin-top: 50px;
+}
+
+.sources h3 { margin-top: 0; color: #374151; }
+.sources ol { margin-right: 25px; }
+.sources li { font-size: 1em; color: #4b5563; margin-bottom: 8px; }
+
+.footer {
+    margin-top: 60px;
+    padding-top: 35px;
+    border-top: 3px solid #e9d5ff;
+    text-align: center;
+    color: #4b5563;
+    font-size: 1.05em;
+    line-height: 2;
+}
+
+.footer h4 { color: #2563eb; margin-top: 0; }
+.footer a { color: #7e22ce; }
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.3em;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 100;
+}
+
+.scroll-top.visible { opacity: 1; visibility: visible; }
+
+@media (max-width: 768px) {
+    body { padding: 15px 8px; }
+    .container { padding: 30px 22px; border-radius: 12px; }
+    .main-title { font-size: 2em; }
+    h2 { font-size: 1.5em; padding-right: 14px; }
+    h3 { font-size: 1.3em; }
+    h4 { font-size: 1.15em; }
+    p, li { font-size: 1.05em; }
+    .two-columns { grid-template-columns: 1fr; }
+    .scroll-top { left: 15px; bottom: 15px; width: 44px; height: 44px; }
+}
+
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+    .scroll-top { display: none !important; }
+    h2 { page-break-before: always; break-before: page; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+    h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+    .footer { page-break-before: always; break-before: page; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+</style>
+</head>
+<body><a href="index.html" style="position:fixed;top:12px;right:12px;z-index:9999;background:#5b21b6;color:#fff;padding:7px 14px;border-radius:20px;font:600 14px Heebo,Arial,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)" class="kt-back">📚 לכל השיעורים</a><style>@media print{.kt-back{display:none!important}}</style>
+<div class="container">
+<h1 class="main-title" id="top">שמחת החג מבטלת פורענויות</h1>
+<div class="subtitle">סוכות</div>
+<div class="author">מאת: הרב יהודה טאוב</div>
+
+<div class="toc">
+<h3>📑 תוכן העניינים</h3>
+<ul>
+<li><a href="#section1">א. שבעים הפרים כנגד שבעים אומות - סוכות כחג של שמחה מתקנת</a></li>
+<li><a href="#section2">ב. "תחת אשר לא עבדת" - חוסר שמחה כשורש הפורענות</a></li>
+<li><a href="#section3">ג. נטילת הלולב בשעת ההלל - "ושמחתם לפני ה' אלוקיכם"</a></li>
+<li><a href="#section4">ד. חג האסיף - לאסוף את חסדי השנה אל תוך הלב</a></li>
+</ul>
+</div>
+
+<h2 id="section1">א. שבעים הפרים כנגד שבעים אומות - סוכות כחג של שמחה מתקנת</h2>
+
+<p>חג הסוכות נבדל משאר המועדים באופיו המיוחד: הוא נקרא בפי חז"ל בפשטות "החג", ותורת ישראל מגדירה אותו ביתר שאת כ"זמן שמחתנו". אחד הביטויים המובהקים ביותר לכך הוא מספר הקורבנות המיוחד המובא בחג זה - שבעים פרים, הנפחתים והולכים מיום ליום, כנגד שבעים אומות העולם.</p>
+
+<p>חז"ל מלמדים אותנו כי קורבנות אלו אינם עניין טכני גרידא, אלא נושאים בתוכם עומק עצום: ישראל מקריבים על אומות העולם, מתפללים ומכפרים בעדם, כדי שיזכו הם עצמם לשלום ולברכה. יש בכך מסר יסודי - ימי החג הללו הם ימים של שמחה שלמה, שמחה שיוצאת ומקיפה את כל העולם כולו, ולא נשארת רק בגבולות האדם הפרטי.</p>
+
+<div class="highlight-box">
+<p>מבנה זה של הקרבת הפרים - יורד והולך משבעים ועד לתשעה בלבד ביום השביעי - מלמד יסוד עמוק: השמחה האמיתית אינה עניין של כמות חיצונית, אלא של עומק פנימי ההולך ומתעצם. ככל שמתקדמים בימי החג, השמחה אינה פוחתת אלא מתעלה לרמה גבוהה ופנימית יותר.</p>
+</div>
+
+<h2 id="section2">ב. "תחת אשר לא עבדת" - חוסר שמחה כשורש הפורענות</h2>
+
+<p>הגמרא במסכת ערכין (יא.) עוסקת בפסוק החמור בפרשת כי תבוא: "תַּחַת אֲשֶׁר לֹא עָבַדְתָּ אֶת ה' אֱלֹקֶיךָ בְּשִׂמְחָה וּבְטוּב לֵבָב מֵרֹב כֹּל" (דברים כח, מז). פסוק זה מהווה את הפתיחה לכל התוכחה הקשה והפורענויות המתוארות בהמשך הפרשה.</p>
+
+<p>לכאורה יש כאן קושיה עצומה: וכי מהי החומרה הגדולה כל כך שבחוסר שמחה, עד שהיא נחשבת לשורש כל אותן קללות נוראות? הרי אדם עשוי לעבוד את ה' במצוות ובתורה, לקיים את כל אשר נצטווה - אך אם עשה זאת מתוך עצבות, מתוך כובד ראש שאינו שמח - הופך הדבר להיות עילה לפורענות שכזו!</p>
+
+<div class="quote-box">
+<p>התשובה הטמונה בעומק הדברים: חוסר שמחה בעבודת ה' מגלה שבאמת חסר לאדם ההכרה וההודיה על הטוב שהקב"ה מעניק לו. אדם שמכיר בטובה שנעשית עמו - שמח מאליו. חוסר השמחה הוא בעצם סימן היכר לחוסר בהכרת הטוב, לחוסר בהודיה פנימית אמיתית על מה שהקב"ה נותן לו בכל רגע.</p>
+<span class="source-tag">גמרא ערכין יא, ע"פ ביאור הדברים</span>
+</div>
+
+<p>מכאן אנו למדים כי השמחה איננה תוספת חיצונית לעבודת ה', אלא היא בעצמה מדד למידת ההכרה וההודיה שבליבו של האדם. מי שמכיר בחסדי ה' עליו - שמח. ומי שאינו שמח - יש לחוש שמא חסרה אצלו אותה הכרת טובה בסיסית.</p>
+
+<h2 id="section3">ג. נטילת הלולב בשעת ההלל - "ושמחתם לפני ה' אלוקיכם"</h2>
+
+<p>הגרי"ז מבריסק זצ"ל מבאר יסוד נפלא בביאור מנהג נטילת הלולב דווקא בשעת אמירת ההלל. מצוות נטילת הלולב, כידוע, נלמדת מהפסוק "וּלְקַחְתֶּם לָכֶם בַּיּוֹם הָרִאשׁוֹן... וּשְׂמַחְתֶּם לִפְנֵי ה' אֱלֹקֵיכֶם שִׁבְעַת יָמִים" (ויקרא כג, מ).</p>
+
+<div class="verse-box">
+"וּלְקַחְתֶּם לָכֶם בַּיּוֹם הָרִאשׁוֹן... וּשְׂמַחְתֶּם לִפְנֵי ה' אֱלֹקֵיכֶם שִׁבְעַת יָמִים"
+</div>
+
+<p>הפסוק עצמו קושר את נטילת הלולב לשמחה - "ושמחתם". ומכאן מבאר הגרי"ז כי אין הכוונה לשמחה סתמית וכללית, אלא לשמחה שעניינה הודיה: "ושמחתם לפני ה'" - שמחה המכוונת ומופנית כלפי הקב"ה, שמחה שהיא ביטוי של הודיה על הטוב שהוא עשה עמנו.</p>
+
+<p>לכן דווקא בשעת אמירת ההלל - שבו אנו אומרים "הודו לה' כי טוב", ומודים ומשבחים את ה' על חסדיו - נוטלים אנו את הלולב, כדי לבטא הלכה למעשה, ברמ"ח איברים, אותה שמחה של הודיה. הלולב הופך להיות כלי מוחשי המבטא את הודאת הלב שבפה.</p>
+
+<h2 id="section4">ד. חג האסיף - לאסוף את חסדי השנה אל תוך הלב</h2>
+
+<p>חג הסוכות נקרא בתורה גם "חג האסיף", על שם עונת אסיפת התבואה והפירות מן השדות. אולם מעבר לפשט החקלאי, טמון בכינוי זה מסר רוחני עמוק ביותר. חג האסיף אינו רק אסיפת יבול השדה - הוא זמן של אסיפה פנימית, זמן שבו האדם נדרש לאסוף אל תוך ליבו את כל החסדים שהקב"ה גמל עמו במשך השנה כולה.</p>
+
+<div class="story-box">
+<p>כשם שהאיכר יוצא בסוף העונה לאסוף את כל אשר צמח וגדל בשדהו במשך חודשי העבודה, ומכניס הכל אל האסם - כך נדרש כל אדם, בבואו לחג הסוכות בסיום מחזור השנה, לצאת ולאסוף אל תוך נפשו את כל אותם חסדים וטובות שקיבל מהקב"ה בכל ימות השנה שחלפה, ולא להניח להם ליפול ולהישכח בשדה.</p>
+</div>
+
+<p>אסיפה זו אינה מסתכמת בזיכרון גרידא. תכליתה היא שאותם חסדים שנאספים אל תוך הלב יהפכו לכוח פועל - "כפרי מתוק" הנאכל וניזון ממנו האדם לאורך כל השנה הבאה. ההודיה על העבר אינה מטרה לעצמה, אלא היא הזנה לעתיד: היא זו שמחזקת את האמונה, את הביטחון בה', ואת השמחה הפנימית שממנה יונקת עבודת האדם את ה' כל ימות השנה.</p>
+
+<div class="section-divider">שמחת החג - כשהיא נובעת מהכרת הטוב האמיתית - מבטלת מעלינו כל פורענות, ומאספת אל תוך ליבנו את חסדי השנה כולה</div>
+
+<div class="sources">
+<h3>📚 מקורות ומראי מקומות</h3>
+<ol>
+<li>קרבנות החג - שבעים פרים כנגד שבעים אומות (ספרי, סוכה נה ע"ב)</li>
+<li>גמרא ערכין יא, ע"א - "תחת אשר לא עבדת את ה' אלוקיך בשמחה ובטוב לבב"</li>
+<li>דברים כח, מז</li>
+<li>ויקרא כג, מ - מצוות נטילת הלולב וה"ושמחתם"</li>
+<li>ביאור הגרי"ז מבריסק על נטילת הלולב בשעת ההלל</li>
+</ol>
+</div>
+
+<div class="footer">
+<h4>הרב יהודה טאוב</h4>
+<p>קרית אתא | 0527139520</p>
+<p>קול הלשון - קול תודה: 03-6171190</p>
+<p><a href="http://kol-toda.co.il">kol-toda.co.il</a></p>
+</div>
+
+</div>
+
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+var scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+    } else {
+        scrollTopBtn.classList.remove('visible');
+    }
+});
+</script>
+</body>
+</html>
