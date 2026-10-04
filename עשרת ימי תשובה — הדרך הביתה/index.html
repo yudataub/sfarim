@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>עשרת ימי תשובה — הדרך הביתה</title>
+<style>
+/* =============================================================================
+   קול תודה — סגנון בית למאמרים תורניים   |   base.css   v2.0
+   העתק כמות שהוא לתוך <style>. מותר להוסיף אחריו כללים ייחודיים למאמר,
+   אסור לשנות את הקיים.
+   ============================================================================= */
+
+:root {
+    --purple: #7e22ce;  --blue: #2563eb;   --green: #059669;
+    --gold:   #f59e0b;  --pink: #ec4899;   --ink:   #1f2937;
+    --paper:  #ffffff;  --muted: #6b7280;  --line:  rgba(0,0,0,.08);
+    --g-page:      linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --g-verse:     linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    --g-highlight: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    --g-quote:     linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    --g-story:     linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    --g-divider:   linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    --g-title:     linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0; padding: 40px 20px;
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: var(--g-page);
+    color: var(--ink);
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 900px; margin: 0 auto;
+    padding: 60px 80px;
+    background: var(--paper);
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.1);
+}
+
+/* ---------- כותרות ---------- */
+.main-title {
+    font-size: 3em; font-weight: bold; text-align: center; margin: 0 0 10px;
+    background: var(--g-title); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: var(--purple);
+}
+.subtitle { text-align: center; font-size: 1.25em; color: var(--muted); margin-bottom: 8px; }
+.author   { text-align: center; font-size: 1.05em; color: var(--purple); font-weight: bold; margin-bottom: 10px; }
+
+h2 { font-size: 2.2em; color: var(--purple); border-right: 6px solid var(--purple);
+     padding-right: 20px; margin: 50px 0 20px; }
+h3 { font-size: 1.8em; color: var(--blue);  margin: 35px 0 15px; }
+h4 { font-size: 1.5em; color: var(--green); margin: 25px 0 12px; }
+/* יישור לשני הצדדים — חובה בסגנון הבית, נותן מראה של ספר מודפס. */
+p, li { font-size: 1.15em; line-height: 1.8; margin: 0 0 20px; text-align: justify; text-justify: inter-word; }
+li { margin-bottom: 10px; }
+.verse-box p, .section-divider, .chapter-card p, .footer p { text-align: center; }
+.toc li, .listen-bar p { text-align: right; }
+
+.emphasis { color: var(--purple); font-weight: bold; }
+em { color: var(--blue); font-style: italic; }
+
+/* ---------- מעבר בין פרקים ---------- */
+/* כרטיס הפרק מחליף על המסך את תחושת "הדף החדש" שיש בספר מודפס.
+   בהדפסה הוא מיותר — שם יש מעבר עמוד אמיתי — ולכן הוא מוסתר. */
+.chapter-card {
+    min-height: 55vh; margin: 60px -80px 0; padding: 40px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: var(--g-title); color: #fff; text-align: center;
+}
+.chapter-card .num { font-size: 5.5em; font-weight: bold; line-height: 1; opacity: .85; }
+.chapter-card .name { font-size: 2.2em; font-weight: bold; margin-top: 18px; max-width: 18ch; }
+.chapter-divider {
+    display: flex; align-items: center; gap: 15px; margin: 45px 0;
+    color: var(--gold); font-size: 1.4em;
+}
+.chapter-divider::before, .chapter-divider::after {
+    content: ''; flex: 1; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.chapter-label {
+    display: inline-block; margin-bottom: 6px; padding: 3px 14px;
+    background: var(--purple); color: #fff; border-radius: 20px;
+    font-size: .55em; font-weight: bold; letter-spacing: .5px; vertical-align: middle;
+}
+.in-this-chapter {
+    background: var(--g-highlight); border-right: 6px solid var(--blue);
+    border-radius: 12px; padding: 22px 26px; margin: 22px 0 32px;
+}
+.in-this-chapter h4 { margin: 0 0 10px; font-size: 1.1em; color: var(--blue); }
+.in-this-chapter ul { margin: 0; padding-right: 20px; }
+.in-this-chapter li { font-size: 1em; margin-bottom: 6px; text-align: right; }
+
+.story-title { display: block; font-size: 1.25em; font-weight: bold; color: var(--green); margin-bottom: 12px; }
+
+/* ---------- קופסאות תוכן ---------- */
+.verse-box, .highlight-box, .quote-box, .story-box, .qa-box {
+    padding: 28px; margin: 30px 0; border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.verse-box     { background: var(--g-verse); border: 2px solid var(--purple);
+                 text-align: center; font-size: 1.3em; font-weight: 600; color: var(--purple); }
+.verse-box p   { font-size: 1em; margin: 0; }
+.highlight-box { background: var(--g-highlight); border-right: 6px solid var(--blue);
+                 box-shadow: 0 5px 15px rgba(126,34,206,.15); }
+.quote-box     { background: var(--g-quote); border-right: 6px solid var(--gold); font-style: italic; }
+.story-box     { background: var(--g-story); border-right: 6px solid var(--green); }
+.qa-box        { background: #fff; border: 2px dashed var(--pink); }
+.verse-box p:last-child, .highlight-box p:last-child, .quote-box p:last-child,
+.story-box p:last-child, .qa-box p:last-child { margin-bottom: 0; }
+
+.source-tag { display: block; margin-top: 12px; font-size: .9em; font-style: normal;
+              color: var(--muted); font-weight: bold; }
+
+.section-divider {
+    background: var(--g-divider); color: #fff; text-align: center;
+    padding: 18px 25px; margin: 45px 0; border-radius: 10px;
+    font-size: 1.3em; font-weight: bold; letter-spacing: .5px;
+}
+
+.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 30px 0; }
+.two-columns > div { padding: 25px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,.1); }
+.col-purple { background: var(--g-verse);  border-top: 5px solid var(--purple); }
+.col-gold   { background: var(--g-quote);  border-top: 5px solid var(--gold); }
+
+/* ---------- תוכן עניינים / מקורות / חתימה ---------- */
+.toc { background: #faf5ff; border: 2px solid #e9d5ff; border-radius: 12px; padding: 25px 30px; margin: 30px 0; }
+.toc h3 { margin-top: 0; color: var(--purple); }
+.toc ul { list-style: none; padding: 0; margin: 0; }
+.toc li { margin-bottom: 8px; }
+.toc a { color: var(--blue); text-decoration: none; font-size: 1.05em; }
+.toc a:hover { text-decoration: underline; color: var(--purple); }
+/* מפתח עניינים היררכי: כותרת הפרק בבולד, ומתחתיה שורה מעומעמת של תתי-הסעיפים,
+   כשכל אחד מהם קישור עצמאי. */
+.toc > ul > li { margin-bottom: 14px; }
+.toc-chapter { font-weight: bold; font-size: 1.1em; color: var(--purple); }
+.toc-subs { display: block; margin-top: 3px; font-size: .9em; color: var(--muted); line-height: 1.7; }
+.toc-subs a { font-size: 1em; color: var(--muted); }
+.toc-subs a:hover { color: var(--blue); }
+.toc-subs span { margin: 0 6px; opacity: .5; }
+
+/* ---------- מבט-על: רשת הפרקים ----------
+   בא *לפני* מפתח העניינים המפורט. תפקידו שונה: לא ניווט מדויק אלא תחושה
+   מיידית של היקף הספר — כמה פרקים יש ומה מכסה כל אחד. */
+.chapter-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 22px;
+    background: linear-gradient(160deg, #fffdf7 0%, #fdf8ee 100%);
+    border: 1px solid #efe4cd; border-radius: 18px;
+    padding: 34px 30px; margin: 30px 0;
+}
+.chapter-grid .grid-title {
+    grid-column: 1 / -1; text-align: center; margin: 0 0 14px;
+    font-size: 1.6em; color: var(--purple); letter-spacing: 1px;
+    border: none; padding: 0;   /* מבטל את הפס הסגול שיורש מ-h2 */
+}
+.chapter-chip {
+    display: flex; align-items: center; gap: 12px;
+    color: var(--ink); text-decoration: none; font-size: 1.02em; line-height: 1.45;
+    padding: 6px 8px; border-radius: 10px; transition: background .18s, transform .18s;
+}
+.chapter-chip:hover { background: rgba(245,158,11,.12); transform: translateX(-3px); }
+.chapter-chip .n {
+    flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #c9982f; color: #fff; font-size: .82em; font-weight: bold;
+}
+/* הקדמה, מבוא, נספחים — לא ממוספרים, ומסומנים אחרת */
+.chapter-chip.is-front .n { background: #1e2a5a; font-size: .7em; }
+
+@media (max-width: 900px) { .chapter-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .chapter-grid { grid-template-columns: 1fr; padding: 24px 18px; } }
+
+.sources { background: #f9fafb; border-radius: 12px; padding: 25px 30px; margin-top: 50px; border: 1px solid var(--line); }
+.sources h3 { margin-top: 0; }
+.sources li { font-size: 1em; }
+
+.footer { margin-top: 55px; padding-top: 30px; border-top: 3px solid var(--gold);
+          text-align: center; font-size: 1.05em; }
+.footer a { color: var(--blue); }
+
+.scroll-top {
+    position: fixed; bottom: 30px; left: 30px; z-index: 50;
+    width: 50px; height: 50px; border-radius: 50%;
+    background: var(--g-title); color: #fff; text-decoration: none;
+    display: none; align-items: center; justify-content: center;
+    font-size: 1.3em; box-shadow: 0 5px 15px rgba(0,0,0,.25);
+}
+.scroll-top.visible { display: flex; }
+
+/* ---------- סרגל ההאזנה ---------- */
+.listen-bar {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 15px;
+    margin: 25px 0; padding: 18px 25px;
+    background: var(--g-quote); border-radius: 12px;
+    border-right: 6px solid var(--gold);
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.listen-btn-group { display: flex; gap: 8px; align-items: center; }
+.listen-btn {
+    display: flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
+    color: #fff; border: none; border-radius: 30px; padding: 10px 22px;
+    font-size: 1em; font-weight: bold; font-family: inherit; cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+}
+.listen-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(126,34,206,.3); }
+.listen-btn:active { transform: translateY(0); }
+.listen-stop-btn, .listen-skip-btn {
+    background: #fff; color: var(--purple); border: 2px solid var(--purple);
+    border-radius: 30px; padding: 8px 16px; font-size: .95em; font-weight: bold;
+    font-family: inherit; cursor: pointer; transition: transform .15s, background .15s;
+}
+.listen-skip-btn { padding: 8px 12px; }
+.listen-stop-btn:hover, .listen-skip-btn:hover { transform: translateY(-2px); background: #f3e8ff; }
+
+/* מתג "לחיצה על פסקה מקריאה". כשהוא כבוי הוא נראה כבוי — אפור ודהוי — כדי
+   שיהיה ברור במבט אחד למה נגיעה בטקסט לא עושה כלום. */
+.listen-toggle-btn {
+    background: #fff; color: var(--purple); border: 2px solid var(--purple);
+    border-radius: 30px; padding: 8px 14px; font-size: .88em; font-weight: bold;
+    font-family: inherit; cursor: pointer; white-space: nowrap;
+    transition: transform .15s, background .15s, opacity .15s;
+}
+.listen-toggle-btn:hover { transform: translateY(-2px); background: #f3e8ff; }
+.listen-toggle-btn[aria-pressed="false"] {
+    color: var(--muted); border-color: #d1d5db; background: #f9fafb; opacity: .8;
+}
+.listen-toggle-btn:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+.listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+.listen-skip-btn:focus-visible, .listen-voice select:focus-visible,
+.listen-rate input:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+
+.listen-status   { font-size: .95em; color: #78350f; flex: 1 1 200px; }
+.listen-progress { font-size: .9em; color: #78350f; font-weight: bold; white-space: nowrap; }
+.listen-rate, .listen-voice { display: flex; align-items: center; gap: 6px; font-size: .9em; color: #78350f; }
+.listen-rate input { accent-color: var(--purple); }
+.listen-rate output { font-weight: bold; min-width: 2.6em; }
+.listen-voice select {
+    border-radius: 20px; border: 1px solid var(--gold); padding: 4px 10px;
+    font-family: inherit; background: #fff; color: var(--ink); max-width: 190px;
+}
+
+.tts-clickable { cursor: pointer; transition: background .2s; border-radius: 6px; }
+.tts-clickable:hover { background: rgba(245,158,11,.10); }
+.reading-highlight {
+    background: var(--g-verse); border-radius: 6px;
+    box-shadow: 0 0 0 3px var(--pink) inset; transition: background .3s;
+}
+
+/* ---------- נייד ---------- */
+@media (max-width: 768px) {
+    body { padding: 15px 10px; }
+    .container { padding: 30px 22px; border-radius: 12px; }
+    .main-title { font-size: 2em; }
+    h2 { font-size: 1.6em; padding-right: 14px; margin-top: 35px; }
+    h3 { font-size: 1.35em; } h4 { font-size: 1.15em; }
+    p, li { font-size: 1.08em; }
+    .two-columns { grid-template-columns: 1fr; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .qa-box { padding: 20px; }
+    .listen-bar { padding: 15px; gap: 10px; }
+    .listen-status { flex: 1 1 100%; }
+    .listen-voice select { max-width: 140px; }
+    .scroll-top { bottom: 18px; left: 18px; width: 44px; height: 44px; }
+    .chapter-card { margin-left: -22px; margin-right: -22px; min-height: 42vh; padding: 30px 20px; }
+    .chapter-card .num { font-size: 3.8em; }
+    .chapter-card .name { font-size: 1.5em; }
+}
+
+/* ---------- העדפת תנועה מופחתת ---------- */
+@media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .01ms !important; animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    .listen-btn:hover, .listen-stop-btn:hover, .listen-skip-btn:hover { transform: none; }
+}
+
+/* ---------- מצב כהה (קריאה בטלפון בלילה) ---------- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --paper: #1c1b22; --ink: #e8e6ef; --muted: #a8a4b8; --line: rgba(255,255,255,.10);
+        --purple: #c084fc; --blue: #7dd3fc; --green: #4ade80; --gold: #fbbf24; --pink: #f9a8d4;
+        --g-page:      linear-gradient(135deg, #14131a 0%, #221f2e 100%);
+        --g-verse:     linear-gradient(135deg, #2a2440 0%, #3a2436 100%);
+        --g-highlight: linear-gradient(135deg, #1e2c44 0%, #262244 100%);
+        --g-quote:     linear-gradient(135deg, #3a2f16 0%, #4a3a18 100%);
+        --g-story:     linear-gradient(135deg, #16332a 0%, #14291f 100%);
+    }
+    .container { box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+    .toc     { background: #241f33; border-color: #3d2f57; }
+    .chapter-grid { background: linear-gradient(160deg, #262133 0%, #201c2b 100%); border-color: #3d3350; }
+    .chapter-chip { color: var(--ink); }
+    .chapter-chip .n { background: #b08a2e; }
+    .chapter-chip.is-front .n { background: #3b4a86; }
+    .sources { background: #201f28; }
+    .qa-box  { background: #201f28; }
+    .listen-status, .listen-progress, .listen-rate, .listen-voice { color: #fde68a; }
+    .listen-stop-btn, .listen-skip-btn, .listen-toggle-btn { background: #2a2438; color: #e9d5ff; border-color: #c084fc; }
+    .listen-toggle-btn[aria-pressed="false"] { background: #232029; color: #8b8698; border-color: #3f3b4a; }
+    .listen-stop-btn:hover, .listen-skip-btn:hover { background: #3a3050; }
+    .listen-voice select { background: #2a2438; color: var(--ink); }
+    .tts-clickable:hover { background: rgba(251,191,36,.12); }
+}
+
+/* ---------- הדפסה A4 ---------- */
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; color: #000 !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important;
+                 box-shadow: none !important; border-radius: 0 !important; background: #fff !important; }
+    /* כרטיס הפרק והמפריד קיימים כדי לדמות "דף חדש" על המסך.
+       בנייר יש מעבר עמוד אמיתי, ולכן הם רק היו מבזבזים עמוד שלם. */
+    .scroll-top, .listen-bar, .chapter-card, .chapter-divider, .chapter-grid { display: none !important; }
+    .chapter-label { background: none !important; color: #4a0080 !important; padding: 0 !important; }
+    .in-this-chapter { page-break-inside: avoid; break-inside: avoid; }
+    p, li { text-align: justify; }
+    .reading-highlight { box-shadow: none !important; background: none !important; }
+    .tts-clickable { cursor: auto; }
+    h2 { page-break-before: always; break-before: page; font-size: 16pt !important; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    h3 { font-size: 13pt !important; } h4 { font-size: 12pt !important; }
+    p, li { font-size: 11pt !important; orphans: 3; widows: 3; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box, .section-divider {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; background: none !important;
+                  -webkit-text-fill-color: #4a0080 !important; color: #4a0080 !important; }
+    .footer { page-break-before: always; break-before: page; }
+    a { color: #000 !important; text-decoration: none; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #444; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="main-title" id="top">עשרת ימי תשובה</h1>
+    <div class="subtitle">הדרך הביתה — עיון במהות התשובה ובימי הרחמים והרצון</div>
+    <div class="author">מאת: הרב יהודה טאוב</div>
+
+    <!-- ===== סרגל האזנה — חובה. מבנה מדויק, אל תשנה id-ים ===== -->
+    <div class="listen-bar">
+        <div class="listen-btn-group">
+            <button class="listen-btn" id="listenBtn" onclick="toggleListen()"
+                    aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן למאמר</button>
+            <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+            <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+            <button class="listen-skip-btn" onclick="skipListen(1)"  aria-label="פסקה הבאה"  title="פסקה הבאה">⏭</button>
+            <button class="listen-skip-btn" onclick="skipChapter(1)"  aria-label="פרק הבא"   title="פרק הבא">⏩</button>
+            <button class="listen-stop-btn" onclick="stopListen()"   aria-label="עצור הקראה">⏹ עצור</button>
+            <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()"
+                    aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+        </div>
+        <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+        <span class="listen-progress" id="listenProgress"></span>
+        <div class="listen-rate">
+            <label for="rateRange">מהירות:</label>
+            <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1"
+                   oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)"
+                   aria-label="מהירות הקראה">
+            <output id="rateValue" for="rateRange">1.0×</output>
+        </div>
+        <div class="listen-voice">
+            <label for="voiceSelect">קול:</label>
+            <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+        </div>
+    </div>
+
+    <!-- מבט-על על הספר. בא לפני מפתח העניינים המפורט, לא במקומו. -->
+    <nav class="chapter-grid" aria-label="מבט על פרקי הספר">
+        <h2 class="grid-title">תּוֹכֶן הָעִנְיָנִים</h2>
+        <a class="chapter-chip is-front" href="#intro"><span class="n">◆</span>פְּתִיחָה</a>
+        <a class="chapter-chip" href="#section1"><span class="n">1</span>עֲשֶׂרֶת יְמֵי תְּשׁוּבָה — יְמֵי דִּין הַכְּתוּבִים בְּרַחֲמִים</a>
+        <a class="chapter-chip" href="#section2"><span class="n">2</span>שִׁיבָה אֶל הַמָּקוֹר — מַהִי תְּשׁוּבָה בֶּאֱמֶת</a>
+        <a class="chapter-chip" href="#section3"><span class="n">3</span>עֲקִירַת הָרָצוֹן — הַלֵּב שֶׁמַּחְלִיט לִהְיוֹת אַחֵר</a>
+        <a class="chapter-chip" href="#section4"><span class="n">4</span>כֹּחָהּ שֶׁל תְּשׁוּבָה חֶלְקִית</a>
+        <a class="chapter-chip" href="#section5"><span class="n">5</span>תְּשׁוּבָה עַל דָּבָר אֶחָד וְחֶסֶד הַתְּשׁוּבָה</a>
+        <a class="chapter-chip" href="#section6"><span class="n">6</span>סוֹד תְּשׁוּבַת יוֹם הַכִּפּוּרִים</a>
+        <a class="chapter-chip" href="#section7"><span class="n">7</span>תְּשׁוּבָה כִּתְנַאי — חֲתֻנָּה עִם הַמֶּלֶךְ</a>
+        <a class="chapter-chip" href="#section8"><span class="n">8</span>עֲבוֹדַת הַלֵּב — שִׂמְחָה, דִּבּוּר וְאַהֲבָה</a>
+        <a class="chapter-chip" href="#section9"><span class="n">9</span>סִכּוּם — תְּשׁוּבָה הִיא הַדֶּרֶךְ הַבַּיְתָה</a>
+    </nav>
+
+    <div class="toc" id="intro">
+        <h3>📑 תוכן העניינים</h3>
+        <ul>
+            <li>
+                <a class="toc-chapter" href="#section1">פרק א – עשרת ימי תשובה: ימי דין הכתובים ברחמים</a>
+                <span class="toc-subs">
+                    <a href="#section1a">ארבעה פרקים שהעולם נידון בהם</a><span>·</span>
+                    <a href="#section1b">כתיבה וחתימה — משל תקציב המדינה</a><span>·</span>
+                    <a href="#section1c">דברי הרמב"ם ורבינו יונה</a><span>·</span>
+                    <a href="#section1d">תשובה, תפילה וצדקה — מה מיוחד בעשרת הימים</a><span>·</span>
+                    <a href="#section1e">הודאה על הימים הללו</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section2">פרק ב – שיבה אל המקור: מהי תשובה באמת</a>
+                <span class="toc-subs">
+                    <a href="#section2a">הרצון הוא עיקר התשובה</a><span>·</span>
+                    <a href="#section2b">שיבה אל המקור — סיפור היונה שלא מצאה מנוח</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section3">פרק ג – עקירת הרצון: הלב שמחליט להיות אחר</a>
+                <span class="toc-subs">
+                    <a href="#section3a">מעלת הרצון — לצאת מאפלה לאור גדול</a><span>·</span>
+                    <a href="#section3b">תשובה היא עקירת הרצון</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section4">פרק ד – כוחה של תשובה חלקית</a>
+                <span class="toc-subs">
+                    <a href="#section4a">מדרגות בתשובה — כל תוספת רצון נחשבת</a><span>·</span>
+                    <a href="#section4b">תשובה בכל חלק שיעשה — יש לו שכר</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section5">פרק ה – תשובה על דבר אחד וחסד התשובה</a>
+                <span class="toc-subs">
+                    <a href="#section5a">סיפור: הדרך לירושלים</a><span>·</span>
+                    <a href="#section5b">החסד הגדול שבתשובה</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section6">פרק ו – סוד תשובת יום הכיפורים</a>
+                <span class="toc-subs">
+                    <a href="#section6a">תשובה חלקית ביום הכיפורים</a><span>·</span>
+                    <a href="#section6b">יהי רצון שלא אחטא עוד</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section7">פרק ז – תשובה כתנאי: חתונה עם המלך</a>
+                <span class="toc-subs">
+                    <a href="#section7a">תשובה הפועלת ותשובה כתנאי</a><span>·</span>
+                    <a href="#section7b">הצורך להאמין בכפרת היום</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section8">פרק ח – עבודת הלב: שמחה, דיבור ואהבה בתשובה</a>
+                <span class="toc-subs">
+                    <a href="#section8a">סיפור: על חטא בניגון שמח</a><span>·</span>
+                    <a href="#section8b">דיבור יוצר רצון</a><span>·</span>
+                    <a href="#section8c">וידוי בתוך התפילה</a><span>·</span>
+                    <a href="#section8d">תשובה מאהבה — זדונות נעשים כזכויות</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section9">פרק ט – סיכום: תשובה היא הדרך הביתה</a>
+                <span class="toc-subs">
+                    <a href="#section9a">מעלת השב יותר ממי שלא חטא כלל</a><span>·</span>
+                    <a href="#section9b">סיכום עבודת התשובה</a>
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ===== גוף הספר ===== -->
+
+    <span class="chapter-label">פרק א</span>
+    <h2 id="section1">עשרת ימי תשובה: ימי דין הכתובים ברחמים</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>ארבעת הפרקים שבהם נידון העולם, ומדוע האדם נידון דווקא בראש השנה</li>
+            <li>מדוע יש כתיבה בראש השנה וחתימה נפרדת ביום הכיפורים — ומשל "תקציב המדינה"</li>
+            <li>דברי הרמב"ם ורבינו יונה על מעלת התשובה בעשרת הימים</li>
+            <li>מדוע דווקא תשובה, תפילה וצדקה מועילות בימים אלו</li>
+            <li>הודאה על החסד הגלום בעשרת ימי תשובה</li>
+        </ul>
+    </div>
+
+    <h3 id="section1a">ארבעה פרקים שהעולם נידון בהם</h3>
+    <p>עשרת הימים שבין ראש השנה ליום הכיפורים אינם ימים רגילים בלוח השנה. הם ימי דין, אך גם ימי הרחמים הגדולים ביותר שיש. וכך מלמדת אותנו הגמרא במסכת ראש השנה, שקבעה ארבעה מועדים שבהם העולם עומד לדין, וכל אחד מהם על תחום אחר.</p>
+    <div class="quote-box">
+        <p>"תנא דבי רבי ישמעאל: בארבעה פרקים העולם נידון: בפסח על התבואה, בעצרת על פירות האילן, בחג נידונין על המים, ואדם נידון בראש השנה, וגזר דין שלו נחתם ביום הכפורים."</p>
+        <span class="source-tag">ראש השנה דף טז עמוד א</span>
+    </div>
+    <p>שלושת המועדים הראשונים עוסקים בפרנסה ובטבע: תבואה, פירות, מים. הפרק הרביעי לבדו עוסק באדם עצמו, במהותו ובגורלו. וגם כאן יש הבחנה חשובה: הדין נפתח בראש השנה, אך הוא לא נחתם באותו יום. בין הפתיחה לחתימה יש רווח של עשרה ימים שלמים, ובאותו רווח בדיוק מונחת האפשרות של האדם להשפיע על עצם התוצאה.</p>
+
+    <h3 id="section1b">כתיבה וחתימה — משל תקציב המדינה</h3>
+    <p>מדוע יש צורך בשני שלבים נפרדים, כתיבה בראש השנה וחתימה ביום הכיפורים? מדוע לא נחתם הכול ביום אחד?</p>
+    <div class="quote-box">
+        <p>"בראש השנה שכותב גזר דינם לחיים, וביום הכפורים חותם אותו. וכן אומרים: בראש השנה יכתבון, וביום הכיפורים יחתמון."</p>
+        <span class="source-tag">מדרש תהלים (בובר) מזמור טז</span>
+    </div>
+    <p>נראה לומר בזה חידוש נפלא. לפעמים אדם חושב לעצמו: אם אעשה יותר מצוות, מובטח לי שיהיה לי יותר בעולם הזה. אך המציאות אינה כה פשוטה. יש צדיק ורע לו, ויש רשע וטוב לו. מה עשה הקדוש ברוך הוא? קבע בראש השנה זמן שבו נקבע לאדם מהו — צדיק או רשע. לאחר שנקבע מעמדו, נכתבת לו השנה הבאה על פי מעשיו: כל הצרות, כל הקשיים, כל מה שעתיד לעבור עליו.</p>
+    <div class="highlight-box">
+        <p>ואז, בדיוק כאן, נותן לנו הקדוש ברוך הוא מתנה נדירה: עשרה ימים של קרבת אלוקים. הקדוש ברוך הוא אינו חפץ שניענש ושנסבול. כביכול הוא אומר לנו: הנה כתובה לכל אחד ה"תיקייה" של הצרות שלו לשנה הקרובה. עכשיו, בעשרת הימים האלה, אתם יכולים למחוק ממנה כמה שתספיקו. כל תשובה שנעשית על השנה שחלפה, כל תפילה שמתפללים, מוחקת עוד ועוד מתוך מה שכבר נגזר — הצדיק מוחק מהתיק שלו, והרשע מוחק מהתיק שלו. נמצא שדווקא הימים הללו הם שמשפיעים בפועל על מהלך חייו של כל אחד בעולם הזה.</p>
+    </div>
+    <p>מכאן אפשר להבין מדוע ימים אלו הם ימי רחמים עצומים כל כך: משום שהקדוש ברוך הוא כלל אינו חפץ לגזור גזרות רעות, והוא פותח לנו חלון זמן מיוחד כדי למנוע אותן.</p>
+    <div class="highlight-box">
+        <p>ואפשר להמחיש זאת במשל: לפני שקובעים את תקציב המדינה, קל יחסית לשנות את הסכום שיוקצה, למשל, לקצבאות ילדים. אך לאחר שהתקציב נסגר ואושר, קשה מאוד לשנות את מה שכבר נקצב — ואפילו אם תקום ממשלה חדשה, היא לא תוכל לשנות זאת במהירות. אפשר עוד לדחוף כאן ושם, אך לשנות לגמרי כבר קשה עד מאוד. כך גם תפילה בעשרת ימי תשובה: זוהי תפילה שקודמת לסגירת התקציב, ולכן כוחה גדול במיוחד. לאחר מכן עדיין מועילה תשובה, אך זהו כבר בבחינת "לדחוף מפה ומשם".</p>
+    </div>
+
+    <h3 id="section1c">דברי הרמב"ם ורבינו יונה</h3>
+    <div class="quote-box">
+        <p>"אף על פי שהתשובה והצעקה יפה לעולם, בעשרה הימים שבין ראש השנה ויום הכפורים היא יפה ביותר, ומתקבלת היא מיד, שנאמר: 'דרשו ה' בהמצאו'."</p>
+        <span class="source-tag">רמב"ם, הלכות תשובה פרק ב הלכה ו</span>
+    </div>
+    <p>הרמב"ם מפרט גם את מנגנון הדין עצמו: בכל שנה שוקלים את זכויות האדם ועוונותיו, ממש כפי שעושים בשעת מיתתו. מי שנמצא צדיק — נחתם לחיים. מי שנמצא רשע — נחתם למיתה. והבינוני, שמאזן העוונות והזכויות שלו שקול, נשאר תלוי עד יום הכיפורים: אם עשה תשובה — נחתם לחיים, ואם לאו — נחתם למיתה. בכך מלמד אותנו הרמב"ם, שגם תקיעת השופר בראש השנה אינה טקס גרידא, אלא רמז וקריאת השכמה של ממש:</p>
+    <div class="verse-box">
+        <p>"עורו ישינים משנתכם, ונרדמים הקיצו מתרדמתכם, וחפשו במעשיכם וחזרו בתשובה וזכרו בוראכם."</p>
+    </div>
+    <p>מתוך כך נהגו כל בית ישראל להרבות בצדקה ובמעשים טובים, ולעסוק במצוות מראש השנה ועד יום הכיפורים יותר מכל השנה כולה, ונהגו לקום בלילה בעשרת הימים הללו ולהתפלל בבתי הכנסת בדברי תחנונים עד עלות השחר. וכך מיטיב לתאר זאת בעל שערי תשובה:</p>
+    <div class="quote-box">
+        <p>"הירא את דבר ה', לבו יחיל בקרבו, בדעתו שכל מעשיו בספר נכתבים... הלא להגותם יהגה לבם ביום שידובר בם... וראוי לכל ירא אלקים למעט בעסקיו ולהיות רעיוניו נחתים, ולקבוע ביום ובלילה עתים, להתבודד בחדריו, ולחפש דרכיו ולחקור, לקדם אשמורות, ולהתעסק בדרכי התשובה וכשרון המעשה."</p>
+        <span class="source-tag">שערי תשובה לרבינו יונה, שער שני אות יד</span>
+    </div>
+    <p>ומצווה זו של התעוררות היא אף מצות עשה מן התורה, שנאמר: "מכל חטאתיכם לפני ה' תטהרו". על כן הזהירנו הכתוב שנטהר לפני ה' בתשובתנו, והוא יכפר עלינו ביום הזה לטהר אותנו.</p>
+
+    <h3 id="section1d">תשובה, תפילה וצדקה — מה מיוחד בעשרת הימים</h3>
+    <div class="qa-box">
+        <p><strong>שאלה:</strong> מדברי הגמרא עולה שהבינונים "נכתבים לחיים", ומשמע שהדבר תלוי בריבוי זכויות. מנגד, הרמב"ם כתב במפורש שהכרעת גורלם תלויה דווקא בתשובה. כיצד מתיישבים הדברים?</p>
+        <p><strong>תשובה ראשונה:</strong> העוון הגדול שבאי-חזרה בתשובה בימים אלו עולה על כל הזכויות שאדם עשוי לצבור, וכפי שמצינו כעין זה בחז"ל.</p>
+        <p><strong>תשובה שנייה, בשם ר' אהרן קוטלר זצ"ל:</strong> לאחר ראש השנה נפתח, כביכול, דף חדש. מה תועיל אפוא מצווה נוספת, אם המאזן כבר נסגר? אלא שיש דבר אחד שמועיל גם לאחר סגירת המאזן — והוא התשובה, שהיא "עוקרת למפרע".</p>
+    </div>
+    <p>ואם תאמר: מדוע כתב הרמב"ם שגם התפילה מועילה בימים אלו, ומדוע נהגו ללכת בהם לבתי הכנסת ביתר שאת? התשובה לכך היא יסודית: כל מהות החטא אינה אלא ריחוק מן הבורא. ואילו התפילה, מעצם טבעה, מקרבת את האדם לבורא. עיקרה של התשובה אינו רק מחיקת חטא זה או אחר, אלא ההתקרבות עצמה אל הבורא, וזהו סוד גדול.</p>
+
+    <h3 id="section1e">הודאה על הימים הללו</h3>
+    <p>ראוי לסיים פרק זה בהתבוננות של הכרת הטוב על מתנה זו שנתן לנו הבורא. וכך כותב בעל דרשות ר"י אבן שועיב:</p>
+    <div class="quote-box">
+        <p>"וברא מיני רפואות ותבלין לחיותינו, והיא התורה... ואם חס ושלום נטה מן הדרך, ברא רפואה אמיתית והיא התשובה, שחוזרת האדם למציאותו הראשון... וגדולה מכולם, שברא לנו אלו הימים, עשרת ימי תשובה, שהוא נמצא בהם ליחיד ולרבים... ודרשו חז"ל שהימים העשרה הם כנגד שמותיו של הקדוש ברוך הוא, וכנגד עשרה מאמרות, וכנגד עשרת הדברות, ובהם יושב הקדוש ברוך הוא על כסא רחמים."</p>
+        <span class="source-tag">דרשות ר"י אבן שועיב, פרשת האזינו</span>
+    </div>
+    <p>עשרה ימים, כנגד עשרה שמות, עשרה מאמרות ועשרת הדברות. כל יום ויום מהם הוא עולם ומלואו של הזדמנות. וזו ההקדמה הנכונה לכל מה שיבוא בהמשך הספר: לא ספר של פחד מן הדין, אלא ספר על הזדמנות אדירה שניתנה לנו מאהבה.</p>
+
+    <div class="chapter-card">
+        <span class="num">2</span>
+        <span class="name">שיבה אל המקור — מהי תשובה באמת</span>
+    </div>
+
+    <div class="chapter-divider">✡</div>
+    <span class="chapter-label">פרק ב</span>
+    <h2 id="section2">שיבה אל המקור: מהי תשובה באמת</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>מדוע דווקא תשובה, ולא סתם ריבוי מצוות, מכריעה את דין הבינוני</li>
+            <li>מה באמת נשקל בשעת הדין — הכמות או הפנימיות</li>
+            <li>סיפור: היונה של נח, ולמה בפעם השלישית היא כבר לא "שבה" אלא רק "באה"</li>
+        </ul>
+    </div>
+
+    <h3 id="section2a">הרצון הוא עיקר התשובה</h3>
+    <div class="qa-box">
+        <p><strong>שאלה:</strong> מדוע כתב הרמב"ם שדינו של הבינוני תלוי דווקא בתשובה, בעוד שלכאורה די היה במצווה אחת נוספת כדי להכריע אותו לזכות?</p>
+    </div>
+    <p>יש לבאר, ששקילת העוונות והזכויות הנעשית בדין שמים אינה כפשוטה, לפי מניין כמותי גרידא. אלא, כפי שמבואר ברמב"ם עצמו, אין שוקלים אלא בדעתו של "אל דעות" — ועיקר המשקל הוא לפי פנימיות לבו של האדם: לפי מה שהוא באמת בחר בו, בה' יתברך ובעבודתו, ולפי עד כמה הוא מחשיב את העולם הזה לארעי ומכיר את האמת.</p>
+    <p>זהו הנקרא צדיק: מי שיש לו רוב זכויות, אף על פי שיש לו גם עבירות, שכן אלו אינן אלא "מן השפה ולחוץ". שכן ייתכן שאדם הוא טוב בפנימיותו, אלא שיש לו סיבות חיצוניות שגררו אותו לחטוא. וכן להפך: ייתכן שאדם הוא רע בפנימיותו, אלא שסיבות מסוימות — ממון, כבוד, הרגל — גרמו לו לעשות מעשים טובים. ומחצה על מחצה הוא מי שיש לו נטיות לכאן ולכאן, ואינו מוגדר באופן מובהק לאף אחד מן הצדדים.</p>
+    <div class="highlight-box">
+        <p>עתה מובן מדוע תלה הרמב"ם את הכרעתו של הבינוני דווקא בתשובה. משמעות המילה "שב" היא שיבה אל המקור, אל ה' יתברך. וזהו בדיוק מה שנדרש מאדם שיש לו נטיות לשני הצדדים: שיבחר באמת, שתהיה נטייתו רק אל ה' יתברך לבדו, גם אם יכשל ויעבור עבירות. שכן, אם יכשל, אין זה אלא משום שה"שאור שבעיסה" הוא המעכבו ומכשילו בחטאים לאונסו.</p>
+    </div>
+    <p>היוצא מכל האמור: "רוב זכויות" פירושו שהאדם נכנס אל חצר המלך וחונה בגבולו. וזוהי בעצם התשובה. שכן התשובה אינה מתייחסת רק לחטאים ספציפיים — תשובה היא מלשון שיבה למקור ולשורש, להיות דבוק בה' יתברך.</p>
+
+    <h3 id="section2b">שיבה אל המקור — סיפור היונה שלא מצאה מנוח</h3>
+    <div class="verse-box">
+        <p>"וַיְהִי מִקֵּץ אַרְבָּעִים יוֹם וַיִּפְתַּח נֹחַ אֶת חַלּוֹן הַתֵּבָה אֲשֶׁר עָשָׂה... וַיְשַׁלַּח אֶת הַיּוֹנָה מֵאִתּוֹ לִרְאוֹת הֲקַלּוּ הַמַּיִם מֵעַל פְּנֵי הָאֲדָמָה. וְלֹא מָצְאָה הַיּוֹנָה מָנוֹחַ לְכַף רַגְלָהּ וַתָּשָׁב אֵלָיו אֶל הַתֵּבָה... וַיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים וַיֹּסֶף שַׁלַּח אֶת הַיּוֹנָה מִן הַתֵּבָה. וַתָּבֹא אֵלָיו הַיּוֹנָה לְעֵת עֶרֶב וְהִנֵּה עֲלֵה זַיִת טָרָף בְּפִיהָ."</p>
+        <span class="source-tag">בראשית פרק ח</span>
+    </div>
+    <div class="story-box">
+        <span class="story-title">שאלה אחת על מילה אחת, שחשפה מהי תשובה</span>
+        <p>נח שולח את היונה מן התיבה, ומחכה. בפעם הראשונה היא חוזרת: "ותשב אליו אל התבה". גם בפעם השנייה, כשהיא יוצאת שוב לבדוק את פני האדמה, היא חוזרת ומתוארת באותה מילה, "שיבה". אבל בפעם השלישית, אחרי שבעת ימים נוספים, כתוב פתאום דבר אחר: "ותבא אליו היונה לעת ערב". לא "ותשב" — אלא "ותבא".</p>
+        <p>מה בין ביאה לשיבה? שאלה זו נשאלה, ותשובה נאה לה שמעתי מהרב רוטנברג שיחיה, בשם הרב גרוזמן שליט"א: שיבה היא אל המקור. כל עוד היונה חשה שביתה הטבעי הוא התיבה, נאמר עליה "שיבה". אבל כאשר כבר קלו המים מעל הארץ, ויש כבר אוכל על פני האדמה, שוב אינה מרגישה שהתיבה היא ביתה — ולכן נאמר עליה "ביאה" ולא "שיבה", כאדם שבא לבקר במקום שאינו שלו.</p>
+        <p>ומכאן למדים דבר יסודי לגבי תשובה. שיבה בתשובה פירושה להרגיש שהקדוש ברוך הוא הוא ביתי, הוא משכני, בבחינת "אחת שאלתי מאת ה' אותה אבקש, שבתי בבית ה' כל ימי חיי". תשובה אמיתית אינה ביקור מזדמן אצל הקדוש ברוך הוא בשעת צרה, אלא הכרה מחודשת שזהו הבית שממנו יצאנו, ואליו אנחנו שבים.</p>
+    </div>
+
+    <div class="chapter-card">
+        <span class="num">3</span>
+        <span class="name">עקירת הרצון — הלב שמחליט להיות אחר</span>
+    </div>
+
+    <div class="chapter-divider">📖</div>
+    <span class="chapter-label">פרק ג</span>
+    <h2 id="section3">עקירת הרצון: הלב שמחליט להיות אחר</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>איך אדם עובר "ברגע קטן" מאפלה לאור גדול</li>
+            <li>מדוע הרצון, ולא המעשה, הוא הגורם שקובע אם משהו נחשב עבירה</li>
+            <li>מדוע בכל זאת נדרשת חרטה וצער, ולא רק קבלה לעתיד</li>
+        </ul>
+    </div>
+
+    <h3 id="section3a">מעלת הרצון — לצאת מאפלה לאור גדול</h3>
+    <p>עד כמה גדול כוחו של רגע אחד של החלטה אמיתית, מתאר בעל שערי תשובה בלשון נרגשת:</p>
+    <div class="quote-box">
+        <p>"כאשר ישמע מוסר החכמים והמוכיחים, יקשיב וישמע ויכנע ויחזור בתשובה... והנה האיש הזה ברגע קטן יצא מאפלה לאור גדול... ומעת אשר קיבל כזאת במחשבתו וגמר עליו ככה בלבבו, קנה לנפשו זכות ושכר על כל המצוות והמוסרים, ואשריו כי צידק נפשו בשעה קלה."</p>
+        <span class="source-tag">שערי תשובה לרבינו יונה, שער שני אות י</span>
+    </div>
+    <p>ומביא רבינו יונה ראיה לכך מדברי חז"ל על עם ישראל בשעת יציאת מצרים: "וילכו ויעשו בני ישראל" — וכי מיד עשו? הלוא לא עשו את קרבן הפסח עד ארבעה עשר בחודש. אלא, כיוון שקיבלו על עצמם לעשות, מעלה עליהם הכתוב כאילו עשו מיד. וכן אמרו: "כל שמעשיו מרובים מחכמתו, חכמתו מתקיימת" — כלומר, מי שקיבל על עצמו בלב נאמן לשמור ולעשות, יש בידו מן היום ההוא שכר על כל המצוות, גם על אלו שעדיין לא הגיעו לאוזנו. הקבלה הפנימית קודמת, ומגיעה לשם רק אחר כך.</p>
+
+    <h3 id="section3b">תשובה היא עקירת הרצון</h3>
+    <p>הרעיון הזה, שהרצון קודם למעשה וקובע את מהותו, מתפתח ביתר עומק בדברי בעל מסילת ישרים:</p>
+    <div class="quote-box">
+        <p>"שהתשובה תינתן לחוטאים בחסד גמור, שתחשב עקירת הרצון כעקירת המעשה. דהיינו, שבהיות השב מכיר את חטאו ומודה בו ומתבונן על רעתו, ושב ומתחרט עליו חרטה גמורה... שהוא מתנחם לגמרי, והיה חפץ ומשתוקק שמעולם לא היה נעשה הדבר ההוא... הנה עקירת הדבר מרצונו, ייחשב לו כעקירת הנדר, ומתכפר לו."</p>
+        <span class="source-tag">מסילת ישרים פרק ד</span>
+    </div>
+    <p>מבואר בדבריו חידוש נפלא. מהי תשובה באמת? אחרי שאדם עשה מעשה רע, המעשה עצמו כבר נעשה, ואי אפשר להשיבו. אך הרצון לעשות את המעשה — עדיין קיים. אם האדם עוקר רצון זה, נחשב הדבר כאילו עקר גם את המעשה עצמו. זו התשובה: לעקור את הרצון לחטוא. העיקר הוא הרצון.</p>
+    <p>העיקר במעשה העבירה אינו המעשה החיצוני, אלא הרצון והכוונה שמאחוריו. הראיה לכך: אדם יכול לעשות אותו מעשה בדיוק, ואף על פי כן פעם ייחשב הדבר למזיד, פעם לשוגג, ופעם לאונס. הרצון והכוונה הם אלה שהופכים את המעשה לעבירה. ומכיוון שהמעשה עצמו היה בעבר, אך הכוונה והרצון קיימים גם בהווה, הרי שכאשר האדם מתחרט על הרצון בהווה, המעשה שבעבר נשאר "מעשה בלי כוונה רעה" — ולכן שוב אינו נחשב לעבירה. עקירת הרצון שהוא בהווה נחשבת כעקירת המעשה שהיה בעבר.</p>
+    <div class="highlight-box">
+        <p>יש כאן חידוש עמוק בגישה לתשובה. הדרך הרגילה מתמקדת בחרטה על העבר, בכמה לא טוב עשיתי — ודרך זו עלולה להביא את האדם לעצבות כבדה. אך יש דרך אחרת: להתמקד בעתיד, בשאלה כמה רצון יש בי היום להיות טוב. וככל שיהיה לאדם רצון גדול יותר להיות טוב להבא, כך ממילא נעקר הרצון הקודם לחטוא.</p>
+    </div>
+    <p>ואם כן, מדוע בכל זאת נדרשת גם חרטה וצער, "יבין לבבו כי רע ומר"? מבאר בעל מסילת ישרים, שתחת הרצון שנתרצה בו בחטא, וההנאה שנהנה ממנו, צריכה לבוא כעת הנחמה והצער. הצער הנדרש הוא כנגד ההנאה שנהנה מן החטא. ואולי אף אפשר לכפר על כך גם בדרך הפוכה: לשמוח ולהתענג עכשיו על הזכות לעשות טוב.</p>
+    <div class="verse-box">
+        <p>"כְּאַיָּל תַּעֲרֹג עַל אֲפִיקֵי מָיִם, כֵּן נַפְשִׁי תַּעֲרֹג אֵלֶיךָ אֱלֹהִים... נִכְסְפָה וְגַם כָּלְתָה נַפְשִׁי לְחַצְרוֹת ה'... צָמְאָה לְךָ נַפְשִׁי, כָּמַהּ לְךָ בְשָׂרִי." (תהלים מב, ב-ג; סג, ב)</p>
+    </div>
+    <p>הנרצה ביותר בעבודת הבורא יתברך שמו, מלמד אותנו בעל מסילת ישרים, הוא חפץ הלב ותשוקת הנשמה. וכל תשובה, בסופו של דבר, נשענת על אותה תשוקה.</p>
+
+    <div class="chapter-card">
+        <span class="num">4</span>
+        <span class="name">כוחה של תשובה חלקית</span>
+    </div>
+
+    <div class="chapter-divider">✡</div>
+    <span class="chapter-label">פרק ד</span>
+    <h2 id="section4">כוחה של תשובה חלקית</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>מדוע גם תשובה שאינה שלמה נחשבת ל"מדרגה" ומקרבת</li>
+            <li>ההבדל בין תשובה לבין מצוות רגילות שבהן חלק מהמצווה אינו שווה כלום</li>
+            <li>אחאב ואנשי נינווה — כשעוזבים בלי חרטה, וכשמתחרטים בלי לעזוב</li>
+        </ul>
+    </div>
+
+    <h3 id="section4a">מדרגות בתשובה — כל תוספת רצון נחשבת</h3>
+    <p>אם עיקר התשובה הוא הרצון, מתחדש כאן דבר נפלא: לעשות תשובה גמורה, עד שיעיד עליו יודע תעלומות שלא ישוב עוד לחטא, זו עבודה גדולה שאינה תמיד בהישג יד. אך כל כמה שמצליח האדם להגדיל, ולו במשהו, את רצונו לעשות טוב, ושלא לעשות דברים המרחיקים אותו מהקדוש ברוך הוא — הרי זה כבר בחינת תשובה.</p>
+    <div class="quote-box">
+        <p>"אי אפשר לתאר את גודל ההבדל, להינצל מפורענות גדולה חס ושלום בעולם האמיתי... כאשר יגדיל אצלו 'בחינת יום כיפורים' מעט גבוה יותר במדרגת התשובה."</p>
+        <span class="source-tag">ר' ישראל סלנטר זצוק"ל, אור ישראל יד</span>
+    </div>
+    <p>ומהי אותה "בחינת יום הכיפורים"? היא מורכבת משני יסודות: הרצון להתקרב לבורא, שהוא עניין הלב, והרצון לעשות את רצון הבורא, שהוא עניין המעשים. ושני היסודות הללו נבנים בהדרגה, מדרגה אחר מדרגה:</p>
+    <div class="highlight-box">
+        <p>"והנה מדרגות רבות לתשובה, ולפי המדרגות יתקרב האדם אל הקדוש ברוך הוא. ואמנם לכל תשובה תמצא סליחה, אך לא תטהר הנפש טוהר שלם להיות העוונות כלא היו, זולתי כאשר יטהר האדם את לבו ויכין את רוחו."</p>
+        <span class="source-tag">שערי תשובה לרבינו יונה, שער ראשון אות ט</span>
+    </div>
+
+    <h3 id="section4b">תשובה בכל חלק שיעשה — יש לו שכר</h3>
+    <p>כאן מגלה לנו בעל בית אלקים יסוד חשוב ביותר, המבדיל בין תשובה לשאר המצוות:</p>
+    <div class="quote-box">
+        <p>"התשובה בכל חלק שיעשה — יש לו קצת שכר, ולפי מה שירבה כן ירבה סליחתו... ואינם כשאר המצוות, שהעושה חלק המצווה אין לו חלק שכר המצווה, כמו שתאמר מצוות ציצית הוא בד' כנפות, והעושה ציצית בג' כנפות לבד — אינו מקיים חלקי המצווה, שהרי ד' הציציות מעכבין זה את זה, והרי הוא כאילו לא עשה שום דבר."</p>
+        <span class="source-tag">בית אלקים, שער התשובה, פרק שנים עשר</span>
+    </div>
+    <p>לעומת זאת, גם החרטה לבדה, בלי עזיבת החטא, וגם עזיבת החטא לבדה, בלי חרטה — מועילות במקצת. וכך מצינו באחאב, שנכנע מלפני ה' בקריעת בגדיו ובצום ובשכיבה בשק, נראה כמתחרט על מה שעשה, ולא עזב את כל חטאיו — ובכל זאת הועיל לו הדבר, שנאמר: "יען כי נכנע מפני, לא אביא הרעה בימיו".</p>
+    <div class="story-box">
+        <span class="story-title">אנשי נינווה: מה שהיה בכף היד החזירו</span>
+        <p>וכן מצינו באנשי נינווה, ששבו לעתיד, שעזבו את החטא, אך לא נתחרטו על העבר. שהרי אפילו באזהרת המלך לעם נאמר: "וישובו איש מדרכו הרעה ומן החמס אשר בכפיהם" — כלומר, שהיו מחזירים דווקא את החמס שעדיין נמצא בידיהם, ולא את הגזל שכבר נאכל וקשה להשיבו. ואף אמרו חכמים: מה שהיה בכף ידיהם החזירו, בשידה תיבה ומגדל לא החזירו. ואף על פי כן, מכיוון שראה האלוקים שהם "שבו מדרכם הרעה", נחם על הרעה אשר דיבר לעשות ולא עשה.</p>
+        <p>ומכיוון שתשובתם לא הייתה שלמה, לא נאמר עליהם "ולא עשה" באופן מוחלט, אלא נכתב שהדבר נדחה ל"מ' יום ונינווה נהפכת" — הקדוש ברוך הוא האריך להם עד שתהיה תשובתם שלמה.</p>
+    </div>
+    <p>ומכאן למד גם בעל דרשות הר"ן, מדוע נאמרו בפרשת התשובה שני זוגות של ביטויים דומים: תחילה "והשבות אל לבבך", ואחר כך "ושבת עד ה' אלוקיך ושמעת בקולו" — ותחילה "ושב ה' אלוקיך את שבותך ורחמך", ואחר כך "ושב וקבצך מכל העמים". "והשבות אל לבבך" הוא רק הרהור תשובה בלב, בלי להשלימה בפועל. וכנגד ההרהור הזה בלבד כבר מקבל האדם שכר: "ושב ה' אלוקיך את שבותך ורחמך" — מתן רחמים חלקי. אבל השלמת הגאולה כולה, "ושב וקבצך מכל העמים", מגיעה רק כנגד "ושבת... ושמעת בקולו" — השלמת חק התשובה לגמרי.</p>
+    <div class="highlight-box">
+        <p>מי שמשלים את חק תשובתו הרי זה משובח. ומי שאינו משלים בה, אלא שהתחיל בה ולא גמרה — הרי הקל בכך מחטאתו. שאפילו מי שרק שם אל לבו דעת לשוב בתשובה, מקל בכך את עונשו.</p>
+        <span class="source-tag">דרשות הר"ן, הדרוש העשירי</span>
+    </div>
+
+    <div class="chapter-card">
+        <span class="num">5</span>
+        <span class="name">תשובה על דבר אחד וחסד התשובה</span>
+    </div>
+
+    <div class="chapter-divider">📖</div>
+    <span class="chapter-label">פרק ה</span>
+    <h2 id="section5">תשובה על דבר אחד וחסד התשובה</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>סיפור: משל שני הנוסעים בדרך לירושלים, ומי מהם קרוב אליה יותר באמת</li>
+            <li>הקושיה על גודל החסד שבתשובה, ופתרונה</li>
+        </ul>
+    </div>
+
+    <h3 id="section5a">סיפור: הדרך לירושלים</h3>
+    <p>מדוע גם אדם שחוזר בתשובה על דבר אחד בלבד נחשב הדבר לתשובה טובה, ואף מתקבל לפני יום הכיפורים? הרב אליהו דיסקין שליט"א מסביר בשיעוריו: תשובה עניינה לשוב לאבא, לשוב אל דרך עבודת ה'. וברגע שאדם מחליט להתקדם, להתקרב לאבא — הרי הוא כבר בדרך העולה בית אל, אף אם עדיין רחוק מן היעד.</p>
+    <div class="story-box">
+        <span class="story-title">מי קרוב יותר לירושלים — מי שכבר הגיע לקסטל, או מי שבדרך?</span>
+        <p>נניח ששני אנשים נמצאים בדרך מבני ברק לירושלים. האחד כבר קרוב ממש לירושלים, נמצא בקסטל, מרחק דקות ספורות מן העיר. השני רק עתה יצא מבני ברק, בתחילת הדרך.</p>
+        <p>לפתע, שניהם מקבלים הודעה שעליהם לחזור לביתם בבני ברק. הראשון, שהיה כבר כמעט בשערי ירושלים, עושה סיבוב ומתחיל לחזור. השני, שרק זה עתה יצא, פשוט ממשיך במסלול המקורי שלו.</p>
+        <p>ועכשיו נשאלת השאלה: מי משניהם קרוב יותר לירושלים בפועל, ברגע זה ממש? התשובה הפשוטה, מבחינת מיקום גיאוגרפי, היא הראשון — הוא בקסטל, ממש בפתח העיר. אבל מי משניהם באמת מחובר לירושלים, מי נמצא בדרך אליה כרגע? זהו השני, זה שרק יצא, שכן פניו עדיין מועדות קדימה.</p>
+        <p>כך גם אדם שחוזר בתשובה ולו על דבר אחד: יתכן שהוא רחוק מאוד מן השלמות, אך הוא מראה בכך שהוא רוצה להתקרב לאבא שבשמים. ובזה, פניו מועדות אל האב, והוא באמת קרוב אליו.</p>
+    </div>
+
+    <h3 id="section5b">החסד הגדול שבתשובה</h3>
+    <div class="qa-box">
+        <p><strong>קושיית ר' אלחנן וסרמן זצ"ל:</strong> בעל המסילת ישרים כותב שהתשובה היא ממידת החסד של הקדוש ברוך הוא, וכן כתב רבינו יונה בתחילת ספרו, שהיא מן הטובות הגדולות שהיטיב הבורא עם ברואיו. ואף נאמר שהחכמה, הנבואה והתורה עצמן לא היו יודעות מכוח התשובה — רק הקדוש ברוך הוא חידש אותה, ומשמע שזהו חסד עצום. אך קשה: הרי כתב הרמב"ם, שכל מי שניחם על המצוות שעשה ותהה על הזכויות, ואמר בלבו "מה הועלתי בעשייתן, הלוואי לא עשיתי אותן" — הרי זה איבד את כולן, ואין מזכירים לו שום זכות בעולם. אם כן, מה החסד הגדול שבתשובה, אם גם היא נשקלת בסך הכול לפי מאזן דומה?</p>
+        <p><strong>תשובת ר' יחזקאל לוינשטיין זצ"ל:</strong> מי שתוהה על הראשונות צריך ממש לרצות בכל ליבו: "הלוואי שלא קיימתי". זוהי דרישה גבוהה וקשה מאוד. אך בתשובה, לעומת זאת, די באפילו קצת תשובה, ולו טיפת חרטה בלבד, כדי שהעבירה כבר תימחל. וזהו חסד גדול מאוד: הרף שנדרש כדי לאבד הכל, גבוה מאוד; והרף שנדרש כדי לזכות במחילה, נמוך מאוד. הפער הזה עצמו הוא החסד.</p>
+        <span class="source-tag">לקח טוב, ימים נוראים עמוד כט</span>
+    </div>
+
+    <div class="chapter-card">
+        <span class="num">6</span>
+        <span class="name">סוד תשובת יום הכיפורים</span>
+    </div>
+
+    <div class="chapter-divider">✡</div>
+    <span class="chapter-label">פרק ו</span>
+    <h2 id="section6">סוד תשובת יום הכיפורים</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>מדוע דווקא ביום הכיפורים מספיקה תשובה שאינה שלמה</li>
+            <li>הפער בין נוסח הווידוי לבין תנאי התשובה שמונה הרמב"ם</li>
+            <li>סיפור: מה ענה הגרי"ש אלישיב זצ"ל על "היכן קבלת התשובה לעתיד בווידוי"</li>
+        </ul>
+    </div>
+
+    <h3 id="section6a">תשובה חלקית ביום הכיפורים</h3>
+    <p>הרב יחזקאל לוינשטיין זצ"ל מחדש חידוש מרכזי: כל מה שכתב הרמב"ם, שנדרשת תשובה שלמה עד שיעיד עליו יודע תעלומות, אמור רק בתשובה של כל השנה. אך תשובת יום הכיפורים מועילה אפילו אם האדם לא שב לגמרי בכל לבו. די בכך שהוא עמל כפי כוחו, וחושב ומתחרט שלא יחטא עוד — תשובה קטנה זו כבר מספיקה כדי שיועיל יום הכיפורים לכפרה.</p>
+    <div class="quote-box">
+        <p>"יום הכפורים הוא זמן תשובה לכל, ליחיד ולרבים, והוא קץ מחילה וסליחה לישראל. לפיכך חייבים הכל לעשות תשובה ולהתוודות ביום הכפורים."</p>
+        <span class="source-tag">רמב"ם, הלכות תשובה פרק ב הלכה ז</span>
+    </div>
+    <p>מדוע דווקא כאן, כשמדובר ביום הכיפורים, מסתפק הרמב"ם בתשובה חלקית? מסתבר, שדעת הרמב"ם אינה כדעת רבינו יונה, שרואה בחזרה בתשובה מצוות עשה מן התורה בפני עצמה. אלא, חיוב זה נובע מסברה: מכיוון שיום זה הוא "קץ מחילה וסליחה", ויום הכיפורים מכפר בעצם — כל הצורך בתשובה הוא רק כתנאי מקדים, כעין הסרת מניעה. אדם שיש לו מתנה כה נפלאה, כפרה בקלות כזו, כיצד לא יעשה תשובה קטנה? הרי המחתרת חתורה לפניו, וכיצד לא יברח מן הכלא?</p>
+    <div class="highlight-box">
+        <p>למדנו מכאן דבר למעשה: ביום הכיפורים צריך בעיקר להתעסק ברצון להיות טוב. זו התשובה הנדרשת ליום זה. אדם שנכשל, למשל, בחטא לשון הרע, אין בידו לקבל בוודאות מוחלטת שלא ישוב עוד לחטא הזה בשום פנים ואופן. אך בהחלט בידו לקבל: "ריבונו של עולם, אינני רוצה לדבר לשון הרע". וראוי אף להוסיף ולבקש בפיו: "ריבונו של עולם, זכני שלא לדבר לשון הרע" — ובזה זוכה כבר לכפרת יום הכיפורים.</p>
+    </div>
+
+    <h3 id="section6b">יהי רצון שלא אחטא עוד</h3>
+    <div class="qa-box">
+        <p><strong>שאלה:</strong> הרמב"ם עצמו מונה את חלקי התשובה: עזיבת החטא, חרטה על העבר, וקבלה עם עדות "יודע תעלומות" שלא ישוב לחטא לעולם. ואילו הווידוי הנהוג בישראל כולל בעיקר את הנוסח "אבל אנחנו חטאנו" — היכן בו עזיבת החטא? היכן הקבלה לעתיד?</p>
+        <p><strong>תשובה:</strong> הרב אליהו דיסקין שליט"א מביא ששאלו את הגרי"ש אלישיב זצ"ל שאלה זו בדיוק: היכן בנוסח הווידוי אומר האדם קבלה לעתיד? והשיב הגרי"ש אלישיב: כשאדם אומר "יהי רצון שלא אחטא עוד" — הרי זו בעצמה הקבלה לעתיד. וביאר הרב דיסקין, שחז"ל לא רצו לתקן שהאדם יאמר בפירוש "אני מקבל על עצמי שלא לחטוא שוב", שכן לא כל אדם יכול לעמוד בכך במלואו. לכן תיקנו את הדבר בלשון תפילה, "יהי רצון" — וכל אחד, לפי כוח קבלתו, אומר תפילה זו.</p>
+    </div>
+    <p>ואפשר להוסיף: זהו באמת עומק התשובה. לומר "יהי רצון שלא אחטא עוד" — הרצון עצמו שלא לחטוא הוא התשובה. מה יהיה בפועל, אין הדבר תמיד ביד האדם, ואין זה מעכב בתשובת יום הכיפורים. כל שמבקשים מן האדם הוא שיאמר ויבקש בכל ליבו: "יהי רצון מלפניך שלא אחטא עוד". ולכן ראוי שלא לומר זאת רק בסוף הווידוי, אלא על כל חטא וחטא שנכשל בו, לומר בעודו על "על חטא": "ריבונו של עולם, זכני, רוצה אני מאוד — עזור לי שלא אחטא עוד בזה". בכך יהיה הווידוי מלא חיות ולב.</p>
+
+    <div class="chapter-card">
+        <span class="num">7</span>
+        <span class="name">תשובה כתנאי — חתונה עם המלך</span>
+    </div>
+
+    <div class="chapter-divider">📖</div>
+    <span class="chapter-label">פרק ז</span>
+    <h2 id="section7">תשובה כתנאי: חתונה עם המלך</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>ההבדל בין תשובה "פועלת" לתשובה "תנאי", ומדוע יום הכיפורים דומה לחתונה</li>
+            <li>מדוע דווקא הימים שבין ראש השנה ליום הכיפורים הם עת רצון מיוחדת</li>
+            <li>מי שמבעט בכפרת היום — ולמה שמחים בערב יום הכיפורים</li>
+        </ul>
+    </div>
+
+    <h3 id="section7a">תשובה הפועלת ותשובה כתנאי</h3>
+    <p>יש מצוות שאינן מטרה בפני עצמן, אלא אמצעי למטרה אחרת. כך למשל, אכילה בערב יום הכיפורים: יש לחקור אם היא מצווה בפני עצמה, או שאינה אלא הכשר למצוות הצום שביום העשירי. כך גם יש לחקור בתשובה: כל השנה ברור שמצוות התשובה היא מצווה בפני עצמה. אך ביום הכיפורים, ייתכן שהיא רק תנאי למטרה אחרת.</p>
+    <div class="quote-box">
+        <p>"בזמן הזה שאין בית המקדש קיים ואין לנו מזבח כפרה, אין שם אלא תשובה. התשובה מכפרת על כל העבירות... ועצמו של יום הכפורים מכפר לשבים, שנאמר: 'כי ביום הזה יכפר עליכם'."</p>
+        <span class="source-tag">רמב"ם, הלכות תשובה פרק א הלכה ג</span>
+    </div>
+    <p>אם תשובה מכפרת בכל השנה, מה מיוחד ביום הכיפורים? מבאר הרב יחזקאל לוינשטיין זצ"ל: דין התשובה בכל השנה, ודין התשובה ביום הכיפורים, חלוקים ביסודם. בכל השנה — התשובה לבדה היא הפועלת את הכפרה, ולפיכך היא צריכה להיות מעולה, כדי שיהיה בכוחה לכפר. אבל ביום הכיפורים, עיצומו של יום הוא המכפר, והתשובה היא רק תנאי בכפרה, כעין הסרת מניעה, שלא יהיה טובל ושרץ בידו. ומכיוון שביום הכיפורים אין התשובה פועלת את עצם הכפרה, מועילה בו גם תשובה שאינה שלמה.</p>
+    <div class="highlight-box">
+        <p>בזה מובן מדוע יום הכיפורים נמשל לחתונה, שבה החתן נותן הכול: את כל עצם הכפרה עושה הקדוש ברוך הוא, וכל שנותר לנו הוא רק שלא למנוע את הכפרה — להסכים להיות ה"כלה", להיות המקבל, לעמוד בהכנעה.</p>
+    </div>
+    <p>ומדוע דווקא הימים הללו, מראש השנה ליום הכיפורים, זכו למידה כזו של קרבה?</p>
+    <div class="quote-box">
+        <p>"התשובה מועילה לעולם, אבל מראש השנה ליום הכפורים מועילה יותר ומקובלת, גם כי לא תהיה תשובה גמורה כל כך... נתייחדו אלו הימים שתהיה התשובה מקובלת יותר בהם, להיותם בזמן בריאת העולם... שאם לא היה מקבל את התשובה מראש, לא היה בורא את העולם כלל, שהרי לא ייתכן שלא תרבה רעת האדם בארץ. ולכך, בזמן שנברא העולם, זוכר האל יתברך שעל מנת כך בראו — שיקבל את התשובה."</p>
+        <span class="source-tag">בית אלקים, שער התשובה, פרק חמישה עשר</span>
+    </div>
+    <p>ומכאן מתבארת גם משנתם של חז"ל, ש"שבעה דברים נבראו קודם שנברא העולם", ואחד מהם התשובה: קודם שנברא העולם, כבר הסכים הקדוש ברוך הוא לקבל את תשובת השב מחטאו, שאם לא כן לא היה בורא את העולם כלל.</p>
+
+    <h3 id="section7b">הצורך להאמין בכפרת היום</h3>
+    <div class="quote-box">
+        <p>"אין יום הכפורים ולא החטאת ולא האשם מכפרין אלא על השבים המאמינים בכפרתן, אבל המבעט בהן אינן מכפרין בו... וכן המבעט ביום הכפורים אין יום הכפורים מכפר עליו."</p>
+        <span class="source-tag">רמב"ם, הלכות שגגות פרק ג הלכה י</span>
+    </div>
+    <p>יתכן לומר, שדעת הרמב"ם היא שאדם שאינו חוזר בתשובה ביום הכיפורים, נחשב הדבר כמין "מבעיטה" בכפרת היום. וזהו כעין המשל שמביא רבינו יונה על אסיר, שנחפרה לפניו מחתרת שדרכה יוכל לברוח מן הכלא, ובכל זאת לא ברח. לכן, כל שמראה שהוא רוצה שלא לחטוא, שהוא ולו קצת מצטער על מצבו — הדבר מועיל.</p>
+    <p>ואולי יש לומר עוד: לא לחינם קבעה התורה שמחה דווקא בערב יום הכיפורים. שכן יום הכיפורים מכפר למי שמאמין בו, ואדם המאמין בכל ליבו בכפרה — שמח בכך מאוד. וכך כותב רבינו יונה:</p>
+    <div class="quote-box">
+        <p>"ואם עבר אדם על מצות לא תעשה ועשה תשובה, ידאג לעונו ויכסוף ויחכה להגיע ליום הכפורים למען יתרצה אל השם יתברך... ועל כן אמרו רבותינו זכרונם לברכה: כל הקובע סעודה בערב יום הכפורים, כאילו נצטווה להתענות תשיעי ועשירי והתענה בהם, כי הראה שמחתו בהגיע זמן כפרתו."</p>
+        <span class="source-tag">שערי תשובה לרבינו יונה, שער ד; ראש השנה דף ט עמוד א</span>
+    </div>
+    <p>ואולי יש להוסיף עוד נקודה: מה שקבעו בווידוי יום הכיפורים לומר "על חטא" פעמים רבות, ולא הרחיבו במפורש בחרטה, בעזיבת החטא ובקבלה — הוא משום שעיקר תשובת יום הכיפורים תלויה בכך שיכיר האדם עד כמה החטא הוא אסון, וממילא יכיר טובה עצומה לבורא עולם שמכפר לו על כך. עד שיחוש: "לא היו ימים טובים לישראל כיום הכיפורים" — יום מחילה וסליחה. ורק מי שחש את חומרת החטא, יכול לחוש גם את השמחה העצומה שבמחילה עליו.</p>
+
+    <div class="chapter-card">
+        <span class="num">8</span>
+        <span class="name">עבודת הלב — שמחה, דיבור ואהבה</span>
+    </div>
+
+    <div class="chapter-divider">✡</div>
+    <span class="chapter-label">פרק ח</span>
+    <h2 id="section8">עבודת הלב: שמחה, דיבור ואהבה בתשובה</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>סיפור: החזן שאמר "על חטא" בניגון שמח, ותשובתו לבעל שם טוב</li>
+            <li>איך דיבור בונה רצון בלב האדם</li>
+            <li>מדוע הווידוי נמצא בתוך התפילה ולא לפניה או אחריה</li>
+            <li>איך זדונות נהפכים לזכויות, וכיצד הקדוש ברוך הוא "מתפייס בדברים"</li>
+        </ul>
+    </div>
+
+    <h3 id="section8a">סיפור: על חטא בניגון שמח</h3>
+    <div class="story-box">
+        <span class="story-title">"לוואי מחלקך יהיה חלקי"</span>
+        <p>אל הצדיק הבעל שם טוב הגיעה שמועה תמוהה. באחת העיירות שימש רב כחזן בימים הנוראים, ומנהג מוזר לו: דווקא את הווידויים, את "על חטא", היה אומר בניגון שמח ועליז.</p>
+        <p>הבעל שם טוב, שלא הבין כיצד אפשר לשיר וידוי בשמחה, יצא לדרך ונפגש עם אותו רב. שאלו במה דברים אמורים.</p>
+        <p>השיב הרב ואמר: "הנה בחצר המלך יש עבד, שתפקידו לנקות את הלכלוך והטינופת, לסלק את מי השופכים ולגרר את הבוץ. אם אוהב העבד את המלך, חזקה עליו שהוא שש ושמח על הזכות שנפלה בחלקו: לשמש את המלך, ולנקות את מקום מושבו. בדין הוא שכאשר הוא עוסק במלאכת הקירצוף והניקוי, הוא שר ומזמר מתוך שמחה וגיל".</p>
+        <p>"והנה ליבו של היהודי", המשיך הרב, "הוא מקום מושבו של המלך, כמו שנאמר: 'צוּר לְבָבִי וְחֶלְקִי אֱלֹהִים לְעוֹלָם', הוא לבבם של ישראל וחלקם, כי חלק ה' עמו, 'בְּלִבָבִי מִשְׁכָּן אֶבְנֶה'".</p>
+        <p>שמע הבעל שם טוב, נענה ואמר: "לוואי מחלקך יהיה חלקי". שכן כשמנקים את חדרו של המלך מלכלוך, אין זו עבודה עגומה — זו עבודת אהבה, וכל אימת שמסלקים ליכלוך מן החדר, יש בכך שמחה גדולה: החדר שוב מוכן לשכינתו של המלך.</p>
+    </div>
+
+    <h3 id="section8b">דיבור יוצר רצון</h3>
+    <p>רבים תמהים על ריבוי הווידויים בתפילות הימים הנוראים. מדוע צריך לחזור שוב ושוב על אותם עניינים? צריך לדעת יסוד גדול: הדיבור יוצר באדם רצון. לכן, ככל שאדם מעורר את עצמו יותר בדיבור לרצות טוב, כך גדל הרצון בפועל. ולכן, בווידוי, צריך האדם ליצור בתוכו שני סוגי רצון: ראשית, עצם הרצון הכללי לעשות את דבר ה'. ושנית, רצון פרטי וממוקד למעשה המצווה הספציפי, או לחדול מן החטא הספציפי שעליו הוא מתוודה.</p>
+
+    <h3 id="section8c">וידוי בתוך התפילה</h3>
+    <div class="qa-box">
+        <p><strong>שאלת הרב פינקוס:</strong> מדוע תיקנו את הווידוי בתוך התפילה עצמה, ולא מחוצה לה כמו בשאר ימות השנה?</p>
+        <p><strong>תשובה:</strong> יש בכך רמז למהותו של יום הכיפורים. כשם שהתפילה היא הדבקות בה', כך גם מהות הסרת זוהמת החטאים היא בעצמה הדבקות בו יתברך. הווידוי אינו הפוגה טכנית בתוך התפילה, אלא חלק ממנה, כי שניהם — התפילה והווידוי — עוסקים באותו הדבר: התקרבות לה'.</p>
+    </div>
+    <p>ומהי בעצם עבירה? כותב רבינו יונה בעצם עיקרי התשובה: "העיקר הראשון — החרטה. יבין לבבו כי רע ומר עזבו את ה'." זה עיקר התשובה: להכיר שהחטא הוא עצם הריחוק מן ה', ולא רק הפרת כלל זה או אחר.</p>
+
+    <h3 id="section8d">תשובה מאהבה — זדונות נעשים כזכויות</h3>
+    <div class="quote-box">
+        <p>"אמר ריש לקיש: גדולה תשובה, שזדונות נעשות לו כשגגות, שנאמר 'שובה ישראל עד ה' אלהיך כי כשלת בעונך'... והאמר ריש לקיש: גדולה תשובה שזדונות נעשות לו כזכיות, שנאמר 'ובשוב רשע מרשעתו ועשה משפט וצדקה עליהם הוא יחיה'! לא קשיא: כאן — מאהבה, כאן — מיראה."</p>
+        <span class="source-tag">תלמוד בבלי, יומא דף פו עמוד ב</span>
+    </div>
+    <div class="two-columns">
+        <div class="col-purple">
+            <h4>תשובה מיראה</h4>
+            <p>הזדונות נהפכים ל"שגגות" בלבד. האדם חוזר בו מן החטא מפני יראת העונש, ומעמדו חוזר להיות כמי שנכשל בשוגג.</p>
+        </div>
+        <div class="col-gold">
+            <h4>תשובה מאהבה</h4>
+            <p>הזדונות נהפכים ל"זכויות" ממש. מתוך צער האהבה על הריחוק שנגרם, מוסיף האדם מעשים טובים יותר משהיה עושה כרגיל, וממילא נהפך גם החטא עצמו לגורם שהוליד את אותם מעשים טובים.</p>
+        </div>
+    </div>
+    <p>כאשר האדם מצטער על העוון שקרה לו, מתוך שהוא חש כיצד הוא התרחק בגללו מה' יתברך, וזוהי בעצמה אהבה — הרצון להתקרב — הוא מוסיף עוד מעשים טובים מעבר להרגלו, כלשון הפסוק: "ועשה משפט וצדקה עליהם". ואז גם העבירה עצמה נהפכת לזכות, שכן היא הייתה הגורם לעשיית אותם מעשים טובים נוספים. אפשר אף להוסיף: עצם ההתעוררות של האדם לשוב ולהתקרב אל ה' בעקבות החטא, נחשבת לזכות בפני עצמה, שכן תמיד כאשר אדם מתעורר להתקרב, יש בכך יותר קרבה מאשר בחיים של הרגל סתמי.</p>
+    <div class="highlight-box">
+        <p>ומטעם זה בדיוק, האומר "אחטא ואשוב" — אין מספיקים בידו לעשות תשובה. שכן שם הכיוון הפוך: התשובה נעשית סיבת החטא, ולא החטא סיבת התשובה. ומשום כך אינה יכולה להפוך את החטא לזכות.</p>
+    </div>
+    <p>ובהמשך אותה סוגיה, מתגלה עומק נוסף בחסדו של הקדוש ברוך הוא:</p>
+    <div class="quote-box">
+        <p>"בא וראה, שלא כמידת הקדוש ברוך הוא מידת בשר ודם. מידת בשר ודם: מקניט את חברו בדברים, ספק מתפייס הימנו ספק אין מתפייס הימנו... אבל הקדוש ברוך הוא, אדם עובר עבירה בסתר — מתפייס ממנו בדברים, שנאמר: 'קחו עמכם דברים ושובו אל ה''. ולא עוד, אלא שמחזיק לו טובה, שנאמר 'וקח טוב'. ולא עוד, אלא שמעלה עליו הכתוב כאילו הקריב פרים, שנאמר: 'ונשלמה פרים שפתינו'."</p>
+        <span class="source-tag">תלמוד בבלי, יומא דף פו עמוד ב</span>
+    </div>
+    <p>ראה כמה יכול לזכות אדם שחטא, עד כדי שביארו חכמים את דברי המשנה "האומר אחטא ואשוב" באופן מיוחד: שמא יאמר האדם, אחטא כדי שאוכל אחר כך לשוב ולזכות במעלה כה גדולה — לכן השמיעונו חכמים שהאומר כך אין מספיקים בידו. אבל מי שכבר נכשל וחזר בתשובה מתוך אהבה אמיתית — לא צריך להתעצב יתר על המידה. אדרבה, בקלות יחסית יכול הוא להפוך את מה שקרה לזכות, אם רק יצטער על כך שקרה, ויחשוב כיצד להתחזק ממנו הלאה.</p>
+
+    <div class="chapter-card">
+        <span class="num">9</span>
+        <span class="name">סיכום — תשובה היא הדרך הביתה</span>
+    </div>
+
+    <div class="chapter-divider">📖</div>
+    <span class="chapter-label">פרק ט</span>
+    <h2 id="section9">סיכום: תשובה היא הדרך הביתה</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>מעלת מי ששב על מי שמעולם לא חטא — דברי הרמב"ם המפורסמים</li>
+            <li>י"א נקודות לסיכום עבודת התשובה, כמורה דרך מעשי לימים אלו</li>
+        </ul>
+    </div>
+
+    <h3 id="section9a">מעלת השב יותר ממי שלא חטא כלל</h3>
+    <p>בפשטות היה נדמה שתשובה היא רק פתרון בדיעבד, למי שכבר חטא. אילו היה אפשר שלא לחטוא מלכתחילה, היה עדיף. אך הרב יחזקאל לוינשטיין זצ"ל היה אומר, שמדברי הרמב"ם מדויק שלא כך הוא, וזו לשונו הנפלאה של הרמב"ם:</p>
+    <div class="quote-box">
+        <p>"כמה מעולה מעלת התשובה! אמש היה זה מובדל מה' אלהי ישראל, שנאמר: 'עוונותיכם היו מבדילים ביניכם לבין אלהיכם'. צועק ואינו נענה, שנאמר: 'כי תרבו תפילה'. ועושה מצוות וטורפין אותן בפניו, שנאמר: 'מי בקש זאת מידכם רמוס חצרי'. והיום — הוא מודבק בשכינה, שנאמר: 'ואתם הדבקים בה' אלהיכם'. צועק ונענה מיד, שנאמר: 'והיה טרם יקראו ואני אענה'. ועושה מצוות ומקבלין אותן בנחת ובשמחה, שנאמר: 'כי כבר רצה האלהים את מעשיך'. ולא עוד, אלא שמתאווים להם, שנאמר: 'וערבה לה' מנחת יהודה וירושלם כימי עולם וכשנים קדמוניות'."</p>
+        <span class="source-tag">רמב"ם, הלכות תשובה פרק ז</span>
+    </div>
+    <p>מכאן אמר המשגיח: שבתשובה יכול האדם לפעול גדולות ונצורות, מה שלא היה משיג ללא זה אלא בעבודה קשה ומאומצת שנים על גבי שנים. לא רק ריבוי זכויות ושכר מצוות יש כאן, אלא דבקות בקדוש ברוך הוא בדרגה נפלאה. לכן, עלינו להתייחס אל התשובה לא רק כאל אמצעי למחוק עוונות, אלא גם כאל הזדמנות אמיתית לזינוק כלפי מעלה, אל מעלות עליונות שבעבודת ה'.</p>
+
+    <h3 id="section9b">סיכום עבודת התשובה</h3>
+    <p>ביום הכיפורים חלה חובה לחזור בתשובה, כמבואר ברמב"ם. וכך אפשר לסכם את מה שנתבאר בספר זה כולו, כמורה דרך מעשי לעבודת עשרת ימי תשובה:</p>
+    <div class="highlight-box">
+        <ol>
+            <li>קבלה אחת קטנה, ולו על דבר אחד, כבר מועילה ונחשבת לתשובה.</li>
+            <li>בכך האדם מראה שהוא עומד עם הפנים אל אביו שבשמים.</li>
+            <li>שכן עיקרה של התשובה הוא הרצון להתקרב לאבא, לא רק תיקון טכני של החטא.</li>
+            <li>"לשוב" פירושו לחזור אל המקום שבאמת שלי, אל השורש.</li>
+            <li>ולעמוד עם הפנים אל ריבונו של עולם.</li>
+            <li>ראש השנה עצמו נחשב כבר מימי התשובה — סימן שהתשובה עניינה להתקרב לאבא, עוד לפני שנחתם הדין.</li>
+            <li>ולכן אומרים את הווידוי בתוך התפילה עצמה ולא אחריה, כי הוא חלק מן הדבקות.</li>
+            <li>ולכן גם אומרים "שיר הכבוד" ביום הכיפורים, כביטוי לאותה קרבה.</li>
+            <li>תשובה מועילה גם כשהיא רק בחלקים, לא רק כשהיא שלמה.</li>
+            <li>כפרת יום הכיפורים נובעת מן הדבקות בה', והתשובה היא רק מה שמסיר את החציצה שביניהם.</li>
+            <li>ולכן, גם תשובה חלקית מספיקה לרפות ולהחליש את אותה חציצה, ולפתוח את הדרך לדבקות המלאה.</li>
+        </ol>
+    </div>
+    <div class="verse-box">
+        <p>"דִּרְשׁוּ ה' בְּהִמָּצְאוֹ, קְרָאֻהוּ בִּהְיוֹתוֹ קָרוֹב" (ישעיה נה, ו)</p>
+    </div>
+    <p>עשרת ימי תשובה הם ימים שבהם הבורא קרוב אלינו במיוחד, ומחכה לשיבתנו. אין צורך להגיע בהם אל השלמות. די ברצון כן להתקרב, ולו במעט, כדי לפתוח דלת שכל כולה רחמים. יהי רצון שנזכה כולנו לשוב אל אבינו שבשמים באמת ובלב שלם, ולחתימה טובה לחיים טובים ולשלום.</p>
+
+    <div class="sources">
+        <h3>📚 מקורות ומראי מקומות</h3>
+        <ol>
+            <li>תלמוד בבלי, מסכת ראש השנה דף טז עמוד א; דף ט עמוד א</li>
+            <li>מדרש תהלים (בובר), מזמור טז</li>
+            <li>רמב"ם, הלכות תשובה: פרק א הלכה ג; פרק ב הלכות ב, ג, ו, ז; פרק ג הלכות א, ד; פרק ז</li>
+            <li>רמב"ם, הלכות שגגות פרק ג הלכה י</li>
+            <li>רבינו יונה מגירונדי, שערי תשובה: שער ראשון אות ט; שער שני אות י; שער שני אות יד; שער ד</li>
+            <li>דרשות רבי יהושע אבן שועיב, פרשת האזינו</li>
+            <li>לקוטי מקורות ח"ב עמוד כט, בשם הרב ראובן מלמד</li>
+            <li>בראשית פרק ח (פרשת נח); תהלים כז, ד; מב, ב-ג; סג, ב; עג, כו</li>
+            <li>רבי משה חיים לוצאטו, מסילת ישרים פרק ד</li>
+            <li>בית אלקים, שער התשובה: פרק שנים עשר; פרק חמישה עשר</li>
+            <li>מלכים א פרק כא; ספר יונה פרק ג; תלמוד ירושלמי, תענית פרק ב</li>
+            <li>דרשות הר"ן, הדרוש העשירי</li>
+            <li>רבי ישראל סלנטר, אור ישראל, אות יד</li>
+            <li>רבי יחזקאל לוינשטיין, לקח טוב לימים נוראים עמוד כט; לעבדך באמת עמוד קטז</li>
+            <li>גן האמונה העולמי, עמוד רצג</li>
+            <li>תלמוד בבלי, מסכת יומא דף פו עמוד ב</li>
+            <li>תלמוד בבלי, מסכת פסחים דף נד עמוד א</li>
+            <li>שפתי חיים (רבי חיים פרידלנדר), מאמרי ראש השנה</li>
+            <li>שיעורי הרב אליהו דיסקין שליט"א; עדות בשם הגרי"ש אלישיב זצ"ל</li>
+            <li>קושיית רבי אלחנן וסרמן זצ"ל, מפי השמועה</li>
+            <li>שאלת הרב שמשון דוד פינקוס זצ"ל, מפי השמועה</li>
+            <li>מעשה המובא בשם הבעל שם טוב הקדוש, מסורת חסידית</li>
+        </ol>
+    </div>
+
+    <!-- ===== חתימה — חובה, מבנה קבוע ===== -->
+    <div class="footer">
+        <strong>נכתב ונערך על ידי:</strong><br>
+        <strong>הרב יהודה טאוב</strong><br>
+        קרית אתא<br>
+        📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+        <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px; color: #1f2937;">
+            <h4>🎧 שיעורים נוספים של הרב</h4>
+            <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+            <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+            <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+        </div>
+    </div>
+
+</div>
+
+<a href="#top" class="scroll-top" id="scrollTop" aria-label="חזרה לראש העמוד">▲</a>
+
+<script>
+/* ===== גלילה חלקה + כפתור חזרה למעלה ===== */
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+        var t = document.querySelector(this.getAttribute('href'));
+        if (!t) return;
+        e.preventDefault();
+        t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+window.addEventListener('scroll', function () {
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+});
+</script>
+
+<script>
+/* =============================================================================
+   קול תודה — מנוע הקראה למאמרים תורניים   |   tts.js   v2.0
+   -----------------------------------------------------------------------------
+   העתק את הקובץ הזה כמות שהוא לתוך תגית <script> בסוף ה-HTML.
+   אין לכתוב אותו מחדש, לקצר או "לשפר" תוך כדי יצירת מאמר — הוא נבדק כך.
+   Web Speech API בלבד: בלי API חיצוני, בלי מפתח, בלי רשת, בלי עלות.
+   ============================================================================= */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    /* ---------- הגדרות ---------- */
+    var NS       = 'koltoda.tts.';                 // מרחב שמות ב-localStorage, משותף לכל המאמרים
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;                           // תווים לכל אמירה — מתחת לסף הקטיעה של Chrome
+    // כל אלה הם ניווט או מטא-מידע, לא גוף המאמר. מי שמאזין לא רוצה לשמוע
+    // את מפתח העניינים, את רשימת המקורות או את "בפרק זה" לפני כל פרק.
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    /* ---------- מצב ---------- */
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false;
+    var clickToRead = true;          // נטען מ-localStorage ב-init
+
+    /* ---------- אלמנטים ---------- */
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    // התווית ההתחלתית נלקחת מה-HTML ולא מקובעת בקוד, כדי שתבניות שונות
+    // (למשל "האזן" בספר מול "האזן למאמר" במאמר) יחזרו לטקסט הנכון שלהן.
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+
+    /* =========================================================================
+       1. עיבוד הטקסט להקראה
+       ========================================================================= */
+
+    var G = '["\\u05f4\\u201d\\u2033]';        // גרשיים על כל וריאציותיהם
+    var R = "['\\u05f3\\u2019]";               // גרש
+
+    // מילון ראשי תיבות. חל *רק* על הטקסט שנשלח למנוע הדיבור —
+    // הטקסט שעל המסך נשאר בדיוק כפי שנכתב.
+    // ה-([ובלכמשהד]{0,2}) הוא קריטי בעברית: ראשי תיבות כמעט תמיד מופיעים עם
+    // אות שימוש דבוקה — "בשו״ע", "ובמשנ״ב", "כשו״ת". בלי זה הכלל פשוט לא נורה
+    // ברוב המופעים האמיתיים. האות נשמרת ומוצמדת חזרה למילה המלאה.
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    // מנועי TTS עבריים נתקעים על גרשיים בתוך מילה — לפעמים מאייתים אות-אות.
+    // הסרתם הופכת את המילה לקריאה רציפה (רמב"ם → רמבם) וזה נשמע נכון בהרבה.
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    // "ה'" — מנוע ההקראה מבטא את זה כאות בודדת ("הא"), ולא כשמו של הקב"ה.
+    // מחליפים ל"השם". על המסך זה נשאר "ה'" כמובן — ההחלפה היא רק במה שנשלח
+    // למנוע הדיבור.
+    // המלכודת: אותו "ה'" הוא גם מספר — "פרק ה'", "יום ה'", "סימן ה'" — ושם
+    // דווקא נכון לקרוא "ה". לכן ההקשרים המספריים מוחרגים.
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');   // פעמיים, לרצפים כמו תשע"ג-תשע"ד
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');       // אימוג'י (זוגות surrogate)
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' '); // סמלים ודינגבטים
+        t = t.replace(/־/g, ' ');                               // מקף עברי → רווח
+        t = t.replace(/\s*[–—]\s*/g, ', ');                // מקף ארוך → פסיק (הפוגה טבעית)
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');                   // רווח אחרי סימן פיסוק
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    /* ---------- פיצול לאמירות קצרות ----------
+       זה הלב של התיקון: Chrome/Edge קוטעים אמירה שנמשכת יותר מ~15 שניות,
+       ולעיתים אף לא יורים onend — ההקראה פשוט מתה באמצע פסקה. פסקה תורנית
+       רגילה היא 400-800 תווים, הרבה מעל הסף. פיצול למשפטים של עד 180 תווים
+       מבטיח שאף אמירה לא מתקרבת לגבול.                                       */
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            // מילה בודדת ארוכה מהמכסה (כתובת אינטרנט, מחרוזת בלי רווחים) —
+            // חיתוך קשיח, אחרת הייתה חוזרת אמירה ענקית והבאג היה חוזר מהדלת האחורית.
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    /* =========================================================================
+       2. בניית תור ההקראה
+       ========================================================================= */
+
+    // בספר מתחלף מקריאים רק את העמוד המוצג. בגלילה רציפה — את כל המאמר.
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        // המשתמש הפך עמוד ידנית תוך כדי האזנה — עוברים להקריא את העמוד החדש.
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            // תוכן העניינים, רשימת המקורות, סרגל ההאזנה והחתימה אינם חלק מהמאמר המדובר.
+            if (n.closest(SKIP)) return;
+            // רשימה מקוננת כבר נקראת כחלק מה-li שמעליה — לא לקרוא פעמיים.
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    /* =========================================================================
+       3. ממשק
+       ========================================================================= */
+
+    function hint() {
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        // גוללים רק אם הפסקה באמת מחוץ למסך. אחרת ההקראה "חוטפת" את הדף
+        // מתחת לידיים של מי שקורא קצת קדימה בעצמו.
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    // בספר מתחלף העמוד עצמו הוא הסימנייה (paginated.js שומר אותו), אין טעם
+    // לשמור אינדקס פסקה שמתאפס בכל הפיכת עמוד.
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    /* =========================================================================
+       4. הקראה
+       ========================================================================= */
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            // סוף העמוד בספר מתחלף — הופכים לעמוד הבא וממשיכים ברצף.
+            // עמודים בלי תוכן להקראה (מקורות, חתימה) מדולגים במקום לעצור עליהם.
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            // 'canceled'/'interrupted' = אנחנו עצרנו בכוונה (מעבר לשונית, נעילת מסך,
+            // לחיצה על פסקה אחרת). אסור להתקדם — זה בדיוק מה שגרם ל"קפיצה לעמוד האחרון":
+            // כל הפסקאות הנותרות נכשלות ברצף תוך שברירי שנייה בזמן שהמסך כבוי.
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    /* ---------- שומר ראש ----------
+       גם עם פיצול לאמירות קצרות, Chrome מסוגל "למות" בשקט: לא מדבר, לא ממתין,
+       ו-onend לא נורה לעולם. הכפתור נשאר על "מקריא..." ואין קול. הבדיקה הזו
+       מזהה שתי שניות של שקט אמיתי ומקדמת הלאה במקום להיתקע.                  */
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    /* =========================================================================
+       5. פקדים
+       ========================================================================= */
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = parseInt(localStorage.getItem(POS_KEY) || '0', 10);
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        // בדיקת המצב האמיתי של המנוע (ולא רק הדגלים הפנימיים) היא מה שמונע
+        // כפתור "מת" אחרי מעבר לשונית וחזרה.
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                // באג ידוע: resume() נכשל לפעמים בשקט אחרי השהיה ארוכה.
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                // אין אמירה מושהית להחיות (למשל אחרי נעילת מסך שביטלה אותה).
+                // מדברים כאן ועכשיו, בתוך אירוע הלחיצה — ב-iOS הקראה שנדחית
+                // ל-setTimeout כבר לא נחשבת "מתוך מגע משתמש" ונחסמת בשקט.
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        // לחיצה ראשונה על "אחורה" מחזירה לתחילת הפסקה הנוכחית, כמו בכל נגן.
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    // דילוג לפרק הבא/הקודם — ב-h2 בלבד. בספר של מאות פסקאות, ⏮/⏭ לבד לא מספיקים.
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;   // האחרון שלפנינו
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    // שינוי המחוון יורה עשרות אירועי input בזמן גרירה. הערך מתעדכן מיד,
+    // אבל ההקראה מופעלת מחדש רק כשמשחררים (onchange) — אחרת זה גמגום רצוף.
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    /* =========================================================================
+       6. קולות
+       ========================================================================= */
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);   // נשמרות בכוונה — קול רב-לשוני לפעמים נשמע טוב יותר
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        // onvoiceschanged יורה יותר מפעם אחת (במיוחד ב-Edge, כשקולות הענן נטענים
+        // באיחור). בלי הדגל הזה כל ירייה כזו הייתה דורסת את בחירת המשתמש.
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    /* =========================================================================
+       7. לחיצה על פסקה = התחל להקריא מכאן
+       ========================================================================= */
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    // מי שקורא בשקט לא רוצה שנגיעה מקרית תתחיל פתאום לדבר. המתג נשמר
+    // ב-localStorage המשותף, כך שכיבוי אחד תופס לכל המאמרים והספרים.
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;                                             // המתג כבוי
+                if (e.target.closest('a')) return;                                    // קישורים עובדים כרגיל
+                if (window.getSelection && String(window.getSelection()).length) return; // סימון להעתקה עובד כרגיל
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    /* =========================================================================
+       8. מעבר לשונית / נעילת מסך
+       ========================================================================= */
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            // iOS חוסם הקראה שלא נולדה מתוך מגע של המשתמש. אם אחרי כשנייה עדיין
+            // אין קול — נעבור למצב מושהה גלוי, כדי שהקורא יקיש פעם אחת במקום
+            // לבהות בכפתור שכתוב עליו "מקריא..." בזמן שקט מוחלט.
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    // חזרה מ-bfcache: מאפסים לגמרי (כולל autoPaused — אחרת ה-visibilitychange
+    // שמגיע מיד אחרי היה מתחיל להקריא את המאמר מההתחלה מעצמו).
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    // pagehide ולא beforeunload — beforeunload מבטל את ה-bfcache ודווקא מחמיר
+    // את הבעיה של חזרה ללשונית.
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    /* =========================================================================
+       9. אתחול
+       ========================================================================= */
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';   // ברירת מחדל: פעילה
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var saved = parseInt(localStorage.getItem(POS_KEY) || '0', 10);
+        if (saved > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+</body>
+</html>
