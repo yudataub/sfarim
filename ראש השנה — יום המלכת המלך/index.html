@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>ראש השנה — יום המלכת המלך</title>
+<style>
+:root {
+    --purple: #7e22ce;  --blue: #2563eb;   --green: #059669;
+    --gold:   #f59e0b;  --pink: #ec4899;   --ink:   #1f2937;
+    --paper:  #ffffff;  --muted: #6b7280;  --line:  rgba(0,0,0,.08);
+    --g-page:      linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --g-verse:     linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    --g-highlight: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    --g-quote:     linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    --g-story:     linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    --g-divider:   linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    --g-title:     linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0; padding: 40px 20px;
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: var(--g-page);
+    color: var(--ink);
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 900px; margin: 0 auto;
+    padding: 60px 80px;
+    background: var(--paper);
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.1);
+}
+
+/* ---------- כותרות ---------- */
+.main-title {
+    font-size: 3em; font-weight: bold; text-align: center; margin: 0 0 10px;
+    background: var(--g-title); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: var(--purple);
+}
+.subtitle { text-align: center; font-size: 1.25em; color: var(--muted); margin-bottom: 8px; }
+.author   { text-align: center; font-size: 1.05em; color: var(--purple); font-weight: bold; margin-bottom: 10px; }
+
+h2 { font-size: 2.2em; color: var(--purple); border-right: 6px solid var(--purple);
+     padding-right: 20px; margin: 50px 0 20px; }
+h3 { font-size: 1.8em; color: var(--blue);  margin: 35px 0 15px; }
+h4 { font-size: 1.5em; color: var(--green); margin: 25px 0 12px; }
+p, li { font-size: 1.15em; line-height: 1.8; margin: 0 0 20px; text-align: justify; text-justify: inter-word; }
+li { margin-bottom: 10px; }
+.verse-box p, .section-divider, .chapter-card p, .footer p { text-align: center; }
+.toc li, .listen-bar p { text-align: right; }
+
+.emphasis { color: var(--purple); font-weight: bold; }
+em { color: var(--blue); font-style: italic; }
+
+/* ---------- מעבר בין פרקים ---------- */
+.chapter-card {
+    min-height: 55vh; margin: 60px -80px 0; padding: 40px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: var(--g-title); color: #fff; text-align: center;
+}
+.chapter-card .num { font-size: 5.5em; font-weight: bold; line-height: 1; opacity: .85; }
+.chapter-card .name { font-size: 2.2em; font-weight: bold; margin-top: 18px; max-width: 18ch; }
+.chapter-divider {
+    display: flex; align-items: center; gap: 15px; margin: 45px 0;
+    color: var(--gold); font-size: 1.4em;
+}
+.chapter-divider::before, .chapter-divider::after {
+    content: ''; flex: 1; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.chapter-label {
+    display: inline-block; margin-bottom: 6px; padding: 3px 14px;
+    background: var(--purple); color: #fff; border-radius: 20px;
+    font-size: .55em; font-weight: bold; letter-spacing: .5px; vertical-align: middle;
+}
+.in-this-chapter {
+    background: var(--g-highlight); border-right: 6px solid var(--blue);
+    border-radius: 12px; padding: 22px 26px; margin: 22px 0 32px;
+}
+.in-this-chapter h4 { margin: 0 0 10px; font-size: 1.1em; color: var(--blue); }
+.in-this-chapter ul { margin: 0; padding-right: 20px; }
+.in-this-chapter li { font-size: 1em; margin-bottom: 6px; text-align: right; }
+
+.story-title { display: block; font-size: 1.25em; font-weight: bold; color: var(--green); margin-bottom: 12px; }
+
+/* ---------- קופסאות תוכן ---------- */
+.verse-box, .highlight-box, .quote-box, .story-box, .qa-box {
+    padding: 28px; margin: 30px 0; border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.verse-box     { background: var(--g-verse); border: 2px solid var(--purple);
+                 text-align: center; font-size: 1.3em; font-weight: 600; color: var(--purple); }
+.verse-box p   { font-size: 1em; margin: 0; }
+.highlight-box { background: var(--g-highlight); border-right: 6px solid var(--blue);
+                 box-shadow: 0 5px 15px rgba(126,34,206,.15); }
+.quote-box     { background: var(--g-quote); border-right: 6px solid var(--gold); font-style: italic; }
+.story-box     { background: var(--g-story); border-right: 6px solid var(--green); }
+.qa-box        { background: #fff; border: 2px dashed var(--pink); }
+.verse-box p:last-child, .highlight-box p:last-child, .quote-box p:last-child,
+.story-box p:last-child, .qa-box p:last-child { margin-bottom: 0; }
+
+.source-tag { display: block; margin-top: 12px; font-size: .9em; font-style: normal;
+              color: var(--muted); font-weight: bold; }
+
+.section-divider {
+    background: var(--g-divider); color: #fff; text-align: center;
+    padding: 18px 25px; margin: 45px 0; border-radius: 10px;
+    font-size: 1.3em; font-weight: bold; letter-spacing: .5px;
+}
+
+.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 30px 0; }
+.two-columns > div { padding: 25px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,.1); }
+.col-purple { background: var(--g-verse);  border-top: 5px solid var(--purple); }
+.col-gold   { background: var(--g-quote);  border-top: 5px solid var(--gold); }
+
+/* ---------- תוכן עניינים / מקורות / חתימה ---------- */
+.toc { background: #faf5ff; border: 2px solid #e9d5ff; border-radius: 12px; padding: 25px 30px; margin: 30px 0; }
+.toc h3 { margin-top: 0; color: var(--purple); }
+.toc ul { list-style: none; padding: 0; margin: 0; }
+.toc li { margin-bottom: 8px; }
+.toc a { color: var(--blue); text-decoration: none; font-size: 1.05em; }
+.toc a:hover { text-decoration: underline; color: var(--purple); }
+.toc > ul > li { margin-bottom: 14px; }
+.toc-chapter { font-weight: bold; font-size: 1.1em; color: var(--purple); }
+.toc-subs { display: block; margin-top: 3px; font-size: .9em; color: var(--muted); line-height: 1.7; }
+.toc-subs a { font-size: 1em; color: var(--muted); }
+.toc-subs a:hover { color: var(--blue); }
+.toc-subs span { margin: 0 6px; opacity: .5; }
+
+.sources { background: #f9fafb; border-radius: 12px; padding: 25px 30px; margin-top: 50px; border: 1px solid var(--line); }
+.sources h3 { margin-top: 0; }
+.sources li { font-size: 1em; }
+
+.footer { margin-top: 55px; padding-top: 30px; border-top: 3px solid var(--gold);
+          text-align: center; font-size: 1.05em; }
+.footer a { color: var(--blue); }
+
+.scroll-top {
+    position: fixed; bottom: 30px; left: 30px; z-index: 50;
+    width: 50px; height: 50px; border-radius: 50%;
+    background: var(--g-title); color: #fff; text-decoration: none;
+    display: none; align-items: center; justify-content: center;
+    font-size: 1.3em; box-shadow: 0 5px 15px rgba(0,0,0,.25);
+}
+.scroll-top.visible { display: flex; }
+
+/* ---------- סרגל ההאזנה ---------- */
+.listen-bar {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 15px;
+    margin: 25px 0; padding: 18px 25px;
+    background: var(--g-quote); border-radius: 12px;
+    border-right: 6px solid var(--gold);
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.listen-btn-group { display: flex; gap: 8px; align-items: center; }
+.listen-btn {
+    display: flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
+    color: #fff; border: none; border-radius: 30px; padding: 10px 22px;
+    font-size: 1em; font-weight: bold; font-family: inherit; cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+}
+.listen-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(126,34,206,.3); }
+.listen-btn:active { transform: translateY(0); }
+.listen-stop-btn, .listen-skip-btn {
+    background: #fff; color: var(--purple); border: 2px solid var(--purple);
+    border-radius: 30px; padding: 8px 16px; font-size: .95em; font-weight: bold;
+    font-family: inherit; cursor: pointer; transition: transform .15s, background .15s;
+}
+.listen-skip-btn { padding: 8px 12px; }
+.listen-stop-btn:hover, .listen-skip-btn:hover { transform: translateY(-2px); background: #f3e8ff; }
+.listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+.listen-skip-btn:focus-visible, .listen-voice select:focus-visible,
+.listen-rate input:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+
+.listen-status   { font-size: .95em; color: #78350f; flex: 1 1 200px; }
+.listen-progress { font-size: .9em; color: #78350f; font-weight: bold; white-space: nowrap; }
+.listen-rate, .listen-voice { display: flex; align-items: center; gap: 6px; font-size: .9em; color: #78350f; }
+.listen-rate input { accent-color: var(--purple); }
+.listen-rate output { font-weight: bold; min-width: 2.6em; }
+.listen-voice select {
+    border-radius: 20px; border: 1px solid var(--gold); padding: 4px 10px;
+    font-family: inherit; background: #fff; color: var(--ink); max-width: 190px;
+}
+
+.tts-clickable { cursor: pointer; transition: background .2s; border-radius: 6px; }
+.tts-clickable:hover { background: rgba(245,158,11,.10); }
+.reading-highlight {
+    background: var(--g-verse); border-radius: 6px;
+    box-shadow: 0 0 0 3px var(--pink) inset; transition: background .3s;
+}
+
+/* ---------- נייד ---------- */
+@media (max-width: 768px) {
+    body { padding: 15px 10px; }
+    .container { padding: 30px 22px; border-radius: 12px; }
+    .main-title { font-size: 2em; }
+    h2 { font-size: 1.6em; padding-right: 14px; margin-top: 35px; }
+    h3 { font-size: 1.35em; } h4 { font-size: 1.15em; }
+    p, li { font-size: 1.08em; }
+    .two-columns { grid-template-columns: 1fr; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .qa-box { padding: 20px; }
+    .listen-bar { padding: 15px; gap: 10px; }
+    .listen-status { flex: 1 1 100%; }
+    .listen-voice select { max-width: 140px; }
+    .scroll-top { bottom: 18px; left: 18px; width: 44px; height: 44px; }
+    .chapter-card { margin-left: -22px; margin-right: -22px; min-height: 42vh; padding: 30px 20px; }
+    .chapter-card .num { font-size: 3.8em; }
+    .chapter-card .name { font-size: 1.5em; }
+}
+
+/* ---------- העדפת תנועה מופחתת ---------- */
+@media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .01ms !important; animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    .listen-btn:hover, .listen-stop-btn:hover, .listen-skip-btn:hover { transform: none; }
+}
+
+/* ---------- מצב כהה (קריאה בטלפון בלילה) ---------- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --paper: #1c1b22; --ink: #e8e6ef; --muted: #a8a4b8; --line: rgba(255,255,255,.10);
+        --purple: #c084fc; --blue: #7dd3fc; --green: #4ade80; --gold: #fbbf24; --pink: #f9a8d4;
+        --g-page:      linear-gradient(135deg, #14131a 0%, #221f2e 100%);
+        --g-verse:     linear-gradient(135deg, #2a2440 0%, #3a2436 100%);
+        --g-highlight: linear-gradient(135deg, #1e2c44 0%, #262244 100%);
+        --g-quote:     linear-gradient(135deg, #3a2f16 0%, #4a3a18 100%);
+        --g-story:     linear-gradient(135deg, #16332a 0%, #14291f 100%);
+    }
+    .container { box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+    .toc     { background: #241f33; border-color: #3d2f57; }
+    .sources { background: #201f28; }
+    .qa-box  { background: #201f28; }
+    .listen-status, .listen-progress, .listen-rate, .listen-voice { color: #fde68a; }
+    .listen-stop-btn, .listen-skip-btn { background: #2a2438; color: #e9d5ff; border-color: #c084fc; }
+    .listen-stop-btn:hover, .listen-skip-btn:hover { background: #3a3050; }
+    .listen-voice select { background: #2a2438; color: var(--ink); }
+    .tts-clickable:hover { background: rgba(251,191,36,.12); }
+}
+
+/* ---------- הדפסה A4 ---------- */
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; color: #000 !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important;
+                 box-shadow: none !important; border-radius: 0 !important; background: #fff !important; }
+    .scroll-top, .listen-bar, .chapter-card, .chapter-divider { display: none !important; }
+    .chapter-label { background: none !important; color: #4a0080 !important; padding: 0 !important; }
+    .in-this-chapter { page-break-inside: avoid; break-inside: avoid; }
+    p, li { text-align: justify; }
+    .reading-highlight { box-shadow: none !important; background: none !important; }
+    .tts-clickable { cursor: auto; }
+    h2 { page-break-before: always; break-before: page; font-size: 16pt !important; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    h3 { font-size: 13pt !important; } h4 { font-size: 12pt !important; }
+    p, li { font-size: 11pt !important; orphans: 3; widows: 3; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box, .section-divider {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; background: none !important;
+                  -webkit-text-fill-color: #4a0080 !important; color: #4a0080 !important; }
+    .footer { page-break-before: always; break-before: page; }
+    a { color: #000 !important; text-decoration: none; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #444; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="main-title" id="top">ראש השנה</h1>
+    <div class="subtitle">יום המלכת המלך — עיון במהות היום, בשמחת התרועה ובסוד השופר</div>
+    <div class="author">מאת: הרב יהודה טאוב</div>
+
+    <div class="listen-bar">
+        <div class="listen-btn-group">
+            <button class="listen-btn" id="listenBtn" onclick="toggleListen()"
+                    aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן לספר</button>
+            <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+            <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+            <button class="listen-skip-btn" onclick="skipListen(1)"  aria-label="פסקה הבאה"  title="פסקה הבאה">⏭</button>
+            <button class="listen-skip-btn" onclick="skipChapter(1)"  aria-label="פרק הבא"   title="פרק הבא">⏩</button>
+            <button class="listen-stop-btn" onclick="stopListen()"   aria-label="עצור הקראה">⏹ עצור</button>
+        </div>
+        <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+        <span class="listen-progress" id="listenProgress"></span>
+        <div class="listen-rate">
+            <label for="rateRange">מהירות:</label>
+            <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1"
+                   oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)"
+                   aria-label="מהירות הקראה">
+            <output id="rateValue" for="rateRange">1.0×</output>
+        </div>
+        <div class="listen-voice">
+            <label for="voiceSelect">קול:</label>
+            <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+        </div>
+    </div>
+
+    <div class="toc">
+        <h3>📑 תוכן העניינים</h3>
+        <ul>
+            <li>
+                <a class="toc-chapter" href="#section1">פרק א — מהות ראש השנה: יום הדין</a>
+                <span class="toc-subs">
+                    <a href="#s1a">שלושה ספרים</a><span>·</span><a href="#s1b">שאלות היסוד</a><span>·</span><a href="#s1c">שני דינים — תשובת השפתי חיים</a><span>·</span><a href="#s1d">דין הבינונים</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section2">פרק ב — צדיק ורשע: הרגע קובע, לא החשבון</a>
+                <span class="toc-subs">
+                    <a href="#s2a">לפי מה קובעים מיהו הצדיק</a><span>·</span><a href="#s2b">באשר הוא שם</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section3">פרק ג — שמחה ביום דין: יום תרועה</a>
+                <span class="toc-subs">
+                    <a href="#s3a">יום נורא או יום נחמד</a><span>·</span><a href="#s3b">תקיעות מיושב ותקיעות מעומד</a><span>·</span><a href="#s3c">יום תרועה — מהות היום</a><span>·</span><a href="#s3d">מדוע לא מבקשים בקשות גשמיות</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section4">פרק ד — קירוב רחוקים: אהבת ה' המקרבת בריות</a>
+                <span class="toc-subs">
+                    <a href="#s4a">אוהב ה' רוצה לקרב את העולם</a><span>·</span><a href="#s4b">והלכת בדרכיו</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section5">פרק ה — מלכות שמים: קבלת עול</a>
+                <span class="toc-subs">
+                    <a href="#s5a">מהי מלכות שמים</a><span>·</span><a href="#s5b">מצוות אנכי</a><span>·</span><a href="#s5c">ראש השנה ויום כיפור — שני דינים</a><span>·</span><a href="#s5d">מלך הכבוד וכבוד ישראל</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section6">פרק ו — הודיה: הדרך לזכות בדין</a>
+                <span class="toc-subs">
+                    <a href="#s6a">עומר, שתי הלחם ומים</a><span>·</span><a href="#s6b">מלכויות — הכרת הטוב</a><span>·</span><a href="#s6c">ישא פניו — ברכת המזון</a><span>·</span><a href="#s6d">פרשת ביכורים</a><span>·</span><a href="#s6e">תשליך — כוח הרצון</a><span>·</span><a href="#s6f">רש — הכול מתנה</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section7">פרק ז — חטא אדם הראשון: כפיית טובה ותיקונה</a>
+                <span class="toc-subs">
+                    <a href="#s7a">יום הדין הראשון</a><span>·</span><a href="#s7b">כפירה בטובה</a><span>·</span><a href="#s7c">תיקון החטא בראש השנה</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section8">פרק ח — יום הולדת המלך: הכתרה, מתנות ובקשות</a>
+                <span class="toc-subs">
+                    <a href="#s8a">יום ההכתרה</a><span>·</span><a href="#s8b">מתנות למלך — יום הולדת פרעה</a><span>·</span><a href="#s8c">בקשת המלכות ובקשת בקשות</a><span>·</span><a href="#s8d">מתנות לפי אהבה</a><span>·</span><a href="#s8e">ה' אורי — יום תרועה יום של אהבה</a><span>·</span><a href="#s8f">אין לנו חפץ בעולם כמוך</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section9">פרק ט — עקידת יצחק ותקיעת שופר</a>
+                <span class="toc-subs">
+                    <a href="#s9a">כוחה של מצוות השופר</a><span>·</span><a href="#s9b">עקידת הרצון — שופר של איל</a><span>·</span><a href="#s9c">התקיעה כהמלכה וכזכרון</a><span>·</span><a href="#s9d">אחדות, שמחה ושופר</a><span>·</span><a href="#s9e">שופר — גילוי הרצון הפנימי</a><span>·</span><a href="#s9f">ברית אבות</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section10">פרק י — כוח השופר: הארת פנים ולערבב את השטן</a>
+                <span class="toc-subs">
+                    <a href="#s10a">הארת פנים — סוד ההצלחה</a><span>·</span><a href="#s10b">אחדות ואגודה אחת</a><span>·</span><a href="#s10c">שופר — ה' אורי</a><span>·</span><a href="#s10d">תרועה — תרי לישני משמע</a><span>·</span><a href="#s10e">תקיעת שופר מעלית, ובני קורח</a><span>·</span><a href="#s10f">לערבב את השטן — שיטות הראשונים</a>
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ===== פרק א ===== -->
+    <span class="chapter-label">פרק א</span>
+    <h2 id="section1">מהות ראש השנה: יום הדין</h2>
+
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>שלושה ספרים הנפתחים בראש השנה — צדיקים, רשעים ובינוניים</li>
+            <li>חמש שאלות יסוד על מהות הדין, ותשובת ה"שפתי חיים": יש שני דינים נפרדים</li>
+            <li>עיקר ראש השנה אינו חשבון עוונות אלא קביעת מהותו של האדם</li>
+            <li>דין הבינונים — מדוע יש כל כך הרבה אנשים "באמצע", ומה קובע זאת</li>
+        </ul>
+    </div>
+
+    <h3 id="s1a">שלושה ספרים</h3>
+    <p>נפתח במשנתם של חז"ל, המונחת ביסוד כל מה שנאמר בספר הזה. תנא דבי רבי ישמעאל: "בארבעה פרקים העולם נידון: בפסח על התבואה, בעצרת על פירות האילן, בחג נידונין על המים, ואדם נידון בראש השנה, וגזר דין שלו נחתם ביום הכיפורים".</p>
+
+    <div class="quote-box">
+        <p>אמר רבי כרוספדאי אמר רבי יוחנן: שלשה ספרים נפתחין בראש השנה, אחד של רשעים גמורין ואחד של צדיקים גמורין ואחד של בינוניים. צדיקים גמורין נכתבין ונחתמין לאלתר לחיים, רשעים גמורין נכתבין ונחתמין לאלתר למיתה, בינוניים תלויין ועומדין מראש השנה ועד יום הכיפורים — זכו, נכתבין לחיים; לא זכו, נכתבין למיתה.</p>
+        <span class="source-tag">ראש השנה טז ע"ב</span>
+    </div>
+
+    <p>ורש"י מפרש: "רשעים גמורים — רובם עונות". כלומר, לכאורה מדובר בחשבון של רוב ומיעוט — מי שרוב מעשיו טובים הוא צדיק, ומי שרוב מעשיו רעים הוא רשע. נראה מיד כי הבנה פשוטה זו מעוררת קשיים רבים.</p>
+
+    <h3 id="s1b">שאלות היסוד</h3>
+    <p>קריאה מדוקדקת בסוגיה מעלה חמש שאלות שאין להן מענה פשוט:</p>
+
+    <div class="qa-box">
+        <p><strong>א.</strong> האם באמת כל הצדיקים נכתבים לחיים וכל הרשעים למיתה? הרי המציאות מלמדת שגם צדיקים גמורים נפטרים במשך השנה, וגם רשעים ממשיכים לחיות.</p>
+        <p><strong>ב.</strong> רבי כרוספדאי אומר שהבינוניים נכתבים ונחתמים דווקא ביום הכיפורים, ואילו הצדיקים והרשעים — בראש השנה. אם כן, מיהם אלו שעליהם מדברת הברייתא, שנכתבים בראש השנה ונחתמים רק ביום הכיפורים?</p>
+        <p><strong>ג.</strong> מלשון הברייתא משמע שכולם, ללא יוצא מן הכלל, נכתבים בראש השנה ונחתמים רק ביום הכיפורים — כפי שאנו אומרים בתפילה "בראש השנה יכתבון וביום צום כיפור יחתמון". וכן מבואר בגמרא (ראש השנה טז ע"א) שאדם שאירע לו מקרה טוב או רע לפני יום הכיפורים, הרי זה עדיין מדין השנה שעברה. אם כן, כיצד זה מתיישב עם החלוקה החדה של רבי כרוספדאי, שהצדיקים והרשעים הגמורים כבר נחתמים בראש השנה עצמו?</p>
+        <p><strong>ד.</strong> האם עשרת ימי תשובה מיועדים רק לחלק קטן ומצומצם של יהודים, אלה שנקלעו במקרה להיות בדיוק מחצה על מחצה?</p>
+        <p><strong>ה.</strong> בגמרא במסכת ערכין (י ע"ב) מסופר שמלאכי השרת שואלים את הקדוש ברוך הוא מדוע אין ישראל אומרים שירה בראש השנה וביום הכיפורים, והתשובה היא: "אפשר מלך יושב על כסא הדין וספרי חיים וספרי מתים פתוחין לפניו, וישראל אומרים שירה לפני?" ומשמע מכאן בפשטות שבספרים הללו נידון מי יחיה ומי ימות. אולם במדרש רבה (קהלת פרשה ג) מבואר להיפך: "משעה שאדם נולד הוא נגזר עליו כמה שנים יחיה; אם זכה הוא משלים את שנותיו, אם לאו פוחתין לו מהם". אם מספר השנים כבר נקבע בשעת הלידה, כיצד ניתן לומר שבכל ראש השנה נפתחים מחדש ספרי חיים וספרי מתים הקובעים מי יחיה?</p>
+    </div>
+
+    <h3 id="s1c">שני דינים — תשובת השפתי חיים</h3>
+    <p>מבאר בעל ה"שפתי חיים" (מועדים א) שאין כאן דין אחד, אלא שני דינים נפרדים לגמרי, וערבובם הוא שיוצר את הקושיות:</p>
+
+    <div class="two-columns">
+        <div class="col-purple">
+            <h4 style="margin-top:0;">הדין הראשון — מהות</h4>
+            <p>קביעת מהותו הנצחית של האדם: האם הוא צדיק או רשע. צדיקים — שכר מצוותיהם שמור להם לעולם הבא, ואילו הם עצמם אוכלים פירות בעולם הזה; רשעים — משלם להם הקדוש ברוך הוא את גמולם בעולם הזה כדי לאבדם. לכן, לפני שמחליטים על אדם אם תהיה לו שנה הבאה כלל, צריכים להחליט קודם מיהו: צדיק או רשע. וזו כוונת הגמרא באומרה "צדיקים נכתבים לחיים" — הכוונה לחיים נצחיים, ו"רשעים נכתבים למוות" — מוות נצחי.</p>
+        </div>
+        <div class="col-gold">
+            <h4 style="margin-top:0;">הדין השני — פרטי השנה</h4>
+            <p>לאחר שנקבעה מהותו של האדם, יש עוד דין נפרד: כיצד ייראו חייו בשנה הקרובה — בריאות, פרנסה וכל שאר הפרטים. דין זה, על החיים הגשמיים בשנה הבאה, שייך לכולם באופן שווה, וזהו הדין המבואר במשנה ובברייתא: "בראש השנה יכתבון, וביום צום כיפור יחתמון".</p>
+        </div>
+    </div>
+
+    <p>וכך כתב הרמח"ל בנימוקי המחזור: "עניין ספרי חיים וספרי מתים הוא: כי חיים נקראים אותם שהקדושה מאירה עליהם ומתדבקת בם, וההיפך מזה מיתה" — ורשעים, אף בחייהם, קרויים מתים. ועל אלה החיים עיקר תפילתנו, כאשר אנו אומרים "בזכרנו לחיים, מלך חפץ בחיים". וכך כתב גם ב"מאמר החכמה" תחת הכותרת "עניין ספר החיים": "הנה האדם נידון תחילה על פי מעשיו, לימנות בצדיקים או ברשעים... והתלוי ועומד הוא הבינוני, שאין דינו נגמר עד יום הכיפורים... ואולם על כל הגזירות האלה מתפללים וכתוב לחיים טובים".</p>
+
+    <p>נמצא אפוא: על הדין הראשון — קביעת המהות — דיבר רבי כרוספדאי, וזה נגמר בראש השנה, חוץ מן הבינוניים שדינם תלוי עד יום הכיפורים. ואילו על הדין השני — החיים הגשמיים בשנה הקרובה — דיברו המשנה והברייתא, וזה שייך לכולם: כותבים בראש השנה וחותמים ביום הכיפורים. מתברר אפוא שעיקר מהותו של ראש השנה הוא לקבוע את מהות האדם, האם הוא צדיק או רשע — שהרי על חיי השנה הבאה עוד ניתן להתפלל ולהשתדל עד יום הכיפורים.</p>
+
+    <div class="highlight-box">
+        <p>כמה נפלא לפי זה שדווקא בפרשת ניצבים, הנקראת תמיד לפני ראש השנה, מוזכר נידון החיים והמתים: "רְאֵה נָתַתִּי לְפָנֶיךָ הַיּוֹם אֶת הַחַיִּים וְאֶת הַטּוֹב וְאֶת הַמָּוֶת וְאֶת הָרָע... הַחַיִּים וְהַמָּוֶת נָתַתִּי לְפָנֶיךָ הַבְּרָכָה וְהַקְּלָלָה, וּבָחַרְתָּ בַּחַיִּים לְמַעַן תִּחְיֶה אַתָּה וְזַרְעֶךָ" (דברים ל, טו–יט). ומובא במפרשים בשם הזוהר ש"היום" האמור כאן הוא ראש השנה עצמו.</p>
+    </div>
+
+    <p>ונמצא גם מענה לשאלות שהוצגו לעיל: הצדיקים והרשעים הגמורים, שמהותם ברורה, נחתמים בדין המהות כבר בראש השנה. הבינוניים, שמהותם עדיין אינה מוכרעת, הם אלה שעליהם דיברה הברייתא — נכתבים ונחתמים רק ביום הכיפורים. ואילו הדין השני, על פרטי החיים, חל על כולם באותה מתכונת: נכתב בראש השנה ונחתם ביום הכיפורים. וכיוון שהדין הראשון עוסק במהותו הנצחית של האדם ולא במניין שנותיו הגשמיות, שוב אין סתירה בינו לבין מה שנגזר על אדם מיום היוולדו כמה שנים יחיה — שני עניינים נפרדים הם.</p>
+
+    <h3 id="s1d">דין הבינונים</h3>
+    <p>אם עיקר יום הדין הוא לקבוע האם אדם צדיק או רשע, יש לשאול: וכי סביר שיהיו כל כך הרבה בינוניים, אנשים שנקלעו במקרה להיות בדיוק "חצי חצי"? הלוא זה הרכב סטטיסטי בלתי סביר, ובשבילו לבדו נוצרו עשרת ימי תשובה?</p>
+
+    <div class="quote-box">
+        <p>אמר רבא: כגון אנו בינונים. אמר ליה אביי: לא שביק מר חיי לכל בריה!</p>
+        <span class="source-tag">ברכות סא ע"ב</span>
+    </div>
+
+    <p>ויש לתמוה: מניין ידע רבא בביטחון שהוא בדיוק בינוני, חצי חצי? הרי אין אדם יכול לספור ולשקול במדויק את מצוותיו כנגד עברותיו. מכאן שההגדרה של "בינוני" אינה עניין של ספירה כמותית כלל.</p>
+
+    <p>ואכן, מצינו יסוד דומה בהלכה, בעניין אחר לגמרי, המלמד שהמדד הקובע אינו כמות אלא ייעוד. כתב ה"ביאור הלכה" (סימן שח): כלי שרוב מלאכתו לאיסור נחשב "כלי שמלאכתו לאיסור" — אך רק אם עיקרו נעשה למלאכת איסור, ורק לעתים משתמשים בו להיתר. ואילו אם דרך הכלי להשתמש בו לשני הצדדים במידה שווה, אין הולכים אחר הרוב אלא אחר הייעוד המקורי של הכלי. ולכן, לדעת הרבה פוסקים, סיר נחשב "כלי שמלאכתו לאיסור" למרות שרוב תשמישו בפועל הוא לאחסון האוכל בלבד, כי ייעודו העיקרי הוא לבישול.</p>
+
+    <p>וכך גם בעשרת ימי תשובה: אין המודד כמות המצוות מול העבירות, אלא מהות האדם — כפי שממשיכה הגמרא עצמה, מיד לפני שרבא אומר "כגון אנו בינונים":</p>
+
+    <div class="quote-box">
+        <p>תניא, רבי יוסי הגלילי אומר: צדיקים — יצר טוב שופטן, שנאמר "וְלִבִּי חָלַל בְּקִרְבִּי". רשעים — יצר רע שופטן, שנאמר "נְאֻם פֶּשַׁע לָרָשָׁע בְּקֶרֶב לִבִּי, אֵין פַּחַד אֱלֹהִים לְנֶגֶד עֵינָיו". בינוניים — זה וזה שופטן, שנאמר "יַעֲמֹד לִימִין אֶבְיוֹן לְהוֹשִׁיעַ מִשֹּׁפְטֵי נַפְשׁוֹ".</p>
+        <span class="source-tag">ברכות סא ע"ב</span>
+    </div>
+
+    <p>"שופטן" — פירש רש"י: מנהיגן. כלומר, השאלה אינה כמה מצוות עשה האדם וכמה עבר, אלא מי מנהיג את חייו, מהי שמחת חייו האמיתית. הצדיק — שמחת חייו היא עבודת ה' יתברך. הרשע — שמחת חייו היא "אכול ושתה כי מחר נמות". הבינוני הוא אדם שנהנה גם מעבודת ה' וגם מן הגשמיות: "יום הראש" שלו — מוקד חייו וזהותו — מונח פעם בזה ופעם בזה.</p>
+
+    <div class="highlight-box">
+        <p>וכך מסכם ה"מסילת ישרים" (פרק א) את חובת האדם בעולמו: "נמצינו למדים, כי עיקר מציאות האדם בעולם הזה הוא רק לקיים מצוות ולעבוד ולעמוד בניסיון... ואמנם ראוי לו שתהיה כל פנייתו רק לבורא יתברך, ושלא יהיה לו שום תכלית אחר בכל מעשה שיעשה, אם קטן ואם גדול, אלא להתקרב אליו יתברך".</p>
+        <span class="source-tag">מסילת ישרים, פרק א</span>
+    </div>
+
+    <p>נמצא, אם כן, שהדין בראש השנה על צדיק ורשע אינו לפי משקל של מצוות ועברות, אלא לפי מהות האדם — האם הוא אוהב את ה' ואת מצוותיו, או אוהב את העולם הזה. לפי זה מובן היטב מדוע יש כל כך הרבה בינוניים, ומדוע דווקא להם מיועדים עשרת ימי תשובה: לא כי הם "נקלעו" באקראי למחצית הדרך, אלא כי רבים מאיתנו חיים בפועל בשני עולמות בו-זמנית, ותפקיד הימים הללו הוא להכריע לאיזה משניהם ליבנו נמשך יותר.</p>
+
+    <p>ומכאן נפתחים בפנינו כמה הבנות יסודיות: "ה' אורי" נאמר על ראש השנה, ו"וישעי" על יום הכיפורים — כי בראש השנה תפקיד האדם הוא לקבוע שה' יהיה האור שלו, שמחת חייו. ביום הכיפורים מתכפרים עוונות השנה שעברה, וזו בחינת ישועה — ה' מושיע אותנו מן הלכלוך שאליו נפלנו. וכן מובן מדוע הבינוניים זקוקים דווקא לתשובה, ומדוע ראש השנה עצמו נמנה על עשרת ימי תשובה — כי בו אנו שבים אל אבינו שבשמים. וההצלחה בדין תלויה, כפי שנראה בפרקים הבאים, אך ורק בכך שאנו ממליכים את הבורא.</p>
+
+    <div class="chapter-card">
+        <div class="num">ב</div>
+        <div class="name">צדיק ורשע: הרגע קובע, לא החשבון</div>
+    </div>
+    <div class="chapter-divider">✡</div>
+    <span class="chapter-label">פרק ב</span>
+    <h2 id="section2">צדיק ורשע: הרגע קובע, לא החשבון</h2>
+
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>לפי מה נקבעת זהותו של האדם — לפי שאיפותיו, לא לפי מלאי מעשיו</li>
+            <li>כיצד אדם מבטא את שאיפתו האמיתית — דרך התפילה</li>
+            <li>"באשר הוא שם": מדוע נידונים דווקא לפי הרגע הנוכחי, ולא לפי צבירת השנה</li>
+        </ul>
+    </div>
+
+    <p>בפרק הקודם ראינו שראש השנה קובע את מהותו של האדם — צדיק או רשע — ושמדובר בקביעה איכותית ולא בחשבון כמותי. עתה נשאל: אם אין הולכים אחר מניין המצוות והעברות, לפי מה בכל זאת נקבעת מהותו של אדם?</p>
+
+    <h3 id="s2a">לפי מה קובעים מיהו הצדיק</h3>
+    <p>התשובה טמונה בשאיפה. כפי שכתוב בתורה "וּבָחַרְתָּ בַּחַיִּים" — הבחירה היא בין שני יעדים. מבאר רבנו יונה (שערי העבודה): האם האדם שואף לחיי העולם הזה, למעדנים ולתאוות המדומות שאינן משאירות אחריהן דבר, "כשותה מי הים"; או שהוא שואף לרוחניות — תורה, חסד, אהבת ה' ושמחה במצוות — וגם את הגשמיות שהוא מבקש, מבקש אותה רק כדי לעבוד בה את ה'.</p>
+
+    <p>אך כיצד יכול אדם לבטא בפועל את שאיפתו הפנימית? התשובה: על ידי תפילה. על חנה נאמר "וָאֶשְׁפֹּךְ אֶת נַפְשִׁי לִפְנֵי ה'" — זו תפילה, שכן בתפילה אדם מבטא את נפשו האמיתית. תפילותיו של אדם, יותר מכל מעשה אחר, חושפות למה באמת ליבו נמשך.</p>
+
+    <div class="highlight-box">
+        <p>מכאן טעם נוסף למדוע כמעט אין בתפילות ראש השנה בקשות גשמיות: מהות היום היא לקבוע האם האדם שייך לצדיקים או לרשעים. אילו היה מתחיל לבקש בקשות גשמיות, יש לו סיכון גדול להגיע למצב שבו נראה כאילו שאיפותיו הן העולם הזה. לכן תיקנו לנו חכמים לבקש בעיקר על דברים רוחניים — ובכך מוכח ששאיפותינו רוחניות, ושאנו שייכים לצדיקים.</p>
+    </div>
+
+    <h3 id="s2b">באשר הוא שם</h3>
+    <p>ועדיין קשה: אם אדם נבחן לפי שאיפותיו, מה עם מעשיו בפועל בשנה שחלפה? הרי הגמרא עצמה אומרת "רשעים גמורים — רובם עונות", ומשמע שהמאזן כן קובע?</p>
+
+    <p>נביא כאן רמז נפלא. בקריאת התורה של ראש השנה, מיד לאחר סיפור עקידת יצחק, קוראים את פרשת הגר וישמעאל. לפי הפשט, זהו המשך טבעי לפרשת "וה' פקד את שרה". אך יש מבארים שיש כאן לימוד עמוק, המבוסס על המשך אותה סוגיה עצמה בגמרא:</p>
+
+    <div class="quote-box">
+        <p>אמר רבי יצחק: אין דנין את האדם אלא לפי מעשיו של אותה שעה, שנאמר "כִּי שָׁמַע אֱלֹהִים אֶל קוֹל הַנַּעַר בַּאֲשֶׁר הוּא שָׁם".</p>
+        <span class="source-tag">ראש השנה טז ע"ב</span>
+    </div>
+
+    <p>ישמעאל, לפי חלק מן המדרשים, כבר חטא בעבר בעבודה זרה ובעבירות חמורות — ובכל זאת, כאשר הוא גוסס במדבר, נענה ה' לתפילתו "באשר הוא שם", לפי מצבו באותו רגע, ולא לפי צבר עוונותיו. מכאן למד רבי יצחק כלל גדול: אדם נידון לפי מצבו הנוכחי. ומכאן אנו למדים דבר נפלא על ראש השנה: הקדוש ברוך הוא עושה עמנו חסד ואינו דן אותנו לפי מה שעשינו בשנה שחלפה, אלא לפי מה ששואפים אנו אליו ברגע הזה ממש — לפי כמה שאנו שואפים באותה שעה להודות ולהלל לשמו הגדול.</p>
+
+    <div class="qa-box">
+        <p><strong>ואם כן, מה פשר לשון רש"י "רוב עוונות" ו"רוב מצוות"?</strong> נראה לבאר בשני אופנים: א. רש"י כתב זאת ביחס ליום הדין הגדול לעתיד לבוא, בשעת תחיית המתים, ולא ביחס לדין החוזר ונשנה מדי שנה בראש השנה — ואלו שני עניינים שונים לגמרי. ב. גם אם מדובר על מהות קבועה, אין הכוונה למניין מצוות ועברות, אלא לרצון הקבוע והחוזר של האדם — כפי שיתבאר בהרחבה בפרק העוסק בהודיה כתיקון לחטא אדם הראשון: צדיק ורשע נמדדים לפי הרצון, לא לפי החשבון.</p>
+    </div>
+
+    <div class="highlight-box">
+        <p>נמצא שראש השנה אינו רק המשך וזכרון למלכות ה' שהמלכנו כבר, שהרי אילו כך היה, לא היינו יוצאים "בדימוס" (זכאים), משום שלא הייתה הכרה מספקת במלכותו במשך כל השנה שחלפה. אלא העצה היא להמליכו מחדש, מעכשיו ואילך — וזה יום ראשון. ואם כן, אין נפקא מינה כלל במה שעבר עלינו בשנה שעברה; אילו היה הדין ממשיך את מלכותו לחובתנו, דיננו היה קשה. אך זהו חסד מאת ה', להמליכו מחדש, ומעכשיו מתחילה מלכות חדשה — ולכן תוקעים לפניו, להשמיע בכל מקום את התחלת מלכותו החדשה. וזה מבאר היטב מדוע דין זה חל דווקא בראש השנה: כי הוא יום תחילת מעשיו, ובו היה הדין הראשון של בריאת העולם.</p>
+    </div>
+
+    <div class="chapter-card">
+        <div class="num">ג</div>
+        <div class="name">שמחה ביום דין: יום תרועה</div>
+    </div>
+    <div class="chapter-divider">📖</div>
+    <span class="chapter-label">פרק ג</span>
+    <h2 id="section3">שמחה ביום דין: יום תרועה</h2>
+
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>הסתירה הגדולה: יום שמחה או יום איום ונורא — ומה מיישב אותה</li>
+            <li>סוד תקיעות מיושב ותקיעות מעומד לפי ה"יערות דבש"</li>
+            <li>מדוע קוראת התורה ליום הזה בשם "יום תרועה" דווקא, ולא "יום הדין"</li>
+            <li>התשובה לשאלות שנותרו פתוחות: מדוע כמעט אין בקשות גשמיות, מדוע לא מזכירים חטאים, ומה עניין האכילה והשתייה ביום הדין</li>
+        </ul>
+    </div>
+
+    <h3 id="s3a">יום נורא או יום נחמד</h3>
+    <p>בראש השנה מתעוררת קושיה גדולה: מהו באמת אופיו של היום? האם הוא יום של שמחה — "כִּי חֶדְוַת ה' הִיא מָעֻזְּכֶם" — או שהוא יום נורא ואיום, כלשון הפיוט "ונתנה תוקף"? מי אינו ירא מיום דין? "זוֹחֲלִים וְרוֹעֲדִים מִיּוֹם בּוֹאֶךָ, חָלִים כְּמַבְכִּירָה מֵעֶבְרַת מַשָׂאֶךָ" (מתוך הסליחות ליום ראשון). האם חודש אלול הוא "דוב" מפחיד או "דוד" המחלק מתנות? האם אלו ימים נוראים או ימים נחמדים? והאם התקיעות הן זמן לבכי מאימת הדין ומצער העברות, או זמן שמחה ותרועה?</p>
+
+    <p>הסתירה מתחדדת גם במקורות עצמם. מקשה בעל ה"חידושי הגרי"ז" (חדשים, סימן עה): הטור מביא את הגמרא (ערכין י ע"ב) שאין אומרים הלל בראש השנה, משום ש"ספרי חיים וספרי מתים נפתחים לפני, ואתם אומרים הלל?!" — ומיד לאחר מכן מביא מדרש האומר שאין ישראל כאומות העולם, שלובשות שחורים ביום הדין; אלא ישראל לובשים לבנים, אוכלים ושותים ושמחים, ובטוחים שייעשה להם נס. וקשה: אם אין אומרים הלל משום שאין אלו ימי שמחה — כיצד אנו גם שמחים ובוטחים בנס, שני מאמרים סותרים בקנה אחד?</p>
+
+    <div class="highlight-box">
+        <p><strong>מתרץ הגרי"ז:</strong> על פי דברי הרמב"ם (פירוש המשניות, ראש השנה פרק ד משנה ו), שאין קוראים הלל בראש השנה וביום הכיפורים "לפי שהם ימי הכנעה ופחד... ומברח ומנוס אליו". מבואר שהימים הללו הם ימי פחד ומורא כה גדולים, עד שהם מחייבים בריחה — ואין מקום לברוח כי אם למנוס אליו יתברך (וכן בפיוט: "אברח ממך אליך", וכן בתהלים: "יוֹם אִירָא אֲנִי אֵלֶיךָ אֶבְטָח"). והביאור: כדי שיהיה לאדם ביטחון אמיתי בעת צרה, עליו קודם להכיר בצרתו לאשורה — שהרי מי שאינו מכיר את גודל צרתו, אין לו על מה לבטוח כלל. נמצא שמידת הביטחון תלויה במידת ההכרה בסכנה. וכך גם כאן: תחילה יש להגיע להכרה עמוקה של הפחד והמורא, ורק לאחר מכן, מתוך אותה הכרה עצמה, נולד הביטחון והשמחה בה' שיעשה נס.</p>
+    </div>
+
+    <p>נראה להוסיף: השמחה בה' היא-היא ההצלה — "כי חדות ה' היא מעוזכם". אך אם אין לאדם פחד ומורא כלל, לא יחפש וישתדל לשמוח בה' כדי להינצל. לכן חייבים בימים אלו את הפחד, כדי לעורר את האדם; ומתוך הפחד עצמו הוא מעורר את עצמו לשמוח בה'. שני היסודות — היראה והשמחה — אינם סותרים זה את זה אלא מזינים זה את זה.</p>
+
+    <h3 id="s3b">תקיעות מיושב ותקיעות מעומד</h3>
+    <p>אותו מתח בין דין לרחמים בא לידי ביטוי גם בשני סוגי התקיעות, ובמנהג לתקוע בישיבה ובעמידה כאחד. תקיעה, כפי שנראה מתורת הכתוב (בהעלותך), היא עניין של אהבה ושמחה — "וּבְיוֹם שִׂמְחַתְכֶם וּבְמוֹעֲדֵיכֶם וּבְרָאשֵׁי חָדְשֵׁיכֶם וּתְקַעְתֶּם בַּחֲצֹצְרֹת... וְהָיוּ לָכֶם לְזִכָּרוֹן לִפְנֵי אֱלֹהֵיכֶם". ואילו תרועה היא התעוררות הלב מתוך פחד ומורא — "גנוחי גנח וילולי יליל", כלשון הפסוק שלפניו: "וְכִי תָבֹאוּ מִלְחָמָה בְּאַרְצְכֶם עַל הַצַּר הַצֹּרֵר אֶתְכֶם וַהֲרֵעֹתֶם בַּחֲצֹצְרֹת וְנִזְכַּרְתֶּם לִפְנֵי ה' אֱלֹהֵיכֶם". שני העניינים גם יחד נחוצים בראש השנה, כמאמר הכתוב "גִּילוּ בִּרְעָדָה".</p>
+
+    <div class="quote-box">
+        <p>ומתחילה, כשה' מתחיל דין, מרוב טובו מעיין תחילה בזכות ישראל, כמה מצוות ומעשים טובים עשו, ואחר כך מעיין בעוונות שעשו ישראל — וזהו תקיעות מיושב ותקיעות מעומד. כי כשמידת הדין מתוחה יש לעמוד; אבל כשמידת הרחמים מתוחה יש לישב... ולכך תקיעות ראשונות, שהן מזכירות צדקת ישראל, יושבים, כי אז אין מידת הדין... משא"כ כשרואה עוונות ודן, אז עומד ממהר כאיש העומד... ולכך תקיעות מעומד, כי אז מעיין בעוונות ואז דין.</p>
+        <span class="source-tag">יערות דבש, חלק ראשון, דרוש ו</span>
+    </div>
+
+    <h3 id="s3c">יום תרועה — מהות היום</h3>
+    <p>קוראת התורה ליום הזה בפרשת פינחס: "וּבַחֹדֶשׁ הַשְּׁבִיעִי בְּאֶחָד לַחֹדֶשׁ מִקְרָא קֹדֶשׁ יִהְיֶה לָכֶם... יוֹם תְּרוּעָה יִהְיֶה לָכֶם". יש להתבונן: לתקוע בשופר תשע תקיעות מהתורה לוקח כעשרים שניות בלבד — מדוע אם כן קוראת התורה ליום שלם "יום תרועה", כשם שלא נאמר "יום אתרוג" או "יום מצה"?</p>
+
+    <p>שאלה זו כתובה כבר בצל"ח (חגיגה יד ע"א): "ורמזו משה רבנו באורייתא: יום תרועה יהיה לכם — ולכאורה היה לו לכתוב 'תעבירו שופר תרועה', כמו שכתוב ביובל?" ומתרץ: הכוונה שאין זו מצווה זמנית כמו נטילת לולב שאם נטלו כבר יצא, אלא שכל היום כולו — ראוי שיהיה "יום תרועה".</p>
+
+    <p>ומהי, אם כן, אותה תרועה שצריכה למלא את היום כולו? נבחן כמה פסוקים שבהם המילה "תרועה" מובאת בהקשר של שמחה מובהקת:</p>
+
+    <div class="verse-box">
+        <p>הָרִיעוּ לַה' כָּל הָאָרֶץ, פִּצְחוּ וְרַנְּנוּ וְזַמֵּרוּ. זַמְּרוּ לַה' בְּכִנּוֹר... בַּחֲצֹצְרוֹת וְקוֹל שׁוֹפָר הָרִיעוּ לִפְנֵי הַמֶּלֶךְ ה'.</p>
+        <span class="source-tag">תהלים צח, ד–ו</span>
+    </div>
+
+    <p>מפרש המלבי"ם: "יזמרו בכינור לספר תהילותיו ומעשיו המתמידים, ויריעו בקול שופר, כי בכל עת שיזמרו לפניו יתגלה בעצמו בכבודו אליהם — שזה ציון השופר והתרועה". וכן:</p>
+
+    <div class="verse-box">
+        <p>מִזְמוֹר לְתוֹדָה, הָרִיעוּ לַה' כָּל הָאָרֶץ. עִבְדוּ אֶת ה' בְּשִׂמְחָה, בֹּאוּ לְפָנָיו בִּרְנָנָה.</p>
+        <span class="source-tag">תהלים ק, א–ב</span>
+    </div>
+
+    <p>ומפרש שם המלבי"ם: בעת הנס, ה' דומה כמלך היוצא מהיכלו ומתהלך בין העם להשגיח בעצמו על ענייניהם — "ואז יריעו כולם תרועה גדולה להמליכו". ובאותו אופן נאמר גם בפסוק הפותח את סדר התקיעות: "כָּל הָעַמִּים תִּקְעוּ כָף, הָרִיעוּ לֵאלֹהִים בְּקוֹל רִנָּה" (תהלים מז, ב).</p>
+
+    <p>ומכריע הספורנו במפורש: "זכרון תרועה — זכרון תרועת מלך, בה יגילו במלכם, כאמרו: הרנינו לאלהים עוזנו הריעו... וראוי לנו לשמוח אז יותר על שהוא מלכנו, שיטה כלפי חסד ויזכה אותנו בשפטו אותנו". וכתב המאירי, בפירושו למילים "לכו נרננה לה' נריעה לצור ישענו": "לעבדו בשירה ובזמרה, בשמחה ובטוב לבב, כי התרועה משל לשמחה".</p>
+
+    <div class="highlight-box">
+        <p>למדנו מכל אלה כיצד מריעים וממליכים את ה' — על ידי שמודים לו על הניסים שעשה לנו. כך גם בראש השנה: כיצד נריע לה'? נאמר לו תודה על כל הטוב שעשה עמנו עד היום. נמצא שאמנם יש חיוב תורה לתקוע בשופר, אך זו אינה כל המצווה — כל היום כולו צריך להריע, לשיר, לפאר ולהמליך את המלך. זהו יום ר"ה. ומכאן חידוש נפלא: כל הפיוטים של ראש השנה, המפרסמים את כבוד ה', הם מעין המשך של אותה מצוות תורה עצמה.</p>
+    </div>
+
+    <h3 id="s3d">מדוע לא מבקשים בקשות גשמיות</h3>
+    <p>ומעתה מתיישבות יפה כמה שאלות שנותרו פתוחות: מדוע כמעט אין בתפילות ראש השנה בקשות גשמיות? מדוע התורה אינה מזכירה כלל "יום הדין" אלא רק "יום תרועה"? מדוע לא מזכירים בתפילות ראש השנה חטאים ועוונות? ומה עניינן של האכילה והשתייה, הרי אדם שדנים אותו אינו רגיל לאכול ולשתות ממתקים?</p>
+
+    <div class="qa-box">
+        <p><strong>מדוע לא בקשות גשמיות?</strong> מהות היום היא לקבוע האם אתה שייך לצדיקים או לרשעים. אילו התחיל אדם לבקש בקשות גשמיות, יש לו סיכון רב להיראות כמי ששאיפותיו הן העולם הזה. לכן תיקנו לבקש רק דברים רוחניים, ובזה מוכח ששאיפותיו רוחניות והוא צדיק — כפי שהורחב בפרק הקודם.</p>
+        <p><strong>מדוע "יום תרועה" ולא "יום הדין"?</strong> מטרת תקיעת שופר היא שמחה בהמלכת המלך — שמחה שיש לנו כזה מלך, שאנו ממליכים אותו בשמחה עצומה. זו כל מהות היום. התורה אומרת "יום תרועה", כלומר כל היום כולו מטרתו לשמוח שיש לנו מלך. וכתב הגר"א שתרועה היא לשון שמחה, כמו "יִמָּלֵא שְׂחוֹק פִּיךָ וּשְׂפָתֶיךָ תְרוּעָה", וכן "הַלְלוּהוּ בְּצִלְצְלֵי תְרוּעָה" — המורה על שמחה שאין למעלה ממנה.</p>
+        <p><strong>מדוע לא מזכירים חטאים?</strong> אין טעם להזכיר חטאים, שהרי כל מהות היום היא כמה אתה שמח בה' — ומה נפקא מינה כרגע מן החטאים שלך. ואמנם ראש השנה נמנה על עשרת ימי תשובה, אך תשובתו של ראש השנה שונה במהותה: היא לחזור לאבא, לאהוב אותו ולשמוח בקבלת עול מלכותו — לא חשבון עברות, אלא חידוש הקשר.</p>
+        <p><strong>ומה עניין האכילה והשתייה?</strong> עזרא אמר לעם שאסור לבכות ביום זה — שכן אדם שבוכה אינו יכול להימצא בדבקות ואהבת ה'. אוכלים ושותים ושמחים כדי להגביר את אהבת ה' באדם, שהרי אדם רעב קשה לו להיות שמח. הפסוק בנחמיה אומר: "כִּי חֶדְוַת ה' הִיא מָעֻזְּכֶם" — זו נותנת לכם את הכוח. כמה שאתה יותר שמח בה', שמח במלכותו, כך גובר כוחך.</p>
+    </div>
+
+    <div class="highlight-box">
+        <p>ואיך נכין את עצמנו לראש השנה, לפי כל האמור? נוסיף לנו אהבה לה' ושמחה במצוותיו: נתבונן שכל מטרת ה' בבריאה היא רק להיטיב לנו, נתרגל לחיות מתוך הכרה שכל מה שעושה ה' הוא לטובה, נלמד ספרי אמונה וביטחון כדי שלא נפחד משום דבר — הלוא יש לנו אב טוב האוהב אותנו ושומר עלינו. נשתדל לעשות מצוות מתוך הכנה ובכוונה, שזה יביא שמחה במצוות. ונתפלל לה' מעומק ליבנו: "לאהבה את שמך" — זו תכלית בריאתנו, ואל לנו לשוכחה. שנזכה כולנו להיכתב בספרם של צדיקים גמורים.</p>
+    </div>
+
+    <div class="chapter-card">
+        <div class="num">ד</div>
+        <div class="name">קירוב רחוקים: אהבת ה' המקרבת בריות</div>
+    </div>
+    <div class="chapter-divider">✡</div>
+    <span class="chapter-label">פרק ד</span>
+    <h2 id="section4">קירוב רחוקים: אהבת ה' המקרבת בריות</h2>
+
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>תפילות ראש השנה כולן על כבוד שמים — מה הקשר בין זה ליום הדין</li>
+            <li>המבחן האמיתי לאהבת ה': כמה אתה מחפש לקרב אחרים אליו</li>
+            <li>ר' יוחנן שהתנדב בקירוב אחותו, וסיפורי הקדמונים שרדפו אחר קירוב רחוקים "כמאן דרדף בתר חיי"</li>
+        </ul>
+    </div>
+
+    <p>תפילות ראש השנה כולן סובבות סביב כבוד שמים. יש להבין: כיצד תפילות אלה, שכביכול אינן נוגעות לגורלו האישי של המתפלל, קשורות ליום הדין? הבאנו לעיל מה"שפתי חיים" שראש השנה הוא יום הדין שבו נקבע האם האדם צדיק או רשע, ושדבר זה נקבע לפי שאיפות האדם. והנה, שאיפתו של אוהב ה' היא שכל העולם יכיר במלכות שמים. נביא לכך מקורות נפלאים.</p>
+
+    <h3 id="s4a">אוהב ה' רוצה לקרב את העולם</h3>
+    <div class="quote-box">
+        <p>והמצוה השלישית היא שצוונו לאהבו יתעלה, וזה שנתבונן ונשכיל מצוותיו ופעולותיו עד שנשיגהו ונתענג בהשגתו תכלית התענוג, וזאת היא האהבה המחויבת... וכבר אמרו שמצוה זו כוללת גם כן שנדרוש ונקרא האנשים כולם לעבודתו יתעלה ולהאמין בו. וזה כי כשתאהב אדם תשים לבך עליו ותשבחהו ותבקש האנשים לאהוב אותו... ולשון ספרי: "ואהבת את ה'" וגו', אהבהו על הבריות כאברהם אביך, שנאמר "וְאֶת הַנֶּפֶשׁ אֲשֶׁר עָשׂוּ בְחָרָן".</p>
+        <span class="source-tag">רמב"ם, ספר המצוות, מצות עשה ג</span>
+    </div>
+
+    <p>הרי לפנינו במפורש: המדד לאהבת ה' האמיתית הוא כמה אדם מחפש לקרב בני אדם לאהבתו יתברך. נביא עוד מקורות המחזקים יסוד זה:</p>
+
+    <div class="quote-box">
+        <p>ואהבת — תנא, ואהבת את ה' אלהיך, שיהא שם שמים מתאהב על ידך, שיהא קורא ושונה ומשמש תלמידי חכמים, ויהא משאו ומתנו באמונה ודיבורו בנחת עם הבריות. מה הבריות אומרות עליו? פלוני שלמד תורה, כמה נאים דרכיו, כמה מתוקנים מעשיו.</p>
+        <span class="source-tag">יומא פו ע"א</span>
+    </div>
+
+    <p>ומבאר בעל התורה תמימה: "בספרי איתא הלשון: אהבהו על הבריות כאברהם אבינו, שהיה מכניס אנשים תחת כנפי השכינה. וכאן מפרש בהרחבה באיזה אופן ימשוך אהבת ה' על הבריות — בזה שיתנהג במידות נכונות ורצויות לבריות".</p>
+
+    <h3>טעם הדבר</h3>
+    <p>ויש לעיין: מדוע דווקא קירוב הבריות מורה על אהבת ה'? נראה לומר: מחמת שיודע האדם כי ה' רוצה מאוד מאוד שבני אדם ישובו בתשובה, כדי שיוכל להיטיב להם — לכן מי שאוהב את ה' באמת, מחפש לעשות לו נחת רוח, ואין נחת רוח גדולה מזו.</p>
+
+    <div class="story-box">
+        <span class="story-title">אברהם "אוהבי": מדוע דווקא הוא?</span>
+        <p>שואל החתם סופר: למה זכה אברהם אבינו לחיבה יתרה, שהמקום עצמו קרא לו בשם "אוהבו", יותר משאר אבות העולם? מבאר: "כי ידעתיו למען אשר יצוה את בניו ואת ביתו אחריו ושמרו דרך ה'" — ופירש רש"י "ידעתיו" לשון חיבה. הרי לפנינו כי אהבת ה' לאברהם נבעה מכך שלימד דעת את העם וקירבם לעבודתו, וזו עמדה לו יותר מכל מעשה טוב וזכות נפש אישית שהייתה לו. שהרי גם לפניו היו יחידי סגולה שידעו את ה' ובאהבתו שגו תמיד — מי לנו גדול מחנוך, אשר מעוצם תשוקתו ודביקותו נתעלה להיות כאחד מצבא מרום. אך אברהם, טרם ציווה עליו ה' על כך, עמד מעצמו בראש כל חוצות, בנה מזבחות וקרא בשם ה', והעמיד תלמידים הרבה — "את הנפש אשר עשו בחרן". לכן לו יאות להיקרא אהובו של המלך, "זרע אברהם אוהבי", וכגמול נפשו השיב לו ה' אהבה תחת אהבה. ומדרך אוהב את המלך להתאמץ ולהשתדל בכל האפשר להכניס בני אדם תחת עול מלכותו ולהרבות לו עבדים כיד המלך.</p>
+    </div>
+
+    <div class="story-box">
+        <span class="story-title">שהתנדב באחותו כדי לקרב את חברו</span>
+        <p>הדבר התשיעי במעלות אוהב ה', כותב ה"ספר הברית": "הוא שישתדל ויסבב שיאהבו אותו כל הבריות, ויזרזם וילמדם וידריכם אל אהבתו; ואם רואה איש אשר לבבו פונה מאת ה', ישתדל בחכמה ומוסר השכל ובכל אופן להחזירו לרצון ה' ולהמשיכו בעבותות האהבה אליו". ואוהבי ה' הקדמונים היו רודפים אחר דבר זה "כמאן דרדף בתר חיי", עד שהיו מתנדבים לזה בגופם, בבניהם ובמשפחתם ובכל מאודם — כרבי יוחנן, שהתנדב באחותו "טובת מראה" שתינשא לליסטים אחד, על מנת שיחזור למוטב ובתורת ה' יהגה יומם ולילה; הוא ריש לקיש, כמסופר במסכת בבא מציעא (פרק השוכר את הפועלים). "וכל המזכה את הרבים אין חטא בא על ידו, ואין קץ לשכרו".</p>
+    </div>
+
+    <h3 id="s4b">והלכת בדרכיו</h3>
+    <p>ועוד יסוד: מבואר בספר "משיבת נפש" שיש בזה גם קיום מצוות "והלכת בדרכיו" — שכמו שה' טוב ומטיב, כך ראוי לאדם לתת לבני האדם מן הלקח הטוב, שאין לך טובה גדולה מזו — שעל ידי כך מביאים אנו את הבריות לחיי הנצח ולעולם שכולו טוב.</p>
+
+    <div class="quote-box">
+        <p>ומקרבן לתורה, שהיה משתדל בכל מאמצי כוחו ללמד לבריות התורה, עד שהיה מקרבן אליה. כי מתנאי השלם להועיל משלמותו לזולתו, כי בזה יתדמה לה', כאומרו "טוב אתה ומטיב" — וזה אומרו "אם תוציא יקר מזולל כפי תהיה", רוצה לומר, כמוני.</p>
+        <span class="source-tag">ספר מילי דאבות</span>
+    </div>
+
+    <div class="quote-box">
+        <p>תניא בתוספתא דהוריות: מנין שכל השונה פרק לחברו, כאילו יצרו ורקמו והביאו לעולם? שנאמר "אִם תּוֹצִיא יָקָר מִזּוֹלֵל כְּפִי תִהְיֶה" — כאותו הפה שזרק בו נשמה באדם הראשון, כך מכניס בריה אחת תחת כנפי השכינה, מעלה עליו הכתוב כאילו יצרו ורקמו והביאו לעולם.</p>
+        <span class="source-tag">סמ"ג, עשין יג, מובא מתוספתא הוריות פ"ב</span>
+    </div>
+
+    <p>וכתב האור החיים הקדוש: "ואומרו 'ללכת בכל דרכיו' — כלל במאמר 'כל דרכיו' לומר אפילו דברים שאינם במושג בנבראים... והוא על דרך אומרם ז"ל 'אם תוציא יקר מזולל כפי תהיה', ואמרו עוד ז"ל 'כאילו בראו' — וכפי זה, מה ה' בורא ויוצר, כמו כן מכניס אהבתו יתברך בלב עם, נחשב בורא ויוצר בני אדם".</p>
+
+    <div class="highlight-box">
+        <p>נמצא, אם כן, שאחד מן היסודות שעליהם עומד ראש השנה כולו הוא לא רק אהבת ה' באופן פנימי ואישי, אלא אהבה הפורצת החוצה ומבקשת לקרב את הבריות כולן תחת כנפי השכינה. מי שרוצה להיבחן ולהיחשב אוהב ה' באמת, נבחן קודם כול בשאלה: כמה הוא משתדל, בדרכיו הפרטיות, לקרב אחרים לאבינו שבשמים.</p>
+    </div>
+
+    <div class="chapter-card">
+        <div class="num">ה</div>
+        <div class="name">מלכות שמים: קבלת עול</div>
+    </div>
+    <div class="chapter-divider">👑</div>
+    <span class="chapter-label">פרק ה</span>
+    <h2 id="section5">מלכות שמים: קבלת עול</h2>
+
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>מהי בדיוק "מלכות שמים" — ומדוע אין המילה "עול" מופיעה בפרשה ראשונה של קריאת שמע</li>
+            <li>משל המלך שנכנס למדינה: "כשתקבלו מלכותי אגזור עליכם גזירות"</li>
+            <li>ההבדל היסודי בין ראש השנה ליום כיפור: קבלת המלכות מול קבלת המצוות</li>
+            <li>כיצד מתגלה מלכות שמים בעולם — דרך כבוד עם ישראל, ומעשה אברהם ואבימלך</li>
+        </ul>
+    </div>
+
+    <h3 id="s5a">מהי מלכות שמים</h3>
+    <p>ראינו כי עיקר עבודתנו בראש השנה סובב סביב מושג אחד: "כדי שתמליכוני עליכם". מהי, אם כן, בדיוק, "מלכות שמים"? הסבא מקלם אמר: "להמליך את הקדוש ברוך הוא על כל אברינו וחושינו — ראייה, שמיעה, מחשבה וכדומה — לכבוש אותם כפקודתו". נראה שניתן להוסיף הסבר משלים.</p>
+
+    <div class="quote-box">
+        <p>אמר רבי יהושע בן קרחה: למה קדמה "שמע" ל"והיה אם שמוע"? אלא כדי שיקבל עליו עול מלכות שמים תחילה, ואחר כך יקבל עליו עול מצוות.</p>
+        <span class="source-tag">משנה, ברכות פרק ב</span>
+    </div>
+
+    <p>ויש לשאול על משנה זו כמה שאלות: מהו בדיוק "עול מלכות שמים"? היכן בפרשה הראשונה מוזכרת בכלל מלכות שמים? היכן בה יש "עול"? ומדוע כה חשוב לקבל מלכות שמים לפני עול מצוות?</p>
+
+    <p>בקריאת שמע יש שני חלקים עיקריים: א. ה' הוא בעל הבית של הבריאה כולה. ב. "ה' אחד" — פירושו שכל מה שהוא עושה הוא רק לטובתנו הנצחית, כולו טוב. בקיצור: שני יסודות היסוד — "הכול מה'" ו"הכול לטובה" — הם עצם האמונה שבקריאת שמע. הפסוק "ואהבת" הוא תוצאה טבעית של הכרה זו: לאחר שאדם חי בהכרה שיש מי שדואג לו, מטיב לו ומחפש את טובתו, הוא ממילא רוצה לקיים את רצונו בכל ליבו.</p>
+
+    <p>ומכיוון שבקריאת שמע אין מפורש לא "מלכות" ולא "עול" בלשון ברורה, מצינו בגמרא (ראש השנה לב ע"ב) מחלוקת: "שמע ישראל ה' אלהינו ה' אחד — מלכות, דברי רבי יוסי; רבי יהודה אומר: אינה מלכות". ומבאר ה"שפתי חיים": לדעת רבי יהודה צריך פסוק שיש בו מלכות במפורש, ואילו רבי יוסי סובר שדי בפסוק שהתוצאה שלו היא מלכות — ולהלכה קימא לן כרבי יוסי.</p>
+
+    <div class="highlight-box">
+        <p>כאשר אדם חי בהכרה שכל מציאות הבריאה תלויה רק ברצון ה', והוא המקיים אותה בכל רגע ורגע, ואין דבר הנעשה נגד רצונו — זוהי מלכות שמים. וכאשר אדם מפנים זאת ללבו, הוא מתמלא בהכרת הטוב לה' ורוצה לעשות את רצונו — וזהו "עול מלכות שמים". "תמליכוני" פירושו: תחיו את זה שאני מנהיג הבריאה. ואילו "עול" — שיעבוד כוחותיו לרצון ה' — הוא תוצאה, לא תחליף. נראה שבכוונה לא כתבה התורה "עול" בפרשה ראשונה: רצון התורה שלא יהיה זה עול מחמת ציווי, אלא מחמת רצון הבורא הפנימי של האדם.</p>
+    </div>
+
+    <p>ומדוע חייבים תחילה מלכות שמים לפני עול מצוות? כי הקדוש ברוך הוא אינו חפץ באנשים העושים מצוות מתוך תחושה של "זה מה יש, הוא הבוס ועליי למלא את רצונו, שלא יפטרו אותי מהעבודה". הקדוש ברוך הוא רוצה ביהודים המרגישים שיש להם אב טוב כל כך, עד שהם משתוקקים למלא את רצונו מרצון פנימי אמיתי.</p>
+
+    <h3 id="s5b">מצוות אנכי</h3>
+    <div class="quote-box">
+        <p>אנכי ה' אלהיך — הדיבור הזה מצוות עשה, אמר "אנכי ה'", יורה ויצווה אותם שידעו ויאמינו כי יש ה'... וזו המצווה תיקרא בדברי רבותינו "קבלת מלכות שמים"... משל למלך שנכנס למדינה, אמרו לו עבדיו: גזור עלינו גזירות. אמר להם: לאו, כשתקבלו מלכותי אגזור עליכם גזירות — שאם מלכותי אינכם מקבלים, גזירותיי איך אתם מקיימין. כך אמר המקום לישראל: אנכי ה' אלהיך, לא יהיה לך — אני הוא שקיבלתם מלכותי עליכם במצרים. אמרו לו: הן. כשקיבלתם מלכותי, קבלו גזירותיי.</p>
+        <span class="source-tag">רמב"ן, שמות כ, ב–ג, ומכילתא</span>
+    </div>
+
+    <p>וכתב הרמב"ן במקום אחר (שמות יג): "אין לאדם חלק בתורת משה רבנו, עד שנאמין בכל דברינו ומקרינו שכולם ניסים... בין ברבים בין ביחיד". ובקדושת לוי הוסיף: "ועל הניסים הנסתרים צריכים להאמין בכל עת ושעה, שאין לך שום דבר ודבר שאין בו השגחתו יתברך שמו, והגם שהוא בטבעיות לא סר השגחתו יתברך שמו, ואסור לתלות שום דבר בטבעי".</p>
+
+    <div class="highlight-box">
+        <p><strong>לסיכום עד כאן:</strong> מלכות שמים פירושה הכרה חזקה שיש מנהיג עכשווי, בהווה ממש, לכל הבריאה. הבורא דואג תמיד שיהיה לאדם הטוב ביותר האפשרי. הכרה זו יוצרת רצון לעשות את רצונו בשמחה — וזוהי מצוות "ואהבת", וזהו "עול מלכות שמים". ורק כאשר אדם חי מלכות שמים באמת, שמח בו הקדוש ברוך הוא במצוותיו.</p>
+    </div>
+
+    <h3 id="s5c">ראש השנה ויום כיפור — שני דינים</h3>
+    <p>ידועה השאלה המפורסמת: מדוע ראש השנה קודם ליום הכיפורים? הלוא ראוי היה שתחילה נתכפר על עוונותינו, ורק לאחר מכן נעמוד ליום הדין? לפי היסוד שלמדנו — שראש השנה הוא קבלת עול מלכות שמים — ניתן להשיב: יהודי חייב תחילה לקבל עליו עול מלכות שמים, ורק לאחר מכן לקבל עליו עול מצוות. כך ממש: תחילה ראש השנה, שבו אנו מקבלים עלינו את מלכות ה' בעולם, אוהבים אותו ושמחים בו ("ה' אורי" — האור שלי בחיים); ורק לאחר מכן מגיע יום הכיפורים, שבו אנו מצטערים על כל מה שלא קיימנו כראוי בשנה שחלפה, ומקבלים על עצמנו לשמור את המצוות כראוי.</p>
+
+    <p>ונראה עוד: ראש השנה ויום הכיפורים הם מעין פסח ושבועות. פסח הוא חג האמונה, ותכלית ליל הסדר להגיע ל"לְפִיכָךְ אֲנַחְנוּ חַיָּבִים לְהוֹדוֹת לְהַלֵּל... הוֹצִיאָנוּ מֵעַבְדוּת לְחֵרוּת, מִיָּגוֹן לְשִׂמְחָה". כך ראש השנה הוא יום קבלת האמונה, וצריך האדם להריע ולשיר ולזמר, כמו שאומרים במזמור ראש השנה: "הַרְנִינוּ לֵאלֹהִים עוּזֵּנוּ, הָרִיעוּ לֵאלֹהֵי יַעֲקֹב". שבועות הוא יום קבלת התורה, קבלת עול מצוות — וכך יום הכיפורים, יום מתן תורה השני, הוא יום קבלת עול מצוות.</p>
+
+    <div class="highlight-box">
+        <p>ראה כמה נפלא לפי זה מדוע יום המלכת ה' הוא דווקא יום הדין: מלכות שמים היא ההכרה שיש השגחה על העולם, שהוא נותן את הכול וממנו הכול — וזה בדיוק מהו יום הדין, שבו ה' משגיח על הכול. על ידי הזכרת יום הדין אנו מכירים במלכות ה'. נמצא שההכרה בדין היא-היא ההכרה במלכות שמים, וככל שאנו מכירים יותר במלכות שמים, כך נזכה יותר בדין. וכתב המהר"ל: הקריאת שמע היא קבלת גזירות מצוותיו, ואילו התפילה — האדם נתלה בו יתברך כאשר מתפלל אליו, וזוהי בוודאי מלכות שמים שלמה, כי המלך שלמותו כאשר העם תלויים בו וצריכים אליו.</p>
+    </div>
+
+    <h3 id="s5d">מלך הכבוד וכבוד ישראל</h3>
+    <p>בהרבה מקומות בתפילה אנו מזכירים את ה' כ"מלך הכבוד": "וּלְעוֹלְמֵי עַד תִּמְלוֹךְ בְּכָבוֹד" (סוף עלינו לשבח), "בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד", "וְיָבֹא מֶלֶךְ הַכָּבוֹד — מִי הוּא זֶה מֶלֶךְ הַכָּבוֹד", "וְיִמָּלֵא כְבוֹדוֹ אֶת כָּל הָאָרֶץ". "מלך הכבוד" — כל הבריאה מכירה שה' כולו טוב ומטיב, וכל מעשיו רק לטובתנו, ואין דבר טוב יותר בעולם מלשמח אותו. מי שעובד אותו הולך מאושר וזורח על הזכות הגדולה שנפלה בחלקו. וזה נראה כתפקידנו העיקרי בראש השנה.</p>
+
+    <p>ומכאן לסוגיה נוספת: כיצד מתגלה מלכות שמים בעולם בפועל? בקריאת התורה של יום ראשון של ראש השנה קוראים (בראשית כא, כב–לד) כיצד אבימלך ופיכל שר צבאו באים אל אברהם לכרות עמו ברית, לאחר שכבר קדם לכך "אֱלֹהִים עִמְּךָ בְּכֹל אֲשֶׁר אַתָּה עֹשֶׂה". לכאורה אין לזה קשר לראש השנה כלל. אך על פי המבואר ברמח"ל — שבשביל גילוי כבוד שמים, חייבים תחילה שיתרבה כבוד עם ישראל, ורק על ידי הצלחת עם ישראל יכול להתגלות כבוד ה' בעולם — מתבאר הדבר להפליא.</p>
+
+    <div class="quote-box">
+        <p>דע, כי הנה בכלל העולם יש הטוב והרע, וענפיהם במין האנושי — ישראל ואומות העולם. והנה תיקון העולם הוא שיהיה הטוב שולט והרע נכפה... ואם אומות העולם מתפרצים מתחת ידי ישראל ושולטים, וישראל נכנעים — הנה ישראל מפסידים, שהם בשפלות והקדושה איננה מתחזקת בעולם.</p>
+        <span class="source-tag">מאמר החכמה</span>
+    </div>
+
+    <div class="highlight-box">
+        <p>לכן נפלא שבראש השנה אנו קוראים כיצד אברהם אבינו — הקדושה האירה בו, והאומות נכנעו תחתיו, ולכן בא אבימלך לבקש ממנו לכרות עמו ברית. ואז, לאחר שהרע נכנע תחתיו, "וַיִּטַּע אֵשֶׁל בִּבְאֵר שָׁבַע וַיִּקְרָא שָׁם בְּשֵׁם ה' אֵל עוֹלָם" — ומפרסם את שם ה' בעולם. זהו סדר הדברים: המלכת ה' בעולם עוברת, במידה רבה, דרך העוצמה וההצלחה הרוחנית של עם ישראל.</p>
+    </div>
+
+    <div class="chapter-card">
+        <div class="num">ו</div>
+        <div class="name">הודיה: הדרך לזכות בדין</div>
+    </div>
+    <div class="chapter-divider">🙏</div>
+    <span class="chapter-label">פרק ו</span>
+    <h2 id="section6">הודיה: הדרך לזכות בדין</h2>
+
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>עומר, שתי הלחם וניסוך המים — כיצד הודיה על העבר מביאה ברכה לעתיד, ומה הקשר למלכויות וזכרונות</li>
+            <li>מלכויות כביטוי להכרת הטוב: "תמליכוני עליכם" מתוך הכרה כמה ה' הטיב לנו</li>
+            <li>מדוע דווקא ברכת המזון היא הדוגמה של מלאכי השרת ל"נשיאת פנים" לישראל</li>
+            <li>סוד התשליך: תפילת אברהם בנהר, וכוחו של הרצון בעיני שמים</li>
+        </ul>
+    </div>
+
+    <h3 id="s6a">עומר, שתי הלחם ומים</h3>
+    <div class="quote-box">
+        <p>תניא, אמר רבי יהודה משום רבי עקיבא: מפני מה אמרה תורה הביאו עומר בפסח? מפני שהפסח זמן תבואה הוא. אמר הקדוש ברוך הוא: הביאו לפני עומר בפסח, כדי שתתברך לכם תבואה שבשדות. ומפני מה אמרה תורה הביאו שתי הלחם בעצרת? מפני שעצרת זמן פירות האילן הוא. אמר הקדוש ברוך הוא: הביאו לפני שתי הלחם בעצרת, כדי שיתברכו לכם פירות האילן. ומפני מה אמרה תורה נסכו מים בחג? אמר הקדוש ברוך הוא: נסכו לפני מים בחג, כדי שיתברכו לכם גשמי שנה.</p>
+        <span class="source-tag">ראש השנה טז ע"א</span>
+    </div>
+
+    <p>למדנו מכאן יסוד גדול: כיצד זוכים להוריד עוד שפע לעולם — על ידי שמודים על מה שכבר קיבלנו. הודיה על התבואה הקודמת גורמת לקבלת עוד תבואה. (וכך גם, אפשר, מובן המנהג לאכול פירות בט"ו בשבט: כיוון שרוצים שיצמחו פירות טובים בשנה הבאה, ביום שבו מתחיל השפע לצמוח לוקחים פירות ומודים עליהם.) וכן טעם מצוות פדיון הבן, כתב ה"חינוך" (מצוה יח): "רצה השם לזכותנו לעשות מצוה בראשית פרינו, למען דעת כי הכל שלו, ואין לו לאדם דבר בעולם רק מה שיחלק לו השם יתברך בחסדיו".</p>
+
+    <p>ובאותו יסוד עצמו כתב ה"חינוך" גם על מצוות הבאת הביכורים (מצוה שב): "כדי שנתבונן מתוך המעשה החסד הגדול שעושה השם ברוך הוא עם בריותיו, לחדש להם שנה שנה תבואה למחיה, לכן ראוי לנו שנקריב לו ברוך הוא ממנה, למען נזכור חסדו וטובו הגדול טרם נהנה ממנה, ומתוך שנהיה ראויים לברכה בהכשר מעשינו לפניו — תתברך תבואתנו".</p>
+
+    <p>ולפי זה נשאלת השאלה: אם כן, כיצד זוכים בראש השנה, שבו אין קרבן עומר ואין ניסוך מים? התשובה: על ידי שנודה על השנה שעברה. וממשיכה שם הגמרא עצמה:</p>
+
+    <div class="quote-box">
+        <p>ואמרו לפני בראש השנה מלכיות זכרונות ושופרות: מלכיות — כדי שתמליכוני עליכם, זכרונות — כדי שיעלה זכרוניכם לפני לטובה, ובמה — בשופר.</p>
+        <span class="source-tag">ראש השנה טז ע"א</span>
+    </div>
+
+    <p>למד מכך ה"שפתי חיים" שהעצה שבורא עולם נותן לנו לזכות בדין בראש השנה היא על ידי שנמליך אותו: כשם שהעומר בפסח עוזר להצליח בדין של התבואה, וניסוך המים בחג עוזר לדין של המים, כך מצליחים בדין האדם בראש השנה על ידי אמירת מלכויות — ולא סתם אמירה, אלא "כדי שתמליכוני עליכם". כלומר, אמירת מלכויות היא-היא ה"קרבן" הפרטי שאנו מקריבים בראש השנה, שכן ענין העומר בפסח הוא להודות על העבר, ועל ידי זה זוכים לעתיד; כך גם בראש השנה זוכים על ידי מלכויות, בכך שאנו מכירים שהכול הוא נותן לנו ומודים על כך, ואז נזכה לעתיד.</p>
+
+    <h3 id="s6b">מלכויות — הכרת הטוב</h3>
+    <p>מהי, אם כן, הדרך המעשית להגיע לרצון עמוק ואמיתי "להמליך את ה'"? כתב ה"מסילת ישרים" (פרק ח, בדרך קניית הזריזות):</p>
+
+    <div class="quote-box">
+        <p>מה שיוכל להגביר ההתעוררות הזה הוא ההסתכלות ברוב הטובות שהקדוש ברוך הוא עושה עם האדם בכל עת ובכל שעה, והנפלאות הגדולות שעושה עמו מעת הלידה עד היום האחרון. כי כל מה שירבה להסתכל ולהתבונן בדברים אלה, הנה ירבה להכיר לעצמו חובה רבה אל האל המטיב לו... כל שכן אם יתבונן היות כל טובו תלוי בידו יתברך.</p>
+        <span class="source-tag">מסילת ישרים, פרק ח</span>
+    </div>
+
+    <p>נראה שזו העצה להמליך את ה': שאדם יחיה בהכרת הטוב עמוקה כל כך, עד שירגיש שהוא חייב לעשות רצון ה'. וזהו "מלכויות" — אדם מרגיש כמה טוב נתן לו ה' יתברך, עד שהוא רוצה לתת את עצמו למלך; זהו פירוש "תמליכוני עליכם" — לקבל על עצמו שכל מעשיו יהיו כרצון המלך. ואולי זה הרמז כיצד זוכים להמליך את ה' על כל המעשים: על ידי "זכרונות" — שתזכור את כל הטוב שעשה לך מעודך ועד היום, "ובמה — בשופר": "בַּחֲצֹצְרוֹת וְקוֹל שׁוֹפָר הָרִיעוּ לִפְנֵי הַמֶּלֶךְ ה'" — שאדם מודה, שר ומריע להקדוש ברוך הוא על כל הטוב שנתן לו.</p>
+
+    <div class="quote-box">
+        <p>מפני מה ענש הכתוב ביותר לכפויי טובה? מפני שהוא כעניין כפירה בהקדוש ברוך הוא. אף הכופר בהקדוש ברוך הוא כופר טוב הוא. האדם הזה הוא כופה טובתו של חברו, למחר הוא כופה טובתו של קונו... הא למדת שכפיית הטובה קשה לכפירה בעיקר.</p>
+        <span class="source-tag">משנת רבי אליעזר, פרשה ז</span>
+    </div>
+
+    <p>ומובא בשם ה"שפת אמת" (בספר "להגיד"): הטעם שקוראים פרשת ביכורים לפני ראש השנה, כיוון שיום ראש השנה הוא יום קבלת עול מלכות שמים, ובלעדי הכרת הטוב אין קבלת עול. הבסיס למלכות שמים הוא הכרת הטוב.</p>
+
+    <h3 id="s6c">ישא פניו — ברכת המזון</h3>
+    <div class="quote-box">
+        <p>אמרו מלאכי השרת לפני הקדוש ברוך הוא: רבונו של עולם, כתוב בתורתך "אשר לא ישא פנים ולא יקח שוחד", והלא אתה נושא פנים לישראל, דכתיב "יִשָּׂא ה' פָּנָיו אֵלֶיךָ"? אמר להם: וכי לא אשא פנים לישראל, שכתבתי להם בתורה: "וְאָכַלְתָּ וְשָׂבָעְתָּ וּבֵרַכְתָּ אֶת ה' אֱלֹהֶיךָ", והם מדקדקים על עצמם עד כזית ועד כביצה!</p>
+        <span class="source-tag">ברכות כ ע"ב</span>
+    </div>
+
+    <p>הקשה ה"פני יהושע": לכאורה יש לתמוה — וכי לא היה להקדוש ברוך הוא להזכיר שום דקדוק וסייג לישראל אלא בעניין ברכת המזון, והלא הרבה יותר גדרו גדרים וסייגים בעריות ובכיוצא בהן? ומבאר ה"קול שמחה" (מפשיסחא): על ידי שבני ישראל מברכים את ה' גם על מעט שנותן להם, הרי בזה הם מראים שמתנתו של הקדוש ברוך הוא כה חשובה להם, שגם מעט ממנה נחשב אצלם כהרבה — וזה בגלל חשיבות הנותן, בלא להיכנס לערך הנתינה עצמה.</p>
+
+    <div class="highlight-box">
+        <p>מי שיודע להחשיב את המתנות של הקדוש ברוך הוא, הקדוש ברוך הוא נותן לו בלי סוף. ומכאן נבין: מדוע לאחר "מודים" בברכת המזון מבקשים כל כך הרבה בקשות? ומדוע בעשרת ימי תשובה כל הבקשות קצרות אבל "שים שלום" — הבאה לאחר ה"מודים" של ברכת כהנים — ארוכה מאוד? התשובה: אחרי שאדם מודה לקדוש ברוך הוא, כל שערי הברכה נפתחים לפניו, שנאמר "בֹּאוּ שְׁעָרָיו בְּתוֹדָה". כיצד נכנסים לשערי הברכה? על ידי תודה. "זֹבֵחַ תּוֹדָה יְכַבְּדָנְנִי — וְשָׂם דֶּרֶךְ אַרְאֶנּוּ בְּיֵשַׁע אֱלֹהִים".</p>
+    </div>
+
+    <h3 id="s6d">פרשת ביכורים</h3>
+    <p>לפני ראש השנה קוראים בתורה את פרשת הביכורים. מה היסוד הנלמד ממנה? כתב ה"חינוך": "לפי שהאדם מעורר מחשבותיו ומצייר בלבבו האמת בכוח דברי פיו, על כן, בהיטיב אליו השם ברוך הוא ובברכו אותו ואת אדמתו לעשות פירות, וזכה להביאם לבית אלהינו — ראוי לו לעורר לבו בדברי פיו ולחשוב כי הכול הגיע אליו מאת אדון העולם".</p>
+
+    <p>וכתב האלשיך: "כי הבלתי מחזיק לו טובה על הטובה שהטיב לו, לא יחזור להיטיב לו אותה הטבה". וכן כתב בפרשת ביכורים: "כן הדבר הזה חיטה ושעורה וכרמים וזיתים — לא לנו המה, כי הכל שלו יתברך... ולהורות כי ממנו יתברך הכל, הנה ראשיתו נביא בטנא לפני כסא כבודו... ואז הוא יתברך נותן את הכל באמונה ובמתנה, על ידי היותו בלתי כפוי טובה".</p>
+
+    <h3 id="s6e">תשליך — כוח הרצון</h3>
+    <p>מהו טעם המנהג ללכת בראש השנה אחר הסעודה אל שפת נהר או ים, ולומר את פסוקי "מי אל כמוך" ו"ותשליך במצולות ים כל חטאתם"? כתב המהרי"ל בהלכות ראש השנה: "מה שנוהגים לילך בראש השנה אחר הסעודה אצל ימים ונהרות להשליך במצולות ים כל חטאותינו, משום דאיתא במדרש: זכר לעקדה, שעבר אברהם אבינו בנהר עד צוארו, ואמר: הושיעה ה' כי באו מים עד נפש".</p>
+
+    <div class="story-box">
+        <span class="story-title">"רבש"ע, על מי יתייחד שמך?" — הנהר שביקש לבלוע את אברהם</span>
+        <p>מספר המדרש: ביום השלישי למסע העקדה, שאל השטן: מדוע נתעכבו שלושה ימים, הרי הדרך קרובה? כיוון שראה שאברהם לא קיבל ממנו את פיתויי הביטול, הלך ונעשה לפניהם לנהר גדול. מיד ירד אברהם לתוך המים, והגיעו עד ברכיו. אמר לנעריו: "בואו אחרי" — וירדו אחריו. כיוון שהגיע עד חצי הנהר, הגיעו המים עד צווארו. באותה שעה תלה אברהם עיניו לשמים ואמר לפניו: "רבונו של עולם, בחרתני, הודרתני, ונגלית לי ואמרת לי: אני יחיד ואתה יחיד, על ידך יוודע שמי בעולמי. והעליתי את יצחק בני לפניך לעולה, ולא עיכבתי, והריני עוסק בציוויך — ועכשיו באו מים עד נפש. אם אני או יצחק בני טובעים, מי יקיים את מאמרך? על מי יתייחד שמך?" אמר לו הקדוש ברוך הוא: "חייך, שעל ידך יתייחד שמי בעולם". מיד גער הקדוש ברוך הוא במעיין, ויבש הנהר, ועמדו ביבשה.</p>
+    </div>
+
+    <p>יש להבין: מדוע צריך לחזור ולהזכיר שוב את עקדת יצחק, אחרי שכבר הזכרנוה בתפילה ובתקיעת שופר — ומדוע דווקא דרך המים? התשובה מלמדת יסוד עמוק: הקדוש ברוך הוא אוהב את הרצון. אדם רגיל, כאשר נמנעת ממנו האפשרות לקיים מצוה, עלול לומר בליבו: "טוב, לא הולך, אני פטור" — ולשמוח על כך. ואילו אברהם אבינו מתפלל לה' יתברך שיזכה בכל זאת להקריב את בנו, מפני שהוא רוצה מאוד מאוד לעשות את רצון ה'.</p>
+
+    <div class="highlight-box">
+        <p>למדנו מכאן יסוד גדול: כאשר קשה לאדם לקיים מצווה, מהי העצה? להתפלל לה' שיעזור לו לקיימה — לא להסתפק בכך שהוא "פטור". וכן דרשו על הפסוק "אֶת הַנַּעֲרָ עַל דְּבַר אֲשֶׁר לֹא צָעֲקָה" (כי תצא): מדוע הורגים את הנערה שנאנסה? מפני שלא צעקה — זהו חטאה. מכאן שאדם המגיע לשמים ואומר "לא הצלחתי נגד היצר", ישאלוהו: ולמה לא צעקת? למה לא ביקשת עזרה משמים? זה מראה שלא כל כך רצה. ויש בזה עוד עומק: כאשר האדם מבין שהקדוש ברוך הוא אוהב בעיקר את הרצון לעשות, יותר מאשר את המעשה עצמו, הוא מבין כמה נחת רוח עצומה יש לבורא כאשר יהודי מתפלל שהוא רוצה לעשות מצוות עוד יותר משהוא עושה בפועל — שהרי מעשה יכול להיעשות אף בלא רצון, אך תפילה נובעת תמיד מרצון האדם.</p>
+    </div>
+
+    <p>ובענין התשליך יש טעם נוסף המובא ברמח"ל ("מאמר החכמה"): "ענין מנהג אמירת פסוקי מי אל כמוך ביום ראש השנה על הנהר, הוא כי הנה בראש השנה מחדש האדון ברוך הוא כל מציאות הנמצאים, ומתכוון לקבוע הטוב שבהם שישאר לנצח ולדחות הרע שבהם... על כן הולכים אל המים, שמראים בצורתם עניין השתקעות השוקעים בם".</p>
+
+    <h3 id="s6f">רש — הכול מתנה</h3>
+    <div class="quote-box">
+        <p>ואמר רבי יצחק: כל שנה שרשה בתחילתה, מתעשרת בסופה, שנאמר "מֵרֵשִׁית הַשָּׁנָה" — "מרשית" כתיב, "וְעַד אַחֲרִית" — סופה שיש לה אחרית.</p>
+        <span class="source-tag">ראש השנה טז ע"ב</span>
+    </div>
+
+    <p>כיצד יגיע אדם למצב שבו הוא מרגיש "רש"? כאשר הוא חי בהכרה שהכול מתנה מאת ה', ולא מגיע לו דבר מרוב מתנות שמים — אז הוא "רש", ואדם כזה זוכה בראש השנה. ואפשר להבין לפי זה מדוע בבקשות הראשונות בתפילה מבקשים רק חיים, ורק בסוף מבקשים כל השפע: לפני "מודים" אדם מתבייש לבקש; רק אחרי שהוא אומר "מודים", מכיר שהכול מתנה מלכתחילה — או אז ניתן לבקש את כל השפע.</p>
+
+    <div class="chapter-card">
+        <div class="num">ז</div>
+        <div class="name">חטא אדם הראשון: כפיית טובה ותיקונה</div>
+    </div>
+    <div class="chapter-divider">🍃</div>
+    <span class="chapter-label">פרק ז</span>
+    <h2 id="section7">חטא אדם הראשון: כפיית טובה ותיקונה</h2>
+
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>למה נחשב שאדם הראשון "יצא בדימוס" (זכאי) — למרות שנגזרה עליו מיתה</li>
+            <li>מהו באמת חטאו של אדם הראשון: לא האכילה מן העץ, אלא המשפט שאמר אחריה</li>
+            <li>כיצד ראש השנה, יום בריאת האדם, הוא-הוא היום המתקן את אותו חטא עצמו</li>
+        </ul>
+    </div>
+
+    <h3 id="s7a">יום הדין הראשון</h3>
+    <div class="quote-box">
+        <p>תני בשם רבי אליעזר: בכ"ה באלול נברא העולם... נמצאת אתה אומר, ביום ראש השנה, בשעה ראשונה עלה במחשבה, בשנייה נתייעץ עם מלאכי השרת, בשלישית כינס עפרו, ברביעית גיבלו, בחמישית רקמו, בשישית עשאו גולם, בשביעית נפח בו נשמה, בשמינית הכניסו לגן, בתשיעית נצטווה, בעשירית עבר, באחת עשרה נידון, בשתים עשרה יצא בדימוס. אמר הקדוש ברוך הוא לאדם: זה סימן לבניך, כשם שעמדת לפני בדין היום הזה ויצאת בדימוס, כך עתידים בניך לעמוד לפני בדין ביום זה ויוצאים לפני בדימוס. אימתי? בחודש השביעי באחד לחודש.</p>
+        <span class="source-tag">ויקרא רבה, פרשת אמור, פרשה כט</span>
+    </div>
+
+    <p>יש לשאול שאלה עצומה: מדוע נחשב שאדם הראשון יצא "בדימוס" — זכאי? הרי אדרבה, נגזרה עליו מיתה, עליו ועל כל צאצאיו — אין לך עונש בעולם גדול מזה, וכיצד ייקרא שיצא זכאי?</p>
+
+    <div class="highlight-box">
+        <p>מתרץ: אדרבה, בעונש זה עצמו ראה אדם הראשון את אהבת ה' הגדולה עליו. הרי היה יכול ה' לומר לו: עברת על דברי, אין לי יותר עסק בך — כמו שעשה עם הנחש, לתת לו את מזונותיו בלבד ולא להשאיר עמו כל קשר. אך ה' יתברך חיפש דווקא כיצד לתקן את מה שקילקל האדם, כיצד מחזירים את העולם שקילקל למצבו הראשון — ובכך שראה זאת האדם, הבין שה' חפץ בו עדיין, וזו-היא הזכייה שיצא "בדימוס". ובעל השל"ה (מסכת ראש השנה) תירץ באופן נוסף: המיתה שנגזרה עליו אינה בדרך עונש כלל, אלא בשביל שהגוף חייב להיפסד, להינתק מגשמיותו — אך באמת החטא עצמו נמחל לו.</p>
+    </div>
+
+    <div class="quote-box">
+        <p>אמר להן הקדוש ברוך הוא לישראל: בניי, מכיוון שנכנסתם לפניי בדין ויצאתם בדימוס, מעלה אני עליכם כאילו היום נעשיתם לפניי, כאילו היום בראתי אתכם ברייה חדשה.</p>
+        <span class="source-tag">ויקרא רבה (מרגליות), פרשת אמור, פרשה כט</span>
+    </div>
+
+    <h3 id="s7b">כפירה בטובה</h3>
+    <p>אך מהו, אם כן, חטאו המדויק של אדם הראשון? לא רק האכילה מן העץ עצמה, אלא — כפי שרש"י מדגיש — התגובה שבאה אחריה:</p>
+
+    <div class="quote-box">
+        <p>וַיֹּאמֶר: מִי הִגִּיד לְךָ כִּי עֵירֹם אָתָּה?... וַיֹּאמֶר הָאָדָם: הָאִשָּׁה אֲשֶׁר נָתַתָּה עִמָּדִי הִוא נָתְנָה לִּי מִן הָעֵץ וָאֹכֵל.</p>
+        <span class="source-tag">בראשית ג, יא–יב</span>
+    </div>
+
+    <p>מפרש רש"י: "אשר נתת עמדי — ולא אמר 'האשה נתנה לי' — כאן כפר בטובה". לא ה"אישה נתנה לי" גרידא, אלא "אשר נתת עמדי" — כלומר, אתה, ה', הוא שגרמת לי לחטוא, בכך שנתת לי אישה!</p>
+
+    <div class="quote-box">
+        <p>אין לך קשה לפני הקדוש ברוך הוא יתר מכפיית הטובה!... לא נטרד אדם הראשון מגן עדן אלא על כפיית טובה, שנאמר "ויאמר האדם האשה אשר נתת עמדי". אף אבותינו במדבר, לא כעס עליהם הקדוש ברוך הוא אלא על כפיית הטובה... מפני מה ענש הכתוב ביותר לכפויי טובה? מפני שהוא כעניין כפירה בהקדוש ברוך הוא. אף הכופר בהקדוש ברוך הוא כופר טוב הוא. האדם הזה הוא כופה טובתו של חברו, למחר הוא כופה טובתו של קונו... הא למדת שכפיית הטובה קשה לכפירה בעיקר.</p>
+        <span class="source-tag">משנת רבי אליעזר, פרשה ז</span>
+    </div>
+
+    <p>ומוסיף המדרש אגדה (בובר): "ויאמר האדם האשה אשר נתתה עמדי — הקדוש ברוך הוא פתח לו: המן העץ וגו', שהיה רוצה שיתוודה על חטאיו, כי כשיאמר 'חטאתי' הקדוש ברוך הוא מוחל לו. אבל לא עשה כן, אלא בטובה שעשה לו הקדוש ברוך הוא שנתן לו את האשה, היה מתרעם על הקדוש ברוך הוא". וכן בגמרא (עבודה זרה ה ע"א): "אמר להן משה לישראל: כפויי טובה בני כפויי טובה... בני כפויי טובה, דכתיב: האשה אשר נתתה עמדי היא נתנה לי מן העץ ואוכל".</p>
+
+    <div class="highlight-box">
+        <p>מדהים לראות: אדם הראשון היה יכול לתקן את החטא כליל, לו רק לא היה כופר בטובה. נמצא שכל קלקול העולם נובע, ביסודו, מחוסר הכרת הטוב.</p>
+    </div>
+
+    <h3 id="s7c">תיקון החטא בראש השנה</h3>
+    <div class="quote-box">
+        <p>וזה בחינת ראש השנה ותקיעות שופר, כי בראש השנה יוצא המקטרג הגדול... וצריך לאכפיא אותו תחת הדיבור דקדושה, וצריך להעלות ולתקן הדיבור, כי עיקר יניקתו מהדיבור, שהוא בחינת מלכות, שכל עבודתנו בראש השנה הוא בשביל לגלות מלכותו יתברך... כי הדיבור, שהוא בחינת מלכות, נפגם על ידי חטא אדם הראשון שפגם בעזות, שהוא פגם הדיבור (שאמר האשה אשר נתת עמדי). ואנו צריכין בראש השנה ויום הכיפורים לתקן חטא אדם הראשון, ועל כן אנו צריכין להעלות הדיבור לשרשו ולתקנו, כדי לגלות מלכותו יתברך על ידי הדיבור המתוקן, היוצא בשיר ושבח והלל להקדוש ברוך הוא.</p>
+        <span class="source-tag">ליקוטי הלכות, אורח חיים, הלכות ראש השנה, הלכה ג</span>
+    </div>
+
+    <div class="highlight-box">
+        <p>ייתכן שזו גם הסיבה שתיקנו חכמים שלא לבקש בקשות בראש השנה, אלא רק להודות, לשיר ולשבח את המלך: כדי שביום ראש השנה נתקן את חטא אדם הראשון — חטא הכפירה בטובה — על ידי שביום זה כולו רק נודה ונשבח את המלך. אותו דיבור שנפגם ב"אשר נתת עמדי" מתוקן עתה בדיבור ההפוך לגמרי: דיבור של הודיה, שיר והלל.</p>
+    </div>
+
+    <div class="chapter-card">
+        <div class="num">ח</div>
+        <div class="name">יום הולדת המלך: הכתרה, מתנות ובקשות</div>
+    </div>
+    <div class="chapter-divider">👑</div>
+    <span class="chapter-label">פרק ח</span>
+    <h2 id="section8">יום הולדת המלך: הכתרה, מתנות ובקשות</h2>
+
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>תקיעת שופר כטקס הכתרת מלך — כמו התקיעה בהמלכת שלמה</li>
+            <li>סיפור יום הולדתו של פרעה: מדוע מי שבא לבקש בקשות נכנס אחרון אצל המלך</li>
+            <li>משל מליקוטי מוהר"ן: כיצד ביום גינוסיא של מלך מתגלה גם היראה וגם האהבה</li>
+            <li>משל המטרונה השמחה רק כשהמלך עצמו חוזר — ולא כשבניה או חתניה חוזרים</li>
+        </ul>
+    </div>
+
+    <h3 id="s8a">יום ההכתרה</h3>
+    <p>מדוע דווקא תקיעת שופר היא סימן ההמלכה? מבאר האברבנאל: "לפי שתקיעת שופר מורה על המלכת מלך, וכמו שנאמר במשיחת שלמה: 'וַיִּתְקְעוּ בַּשּׁוֹפָר וַיֹּאמְרוּ... יְחִי הַמֶּלֶךְ שְׁלֹמֹה' — כאילו ביום הזה בתקיעת השופר יאמרו: ה' מלכנו הוא יושיענו, הושיעה המלך". ולכן מבאר האבודרהם שהעניין הראשון שנכלל בתקיעת שופר, מפני שהיום הוא תחילת הבריאה, שבו ברא הקדוש ברוך הוא את העולם ומלך עליו — וכמו שעושים המלכים בתחילת מלכותם, שתוקעים לפניהם בחצוצרות, כך אנו ממליכים עלינו את הבורא ביום זה.</p>
+
+    <div class="highlight-box">
+        <p>וכתב בעל ה"כתר ראש" שהגר"ח מוולוז'ין היה שמח מאוד בעת תקיעת שופר, ואמר שצריך להיות ברוב שמחה וחדווה, כדוגמת מדינה ביום שממליכים בה מלך ומעטרים אותו — כך אנחנו, בתקיעת שופר, ממליכים להקדוש ברוך הוא בכל העולמות שאנחנו עמו.</p>
+    </div>
+
+    <p>ומדוע דווקא ראש השנה חל באחד בחודש, בניגוד לשאר החגים החלים בט"ו? מבאר הרב טאובר שליט"א: משום שבכל שאר החגים אנו מקבלים מה' — כירח המקבל אור מן השמש; אבל בראש השנה, אנו נותנים לה' את המלוכה, ולכן עושים זאת דווקא באחד בחודש, כשאין עדיין קבלת השפעה.</p>
+
+    <h3 id="s8b">מתנות למלך — יום הולדת פרעה</h3>
+    <p>מלכותא דרקיעא כעין מלכותא דארעא — על ידי התבוננות במלכות הארץ נוכל להכיר את מלכות שמים. ומעניין: יום הולדתו של פרעה חל בראש השנה (שהרי יוסף יצא מבית הסוהר בדיוק שנתיים לאחר מכן), ובאותו יום עשה משפט לשר המשקים ולשר האופים. מכאן קשר נפלא בין יום ההולדת ליום המשפט. יום הולדתו של פרעה לא היה יום הולדת סתמי — היות ופרעה עשה עצמו לאלוה, כאילו הוא ברא את עצמו וברא מחדש את ממלכת מצרים, הרי יום זה כעין חגיגה של הממלכה כולה. וכך גם בממלכת שמים: ביום הולדת העולם עושים משפט, ונותנים לכל אדם תפקיד מחודש בשנה הבאה.</p>
+
+    <div class="story-box">
+        <span class="story-title">שני הזקנים שנכנסו אחרונים — ולא הביאו עטרה</span>
+        <p>אמר רבי חייא בר אבא: יום גינוסיא (יום הולדת) היה, והיו כל המלכים באים ומעטרים את פרעה, שהיה קוזמוקרטור (שליט עליון). ומשה ואהרן עמדו על פתח פלטין שלו. נכנסו משרתי המלך ואמרו לו: "שני זקנים עומדים על פתח פלטין שלך". אמר להם: "ויש בידם עטרות?" אמרו לו: "לאו". אמר להם: "יכנסו באחרונה". נכנסו לבסוף אצל פרעה. אמר להם: "מה אתם מבקשים?" אמרו לו: "אלהי העברים שלחני אליך, שלח את עמי ויחוגו לי במדבר". אמר להם: "מי ה' אשר אשמע בקולו?" — ולא היה יודע לשלוח לו עטרה משלו, אלא בדברים בא אליו: "מי ה' אשר אשמע בקולו".</p>
+        <span class="source-tag">ילקוט שמעוני, שמות, פרק ד, רמז קעה</span>
+    </div>
+
+    <div class="highlight-box">
+        <p>למדנו מכאן שביום ההולדת מביאים מתנות למלך, מראים לו את האהבה, ועל ידי כך המלך מחליט למי לתת תפקיד בשנה החדשה. ואנו רואים שמי שבא לבקש בקשות — נכנס אחרון אצל המלך. לכן, כשאנו רוצים בראש השנה שהמלך יתן לנו תפקיד, מה עלינו לעשות? להביא מתנות — "מָה אָשִׁיב לַה' כָּל תַּגְמוּלוֹהִי עָלָי"? רק תודה ניתן לתת לה', לכן "הָרִיעוּ לַה' כָּל הָאָרֶץ". מכאן פירוש חדש לשאלה מדוע לא מבקשים בקשות בראש השנה: אין זה ראוי לבוא לבקש בקשות, שכן זה בבחינת "הב הב", ואין זה מתאים כלל ליום המלוכה.</p>
+    </div>
+
+    <h3 id="s8c">בקשת המלכות ובקשת בקשות</h3>
+    <p>ואם אין ראוי לבקש בקשות אישיות, מדוע בכל זאת מבקשים אנו בראש השנה שה' ימלוך על כל העולם, ומדוע אחרי "עלינו לשבח" אומרים "עַל כֵּן נְקַוֶּה"? התשובה: ככל שאדם אוהב יותר את המלך, כך הוא רוצה שלמלך יהיה טוב. ומה טוב למלך? מלכנו רוצה להיטיב לכולם, רוצה שכולם יזכו לטוב הנפלא הזה שאין לשער כמה הוא טוב — הוא משתוקק להיטיב. אך כיצד קשור הדבר אלינו? הקדוש ברוך הוא, כביכול, אינו יכול "סתם" לתת, משום שאם ייתן ללא בקשה, יהיה זה "נהמא דכיסופין" (לחם בושה). אבל על ידי שאני מבקש — כשהוא נותן, זה מחמת בחירה שלי, וזה נחשב. אני יכול להיטיב למלך על ידי שאני מבקש שהמלכת ה' תתפשט בכל מקום — זהו ראש השנה.</p>
+
+    <p>ואם כן, לשם מה בכלל צריך לבקש בקשות אישיות, הרי הכול נקבע לפי כמה שאתה אוהב את המלך? התשובה: אם הבקשות גורמות לך להוציא, בבחינת "נַפְשִׁי יָצְאָה בְדַבְּרוֹ", את הרצון האמיתי שלך — שכולם יכירו את המלך — אז יש מקום לבקש.</p>
+
+    <h3 id="s8d">מתנות לפי אהבה</h3>
+    <div class="quote-box">
+        <p>כי באמת, מלפני המלך בוודאי הכל יראים וחרדים, אך אף על פי כן, ביום הולדת המלך, ביום גינוסיא דמלכא (זהו ראש השנה), שלובש המלך בגדי התפארות, אז נתגלה היראה יותר ויותר... כי עיקר בחינת המלכות הוא רק על ידי ישראל שמקבלים מלכותו, כי אין מלך בלא עם... שאחר כך, מגלה המלך רצונו לכל אחד ואחד, ומחלק ונותן מתנות לכל אחד ואחד לפי כבודו, כפי רצון המלך ואהבתו שיש לו לכל אחד ואחד, שזהו בחינת אהבה... כי מתחילה בעת התגלות ההתפארות, נפל פחדו ויראתו על כולם, ואחר כך כשרואים רצון המלך וקרבתו לכל אחד ואחד, על ידי זה מתקרבים אליו ואוהבים אותו.</p>
+        <span class="source-tag">ליקוטי מוהר"ן, תורה יז</span>
+    </div>
+
+    <div class="highlight-box">
+        <p>למדנו מדבריו דבר גדול: לפי כמה שהמלך אוהב אותך, יאיר לך פנים, וכך תשיג מתנות בראש השנה. לכן בחודש אלול יש להשקיע רבות בקשר בינינו לבין הבורא — עוד לפני שהמלך "מוכתר" ביום עצמו.</p>
+    </div>
+
+    <h3 id="s8e">ה' אורי — יום תרועה יום של אהבה</h3>
+    <p>"ה' אורי" — נאמר על ראש השנה. מה זה "אור"? כוונת הדבר לפנים מאירות ומחייכות; כאשר ה' מחייך לנו, אפשר להשיג הכול, כמו שאומרים בתפילה "כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ" וגו'.</p>
+
+    <div class="verse-box">
+        <p>חֲמַת מֶלֶךְ מַלְאֲכֵי מָוֶת, וְאִישׁ חָכָם יְכַפְּרֶנָּה. בְּאוֹר פְּנֵי מֶלֶךְ חַיִּים, וּרְצוֹנוֹ כְּעָב מַלְקוֹשׁ.</p>
+        <span class="source-tag">משלי טז, יד–טו</span>
+    </div>
+
+    <p>מפרש רבנו יונה: "באור פני מלך חיים — בהסברת פניו חיים... ואור פני מלך יותר מן הרצון, כי הסברת פנים תורה על רוב האהבה, כאשר יתמידה אליו". ובגאון מוילנא: "כשהמלך באור הפנים של שמחה, אז חיים לעמו ולמדינתו... וגשם הבא בניסן, שהוא מאוחר שבגשמים... וטובתו רבה מאוד, כן רצונו טוב להם".</p>
+
+    <div class="highlight-box">
+        <p>בראש השנה יצא יוסף מבית האסורים — רמז יש בדבר, שביום זה יכול כל אדם לצאת מבית האסורים שהיצר הרע שם אותו. בראש השנה נברא האדם ומתחדשת כל המציאות; ביום זה מאיר אור מיוחד המסייע לאדם להפוך לבריה חדשה ולהתנתק מכל הרגליו הרעים, כאילו נולד היום.</p>
+    </div>
+
+    <p>ומכאן ל"תרועה" עצמה, שהיא — כמבואר בפרק ג — לשון שמחה ואהבה. אמר המגיד מדובנא: "אין דאגה ומגור בלב נער, בעת ראותו את עצמו כי הוא בחיק אמו; כן השרידים בעם, ליבותיהם שלמים מפחד ודאגה מכל מחסור, כי מוצאים את עצמם עומדים בין שתי זרועותיו של אבינו שבשמים". ומה נעימה מליצתו הנפלאה של דוד: "אשרי העם יודעי תרועה" — כי החיבה היתרה הזאת נודעת לנו, ואנו יודעים על ההתחברות והרעות של הקדוש ברוך הוא אלינו, ומילת "תרועה" כמו "וּתְרוּעַת מֶלֶךְ בּוֹ".</p>
+
+    <div class="quote-box">
+        <p>לא הביט אָוֶן בְּיַעֲקֹב וְלֹא רָאָה עָמָל בְּיִשְׂרָאֵל, ה' אֱלֹהָיו עִמּוֹ וּתְרוּעַת מֶלֶךְ בּוֹ.</p>
+        <span class="source-tag">במדבר כג, כא (פרשת בלק)</span>
+    </div>
+
+    <p>מה פירוש "לא הביט און ביעקוב", וכי הקדוש ברוך הוא "וותרן"? אלא שכאשר יש אהבה למלך, ה' אינו מביט בחטאים. וכן פירשו: "אימתי ה' אלהיו עמו — כשתרועת מלך בו", כשיש בהם דבקות עם המלך, מלשון "רֵעוּת" — ואז יהיו למעלה מן המזלות.</p>
+
+    <h3 id="s8f">אין לנו חפץ בעולם כמוך</h3>
+    <div class="story-box">
+        <span class="story-title">"אין חפץ טוב לי בעולם יותר ממך"</span>
+        <p>מעשה באישה אחת בצידון, ששהתה עשר שנים עם בעלה ולא ילדה. באו לפני רבי שמעון בר יוחאי, ובקשו להיפרד זה מזה. אמר להם: "חייכם, כשם שנזדווגתם זה לזה במאכל ומשתה, כך אין אתם מתפרשים אלא מתוך מאכל ומשתה". הלכו בדרכיו, עשו לעצמם יום טוב, ועשו סעודה גדולה, ושכרתו יותר מדי. כיוון שנתיישבה דעתו עליו, אמר לה: "בתי, ראי כל חפץ טוב שיש לי בבית, וטלי אותו ולכי לבית אביך". מה עשתה? לאחר שישן, רמזה לעבדיה ולשפחותיה שישאוהו במיטתו ויוליכוהו לבית אביה. בחצות הלילה נעור משנתו, וכיוון שפג יינו, אמר לה: "בתי, היכן אני נתון?" אמרה לו: "בבית אבא". אמר לה: "מה לי לבית אביך?" אמרה לו: "ולא כך אמרת לי בערב — כל חפץ טוב שיש בביתי טלי אותו ולכי לבית אביך? אין לי חפץ טוב בעולם יותר ממך!" הלכו להם אצל רבי שמעון בר יוחאי, ועמד והתפלל עליהם, ונפקדו.</p>
+    </div>
+
+    <div class="highlight-box">
+        <p>ללמדך: מה הקדוש ברוך הוא פוקד עקרות, אף צדיקים פוקדים עקרות. והרי דברים קל וחומר: ומה אם בשר ודם, על שאמר לבשר ודם שכמותו "אין לי חפץ בעולם טוב ממך" נפקדו — ישראל המחכים לישועת הקדוש ברוך הוא בכל יום, ואומרים "אין לנו חפץ טוב בעולם אלא אתה", על אחת כמה וכמה. "הוי, נגילה ונשמחה בך".</p>
+    </div>
+
+    <div class="story-box">
+        <span class="story-title">משל המטרונה: מתי השמחה שלמה?</span>
+        <p>למטרונה שהלך המלך בעלה ובניה וחתניה למדינת הים, ובאו ואמרו לה: "באו בניך". אמרה: "מה איכפת לי? תשמחנה כלותיי". כיוון שבאו חתניה, אמרו לה: "באו חתנייך". אמרה: "מה איכפת לי? תשמחנה בנותיי". אמרו לה: "בא המלך בעלייך!" אמרה: "האי חדוותא שלמה, חדוה על חדוה!" כך לעתיד לבוא, באים הנביאים ואומרים לירושלים: "בָּנַיִךְ מֵרָחוֹק יָבֹאוּ" — והיא אומרת: "מה איכפת לי?" "וּבְנֹתַיִךְ עַל צַד תֵּאָמַנָה" — אומרת: "מה איכפת לי?" כיוון שאומרים לה "הִנֵּה מַלְכֵּךְ יָבוֹא לָךְ, צַדִּיק וְנוֹשָׁע הוּא" — אז שמחתה שלמה, שנאמר "גִּילִי מְאֹד בַּת צִיּוֹן... שׂוֹשׂ אָשִׂישׂ בַּה' תָּגֵל נַפְשִׁי בֵּאלֹהָי".</p>
+        <span class="source-tag">שיר השירים רבה, פרשה א</span>
+    </div>
+
+    <p>וזוהי גם הפטרת השבת שלפני ראש השנה — משום שהיא הנשק לראש השנה: לא מספיק ששמחים בטובות שסביבנו, בילדינו, בקרובינו; השמחה השלמה היא בבוא המלך עצמו.</p>
+
+    <div class="chapter-card">
+        <div class="num">ט</div>
+        <div class="name">עקידת יצחק ותקיעת שופר</div>
+    </div>
+    <div class="chapter-divider">🐏</div>
+    <span class="chapter-label">פרק ט</span>
+    <h2 id="section9">עקידת יצחק ותקיעת שופר</h2>
+
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>מדוע דווקא שופר של איל — ולא, למשל, שחזור סמלי עם מאכלת</li>
+            <li>שני עניינים בתקיעה אחת: המלכת ה' וזכרון העקידה — וכיצד הם קשורים זה בזה</li>
+            <li>שלוש מצוות שבכוחן לבטל דין: שמחה, אחדות ושופר</li>
+            <li>מדוע השופר, ולא כלי דיבור אחר, הוא הקול הנבחר לה'</li>
+        </ul>
+    </div>
+
+    <h3 id="s9a">כוחה של מצוות השופר</h3>
+    <p>אין ביהדות "סגולות קסם" — לא תאכל תפוח בדבש ותקבל שנה מתוקה סתם כך. בכל דבר יש תוכן עמוק, ומכוח הפעולה שאדם פועל ועמל בה, הוא זוכה. מהו, אם כן, כוחה המיוחד של תקיעת שופר, שהיא מצוות היום המרכזית?</p>
+
+    <div class="quote-box">
+        <p>אשרי העם יודעי תרועה — לא כתיב "שומעי תרועה" או "תוקעי תרועה", אלא "יודעי תרועה", בגין חכימין... אינון יודעי תרועה.</p>
+        <span class="source-tag">זוהר, פינחס דף רלא</span>
+    </div>
+
+    <p>מבואר בזוהר שלא די בשמיעת השופר או בתקיעה גרידא — יש חובה על כל יודע ספר לחפש בספרים ולחקור את סוד התקיעות, כדי להיות "מיודעי תרועה" ולא רק "משומעי תרועה". וכתב ה"מסילת ישרים" (בהקדמה, בסדר הוויכוח): "הנה המעשים הם הקנקן, והכוונה — היין שבו... אל תסתכל בקנקן, אלא במה שיש בו".</p>
+
+    <div class="quote-box">
+        <p>אמר רבי יצחק: כל שנה שאין תוקעין לה בתחילתה — מריעין לה בסופה. פירוש: על ידי הצרות הבאות, ומתענים ומתריעים בשופרות... אמר הקדוש ברוך הוא שנתרצה לפניו בשופר שנזכה בדין, כאדם המתרצה בקרבנו ומתכפר לו; וכשאנו פושעים במצוה זו אנו נענשים, לא מפני מצוה זו עצמה... אלא כי בביטול ריצוי זה ומצוה זו בטל קרבן, ובטלה כפרת עוונותינו הקודמין, ומתחייבים בדין כמי שחטא ואינו מביא קרבנו שאמרה תורה.</p>
+        <span class="source-tag">חידושי הריטב"א, ראש השנה טז ע"ב</span>
+    </div>
+
+    <p>ולדברי הריטב"א יש מקור מן הפסוק השני שבפרשת מלכויות: "לֹא הִבִּיט אָוֶן בְּיַעֲקֹב וְלֹא רָאָה עָמָל בְּיִשְׂרָאֵל, ה' אֱלֹהָיו עִמּוֹ וּתְרוּעַת מֶלֶךְ בּוֹ" — שעל ידי התרועה, הקדוש ברוך הוא אינו מביט ורואה חטאים. וכעין זה במדרש: "אשרי העם יודעי תרועה — אמר רבי יאשיה: וכי אומות העולם אינן יודעות להריע? כמה קרנים יש להן, כמה סלפינים יש להן, כמה בוקינוס יש להן, ואתה אומר 'אשרי העם יודעי תרועה'? אלא, אשרי העם — אלו ישראל — שיודעים לרצות את בוראם בתרועה. מה עושה הקדוש ברוך הוא? עומד מכיסא דין ויושב על כיסא רחמים". וכך אנו מברכים בסוף שופרות: "שׁוֹמֵעַ קוֹל תְּרוּעַת עַמּוֹ יִשְׂרָאֵל בְּרַחֲמִים" — לא "שומע תפילה" סתם, אלא תרועה דווקא של עם ישראל, וברחמים.</p>
+
+    <h3 id="s9b">עקידת הרצון — שופר של איל</h3>
+    <p>וכעת לשאלה המרכזית: מדוע דווקא איל?</p>
+
+    <div class="quote-box">
+        <p>אמר רבי אבהו: למה תוקעין בשופר של איל? אמר הקדוש ברוך הוא: תקעו לפני בשופר של איל, כדי שאזכור לכם עקידת יצחק בן אברהם, ומעלה אני עליכם כאילו עקדתם עצמכם לפני.</p>
+        <span class="source-tag">ראש השנה טז ע"א</span>
+    </div>
+
+    <p>שאל הרב יהודה צדקה זצ"ל: אם רוצים לזכור את עקדת יצחק, נוכל לקחת מאכלת, להניחה על הבימה ולחזור על תנועת העקדה — אך מדוע נבחר דווקא האיל, שבא רק בסוף הסיפור? ותירץ, על פי חובות הלבבות (שער חשבון הנפש, פרק ג): "ודע, אחי, כי העשרה נסיונות שניסה המקום את אברהם אבינו, לא היינו משבחים לו עמדו בהם, לולי שהיה מקבל הכל מאלהיו ברצון ובטוב לבב, כמו שנאמר: 'וּמָצָאתָ אֶת לְבָבוֹ נֶאֱמָן לְפָנֶיךָ'". כלומר, עצם מעשה העקדה לא היה בו מעלה בלבד — עיקר המעלה היא הרצון שרצה אברהם לעשות רצון ה'. והיכן ראו את עומק רצונו? דווקא בכך שלאחר שנעצר בידי המלאך, המשיך וחיפש בעצמו את האיל להקריבו במקום בנו — הוא לא הסתפק ב"פטור" שקיבל, אלא רצה למצוא דרך לקיים עדיין את הציווי במלואו.</p>
+
+    <div class="highlight-box">
+        <p>כמה נפלא: זה בדיוק מה שמבקשים לעורר בתקיעת שופר — שכן מהות השופר היא להראות את אהבתנו לבורא עולם, ומי שעשה זאת יותר מכול היה אברהם אבינו.</p>
+    </div>
+
+    <h3 id="s9c">התקיעה כהמלכה וכזכרון</h3>
+    <p>למדנו אם כן שיש שני דברים בתקיעת שופר: המלכת ה', וזכרון העקידה. האם יש קשר ביניהם?</p>
+
+    <div class="quote-box">
+        <p>ובמה בשופר — עיקר הפירוש דאכולהו קאי, במה ראוי להמליכו ולהזכיר זכרונכם לפני בשופר. שכן כתיב "וַיִּתְקְעוּ הָעָם בַּשּׁוֹפָרוֹת" וימליכו את שאול עליהם למלך, ומלכותא דארעא כעין מלכותא דרקיעא.</p>
+        <span class="source-tag">חידושי הריטב"א, ראש השנה טז ע"א</span>
+    </div>
+
+    <p>מדברי הריטב"א למדנו שהשופר הוא הכלי שממחיש גם את המלכת ה' וגם את יום הדין — "במה בשופר" הולך גם על המלכת ה' וגם על הזכרון בדין. אמר הרב דב יפה שליט"א: בשביל לזכות לזכות אבות, צריכים הבנים ללכת בדרכם של האבות — וכן להפך, בשעה שאוחזים הבנים בעברות אבותיהם, נענשים. הנה תקיעת שופר היא המלכת הקדוש ברוך הוא, ומה פירוש המלכת ה'? "להמליך את הקדוש ברוך הוא על כל אברינו וחושינו — ראייה, שמיעה, מחשבה וכדומה, לכבוש אותם כפקודתו" (לשון הסבא מקלם). ויש בכך בחינה מסוימת של עקדה, שהרי במעשה ההמלכה אנו עוקדים את כל רצונותינו האישיים ומשעבדים עצמנו לחלוטין להקדוש ברוך הוא. נמצא שעל ידי קבלת המלכות, שהיא בחינה מסוימת של עקדה, אנו זוכים שתיזכר לנו עקדתו של אברהם.</p>
+
+    <div class="highlight-box">
+        <p>ומכאן אפשר להבין גם את חידושו של הריטב"א שהובא לעיל בעניין כוחה המיוחד של השופר: "אמר הקדוש ברוך הוא, אף על גב דאינו אלא מנהג, מכל מקום הרי הבטיח הקדוש ברוך הוא לאברהם שכל זמן שמחזיקים בדרכיו ועושים המצוה בחיבה, שיזכור להם עקדתו, שנאמר 'בְּהַר ה' יֵרָאֶה'". דהיינו: כאשר אתם מחבבים מצוה זו — זכר לעקדת יצחק — והולכים בדרכיו, מעלה אני עליכם כאילו אמרתי לכם לעקוד עצמכם לפני, ועשיתם. וכעין זה כתב המאירי: "עיקר המצוה ומובחר שבה לתקוע בשופר של איל, כדי שיתעוררו מתוכו לעקדת יצחק, ויבחינו גבול אהבה ויראה עד היכן הוא מגיע... לפי שמחשבה טובה הקדוש ברוך הוא מצרפה למעשה". זכירת עקדת יצחק היא-היא הרצון להתנהג כמוהו, להקריב את עצמנו לבורא עולם — נמצא שבאמת בראש השנה אנו מקריבים את עצמנו.</p>
+    </div>
+
+    <p>ומדוע דווקא בשופר, ולא במעשה שחזור סמלי אחר, מזכירים את העקדה? כי כל המעלה של עקדת יצחק היא שאברהם הגיע לכזו הכרת הטוב לה', שממש השתוקק להקריב את בנו לבורא עולם — וזאת רואים דווקא בכך שחיפש אחר כך את האיל. וזה תפקידו של אדם בראש השנה: להגיע למצב שהוא מסכים להקריב את עצמו, ואיך? על ידי שמתמלא בהכרת הטוב לה' יתברך.</p>
+
+    <div class="two-columns">
+        <div class="col-purple">
+            <h4 style="margin-top:0;">דוגמה קטנה</h4>
+            <p>נכבה המזגן בשבת. אפשר להתאנח כל השבת "למה אין מזגן" — ואפשר להרגיש שמחה: "אני עכשיו זוכה להקריב את רצוני, שיהיה נעים, לרצון ה' שלא אדליק את המזגן". בעל מדרגה ישמח כל כך שהוא זוכה להקריב את רצונו, עד שירצה בכך שהמזגן לא ידלק.</p>
+        </div>
+        <div class="col-gold">
+            <h4 style="margin-top:0;">דוגמה גדולה</h4>
+            <p>אדם צריך להיות בעל רצון עצום לשמח ולכבד את רעייתו, שכן בזה הוא מרבה כבוד שמים יותר מהכול. וזו, לכאורה, ההקבלה הגדולה ביותר לראש השנה — שהרי זה מרבה יותר מכל דבר אחר כבוד שמים בעולם.</p>
+        </div>
+    </div>
+
+    <h3 id="s9d">אחדות, שמחה ושופר</h3>
+    <p>מצינו שלוש מצוות שבכוחן לשנות את הדין — שגם אם מגיע לאדם עונש על עברותיו, מצוות אלו מבטלות ממנו את העונש:</p>
+
+    <div class="qa-box">
+        <p><strong>שמחה.</strong> בפרשת כי תבוא נאמר תחילה "וּבָאוּ עָלֶיךָ כָּל הַקְּלָלוֹת הָאֵלֶּה... כִּי לֹא שָׁמַעְתָּ בְּקוֹל ה'", ומיד לאחר מכן: "תַּחַת אֲשֶׁר לֹא עָבַדְתָּ אֶת ה' אֱלֹהֶיךָ בְּשִׂמְחָה וּבְטוּב לֵבָב". לכאורה שני פסוקים סותרים — האם בגלל אי-שמיעה בקול ה', או בגלל חוסר שמחה? מבאר בעל התניא: היו להם הרבה עברות, אך אילו היו להם מצוות של שמחה, כוח השמחה היה מעורר שמחה למעלה כביכול, ומבטל את הדינים. למדנו שגם אם אדם עושה הרבה עברות, אם הוא שמח בכמה מצוות שהוא עושה — זה מכפר על הכול.</p>
+        <p><strong>אחדות.</strong> "ופירוש הפסוק 'והוא באחד ומי ישיבנו'... כשישראל בשלום זה עם זה, אין שטן נוגע בהם... ושכינתו אינה מסתלקת מביניהם אפילו הם עובדים עבודה זרה" (ספר חרדים, פרק ז) — כדוגמת דורו של אחאב, שאף על פי שעבדו עבודה זרה, מפני שהיה ביניהם שלום היו מנצחים במלחמה.</p>
+        <p><strong>שופר.</strong> כמבואר לעיל מדברי הריטב"א — בכוח מצוות שופר לבטל את העונש המגיע לאדם מכוח עוונותיו.</p>
+    </div>
+
+    <div class="highlight-box">
+        <p>מעניין שבחורבן בית שני היו חסרות דווקא שתי מצוות אלו: הייתה שנאת חינם, כמבואר בגמרא (יומא ט ע"ב), והיה חיסרון שמחה, כמו שכתוב בפרשת כי תבוא, ומבואר בזוהר וברמב"ן שהכוונה לגלות שנייה. נראה שיש קשר ביניהן.</p>
+    </div>
+
+    <h3 id="s9e">שופר — גילוי הרצון הפנימי</h3>
+    <div class="quote-box">
+        <p>וכן הדבר בשופר, כי עיקר שופר הוא רק קול בעלמא, והוא הבא מפנימיות האדם, מהרוח הבא מנשמת אדם, ונשימה מכוח הלב... ואין לכלי דיבור חלק בו... כי קול זה הוא מלב, ולב תמים לה', ורחמנא ליבא בעי, והלב מישראל כשר וטהור, ולכך השופר טוב מאד, כי הוא היוצא מלב.</p>
+        <span class="source-tag">יערות דבש, חלק ראשון, דרוש ו</span>
+    </div>
+
+    <p>ואמרו "אני ישנה ולבי ער" — זהו ראש השנה: אני ישנה ממצוות ה', אבל לבבי ער, כי לבבות בני ישראל זכים ונקיים לה'. ולכך תקעו בשופר בראש השנה: קול היוצא מדיבור הוא במוצא הפה, בסיוע כלים ואברים; אבל קול שופר הוא הקול היוצא על ידי נפיחת הרוח היוצאת מן הלב, בלי סיוע שום כלי ואבר הדיבור — ולכך הוא הקול הנבחר ביותר לה'.</p>
+
+    <div class="highlight-box">
+        <p>בתקיעת שופר צריך יהודי להראות לבורא עולם כיצד בתוך ליבו, עמוק פנימה, יש לו אהבה עצומה לבורא עולם — ואז, כנגד זה, זוכה שהקדוש ברוך הוא מגלה את האהבה העצומה שיש לו לכל יהודי, בכל מצב.</p>
+    </div>
+
+    <h3 id="s9f">ברית אבות</h3>
+    <p>ולבסוף, יסוד מרחיב אופקים שכתב בעל ה"לשם שבו ואחלמה" (הקדמות ושערים, שער ו, פרק ט): מובא בגמרא (סנהדרין קד ע"ב) ובמדרשים, ש"דורשי רשומות" אמרו כי גם דואג האדומי, אחיתופל, ירבעם בן נבט, אחאב, מנשה וגחזי — כולם באים לעולם הבא ולתחיית המתים. מכל זה למדים שלא יעכב שום חטא ועוון, לא לימות המשיח ולא לתחיית המתים ולא לחיי עולם הבא, "כי לא יאבד שום נפש אחת מישראל". והכול, בסופו של דבר, נעשה "מכבשי דרחמנא, כדי לקיים את ברית אבות וישראל, ומתנהג עמהם בי"ג מידות הרחמים שנקראים 'כל טובי'".</p>
+
+    <div class="chapter-card">
+        <div class="num">י</div>
+        <div class="name">כוח השופר: הארת פנים ולערבב את השטן</div>
+    </div>
+    <div class="chapter-divider">🎺</div>
+    <span class="chapter-label">פרק י</span>
+    <h2 id="section10">כוח השופר: הארת פנים ולערבב את השטן</h2>
+
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>סוד ההצלחה: מדוע הכול תלוי בהארת פנים, וכיצד זוכים לה — בשמחה או באחדות</li>
+            <li>"ה' צלך": כיצד ה' "משחק" ו"בוכה" כנגדנו, ומה זה אומר על תקיעת השופר</li>
+            <li>שני פנים סותרים למילה "תרועה" — שירה או שבירה — וכיצד שתיהן דרושות</li>
+            <li>שלוש שיטות בראשונים ב"כדי לערבב את השטן": רש"י, הרמב"ם והריטב"א</li>
+        </ul>
+    </div>
+
+    <h3 id="s10a">הארת פנים — סוד ההצלחה</h3>
+    <div class="quote-box">
+        <p>צריך שתדע שסיבת כל ענייני הטוב, בין במה שנוגע לנפש ובין במה שנוגע לגוף, בכל מקום שהם — היא הארת פניו יתברך. וסיבת הרע בכל מקום שהוא — העלם הארתו. וכפי שיעור ההעלם, תינתן שליטה וממשלה לכוחות הרע.</p>
+        <span class="source-tag">דרך ה', חלק א, פרק ה</span>
+    </div>
+
+    <p>מצינו פסוקים רבים המלמדים שהארת פני ה' היא סוד ההצלחה וההינצלות: "אַשְׁרֵי הָעָם יֹדְעֵי תְרוּעָה, ה' בְּאוֹר פָּנֶיךָ יְהַלֵּכוּן" (אותו אומרים לאחר התקיעות); "כִּי בְאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד"; "הָאֵר פָּנֶיךָ וְנִוָּשֵׁעָה"; "פָּנֶיךָ הָאֵר בְּעַבְדֶּךָ וְלַמְּדֵנִי אֶת חֻקֶּיךָ"; "מִי יַרְאֵנוּ טוֹב? נְסָה עָלֵינוּ אוֹר פָּנֶיךָ ה'".</p>
+
+    <h3 id="s10b">אחדות ואגודה אחת</h3>
+    <p>כיצד זוכים אנו להארת הפנים הזו? נראה שיש שני מפתחות: שמחה, מדין מידה כנגד מידה, כפי שראינו בפרק הקודם; או אחדות — שהרי הארתו יתברך שורה דווקא בדבר המתאחד.</p>
+
+    <div class="quote-box">
+        <p>ה' צלך על יד ימינך — כמו שנטיית הצל של איזה דבר מכוונת רק כפי תנועות אותו הדבר לאן נוטה, כן, בדמיון זה כביכול, הוא יתברך שמו מתחבר לנטות העולמות כפי תנועות ונטיית מעשי האדם למטה... מהו "ה' צלך"? כצלך — מה צלך, אם אתה משחק לו הוא משחק לך, ואם אתה בוכה הוא בוכה כנגדך, ואם אתה מראה לו פנים זעומות או מוסברות, אף הוא נותן לך כך.</p>
+        <span class="source-tag">נפש החיים, שער א, פרק ז</span>
+    </div>
+
+    <p>וכפי שזה נאמר על שמחה סתם, קל וחומר בן בנו של קל וחומר לגבי שמחה של מצווה. וכך מפרש בעל התניא (ליקוטי תורה) מדוע השמחה במצוות מבטלת דינים: אילו היה עובד את ה' בשמחה של מצווה, היה גדול כוח שמחה זו — מעורר שמחה למעלה כביכול, והיא מבטלת את הדינים. וראיה מן הרמב"ם, שכתב שמי שלא שמח במצוות "ראוי להיפרע ממנו" — ויש לדקדק בלשון "ראוי": משמע שאין נענשים על עצם חוסר השמחה, אלא רק "ראוי" שייפרעו ממנו על עברות שכבר עשה. הטעם: יש שתי הנהגות, עבד ובן. הבן מטבעו מוסיף דברים שאביו לא ביקש, והאב אינו עומד מנגד כשמענישים את בנו; כך גם אנו — אם אנו מתנהגים כבנים, עושים מצוות בשמחה, ה' מתנהג עמנו כאב.</p>
+
+    <div class="quote-box">
+        <p>ואם חלילה וחס ימצא מחלוקת ופירוד ביניהם, לא ישרה בתוכם... שדקדק שלא אמר הכתוב "והוא אחד" אלא "והוא באחד" — שרוצה לומר שלא ישרה במקום פירוד, אלא במקום ייחוד.</p>
+        <span class="source-tag">ספר חרדים, פרק ז</span>
+    </div>
+
+    <p>ותקנו חכמים בברכת "שים שלום": "בָּרְכֵנוּ אָבִינוּ כֻּלָּנוּ כְּאֶחָד בְּאוֹר פָּנֶיךָ" — לא מצאנו בשום מקום אחר בקשה של "כולנו כאחד" (למשל, אין אומרים "ברכנו אבינו כולנו כאחד ברפואה שלמה"). מדוע דווקא כאן? כי חכמים לימדונו כיצד זוכים שה' יאיר לנו פנים ומתוך כך גם ייתן לנו מתנות: כאשר אנחנו אחד. וכן בתפילת מוסף: "וְיֵעָשֹוּ כֻלָּם אֲגֻדָּה אֶחָת לַעֲשֹוֹת רְצוֹנְךָ בְּלֵבָב שָׁלֵם" — מדוע דווקא "אגודה אחת", ולא רק "ויעשו כולם רצונך"? כתב הרמח"ל: "האדון ברוך הוא הוא אחד, ואין הארתו מתחזקת אלא במה שמתאחד... וזהו 'ויעשו כלם אגודה אחת', דהיינו כמו הענפים והבדים הרבים שחוזרים אחד בהתקשרם באגודה".</p>
+
+    <div class="highlight-box">
+        <p>מכאן נבין כמה חשוב שיהיה שלום בית: שכן בית שאין בו שלום, אין השכינה שורה בו, ואין הצלחה בחינוך הילדים חלילה. ולכן יבין האדם: גם אם הוא עצמו אינו אשם, אם אין ייחוד — אין שכינה, כלומר, אין הארת הבורא. שנזכה כולנו להיות כולנו כאחד באור פניו.</p>
+    </div>
+
+    <h3 id="s10c">שופר — ה' אורי</h3>
+    <p>רמז לשני היסודות — שמחה ואחדות — ניתן למצוא בפסוקי המלכויות מהתורה: "ה' יִמְלֹךְ לְעֹלָם וָעֶד" — "לֹא הִבִּיט אָוֶן בְּיַעֲקֹב... וּתְרוּעַת מֶלֶךְ בּוֹ" — מרמז שה' עמם דווקא כאשר יש תרועה של אהבה ושמחה למלך; "וַיְהִי בִישֻׁרוּן מֶלֶךְ בְּהִתְאַסֵּף רָאשֵׁי עָם יַחַד שִׁבְטֵי יִשְׂרָאֵל" — מרמז שדווקא כאשר יש אחדות, ה' מולך עליהם.</p>
+
+    <p>לאחר תקיעת השופר אנו אומרים: "אַשְׁרֵי הָעָם יֹדְעֵי תְרוּעָה, ה' בְּאוֹר פָּנֶיךָ יְהַלֵּכוּן". מפרש רש"י: "יודעי תרועה — שיודעין לרצות את בוראם בראש השנה בתרועה, שמסדרים עליה מלכיות זכרונות ושופרות". נשאר להבין: מדוע דווקא השופר גורם לזכות באור פני ה'? נראה לבאר לפי מה שכתב האברבנאל (ויקרא כג): "לפי שתקיעת שופר מורה על המלכת מלך... כאלו ביום הזה בתקיעת השופר יאמרו: ה' מלכנו הוא יושיענו, הושיעה המלך". כאשר אנו שמחים ומגילים במלכנו, וזה על ידי השופר — מידה כנגד מידה אנו זוכים, וגם הקדוש ברוך הוא שמח בנו ומאיר לנו פנים ואינו מסתיר פניו מאיתנו, ובזה אנו זוכים בדין.</p>
+
+    <div class="highlight-box">
+        <p>כמה נפלא לפי זה מה שאמרו במדרש (ויקרא רבה, פרשה כא): "רבנן פתרין קרא בראש השנה ויום הכפורים: 'אורי' בראש השנה, 'וישעי' ביום הכפורים" (ולכן נהגו לומר בחודש זה "לְדָוִד ה' אוֹרִי וְיִשְׁעִי"). מדוע ראש השנה מכונה "אור" ויום הכיפורים "ישועה"? שכן בראש השנה ה' מאיר לנו פנים ("באור פניך יהלכון"), וכל זה — משום "בְּשִׁמְךָ יְגִילוּן כָּל הַיּוֹם". ה' הוא "אורי" — מאיר פניו למי שמרגיש שה' הוא אורו, שמחת חייו.</p>
+    </div>
+
+    <h3 id="s10d">תרועה — תרי לישני משמע</h3>
+    <p>ולבסוף, נעיין במילה "תרועה" עצמה, ונגלה בה שתי משמעויות שלכאורה הפוכות זו מזו: מצד אחד, למדנו ש"תרועה" היא לשון שירה והודאה — "בזמירות נריע לו", וזוכים שבשמחה "יגילון כל היום". ומצד שני, בתרגום מתורגם "יום יבבא יהא לכון", ומכאן במקורה שלמדו חז"ל שברים־תרועה, וכן מובא בזוהר ש"תרועה" מלשון "תְּרֹעֵם בְּשֵׁבֶט בַּרְזֶל" — לשון שבירה. כיצד ייתכן ששני פירושים כה הפוכים נמצאים באותה מילה עצמה?</p>
+
+    <p>שאלה דומה עולה גם לגבי המילה "רעך/רעות/רעים", שהיא לשון ידידות וחברות, ולכאורה מזכירה גם לשון "רעוע" — והרי זה דבר והיפוכו: "רעים" — חברות חזקה, "רעוע" — שבור? נראה לבאר: התורה באה ללמד שבשביל שאדם יזכה להודות ולהלל לבוראו, הוא צריך תחילה לשבור את הגאווה שלו, את המחשבה "כוחי ועוצם ידי עשה לי את החייל הזה". רק כאשר אדם מכיר שהוא אינו יכול כלל, ומכניע את עצמו — או אז הוא יכול להודות ולהלל באמת. וכן ברעים אהובים: בשביל לזכות לחברות אמיתית, צריך כל אחד להכניע ולוותר על רצונותיו האישיים.</p>
+
+    <div class="highlight-box">
+        <p>יהודי שרוצה להודות לה' בקול רינה, חייב לדעת שהדרך לכך היא רק דרך שבירה: כאשר הוא "מתרועע" — מנסה בכוחות עצמו ולא מצליח — הוא מרגיש בחוש שלה' המלוכה, שיש מנהיג לבירה, ובלעדיו אינו יכול להצליח. וזהו סוד התרועה: רק על ידי שאדם "מתרועע" הוא יכול "להריע". וזהו גם סוד שברים-תקיעה: בשביל לתקוע — סימן של הודאה והלל — צריך לשבור את עצמו, להרגיש "דלית ליה מגרמיה כלום", ורק אז ניתן להלל כראוי. וזה גם הטעם שיצחק נקרא על שם השמחה, "צְחֹק עָשָׂה לִי אֱלֹהִים", אף שהוא עצמו כולו בחינת דין — ללמדך שכל שמחה מגיעה רק כאשר יש דין המתמתק ברחמים; בלי הדין לא היה צחוק. נמצא שתקיעת שופר היא-היא סוד האיחוד של הדין והרחמים גם יחד: תקיעה — סוד הרחמים, תרועה — סוד הדינים.</p>
+    </div>
+
+    <h3 id="s10e">תקיעת שופר מעלית, ובני קורח</h3>
+    <div class="quote-box">
+        <p>וקול השופר הולך ומבקע עבי שחקים ששם סביבותיו, ותפילתם נכנסת לפניו, ויסתלק בית הדין של מעלה, ויניח לישראל להיכנס עם אביהם שבשמים. הדא הוא דכתיב: "עָלָה אֱלֹהִים בִּתְרוּעָה"... וכשיסתלק הדיין בתרועה, אז השם המיוחד מתייחד עם ישראל בניו בקול השופר, ואז כל המקטרגים והמשטינים והשוטנים אין להם רשות להשטין ולקטרג — וזהו "כדי לערבב את השטן".</p>
+        <span class="source-tag">תורת המנחה לראש השנה, דרשה עז</span>
+    </div>
+
+    <p>אפשר לדמות, דרך משל: תקיעת שופר היא מעלית נפלאה שנתן לנו הבורא יתברך, שעל ידה תפילותינו נכנסות לפני ולפנים — וצריך האדם לשים בשופר, ב"מעלית" זו, מחשבות טובות שינסו לפני ולפנים ויטו את הכף לזכות. אמר הרב ליפשיץ שליט"א: אדם צריך להבין שבתקיעת שופר הוא נמצא בקודש הקודשים, וכל מחשבה משפיעה מאוד — ולכן, חוץ מן הרב שצריך להיות עסוק בבדיקת כשירות התקיעה, ראוי לכל הקהל להתחזק במחשבות טהורות של רצון להתקרב לאבינו שבשמים.</p>
+
+    <div class="story-box">
+        <span class="story-title">בני קורח — שחזרו בתשובה ברגע האחרון ממש</span>
+        <p>מה הקשר בין בני קורח לראש השנה? לפני התקיעות קוראים "לַמְנַצֵּחַ לִבְנֵי קֹרַח". מבואר בשם הגרי"ש אלישיב זצ"ל: הטעם לאמירת מזמור זה לפני התקיעות הוא, כדי שלפני התקיעות, כאשר כל אחד עומד ברגעים האחרונים שבהם נחתך גזר דינו, ניקח דוגמה מבני קורח שחזרו בתשובה ברגע אחרון ממש — כשהאדמה כבר פוערת את פיה — וניוושע. גם אנו ננצל את הרגע האחרון ונשוב בתשובה שלמה אל ה', שהרי ביד כל אחד לעשות תשובה, ולכל אחד הבחירה בידו לחזור בתשובה שלמה בכל המצבים שבהם הוא נמצא.</p>
+    </div>
+
+    <h3 id="s10f">לערבב את השטן — שיטות הראשונים</h3>
+    <div class="quote-box">
+        <p>אמר רבי יצחק: למה תוקעין בראש השנה? למה תוקעין? רחמנא אמר "תקעו"! אלא, למה מריעין? מריעין? רחמנא אמר "זכרון תרועה"! אלא, למה תוקעין ומריעין כשהן יושבים, ותוקעין ומריעין כשהן עומדים? כדי לערבב את השטן.</p>
+        <span class="source-tag">ראש השנה טז ע"א</span>
+    </div>
+
+    <p>מהו בדיוק "עירבוב השטן"? מצינו בראשונים שלוש שיטות מרכזיות בביאור הדבר:</p>
+
+    <div class="two-columns">
+        <div class="col-purple">
+            <h4 style="margin-top:0;">שיטת רש"י</h4>
+            <p>"כדי לערבב — שלא ישטין. כשישמע ישראל מחבבין את המצוות, מסתתמין דבריו". מבואר שכאשר השטן רואה כמה עם ישראל מחבב את המצוות — מרוב חיבה חוזרים ותוקעים פעמיים — הוא מבין שהם עושים תשובה מאהבה, שבה זדונות נעשים כזכויות, וממילא הוא מתירא להוסיף ולקטרג, שמא יתגלה שכל העברות שהוא רוצה להזכיר כבר הפכו לזכויות בכוח אותה תשובה.</p>
+        </div>
+        <div class="col-gold">
+            <h4 style="margin-top:0;">שיטת הרמב"ם</h4>
+            <p>"אף על פי שתקיעת שופר בראש השנה גזירת הכתוב, רמז יש בו: כלומר, עורו ישנים משנתכם ונרדמים הקיצו מתרדמתכם, וחפשו במעשיכם וחזרו בתשובה". לשיטתו, תקיעת השופר עצמה היא כרוז קורא בחיל "לכו ונשובה אל ה'", המכניע ומעורר את היצר הרע — "שופר" הוא כינוי ליצר הרע עצמו, שנאמר "אם יתקע שופר בעיר ועם לא יחרדו".</p>
+        </div>
+    </div>
+
+    <div class="quote-box">
+        <p>ועל המנהג הזה שאלו: למה נוהגים כן, להקדים ולתקוע מיושב, כיוון דסופן לתקוע מעומד ונפקין ביה? ואמרינן: כדי לערבב את השטן קודם תפילה, שלא ישטין בתפילתנו כשאנו חוזרים ותוקעים.</p>
+        <span class="source-tag">חידושי הריטב"א, ראש השנה טז ע"ב</span>
+    </div>
+
+    <p>לשיטת הריטב"א, תקיעת השופר בתפילת העמידה עצמה מסירה את המקטרג מעלינו, ובכך תפילת מוסף — על סדר מלכויות זכרונות ושופרות — עולה ומתקבלת לרצון. ולפי דבריו יוצא שתיקנו לתקוע דווקא בתוך התפילה, כדי שהמלכויות והזכרונות יעלו על ידי קול השופר. ולכן ראוי למתפללים בנוסח אשכנז, שאינם תוקעים בתפילת הלחש, להקפיד לשמוע היטב את חזרת הש"ץ, ולכוון בה למלכויות ולזכרונות, כדי שבקול השופר יעלו פסוקיהם לרצון לפני ה'.</p>
+
+    <div class="highlight-box">
+        <p><strong>לסיכום שלוש השיטות:</strong> רש"י — רואה שעם ישראל מחבבים את המצוות, נסתמים טענותיו של המקטרג. הרמב"ם — תקיעת שופר מועילה להסיר את היצר הרע עצמו. הריטב"א — תקיעת שופר בתוך התפילה מסירה את המקטרג מעלינו, ובכך תפילת מוסף עולה לרצון. שלוש השיטות אינן סותרות זו את זו, אלא שלוש בחינות בו זמנית של אותה תקיעה יחידה: היא מעוררת אהבה למעלה, מכניעה את הרע שבתוכנו, ומפנה את הדרך לתפילתנו להתקבל.</p>
+    </div>
+
+    <div class="verse-box">
+        <p>תִּקְעוּ בַחֹדֶשׁ שׁוֹפָר, בַּכֵּסֶה לְיוֹם חַגֵּנוּ.<br>כִּי חֹק לְיִשְׂרָאֵל הוּא, מִשְׁפָּט לֵאלֹהֵי יַעֲקֹב.</p>
+        <span class="source-tag">תהלים פא, ד–ה</span>
+    </div>
+
+    <div class="sources">
+        <h3>📚 מקורות ומראי מקומות</h3>
+        <ol>
+            <li>תלמוד בבלי: מסכת ראש השנה (טז ע"א–ע"ב, לא ע"א, לב ע"ב), ברכות (כ ע"ב, סא ע"ב), עבודה זרה (ה ע"א, ט ע"ב), ערכין (י ע"ב), סנהדרין (קד ע"ב), בבא מציעא</li>
+            <li>משנה: ברכות פרק ב; תוספתא הוריות פרק ב</li>
+            <li>מדרשים: ויקרא רבה (פרשת אמור כט; פרשה כא), שיר השירים רבה (פרשה א), מדרש רבה קהלת (פרשה ג), מדרש אגדה בובר (בראשית ג), משנת רבי אליעזר (פרשה ז), ילקוט שמעוני (שמות רמז קעה)</li>
+            <li>רש"י על התורה ועל הש"ס; רמב"ן על שמות (כ, יג); רבנו יונה (שערי העבודה; שערי תשובה שער א; פירוש למשלי טז); רבינו בחיי; אלשיך; ספורנו (ויקרא כג); אברבנאל (ויקרא כג); מאירי (ראש השנה); ריטב"א (חידושים לראש השנה טז); רשב"א (חידושים לראש השנה)</li>
+            <li>רמב"ם: משנה תורה, הלכות תשובה פרק ג; פירוש המשניות, ראש השנה פרק ד; ספר המצוות, מצות עשה ג</li>
+            <li>ספר החינוך: מצוה יח (פדיון הבן), מצוה שב (ביכורים)</li>
+            <li>מהרי"ל, הלכות ראש השנה; ביאור הגר"א למשלי טז; גר"א על יום תרועה</li>
+            <li>מסילת ישרים (פרקים א, ח); חובות הלבבות (שער חשבון הנפש, פרק ג); ספר החרדים (פרק ז); נפש החיים (שער א, פרק ז)</li>
+            <li>רמח"ל: נימוקי המחזור; מאמר החכמה (עניין ספר החיים; אמירת תשליך; אגודה אחת)</li>
+            <li>של"ה הקדוש, מסכת ראש השנה; מהר"ל; ליקוטי הלכות (אורח חיים, הלכות ראש השנה); ליקוטי מוהר"ן (תורה יז; מהדורא קמא סימנים ב, קעב)</li>
+            <li>שפתי חיים (מועדים א); ספר "לעבדך באמת"; ספר "להגיד"; שערי הימים הנוראים; ספר "עלי שור" חלק ב</li>
+            <li>יערות דבש (חלק ראשון, דרוש ו); צל"ח (חגיגה יד ע"א); חידושי הגרי"ז החדשים (סימן עה); ביאור הלכה (סימן שח); שם משמואל (דברים, פרשת תבוא); בני יששכר (מאמרי חודש תשרי)</li>
+            <li>ספר הברית (חלק ב, מאמר יד); מילי דאבות; סמ"ג (עשין יג); אור החיים הקדוש (דברים יא); התורה תמימה; חתם סופר; חומת הדת לחפץ חיים; תורת המנחה לראש השנה (דרשה עז); לשם שבו ואחלמה (הקדמות ושערים, שער ו)</li>
+            <li>שיחות ומקורות שבעל פה: הרב ליפשיץ שליט"א; הרב דב יפה שליט"א; הרב אליהו דיסקין שליט"א; הרב יהודה צדקה זצ"ל; הרב דורון דוד גולד; הרב רוזנבלום; הרב טאובר שליט"א; הגרי"ש אלישיב זצ"ל; הרב פינקוס זצ"ל; המגיד מדובנא</li>
+            <li>נוסח התפילה לראש השנה: מלכויות, זכרונות ושופרות; פיוט "ונתנה תוקף"; סליחות</li>
+        </ol>
+    </div>
+
+    <div class="footer">
+        <strong>נכתב ונערך על ידי:</strong><br>
+        <strong>הרב יהודה טאוב</strong><br>
+        קרית אתא<br>
+        📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+        <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px; color: #1f2937;">
+            <h4>🎧 שיעורים נוספים של הרב</h4>
+            <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+            <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+            <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+        </div>
+    </div>
+
+</div>
+
+<a href="#top" class="scroll-top" id="scrollTop" aria-label="חזרה לראש העמוד">▲</a>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+        var t = document.querySelector(this.getAttribute('href'));
+        if (!t) return;
+        e.preventDefault();
+        t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+window.addEventListener('scroll', function () {
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+});
+</script>
+
+<script>
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    /* ---------- הגדרות ---------- */
+    var NS       = 'koltoda.tts.';                 // מרחב שמות ב-localStorage, משותף לכל המאמרים
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;                           // תווים לכל אמירה — מתחת לסף הקטיעה של Chrome
+    // כל אלה הם ניווט או מטא-מידע, לא גוף המאמר. מי שמאזין לא רוצה לשמוע
+    // את מפתח העניינים, את רשימת המקורות או את "בפרק זה" לפני כל פרק.
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .no-tts';
+
+    /* ---------- מצב ---------- */
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false;
+
+    /* ---------- אלמנטים ---------- */
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    // התווית ההתחלתית נלקחת מה-HTML ולא מקובעת בקוד, כדי שתבניות שונות
+    // (למשל "האזן" בספר מול "האזן למאמר" במאמר) יחזרו לטקסט הנכון שלהן.
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+
+    /* =========================================================================
+       1. עיבוד הטקסט להקראה
+       ========================================================================= */
+
+    var G = '["\\u05f4\\u201d\\u2033]';        // גרשיים על כל וריאציותיהם
+    var R = "['\\u05f3\\u2019]";               // גרש
+
+    // מילון ראשי תיבות. חל *רק* על הטקסט שנשלח למנוע הדיבור —
+    // הטקסט שעל המסך נשאר בדיוק כפי שנכתב.
+    // ה-([ובלכמשהד]{0,2}) הוא קריטי בעברית: ראשי תיבות כמעט תמיד מופיעים עם
+    // אות שימוש דבוקה — "בשו״ע", "ובמשנ״ב", "כשו״ת". בלי זה הכלל פשוט לא נורה
+    // ברוב המופעים האמיתיים. האות נשמרת ומוצמדת חזרה למילה המלאה.
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    // מנועי TTS עבריים נתקעים על גרשיים בתוך מילה — לפעמים מאייתים אות-אות.
+    // הסרתם הופכת את המילה לקריאה רציפה (רמב"ם → רמבם) וזה נשמע נכון בהרבה.
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');   // פעמיים, לרצפים כמו תשע"ג-תשע"ד
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');       // אימוג'י (זוגות surrogate)
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' '); // סמלים ודינגבטים
+        t = t.replace(/־/g, ' ');                               // מקף עברי → רווח
+        t = t.replace(/\s*[–—]\s*/g, ', ');                // מקף ארוך → פסיק (הפוגה טבעית)
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');                   // רווח אחרי סימן פיסוק
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    /* ---------- פיצול לאמירות קצרות ----------
+       זה הלב של התיקון: Chrome/Edge קוטעים אמירה שנמשכת יותר מ~15 שניות,
+       ולעיתים אף לא יורים onend — ההקראה פשוט מתה באמצע פסקה. פסקה תורנית
+       רגילה היא 400-800 תווים, הרבה מעל הסף. פיצול למשפטים של עד 180 תווים
+       מבטיח שאף אמירה לא מתקרבת לגבול.                                       */
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            // מילה בודדת ארוכה מהמכסה (כתובת אינטרנט, מחרוזת בלי רווחים) —
+            // חיתוך קשיח, אחרת הייתה חוזרת אמירה ענקית והבאג היה חוזר מהדלת האחורית.
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    /* =========================================================================
+       2. בניית תור ההקראה
+       ========================================================================= */
+
+    // בספר מתחלף מקריאים רק את העמוד המוצג. בגלילה רציפה — את כל המאמר.
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        // המשתמש הפך עמוד ידנית תוך כדי האזנה — עוברים להקריא את העמוד החדש.
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            // תוכן העניינים, רשימת המקורות, סרגל ההאזנה והחתימה אינם חלק מהמאמר המדובר.
+            if (n.closest(SKIP)) return;
+            // רשימה מקוננת כבר נקראת כחלק מה-li שמעליה — לא לקרוא פעמיים.
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    /* =========================================================================
+       3. ממשק
+       ========================================================================= */
+
+    var HINT = 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה';
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        // גוללים רק אם הפסקה באמת מחוץ למסך. אחרת ההקראה "חוטפת" את הדף
+        // מתחת לידיים של מי שקורא קצת קדימה בעצמו.
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(HINT);
+        if ($prog) $prog.textContent = '';
+    }
+
+    // בספר מתחלף העמוד עצמו הוא הסימנייה (paginated.js שומר אותו), אין טעם
+    // לשמור אינדקס פסקה שמתאפס בכל הפיכת עמוד.
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    /* =========================================================================
+       4. הקראה
+       ========================================================================= */
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            // סוף העמוד בספר מתחלף — הופכים לעמוד הבא וממשיכים ברצף.
+            // עמודים בלי תוכן להקראה (מקורות, חתימה) מדולגים במקום לעצור עליהם.
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            // 'canceled'/'interrupted' = אנחנו עצרנו בכוונה (מעבר לשונית, נעילת מסך,
+            // לחיצה על פסקה אחרת). אסור להתקדם — זה בדיוק מה שגרם ל"קפיצה לעמוד האחרון":
+            // כל הפסקאות הנותרות נכשלות ברצף תוך שברירי שנייה בזמן שהמסך כבוי.
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    /* ---------- שומר ראש ----------
+       גם עם פיצול לאמירות קצרות, Chrome מסוגל "למות" בשקט: לא מדבר, לא ממתין,
+       ו-onend לא נורה לעולם. הכפתור נשאר על "מקריא..." ואין קול. הבדיקה הזו
+       מזהה שתי שניות של שקט אמיתי ומקדמת הלאה במקום להיתקע.                  */
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    /* =========================================================================
+       5. פקדים
+       ========================================================================= */
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = parseInt(localStorage.getItem(POS_KEY) || '0', 10);
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        // בדיקת המצב האמיתי של המנוע (ולא רק הדגלים הפנימיים) היא מה שמונע
+        // כפתור "מת" אחרי מעבר לשונית וחזרה.
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                // באג ידוע: resume() נכשל לפעמים בשקט אחרי השהיה ארוכה.
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                // אין אמירה מושהית להחיות (למשל אחרי נעילת מסך שביטלה אותה).
+                // מדברים כאן ועכשיו, בתוך אירוע הלחיצה — ב-iOS הקראה שנדחית
+                // ל-setTimeout כבר לא נחשבת "מתוך מגע משתמש" ונחסמת בשקט.
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        // לחיצה ראשונה על "אחורה" מחזירה לתחילת הפסקה הנוכחית, כמו בכל נגן.
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    // דילוג לפרק הבא/הקודם — ב-h2 בלבד. בספר של מאות פסקאות, ⏮/⏭ לבד לא מספיקים.
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;   // האחרון שלפנינו
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    // שינוי המחוון יורה עשרות אירועי input בזמן גרירה. הערך מתעדכן מיד,
+    // אבל ההקראה מופעלת מחדש רק כשמשחררים (onchange) — אחרת זה גמגום רצוף.
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    /* =========================================================================
+       6. קולות
+       ========================================================================= */
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);   // נשמרות בכוונה — קול רב-לשוני לפעמים נשמע טוב יותר
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        // onvoiceschanged יורה יותר מפעם אחת (במיוחד ב-Edge, כשקולות הענן נטענים
+        // באיחור). בלי הדגל הזה כל ירייה כזו הייתה דורסת את בחירת המשתמש.
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    /* =========================================================================
+       7. לחיצה על פסקה = התחל להקריא מכאן
+       ========================================================================= */
+
+    function attachClicks() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        Array.prototype.forEach.call(nodes, function (el) {
+            if (el.closest(SKIP)) return;
+            el.classList.add('tts-clickable');
+            el.addEventListener('click', function (e) {
+                if (e.target.closest('a')) return;                                    // קישורים עובדים כרגיל
+                if (window.getSelection && String(window.getSelection()).length) return; // סימון להעתקה עובד כרגיל
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+    }
+
+    /* =========================================================================
+       8. מעבר לשונית / נעילת מסך
+       ========================================================================= */
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            // iOS חוסם הקראה שלא נולדה מתוך מגע של המשתמש. אם אחרי כשנייה עדיין
+            // אין קול — נעבור למצב מושהה גלוי, כדי שהקורא יקיש פעם אחת במקום
+            // לבהות בכפתור שכתוב עליו "מקריא..." בזמן שקט מוחלט.
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    // חזרה מ-bfcache: מאפסים לגמרי (כולל autoPaused — אחרת ה-visibilitychange
+    // שמגיע מיד אחרי היה מתחיל להקריא את המאמר מההתחלה מעצמו).
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    // pagehide ולא beforeunload — beforeunload מבטל את ה-bfcache ודווקא מחמיר
+    // את הבעיה של חזרה ללשונית.
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    /* =========================================================================
+       9. אתחול
+       ========================================================================= */
+
+    function init() {
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var saved = parseInt(localStorage.getItem(POS_KEY) || '0', 10);
+        if (saved > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(HINT);
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+</body>
+</html>
