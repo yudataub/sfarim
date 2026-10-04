@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="torah-html-article 2.10.0">
+<meta name="description" content="ספר בעיון הלכתי ומחשבתי על החובה לתת צדקה מתוך שמחה — המצווה היחידה שהשמחה בה מעכבת.">
+<title>נָתוֹן תִּתֵּן לוֹ — החובה לתת צדקה בשמחה</title>
+<style>
+/* ===== base.css — מילה במילה ===== */
+:root {
+    --purple: #7e22ce;  --blue: #2563eb;   --green: #059669;
+    --gold:   #f59e0b;  --pink: #ec4899;   --ink:   #1f2937;
+    --paper:  #ffffff;  --muted: #6b7280;  --line:  rgba(0,0,0,.08);
+    --g-page:      linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --g-verse:     linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    --g-highlight: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    --g-quote:     linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    --g-story:     linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    --g-divider:   linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    --g-title:     linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    --fs: 1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0; padding: 40px 20px;
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: var(--g-page);
+    color: var(--ink);
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 900px; margin: 0 auto;
+    padding: 60px 80px;
+    background: var(--paper);
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.1);
+}
+
+/* ---------- כותרות ---------- */
+.main-title {
+    font-size: 3em; font-weight: bold; text-align: center; margin: 0 0 10px;
+    background: var(--g-title); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: var(--purple);
+}
+.subtitle { text-align: center; font-size: 1.25em; color: var(--muted); margin-bottom: 8px; }
+.author   { text-align: center; font-size: 1.05em; color: var(--purple); font-weight: bold; margin-bottom: 10px; }
+
+h2 { font-size: 2.2em; color: var(--purple); border-right: 6px solid var(--purple);
+     padding-right: 20px; margin: 50px 0 20px; }
+h3 { font-size: 1.8em; color: var(--blue);  margin: 35px 0 15px; }
+h4 { font-size: 1.5em; color: var(--green); margin: 25px 0 12px; }
+p, li { font-size: calc(1.15em * var(--fs)); line-height: 1.8; margin: 0 0 20px; text-align: justify; text-justify: inter-word; }
+li { margin-bottom: 10px; }
+.verse-box p, .section-divider, .chapter-card p, .footer p { text-align: center; }
+.toc li, .listen-bar p { text-align: right; }
+
+.emphasis { color: var(--purple); font-weight: bold; }
+em { color: var(--blue); font-style: italic; }
+
+/* ---------- מעבר בין פרקים ---------- */
+.chapter-card {
+    min-height: 55vh; margin: 60px -80px 0; padding: 40px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: var(--g-title); color: #fff; text-align: center;
+}
+.chapter-card .num { font-size: 5.5em; font-weight: bold; line-height: 1; opacity: .85; }
+.chapter-card .name { font-size: 2.2em; font-weight: bold; margin-top: 18px; max-width: 18ch; }
+.chapter-divider {
+    display: flex; align-items: center; gap: 15px; margin: 45px 0;
+    color: var(--gold); font-size: 1.4em;
+}
+.chapter-divider::before, .chapter-divider::after {
+    content: ''; flex: 1; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.chapter-label {
+    display: inline-block; margin-bottom: 6px; padding: 3px 14px;
+    background: var(--purple); color: #fff; border-radius: 20px;
+    font-size: .55em; font-weight: bold; letter-spacing: .5px; vertical-align: middle;
+}
+.in-this-chapter {
+    background: var(--g-highlight); border-right: 6px solid var(--blue);
+    border-radius: 12px; padding: 22px 26px; margin: 22px 0 32px;
+}
+.in-this-chapter h4 { margin: 0 0 10px; font-size: 1.1em; color: var(--blue); }
+.in-this-chapter ul { margin: 0; padding-right: 20px; }
+.in-this-chapter li { font-size: 1em; margin-bottom: 6px; text-align: right; }
+
+.story-title { display: block; font-size: 1.25em; font-weight: bold; color: var(--green); margin-bottom: 12px; }
+
+/* ---------- קופסאות תוכן ---------- */
+.verse-box, .highlight-box, .quote-box, .story-box, .qa-box {
+    padding: 28px; margin: 30px 0; border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.verse-box     { background: var(--g-verse); border: 2px solid var(--purple);
+                 text-align: center; font-size: 1.3em; font-weight: 600; color: var(--purple); }
+.verse-box p   { font-size: calc(1em * var(--fs)); margin: 0; }
+.highlight-box { background: var(--g-highlight); border-right: 6px solid var(--blue);
+                 box-shadow: 0 5px 15px rgba(126,34,206,.15); }
+.quote-box     { background: var(--g-quote); border-right: 6px solid var(--gold); font-style: italic; }
+.story-box     { background: var(--g-story); border-right: 6px solid var(--green); }
+.qa-box        { background: #fff; border: 2px dashed var(--pink); }
+.verse-box p:last-child, .highlight-box p:last-child, .quote-box p:last-child,
+.story-box p:last-child, .qa-box p:last-child { margin-bottom: 0; }
+
+.source-tag { display: block; margin-top: 12px; font-size: .9em; font-style: normal;
+              color: var(--muted); font-weight: bold; }
+
+.section-divider {
+    background: var(--g-divider); color: #fff; text-align: center;
+    padding: 18px 25px; margin: 45px 0; border-radius: 10px;
+    font-size: 1.3em; font-weight: bold; letter-spacing: .5px;
+}
+
+.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 30px 0; }
+.two-columns > div { padding: 25px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,.1); }
+.col-purple { background: var(--g-verse);  border-top: 5px solid var(--purple); }
+.col-gold   { background: var(--g-quote);  border-top: 5px solid var(--gold); }
+
+/* ---------- תוכן עניינים / מקורות / חתימה ---------- */
+.toc { background: #faf5ff; border: 2px solid #e9d5ff; border-radius: 12px; padding: 25px 30px; margin: 30px 0; }
+.toc h3 { margin-top: 0; color: var(--purple); }
+.toc ul { list-style: none; padding: 0; margin: 0; }
+.toc li { margin-bottom: 8px; }
+.toc a { color: var(--blue); text-decoration: none; font-size: 1.05em; }
+.toc a:hover { text-decoration: underline; color: var(--purple); }
+.toc > ul > li { margin-bottom: 14px; }
+.toc-chapter { font-weight: bold; font-size: 1.1em; color: var(--purple); }
+.toc-subs { display: block; margin-top: 3px; font-size: .9em; color: var(--muted); line-height: 1.7; }
+.toc-subs a { font-size: 1em; color: var(--muted); }
+.toc-subs a:hover { color: var(--blue); }
+.toc-subs span { margin: 0 6px; opacity: .5; }
+
+.chapter-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 22px;
+    background: linear-gradient(160deg, #fffdf7 0%, #fdf8ee 100%);
+    border: 1px solid #efe4cd; border-radius: 18px;
+    padding: 34px 30px; margin: 30px 0;
+}
+.chapter-grid .grid-title {
+    grid-column: 1 / -1; text-align: center; margin: 0 0 14px;
+    font-size: 1.6em; color: var(--purple); letter-spacing: 1px;
+    border: none; padding: 0;
+}
+.chapter-chip {
+    display: flex; align-items: center; gap: 12px;
+    color: var(--ink); text-decoration: none; font-size: 1.02em; line-height: 1.45;
+    padding: 6px 8px; border-radius: 10px; transition: background .18s, transform .18s;
+}
+.chapter-chip:hover { background: rgba(245,158,11,.12); transform: translateX(-3px); }
+.chapter-chip .n {
+    flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #c9982f; color: #fff; font-size: .82em; font-weight: bold;
+}
+.chapter-chip.is-front .n { background: #1e2a5a; font-size: .7em; }
+
+@media (max-width: 900px) { .chapter-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .chapter-grid { grid-template-columns: 1fr; padding: 24px 18px; } }
+
+.sources { background: #f9fafb; border-radius: 12px; padding: 25px 30px; margin-top: 50px; border: 1px solid var(--line); }
+.sources h3 { margin-top: 0; }
+.sources li { font-size: calc(1em * var(--fs)); }
+
+/* ---------- חידון סיכום פרק (שאלות אמריקאיות) ---------- */
+.quiz-box {
+    margin: 45px 0 55px; padding: 32px 34px; border-radius: 16px;
+    background: linear-gradient(160deg, #fffdf7 0%, #fff8e8 100%);
+    border: 2px solid var(--gold);
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+.quiz-title { margin: 0 0 4px; font-size: 1.5em; color: var(--purple); text-align: center; border: none; padding: 0; }
+.quiz-sub { text-align: center; color: var(--muted); margin: 0 0 26px; font-size: .95em; }
+.quiz-q { margin-bottom: 26px; padding-bottom: 24px; border-bottom: 1px dashed var(--line); }
+.quiz-q:last-of-type { border-bottom: none; margin-bottom: 8px; padding-bottom: 0; }
+.quiz-q-text { display: flex; gap: 10px; font-weight: bold; font-size: 1.08em; margin: 0 0 14px; color: var(--ink); text-align: right; }
+.quiz-q-num {
+    flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%;
+    background: var(--purple); color: #fff; font-size: .8em;
+    display: flex; align-items: center; justify-content: center;
+}
+.quiz-options { display: flex; flex-direction: column; gap: 10px; }
+.quiz-option {
+    display: flex; align-items: flex-start; gap: 12px; width: 100%;
+    padding: 12px 16px; border-radius: 10px; border: 2px solid var(--line);
+    background: var(--paper); cursor: pointer; text-align: right; font-family: inherit;
+    font-size: 1em; color: var(--ink); line-height: 1.5; transition: border-color .15s, background .15s;
+}
+.quiz-option:hover:not(.disabled) { border-color: var(--blue); background: rgba(37,99,235,.06); }
+.quiz-option.selected { border-color: var(--purple); background: rgba(126,34,206,.08); }
+.quiz-option .letter {
+    flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%;
+    background: var(--muted); color: #fff; font-size: .8em; font-weight: bold;
+    display: flex; align-items: center; justify-content: center;
+}
+.quiz-option.selected .letter { background: var(--purple); }
+.quiz-option.correct { border-color: var(--green); background: rgba(5,150,105,.12); }
+.quiz-option.correct .letter { background: var(--green); }
+.quiz-option.incorrect { border-color: #dc2626; background: rgba(220,38,38,.10); }
+.quiz-option.incorrect .letter { background: #dc2626; }
+.quiz-option.disabled { cursor: default; }
+.quiz-actions { text-align: center; margin-top: 22px; }
+.quiz-submit-btn {
+    background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
+    color: #fff; border: none; border-radius: 30px; padding: 12px 34px;
+    font-size: 1.05em; font-weight: bold; font-family: inherit; cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+}
+.quiz-submit-btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(126,34,206,.3); }
+.quiz-submit-btn:disabled { opacity: .45; cursor: default; }
+.quiz-retry-btn {
+    margin-top: 14px; background: #fff; border: 2px solid var(--purple); color: var(--purple);
+    border-radius: 30px; padding: 9px 22px; font-weight: bold; font-family: inherit; cursor: pointer;
+}
+.quiz-retry-btn:hover { background: rgba(126,34,206,.08); }
+.quiz-result { display: none; margin-top: 22px; padding: 20px 24px; border-radius: 12px; text-align: center; }
+.quiz-result.show { display: block; }
+.quiz-result-title { font-size: 1.15em; font-weight: bold; margin-bottom: 6px; }
+.quiz-result.perfect { background: var(--g-story); border: 2px solid var(--green); }
+.quiz-result.perfect .quiz-result-title { color: #065f46; }
+.quiz-result.partial { background: var(--g-quote); border: 2px solid var(--gold); }
+.quiz-result.partial .quiz-result-title { color: #78350f; }
+@media (max-width: 768px) {
+    .quiz-box { padding: 22px 18px; }
+}
+@media (prefers-color-scheme: dark) {
+    .quiz-box { background: linear-gradient(160deg, #241f14 0%, #201c10 100%); border-color: var(--gold); }
+    .quiz-option { background: #232029; border-color: #3f3b4a; }
+    .quiz-option:hover:not(.disabled) { background: rgba(125,211,252,.10); }
+    .quiz-option.selected { background: rgba(192,132,252,.14); }
+    .quiz-option.correct { background: rgba(74,222,128,.16); }
+    .quiz-option.incorrect { background: rgba(248,113,113,.16); }
+    .quiz-retry-btn { background: #232029; }
+    .quiz-result.perfect .quiz-result-title { color: #6ee7b7; }
+    .quiz-result.partial .quiz-result-title { color: #fde68a; }
+}
+
+.footer { margin-top: 55px; padding-top: 30px; border-top: 3px solid var(--gold);
+          text-align: center; font-size: 1.05em; }
+.footer a { color: var(--blue); }
+.footer-more { margin-top: 30px; padding: 25px; border-radius: 10px;
+               background: var(--g-highlight); color: var(--ink); }
+.footer-more h4 { margin-top: 0; }
+
+.scroll-top {
+    position: fixed; bottom: 30px; left: 30px; z-index: 50;
+    width: 50px; height: 50px; border-radius: 50%;
+    background: var(--g-title); color: #fff; text-decoration: none;
+    display: none; align-items: center; justify-content: center;
+    font-size: 1.3em; box-shadow: 0 5px 15px rgba(0,0,0,.25);
+}
+.scroll-top.visible { display: flex; }
+
+/* ---------- סרגל ההאזנה ---------- */
+.listen-bar {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 15px;
+    margin: 25px 0; padding: 18px 25px;
+    background: var(--g-quote); border-radius: 12px;
+    border-right: 6px solid var(--gold);
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.listen-btn-group { display: flex; gap: 8px; align-items: center; }
+.listen-btn {
+    display: flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
+    color: #fff; border: none; border-radius: 30px; padding: 10px 22px;
+    font-size: 1em; font-weight: bold; font-family: inherit; cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+}
+.listen-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(126,34,206,.3); }
+.listen-btn:active { transform: translateY(0); }
+.listen-stop-btn, .listen-skip-btn, .listen-size-btn {
+    background: #fff; color: var(--purple); border: 2px solid var(--purple);
+    border-radius: 30px; padding: 8px 16px; font-size: .95em; font-weight: bold;
+    font-family: inherit; cursor: pointer; transition: transform .15s, background .15s;
+}
+.listen-skip-btn { padding: 8px 12px; }
+.listen-stop-btn:hover, .listen-skip-btn:hover,
+.listen-size-btn:hover:not(:disabled) { transform: translateY(-2px); background: #f3e8ff; }
+
+.listen-size { display: flex; align-items: center; gap: 6px; font-size: .9em; color: #78350f; }
+.listen-size-btn { padding: 6px 12px; line-height: 1; }
+.listen-size-btn:disabled { opacity: .35; cursor: default; border-color: #d1d5db; color: var(--muted); }
+.listen-size-btn.big { font-size: 1.25em; }
+.listen-size output { font-weight: bold; min-width: 3.4em; text-align: center; }
+
+.listen-toggle-btn {
+    background: #fff; color: var(--purple); border: 2px solid var(--purple);
+    border-radius: 30px; padding: 8px 14px; font-size: .88em; font-weight: bold;
+    font-family: inherit; cursor: pointer; white-space: nowrap;
+    transition: transform .15s, background .15s, opacity .15s;
+}
+.listen-toggle-btn:hover { transform: translateY(-2px); background: #f3e8ff; }
+.listen-toggle-btn[aria-pressed="false"] {
+    color: var(--muted); border-color: #d1d5db; background: #f9fafb; opacity: .8;
+}
+.listen-toggle-btn:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+.listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+.listen-skip-btn:focus-visible, .listen-size-btn:focus-visible,
+.listen-voice select:focus-visible,
+.listen-rate input:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+
+.listen-status   { font-size: .95em; color: #78350f; flex: 1 1 200px; }
+.listen-progress { font-size: .9em; color: #78350f; font-weight: bold; white-space: nowrap; }
+.listen-rate, .listen-voice { display: flex; align-items: center; gap: 6px; font-size: .9em; color: #78350f; }
+.listen-rate input { accent-color: var(--purple); }
+.listen-rate output { font-weight: bold; min-width: 2.6em; }
+.listen-voice select {
+    border-radius: 20px; border: 1px solid var(--gold); padding: 4px 10px;
+    font-family: inherit; background: #fff; color: var(--ink); max-width: 190px;
+}
+
+.tts-clickable { cursor: pointer; transition: background .2s; border-radius: 6px; }
+.tts-clickable:hover { background: rgba(245,158,11,.10); }
+.reading-highlight {
+    background: var(--g-verse); border-radius: 8px;
+    box-shadow: 0 0 0 3px var(--pink) inset; transition: background .3s;
+    padding-right: 14px; padding-left: 14px;
+    margin-right: -14px; margin-left: -14px;
+}
+h2.reading-highlight { padding-right: 34px; }
+
+/* ---------- נייד ---------- */
+@media (max-width: 768px) {
+    body { padding: 15px 10px; }
+    .container { padding: 30px 22px; border-radius: 12px; }
+    .main-title { font-size: 2em; }
+    h2 { font-size: 1.6em; padding-right: 14px; margin-top: 35px; }
+    h3 { font-size: 1.35em; } h4 { font-size: 1.15em; }
+    p, li { font-size: calc(1.08em * var(--fs)); }
+    .two-columns { grid-template-columns: 1fr; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .qa-box { padding: 20px; }
+    .reading-highlight { padding-right: 10px; padding-left: 10px;
+                         margin-right: -10px; margin-left: -10px; }
+    h2.reading-highlight { padding-right: 24px; }
+    .listen-bar { padding: 15px; gap: 10px; }
+    .listen-status { flex: 1 1 100%; }
+    .listen-voice select { max-width: 140px; }
+    .scroll-top { bottom: 18px; left: 18px; width: 44px; height: 44px; }
+    .chapter-card { margin-left: -22px; margin-right: -22px; min-height: 42vh; padding: 30px 20px; }
+    .chapter-card .num { font-size: 3.8em; }
+    .chapter-card .name { font-size: 1.5em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .01ms !important; animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    .listen-btn:hover, .listen-stop-btn:hover, .listen-skip-btn:hover { transform: none; }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --paper: #1c1b22; --ink: #e8e6ef; --muted: #a8a4b8; --line: rgba(255,255,255,.10);
+        --purple: #c084fc; --blue: #7dd3fc; --green: #4ade80; --gold: #fbbf24; --pink: #f9a8d4;
+        --g-page:      linear-gradient(135deg, #14131a 0%, #221f2e 100%);
+        --g-verse:     linear-gradient(135deg, #2a2440 0%, #3a2436 100%);
+        --g-highlight: linear-gradient(135deg, #1e2c44 0%, #262244 100%);
+        --g-quote:     linear-gradient(135deg, #3a2f16 0%, #4a3a18 100%);
+        --g-story:     linear-gradient(135deg, #16332a 0%, #14291f 100%);
+    }
+    .container { box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+    .toc     { background: #241f33; border-color: #3d2f57; }
+    .chapter-grid { background: linear-gradient(160deg, #262133 0%, #201c2b 100%); border-color: #3d3350; }
+    .chapter-chip { color: var(--ink); }
+    .chapter-chip .n { background: #b08a2e; }
+    .chapter-chip.is-front .n { background: #3b4a86; }
+    .sources { background: #201f28; }
+    .qa-box  { background: #201f28; }
+    .listen-status, .listen-progress, .listen-rate, .listen-voice { color: #fde68a; }
+    .listen-size { color: #fde68a; }
+    .listen-stop-btn, .listen-skip-btn, .listen-toggle-btn, .listen-size-btn { background: #2a2438; color: #e9d5ff; border-color: #c084fc; }
+    .listen-size-btn:disabled { background: #232029; color: #8b8698; border-color: #3f3b4a; }
+    .listen-toggle-btn[aria-pressed="false"] { background: #232029; color: #8b8698; border-color: #3f3b4a; }
+    .listen-stop-btn:hover, .listen-skip-btn:hover { background: #3a3050; }
+    .listen-voice select { background: #2a2438; color: var(--ink); }
+    .tts-clickable:hover { background: rgba(251,191,36,.12); }
+}
+
+/* ---------- הדפסה A4 ---------- */
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; color: #000 !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important;
+                 box-shadow: none !important; border-radius: 0 !important; background: #fff !important; }
+    .scroll-top, .listen-bar, .chapter-card, .chapter-divider, .chapter-grid, .quiz-box { display: none !important; }
+    .chapter-label { background: none !important; color: #4a0080 !important; padding: 0 !important; }
+    .in-this-chapter { page-break-inside: avoid; break-inside: avoid; }
+    p, li { text-align: justify; }
+    .reading-highlight { box-shadow: none !important; background: none !important; }
+    .tts-clickable { cursor: auto; }
+    /* מעבר העמוד יושב על .chapter-label ולא על ה-h2: התווית ("פרק ב") קודמת
+       ל-h2 ב-HTML, ובלי כלל משלה היא נשארת בסוף העמוד הקודם בזמן שה-h2 עצמו
+       פותח את העמוד החדש — הפרק מתחיל בלי לציין איזה פרק זה. */
+    .chapter-label { page-break-before: always; break-before: page;
+                      page-break-after: avoid; break-after: avoid; }
+    h2 { font-size: 16pt !important; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    h3 { font-size: 13pt !important; } h4 { font-size: 12pt !important; }
+    p, li { font-size: 11pt !important; orphans: 3; widows: 3; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box, .section-divider {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; background: none !important;
+                  -webkit-text-fill-color: #4a0080 !important; color: #4a0080 !important; }
+    .footer { page-break-before: always; break-before: page; }
+    a { color: #000 !important; text-decoration: none; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #444; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="main-title" id="top">נָתוֹן תִּתֵּן לוֹ</h1>
+    <div class="subtitle">המצווה היחידה שהשמחה בה מעכבת — עיון בחובת השמחה בנתינת הצדקה</div>
+    <div class="author">מאת: הרב יהודה טאוב</div>
+
+    <div class="listen-bar">
+        <div class="listen-btn-group">
+            <button class="listen-btn" id="listenBtn" onclick="toggleListen()"
+                    aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן לספר</button>
+            <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+            <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+            <button class="listen-skip-btn" onclick="skipListen(1)"  aria-label="פסקה הבאה"  title="פסקה הבאה">⏭</button>
+            <button class="listen-skip-btn" onclick="skipChapter(1)"  aria-label="פרק הבא"   title="פרק הבא">⏩</button>
+            <button class="listen-stop-btn" onclick="stopListen()"   aria-label="עצור הקראה">⏹ עצור</button>
+            <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()"
+                    aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+        </div>
+        <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+        <span class="listen-progress" id="listenProgress"></span>
+        <div class="listen-rate">
+            <label for="rateRange">מהירות:</label>
+            <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1"
+                   oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)"
+                   aria-label="מהירות הקראה">
+            <output id="rateValue" for="rateRange">1.0×</output>
+        </div>
+        <div class="listen-voice">
+            <label for="voiceSelect">קול:</label>
+            <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+        </div>
+        <div class="listen-size">
+            <span>גודל טקסט:</span>
+            <button class="listen-size-btn" id="fontSmaller" onclick="setFontScale(-1)"
+                    aria-label="הקטן את הטקסט" title="הקטן את הטקסט">א−</button>
+            <output id="fontScaleValue">100%</output>
+            <button class="listen-size-btn big" id="fontBigger" onclick="setFontScale(1)"
+                    aria-label="הגדל את הטקסט" title="הגדל את הטקסט">א+</button>
+        </div>
+    </div>
+
+    <nav class="chapter-grid" aria-label="מבט על פרקי הספר">
+        <h2 class="grid-title">פִּרְקֵי הַסֵּפֶר</h2>
+        <a class="chapter-chip is-front" href="#intro"><span class="n">◆</span>הַקְדָּמָה</a>
+        <a class="chapter-chip" href="#section1"><span class="n">1</span>יְסוֹד הַדִּין</a>
+        <a class="chapter-chip" href="#section2"><span class="n">2</span>שְׁמוֹנֶה הַמַּעֲלוֹת</a>
+        <a class="chapter-chip" href="#section3"><span class="n">3</span>עַל מִי חָל הָאִסּוּר</a>
+        <a class="chapter-chip" href="#section4"><span class="n">4</span>שְׁלֹשָׁה פֵּרוּשִׁים</a>
+        <a class="chapter-chip" href="#section5"><span class="n">5</span>זְמַן הַשִּׂמְחָה</a>
+        <a class="chapter-chip" href="#section6"><span class="n">6</span>מַדּוּעַ דַּוְקָא בִּצְדָקָה</a>
+        <a class="chapter-chip" href="#section7"><span class="n">7</span>הַבְּרָכָה וְהַדּוֹרוֹן</a>
+        <a class="chapter-chip" href="#section8"><span class="n">8</span>הַשִּׂמְחָה מֵהַחַיִּים</a>
+        <a class="chapter-chip" href="#section9"><span class="n">9</span>סִכּוּם לְהֲלָכָה</a>
+    </nav>
+
+    <div class="toc">
+        <h3>📑 תוכן העניינים</h3>
+        <ul>
+            <li>
+                <a class="toc-chapter" href="#intro">הקדמה — המצווה היחידה שהשמחה בה מעכבת</a>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section1">פרק א — יסוד הדין: "בסבר פנים יפות ובשמחה"</a>
+                <span class="toc-subs">
+                    <a href="#sec1a">הפסוק בפרשת ראה</a><span>·</span><a href="#sec1b">פסיקת הרמב"ם והשולחן ערוך</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section2">פרק ב — שמונה המעלות בצדקה</a>
+                <span class="toc-subs">
+                    <a href="#sec2a">הסולם, ממעלה למעלה</a><span>·</span><a href="#sec2b">🕯️ מעשה באבני נזר</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section3">פרק ג — על מי חל האיסור: הנותן או המקבל?</a>
+                <span class="toc-subs">
+                    <a href="#sec3a">החקירה ונפקא מינה לגזבר</a><span>·</span><a href="#sec3b">ראיית הט"ז ותירוצה</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section4">פרק ד — שלושה פירושים ל"נתן תתן לו ולא ירע לבבך"</a>
+                <span class="toc-subs">
+                    <a href="#sec4a">רבינו יונה: מידת הנדיבות</a><span>·</span><a href="#sec4b">ספר העיקרים: שלמות המצוה</a><span>·</span><a href="#sec4c">תולדות יצחק: קניין ההרגל</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section5">פרק ה — זמן השמחה: לא רק בלב, אלא ברגע הנתינה</a>
+                <span class="toc-subs">
+                    <a href="#sec5a">אהבת חסד: הקושי חוזר בכל פעם מחדש</a><span>·</span><a href="#sec5b">משל האלף רובל, וצרור המור</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section6">פרק ו — מדוע דווקא בצדקה השמחה מעכבת?</a>
+                <span class="toc-subs">
+                    <a href="#sec6a">לבנות לב טוב, לא רק לפרנס עני</a><span>·</span><a href="#sec6b">הכסף כפיקדון</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section7">פרק ז — הברכה שבדברי הניחומים, והדורון של הקב"ה</a>
+                <span class="toc-subs">
+                    <a href="#sec7a">תשובות והנהגות: הגאון מטשיבין</a><span>·</span><a href="#sec7b">🕯️ הזוהר: הדורון של הקב"ה</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section8">פרק ח — השמחה שבנתינה: מהחיים עצמם</a>
+                <span class="toc-subs">
+                    <a href="#sec8a">🕯️ סיפור ים המלח</a><span>·</span><a href="#sec8b">🕯️ שתי דירות, שני אנשים</a><span>·</span><a href="#sec8c">🕯️ טלפון בתשעה באב</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section9">פרק ט — סיכום להלכה ולמעשה</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ===== גוף הספר ===== -->
+
+    <h2 id="intro">הקדמה — המצווה היחידה שהשמחה בה מעכבת</h2>
+    <div class="highlight-box">
+        <p>היהדות מוקירה מאוד את השמחה. בברכת שבע הברכות שאנו מברכים לחתן ולכלה מופיעות עשר לשונות של שמחה. הרמב"ם עצמו כותב על השמחה בעשיית המצוות במילים נרגשות: "עֲבוֹדָה גְּדוֹלָה הִיא", וקובע שהמונע עצמו ממנה "רָאוּי לְהִפָּרַע מִמֶּנּוּ". ואף על פי כן, כשמחפשים בשולחן ערוך היכן השמחה היא לא רק מעלה רצויה אלא ממש חלק מגוף המצווה, שבלעדיה לא יצא ידי חובה, מוצאים דבר מפתיע: יש רק מקום אחד. מצווה אחת יחידה שבה נפסק להלכה, במפורש, שמי שקיים אותה בלא שמחה "הפסיד זכותו" ולא יצא ידי חובה כלל.</p>
+    </div>
+    <p>שאלה זו היא הפתח לכל הספר שלפניכם: מהי אותה מצווה יחידה? ומה מיוחד בה, שדווקא בה, מכל תרי"ג המצוות, הפכה השמחה מהידור לעיכוב גמור?</p>
+    <p>נתחיל בכלל הרחב. הרמב"ם בהלכות לולב כותב כך:</p>
+    <div class="quote-box">
+        <p>"הַשִּׂמְחָה שֶׁיִּשְׂמַח הָאָדָם בַּעֲשִׂיַּת הַמִּצְוָה וּבְאַהֲבַת הָאֵל שֶׁצִּוָּה עֲלֵיהֶן, עֲבוֹדָה גְּדוֹלָה הִיא. וְכָל הַמּוֹנֵעַ עַצְמוֹ מִשִּׂמְחָה זוֹ, רָאוּי לְהִפָּרַע מִמֶּנּוּ, שֶׁנֶּאֱמַר תַּחַת אֲשֶׁר לֹא עָבַדְתָּ אֶת ה' אֱלֹהֶיךָ בְּשִׂמְחָה וּבְטוּב לֵבָב."</p>
+        <span class="source-tag">רמב"ם, הלכות לולב, פרק ח הלכה טו</span>
+    </div>
+    <p>ואמנם, לאורך השולחן ערוך אנו פוגשים שוב ושוב את השמחה כערך נכסף: אין עומדים להתפלל אלא מתוך שמחה ולא מתוך עצבות. יש לברך על הרעה בנפש חפצה, כדרך שמברכים בשמחה על הטובה. לובשים בגדי שבת נאים ויוצאים "לקראת שבת מלכתא" בשמחה. וביום טוב חייב אדם להיות "שָׂמֵחַ וְטוֹב לֵב", הוא ואשתו ובניו וכל הנלווים אליו, ואף לדאוג לשמחת הגר, היתום והאלמנה. אלו הלכות ממשיות, לא רק עצות טובות. ובכל זאת, בכל המקומות הללו לא כתוב שאם התפלל בלא שמחה לא יצא ידי חובת תפילה, או שמי שלא שמח בשבת ביטל מצוות עונג שבת. השמחה שם היא מעלה, לא תנאי מעכב.</p>
+    <p>לעומת זאת, בהלכות צדקה כתב השולחן ערוך כך:</p>
+    <div class="quote-box">
+        <p>"צָרִיךְ לִתֵּן הַצְּדָקָה בְּסֵבֶר פָּנִים יָפוֹת, בְּשִׂמְחָה וּבְטוּב לֵבָב, וּמִתְאוֹנֵן עִם הֶעָנִי בְּצַעֲרוֹ וּמְדַבֵּר לוֹ דִּבְרֵי תַּנְחוּמִין. וְאִם נְתָנָהּ בְּפָנִים זְעוּפוֹת וְרָעוֹת, הִפְסִיד זְכוּתוֹ."</p>
+        <span class="source-tag">שולחן ערוך, יורה דעה, הלכות צדקה, סימן רמט סעיף ג</span>
+    </div>
+    <p>"הפסיד זכותו". לא "החסיר מן ההידור", אלא הפסיד. זו בדיוק הנקודה שהספר הזה בא לברר: מה בין מצוות תפילה, שבת ויום טוב, שבהן השמחה היא עבודה גדולה אך אינה מעכבת, לבין מצוות הצדקה, שבה השמחה היא גוף המצווה ממש. נעקוב אחר המקורות שדנו בשאלה זו, נפגוש חקירות, מחלוקות ראשונים ואחרונים, ונביא גם סיפורים מהחיים שמראים איך הדין הזה נראה כשהוא יורד מהספר אל השטח.</p>
+
+    <span class="chapter-label">פרק א</span>
+    <h2 id="section1">יסוד הדין: "בסבר פנים יפות ובשמחה"</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>הפסוק המרכזי בפרשת ראה, המקור לכל הדיון</li>
+            <li>פסיקת הרמב"ם והשולחן ערוך, ונימוקו של ביאור הגר"א</li>
+        </ul>
+    </div>
+
+    <h3 id="sec1a">הפסוק בפרשת ראה</h3>
+    <p>מקור הדין כולו הוא בפרשת השבוע שלנו, פרשת ראה, בציווי התורה על נתינת הצדקה לאביון:</p>
+    <div class="verse-box">
+        <p>"כִּי יִהְיֶה בְךָ אֶבְיוֹן מֵאַחַד אַחֶיךָ בְּאַחַד שְׁעָרֶיךָ בְּאַרְצְךָ אֲשֶׁר ה' אֱלֹהֶיךָ נֹתֵן לָךְ, לֹא תְאַמֵּץ אֶת לְבָבְךָ וְלֹא תִקְפֹּץ אֶת יָדְךָ מֵאָחִיךָ הָאֶבְיוֹן. כִּי פָתֹחַ תִּפְתַּח אֶת יָדְךָ לוֹ, וְהַעֲבֵט תַּעֲבִיטֶנּוּ דֵּי מַחְסֹרוֹ אֲשֶׁר יֶחְסַר לוֹ... נָתוֹן תִּתֵּן לוֹ, וְלֹא יֵרַע לְבָבְךָ בְּתִתְּךָ לוֹ, כִּי בִּגְלַל הַדָּבָר הַזֶּה יְבָרֶכְךָ ה' אֱלֹהֶיךָ בְּכָל מַעֲשֶׂךָ וּבְכֹל מִשְׁלַח יָדֶךָ."</p>
+        <span class="source-tag">דברים, פרשת ראה, פרק טו פסוקים ז, י</span>
+    </div>
+    <p>שימו לב לניסוח הכפול: לא רק "נתון תתן לו", חובת הנתינה עצמה, אלא תוספת נפרדת, "וְלֹא יֵרַע לְבָבְךָ בְּתִתְּךָ לוֹ". התורה לא הסתפקה בכך שהיד תיפתח. היא דרשה גם שהלב לא ירע באותו רגע ממש, ברגע הנתינה. ומיד לאחר מכן קושרת התורה בכך את הברכה: "כִּי בִּגְלַל הַדָּבָר הַזֶּה יְבָרֶכְךָ ה' אֱלֹהֶיךָ בְּכָל מַעֲשֶׂךָ". לא ברכה סתמית, אלא ברכה בכל מעשה ידיך. יש כאן רמז ראשון לכך שהברכה תלויה דווקא באותו תנאי נוסף, ולא רק בעצם הנתינה. נחזור לכך בהרחבה בפרק הרביעי.</p>
+
+    <h3 id="sec1b">פסיקת הרמב"ם והשולחן ערוך</h3>
+    <p>הרמב"ם פוסק את הדין הזה בלשון חדה במיוחד:</p>
+    <div class="quote-box">
+        <p>"כָּל הַנּוֹתֵן צְדָקָה לֶעָנִי בְּסֵבֶר פָּנִים רָעוֹת וּפָנָיו כְּבוּשׁוֹת בַּקַּרְקַע, אֲפִלּוּ נָתַן לוֹ אֶלֶף זְהוּבִים, אִבֵּד זְכוּתוֹ וְהִפְסִידָהּ. אֶלָּא נוֹתֵן לוֹ בְּסֵבֶר פָּנִים יָפוֹת וּבְשִׂמְחָה וּמִתְאוֹנֵן עִמּוֹ עַל צָרָתוֹ, שֶׁנֶּאֱמַר: אִם לֹא בָכִיתִי לִקְשֵׁה יוֹם עָגְמָה נַפְשִׁי לָאֶבְיוֹן, וּמְדַבֵּר לוֹ דִּבְרֵי תַּחֲנוּנִים וְנִחוּמִים, שֶׁנֶּאֱמַר: וְלֵב אַלְמָנָה אַרְנִן."</p>
+        <span class="source-tag">רמב"ם, הלכות מתנות עניים, פרק י הלכה ד</span>
+    </div>
+    <p>שימו לב עד כמה חד הניסוח: "אפילו נתן לו אלף זהובים". לא סכום קטן שאפשר לתלות בו טעם צדדי, אלא נתינה גדולה ונדיבה בפני עצמה, ובכל זאת, אם ניתנה בפנים כבושות ורעות, "אבד זכותו והפסידה" לגמרי. ביאור הגר"א מסביר את מקור הדין הזה כך:</p>
+    <div class="quote-box">
+        <p>"ואם נתנה כו', שעובר משום ולא ירע לבבך כו'."</p>
+        <span class="source-tag">ביאור הגר"א, יורה דעה, סימן רמט</span>
+    </div>
+    <p>כלומר, מי שנותן צדקה בפנים זעופות לא רק מפסיד את השכר, אלא עובר בפועל על לאו מפורש מן התורה, "וְלֹא יֵרַע לְבָבְךָ בְּתִתְּךָ לוֹ". זו אינה סתם המלצה למידת חסידות, אלא איסור תורה. וכך גם פוסק ספר מצוות גדול במניין הלאווין:</p>
+    <div class="quote-box">
+        <p>"הַנּוֹתֵן צְדָקָה בְּעַיִן רָעָה עוֹבֵר מִשּׁוּם: אַל יֵרַע לְבָבְךָ בְּתִתְּךָ לוֹ, כִּי בִּגְלַל הַדָּבָר הַזֶּה יְבָרֶכְךָ ה' אֱלֹהֶיךָ."</p>
+        <span class="source-tag">ספר מצוות גדול, לאווין סימן רפט</span>
+    </div>
+    <p>נמצא אפוא שיש כאן שני צדדים לאותו מטבע: מצד אחד, איסור תורה ממשי, "לא ירע לבבך", שהעובר עליו עובר על לאו. ומצד שני, תנאי מעכב בעצם קיום מצוות הנתינה: מי שעבר על הלאו, לא רק שעבר עבירה, אלא גם לא קיים את מצוות הצדקה כראוי, ו"הפסיד זכותו". בפרקים הבאים נעמיק בגדרי האיסור הזה: על מי הוא חל, מתי בדיוק הוא נבחן, ומדוע דווקא כאן, מכל המצוות, קבעה התורה תנאי כה נוקשה.</p>
+
+    <div class="quiz-box no-tts" data-quiz="section1"></div>
+
+    <div class="chapter-card">
+        <span class="num">ב</span>
+        <span class="name">שמונה המעלות בצדקה</span>
+    </div>
+    <div class="chapter-divider">✡</div>
+
+    <span class="chapter-label">פרק ב</span>
+    <h2 id="section2">שמונה המעלות בצדקה</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>הסולם השלם שמונה הרמב"ם, ממעלה גדולה ועד למעלה הפחותה שבכולן</li>
+            <li>מקומה של השמחה בתחתית הסולם, ומה זה מלמד</li>
+            <li>🕯️ מעשה באבני נזר: עדיף רובל בשמחה, או עשרה רובל בעצב?</li>
+        </ul>
+    </div>
+
+    <h3 id="sec2a">הסולם, ממעלה למעלה</h3>
+    <p>כדי להבין נכון היכן ממוקמת השמחה בתמונה הכוללת של מצוות הצדקה, כדאי להכיר את הסולם המפורסם שמונה הרמב"ם, שמונה מדרגות בצדקה זו למעלה מזו:</p>
+    <div class="highlight-box">
+        <ol>
+            <li>המחזיק ביד ישראל שמך, ונותן לו מתנה, הלוואה, שותפות, או עבודה, כדי שלא יצטרך לבריות כלל.</li>
+            <li>הנותן צדקה לעניים ואינו יודע למי נתן, והעני אינו יודע ממי לקח, כגון לשכת חשאים שהיתה במקדש.</li>
+            <li>הנותן לתוך קופה של צדקה, שהנותן יודע למי הוא נותן אך העני אינו יודע ממי לקח.</li>
+            <li>גדולי החכמים שהיו הולכים בסתר ומשליכים מעות בפתחי העניים.</li>
+            <li>נותן לו בידו קודם שישאל.</li>
+            <li>נותן לו אחר שישאל.</li>
+            <li>נותן לו פחות מן הראוי, אך בסבר פנים יפות.</li>
+            <li>נותן לו כראוי, אך בעצב.</li>
+        </ol>
+        <span class="source-tag">רמב"ם, הלכות מתנות עניים, פרק י הלכות ז–יד</span>
+    </div>
+    <p>המדרגה השמינית, התחתונה מכולן, אינה עוסקת בסכום הנתינה אלא באופן שבו היא ניתנת. שימו לב היטב: מי שנותן פחות מן הראוי, אבל בסבר פנים יפות, נמצא במעלה גבוהה יותר ממי שנותן את הסכום המלא והראוי, אך בעצב. הפנים היפות מנצחות את הסכום. ה"ש"ך" מוסיף ומדייק בהגדרת אותה מדרגה אחרונה:</p>
+    <div class="quote-box">
+        <p>"שֶׁיִּתֵּן לוֹ בְּעֶצֶב, וְהַיְנוּ שֶׁצַּר לוֹ בִּנְתִינָתוֹ, אֲבָל עַכָּל פָּנִים אֵינוֹ מַרְאֶה לוֹ פָּנִים זְעוּפוֹת, דְּאִם כֵּן לֹא נֶחְשָׁב בִּשְׁמוֹנָה מַעֲלוֹת, דְּהָא הִפְסִיד זְכוּתוֹ וְעוֹבֵר מִשּׁוּם לֹא יֵרַע לְבָבְךָ."</p>
+        <span class="source-tag">ש"ך, יורה דעה, סימן רמט ס"ק ט</span>
+    </div>
+    <p>כלומר, גם המדרגה השמינית, הפחותה שבשמונה המעלות, אינה כוללת מי שהראה פנים זועפות ממש. זו כבר מחוץ לסולם כולו. השמונה מעלות עוסקות רק במי שקיים את המצווה, ולו ברמה הבסיסית ביותר. מי שנתן בפנים זועפות לא נמצא בסולם כלל, כי "הפסיד זכותו" לגמרי, כפי שראינו בפרק הקודם.</p>
+
+    <h3 id="sec2b">🕯️ מעשה באבני נזר</h3>
+    <div class="story-box">
+        <span class="story-title">רובל בשמחה, או עשרה בעצב?</span>
+        <p>מסופר שחסיד עשיר ולמדן הגיע פעם אל רבי מסוכטשוב, בעל ה"אבני נזר" זצ"ל, ובפיו שאלה שהטרידה אותו. "כשבאים אלי לבקש צדקה," פתח החסיד, "אם אתן לכל אחד רובל אחד, אני נותן בשמחה ובלב שלם. אבל אם אתן עשרה רובלים, אני מרגיש צער בלב." הוא עצר לרגע, ואז המשיך: "ובכן, מה עדיף? האם לתת לכל אחד רובל אחד מתוך שמחה, כדי שלא אעבור על הלאו של 'ולא ירע לבבך'? או שמא עדיף לתת יותר, כך שהעני ייהנה יותר, גם אם אני מצטער ועובר על הלאו?"</p>
+        <p>האבני נזר הביט בו והשיב: "השאלה שלך בטעות יסודה. פשט הכתוב אינו כפי שאתה סבור." הוא הסביר: "התורה הקדושה ציוותה 'נתן תתן לו', וממילא 'ולא ירע לבבך'. כשאתה נותן פעם, ועוד פעם, ועוד עשרה רובלים, אתה בכל נתינה ונתינה עוקר מלבך מעט מהקמצנות והרוע שבו. אינך רק נותן כסף לעני, אתה מתגבר על יצרך." הוא הוסיף וביאר על פי דברי הרמב"ם בפירוש המשנה במסכת אבות, "והכל לפי רוב המעשה": ככל שאדם כופל ומתמיד בעשיית הטוב, כך שכרו מרובה יותר. "אינו דומה המחלק מאה זהובים לצדקה במאה פעמים, לנותן אותם כולם בפעם אחת. בכל אחת מהמאה נתינות אתה מקיים מחדש 'ולא ירע לבבך', ולבך נעשה טוב יותר בכל פעם. אבל אם תתן רק רובל אחד לכל עני, בלי להתגבר על עצמך, תישאר עם כל הרע שעודנו בלבך."</p>
+        <p>הוא סיים בכך שקישר את המעשה לדרשת חז"ל בספרי על הפסוק: "נתן תתן, מנין שאם נתת לו פעם אחת שאתה נותן לו אפילו מאה פעמים, תלמוד לומר נתן תתן, מכל מקום." ההרגל, הסביר האבני נזר, נעשה טבע. מי שמתרגל בנתינת צדקה שוב ושוב, סופו שיוכל לעשות זאת בשמחה אמיתית, לא כי הצער נעלם מאליו, אלא כי הוא התגבר עליו פעם אחר פעם, עד שהלב עצמו נעשה טוב.</p>
+    </div>
+    <p>מעניין להשוות זאת לעמדה אחרת שהובאה בשם רבי יהושע קורקוס. "דרך אמונה" מביא בשמו: "שֶׁטּוֹב לִתֵּן פָּחוֹת מֵהָרָאוּי בְּסֵבֶר פָּנִים יָפוֹת, מִלִּתֵּן כָּרָאוּי בְּעֶצֶב." לכאורה זו אותה נקודה בדיוק שהסולם של שמונה המעלות כבר לימד אותנו, שהפנים היפות עדיפות על הסכום. אך "דרך אמונה" עצמו מוסיף הבחנה חשובה: הדברים אמורים דווקא כשמדובר בעצב הנראה על הפנים ממש. אבל אם העצב נשאר בלב בלבד, ואינו ניכר כלפי חוץ, יש מקום לומר שמוטב שייתן את מלוא הסכום הראוי, כדי שהעני ייהנה, אף שלא קיים בכך מצווה מן המובחר. הבחנה עדינה זו, בין עצב שבלב לעצב שבפנים, תלווה אותנו גם בפרק הבא.</p>
+
+    <div class="quiz-box no-tts" data-quiz="section2"></div>
+
+    <div class="chapter-card">
+        <span class="num">ג</span>
+        <span class="name">על מי חל האיסור</span>
+    </div>
+    <div class="chapter-divider">📖</div>
+
+    <span class="chapter-label">פרק ג</span>
+    <h2 id="section3">על מי חל האיסור: הנותן או המקבל?</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>חקירה יסודית: האם האיסור עוסק בלב הנותן, או בכבודו של המקבל</li>
+            <li>הנפקא מינה למעשה: נתינה דרך גזבר הצדקה</li>
+            <li>ראיית הט"ז, קושייתו, ותירוצי האחרונים</li>
+        </ul>
+    </div>
+
+    <h3 id="sec3a">החקירה ונפקא מינה לגזבר</h3>
+    <p>לכאורה הדין פשוט: אסור לתת צדקה בפנים זועפות. אך בבחינה מדוקדקת יותר עולה חקירה יסודית בגדר האיסור עצמו: האם האיסור מוטל על הנותן, שלא יתן בפנים עצובות, מצד עצם התכונה הנפשית שהוא צריך לפתח? או שמא האיסור עוסק במקבל, שלא יקבל תחושה של השפלה ובושה מפנים זועפות, ועיקר הדין הוא באיזו מידה מותר לפגוע בכבודו?</p>
+    <p>לחקירה זו יש נפקא מינה למעשה ברורה: מה הדין במי שנותן לא ישירות לעני, אלא לגזבר הצדקה? אם האיסור מוטל על הנותן מצד עצמו, מובן שגם כאן אסור לו לתת בפנים זועפות, שהרי הבעיה היא בלבו ובמידותיו שלו, ואינה תלויה כלל בזהות מי שעומד מולו. אך אם האיסור עניינו כבודו של המקבל, יש מקום לומר שהתורה החמירה רק כלפי העני עצמו, שפגיעה בכבודו חמורה במיוחד, ואילו כלפי גזבר הצדקה, שאינו נזקק ואין כאן פגיעה בכבודו האישי, לא החמירה התורה כלל.</p>
+    <p>הרמב"ן, במניין הלאווין שהשמיט הרמב"ם מספר המצוות, מנסח את האיסור בלשון כללית, שאינה מדגישה כלל את פגיעת הבושה במקבל אלא את עצם מידתו של הנותן:</p>
+    <div class="quote-box">
+        <p>"הַמִּצְוָה הַי''ז שֶׁנִּמְנַעְנוּ גַּם כֵּן שֶׁלֹּא יֵחַר בְּעֵינֵינוּ בְּתִתֵּנוּ צְדָקָה לָעֲנִיִּים, וְלֹא נִתֵּן אוֹתָהּ אֲלֵיהֶם בְּעַיִן רָעָה, וְנַחְשֹׁב אוֹתָהּ מִעוּט לָנוּ. אֲבָל יִהְיֶה זֶה בְּעֵינֵינוּ שָׂכָר וְתוֹעֶלֶת וְתוֹסֶפֶת בְּמָמוֹנֵנוּ, לְפִי שֶׁהוּא יִתְבָּרַךְ יְשַׁלֵּם לָנוּ הַכֹּל בְּכַמָּה כְּפָלִים."</p>
+        <span class="source-tag">השגות הרמב"ן לספר המצוות לרמב"ם, שכחת הלאווין, מצוה יז</span>
+    </div>
+    <p>שימו לב שהרמב"ן מנסח את האיסור כולו במונחים של תחושתו הפנימית של הנותן, "שלא יחר בעינינו", ו"לא נחשוב אותה מיעוט לנו", ואינו מזכיר כלל את הפגיעה האפשרית בכבוד העני. ניסוח זה נוטה לצד הראשון של החקירה, שהאיסור עוסק בעיקרו בלב הנותן ובמידותיו, ולא רק בהגנה על כבוד המקבל.</p>
+    <p>מחבר ספר "פנים יפות" מוסיף כאן נדבך נוסף מתוך עיון בציווי אחר, הנוגע גם הוא לגדרי הלב בנתינה: "וַיִּקְחוּ לִי תְרוּמָה מֵאֵת כָּל אִישׁ אֲשֶׁר יִדְּבֶנּוּ לִבּוֹ תִּקְחוּ אֶת תְּרוּמָתִי." יש להתבונן: מדוע דרשה התורה תרומה למשכן דווקא ממי שלבו נודבו? הרי אפשר היה לגבות תרומה מכל אחד, כפי חלקו הראוי. אלא, מבאר בעל "פנים יפות", שאם אין לבו נודב, אין כאן כלל מצוות נתינה. גם כאן, כמו בצדקה, המצווה תלויה בלב הנותן ולא רק בגוף המעשה. זוהי ראיה נוספת לכך שבמצוות נתינה בכלל, ובצדקה בפרט, עיקר הדין אינו רק ביד הפותחת אלא בלב שמאחוריה.</p>
+
+    <h3 id="sec3b">ראיית הט"ז ותירוצה</h3>
+    <p>ראיה מפורשת ומעניינת לכך שגם בגזבר צדקה שייך האיסור מובאת בדברי הט"ז, מתוך דיוק בלשון השולחן ערוך:</p>
+    <div class="quote-box">
+        <p>"אִם יָכוֹל לַעֲשׂוֹת שֶׁאֲחֵרִים יִתְּנוּ, שְׂכָרוֹ גָּדוֹל מִשְּׂכַר הַנּוֹתֵן."</p>
+        <span class="source-tag">שולחן ערוך, יורה דעה, הלכות צדקה, סימן רמט סעיף ה</span>
+    </div>
+    <div class="qa-box">
+        <p><strong>קושיה:</strong> מדובר כאן במי שגובה כספי צדקה מאחרים ואינו נותן בעצמו, ונאמר עליו ששכרו גדול משכר הנותן. הט"ז מקשה קושיה חדה: "וְאֵין פֵּרוּשׁוֹ שֶׂשְּׂכָרוֹ יוֹתֵר מִן הָעוֹשֶׂה עַל יְדֵי כְּפִיָּה, דְּהָא הָעוֹשֶׂה עַל יְדֵי כְּפִיָּה הִפְסִיד זְכוּתוֹ, כְּמוֹ שֶׁכָּתוּב בְּסָעִיף ג'." הרי אם מדובר במי שכפו אותו לתת ונתן שלא ברצון, כבר למדנו שהוא "הפסיד זכותו" ולא קיים מצוות צדקה כלל. אם כן, מהו החידוש הגדול בכך ש"שכרו גדול משכר הנותן"? הרי אין לו שכר בכלל!</p>
+        <p><strong>תירוץ הט"ז:</strong> "אֶלָּא פֵּרוּשׁוֹ יוֹתֵר מִשְּׁאָר עוֹשֵׂי צְדָקָה אֲפִלּוּ בְּרָצוֹן." כלומר, אין הכוונה שהגזבר עדיף על מי שנותן בכפייה, אלא שהגזבר, המשכנע אחרים לתת, עדיף אפילו על מי שנותן בעצמו ברצון גמור, במקום אחר.</p>
+    </div>
+    <p>מכאן עולה הבחנה מעניינת: אם באמת לגזבר אין כלל איסור לתת בעצבות, כפי שהיה עולה מן הצד השני של החקירה, מתיישבת קושיית הט"ז מאליה. שהרי אז הדוגמה של הגזבר איננה כלל דוגמה למי שהפסיד את זכותו, אלא למי שבעצם עשה מעשה חיובי לגמרי, שאין בו את בעיית "פנים זעופות". "מעשה רוקח" על הרמב"ם מתייחס אף הוא לקושיית הט"ז ומציע כיוון אחר לגמרי לתירוצה:</p>
+    <div class="quote-box">
+        <p>"וְלַעֲנִיּוּת דַּעְתִּי נִרְאֶה, דְּאַף שֶׁהוּא עַל יְדֵי כְּפִיָּה, מִכָּל מָקוֹם לֹא מִפְּנֵי זֶה הִפְסִיד זְכוּתוֹ, עַל דֶּרֶךְ 'תְּלִיוּהוּ וְזַבִּין וכו''. וּמַה שֶּׁכָּתוּב בְּסָעִיף ג', הָתָם שָׁאנֵי, שֶׁנּוֹתֵן לֶעָנִי בְּפָנִים זְעוּפוֹת וְרָעוֹת, דְּגָרִיעַ טְפֵי לְבַיֵּשׁ פְּנֵי הֶעָנִי."</p>
+        <span class="source-tag">מעשה רוקח על הרמב"ם, הלכות מתנות עניים, פרק י הלכה ו</span>
+    </div>
+    <p>"מעשה רוקח" מיישב אחרת: מי שנתן בכפייה כלל לא הפסיד את זכותו, כמו במקח שנעשה מתוך כפייה שדינו כתקף. הלימוד ש"הפסיד זכותו" נאמר במקום אחר, בסעיף ג', ושם מדובר במקרה חמור יותר, נותן לעני עצמו בפנים זועפות ורעות, שיש בכך בושה ופגיעה ממשית בכבודו. נמצא ש"מעשה רוקח" נוטה לצד שהחומרה המיוחדת של "הפסיד זכותו" קשורה דווקא לפגיעה בכבוד העני, ולא לכל מקרה שבו הנתינה לא היתה מתוך רצון גמור.</p>
+    <p>יש להסתפק כיצד בדיוק להבין את תירוצו: האם הטעם שלא הפסיד זכותו הוא רק משום שנתן לגזבר ולא לעני עצמו, או שמא כוונתו לחלק כעין חלוקת הש"ך שראינו בפרק הקודם, בין עצב שבלב לעצב הנראה גם בפנים. כך משמע גם מלשון "דרך אמונה" שהזכרנו.</p>
+    <div class="qa-box">
+        <p><strong>שאלה:</strong> אם עיקר הדין תלוי בלב, מדוע יש חילוק להלכה בין מי שנתן בחוסר שמחה חיצוני, הנראה על הפנים, לבין מי שחסרה לו רק השמחה הפנימית, שבלב?</p>
+        <p><strong>תשובה:</strong> כנראה שהתורה יודעת שלא כל אדם יכול להגיע מיד לשמחה פנימית שלמה בזמן הנתינה, להפנים בליבו לגמרי שהנתינה היא באמת לקיחה וזכות עבורו. לכן, כל עוד הדבר לא התבטא כלפי חוץ, רואים שהאדם לפחות יודע מהי האמת ושואף להגיע אליה, ואולי בהמשך, מתוך התרגלות, גם ליבו ידע זאת לגמרי, כפי שראינו במעשה באבני נזר. אך כאשר הוא אינו מתנהג כך אפילו כלפי חוץ, זהו סימן שהוא אינו חי כלל אפילו את הרצון לדעת שהוא זוכה להיות הנותן, ולכן שם באמת אין כאן מצווה כלל.</p>
+    </div>
+
+    <div class="quiz-box no-tts" data-quiz="section3"></div>
+
+    <div class="chapter-card">
+        <span class="num">ד</span>
+        <span class="name">שלושה פירושים לפסוק</span>
+    </div>
+    <div class="chapter-divider">✡</div>
+
+    <span class="chapter-label">פרק ד</span>
+    <h2 id="section4">שלושה פירושים ל"נתן תתן לו ולא ירע לבבך"</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>רבינו יונה: המצווה נועדה לנטוע בנו מידת נדיבות</li>
+            <li>ספר העיקרים: השמחה היא שלמות המצוה, ובה תלויה הברכה</li>
+            <li>תולדות יצחק: השמחה היא האות שכבר נקנתה מידת הנדיבות</li>
+        </ul>
+    </div>
+    <p>מצאנו בראשונים שלושה כיוונים שונים בביאור הפסוק "נָתוֹן תִּתֵּן לוֹ וְלֹא יֵרַע לְבָבְךָ בְּתִתְּךָ לוֹ". שלושתם מסכימים על עצם הדין, אך כל אחד מהם מדגיש זווית אחרת לגמרי בטעמו, ומכאן שלושה מבטים משלימים על מהות מצוות הצדקה כולה.</p>
+
+    <h3 id="sec4a">רבינו יונה: מידת הנדיבות</h3>
+    <div class="quote-box">
+        <p>"נָתֹן תִּתֵּן לוֹ וְלֹא יֵרַע לְבָבְךָ בְּתִתְּךָ לוֹ. וְהִזְהִירָנוּ בָּזֶה לְהַרְחִיק מִנַּפְשֵׁנוּ צָרוּת הָעַיִן, וְלִהְיוֹתֵנוּ טוֹבֵי עַיִן, כָּעִנְיָן שֶׁנֶּאֱמַר: טוֹב עַיִן הוּא יְבֹרָךְ. וְלֹא דַּי בְּמַתְּנַת הַיָּד לְבַד, כִּי אִם אֲשֶׁר נִטַּע בְּנַפְשׁוֹתֵינוּ מִדַּת הַנְּדִיבוּת. עַל כֵּן הִזְהִיר וְאָמַר וְלֹא יֵרַע לְבָבְךָ, אַחַר שֶׁנֶּאֱמַר נָתֹן תִּתֵּן לוֹ."</p>
+        <span class="source-tag">רבינו יונה</span>
+    </div>
+    <p>לדעת רבינו יונה, מטרת התוספת "ולא ירע לבבך" היא חינוכית במהותה: התורה לא הסתפקה במתנת היד, במעשה החיצוני של הנתינה, אלא ביקשה לנטוע בנפשנו ממש מידה, את מידת הנדיבות. "טוֹב עַיִן הוּא יְבֹרָךְ" (משלי כב, ט), מי שעינו טובה זוכה לברכה, לא רק מפני שהוא נותן יותר, אלא מפני שהוא מפתח בתוכו תכונת נפש. הצדקה, לפי כיוון זה, היא כלי לעיצוב האופי.</p>
+
+    <h3 id="sec4b">ספר העיקרים: שלמות המצוה</h3>
+    <div class="quote-box">
+        <p>"דָּבָר הַנּוֹתֵן שְׁלֵמוּת אֶל הַמִּצְוָה, כְּדֵי שֶׁיּוּשַׂג עַל יָדָהּ הַתַּכְלִית הַמְכֻוָּן בָּהּ, הִיא הַשִּׂמְחָה. כִּי הַשִּׂמְחָה נוֹתֶנֶת גְּמָר וּשְׁלֵמוּת אֶל הַדָּבָר הַנִּפְעָל, עַד שֶׁהַפֹּעַל הָאֶחָד בְּעַצְמוֹ, כְּשֶׁיֵּעָשֶׂה בְּשִׂמְחָה וּבְטוּב לֵב, יִקָּרֵא מַעֲלָה, וְכַאֲשֶׁר יֵעָשֶׂה בְּעַצְבוֹן, יִקָּרֵא פְּחִיתוּת... וְכֵן נִמְצָא הַכָּתוּב מְיַעֵד הַגְּמוּל עַל עֲשִׂיַּת הַצְּדָקָה בְּשִׂמְחָה, אָמַר: נָתוֹן תִּתֵּן לוֹ וְלֹא יֵרַע לְבָבְךָ בְּתִתְּךָ לוֹ, כִּי בִּגְלַל הַדָּבָר הַזֶּה יְבָרֶכְךָ ה' אֱלֹהֶיךָ. תָּלָה הַבְּרָכָה בְּ'לֹא יֵרַע לְבָבְךָ', וְלֹא בְּ'נָתוֹן תִּתֵּן לוֹ'."</p>
+        <span class="source-tag">ספר העיקרים, מאמר שלישי, פרק לג</span>
+    </div>
+    <p>בעל ספר העיקרים מדייק דיוק חד במיוחד בגוף הפסוק: התורה תלתה את הברכה לא בחלק הראשון של הפסוק, "נתון תתן לו", אלא בחלק השני, "ולא ירע לבבך". לו היתה הברכה תלויה בעצם הנתינה, היה עלינו לצפות שהכתוב יאמר "כי בגלל נתינתך יברכך". אך התורה בחרה לתלות את הברכה דווקא בשמחה שבנתינה. מכאן מוכיח ספר העיקרים יסוד פילוסופי, בעקבות "ספר המידות" לאריסטו: כל מעשה, כל פֹּעַל, מקבל את שלמותו רק כשהוא נעשה מתוך שמחה. אותו מעשה עצמו, אם נעשה בעצבון, אינו נחשב מעלה כלל, אלא פחיתות.</p>
+
+    <h3 id="sec4c">תולדות יצחק: קניין ההרגל</h3>
+    <div class="quote-box">
+        <p>"יֵשׁ אוֹמְרִים שֶׁלְּפִי שֶׁיּוֹתֵר טוֹב שֶׁיִּתֵּן הָאָדָם אֶלֶף לְבָנִים בְּאֶלֶף פְּעָמִים, מִשֶּׁיִּתְּנֵם בְּפַעַם אֶחָת, לְפִי שֶׁכְּשֶׁנּוֹתֵן הַרְבֵּה פְּעָמִים וּמַרְגִּיל עַצְמוֹ בְּכָךְ, קוֹנֶה קִנְיַן הַנְּדִיבוּת... וְאֵיךְ יוּדַע שֶׁקָּנָה הָאָדָם קִנְיַן הַנְּדִיבוּת, וְכֵן כָּל קִנְיָן? כְּשֶׁעוֹשֶׂה בְּשִׂמְחָה, זֶהוּ אוֹת גָּמוּר שֶׁכְּבָר יֵשׁ לוֹ הַנְּדִיבוּת בְּקִנְיָן... פֵּרוּשׁ, תִּתֵּן בְּשִׂמְחָה, שֶׁבְּלֹא סָפֵק כְּשֶׁתַּרְגִּיל עַצְמְךָ בָּהּ לֹא תִתְעַצֵּב בִּנְתִינָתָהּ אֶלָּא תִּשְׂמַח בָּהּ."</p>
+        <span class="source-tag">תולדות יצחק, פרשת ראה</span>
+    </div>
+    <p>תולדות יצחק מציע כיוון שלישי, המזכיר את דברי האבני נזר שראינו בפרק הקודם, אך מוסיף לו יסוד עיוני. השמחה אינה רק תוצאה רצויה, אלא היא עצמה מבחן, אות. כשם שאי אפשר לדעת אם אדם קנה קניין כלשהו אלא על ידי בחינת מעשיו, כך גם קניין מידת הנדיבות מוכח רק על ידי השמחה שבנתינה. אדם שנתן פעם אחת מתוך כפייה עצמית, עדיין לא הוכיח שקנה את המידה. אבל אדם שנותן שוב ושוב, עד שהנתינה כבר משמחת אותו מעצמה, הוכיח בכך שהמידה כבר טבועה בו. תולדות יצחק מסיים בקישור מאלף לפסוק אחר, העוסק דווקא בעונש שבא על מי שעבד את ה' שלא בשמחה: "תַּחַת אֲשֶׁר לֹא עָבַדְתָּ אֶת ה' אֱלֹהֶיךָ בְּשִׂמְחָה, וְעָבַדְתָּ אֶת אֹיְבֶיךָ" (דברים כח, מז). ומדייק: לא נענש שם על כך שלא עבד את ה' כלל, אלא דווקא על שעבדו שלא בשמחה. הרי לנו סיוע נוסף לכך שהעונש, כמו הברכה, תלוי בעיקר בשמחה שבמעשה, ולא רק בעצם קיומו.</p>
+    <p>שלושת הכיוונים הללו אינם סותרים זה את זה, אלא משלימים תמונה אחת: לדעת רבינו יונה, השמחה מנטרת מידת נדיבות שכבר קיימת בנפש. לדעת ספר העיקרים, השמחה היא שנותנת למעשה את שלמותו ואת עצם היותו "מעלה". ולדעת תולדות יצחק, השמחה היא האות המוכיח שהמידה כבר נקנתה. שלושתם יחד מבארים מדוע דווקא בצדקה, יותר מכל מצווה אחרת, כל כך הרבה תלוי בשמחה שבלב הנותן.</p>
+
+    <div class="quiz-box no-tts" data-quiz="section4"></div>
+
+    <div class="chapter-card">
+        <span class="num">ה</span>
+        <span class="name">זמן השמחה</span>
+    </div>
+    <div class="chapter-divider">📖</div>
+
+    <span class="chapter-label">פרק ה</span>
+    <h2 id="section5">זמן השמחה: לא רק בלב, אלא ברגע הנתינה</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>אהבת חסד: מדוע הקושי חוזר בכל נתינה מחדש, ולמה זה בדיוק העניין</li>
+            <li>המשל של אלף רובל שניתנו כדי לתת מהם מאה ללוי, וביאור מ"צרור המור"</li>
+        </ul>
+    </div>
+
+    <h3 id="sec5a">אהבת חסד: הקושי חוזר בכל פעם מחדש</h3>
+    <p>החפץ חיים, בספרו "אהבת חסד", מעמיק בשאלה מדוע דווקא ברגע הנתינה עצמו, ולא רק בכלל היחס לצדקה, קבעה התורה את האיסור:</p>
+    <div class="quote-box">
+        <p>"יָדוּעַ שֶׁמִּטְבַע הָאָדָם לֹא יִרְצֶה לִתֵּן צְדָקָה לֶעָנִי רַק בְּפַעַם אֶחָת. אֲבָל אִם יֻכְרַח לִתֵּן לֶעָנִי הַזֶּה בְּעַצְמוֹ עוֹד פַּעַם אַחַר פַּעַם, לְמָשָׁל עַד מֵאָה פְּעָמִים, אַף שֶׁיִּתֵּן לוֹ מִצַּד חִיּוּב הַמִּצְוָה, לֹא יִתְרַצֶּה הַלֵּב לָזֶה בְּעֵת הַנְּתִינָה. וְרַק אַחַר שֶׁכְּבָר הוֹצִיאָם מִתַּחַת יָדוֹ, שֶׁהַמָּעוֹת בְּלָאו הָכִי בֵּין כָּךְ וּבֵין כָּךְ כְּבָר אֵינָם בְּיָדוֹ, בְּקַל יוּכַל לְהִתְיַשֵּׁב וְלוֹמַר: מַה יּוֹעִיל אִם יֵרַע לִי, וּלְהַקְטִין הַמִּצְוָה מִשּׁוּם זֶה."</p>
+        <span class="source-tag">חפץ חיים, אהבת חסד, חלק ב פרק יז</span>
+    </div>
+    <p>יש כאן תובנה פסיכולוגית מדויקת. קל יחסית להשלים עם מצוות הצדקה בדיעבד, אחרי שהכסף כבר יצא מן היד. באותו רגע, מה כבר משנה אם הלב יהיה שלם או לא? הכסף בין כה וכה כבר אינו ברשותנו. הקושי האמיתי הוא דווקא ברגע עצמו, בשנייה שבה היד עדיין אוחזת בכסף, ואפשר עדיין, לו רק רצינו, שלא לתת, או לתת פחות. באותו רגע בדיוק, ולא לפני ולא אחרי, נבחנת האמת הפנימית של הנותן.</p>
+    <p>החפץ חיים ממשיך ומבאר את מבנה הפסוק לאור הבנה זו:</p>
+    <div class="quote-box">
+        <p>"וְלָזֶה בָּא הַכָּתוּב וְאָמַר, נָתֹן תִּתֵּן לוֹ, הַיְנוּ שֶׁמְּחֻיָּב לִתֵּן אֲפִלּוּ מֵאָה פְּעָמִים. וְלֹא יֵרַע לְבָבְךָ בְּתִתְּךָ לוֹ, הַיְנוּ אֲפִלּוּ בְּעֵת הַנְּתִינָה. כִּי בִּגְלַל הַדָּבָר הַזֶּה, פֵּרוּשׁ, כִּי הֲלֹא בֶּאֱמֶת הַמָּעוֹת הֵם שֶׁל הַקָּדוֹשׁ בָּרוּךְ הוּא, וְאָנוּ נוֹתְנִים מִשֶּׁלּוֹ, כְּמַאֲמַר הַתַּנָּא: תֵּן לוֹ מִשֶּׁלּוֹ. ... וְאִם מִתְיַשֵּׁב בְּנַפְשׁוֹ בְּעֵת עֲשִׂיַּת הַמִּצְוָה גּוּפָא, שֶׁיֵּשׁ לוֹ עֲדַיִן בְּחִירָה בָּזֶה, וּמִתְגַּבֵּר עַל יִצְרוֹ בְּלִבּוֹ כְּדֵי לַעֲשׂוֹת רְצוֹן הַקָּדוֹשׁ בָּרוּךְ הוּא, אָז וַדַּאי יָבוֹא לוֹ בְּרָכָה מֵהַקָּדוֹשׁ בָּרוּךְ הוּא גַּם בָּעוֹלָם הַזֶּה."</p>
+        <span class="source-tag">חפץ חיים, אהבת חסד, חלק ב פרק יז</span>
+    </div>
+    <p>הברכה, אם כן, אינה תלויה בכך שסוף כל סוף השלמנו עם העובדה שהכסף כבר יצא מרשותנו. היא תלויה דווקא בבחירה החופשית שנעשתה ברגע הנתינה עצמו, כשעוד היתה לנו האפשרות שלא לתת, או לתת בעצב, ובכל זאת התגברנו על יצרנו מתוך רצון לעשות רצון בוראנו.</p>
+
+    <h3 id="sec5b">משל האלף רובל, וביאור מ"צרור המור"</h3>
+    <p>יסוד עמוק נוסף בהבנת השמחה בצדקה מובא בשם ספר "צרור המור", בביאורו לציווי על תרומת המשכן:</p>
+    <div class="quote-box">
+        <p>"וְאָמַר: וְיִקְחוּ לִי תְרוּמָה, וְלֹא אָמַר: וְיִתְּנוּ לִי. לְהוֹרוֹת לָנוּ עַל מַה שֶּׁאָמַר דָּוִד הַמֶּלֶךְ עָלָיו הַשָּׁלוֹם: כִּי מִמְּךָ הַכֹּל וּמִיָּדְךָ וְגוֹ'. לְהוֹרוֹת לָנוּ כִּי עִנְיְנֵי הַצְּדָקָה וְהַנְּדָבָה שֶׁאָנוּ נוֹתְנִין וּמִתְנַדְּבִין לְבֶדֶק הַבַּיִת וְלַעֲנִיִּים, אֵין אָנוּ נוֹתְנִין, אֶלָּא לוֹקְחִים וּמְקַבְּלִים. כִּי מִי הוּא זֶה וְאֵיזֶהוּ שֶׁיִּתֵּן מַתָּנָה לְמֶלֶךְ הַמְּלָכִים, אַחַר שֶׁהַכֹּל שֶׁלּוֹ, וְלַה' הָאָרֶץ וּמְלוֹאָהּ."</p>
+        <span class="source-tag">צרור המור, שמות, פרשת תרומה</span>
+    </div>
+    <p>הרעיון עמוק: כשאנחנו נותנים צדקה, איננו באמת "נותנים", כי אין לנו דבר משלנו לתת. "צרור המור" ממשיך ומבאר שהקב"ה בחסדו מפקיד בידינו טובות העולם הזה, ומצפה מאיתנו להוציא מהן את הכל לעבודתו, בלי להתגאות ולומר "כוחי ועוצם ידי עשה לי את החיל הזה". ולכן, מסיים "צרור המור", "וְלָכֵן אָמַר: אִישׁ בְּרַתּוֹתָא, תֵּן לוֹ מִשֶּׁלּוֹ. וְאִם כֵּן, לָמָּה יֵרַע לְבָבְךָ בְּתִתְּךָ לוֹ?"</p>
+    <p>מכאן מציע מחבר ספר "פנים יפות" משל מאיר עיניים, מעשי ומוחשי במיוחד. תארו לעצמכם אדם שאומר לחברו: "האם תרצה לקבל ממני אלף שקלים, בתנאי שתיתן מאה מהם ללוי?" ברור שהחבר ישמח מאוד ויודה בכל לבו. ואם לאחר מכן ייתן את אותם מאה שקלים ללוי, אך בפנים זעופות ובכבדות, הרי זה כפוי טובה שאין כמותו! הוא הרי קיבל אלף שקלים במתנה, ומבקשים ממנו רק להעביר מאה מהם הלאה. בדיוק כך, מסביר "פנים יפות", צריך האדם להרגיש כלפי הקב"ה: "כָּךְ מַמָּשׁ צָרִיךְ לְהַרְגִּישׁ הָאָדָם, הַקָּדוֹשׁ בָּרוּךְ הוּא נָתַן לוֹ כֶּסֶף עַל מְנָת שֶׁיִּתֵּן לֶעָנִי אֶת חֶלְקוֹ. וְאִם נוֹתֵן בְּפָנִים זְעוּפוֹת, הֲרֵי זֶה מַרְאֶה שֶׁחוֹשֵׁב שֶׁהַכֶּסֶף שֶׁלּוֹ, וְכֹחוֹ וְעֹצֶם יָדוֹ עָשָׂה לוֹ אֶת הַחַיִל הַזֶּה, וַהֲרֵי זֶה הִפְסִיד זְכוּתוֹ."</p>
+    <p>ומכאן הוא מוסיף הלכה חשובה, המבארת יסוד רחב יותר בכל עניין הפרנסה: הפסוק "עַשֵּׂר תְּעַשֵּׂר... בַּעֲבוּר תְּבָרֶכְךָ" (דברים יד, כב) מלמד שכל הברכה שבמעשה הצדקה שייכת למי שנותן מתוך הכרת תודה לבורא עולם על מה שנתן לו, מתוך הודיה ולא מתוך תחושת בעלות. וממילא, על ידי אותה הודיה עצמה, מביא הנותן ברכה נוספת לעולם. ואפשר להוסיף על פי זה טעם למנהג ישראל לאסוף צדקה לפני פורים דווקא בחודש אדר, מפני שחודש אדר מלמדנו על השגחה פרטית, וזו נקנית דווקא על ידי מעשה הצדקה, שבו האדם מכיר שגם פרנסתו וגם פרנסת חברו נתונות ביד ההשגחה.</p>
+
+    <div class="quiz-box no-tts" data-quiz="section5"></div>
+
+    <div class="chapter-card">
+        <span class="num">ו</span>
+        <span class="name">מדוע דווקא בצדקה?</span>
+    </div>
+    <div class="chapter-divider">✡</div>
+
+    <span class="chapter-label">פרק ו</span>
+    <h2 id="section6">מדוע דווקא בצדקה השמחה מעכבת?</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>ההבדל בין מצוות שיש בהן מטרה בעצם המעשה, לצדקה שמטרתה בונה את הלב</li>
+            <li>הכסף כפיקדון, וההשוואה למוסדות הרווחה החברתיים</li>
+        </ul>
+    </div>
+
+    <h3 id="sec6a">לבנות לב טוב, לא רק לפרנס עני</h3>
+    <p>נגיע כעת לשאלת היסוד עצמה: מדוע דווקא במצוות הצדקה, מכל תרי"ג המצוות, קבעה התורה שהשמחה מעכבת? מחבר ספר "פנים יפות" מציע הסבר יסודי:</p>
+    <div class="highlight-box">
+        <p>נראה לבאר את העניין כך: בכל מצווה יש מטרה בעצם המצווה עצמה. לדוגמה, אדם המניח תפילין, יש מטרה מהותית בעצם התפילין המונחות עליו. וכן שמירת שבת, יש מטרה מהותית בעצם השבתת המלאכה. אבל בצדקה, המטרה איננה רק לתת לזולת, שהרי "מְזוֹנוֹתָיו שֶׁל אָדָם קְצוּבִים מֵרֹאשׁ הַשָּׁנָה", כפי שכתב בעל ספר "נתיב במים עזים". אם כן, מטרת מצוות החסד שאתה נותן היא כדי לבנות בך, בנותן, לב טוב. לכן, אם נתת בנדיבות לב, עשית משהו, קנית לך מידה טובה. אבל אם נתת ללא רצון, לא עשית כלום, שכן לעני ממילא היה מגיע אותו סכום בין כך ובין כך, ואת ליבך שלך לא תיקנת.</p>
+    </div>
+    <p>וממשיך "פנים יפות" ומביא לכך משל נפלא, מהמשכן עצמו: "וְהוּא הַדִּין בְּמִשְׁכָּן: וְכִי הַקָּדוֹשׁ בָּרוּךְ הוּא, שֶׁמְּלֹא כָל הָאָרֶץ כְּבוֹדוֹ, צָרִיךְ מִשְׁכָּן? אֶלָּא לְזַכּוֹת אוֹתָנוּ." המשכן לא נבנה כי הקב"ה זקוק לו, אלא כדי לזכות בו את בני ישראל. וכשם שהמשכן נועד לזכות אותנו, ולא כדי לספק צורך של הקב"ה, כך גם הצדקה נועדה בעיקרה לזכות את הנותן, לבנות בו לב טוב, ולא רק לספק את הצורך החומרי של המקבל. וממילא, מי שלא מרגיש שזוהי זכות עבורו, לא עשה בכך כלום.</p>
+
+    <h3 id="sec6b">הכסף כפיקדון</h3>
+    <p>יסוד דומה, אך מזווית מעט שונה, עולה משיעור נוסף על אותו נושא, המבאר מדוע דווקא בצדקה השמחה מעכבת, בהשוואה למוסדות רווחה חברתיים:</p>
+    <div class="highlight-box">
+        <p>צדקה מטרתה שהאדם עצמו ישתנה. בעוד שביטוח לאומי, ומוסדות דומים לו, מטרתם היחידה היא לעזור לעניים, ביהדות מטרת מצוות הצדקה היא לעזור גם לעשירים, כדי שיהיה להם לב טוב. אדם צריך להרגיש שהכסף שבידו הוא רק פיקדון בידו, שייך לקב"ה, ואם רע לבבו בעת נתינתו, זהו סימן שהוא מרגיש כאילו הוא נותן משלו ממש, ולא ממה שהופקד בידיו.</p>
+    </div>
+    <p>גם החפץ חיים, בהמשך דבריו ב"אהבת חסד", נוגע בדיוק בנקודה זו, בבארו כיצד ייתכן שאדם זוכה בשכר על מעשה שהכסף שבו כלל אינו שלו: "בְּאֵר הַטַּעַם שֶׁבִּצְדָקָה זוֹכִים בַּעֲבוּר מִדַּת הַנְּדִיבוּת, הֱיוֹת וְהַכֶּסֶף בֵּין כָּךְ שַׁיָּךְ לְהַקָּדוֹשׁ בָּרוּךְ הוּא, וְאִם כֵּן, מַה נָּתַן הָאָדָם? רַק אֶת לִבּוֹ." זוהי בדיוק אותה נקודה שראינו בפרק החמישי אצל "צרור המור", ו"פנים יפות" בפרק זה: התרומה האמיתית של האדם בצדקה איננה הכסף, שהרי הכסף ממילא שייך לקב"ה, אלא הלב שמאחורי הנתינה. ולכן, כשהלב אינו שלם, נחסר בדיוק החלק היחיד שהיה שייך לאדם עצמו לתרום.</p>
+    <p>נמצא שהתשובה לשאלת הפרק, מדוע דווקא בצדקה השמחה מעכבת, מתחדדת משתי הזוויות גם יחד: מצד אחד, מטרת המצווה איננה רק החיצוניות של הנתינה אלא בניית הלב, כפי שראינו אצל "פנים יפות". ומצד שני, הכסף עצמו אינו קניינו של האדם באמת, אלא פיקדון, ולכן החלק היחיד שהוא באמת נותן מעצמו הוא ליבו. משתי הזוויות, המסקנה זהה: כשהלב אינו שלם, לא ניתן דבר.</p>
+
+    <div class="quiz-box no-tts" data-quiz="section6"></div>
+
+    <div class="chapter-card">
+        <span class="num">ז</span>
+        <span class="name">הברכה והדורון</span>
+    </div>
+    <div class="chapter-divider">📖</div>
+
+    <span class="chapter-label">פרק ז</span>
+    <h2 id="section7">הברכה שבדברי הניחומים, והדורון של הקב"ה</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>מה שמעו "תשובות והנהגות" מפי הגאון מטשיבין על מקור הברכה</li>
+            <li>🕯️ הזוהר הקדוש: העני כדורון שהקב"ה שולח לנותן</li>
+        </ul>
+    </div>
+
+    <h3 id="sec7a">תשובות והנהגות: הגאון מטשיבין</h3>
+    <p>בספר "תשובות והנהגות" מובא רעיון עמוק, ששמע המחבר מפי הגאון מטשיבין זצ"ל, המוסיף זווית חדשה על השאלה מהיכן בדיוק נובעת הברכה על מצוות הצדקה:</p>
+    <div class="quote-box">
+        <p>"בְּבִרְכָה שֶׁהִבְטִיחַ הַקָּדוֹשׁ בָּרוּךְ הוּא עַל מִצְוַת צְדָקָה נֶאֱמַר בָּהּ: כִּי בִּגְלַל הַדָּבָר הַזֶּה יְבָרֶכְךָ ה' אֱלֹקֶיךָ. וּבֵאֵר, שֶׁ'הַדָּבָר' הוּא מִלְּשׁוֹן דִּבּוּר. וְהַיְנוּ, שֶׁאֶת הַבְּרָכָה אֵינוֹ מְקַבֵּל עַל הַנְּתִינָה, אֶלָּא עַל הַדִּבּוּרִים שֶׁמְּפַיֵּס בָּהֶם אֶת הֶעָנִי, וּמְנַחֵם אוֹתוֹ, וּמַסְבִּיר לוֹ שֶׁלְּצַעֲרוֹ אֵינוֹ יָכוֹל כָּעֵת לָתֵת לוֹ יוֹתֵר."</p>
+        <span class="source-tag">תשובות והנהגות, כרך ה סימן רפח</span>
+    </div>
+    <p>חידוש נפלא: "הַדָּבָר הַזֶּה" בפסוק אינו מתפרש כ"עניין הזה" הכללי, אלא במשמעות מדויקת יותר: "דיבור". כלומר, הברכה אינה על עצם הנתינה, אלא על הדיבור המפייס והמנחם, המילים החמות שהאדם אומר לעני בשעת הנתינה. ולפי ביאור זה מיושבת קושיה עתיקה של בעלי התוספות:</p>
+    <div class="qa-box">
+        <p><strong>קושיית התוספות:</strong> כיצד ניתן לכפות בית דין אדם לתת צדקה? הרי כלל גדול נקבע בידינו, שאין כופין על מצווה שמפורש מתן שכרה בצידה, שכן אם נכפה על מקיים המצווה, כביכול נעקוף את בחירתו החופשית, שהיא המזכה אותו בשכר. ובמצוות צדקה מפורש מתן השכר, "כי בגלל הדבר הזה יברכך ה' אלקיך"! כיצד אם כן כופין עליה?</p>
+        <p><strong>יישוב:</strong> על פי ביאור הגאון מטשיבין, מתיישבת הקושיה באופן נאה. מתן השכר המפורש נאמר רק על הנתינה מתוך שמחה ופיוס, על אותם דיברי תנחומין. אבל מה שבית דין כופה אותו הוא רק על עצם הנתינה בלבד, ועל כך אין ברכה מפורשת בפסוק. לכן שפיר כופין על עצם הנתינה, ואילו הברכה, השייכת לדיבור המפייס ולשמחה שבלב, נותרת תלויה ברצון החופשי של הנותן, ובכך אין סתירה לכלל.</p>
+    </div>
+    <p>ומעניין להוסיף כאן מה שנמצא בכתב יד משמו של הגאון הקדוש המהרי"ל דיסקין זצ"ל: מי שאינו נותן צדקה כלל, עובר על הלא תעשה "ולא ירע לבבך" רק ב"שב ואל תעשה", כלומר בהימנעות בלבד. אבל מי שנותן צדקה בעין רעה, בפועל ממש, הרי הוא עובר על אותו לאו עצמו ב"קום ועשה", עבירה פעילה וחמורה יותר. הבחנה זו מוסיפה עומק לכל מה שלמדנו על חומרת הנתינה בעצב, שהיא חמורה אף יותר מהימנעות מוחלטת מנתינה.</p>
+
+    <h3 id="sec7b">🕯️ הזוהר הקדוש: העני כדורון שהקב"ה שולח לנותן</h3>
+    <p>מקור עמוק ומרגש, המאיר את כל הנושא באור שונה לגמרי, מצוי בזוהר הקדוש, בפרשת וירא. הזוהר מתאר את המפגש עם העני לא כמעמסה או כמבחן, אלא כמתנה של ממש, שהקב"ה שולח לאוהביו:</p>
+    <div class="quote-box">
+        <p>"שֶׁשָּׁנִינוּ, בְּשָׁעָה שֶׁהַקָּדוֹשׁ בָּרוּךְ הוּא אוֹהֵב אֶת הָאָדָם, שׁוֹלֵחַ לוֹ דּוֹרוֹן, וּמִיהוּ? הֶעָנִי, כְּדֵי לִזְכּוֹת בּוֹ. וְכֵיוָן שֶׁזּוֹכֶה בּוֹ, הוּא מוֹשֵׁךְ עָלָיו חוּט אֶחָד שֶׁל חֶסֶד שֶׁנִּמְשָׁךְ מִצַּד הַיָּמִין, וּפוֹרֵס עַל רֹאשׁוֹ וְרוֹשֵׁם אוֹתוֹ. כְּדֵי שֶׁכְּשֶׁיָּבוֹא הַדִּין לָעוֹלָם, אוֹתוֹ הַמַּשְׁחִית יִזָּהֵר בּוֹ, וּמֵרִים עֵינָיו וְרוֹאֶה אוֹתוֹ הָרֹשֶׁם, וְאָז מִסְתַּלֵּק מִמֶּנּוּ וְנִזְהָר עָלָיו. מִשּׁוּם כָּךְ מַקְדִּים הַקָּדוֹשׁ בָּרוּךְ הוּא בְּמַה שֶּׁיִּזְכֶּה."</p>
+        <span class="source-tag">זוהר הקדוש, פרשת וירא</span>
+    </div>
+    <p>לפי הזוהר, כאשר עני עומד לפתחו של אדם, אין זה מקרה ואין זה עול. זהו דורון ישיר מאת הקב"ה, שנשלח דווקא אל מי שהוא אוהב, כדי לזכות אותו במעשה החסד. וכשאדם זוכה בדורון הזה, נמשך עליו חוט של חסד, שיעמוד לו ביום הדין, כמעין סימן וטביעת עין המרחיקה ממנו את הפורענות.</p>
+    <p>הזוהר ממחיש רעיון זה דרך סיפור אברהם אבינו ולוט, ומגלה בו טמון בפסוק שלכאורה נראה פשוט:</p>
+    <div class="story-box">
+        <span class="story-title">מדוע נזכר אברהם, ולא לוט?</span>
+        <p>"וּבֹא וּרְאֵה, כְּשֶׁרָצָה הַקָּדוֹשׁ בָּרוּךְ הוּא לְהָבִיא דִּין עַל סְדוֹם, זִכָּה קֹדֶם אֶת אַבְרָהָם וְשָׁלַח לוֹ דּוֹרוֹן לִזְכּוֹת עִמָּהֶם, כְּדֵי לְהַצִּיל אֶת לוֹט בֶּן אָחִיו מִשָּׁם." הזוהר מצביע על דיוק מפתיע בפסוק: "וַיִּזְכֹּר אֱלֹהִים אֶת אַבְרָהָם, וַיְשַׁלַּח אֶת לוֹט מִתּוֹךְ הַהֲפֵכָה" (בראשית יט, כט). התורה יכלה לכתוב בפשטות "וַיִּזְכֹּר אֱלֹהִים אֶת לוֹט", שהרי הוא זה שניצל בפועל. אך לא כך נכתב, אלא "וַיִּזְכֹּר אֱלֹהִים אֶת אַבְרָהָם", כי בזכות אברהם ניצל לוט. ומה בדיוק "זכר" הקב"ה? לא את עצם קרבתו של אברהם ללוט, אלא את מה שזכה אברהם קודם לכן, בהכנסת האורחים לשלושת המלאכים, כשהאכיל וכיבד אותם באהבה ובשמחה.</p>
+        <p>אותה הכנסת אורחים, אותו מעשה חסד שנעשה מתוך שמחה אמיתית, הפכה להיות אותו "חוט של חסד" שנמשך על אברהם, וממנו ניצל גם לוט. וכך, מסיים הזוהר, "כְּגַוְונָא דָא, בַּר נָשׁ דְּיִזְכֵּי בִּצְדָקָה עִם בְּנֵי נָשָׁא, בְּשַׁעֲתָא דְּדִינָא שָׁרְיָא בְּעָלְמָא, קוּדְשָׁא בְּרִיךְ הוּא אַדְכַּר לֵיהּ לְהַהִיא צְדָקָה דְּעָבַד." כמו אברהם, כל אדם הזוכה בצדקה עם בני אדם, בשעה שדין שורה בעולם, הקדוש ברוך הוא נזכר לו באותו טוב שעשה. וכפי שנאמר במשלי: "וּצְדָקָה תַּצִּיל מִמָּוֶת" (משלי יא, ד).</p>
+    </div>
+    <p>יש כאן היפוך תפיסה של ממש. לפי הזוהר, אין מדובר במעמד שבו הנותן עושה טובה לעני, אלא בדיוק להיפך: הקב"ה עושה טובה לנותן, על ידי שהוא שולח לו את העני כדורון, כהזדמנות לזכות. אם כך, כיצד יתכן להתייחס לדורון כזה בפנים זעופות? הבנה זו מחברת יפה בחזרה לכל מה שלמדנו בפרקים הקודמים, על היות הצדקה מיועדת בעיקרה לזכות את הנותן, ולא רק לפרנס את המקבל.</p>
+
+    <div class="quiz-box no-tts" data-quiz="section7"></div>
+
+    <div class="chapter-card">
+        <span class="num">ח</span>
+        <span class="name">השמחה שבנתינה</span>
+    </div>
+    <div class="chapter-divider">✡</div>
+
+    <span class="chapter-label">פרק ח</span>
+    <h2 id="section8">השמחה שבנתינה: מהחיים עצמם</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>🕯️ סיפור ים המלח: ההבדל בין מי שרק מקבל למי שגם נותן</li>
+            <li>🕯️ שתי דירות, שני אנשים: מצוות ההענקה ומה שהיא מלמדת</li>
+            <li>🕯️ טלפון בתשעה באב: מי באמת מרוויח יותר מן החסד</li>
+        </ul>
+    </div>
+    <p>עד כה עסקנו במקורות ההלכה ובעומק המחשבתי שמאחוריהם. בפרק זה נרד מן העיון אל החיים עצמם, דרך שלושה סיפורים פשוטים שמראים כיצד היסודות שלמדנו נראים בשטח, בחיי היום יום.</p>
+
+    <h3 id="sec8a">🕯️ סיפור ים המלח</h3>
+    <div class="story-box">
+        <span class="story-title">מי שרק מקבל, הוא ים המוות</span>
+        <p>הייתי לפני זמן מה בים המלח, ועמדתי שם על החוף והתבוננתי במים. ים המלח נקרא בפי כל גם "ים המוות". שום דבר חי אינו יכול לשרוד במים שלו. ותהיתי, מה בעצם ההבדל בינו לבין כל שאר הימים והנהרות, שיש בהם חיים בשפע? ואז נזכרתי: כל הימים האחרים, הכינרת למשל, מקבלים מים מלמעלה, מהירדן, אך גם משחררים אותם הלאה, דרך אותו ירדן עצמו, דרומה. הם מקבלים ונותנים. ים המלח לעומת זאת, רק מקבל. מים זורמים אליו מכל עבר, ואין להם שום דרך יציאה. הוא כל כולו קליטה, בלי נתינה כלל.</p>
+        <p>וזהו בדיוק המשל לאדם שרק מקבל ואינו נותן. אדם כזה, מבחינה רוחנית, הוא ים המוות. הוא עלול להצטבר, להתעשר, לקלוט המון, ובכל זאת להישאר מקום שאין בו חיים כלל. לעומתו, אדם שגם נותן, שפותח את היד ומוציא ממה שיש לו החוצה, הוא אדם חי. הנתינה עצמה היא זרם החיים.</p>
+    </div>
+
+    <h3 id="sec8b">🕯️ שתי דירות, שני אנשים</h3>
+    <div class="story-box">
+        <span class="story-title">מי שניקה, ומי שלא</span>
+        <p>קרה לי פעם שהשאלתי דירה לשני אנשים שונים, בזמנים שונים. האחד, כשסיים להשתמש בדירה, השאיר אותה מלוכלכת לגמרי, בלי לחשוב פעמיים. השני, לעומתו, טרח וניקה את הדירה כראוי לפני שעזב, החזיר אותה נקייה ומסודרת ממש כפי שקיבל אותה, ואולי אף יותר.</p>
+        <p>וכששאלתי את שניהם איך הרגישו, קיבלתי שתי תשובות הפוכות לגמרי. זה שניקה, סיפר בהתלהבות כמה הוא נהנה מעצם המעשה, כמה טוב הרגיש כלפי עצמו. וזה שלא ניקה, כשנשאל, אמר בפשטות שהוא לא נהנה בכלל, לא הרגיש שום דבר מיוחד. וזוהי בדיוק הנקודה שקשורה למצוות ה"הענקה", המצווה לתת מתנה נוספת לעבד עברי היוצא לחירות. נכון שהתשלום, השכר, מגיע לו ממילא. אבל מי שנותן, שמעניק משהו נוסף מעבר למה שמגיע, נהנה בעצמו הנאה גדולה נוספת, מלבד הכסף. מי שהוא טוב עין, שאוהב לתת, הוא אדם חי, שמח ומאושר. ומי שהוא רע עין, שתמיד עסוק ב"דע את זכויותיך" ולא ב"דע את חובותיך", הוא כמו ים המלח מן הסיפור הקודם: תמיד רע לו, ותמיד "מגיע לו" עוד, ולעולם אינו שבע רצון.</p>
+    </div>
+
+    <h3 id="sec8c">🕯️ טלפון בתשעה באב</h3>
+    <div class="story-box">
+        <span class="story-title">מי מרוויח יותר, החולה או המתנדב?</span>
+        <p>קיבלתי פעם טלפון, דווקא בתשעה באב, מאדם שרצה לספר לי על הרצאה ששמע בנושא השמחה. הוא סיפר לי משהו שנשאר איתי: ארגונים כמו "יד שרה" או "עזר מציון", העוסקים בחסד ובעזרה לחולים, לא רק עוזרים לחולים. הם, במידה רבה, עוזרים לא פחות, ואולי אפילו יותר, למתנדבים עצמם. אדם שנותן מזמנו ומעצמו לזולת, יוצא מן המפגש הזה מלא שמחה וסיפוק פנימי, לעיתים יותר ממה שהחולה עצמו קיבל בעזרה המעשית.</p>
+        <p>זו התמצית של כל מה שלמדנו לאורך הספר הזה. תנו צדקה מתוך שמחה, מתוך אהבה, מתוך לב יהודי אמיתי. כי לתת זה, בסופו של דבר, לקחת. לתת זה להידמות לבורא עולם, להיות דבק בו. לתת, בסופו של דבר, זה לחיות.</p>
+    </div>
+
+    <div class="quiz-box no-tts" data-quiz="section8"></div>
+
+    <div class="chapter-card">
+        <span class="num">ט</span>
+        <span class="name">סיכום להלכה ולמעשה</span>
+    </div>
+    <div class="chapter-divider">📖</div>
+
+    <span class="chapter-label">פרק ט</span>
+    <h2 id="section9">סיכום להלכה ולמעשה</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>כל היסודות שלמדנו, מקובצים לכלל מסקנה מעשית אחת</li>
+        </ul>
+    </div>
+    <p>מן הראוי לסכם את הדרך שעברנו. פתחנו בשאלה: מדוע דווקא מצוות הצדקה היא המצווה היחידה שבה נפסק להלכה, במפורש, שהשמחה מעכבת את קיום המצווה. ראינו שהרמב"ם והשולחן ערוך פוסקים בלשון חדה: מי שנותן בפנים זועפות, "אבד זכותו והפסידה", ואפילו נתן סכום גדול. עמדנו על שמונה המעלות בצדקה, וראינו שהפנים היפות חשובות אפילו יותר מהיקף הנתינה עצמה. חקרנו האם האיסור עוסק בלב הנותן או בכבוד המקבל, ולמדנו ששלושה ראשונים ביארו את הפסוק בשלוש דרכים משלימות: נטיעת מידת הנדיבות, שלמות המצווה, וקניין ההרגל.</p>
+    <p>למדנו מהחפץ חיים שהמבחן האמיתי הוא ברגע הנתינה עצמו, לא לפני ולא אחרי. עמדנו על כך שהצדקה נועדה בעיקרה לבנות את לב הנותן, ולא רק לפרנס את המקבל, וכי הכסף עצמו הוא רק פיקדון בידינו. ראינו כיצד הגאון מטשיבין קשר את הברכה דווקא לדיבורי הניחומים, וכיצד הזוהר הקדוש הופך את התמונה כולה על פיה: העני אינו נטל, אלא דורון יקר שהקב"ה שולח לאוהביו. וסיימנו בשלושה סיפורים פשוטים, המראים שהיסודות הללו אינם רק תיאוריה, אלא מציאות חיה, נחווית, בכל פעם שאדם פותח את ידו וליבו כאחד.</p>
+    <div class="highlight-box">
+        <p>המסקנה המעשית, אם כן, פשוטה אך תובענית: אין די בפתיחת היד. יש לעבוד, פעם אחר פעם, על פתיחת הלב. לא להסתפק בכך שהכסף יצא, אלא להשקיע גם במילה טובה, בפנים מאירות, בהרגשה אמיתית שזוהי זכות ולא נטל. וככל שנתרגל בכך, כפי שלימד אותנו האבני נזר, כך ילך ויתעצם בנו קניין הנדיבות עצמו, עד שהנתינה תהפוך, מאליה, למקור שמחה אמיתי, ולא רק לחובה שיוצאים בה ידי חובה.</p>
+    </div>
+    <p>יהי רצון שנזכה תמיד לתת ביד רחבה ובלב שמח, ושעל ידי כך תתקיים בנו הברכה שהבטיחה התורה: "כִּי בִּגְלַל הַדָּבָר הַזֶּה יְבָרֶכְךָ ה' אֱלֹהֶיךָ בְּכָל מַעֲשֶׂךָ וּבְכֹל מִשְׁלַח יָדֶךָ".</p>
+
+    <div class="quiz-box no-tts" data-quiz="section9"></div>
+
+    <div class="sources">
+        <h3>📚 מקורות ומראי מקומות</h3>
+        <ol>
+            <li>דברים, פרשת ראה, פרק טו פסוקים ז–י</li>
+            <li>רמב"ם, הלכות מתנות עניים, פרק י הלכות ד, ז–טו</li>
+            <li>רמב"ם, הלכות לולב, פרק ח הלכה טו</li>
+            <li>שולחן ערוך, יורה דעה, הלכות צדקה, סימן רמט סעיפים ג, ה</li>
+            <li>שולחן ערוך, אורח חיים, סימנים צג, רכב, רסב, תקכט</li>
+            <li>ביאור הגר"א, יורה דעה, סימן רמט</li>
+            <li>ש"ך, יורה דעה, סימן רמט ס"ק ט</li>
+            <li>ט"ז, יורה דעה, סימן רמט</li>
+            <li>דרך אמונה, ביאור ההלכה, הלכות מתנות עניים, פרק י הלכה יד</li>
+            <li>מעשה רוקח על הרמב"ם, הלכות מתנות עניים, פרק י הלכה ו</li>
+            <li>השגות הרמב"ן לספר המצוות לרמב"ם, שכחת הלאווין, מצוה יז</li>
+            <li>ספר מצוות גדול, לאווין סימן רפט</li>
+            <li>רבינו יונה</li>
+            <li>ספר העיקרים, מאמר שלישי, פרק לג</li>
+            <li>תולדות יצחק, פרשת ראה</li>
+            <li>ספרי, פרשת ראה</li>
+            <li>חפץ חיים, אהבת חסד, חלק ב פרק יז</li>
+            <li>צרור המור, שמות, פרשת תרומה</li>
+            <li>תשובות והנהגות, כרך ה סימן רפח</li>
+            <li>זוהר הקדוש, פרשת וירא</li>
+            <li>ספר פנים יפות, על סדר ההלכות; "הלכות נתינת הצדקה בספר פנים יפות" ושיעורי הרב יהודה טאוב, "השמחה בנתינת הצדקה" ו"שיעור על השמחה בנתינה לפרשת ראה"</li>
+        </ol>
+    </div>
+
+    <div class="footer">
+        <strong>נכתב ונערך על ידי:</strong><br>
+        <strong>הרב יהודה טאוב</strong><br>
+        קרית אתא<br>
+        📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+        <div class="footer-more">
+            <h4>🎧 שיעורים נוספים של הרב</h4>
+            <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+            <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+            <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+        </div>
+    </div>
+
+</div>
+
+<a href="#top" class="scroll-top" id="scrollTop" aria-label="חזרה לראש העמוד">▲</a>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+        var t = document.querySelector(this.getAttribute('href'));
+        if (!t) return;
+        e.preventDefault();
+        t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+window.addEventListener('scroll', function () {
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+});
+</script>
+
+<script>
+/* ===== tts.js — מילה במילה ===== */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    /* ---------- הגדרות ---------- */
+    var NS       = 'koltoda.tts.';                 // מרחב שמות ב-localStorage, משותף לכל המאמרים
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;                           // תווים לכל אמירה — מתחת לסף הקטיעה של Chrome
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    /* ---------- מצב ---------- */
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false, noHeVoice = false;
+    var clickToRead = true;          // נטען מ-localStorage ב-init
+
+    /* ---------- אלמנטים ---------- */
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+    function readPos() { try { return parseInt(localStorage.getItem(POS_KEY) || '0', 10) || 0; } catch (e) { return 0; } }
+
+    /* =========================================================================
+       1. עיבוד הטקסט להקראה
+       ========================================================================= */
+
+    var G = '["\\u05f4\\u201d\\u2033]';        // גרשיים על כל וריאציותיהם
+    var R = "['\\u05f3\\u2019]";               // גרש
+
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');   // פעמיים, לרצפים כמו תשע"ג-תשע"ד
+        // גרשיים עוטפים ציטוט — נשארים כתו בודד; כשהוא נופל בגבול חיתוך לאמירה
+        // המנוע מקבל אמירה שהיא רק התו הזה, ומקריא אותו מילולית כ"גרשיים".
+        t = t.replace(/["״“”″]/g, '');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');       // אימוג'י (זוגות surrogate)
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' '); // סמלים ודינגבטים
+        t = t.replace(/־/g, ' ');                               // מקף עברי → רווח
+        t = t.replace(/\s*[–—]\s*/g, ', ');                // מקף ארוך → פסיק (הפוגה טבעית)
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');                   // רווח אחרי סימן פיסוק
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    /* =========================================================================
+       2. בניית תור ההקראה
+       ========================================================================= */
+
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function chapterLabel(h) {
+        var d = h.getAttribute && h.getAttribute('data-chapter');
+        if (d && d.trim()) return d.trim();
+        var p = h.previousElementSibling;
+        if (p && p.classList && p.classList.contains('chapter-label')) {
+            return p.textContent.replace(/\s+/g, ' ').trim();
+        }
+        return '';
+    }
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        // מונה מספור לכל <ol> בנפרד — <ol> מציג "1." "2." דרך ה-CSS של הדפדפן,
+        // לא כטקסט אמיתי, וההקראה היתה מדלגת עליו כליל. <ul> לא מקבל מספר בכוונה.
+        var olIndex = new Map();
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (n.closest(SKIP)) return;
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            if (n.tagName === 'H2') {
+                var lbl = chapterLabel(n);
+                if (lbl && raw.indexOf(lbl) !== 0) raw = lbl + '. ' + raw;
+            }
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.tagName === 'OL') {
+                var num = (olIndex.get(n.parentElement) || 0) + 1;
+                olIndex.set(n.parentElement, num);
+                raw = num + '. ' + raw;
+            }
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    /* =========================================================================
+       3. ממשק
+       ========================================================================= */
+
+    function hint() {
+        if (noHeVoice) {
+            return 'לא נמצא קול עברי במחשב — ההקראה תישמע משובשת. ' +
+                   'ב-Windows: הגדרות ← שעה ושפה ← דיבור ← נהל קולות ← הוסף קולות ← עברית.';
+        }
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    /* =========================================================================
+       4. הקראה
+       ========================================================================= */
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    /* =========================================================================
+       5. פקדים
+       ========================================================================= */
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = readPos();
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;   // האחרון שלפנינו
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    /* =========================================================================
+       6. קולות
+       ========================================================================= */
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);   // נשמרות בכוונה — קול רב-לשוני לפעמים נשמע טוב יותר
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        var was = noHeVoice;
+        noHeVoice = !he.length;
+        if (noHeVoice !== was && !isOn) say(hint());
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    /* =========================================================================
+       7. לחיצה על פסקה = התחל להקריא מכאן
+       ========================================================================= */
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;                                             // המתג כבוי
+                if (e.target.closest('a')) return;                                    // קישורים עובדים כרגיל
+                if (window.getSelection && String(window.getSelection()).length) return; // סימון להעתקה עובד כרגיל
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    /* =========================================================================
+       8. מעבר לשונית / נעילת מסך
+       ========================================================================= */
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    /* =========================================================================
+       9. גודל טקסט
+       ========================================================================= */
+
+    var FS_MIN = 0.85, FS_MAX = 1.75, FS_STEP = 0.15, fontScale = 1;
+
+    function applyFontScale() {
+        document.documentElement.style.setProperty('--fs', String(fontScale));
+        var out = document.getElementById('fontScaleValue');
+        if (out) out.textContent = Math.round(fontScale * 100) + '%';
+        var dec = document.getElementById('fontSmaller'), inc = document.getElementById('fontBigger');
+        if (dec) dec.disabled = fontScale <= FS_MIN + 0.001;
+        if (inc) inc.disabled = fontScale >= FS_MAX - 0.001;
+    }
+
+    window.setFontScale = function (dir) {
+        fontScale = Math.min(FS_MAX, Math.max(FS_MIN, +(fontScale + dir * FS_STEP).toFixed(2)));
+        store('fs', String(fontScale));
+        applyFontScale();
+    };
+
+    /* =========================================================================
+       10. אתחול
+       ========================================================================= */
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';   // ברירת מחדל: פעילה
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var savedFs = parseFloat(store('fs') || '1');
+        if (savedFs >= FS_MIN && savedFs <= FS_MAX) fontScale = savedFs;
+        applyFontScale();
+        if (readPos() > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+<script>
+/* ===== חידון סיכום פרק (שאלות אמריקאיות) ===== */
+(function () {
+    'use strict';
+
+    var LETTERS = ['א', 'ב', 'ג', 'ד'];
+
+    var QUIZ_DATA = {
+        section1: { label: 'פרק א', questions: [
+            { q: 'מה בדיוק מוסיף הביטוי "וְלֹא יֵרַע לְבָבְךָ" על החובה הכתובה כבר ב"נָתוֹן תִּתֵּן לוֹ"?',
+              opts: [
+                'הוא בעיקר איסור על הבעת חרטה בדיעבד, ימים או שבועות אחרי מעשה הנתינה עצמו.',
+                'הוא חובה נוספת שהלב לא ירע דווקא ברגע הנתינה, מעבר לעצם חובת פתיחת היד.',
+                'הוא כפילות סגנונית גרידא, שאין לה משמעות הלכתית עצמאית משלה.',
+                'הוא איסור המוטל דווקא על גזבר הצדקה, ולא על הנותן הפרטי עצמו.'
+              ], correct: 1 },
+            { q: 'כיצד פוסק הרמב"ם על הנותן צדקה "אפילו אלף זהובים" בפנים כבושות בקרקע?',
+              opts: [
+                'שהוא יצא ידי חובה, אך איבד רק את הידור המצווה בלבד.',
+                'שדינו תלוי בגובה הסכום, וסכום גדול כזה פוטר מחשש הפסד הזכות.',
+                'שהוא איבד את זכותו והפסידה כליל, כאילו לא קיים את המצווה כלל.',
+                'שהוא נחשב כמקיים את המדרגה השמינית בסולם מעלות הצדקה.'
+              ], correct: 2 },
+            { q: 'מה מקור האיסור לתת צדקה בפנים זועפות, לפי ביאור הגר"א המובא בפרק?',
+              opts: [
+                'תקנת חכמים מאוחרת, שנועדה לשמור על כבודם של גבאי הצדקה.',
+                'מידת חסידות בלבד, שאין בעקירתה משום עבירה ממשית.',
+                'מנהג ישראל קדום, שלא קיבל תוקף הלכתי מחייב בשולחן ערוך.',
+                'לאו מפורש מן התורה עצמה, "ולא ירע לבבך בתתך לו".'
+              ], correct: 3 },
+            { q: 'מה מלמדת דווקא הבחירה של הרמב"ם בדוגמה של "אלף זהובים" ולא בסכום קטן?',
+              opts: [
+                'שאין שום תלות בין גודל הסכום לבין הפסד הזכות, גם נדיבות גדולה לא מצילה מהפגם.',
+                'שדין הפסד הזכות חל רק כאשר מדובר בסכומים גבוהים במיוחד, ולא בנתינה קטנה.',
+                'שהרמב"ם רצה להקל דווקא על העשירים, הפטורים מהחובה להיזהר בהבעות פנים.',
+                'שמדובר בהלכה שנאמרה רק לגבי גזברי ציבור, המטפלים בסכומים גדולים.'
+              ], correct: 0 }
+        ]},
+        section2: { label: 'פרק ב', questions: [
+            { q: 'מי, לפי סולם שמונה המעלות של הרמב"ם, נמצא במעלה גבוהה יותר?',
+              opts: [
+                'הנותן את הסכום המלא הראוי, גם אם על פניו ניכר עצב בשעת הנתינה.',
+                'שני האופנים שווים לגמרי במעלתם, כיוון שרק גובה הסכום קובע את הדרגה.',
+                'הנותן פחות מהסכום הראוי, אך בסבר פנים יפות ובשמחה גלויה.',
+                'אי אפשר לדרג בין השניים, כי הסולם עוסק רק בזהות המקבל ולא בסכום.'
+              ], correct: 2 },
+            { q: 'מי, על פי הש"ך, אינו נכלל כלל בשמונה המעלות, אפילו לא במדרגה הנמוכה שבהן?',
+              opts: [
+                'מי שנותן פחות מהראוי בשל מצוקה כלכלית אמיתית וזמנית.',
+                'מי שמעביר את נתינתו דרך גזבר צדקה ולא ישירות לעני עצמו.',
+                'מי שמעדיף לתת בעילום שם, בלי שהעני יידע ממי קיבל.',
+                'מי שמראה לעני פנים זעופות ורעות ממש, ולא רק עצב פנימי כבוש.'
+              ], correct: 3 },
+            { q: 'מה הייתה תשובת האבני נזר לחסיד שהתלבט בין רובל אחד בשמחה לעשרה רובלים בעצב?',
+              opts: [
+                'שיש לתת תמיד את הסכום הגדול יותר, גם במחיר של עצב מסוים.',
+                'שהשאלה מוטעית מיסודה, וריבוי הנתינות עצמו הוא שמעקר בהדרגה את הקושי מהלב.',
+                'שיש להימנע כליל מנתינה גדולה, כדי לא להסתכן בעבירה על הלאו.',
+                'שאין הבדל הלכתי בין נתינה גדולה חד־פעמית לנתינות קטנות וחוזרות.'
+              ], correct: 1 },
+            { q: 'מתי, לפי ההערה המסיימת של "דרך אמונה", מוטב לתת את מלוא הסכום גם אם יש קושי מסוים?',
+              opts: [
+                'רק כאשר הנתינה נעשית לגזבר צדקה ולא ישירות לעני.',
+                'רק כאשר מדובר בעני שאינו מוכר אישית לנותן כלל.',
+                'אף פעם לא; "דרך אמונה" דוחה לגמרי נתינת סכום גבוה תוך קושי.',
+                'כאשר הקושי מורגש רק בלב פנימה, ואינו ניכר כלפי חוץ בפנים.'
+              ], correct: 3 }
+        ]},
+        section3: { label: 'פרק ג', questions: [
+            { q: 'מהי הנפקא מינה המעשית שמעלה הפרק לחקירה בין לב הנותן לכבוד המקבל?',
+              opts: [
+                'השאלה אם מותר לגבות צדקה בכפייה על ידי בית דין.',
+                'הדין בנתינה דרך גזבר צדקה, ולא ישירות אל העני עצמו.',
+                'השאלה אם מותר לתת צדקה לעני שאינו בן אותה העיר.',
+                'ההבדל בין נתינה בפומבי לנתינה חשאית, מבחינת חובת השמחה.'
+              ], correct: 1 },
+            { q: 'מה עולה מלשון הרמב"ן, המנסח את האיסור במונחים כמו "שלא יחר בעינינו"?',
+              opts: [
+                'שהאיסור עוסק בעיקרו בהגנה על רגשות העני המקבל, לא על מידות הנותן.',
+                'שהרמב"ן חולק על עצם קיום האיסור, ורואה בו הנהגה טובה בלבד.',
+                'שהאיסור עוסק בעיקרו במידותיו ובתחושתו הפנימית של הנותן עצמו.',
+                'שהרמב"ן מגביל את תוקף האיסור למקרה של גזבר צדקה בלבד.'
+              ], correct: 2 },
+            { q: 'מהי קושיית הט"ז בעניין "אם יכול לעשות שאחרים יתנו, שכרו גדול משכר הנותן"?',
+              opts: [
+                'מדוע שכר הגזבר קטן משכר הנותן, בניגוד למשתמע מן המציאות.',
+                'אם מדובר במי שנתן מתוך כפייה, הרי כבר הפסיד זכותו; אם כן, כיצד שכרו גדול משל הנותן?',
+                'מדוע כלל מוזכר גזבר צדקה בשולחן ערוך, בעוד תפקיד זה לא היה קיים בזמנם.',
+                'מדוע מותר לגזבר לגבות סכומים גבוהים יותר מהמקובל בציבור.'
+              ], correct: 1 },
+            { q: 'כיצד מיישב "מעשה רוקח" את קושיית הט"ז, בשונה מתירוצו של הט"ז עצמו?',
+              opts: [
+                'בכך שהוא דוחה לחלוטין את קושיית הט"ז ומבטל את הדין מעיקרו.',
+                'בכך שהוא קובע שאין כלל איסור על גזבר צדקה לתת בעצבות.',
+                'בכך שמי שנתן בכפייה כלל לא הפסיד זכותו, ו"הפסיד זכותו" נאמר רק במי שנתן ישירות לעני בפנים בוזות.',
+                'בכך שהוא מסביר, כמו הט"ז, ששכר הגזבר גבוה משכר נותן מרצון במקום אחר.'
+              ], correct: 2 }
+        ]},
+        section4: { label: 'פרק ד', questions: [
+            { q: 'מדוע, לפי ספר העיקרים, תלתה התורה את הברכה דווקא ב"ולא ירע לבבך" ולא ב"נתון תתן לו"?',
+              opts: [
+                'כי "נתון תתן לו" מתייחס לעני עשיר, ורק "ולא ירע לבבך" עוסק באביון גמור.',
+                'כי השמחה היא הנותנת למעשה את שלמותו, ובלעדיה אותו מעשה עצמו נחשב פחיתות.',
+                'כי "ולא ירע לבבך" מתייחס דווקא לגזבר הצדקה, ולא לנותן הפרטי.',
+                'כי לדעת ספר העיקרים שני חלקי הפסוק כלל אינם קשורים זה לזה.'
+              ], correct: 1 },
+            { q: 'מה עיקר ההבדל בין רבינו יונה לתולדות יצחק בביאור טעם השמחה בצדקה?',
+              opts: [
+                'רבינו יונה סובר שהשמחה נועדה לנטוע מידת נדיבות, ותולדות יצחק רואה בה אות לכך שהמידה כבר נקנתה.',
+                'רבינו יונה שולל לגמרי כל חובה הלכתית, ותולדות יצחק מחייב מדאורייתא בלבד.',
+                'שני הפוסקים חלוקים רק בשאלת הדין בגזבר צדקה, ואין ביניהם הבדל נוסף.',
+                'תולדות יצחק קושר את השמחה לגובה הסכום בלבד, ורבינו יונה לתדירות הנתינה בלבד.'
+              ], correct: 0 },
+            { q: 'לאיזה פסוק נוסף קושר תולדות יצחק את יסודו, ומה הוא מדייק ממנו?',
+              opts: [
+                '"וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ", ומדייק שאהבת הזולת קודמת לחובת הנתינה עצמה.',
+                '"וְיִקְחוּ לִי תְרוּמָה", ומדייק שאין לקבל תרומה ממי שלבו אינו נודב.',
+                '"תַּחַת אֲשֶׁר לֹא עָבַדְתָּ... בְּשִׂמְחָה", ומדייק שהעונש בא על חוסר השמחה, לא על אי הקיום.',
+                '"טוֹב עַיִן הוּא יְבֹרָךְ", ומדייק שרק טוב עין זוכה לברכה כלשהי בכלל.'
+              ], correct: 2 },
+            { q: 'כיצד מציג הפרק את היחס בין שלוש שיטות הראשונים שנסקרו בו?',
+              opts: [
+                'כשלוש שיטות סותרות לגמרי, כשההלכה נפסקת רק לפי אחת מהן.',
+                'כשלוש זוויות משלימות לתמונה אחת: נטיעת המידה, שלמות המעשה, והאות לקניינה.',
+                'כשלוש שיטות שאין ביניהן שום זיקה עיונית, ועוסקות בנושאים נפרדים לגמרי.',
+                'כשלוש שיטות המסכימות ששמחה היא הידור מצווה גרידא, ולא תנאי מעכב.'
+              ], correct: 1 }
+        ]},
+        section5: { label: 'פרק ה', questions: [
+            { q: 'מדוע, לפי החפץ חיים, קל יחסית להשלים בדיעבד עם מצוות הצדקה אחרי שהכסף כבר יצא מהיד?',
+              opts: [
+                'כי החפץ חיים סובר שאין כלל משמעות הלכתית לרגע הנתינה עצמו.',
+                'כי לאחר מכן חלה חובת הודיה נפרדת, המכפרת מאליה על כל עצב קודם.',
+                'כי ברגע הנתינה עדיין קיימת בחירה חופשית שלא לתת, ולאחר מכן קל לומר "מה יועיל אם ירע לי".',
+                'כי לאחר הנתינה האדם שוכח לגמרי מן הכסף שנתן, ולכן אינו מצטער עליו.'
+              ], correct: 2 },
+            { q: 'כיצד מבאר החפץ חיים את הקשר בין "כי בגלל הדבר הזה" לבין בחירתו החופשית של הנותן?',
+              opts: [
+                'הברכה מובטחת אוטומטית לכל נותן צדקה, בלי קשר להתנהגותו באותו רגע.',
+                'הברכה תלויה בכך שהאדם מתגבר על יצרו בעצם רגע הנתינה, מתוך בחירה חופשית באותה שעה.',
+                'הברכה תלויה אך ורק בגובה הסכום שהאדם בחר לתת מרצונו.',
+                'הברכה כלל אינה תלויה בבחירה החופשית, אלא רק בעצם קיום הציווי.'
+              ], correct: 1 },
+            { q: 'מהו החידוש שמבאר "צרור המור" בניסוח "וְיִקְחוּ לִי תְרוּמָה" ולא "וְיִתְּנוּ לִי"?',
+              opts: [
+                'שהכהנים בלבד היו רשאים לקחת את התרומה, ושאר העם רק נתנו אותה.',
+                'שתרומת המשכן הייתה חובה בכפייה, ולכן נוסח הפסוק בלשון לקיחה דווקא.',
+                'שבאמת איננו נותנים דבר משלנו, אלא לוקחים ומקבלים, שכן הכל שייך לקב"ה.',
+                'שדין תרומת המשכן שונה לגמרי מדין צדקה, ואין ללמוד ביניהם.'
+              ], correct: 2 },
+            { q: 'מה מלמד המשל של "פנים יפות" על אדם שמקבל אלף שקלים בתנאי שיעביר מאה מהם ללוי?',
+              opts: [
+                'שראוי לו לדרוש תשלום נוסף עבור הטרחה שבהעברת הכסף הלאה.',
+                'שאם הוא נותן את המאה בפנים זעופות, זו כפיות טובה, בדיוק כפי שאדם המקבל הכול מהקב"ה צריך רק להעביר חלק ממנו לעני.',
+                'שעדיף היה לו לסרב מלכתחילה למתנה, כדי להימנע מהתנאי הנלווה.',
+                'שרק נותן המתנה המקורי מחויב בברכה, ולא מי שמעביר אותה הלאה.'
+              ], correct: 1 }
+        ]},
+        section6: { label: 'פרק ו', questions: [
+            { q: 'מהו ההבדל העקרוני, לפי "פנים יפות", בין מטרת תפילין ושבת למטרת מצוות הצדקה?',
+              opts: [
+                'בתפילין ושבת המטרה בעצם המעשה, ואילו בצדקה המטרה העיקרית היא בניית לב טוב אצל הנותן.',
+                'אין הבדל עקרוני, וגם בתפילין ושבת המטרה היא בעיקר במידות הטובות ולא במעשה.',
+                'תפילין ושבת הן מצוות שבין אדם לחברו, וצדקה היא מצווה שבין אדם למקום בלבד.',
+                'בצדקה, בשונה משאר המצוות, אין כל צורך בכוונת הלב אלא רק במעשה החיצוני.'
+              ], correct: 0 },
+            { q: 'כיצד משמש דימוי המשכן בפרק להמחשת רעיונו של "פנים יפות"?',
+              opts: [
+                'כשם שבמשכן נדרשה תרומה לפי גובה ההכנסה, כך גם בצדקה יש לתת דווקא לפי הרווח.',
+                'המשכן משמש דוגמה הפוכה, כי בו, בשונה מצדקה, היה צורך אמיתי של הקב"ה בתרומה.',
+                'כשם שהמשכן לא נבנה מצורך של הקב"ה אלא כדי לזכות את ישראל, כך גם הצדקה נועדה בעיקרה לזכות את הנותן.',
+                'כשם שבמשכן נאסרה תרומה מתוך כפייה, כך גם בצדקה פסולה נתינה בכפיית בית דין.'
+              ], correct: 2 },
+            { q: 'מהו ההבדל שמדגיש הפרק בין מטרת הצדקה למטרת מוסדות רווחה חברתיים?',
+              opts: [
+                'מוסדות רווחה מיועדים לעזור לעניים בלבד, ואילו מטרת הצדקה גם לבנות לב טוב אצל העשירים.',
+                'ביטוח לאומי עוזר גם לעניים וגם לעשירים באופן שווה, בניגוד לצדקה המיועדת רק לעניים.',
+                'אין כל הבדל עקרוני בין השניים, אלא רק במקור המימון של הכספים.',
+                'מוסדות רווחה פועלים מכוח ההלכה, וצדקה פועלת מכוח החוק האזרחי בלבד.'
+              ], correct: 0 },
+            { q: 'לפי ביאור החפץ חיים המובא בפרק, במה בדיוק זוכה אדם בשכר על מעשה הצדקה?',
+              opts: [
+                'בזכות הטרחה הפיזית בלבד שבהעברת הכסף מיד ליד, ללא קשר לכוונתו.',
+                'בזכות ליבו ומידת נדיבותו, שהם החלק היחיד שהוא נותן מעצמו, שכן הכסף שייך לקב"ה.',
+                'בזכות גובה הסכום שהצליח לגייס מאחרים, ולא בזכות הנתינה האישית שלו.',
+                'לגישת החפץ חיים אין בכלל שכר על צדקה, אלא רק הצלה מעונש.'
+              ], correct: 1 }
+        ]},
+        section7: { label: 'פרק ז', questions: [
+            { q: 'כיצד מיישב הגאון מטשיבין את קושיית התוספות בדבר כפיית בית דין על נתינת צדקה?',
+              opts: [
+                'בכך שהוא דוחה מכל וכל את הכלל שאין כופין על מצווה שמתן שכרה בצידה.',
+                'בכך ש"הדבר" הוא מלשון דיבור, ולכן הברכה מובטחת רק על דברי הפיוס, ואילו הכפייה חלה רק על עצם הנתינה.',
+                'בכך שכפיית בית דין כלל אינה נחשבת כפייה אמיתית מבחינה הלכתית.',
+                'בכך שהכלל חל רק על מצוות שבין אדם למקום, ולא על מצוות שבין אדם לחברו.'
+              ], correct: 1 },
+            { q: 'לפי המובא בשם המהרי"ל דיסקין, מה ההבדל בין מי שאינו נותן צדקה כלל לבין הנותן בעין רעה?',
+              opts: [
+                'מי שאינו נותן כלל פטור לגמרי מן האיסור, ורק הנותן בעין רעה עובר עבירה כלשהי.',
+                'שניהם עוברים באותה חומרה בדיוק, ואין כל הבדל מעשי בין המקרים.',
+                'מי שאינו נותן כלל עובר איסור תורה חמור, והנותן בעין רעה עובר רק איסור מדרבנן.',
+                'מי שאינו נותן כלל עובר על הלאו ב"שב ואל תעשה", ואילו הנותן בעין רעה עובר על אותו לאו ב"קום ועשה" החמור יותר.'
+              ], correct: 3 },
+            { q: 'לפי הזוהר הקדוש, מהו תפקידו האמיתי של העני העומד לפתחו של הנותן?',
+              opts: [
+                'הוא מבחן קשה שנועד לבחון בעיקר את יכולתו הכספית של הנותן.',
+                'הוא דורון ששולח הקב"ה לאדם שהוא אוהב, כדי לזכותו במעשה החסד.',
+                'הוא שליח מקרי בלבד, שאין למפגש עמו כל משמעות רוחנית מיוחדת.',
+                'הוא עונש על עוונות קודמים, שנועד לכפר על הנותן דרך הצדקה.'
+              ], correct: 1 },
+            { q: 'מה מדייק הזוהר מכך שנאמר "וַיִּזְכֹּר אֱלֹהִים אֶת אַבְרָהָם" ולא "אֶת לוֹט" בסיפור הצלת לוט?',
+              opts: [
+                'שהתורה השתמשה בניסוח שגוי, ולכן קיימים חילוקי גרסאות בפסוק זה.',
+                'שהצלת לוט הייתה תלויה בזכות אשתו של לוט בלבד, ולא בזכות אברהם.',
+                'שלוט ניצל בזכות הכנסת האורחים שעשה אברהם בשמחה, ולכן ההצלה נזקפת לזכות אברהם.',
+                'שהצלת לוט לא הייתה קשורה כלל למעשי אברהם, אלא לזכותו העצמאית של לוט.'
+              ], correct: 2 }
+        ]},
+        section8: { label: 'פרק ח', questions: [
+            { q: 'מהו ההבדל היסודי בין ים המלח לשאר הימים והנהרות, לפי הסיפור בפרק?',
+              opts: [
+                'ים המלח מלוכלך יותר משאר הימים, ומשום כך אין בו חיים.',
+                'ים המלח נמצא בגובה רב יותר, ולכן המים אינם זורמים אליו כלל.',
+                'שאר הימים מקבלים מים ומשחררים אותם הלאה, ואילו ים המלח רק קולט ואינו נותן דבר.',
+                'ים המלח מקבל פחות מים משאר הימים, ולכן הוא יבש יחסית לאורך השנה.'
+              ], correct: 2 },
+            { q: 'במשל שתי הדירות, מה ההבדל בתחושתם של שני האנשים ששאלו את הדירה?',
+              opts: [
+                'שניהם הרגישו אותה שמחה בדיוק, שכן עצם ההשאלה עצמה גרמה להם הנאה.',
+                'מי שניקה את הדירה הרגיש שמחה והנאה עצמית, ואילו מי שלא ניקה לא חש שום דבר מיוחד.',
+                'מי שלא ניקה הרגיש אשמה עמוקה וכבדה, ואילו מי שניקה כלל לא הרגיש דבר.',
+                'שניהם הרגישו רע, שכן עצם החזרת הדירה גרמה לתחושת אובדן משותפת.'
+              ], correct: 1 },
+            { q: 'לאיזו מצווה מקושר משל שתי הדירות, ומה הוא בא ללמד?',
+              opts: [
+                'למצוות מעשר כספים, ומלמד שיש לתת דווקא עשירית מדויקת ולא פחות ממנה.',
+                'למצוות ביקור חולים, ומלמד שיש לבקר גם מי שאינו מכיר את החולה כלל.',
+                'למצוות "הענקה" לעבד עברי משוחרר, ומלמד שהנותן מעבר למחויב נהנה הנאה עצמית נוספת.',
+                'למצוות השבת אבידה, ומלמד שיש להשיב חפצים במצב טוב יותר משהיו.'
+              ], correct: 2 },
+            { q: 'מה למד הכותב מהטלפון שקיבל בתשעה באב, ביחס לארגונים כמו "יד שרה" ו"עזר מציון"?',
+              opts: [
+                'שארגונים אלו מיועדים בעיקר לגיוס כספי תרומות, ופחות להתנדבות אישית בפועל.',
+                'שיש להימנע מהתנדבות בימי אבל כמו תשעה באב, כדי לא לפגוע בכוונת הצום.',
+                'שהחולים המקבלים עזרה נהנים תמיד יותר מן המתנדבים המסייעים להם באופן אישי.',
+                'שהארגונים עוזרים לא רק לחולים, אלא לעיתים אף יותר למתנדבים היוצאים מלאי שמחה וסיפוק.'
+              ], correct: 3 }
+        ]},
+        section9: { label: 'פרק ט', questions: [
+            { q: 'מה, לפי סיכום הספר, ההבדל בין מבחן החפץ חיים לבין סולם שמונה המעלות?',
+              opts: [
+                'שמונה המעלות עוסקות בעיקר בדרך הנתינה, והחפץ חיים מדגיש שהמבחן המכריע הוא דווקא ברגע הנתינה עצמו.',
+                'החפץ חיים עוסק בגובה הסכום הנדרש, ושמונה המעלות עוסקות ברגע הנתינה בלבד.',
+                'אין כל הבדל ביניהם, ושניהם עוסקים אך ורק בגובה הסכום שניתן.',
+                'שמונה המעלות מתייחסות רק לעניים המבקשים בעצמם, והחפץ חיים מתייחס רק לגזבר צדקה.'
+              ], correct: 0 },
+            { q: 'מה ההבדל בין הראייה ה"רגילה" של מפגש עם עני לבין ראיית הזוהר, לפי הסיכום?',
+              opts: [
+                'שתי הראיות רואות בעני נטל, אך הזוהר מוסיף שיש לשאת בכך מתוך סבלנות בלבד.',
+                'הזוהר קובע שהמפגש עם העני הוא עונש על עוונות הנותן, בניגוד לשאר המקורות.',
+                'בראייה הרגילה העני הוא נטל, ולפי הזוהר הוא דווקא דורון שהקב"ה שולח כדי לזכות את הנותן.',
+                'אין הבדל מהותי ביניהן, אלא רק הבדל בסגנון הניסוח הספרותי בלבד.'
+              ], correct: 2 },
+            { q: 'איזו משמעות יש, לפי הסיכום, לכך שהברכה נתלתה דווקא ב"ולא ירע לבבך" ולא רק ב"נתון תתן לו"?',
+              opts: [
+                'שאין כלל ברכה על מצוות הצדקה, אלא רק הימנעות מעונש חמור.',
+                'שהברכה תלויה בעיקר בגובה הסכום שניתן, ולא בהרגשת הלב כלל.',
+                'שהברכה מותנית בכך שהעני יביע תודה בפירוש בשעת קבלת הצדקה.',
+                'שהתרומה האמיתית של האדם היא ליבו, שכן הכסף עצמו הוא פיקדון מאת הקב"ה.'
+              ], correct: 3 },
+            { q: 'מהי המסקנה המעשית שמציע הספר בסיומו, לגבי הדרך להגיע לשמחה אמיתית בנתינה?',
+              opts: [
+                'יש להימנע מנתינה תכופה, כדי לא להתרגל ולאבד את הרגש שבמעשה.',
+                'יש לתת רק סכומים גדולים וחד־פעמיים, כדי למנוע חזרה על הקושי הנפשי.',
+                'יש להתרגל בנתינה שוב ושוב, מתוך עבודה מודעת על פתיחת הלב, עד שהיא תהפוך למקור שמחה.',
+                'אין דרך מעשית להגיע לשמחה אמיתית; היא תלויה רק במזג טבעי מלידה.'
+              ], correct: 2 }
+        ]}
+    };
+
+    function el(tag, cls, text) {
+        var e = document.createElement(tag);
+        if (cls) e.className = cls;
+        if (text != null) e.textContent = text;
+        return e;
+    }
+
+    function playChime() {
+        try {
+            var Ctx = window.AudioContext || window.webkitAudioContext;
+            if (!Ctx) return;
+            var ctx = new Ctx();
+            var notes = [523.25, 659.25, 783.99, 1046.50];
+            var t = ctx.currentTime;
+            notes.forEach(function (freq, i) {
+                var osc = ctx.createOscillator();
+                var gain = ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.value = freq;
+                gain.gain.setValueAtTime(0, t + i * 0.12);
+                gain.gain.linearRampToValueAtTime(0.18, t + i * 0.12 + 0.02);
+                gain.gain.exponentialRampToValueAtTime(0.0001, t + i * 0.12 + 0.5);
+                osc.connect(gain).connect(ctx.destination);
+                osc.start(t + i * 0.12);
+                osc.stop(t + i * 0.12 + 0.55);
+            });
+        } catch (e) { /* אין תמיכה ב-Web Audio, פשוט מדלגים על הצליל */ }
+    }
+
+    function buildQuiz(container, key) {
+        var data = QUIZ_DATA[key];
+        if (!data) return;
+        container.innerHTML = '';
+
+        container.appendChild(el('h4', 'quiz-title', '🎯 בחן את עצמך: ' + data.label));
+        container.appendChild(el('p', 'quiz-sub', 'סמנו את התשובה הנכונה בכל שאלה, ולחצו על "בדוק תשובות" בסיום.'));
+
+        var selections = new Array(data.questions.length).fill(-1);
+        var submitBtn = el('button', 'quiz-submit-btn', 'בדוק תשובות בפרק');
+        submitBtn.type = 'button';
+        submitBtn.disabled = true;
+
+        var resultBox = el('div', 'quiz-result');
+
+        data.questions.forEach(function (question, qIndex) {
+            var qBox = el('div', 'quiz-q');
+            var qText = el('div', 'quiz-q-text');
+            qText.appendChild(el('span', 'quiz-q-num', String(qIndex + 1)));
+            qText.appendChild(el('span', null, question.q));
+            qBox.appendChild(qText);
+
+            var optsBox = el('div', 'quiz-options');
+            optsBox.setAttribute('role', 'radiogroup');
+
+            question.opts.forEach(function (optText, oIndex) {
+                var btn = el('button', 'quiz-option', null);
+                btn.type = 'button';
+                btn.setAttribute('role', 'radio');
+                btn.setAttribute('aria-checked', 'false');
+                btn.appendChild(el('span', 'letter', LETTERS[oIndex]));
+                btn.appendChild(el('span', null, optText));
+                btn.addEventListener('click', function () {
+                    selections[qIndex] = oIndex;
+                    Array.prototype.forEach.call(optsBox.children, function (sib, i) {
+                        sib.classList.toggle('selected', i === oIndex);
+                        sib.setAttribute('aria-checked', i === oIndex ? 'true' : 'false');
+                    });
+                    submitBtn.disabled = selections.indexOf(-1) !== -1;
+                });
+                optsBox.appendChild(btn);
+            });
+
+            qBox.appendChild(optsBox);
+            container.appendChild(qBox);
+        });
+
+        var actions = el('div', 'quiz-actions');
+        actions.appendChild(submitBtn);
+        container.appendChild(actions);
+        container.appendChild(resultBox);
+
+        submitBtn.addEventListener('click', function () {
+            var score = 0;
+            var allOptBoxes = container.querySelectorAll('.quiz-options');
+            data.questions.forEach(function (question, qIndex) {
+                var opts = allOptBoxes[qIndex].children;
+                var chosen = selections[qIndex];
+                if (chosen === question.correct) score++;
+                Array.prototype.forEach.call(opts, function (optEl, oIndex) {
+                    optEl.classList.add('disabled');
+                    optEl.disabled = true;
+                    if (oIndex === question.correct) optEl.classList.add('correct');
+                    else if (oIndex === chosen) optEl.classList.add('incorrect');
+                });
+            });
+
+            submitBtn.disabled = true;
+            submitBtn.style.display = 'none';
+
+            var total = data.questions.length;
+            resultBox.innerHTML = '';
+            resultBox.classList.add('show');
+
+            if (score === total) {
+                resultBox.classList.add('perfect');
+                resultBox.appendChild(el('div', 'quiz-result-title', '🌟 מצוין! ' + score + ' מתוך ' + total + ' תשובות נכונות!'));
+                resultBox.appendChild(el('p', null, 'אתה שולט בחומר הפרק היטב, ורואים שלמדת אותו לעומק. כל הכבוד!'));
+                playChime();
+            } else {
+                resultBox.classList.add('partial');
+                resultBox.appendChild(el('div', 'quiz-result-title', 'ענית נכון על ' + score + ' מתוך ' + total + ' שאלות'));
+                resultBox.appendChild(el('p', null, 'כדאי לחזור על הפרק ולנסות שוב — התשובות הנכונות מסומנות למעלה בירוק.'));
+                var retryBtn = el('button', 'quiz-retry-btn', '🔄 נסה שוב');
+                retryBtn.type = 'button';
+                retryBtn.addEventListener('click', function () { buildQuiz(container, key); });
+                resultBox.appendChild(retryBtn);
+            }
+        });
+    }
+
+    document.querySelectorAll('.quiz-box[data-quiz]').forEach(function (box) {
+        buildQuiz(box, box.getAttribute('data-quiz'));
+    });
+})();
+</script>
+
+</body>
+</html>
