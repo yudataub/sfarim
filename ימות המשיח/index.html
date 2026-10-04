@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="torah-html-article 2.7.0">
+<meta name="description" content="ספר מסודר לפי נושאים על מהותם של ימות המשיח — משיח בן יוסף ומשיח בן דוד, מחלוקת רבי יוחנן ושמואל, ותירוצי הרמב״ם והגר״א">
+<title>ימות המשיח — בין משיח בן יוסף למשיח בן דוד</title>
+<style>
+:root {
+    --purple: #7e22ce;  --blue: #2563eb;   --green: #059669;
+    --gold:   #f59e0b;  --pink: #ec4899;   --ink:   #1f2937;
+    --paper:  #ffffff;  --muted: #6b7280;  --line:  rgba(0,0,0,.08);
+    --g-page:      linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --g-verse:     linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    --g-highlight: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    --g-quote:     linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    --g-story:     linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    --g-divider:   linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    --g-title:     linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    --fs: 1;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; padding: 40px 20px;
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: var(--g-page);
+    color: var(--ink);
+    line-height: 1.8;
+}
+.container {
+    max-width: 900px; margin: 0 auto;
+    padding: 60px 80px;
+    background: var(--paper);
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.1);
+}
+.main-title {
+    font-size: 3em; font-weight: bold; text-align: center; margin: 0 0 10px;
+    background: var(--g-title); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: var(--purple);
+}
+.subtitle { text-align: center; font-size: 1.25em; color: var(--muted); margin-bottom: 8px; }
+.author   { text-align: center; font-size: 1.05em; color: var(--purple); font-weight: bold; margin-bottom: 10px; }
+h2 { font-size: 2.2em; color: var(--purple); border-right: 6px solid var(--purple);
+     padding-right: 20px; margin: 50px 0 20px; }
+h3 { font-size: 1.8em; color: var(--blue);  margin: 35px 0 15px; }
+h4 { font-size: 1.5em; color: var(--green); margin: 25px 0 12px; }
+p, li { font-size: calc(1.15em * var(--fs)); line-height: 1.8; margin: 0 0 20px; text-align: justify; text-justify: inter-word; }
+li { margin-bottom: 10px; }
+.verse-box p, .section-divider, .chapter-card p, .footer p { text-align: center; }
+.toc li, .listen-bar p { text-align: right; }
+.emphasis { color: var(--purple); font-weight: bold; }
+em { color: var(--blue); font-style: italic; }
+.chapter-card {
+    min-height: 55vh; margin: 60px -80px 0; padding: 40px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: var(--g-title); color: #fff; text-align: center;
+}
+.chapter-card .num { font-size: 5.5em; font-weight: bold; line-height: 1; opacity: .85; }
+.chapter-card .name { font-size: 2.2em; font-weight: bold; margin-top: 18px; max-width: 18ch; }
+.chapter-divider {
+    display: flex; align-items: center; gap: 15px; margin: 45px 0;
+    color: var(--gold); font-size: 1.4em;
+}
+.chapter-divider::before, .chapter-divider::after {
+    content: ''; flex: 1; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.chapter-label {
+    display: inline-block; margin-bottom: 6px; padding: 3px 14px;
+    background: var(--purple); color: #fff; border-radius: 20px;
+    font-size: .55em; font-weight: bold; letter-spacing: .5px; vertical-align: middle;
+}
+.in-this-chapter {
+    background: var(--g-highlight); border-right: 6px solid var(--blue);
+    border-radius: 12px; padding: 22px 26px; margin: 22px 0 32px;
+}
+.in-this-chapter h4 { margin: 0 0 10px; font-size: 1.1em; color: var(--blue); }
+.in-this-chapter ul { margin: 0; padding-right: 20px; }
+.in-this-chapter li { font-size: 1em; margin-bottom: 6px; text-align: right; }
+.story-title { display: block; font-size: 1.25em; font-weight: bold; color: var(--green); margin-bottom: 12px; }
+.verse-box, .highlight-box, .quote-box, .story-box, .qa-box {
+    padding: 28px; margin: 30px 0; border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.verse-box     { background: var(--g-verse); border: 2px solid var(--purple);
+                 text-align: center; font-size: 1.3em; font-weight: 600; color: var(--purple); }
+.verse-box p   { font-size: calc(1em * var(--fs)); margin: 0; }
+.highlight-box { background: var(--g-highlight); border-right: 6px solid var(--blue);
+                 box-shadow: 0 5px 15px rgba(126,34,206,.15); }
+.quote-box     { background: var(--g-quote); border-right: 6px solid var(--gold); font-style: italic; }
+.story-box     { background: var(--g-story); border-right: 6px solid var(--green); }
+.qa-box        { background: #fff; border: 2px dashed var(--pink); }
+.verse-box p:last-child, .highlight-box p:last-child, .quote-box p:last-child,
+.story-box p:last-child, .qa-box p:last-child { margin-bottom: 0; }
+.source-tag { display: block; margin-top: 12px; font-size: .9em; font-style: normal;
+              color: var(--muted); font-weight: bold; }
+.section-divider {
+    background: var(--g-divider); color: #fff; text-align: center;
+    padding: 18px 25px; margin: 45px 0; border-radius: 10px;
+    font-size: 1.3em; font-weight: bold; letter-spacing: .5px;
+}
+.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 30px 0; }
+.two-columns > div { padding: 25px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,.1); }
+.col-purple { background: var(--g-verse);  border-top: 5px solid var(--purple); }
+.col-gold   { background: var(--g-quote);  border-top: 5px solid var(--gold); }
+.toc { background: #faf5ff; border: 2px solid #e9d5ff; border-radius: 12px; padding: 25px 30px; margin: 30px 0; }
+.toc h3 { margin-top: 0; color: var(--purple); }
+.toc ul { list-style: none; padding: 0; margin: 0; }
+.toc li { margin-bottom: 8px; }
+.toc a { color: var(--blue); text-decoration: none; font-size: 1.05em; }
+.toc a:hover { text-decoration: underline; color: var(--purple); }
+.toc > ul > li { margin-bottom: 14px; }
+.toc-chapter { font-weight: bold; font-size: 1.1em; color: var(--purple); }
+.toc-subs { display: block; margin-top: 3px; font-size: .9em; color: var(--muted); line-height: 1.7; }
+.toc-subs a { font-size: 1em; color: var(--muted); }
+.toc-subs a:hover { color: var(--blue); }
+.toc-subs span { margin: 0 6px; opacity: .5; }
+.chapter-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 22px;
+    background: linear-gradient(160deg, #fffdf7 0%, #fdf8ee 100%);
+    border: 1px solid #efe4cd; border-radius: 18px;
+    padding: 34px 30px; margin: 30px 0;
+}
+.chapter-grid .grid-title {
+    grid-column: 1 / -1; text-align: center; margin: 0 0 14px;
+    font-size: 1.6em; color: var(--purple); letter-spacing: 1px;
+    border: none; padding: 0;
+}
+.chapter-chip {
+    display: flex; align-items: center; gap: 12px;
+    color: var(--ink); text-decoration: none; font-size: 1.02em; line-height: 1.45;
+    padding: 6px 8px; border-radius: 10px; transition: background .18s, transform .18s;
+}
+.chapter-chip:hover { background: rgba(245,158,11,.12); transform: translateX(-3px); }
+.chapter-chip .n {
+    flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #c9982f; color: #fff; font-size: .82em; font-weight: bold;
+}
+.chapter-chip.is-front .n { background: #1e2a5a; font-size: .7em; }
+@media (max-width: 900px) { .chapter-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .chapter-grid { grid-template-columns: 1fr; padding: 24px 18px; } }
+.sources { background: #f9fafb; border-radius: 12px; padding: 25px 30px; margin-top: 50px; border: 1px solid var(--line); }
+.sources h3 { margin-top: 0; }
+.sources li { font-size: calc(1em * var(--fs)); }
+.footer { margin-top: 55px; padding-top: 30px; border-top: 3px solid var(--gold);
+          text-align: center; font-size: 1.05em; }
+.footer a { color: var(--blue); }
+.footer-more { margin-top: 30px; padding: 25px; border-radius: 10px;
+               background: var(--g-highlight); color: var(--ink); }
+.footer-more h4 { margin-top: 0; }
+.scroll-top {
+    position: fixed; bottom: 30px; left: 30px; z-index: 50;
+    width: 50px; height: 50px; border-radius: 50%;
+    background: var(--g-title); color: #fff; text-decoration: none;
+    display: none; align-items: center; justify-content: center;
+    font-size: 1.3em; box-shadow: 0 5px 15px rgba(0,0,0,.25);
+}
+.scroll-top.visible { display: flex; }
+.listen-bar {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 15px;
+    margin: 25px 0; padding: 18px 25px;
+    background: var(--g-quote); border-radius: 12px;
+    border-right: 6px solid var(--gold);
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.listen-btn-group { display: flex; gap: 8px; align-items: center; }
+.listen-btn {
+    display: flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
+    color: #fff; border: none; border-radius: 30px; padding: 10px 22px;
+    font-size: 1em; font-weight: bold; font-family: inherit; cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+}
+.listen-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(126,34,206,.3); }
+.listen-btn:active { transform: translateY(0); }
+.listen-stop-btn, .listen-skip-btn, .listen-size-btn {
+    background: #fff; color: var(--purple); border: 2px solid var(--purple);
+    border-radius: 30px; padding: 8px 16px; font-size: .95em; font-weight: bold;
+    font-family: inherit; cursor: pointer; transition: transform .15s, background .15s;
+}
+.listen-skip-btn { padding: 8px 12px; }
+.listen-stop-btn:hover, .listen-skip-btn:hover,
+.listen-size-btn:hover:not(:disabled) { transform: translateY(-2px); background: #f3e8ff; }
+.listen-size { display: flex; align-items: center; gap: 6px; font-size: .9em; color: #78350f; }
+.listen-size-btn { padding: 6px 12px; line-height: 1; }
+.listen-size-btn:disabled { opacity: .35; cursor: default; border-color: #d1d5db; color: var(--muted); }
+.listen-size-btn.big { font-size: 1.25em; }
+.listen-size output { font-weight: bold; min-width: 3.4em; text-align: center; }
+.listen-toggle-btn {
+    background: #fff; color: var(--purple); border: 2px solid var(--purple);
+    border-radius: 30px; padding: 8px 14px; font-size: .88em; font-weight: bold;
+    font-family: inherit; cursor: pointer; white-space: nowrap;
+    transition: transform .15s, background .15s, opacity .15s;
+}
+.listen-toggle-btn:hover { transform: translateY(-2px); background: #f3e8ff; }
+.listen-toggle-btn[aria-pressed="false"] {
+    color: var(--muted); border-color: #d1d5db; background: #f9fafb; opacity: .8;
+}
+.listen-toggle-btn:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+.listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+.listen-skip-btn:focus-visible, .listen-size-btn:focus-visible,
+.listen-voice select:focus-visible,
+.listen-rate input:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+.listen-status   { font-size: .95em; color: #78350f; flex: 1 1 200px; }
+.listen-progress { font-size: .9em; color: #78350f; font-weight: bold; white-space: nowrap; }
+.listen-rate, .listen-voice { display: flex; align-items: center; gap: 6px; font-size: .9em; color: #78350f; }
+.listen-rate input { accent-color: var(--purple); }
+.listen-rate output { font-weight: bold; min-width: 2.6em; }
+.listen-voice select {
+    border-radius: 20px; border: 1px solid var(--gold); padding: 4px 10px;
+    font-family: inherit; background: #fff; color: var(--ink); max-width: 190px;
+}
+.tts-clickable { cursor: pointer; transition: background .2s; border-radius: 6px; }
+.tts-clickable:hover { background: rgba(245,158,11,.10); }
+.reading-highlight {
+    background: var(--g-verse); border-radius: 8px;
+    box-shadow: 0 0 0 3px var(--pink) inset; transition: background .3s;
+    padding-right: 14px; padding-left: 14px;
+    margin-right: -14px; margin-left: -14px;
+}
+h2.reading-highlight { padding-right: 34px; }
+@media (max-width: 768px) {
+    body { padding: 15px 10px; }
+    .container { padding: 30px 22px; border-radius: 12px; }
+    .main-title { font-size: 2em; }
+    h2 { font-size: 1.6em; padding-right: 14px; margin-top: 35px; }
+    h3 { font-size: 1.35em; } h4 { font-size: 1.15em; }
+    p, li { font-size: calc(1.08em * var(--fs)); }
+    .two-columns { grid-template-columns: 1fr; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .qa-box { padding: 20px; }
+    .reading-highlight { padding-right: 10px; padding-left: 10px;
+                         margin-right: -10px; margin-left: -10px; }
+    h2.reading-highlight { padding-right: 24px; }
+    .listen-bar { padding: 15px; gap: 10px; }
+    .listen-status { flex: 1 1 100%; }
+    .listen-voice select { max-width: 140px; }
+    .scroll-top { bottom: 18px; left: 18px; width: 44px; height: 44px; }
+    .chapter-card { margin-left: -22px; margin-right: -22px; min-height: 42vh; padding: 30px 20px; }
+    .chapter-card .num { font-size: 3.8em; }
+    .chapter-card .name { font-size: 1.5em; }
+}
+@media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .01ms !important; animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    .listen-btn:hover, .listen-stop-btn:hover, .listen-skip-btn:hover { transform: none; }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --paper: #1c1b22; --ink: #e8e6ef; --muted: #a8a4b8; --line: rgba(255,255,255,.10);
+        --purple: #c084fc; --blue: #7dd3fc; --green: #4ade80; --gold: #fbbf24; --pink: #f9a8d4;
+        --g-page:      linear-gradient(135deg, #14131a 0%, #221f2e 100%);
+        --g-verse:     linear-gradient(135deg, #2a2440 0%, #3a2436 100%);
+        --g-highlight: linear-gradient(135deg, #1e2c44 0%, #262244 100%);
+        --g-quote:     linear-gradient(135deg, #3a2f16 0%, #4a3a18 100%);
+        --g-story:     linear-gradient(135deg, #16332a 0%, #14291f 100%);
+    }
+    .container { box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+    .toc     { background: #241f33; border-color: #3d2f57; }
+    .chapter-grid { background: linear-gradient(160deg, #262133 0%, #201c2b 100%); border-color: #3d3350; }
+    .chapter-chip { color: var(--ink); }
+    .chapter-chip .n { background: #b08a2e; }
+    .chapter-chip.is-front .n { background: #3b4a86; }
+    .sources { background: #201f28; }
+    .qa-box  { background: #201f28; }
+    .listen-status, .listen-progress, .listen-rate, .listen-voice { color: #fde68a; }
+    .listen-size { color: #fde68a; }
+    .listen-stop-btn, .listen-skip-btn, .listen-toggle-btn, .listen-size-btn { background: #2a2438; color: #e9d5ff; border-color: #c084fc; }
+    .listen-size-btn:disabled { background: #232029; color: #8b8698; border-color: #3f3b4a; }
+    .listen-toggle-btn[aria-pressed="false"] { background: #232029; color: #8b8698; border-color: #3f3b4a; }
+    .listen-stop-btn:hover, .listen-skip-btn:hover { background: #3a3050; }
+    .listen-voice select { background: #2a2438; color: var(--ink); }
+    .tts-clickable:hover { background: rgba(251,191,36,.12); }
+}
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; color: #000 !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important;
+                 box-shadow: none !important; border-radius: 0 !important; background: #fff !important; }
+    .scroll-top, .listen-bar, .chapter-card, .chapter-divider, .chapter-grid { display: none !important; }
+    .chapter-label { background: none !important; color: #4a0080 !important; padding: 0 !important; }
+    .in-this-chapter { page-break-inside: avoid; break-inside: avoid; }
+    p, li { text-align: justify; }
+    .reading-highlight { box-shadow: none !important; background: none !important; }
+    .tts-clickable { cursor: auto; }
+    h2 { page-break-before: always; break-before: page; font-size: 16pt !important; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    h3 { font-size: 13pt !important; } h4 { font-size: 12pt !important; }
+    p, li { font-size: 11pt !important; orphans: 3; widows: 3; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box, .section-divider {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; background: none !important;
+                  -webkit-text-fill-color: #4a0080 !important; color: #4a0080 !important; }
+    .footer { page-break-before: always; break-before: page; }
+    a { color: #000 !important; text-decoration: none; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #444; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="main-title" id="top">ימות המשיח</h1>
+    <div class="subtitle">בין משיח בן יוסף למשיח בן דוד — סוגיה שאינה עתידית בלבד, אלא נוגעת למעשה בימינו</div>
+    <div class="author">מאת: הרב יהודה טאוב</div>
+
+    <div class="listen-bar">
+        <div class="listen-btn-group">
+            <button class="listen-btn" id="listenBtn" onclick="toggleListen()"
+                    aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן למאמר</button>
+            <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+            <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+            <button class="listen-skip-btn" onclick="skipListen(1)"  aria-label="פסקה הבאה"  title="פסקה הבאה">⏭</button>
+            <button class="listen-skip-btn" onclick="skipChapter(1)"  aria-label="פרק הבא"   title="פרק הבא">⏩</button>
+            <button class="listen-stop-btn" onclick="stopListen()"   aria-label="עצור הקראה">⏹ עצור</button>
+            <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()"
+                    aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+        </div>
+        <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+        <span class="listen-progress" id="listenProgress"></span>
+        <div class="listen-rate">
+            <label for="rateRange">מהירות:</label>
+            <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1"
+                   oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)"
+                   aria-label="מהירות הקראה">
+            <output id="rateValue" for="rateRange">1.0×</output>
+        </div>
+        <div class="listen-voice">
+            <label for="voiceSelect">קול:</label>
+            <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+        </div>
+        <div class="listen-size">
+            <span>גודל טקסט:</span>
+            <button class="listen-size-btn" id="fontSmaller" onclick="setFontScale(-1)"
+                    aria-label="הקטן את הטקסט" title="הקטן את הטקסט">א−</button>
+            <output id="fontScaleValue">100%</output>
+            <button class="listen-size-btn big" id="fontBigger" onclick="setFontScale(1)"
+                    aria-label="הגדל את הטקסט" title="הגדל את הטקסט">א+</button>
+        </div>
+    </div>
+
+    <nav class="chapter-grid" aria-label="מבט על פרקי הספר">
+        <h2 class="grid-title">פִּרְקֵי הַסֵּפֶר</h2>
+        <a class="chapter-chip is-front" href="#intro"><span class="n">◆</span>הַקְדָּמָה</a>
+        <a class="chapter-chip" href="#section1"><span class="n">1</span>משיח בן יוסף ומשיח בן דוד</a>
+        <a class="chapter-chip" href="#section2"><span class="n">2</span>מהי בכלל "ימות המשיח"?</a>
+        <a class="chapter-chip" href="#section3"><span class="n">3</span>הרמב"ם הסותר את עצמו</a>
+        <a class="chapter-chip" href="#section4"><span class="n">4</span>עולם כמנהגו נוהג</a>
+        <a class="chapter-chip" href="#section5"><span class="n">5</span>כמה זמן יימשכו ימות המשיח?</a>
+        <a class="chapter-chip" href="#section6"><span class="n">6</span>הלכה למעשה בימות המשיח</a>
+        <a class="chapter-chip" href="#section7"><span class="n">7</span>קיבוץ גלויות כאות לגאולה</a>
+        <a class="chapter-chip" href="#section8"><span class="n">8</span>איך מתייחסים למה שקורה כאן?</a>
+    </nav>
+
+    <div class="toc">
+        <h3>📑 תוכן העניינים</h3>
+        <ul>
+            <li>
+                <a class="toc-chapter" href="#section1">פרק א – משיח בן יוסף ומשיח בן דוד: מפרשת ויגש למדרש</a>
+                <span class="toc-subs">
+                    <a href="#sec1a">"ואת יהודה שלח לפניו"</a><span>·</span>
+                    <a href="#sec1b">יוסף וציון — אותו שורש</a><span>·</span>
+                    <a href="#sec1c">מה שאירע ליוסף אירע לציון</a><span>·</span>
+                    <a href="#sec1d">שני משיחים</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section2">פרק ב – מהי בכלל "ימות המשיח"? מחלוקת רבי יוחנן ושמואל</a>
+                <span class="toc-subs">
+                    <a href="#sec2a">"כל הנביאים לא נתנבאו אלא לימות המשיח"</a><span>·</span>
+                    <a href="#sec2b">שמואל: שיעבוד מלכויות בלבד</a><span>·</span>
+                    <a href="#sec2c">מה זה בכלל "שיעבוד מלכויות"</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section3">פרק ג – הרמב"ם הסותר את עצמו, ותירוץ הגר"א</a>
+                <span class="toc-subs">
+                    <a href="#sec3a">הרמב"ם בהלכות תשובה</a><span>·</span>
+                    <a href="#sec3b">הרמב"ם בהלכות מלכים</a><span>·</span>
+                    <a href="#sec3c">קושיית הכסף משנה</a><span>·</span>
+                    <a href="#sec3d">תירוץ הגר"א: שני משיחים</a><span>·</span>
+                    <a href="#sec3e">אז איפה אנחנו עומדים היום?</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section4">פרק ד – תירוץ שני: "עולם כמנהגו נוהג" בשיטת הרמב"ם</a>
+                <span class="toc-subs">
+                    <a href="#sec4a">אין באמת מחלוקת</a><span>·</span>
+                    <a href="#sec4b">גשרים ומנהרות במקום "כל גיא ינשא"</a><span>·</span>
+                    <a href="#sec4c">בית הכנסת שעתיד לעוף</a><span>·</span>
+                    <a href="#sec4d">לחם על העצים</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section5">פרק ה – כמה זמן יכולים להימשך ימות המשיח?</a>
+                <span class="toc-subs">
+                    <a href="#sec5a">ששת אלפים שנה</a><span>·</span>
+                    <a href="#sec5b">השיר על גג בית המקדש</a><span>·</span>
+                    <a href="#sec5c">ארבעים שנה עד תחיית המתים</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section6">פרק ו – הלכה למעשה בימות המשיח: נשק, תכשיטים ועירוב</a>
+                <span class="toc-subs">
+                    <a href="#sec6a">נשק בשבת</a><span>·</span>
+                    <a href="#sec6b">מחלוקת על תכשיטים</a><span>·</span>
+                    <a href="#sec6c">עירוב בשדה זרעים</a><span>·</span>
+                    <a href="#sec6d">זכות וחובה בימות המשיח</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section7">פרק ז – קיבוץ גלויות כאות לגאולה</a>
+                <span class="toc-subs">
+                    <a href="#sec7a">"עתידה אשה שתלד בכל יום"</a><span>·</span>
+                    <a href="#sec7b">"הוא יבנה המקדש ויקבץ נדחי ישראל"</a><span>·</span>
+                    <a href="#sec7c">איך יתכן קיבוץ גלויות בלי משיח?</a>
+                </span>
+            </li>
+            <li>
+                <a class="toc-chapter" href="#section8">פרק ח – איך מתייחסים למה שקורה כאן?</a>
+                <span class="toc-subs">
+                    <a href="#sec8a">שתי דרכים להתבונן</a><span>·</span>
+                    <a href="#sec8b">משיח בן יוסף כבר הגיע</a>
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ===== הקדמה ===== -->
+    <h2 id="intro">הקדמה</h2>
+    <div class="highlight-box">
+        <p>נושאו של ספר זה הוא סוגיית ימות המשיח, על פי סדרת שיעורים. הדגש בו אינו רק "מתי יבוא המשיח" — שאלה שאין לאדם דרך לדעת את תשובתה — אלא שאלה אחרת ויסודית ממנה: <span class="emphasis">מהי בכלל ההגדרה של ימות המשיח?</span> מסתבר שזו אינה סוגיה עתידית גרידא, אלא שאלה שיש לה נפקא מינה למעשה, כאן ועכשיו, בשאלה איך אדם מסתכל על המציאות שהוא חי בתוכה.</p>
+    </div>
+    <div class="story-box">
+        <span class="story-title">🕯️ "צריכים לשמוע את העדי שמה"</span>
+        <p>הרב דוב יפה סיפר פעם, כשעלה לירושלים לשמחה משפחתית, שהוא הביט מהחלון על העיר הבנויה מתחתיו — הרים, כבישים, בתים — ואמר משפט קצר וקולע: "היום, בימינו, צריכים לשמוע את קול העדי שמה". הכוונה היא לפסוק "קול דודי הנה זה בא... הנה הסתיו עבר, הגשם חלף הלך לו. הניצנים נראו בארץ, עת הזמיר הגיע". יש בפסוק זה כמה וכמה סימנים המבשרים שהאביב הגיע — ולא רק סימן אחד. הרעיון הוא, שגם אם עדיין לא רואים את התמונה השלמה, וגם אם אי אפשר לומר שהכול כבר התברר לגמרי — יש כבר עכשיו לשים לב לניצנים. יש לשים לב איפה בדיוק אנחנו נמצאים, ולא לעבור על כך בשתיקה.</p>
+    </div>
+    <p>הספר בנוי משמונה פרקים. הוא פותח בסוגיית משיח בן יוסף ומשיח בן דוד כפי שהיא עולה ממדרש על פרשת ויגש, ממשיך אל הסוגיה התלמודית המרכזית — מחלוקת רבי יוחנן ושמואל בהגדרת ימות המשיח — עובר דרך "הסתירה" לכאורה בדברי הרמב"ם ושני התירוצים לה, ומסיים בשאלות מעשיות: כמה זמן יכולים להימשך ימות המשיח, מה ההלכה הנוהגת בהם, וכיצד ראוי להתייחס למה שקורה בימינו אנו.</p>
+
+    <!-- ============================================================= -->
+    <!-- פרק א -->
+    <!-- ============================================================= -->
+    <span class="chapter-label">פרק א</span>
+    <h2 id="section1">משיח בן יוסף ומשיח בן דוד: מפרשת ויגש למדרש</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>למה יהודה נשלח לפני יעקב אבינו להכין מקום, ומה זה מלמד על כל מקום שרוצים שיצליח</li>
+            <li>הגימטריה המשותפת של "יוסף" ו"ציון"</li>
+            <li>רשימת ההקבלות במדרש בין סיפור יוסף לבין נבואות הגאולה על ציון</li>
+            <li>המסקנה: קיומם של שני משיחים — משיח בן יוסף ומשיח בן דוד</li>
+        </ul>
+    </div>
+
+    <h3 id="sec1a">"ואת יהודה שלח לפניו"</h3>
+    <p>פרשת השבוע שממנה יוצא שיעור זה היא פרשת ויגש. תחילתה במפגש הנוקב בין יהודה ליוסף — "ויגש אליו יהודה" — מפגש שנפתח כעימות, וממשיך בהתקרבות של שמחה ואהבה, לאחר שיוסף מתוודע לאחיו. בהמשך הפרשה, כשיעקב אבינו ומשפחתו יורדים מצרימה, נאמר פסוק שלכאורה שולי:</p>
+    <div class="verse-box">
+        <p>"וְאֶת יְהוּדָה שָׁלַח לְפָנָיו אֶל יוֹסֵף לְהוֹרֹת לְפָנָיו גֹּשְׁנָה."</p>
+        <span class="source-tag">בראשית מו, כח</span>
+    </div>
+    <p>רש"י מבאר שיעקב שלח את יהודה לפניו כדי "להתקין לו בית תלמוד, שמשם תצא הוראה". כלומר: לפני שמשפחת יעקב מגיעה בכלל להתיישב בגושן, יהודה נשלח להקים שם מקום לימוד תורה. יש בכך יסוד חשוב, שאינו נוגע רק לימי קדם: מקום שאין בו בית מדרש — אין סיכוי שיצליח. מוסד תורני, קהילה, כל מקום שרוצים שיתפתח — חייב שיהיה בו קודם כול "כולל", מקום קבוע של תורה, שאליו יידע כל אדם שהוא יכול לבוא בכל שעה ולמצוא שם שיעור, תפילה, מקום פתוח. בלי בסיס כזה — אין למקום על מה לעמוד, ולא משנה כמה משאבים משקיעים בו מבחוץ.</p>
+
+    <h3 id="sec1b">יוסף וציון — אותו שורש</h3>
+    <p>על אותו פסוק עצמו — "ואת יהודה שלח לפניו" — מביא מדרש קישור מפתיע לפסוק אחר לגמרי:</p>
+    <div class="verse-box">
+        <p>"הִנְנִי שֹׁלֵחַ מַלְאָכִי וּפִנָּה דֶרֶךְ לְפָנָי."</p>
+        <span class="source-tag">מלאכי ג, א</span>
+    </div>
+    <p>מכאן, אומר המדרש, אפשר ללמוד יסוד בביאת המשיח: כשם שכאן שלח יעקב את יהודה לפניו כדי להכין את המקום, כך גם הקדוש ברוך הוא עתיד לשלוח לפני הגאולה את "מלאכי" — את אליהו הנביא — כדי ליישר את הדרך לגאולה. המדרש כולו בנוי על ההנחה ש"כל מה שאירע ליוסף אירע לציון": כל מה שקורה בפרשת השבוע בסיפורו של יוסף, הוא כעין דוגמה למה שעתיד לקרות בגאולה.</p>
+    <p>יש לכך גם רמז חשוב בגימטריה: המילה "יוסף" (י+ו+ס+פ) עולה בגימטריה 156, ואף המילה "ציון" (צ+י+ו+ן) עולה גם היא 156 — אותו מספר בדיוק. שתי המילים אף חולקות שלוש מתוך ארבע אותיות (י, ו, ן/ף), ומדובר על אותיות קרובות בערכן המספרי (ס וגם צ שייכות לאותה משפחה ערכית). הרמז ברור: השורש הפנימי של יוסף ושל ציון הוא אותו שורש.</p>
+
+    <h3 id="sec1c">מה שאירע ליוסף אירע לציון</h3>
+    <p>המדרש עצמו בונה רשימה ארוכה של הקבלות לשוניות בין פסוקי סיפור יוסף לבין פסוקים על ציון וירושלים בנביאים ובכתובים. הרעיון אינו רק אסמכתא ספרותית — הוא מלמד שכל שלב בירידתו ועלייתו של יוסף הוא דגם למה שעובר על עם ישראל וירושלים בדרך לגאולה.</p>
+    <div class="two-columns">
+        <div class="col-purple">
+            <h4 style="margin-top:0;">ביוסף כתיב</h4>
+            <p style="text-align:right; margin-bottom:8px;">"וְיִשְׂרָאֵל אָהַב אֶת יוֹסֵף"</p>
+            <p style="text-align:right; margin-bottom:8px;">"וַיִּשְׂנְאוּ אֹתוֹ"</p>
+            <p style="text-align:right; margin-bottom:8px;">"וְהִנֵּה אֲנַחְנוּ מְאַלְּמִים אֲלֻמִּים"</p>
+            <p style="text-align:right; margin-bottom:8px;">"הֲמָלֹךְ תִּמְלֹךְ עָלֵינוּ"</p>
+            <p style="text-align:right; margin-bottom:8px;">"וְהִנֵּה חֲלוֹם"</p>
+            <p style="text-align:right; margin-bottom:0;">"וַיִּרְאֻהוּ מֵרָחֹק"</p>
+        </div>
+        <div class="col-gold">
+            <h4 style="margin-top:0;">בציון כתיב</h4>
+            <p style="text-align:right; margin-bottom:8px;">"אֹהֵב ה' שַׁעֲרֵי צִיּוֹן"</p>
+            <p style="text-align:right; margin-bottom:8px;">"נָתְנָה עָלַי בְּקוֹלָהּ" (שנאה)</p>
+            <p style="text-align:right; margin-bottom:8px;">"וְנוֹשְׁעָה בְרִנָּה נֹסֵעַ" (קיבוץ)</p>
+            <p style="text-align:right; margin-bottom:8px;">"אִמְרוּ לְצִיּוֹן יִמְלֹךְ אֱלֹקָיִךְ"</p>
+            <p style="text-align:right; margin-bottom:8px;">"הָיִינוּ כְּחֹלְמִים"</p>
+            <p style="text-align:right; margin-bottom:0;">"זְכָרוּ מֵרָחוֹק אֶת ה'"</p>
+        </div>
+    </div>
+    <p>וכך ממשיך המדרש ומקביל בין שאר שלבי הסיפור: כפי שהאחים התנכלו ליוסף להמיתו, כך אויבי ציון ביקשו להכחידה; כפי שהאחים השליכו את יוסף לבור שאין בו מים, כך נאמר על ירמיהו "וּבַבּוֹר אֵין מָיִם"; כפי שיוסף הועלה מן הבור, כך עתידה ציון להיגאל מגלותה; כפי שיעקב קרע את שמלותיו ולא רצה להתנחם על יוסף, כך נאמר על ציון "אַל תְּעַצְרִי לְנַחֲמֵנִי". וכך, פסוק אחרי פסוק, מלווה המדרש את כל תולדות יוסף — ירידתו למצרים, מכירתו, ישיבתו בבית פוטיפר, שנות מאסרו — כדגם מקביל לתולדות עם ישראל וירושלים, עד שהוא מגיע לשורה שממנה יצא השיעור כולו:</p>
+    <div class="quote-box">
+        <p>"ביוסף כתיב: 'ואת יהודה שלח לפניו', ובציון כתיב: 'הנני שלח מלאכי ופנה דרך לפני'."</p>
+        <span class="source-tag">מדרש על פרשת ויגש</span>
+    </div>
+
+    <h3 id="sec1d">שני משיחים</h3>
+    <p>מהמדרש הזה למדו חכמים יסוד עמוק: מכיוון שכל מה שאירע ליוסף הוא דוגמה למה שיארע בגאולה, וכיוון שהמדרש מדמה כל שלב בגאולה לשורש אחד עם דמותו של יוסף — יש בסיס לומר שקיים "משיח בן יוסף", השייך לאותו שורש ממש. ולאחר מכן, בהמשך תהליך הגאולה, מגיע "משיח בן דוד". השאלה המתבקשת היא: מה בדיוק התפקיד של כל אחד מהם?</p>
+    <p>תשובה מפורשת לכך אין בגמרות, אך אפשר להיעזר בפרשת יוסף עצמה כדי להבין את אופיו של משיח בן יוסף, בדיוק כפי שהמדרש עצמו משווה בין השניים. בחלומותיו של יוסף אין שום איזכור של תוכן רוחני — הכול גשמיות: "וְהִנֵּה אֲנַחְנוּ מְאַלְּמִים אֲלֻמִּים בְּתוֹךְ הַשָּׂדֶה" (איסוף היבול, כלומר קיבוץ גלויות), ו"וְהִנֵּה הַשֶּׁמֶשׁ וְהַיָּרֵחַ... מִשְׁתַּחֲוִים לִי" (מלכות וריבונות). לעומת זאת, כשיעקב שולח את יהודה לפניו, הוא שולח אותו כדי להקים בית מדרש — עניין רוחני מובהק. ומכאן ניתן להסיק: תפקידו של משיח בן יוסף הוא לאסוף את "העלומים" — לקבץ את עם ישראל מכל קצוות תבל למקום אחד ולבסס בו ריבונות עצמאית — ואילו משיח בן דוד, השייך ליהודה, הוא זה שמביא את הגאולה הרוחנית: בניין בית המקדש והחזרת מלכות בית דוד.</p>
+    <p>לאור זאת עולה נקודה מטרידה מן המדרש עצמו: "ויאמרו לו אחיו: הֲמָלֹךְ תִּמְלֹךְ עָלֵינוּ" — האחים לא האמינו בתחילה שחלומותיו של יוסף אכן יתקיימו. המדרש מדמה זאת לספק שיהיה קיים גם בציון עצמה. ייתכן, אם כן, שגם בדורות מאוחרים יותר, כשמשיח בן יוסף יבוא ויביא גאולה גשמית — קיבוץ גלויות, ריבונות — לא כולם יאמינו שזו אכן ראשית הגאולה. בפרק האחרון של הספר נשוב לשאלה זו, ונבחן אם וכיצד היא נוגעת לימינו אנו.</p>
+
+    <div class="chapter-card">
+        <span class="num">ב</span>
+        <span class="name">מהי בכלל "ימות המשיח"?</span>
+    </div>
+    <div class="chapter-divider">✡</div>
+
+    <!-- ============================================================= -->
+    <!-- פרק ב -->
+    <!-- ============================================================= -->
+    <span class="chapter-label">פרק ב</span>
+    <h2 id="section2">מהי בכלל "ימות המשיח"? מחלוקת רבי יוחנן ושמואל</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>הסוגיה המרכזית: רבי יוחנן — כל הנבואות נועדו לימות המשיח; שמואל — אין בין העולם הזה לימות המשיח אלא שיעבוד מלכויות</li>
+            <li>מה זה בכלל "שיעבוד מלכויות"</li>
+            <li>🕯️ שני סיפורים על גזירות זרות: הרב שך [שטיינמן] שנמלט לשוויץ, וחנוכיית בריסק</li>
+        </ul>
+    </div>
+    <p>לפני שממשיכים לברר את חלוקת התפקידים בין שני המשיחים, יש לחזור אל השאלה היסודית ביותר: מה בדיוק אמורה להיות המציאות בימות המשיח? האם מדובר בעולם שהופך על פיו — זאבים גרים עם כבשים, הכול נס גלוי — או שמדובר במשהו צנוע וממוקד הרבה יותר? בשאלה הזאת עצמה נחלקו בגמרא שני אמוראים גדולים.</p>
+
+    <h3 id="sec2a">"כל הנביאים לא נתנבאו אלא לימות המשיח"</h3>
+    <div class="quote-box">
+        <p>"אמר רבי חייא בר אבא אמר רבי יוחנן: כל הנביאים כולן לא נתנבאו אלא לימות המשיח, אבל לעולם הבא — 'עין לא ראתה אלוקים זולתך יעשה למחכה לו'."</p>
+        <span class="source-tag">מסכת ברכות דף לד עמוד ב</span>
+    </div>
+    <p>רבי יוחנן קובע כאן חלוקה ברורה: כל נבואות הגאולה הנפלאות שמופיעות בישעיהו וביחזקאל — "וְגָר זְאֵב עִם כֶּבֶשׂ", "וְלֹא יִלְמְדוּ עוֹד מִלְחָמָה", "מָלְאָה הָאָרֶץ דֵּעָה אֶת ה'" — כל אלה מתייחסות לימות המשיח, ולא ל"עולם הבא". עולם הבא, לעומת זאת, הוא מציאות שאין לה תיאור בכלל: "עין לא ראתה" — אף נביא לא ראה אותה ולא יכול היה לתארה, כי היא מעל לכל דמיון אנושי. לפי שיטת רבי יוחנן, אם כן, ימות המשיח הם עולם עשיר בתוכן, מלא בנבואות מפורשות — אבל הוא עדיין העולם הזה, כפי שאנו מכירים אותו, על אף כל הנפלאות שבו.</p>
+
+    <h3 id="sec2b">שמואל: שיעבוד מלכויות בלבד</h3>
+    <p>מיד לאחר מכן מביאה הגמרא דעה חולקת:</p>
+    <div class="quote-box">
+        <p>"ופליגא דשמואל, דאמר שמואל: אין בין העולם הזה לימות המשיח אלא שיעבוד מלכויות בלבד, שנאמר: 'כי לא יחדל אביון מקרב הארץ'."</p>
+        <span class="source-tag">מסכת ברכות דף לד עמוד ב</span>
+    </div>
+    <div class="verse-box">
+        <p>"כִּי לֹא יֶחְדַּל אֶבְיוֹן מִקֶּרֶב הָאָרֶץ."</p>
+        <span class="source-tag">דברים טו, יא</span>
+    </div>
+    <p>לפי שמואל, ההגדרה של ימות המשיח צנועה בהרבה: העולם ימשיך להתנהג כמנהגו — יהיו עניים ועשירים, יהיו מחלות, יהיו אירועים טובים ורעים — הכול כמו היום, פרט לדבר אחד בלבד: עם ישראל לא יהיה עוד משועבד לשלטון זר. שמואל אינו עוסק כאן בשאלה מתי נאמרו הנבואות הנפלאות של הנביאים ומה יעלה בגורלן — הוא פשוט קובע, שההגדרה עצמה של "ימות המשיח" היא היעדר שיעבוד מלכויות, ותו לא.</p>
+
+    <h3 id="sec2c">מה זה בכלל "שיעבוד מלכויות"</h3>
+    <p>המושג "שיעבוד מלכויות" עלול להישמע מופשט, אבל מי שחי בדורות שלפני קום המדינה יודע היטב כמה הוא היה מוחשי. שיעבוד מלכויות פירושו: מלכות זרה גוזרת גזירות על עם ישראל, ולעם ישראל אין ברירה אלא לציית — בין אם הגזירה נוגעת לגיוס לצבא זר, בין אם היא אוסרת קיום מצווה, ובין אם היא רק מכבידה סתם. חירות מ"שיעבוד מלכויות" משמעה שאיש אינו קובע עוד לעם ישראל מה עליו לעשות.</p>
+    <div class="story-box">
+        <span class="story-title">🕯️ הגזירה שהצילה חיים</span>
+        <p>סיפור מוכר על גדול בישראל, מגדולי ליטא, ממחיש עד כמה שיעבוד מלכויות הוא לא מושג תיאורטי. באחת הגזירות שקדמו לשואה, נגזר גיוס חובה על יהודי אחת מערי מזרח אירופה. הרב, שהיה אז בישיבתו בבריסק, לא מצא דרך להתחמק מן הגזירה, ולא נותרה לו ברירה אלא לעזוב את הישיבה כדי לצאת לשווייץ. הכניסה לשווייץ באותם ימים לא הייתה פשוטה כלל — אך היה כלל, שאם קהילה יהודית מקומית מבקשת אדם מסוים כמלמד עבורה, יש בכוחה לזמן אותו לבוא וללמד. כך, בעזרת מכתב הזמנה כזה, הצליח הרב להגיע לשווייץ. הפרידה הייתה קשה מנשוא: "בכיתי הרבה מאוד", סיפר לימים, "היה לי קשה כל כך לעזוב את כולם". ואז הגיע החורבן. מכל חברי הישיבה שנשארו מאחור, לא נותר איש. הוא, שיצא בעל כורחו בעקבות גזירת שיעבוד מלכויות — ניצל. גזירה זרה שנראתה בזמנה כאסון, התבררה כיד ההשגחה.</p>
+    </div>
+    <div class="story-box">
+        <span class="story-title">🕯️ החנוכייה היחידה שבחוץ</span>
+        <p>מספרים שבעיר בריסק, בתקופת שלטון זר, הייתה רק חנוכייה אחת בעיר שהוצבה בחלון הפונה לרחוב — ולא בתוך הבית בלבד. חנוכייה זו הייתה ביתו של אחד מגדולי העיר, אדם שביטחונו בבורא עולם היה איתן, ולא פחד להראות בפרהסיא שהוא מדליק נר חנוכה. כל שאר יהודי העיר, לעומת זאת, לא העזו להוציא את הנר אל מחוץ לפתח — פחדו מהגויים. הבדל זה, בין ארץ ישראל של היום לבין החוץ־לארץ שהייתה אז, הוא בדיוק ההבדל שעליו מדבר שמואל: לא מדובר בנס גלוי, לא בהיפוך סדרי בראשית — אלא בפשטות, בזכות לחיות בלי שאיש יגזור עלייך גזירות. זהו כל תוכנו של "שיעבוד מלכויות".</p>
+    </div>
+
+    <div class="chapter-card">
+        <span class="num">ג</span>
+        <span class="name">הרמב"ם הסותר את עצמו</span>
+    </div>
+    <div class="chapter-divider">📖</div>
+
+    <!-- ============================================================= -->
+    <!-- פרק ג -->
+    <!-- ============================================================= -->
+    <span class="chapter-label">פרק ג</span>
+    <h2 id="section3">הרמב"ם הסותר את עצמו, ותירוץ הגר"א</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>איך פוסק הרמב"ם בהלכות תשובה — וכיצד נראה שהוא פוסק אחרת בהלכות מלכים</li>
+            <li>קושיית הכסף משנה על הסתירה</li>
+            <li>התירוץ הראשון: שני משיחים ושתי הגדרות שונות של "ימות המשיח"</li>
+            <li>המסקנה המעשית: איפה אנחנו עומדים היום</li>
+        </ul>
+    </div>
+
+    <h3 id="sec3a">הרמב"ם בהלכות תשובה</h3>
+    <p>מחלוקת רבי יוחנן ושמואל אינה נותרת תיאורטית — היא מגיעה עד לפתחו של הרמב"ם עצמו, ולכאורה בצורה סותרת. בהלכות תשובה כותב הרמב"ם:</p>
+    <div class="quote-box">
+        <p>"וכל הנביאים כולם לא נתנבאו אלא לימות המשיח... אבל טובת חיי העולם הבא אין ערך ולא דמיון... שאמרו חכמים: כל הנביאים כולן לא נתנבאו אלא לימות המשיח, אבל לעולם הבא — 'עין לא ראתה אלוקים זולתך'."</p>
+        <span class="source-tag">רמב"ם, הלכות תשובה פרק ח</span>
+    </div>
+    <p>כאן פוסק הרמב"ם, במפורש וכמעט במילים זהות, כדעת רבי יוחנן: כל נבואות הנביאים — הכבש עם הזאב, "לא ילמדו עוד מלחמה" — כל אלה שייכים לימות המשיח, ורק "עולם הבא" הוא המציאות שאין לה תיאור.</p>
+
+    <h3 id="sec3b">הרמב"ם בהלכות מלכים</h3>
+    <p>אולם בפרק אחר לגמרי, בהלכות מלכים, כותב הרמב"ם דברים שנשמעים כמנוגדים:</p>
+    <div class="quote-box">
+        <p>"ואל יעלה על הלב שבימות המשיח יבטל דבר ממנהגו של עולם, או יהיה שם חידוש במעשה בראשית, אלא עולם כמנהגו נוהג... ומה שנאמר בענין זה, הכל משל הוא. ועיקר הדברים ככה הם: אין בין העולם הזה לימות המשיח אלא שעבוד מלכויות בלבד."</p>
+        <span class="source-tag">רמב"ם, הלכות מלכים פרק יב</span>
+    </div>
+    <p>כאן הרמב"ם קובע בפירוש, וכמעט במילים ממש של שמואל: "אין בין העולם הזה לימות המשיח אלא שעבוד מלכויות בלבד". הוא אף מוסיף חידוש: כל הנבואות הנפלאות — הזאב עם הכבש — אינן אמורות להתקיים כפשוטן, אלא הן "משל" בלבד. נמצא שבפרק אחד פוסק הרמב"ם כרבי יוחנן, ובפרק אחר — כשמואל.</p>
+
+    <h3 id="sec3c">קושיית הכסף משנה</h3>
+    <p>הקושי הזה לא נעלם מעיני הפוסקים. מרן רבי יוסף קארו, בעל הכסף משנה, מעיר על כך במפורש:</p>
+    <div class="qa-box">
+        <p><strong>קושיה:</strong> "ודע דמה שאמרו דרבי חייא בר אבא פליג דשמואל, דאמר אין בעולם הזה לימות המשיח שינוי כלל — ורבנו כתב כאן [בהלכות מלכים] כדברי שמואל, וצריך עיון."</p>
+        <span class="source-tag">כסף משנה על הרמב"ם, הלכות מלכים</span>
+    </div>
+    <p>הכסף משנה תמה: אם בגמרא נראה שרבי יוחנן ושמואל חלוקים זה על זה, כיצד ייתכן שהרמב"ם — הידוע כפוסק שאינו משאיר "יש אומרים" סותרים, אלא מכריע תמיד באופן ברור ואחיד — יפסוק בפרק אחד כדעה אחת, ובפרק אחר כדעה החולקת עליה? זו קושיה עצומה, שכן אין בדרכו של הרמב"ם להביא "יש אומרים כך ויש אומרים כך" בלי הכרעה. הוא לעולם מכריע, ואילו כאן נראה שהוא מכריע לכאן ולכאן.</p>
+
+    <h3 id="sec3d">תירוץ הגר"א: שני משיחים</h3>
+    <p>תשובה מאירת עיניים לקושיה זו מובאת בשם הגר"א, בספרים המביאים את תורתו — ובהם דברי הרב יהודה אלקלעי, מחלוצי הרעיון של שיבה מעשית לארץ ישראל בדורות שקדמו לציונות המדינית. שם מבואר יסוד זה: אין כאן מחלוקת אמיתית בין רבי יוחנן לשמואל, אלא כל אחד מהם מדבר על משיח אחר.</p>
+    <div class="two-columns">
+        <div class="col-purple">
+            <h4 style="margin-top:0;">רבי יוחנן</h4>
+            <p>מדבר על <span class="emphasis">משיח בן דוד</span>. ימות המשיח שהוא מתאר — עם כל נבואות הנחמה, השלום העולמי, הידיעה השלמה של ה' — הם התקופה השייכת לגאולה הרוחנית שמביא משיח בן דוד.</p>
+        </div>
+        <div class="col-gold">
+            <h4 style="margin-top:0;">שמואל</h4>
+            <p>מדבר על <span class="emphasis">משיח בן יוסף</span>. הימים שבהם מתבטל שיעבוד גלויות — כלומר, שהעם חוזר לריבונות עצמאית — הם הנקראים "ימות משיח בן יוסף". אין בהם עדיין את מלוא הגאולה הרוחנית, אלא רק הפסקת השעבוד לזרים.</p>
+        </div>
+    </div>
+    <p>לפי תירוץ זה, אין שום סתירה בין שני חלקי הרמב"ם: בהלכות תשובה, כשעוסק הרמב"ם בגמול הרוחני ובעולם הבא, הוא מדבר על התקופה השלמה — ימות משיח בן דוד — ולכן פוסק כרבי יוחנן. בהלכות מלכים, כשעוסק הרמב"ם בתהליך הראשוני של הגאולה, בשעה שעם ישראל משתחרר משיעבוד מלכויות אך עוד לא הגיע לשלמותה, הוא פוסק כשמואל — כי זהו תוכנם המדויק של ימי משיח בן יוסף.</p>
+
+    <h3 id="sec3e">אז איפה אנחנו עומדים היום?</h3>
+    <p>לפי היסוד הזה עולה מסקנה מעשית מרחיקת לכת: אם ההגדרה של ימי משיח בן יוסף היא הפסקת שיעבוד מלכויות בלבד — ריבונות עצמאית, קיבוץ גלויות — הרי שאנו, מאז קום המדינה, נמצאים בתוך ימים אלה ממש. איש אינו גוזר עלינו עוד גזירות זרות; יש לעם ישראל ריבונות משלו; יהודים מגיעים מכל קצוות תבל אל אותו מקום, בדיוק כפי שמתאר תפקידו של יוסף — "מאלמים אלומים". על פי היסוד הזה, אנו כבר בתוך "ימות המשיח" במובן הראשוני שלהם.</p>
+    <p>נקודה זו מתחברת אף לנוסח התפילה עצמו. בברכת המזון אנו מבקשים "הרחמן הוא יזכנו לימות המשיח" — נוסח שממנו יוצא, לכאורה, שאנו עדיין לא נמצאים בהם. אכן, יש עדות שגדולי ישראל דנו בדיוק בשאלה זו, ותיקנו במקומות מסוימים נוסח אחר: "יזכנו לביאת המשיח" ולא "לימות המשיח" — משום שלימות המשיח, לפי היסוד הנזכר, אנו כבר נמצאים בתוכם, ואנו מבקשים דווקא את ביאתו של משיח בן דוד, שמשלים את הגאולה.</p>
+
+    <div class="chapter-card">
+        <span class="num">ד</span>
+        <span class="name">עולם כמנהגו נוהג</span>
+    </div>
+    <div class="chapter-divider">✡</div>
+
+    <!-- ============================================================= -->
+    <!-- פרק ד -->
+    <!-- ============================================================= -->
+    <span class="chapter-label">פרק ד</span>
+    <h2 id="section4">תירוץ שני: "עולם כמנהגו נוהג" בשיטת הרמב"ם</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>גישה נוספת ליישוב "סתירת" הרמב"ם — שאין כאן בכלל מחלוקת</li>
+            <li>איך גשרים ומנהרות ממחישים נבואת "כל גיא ינשא"</li>
+            <li>🕯️ הסיפור על בית כנסת שידע שהוא עתיד "לעוף" לארץ ישראל</li>
+            <li>איך לחם טרי בכל בוקר הוא קיום מילולי של דברי חז"ל</li>
+        </ul>
+    </div>
+
+    <h3 id="sec4a">אין באמת מחלוקת</h3>
+    <p>לצד תירוץ הגר"א, מובאת בשם הרמב"ם עצמו גישה שונה לגמרי ליישוב הסתירה בין שני חלקי דבריו — גישה שלפיה אין כאן בכלל מחלוקת בין רבי יוחנן לשמואל. כשהגמרא אומרת שדעה אחת "פליגא" (חולקת) על חברתה, זהו רק תיאור טכני של כך שהמשפטים נשמעים שונים זה מזה — אך לא בהכרח שיש כאן סתירה מהותית במציאות. אפשר שדבריהם מתיישבים זה עם זה בלי כל קושי.</p>
+    <p>לפי הבנה זו, גם רבי יוחנן וגם שמואל מסכימים ששיעבוד מלכויות יתבטל, וגם מסכימים שכל נבואות הנביאים יתקיימו — אלא שהן יתקיימו לא בדרך של "היפוך העולם" אלא כמשל, בתוך מציאות שממשיכה להתנהל על פי דרך הטבע. זהו בדיוק מה שכתב הרמב"ם בהלכות מלכים: "אל יעלה על הלב שבימות המשיח יבטל דבר ממנהגו של עולם... אלא עולם כמנהגו נוהג". כלומר: לא יהיה שינוי בטבע הבריאה, אבל בהדרגה, בתהליך טבעי, יתגשמו כל נבואות הנביאים.</p>
+
+    <h3 id="sec4b">גשרים ומנהרות במקום "כל גיא ינשא"</h3>
+    <p>כדי להמחיש איך נבואה "בלתי אפשרית" מתקיימת בדרך טבעית, אפשר להיעזר בפסוק הידוע מנחמת ישעיהו הנקרא בהפטרת "שבת נחמו":</p>
+    <div class="verse-box">
+        <p>"קוֹל קוֹרֵא: בַּמִּדְבָּר פַּנּוּ דֶּרֶךְ ה', יַשְּׁרוּ בָּעֲרָבָה מְסִלָּה לֵאלֹקֵינוּ. כָּל גֶּיא יִנָּשֵׂא, וְכָל הַר וְגִבְעָה יִשְׁפָּלוּ, וְהָיָה הֶעָקֹב לְמִישׁוֹר וְהָרְכָסִים לְבִקְעָה."</p>
+        <span class="source-tag">ישעיהו מ, ג–ד</span>
+    </div>
+    <p>איך אפשר לדמיין קיום מילולי של "כל הר וגבעה ישפלו"? ובכן, כל מי שנוסע היום ברכבת המהירה מירושלים לתל אביב, יכול לראות זאת ממש בעיניו: מסילת הברזל חוצה גאיות עמוקים על גבי גשרים ענקיים, בגובה של עשרות מטרים, וחוצה הרים שלמים דרך מנהרות שאורכן קילומטרים. במקום להרוס את ההר בפועל, פשוט "ישרו" את הדרך דרכו — ואת אלה שהיו לפני כן מכשול בלתי עביר, הפכו למסילה ישרה. זהו קיום ממשי, מילולי כמעט, של נבואת "והיה העקוב למישור" — בלי שום נס גלוי, אלא באמצעות התפתחות טבעית של תשתיות וטכנולוגיה.</p>
+
+    <h3 id="sec4c">בית הכנסת שעתיד לעוף</h3>
+    <div class="story-box">
+        <span class="story-title">🕯️ "אתם תישארו כאן"</span>
+        <p>סיפור נוסף, המובא כדוגמה לאותה תפיסה, נסוב על מנהג עתיק: בבבל היה מקובל שכאשר בונים בית כנסת, בונים אותו "על תנאי" — מתוך כוונה ותפילה סמויה שיום אחד הוא יזכה לעבור ולהיבנות מחדש בארץ ישראל. מספרים שרב אחד שביקר בבית כנסת בחוץ לארץ שם לב, שלא הניחו בו רצפה קבועה. הוא שאל את בני הקהילה מדוע. אמרו לו: "אתם יודעים מה עתיד לקרות? כשיבוא המשיח, בית הכנסת עצמו יתעופף ויעלה לארץ ישראל. אצלכם, שאין לכם רצפה, לא תהיה בעיה — הוא יעוף עם הגג והקירות. אבל אצלנו, שיש לנו רצפה מלאה — אנחנו ניוותר כאן". הקהילה הבינה את הרמז, ומיהרה לבנות רצפה כדי שגם היא תוכל להצטרף לגאולה.</p>
+        <p>הסיפור הזה, בין אם התכוונו לומר אותו כמשל ובין כפשוטו, הוא בעצם ביטוי לאותו עיקרון: כפי שמסופר בגמרא, "עתידים בתי כנסיות שבבבל שיקבעו בארץ ישראל". רעיון זה אכן קיבל ביטוי מוחשי בהיסטוריה: קהילות שיצאו מגלות בבל וממדינות אחרות הקימו בארץ ישראל בתי כנסת חדשים על שם המקומות שמהם באו — כך שבפועל, "בית הכנסת" עצמו — במובן של הקהילה, המנהג, המסורת — אכן "עבר" לארץ ישראל, גם אם לא באופן ניסי אלא בתהליך טבעי של עלייה והתיישבות.</p>
+    </div>
+
+    <h3 id="sec4d">לחם על העצים</h3>
+    <p>דוגמה נוספת, קרובה יותר לחיי היום־יום, עוסקת בנבואה על שפע ארץ ישראל, המובאת בגמרא בסגנון ציורי: לעתיד לבוא, ארץ ישראל תוציא "גלוסקאות" (מיני מאפה) "וכלי מילת" (בגדים) כמו שהיא מוציאה היום צמחים מן האדמה. הפירוש הפשוט של דברים אלה, לפי דרך "עולם כמנהגו נוהג", אינו נס של לחם צומח על עצים ממש, אלא תיאור של קלות ההשגה. בעבר, כדי שתהיה פת לחם על השולחן בבוקר, הייתה אישה צריכה לקום בארבע לפנות בוקר, לטחון קמח, ללוש ולאפות — עבודה מפרכת שנמשכת שעות. היום, לעומת זאת, מספיק ללכת למאפייה השכונתית ולקבל לחם טרי, אפוי כבר, בתוך דקות. זהו קיום ממשי — גם אם לא ניסי — של אותה נבואה: קלות מופלגת בהשגת המזון, שבזמנה הייתה בלתי נתפסת.</p>
+    <p>מכאן ניתן ללמוד עיקרון כללי לקריאת נבואות רבות אחרות בענייני ימות המשיח: אין צורך לצפות דווקא לשינוי ניסי בטבע. יש להיות קשובים לתהליכים המתרחשים בעולם עצמו — התפתחות טכנולוגית, מדינית וחברתית — כאפשרות ממשית לקיום הנבואות בדרך טבעית, לאט לאט, "עולם כמנהגו נוהג".</p>
+
+    <div class="chapter-card">
+        <span class="num">ה</span>
+        <span class="name">כמה זמן יימשכו ימות המשיח?</span>
+    </div>
+    <div class="chapter-divider">📖</div>
+
+    <!-- ============================================================= -->
+    <!-- פרק ה -->
+    <!-- ============================================================= -->
+    <span class="chapter-label">פרק ה</span>
+    <h2 id="section5">כמה זמן יכולים להימשך ימות המשיח?</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>חלוקת ששת אלפים שנות העולם, ומה משמעות "שני אלפים ימות המשיח"</li>
+            <li>שיר ומדרש על מלך המשיח העומד על גג בית המקדש</li>
+            <li>המחלוקת על מספר השנים בין ימות המשיח לתחיית המתים</li>
+        </ul>
+    </div>
+
+    <h3 id="sec5a">ששת אלפים שנה</h3>
+    <p>שאלה טבעית שעולה מכל הדיון עד כה היא: אם אנו נמצאים, כפי שנתבאר, בתוך תקופה שיש לה תואר הלכתי של "ימות משיח בן יוסף" — כמה זמן בכלל יכולה תקופה כזו להימשך? הגמרא מונה מסגרת זמן כללית לכל ששת אלפי שנות העולם:</p>
+    <div class="quote-box">
+        <p>"תנא דבי אליהו: ששת אלפים שנה הוי עולם. שני אלפים תוהו, שני אלפים תורה, שני אלפים ימות המשיח."</p>
+        <span class="source-tag">מסכת עבודה זרה דף ט עמוד א</span>
+    </div>
+    <p>לפי חלוקה זו, אלפיים השנים הראשונות היו "תוהו" — אדם עשה מה שרצה, ללא תורה מסודרת. אלפיים השנים הבאות הן "תורה" — מאז מתן תורה לעם ישראל. ואילו האלפיים האחרונות, מתום ארבעת אלפים שנה, מוגדרות "ימות המשיח" — שנים שבהן יכול מלך המשיח, מבחינה עקרונית, להיגלות. מכאן עולה נקודה מעניינת: מלך המשיח יכול היה, מבחינת מגבלת הזמן הזו, להגיע כבר לפני מאות שנים — שהרי אנו נמצאים כבר עמוק בתוך אלף השישי. עובדה זו אינה סיבה לייאוש, אלא להפך — היא סיבה לתשומת לב מוגברת לכל סימן וסימן.</p>
+
+    <h3 id="sec5b">השיר על גג בית המקדש</h3>
+    <p>יש מסורת עממית, המבוססת על מדרש, המתארת רגע דרמטי: בשעה שמלך המשיח יבוא, הוא יעמוד על גג בית המקדש, ישמיע קולו ויכריז: "ענוים, הגיע זמן גאולתכם! ואם אינכם מאמינים, ראו באורי שזורח עליכם". והמדרש עצמו מוסיף פרט מדהים: ייתכן שיהיה מצב שכבר יהיה בית מקדש בנוי, ומלך המשיח יעמוד עליו ויכריז את בשורתו — ובכל זאת יהיו אנשים שלא יאמינו לו. זהו בדיוק אותו יסוד שכבר עלה בפרק הראשון מן המדרש על יוסף: "המלוך תמלוך עלינו" — האחים לא האמינו בתחילה. יש כאן אזהרה עמוקה: אמונה בדברי הגאולה איננה דבר מובן מאליו, אפילו כשההוכחות ניצבות ממש לנגד העיניים.</p>
+
+    <h3 id="sec5c">ארבעים שנה עד תחיית המתים</h3>
+    <p>בעוד שהגמרא בעבודה זרה עוסקת בטווח הכולל של תקופת ימות המשיח, יש דיון תלמודי נפרד על משך הזמן הפנימי של אותה תקופה עצמה — כמה שנים יעברו מתחילת ימות המשיח ועד תחיית המתים:</p>
+    <div class="quote-box">
+        <p>"רבי אליעזר אומר: ימות המשיח ארבעים שנה, שנאמר: 'ארבעים שנה אקוט בדור'."</p>
+        <span class="source-tag">כפי שהובא בשיעור, מסכת נדרים</span>
+    </div>
+    <p>בגמרא מובאות דעות נוספות רבות בעניין זה — שבעים שנה, שלושה דורות, ארבע מאות שנה, ואף שבעת אלפים שנה — ואין כאן המקום להכריע ביניהן. אולם מעניין לשים לב לדרשה שמצמידה רש"י לפסוק "ארבעים שנה אקוט בדור": פסוק זה נאמר במקורו על דור המדבר, אותו דור שיצא ממצרים מתוך שמחה עצומה, ולאחר מכן — בעקבות חטא המרגלים — נגזר עליו להיוותר במדבר ארבעים שנה, עד שכל אותו דור לא זכה להיכנס לארץ. רש"י מזהיר, שאותה תבנית עלולה לחזור על עצמה: התחלה של שמחה גדולה, שיכולה להתהפך חלילה, אם לא נזהרים כראוי. זהו מקור לזהירות ולא לייאוש — קריאה שלא לקחת כמובן מאליו את ראשית הגאולה, אלא להמשיך ולפעול כדי שהיא תתקדם ולא תיעצר.</p>
+
+    <div class="chapter-card">
+        <span class="num">ו</span>
+        <span class="name">הלכה למעשה בימות המשיח</span>
+    </div>
+    <div class="chapter-divider">✡</div>
+
+    <!-- ============================================================= -->
+    <!-- פרק ו -->
+    <!-- ============================================================= -->
+    <span class="chapter-label">פרק ו</span>
+    <h2 id="section6">הלכה למעשה בימות המשיח: נשק, תכשיטים ועירוב</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>המשנה האוסרת לצאת בשבת עם כלי מלחמה</li>
+            <li>מחלוקת רבי אליעזר וחכמים: האם תכשיטים מותרים בשבת</li>
+            <li>דוגמה מהשטח: כשעירוב עובר בשדה זרעים</li>
+            <li>מחלוקת נוספת עם שמואל: האם תהיה עדיין בחירה חופשית בימות המשיח</li>
+        </ul>
+    </div>
+
+    <h3 id="sec6a">נשק בשבת</h3>
+    <p>סוגיה נוספת שבה עולה שוב מחלוקת שמואל, הפעם בהקשר הלכתי מפורש, פותחת במשנה:</p>
+    <div class="quote-box">
+        <p>"לא יצא האיש לא בסייף, ולא בקשת, ולא בתריס, ולא באלה, ולא ברומח, ואם יצא — חייב חטאת."</p>
+        <span class="source-tag">משנה, מסכת שבת פרק ו</span>
+    </div>
+    <p>המשנה קובעת שיציאה עם כלי נשק בשבת נחשבת הוצאה גמורה ואסורה, בדיוק כמו הוצאת כל חפץ אחר מרשות לרשות. שאלה מעשית העולה מכך היא: מדוע בכלל שכלי נשק ייחשב "משא" ולא "תכשיט", שהרי הוא חלק מלבושו של אדם? על כך משיבה המשנה עצמה:</p>
+
+    <h3 id="sec6b">מחלוקת על תכשיטים</h3>
+    <div class="qa-box">
+        <p><strong>רבי אליעזר אומר:</strong> "תכשיטין הן לו". כלי הנשק, לדבריו, הם כמו כל תכשיט אחר — כלי מלחמה נחשב בעיני הלוחם לקישוט ולכבוד, כמו עניבה או שעון.</p>
+        <p><strong>וחכמים אומרים:</strong> "אינם אלא לגנאי, שנאמר: 'וכתתו חרבותם לאתים... לא ישא גוי אל גוי חרב ולא ילמדו עוד מלחמה'." לדעתם, כלי נשק אינם תכשיט כלל — הם דבר לא רצוי, סימן לבעיה.</p>
+    </div>
+    <p>הגמרא מוסיפה נתון מפתיע: על אף שרבי אליעזר עצמו מכריע שנשק הוא כתכשיט, הוא בעצמו מודה שלעתיד לבוא, כשיתקיים "לא ישא גוי אל גוי חרב", כלי נשק כבר לא יהיו נחוצים — ולכן ייחשבו כתכשיט חסר תוכן, "כמו נר בשעה שיש אור יום". גם תכשיט הדורש שימוש מוגדר, אם אין בו עוד שימוש — מאבד ממעמדו כתכשיט. וכאן, בהמשך אותה סוגיה, שואלים את רבי אליעזר תלמידיו: לפי דבריך, שלעתיד לבוא לא יהיה עוד שימוש בכלי נשק, כיצד ייתכן ש"תניא: תכשיטים הם לו"? כאן מגיעה שוב אותה מחלוקת — האם נאמר "לא ישא גוי אל גוי חרב" באמת ובתמים, כרבי חייא בר אבא, או שיש מקום לדעת שמואל, שאין בין העולם הזה לימות המשיח אלא שיעבוד מלכויות בלבד — ואם כן, לא בהכרח יתבטל הנשק כליל.</p>
+
+    <h3 id="sec6c">עירוב בשדה זרעים</h3>
+    <p>לצד הדיון העקרוני, יש נפקא מינה מעשית ופשוטה יותר, הנוגעת לכל שכונה: יש הלכה חשובה בעניין עירובי חצרות, הקובעת שמקום זרעים — שדה חרוש שנזרעו בו גידולים חקלאיים — פוסל את העירוב, מפני שאין הוא "ראוי להילוך בני אדם". כאשר שכונה חדשה נבנית, ומתקינים בה עירוב לפני שהשלימו את הבנייה, לעיתים חלקת הקרקע שמסביב לעמודי העירוב עדיין משמשת לחקלאות, ורק לאחר גמר הבנייה חדל השטח מלשמש שדה זרעים. יש להיזהר בכך: אם שדה כזה עדיין מעובד, יש לבדוק היטב את כשרות העירוב לפני הישענות עליו, שכן טעות בעניין הזה עלולה לגרום לחילול שבת בשוגג של רבים, שאינם מודעים כלל לכך שהם עוברים דרך שטח בעייתי.</p>
+
+    <h3 id="sec6d">זכות וחובה בימות המשיח</h3>
+    <p>מחלוקת דומה בין רבי חייא בר אבא לשמואל עולה גם בשאלה אחרת — האם יישאר בימות המשיח יצר הרע:</p>
+    <div class="quote-box">
+        <p>"אלו ימים שאין בהם לא זכות ולא חובה — אלו ימות המשיח."</p>
+        <span class="source-tag">מסכת שבת דף קנא עמוד א</span>
+    </div>
+    <p>לפי ההבנה הפשוטה בדברי הברייתא, בימות המשיח לא יהיה עוד מקום לזכות או לחובה, משום שכל בני האדם יכירו את בורא עולם באופן ברור וטבעי — "כי מלאה הארץ דעה את ה'" — ולא יהיה עוד מקום לבחירה חופשית של ממש. גם כאן, מחלוקת שמואל שבה ועולה: לפי שיטתו, שהעולם ימשיך "כמנהגו", ייתכן שגם הבחירה החופשית ויצר הרע יימשכו כרגיל, ולא יתבטלו כלל — שכן אין בין העולם הזה לימות המשיח אלא שיעבוד מלכויות בלבד.</p>
+
+    <div class="chapter-card">
+        <span class="num">ז</span>
+        <span class="name">קיבוץ גלויות כאות לגאולה</span>
+    </div>
+    <div class="chapter-divider">📖</div>
+
+    <!-- ============================================================= -->
+    <!-- פרק ז -->
+    <!-- ============================================================= -->
+    <span class="chapter-label">פרק ז</span>
+    <h2 id="section7">קיבוץ גלויות כאות לגאולה</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>🕯️ רבן גמליאל דורש, והתלמיד שלעג לדבריו</li>
+            <li>מה בדיוק כותב הרמב"ם על תפקידו של מלך המשיח</li>
+            <li>למה הרמב"ם ראה בקיבוץ גלויות עצמו הוכחה לכך שהגיע משיח</li>
+            <li>🕯️ עדות מפתיעה: איך גם מי שאינו יהודי יכול לחוש בכך</li>
+        </ul>
+    </div>
+
+    <h3 id="sec7a">"עתידה אשה שתלד בכל יום"</h3>
+    <div class="story-box">
+        <span class="story-title">🕯️ "בוא ואראך דוגמתם בעולם הזה"</span>
+        <p>בגמרא מסופר שרבן גמליאל היה דורש בדרך פלאית פסוקים על העתיד לבוא, ואחד מתלמידיו לא יכול היה להתאפק: "אין כל חדש תחת השמש!" קרא, בטענה שאי אפשר לצפות לשינויים כאלה בטבע העולם. השיב לו רבן גמליאל: "בוא ואראך דוגמתם בעולם הזה". הוא לקח אותו והראה לו תרנגולת. "הרי לך," אמר, "בעל חיים המטיל ביצה כמעט מדי יום — וממנה נולד בכל פעם עוף חדש. אם כזה דבר קיים כבר היום בטבע, מדוע יהיה קשה בעיניך שהאדמה תוציא פרותיה בשפע גדול יותר?" רבן גמליאל המשיך והראה לו כמהין ופטריות, הצומחים ומוכנים לאכילה תוך זמן קצר מפתיע — עוד דוגמה לכך שאין צורך בנס גלוי כדי שתבוא שפע מבורך, אלא רק בהאצה טבעית של תהליכים שכבר קיימים.</p>
+    </div>
+    <p>מהמעשה הזה עולה עיקרון חשוב, המשלים את מה שנלמד כבר בפרק הרביעי: כשם שהתלמיד טעה כאשר סבר שאין בכלל אפשרות לשינוי בטבע, כך גם היום, כאשר מתבוננים בתהליכים המתרחשים סביבנו, אין צורך לחכות לנס גלוי כדי לזהות בהם קיום נבואה. די בהתבוננות פקוחת עיניים בטבע ובהיסטוריה עצמה.</p>
+
+    <h3 id="sec7b">"הוא יבנה המקדש ויקבץ נדחי ישראל"</h3>
+    <p>לגבי תפקידו המפורש של מלך המשיח, כותב הרמב"ם:</p>
+    <div class="quote-box">
+        <p>"המלך המשיח עתיד לעמוד ולהחזיר מלכות בית דוד ליושנה, לממשלה הראשונה. בונה המקדש ומקבץ נדחי ישראל."</p>
+        <span class="source-tag">רמב"ם, הלכות מלכים פרק יא</span>
+    </div>
+    <p>נקודה זו מעוררת שאלה. אם קיבוץ הגלויות עצמו הוא מתפקידו של מלך המשיח, ואם רואים אנו בעינינו קיבוץ גלויות מתמשך שנים רבות — האם המשמעות היא שכבר "הגענו" למחצה, שמלך המשיח כבר מצוי בתהליך פעולתו? זו שאלה עדינה, שיש בה מחלוקת של ממש בין פוסקים וחכמים, ואין כאן המקום להכריע בה סופית. אך שורש השאלה מבוסס על יסוד מרתק בדברי הרמב"ם עצמו.</p>
+
+    <h3 id="sec7c">איך יתכן קיבוץ גלויות בלי משיח?</h3>
+    <p>יש לשים לב לנקודה עדינה: המילה "משיח" כמעט שאינה מופיעה בתורה במפורש. הרמב"ם, כשהוא מבסס את יסוד ביאת המשיח, מביא ראיה דווקא מפסוקי קיבוץ גלויות בפרשת ניצבים:</p>
+    <div class="verse-box">
+        <p>"וְשָׁב ה' אֱלֹקֶיךָ אֶת שְׁבוּתְךָ וְרִחֲמֶךָ, וְשָׁב וְקִבֶּצְךָ מִכָּל הָעַמִּים אֲשֶׁר הֱפִיצְךָ ה' אֱלֹקֶיךָ שָׁמָּה."</p>
+        <span class="source-tag">דברים ל, ג</span>
+    </div>
+    <p>מדוע בוחר הרמב"ם לבסס את אמונת הגאולה על פסוקים אלה, ולא על פסוק מפורש יותר? נראה שהכוונה עמוקה: הרמב"ם הבין שקיבוץ גלויות, כפי שהתורה מתארת אותו — עם שלם החוזר מכל קצוות הארץ למקום אחד, מקבל מחדש ריבונות עצמאית — הוא דבר שלא יכול להתרחש בדרך טבעית גרידא, בלי סיוע אלוקי מיוחד. ולכן, אם התורה מבטיחה שדבר כזה יקרה — הכרח הוא שיהיה זה חלק מתהליך ביאת המשיח, גם אם המילה עצמה לא נכתבה בפירוש.</p>
+    <div class="story-box">
+        <span class="story-title">🕯️ "איזו זכות גדולה יותר מזו?"</span>
+        <p>ההיסטוריה עצמה סיפקה עדות מפתיעה לרעיון הזה. כאשר עלתה בעצרת האומות המאוחדות שאלת הקמת מדינה יהודית, נדרשו רוב מוחלט של מדינות העולם, כולל מדינות שלכאורה לא הייתה להן שום סיבה תיאולוגית לתמוך בכך, להצביע בעד. מסופר על ראש מדינה נוצרי, שנשאל בתמיהה מדוע הוא תומך בהקמת מדינה יהודית — הרי, לפי תפיסתו הדתית, יש להבין את הגלות כאות לכך שהעם היהודי כבר "נדחה". השיב אותו ראש מדינה במשפט קצר ומפתיע: "איזו זכות יכולה להיות לאדם בעולם, גדולה יותר מאשר לעזור להבטחה האלוקית להתקיים?" תשובה זו, שיצאה מפיו של מי שלא היה כלל אמור, לפי השקפתו שלו, לתמוך בכך — נתפסת בעיני רבים כעדות בלתי צפויה לכך שתהליך שנראה "בלתי אפשרי" מבחינה היסטורית וגיאופוליטית, אכן קרה, ואולי בכך יש רמז לכך שידו של הקדוש ברוך הוא מובילה אותו, ולא רק שיקולים מדיניים גרידא.</p>
+    </div>
+
+    <div class="chapter-card">
+        <span class="num">ח</span>
+        <span class="name">איך מתייחסים למה שקורה כאן?</span>
+    </div>
+    <div class="chapter-divider">✡</div>
+
+    <!-- ============================================================= -->
+    <!-- פרק ח -->
+    <!-- ============================================================= -->
+    <span class="chapter-label">פרק ח</span>
+    <h2 id="section8">איך מתייחסים למה שקורה כאן? נפקא מינה למעשה</h2>
+    <div class="in-this-chapter">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+            <li>שתי דרכים אפשריות להתייחס למציאות של ימינו</li>
+            <li>מסקנת הספר: משיח בן יוסף כבר הגיע — אבל לא כולם מכירים בו</li>
+        </ul>
+    </div>
+
+    <h3 id="sec8a">שתי דרכים להתבונן</h3>
+    <p>כל היסודות שנסקרו בספר זה — מחלוקת רבי יוחנן ושמואל, שני תירוצי הרמב"ם, קיבוץ הגלויות כתחילת מלאכתו של מלך המשיח — אינם רק עניין תיאורטי. יש להם נפקא מינה מעשית ומהותית, בשאלה כיצד להתייחס לימים שבהם אנו חיים.</p>
+    <div class="two-columns">
+        <div class="col-purple">
+            <h4 style="margin-top:0;">אם רואים בכך חלק מהגאולה</h4>
+            <p>מי שמאמין שקיבוץ הגלויות והריבונות שיש היום לעם ישראל הם שלב ראשוני בתהליך גאולה — כמי שרואה בכך את התגשמות הבטחת התורה — מבין שהוא מוזמן להצטרף אל אותה הבטחה אלוקית, ולתרום את חלקו לקידומה. הוא מתייחס למה שקורה כאן כמשהו שיש להמשיך ולפתח, לא רק כמציאות אקראית שיש להתבונן בה מהצד.</p>
+        </div>
+        <div class="col-gold">
+            <h4 style="margin-top:0;">אם רואים בכך תהליך נפרד</h4>
+            <p>מי שסובר, לעומת זאת, שמה שקורה כיום אינו קשור לתהליך הגאולה שהתורה הבטיחה, יסיק מסקנה מעשית שונה: הוא רשאי, לשיטתו, להישאר בגלות, ולראות בהתפתחויות המדיניות של דורנו עניין שאינו נוגע להשקפתו התורנית.</p>
+        </div>
+    </div>
+    <p>ההבדל בין שתי הגישות הללו אינו הבדל של נוסחה תיאורטית בלבד. הוא נוגע לשאלה כיצד יש להתייחס לימים אלה מבחינה מעשית והשקפתית — עד כמה יש להשקיע בבניין הארץ, איך להתייחס למוסדותיה, מה עמדה ראויה כלפי הישגיה ואתגריה. שאלה זו, כפי שראינו, איננה חדשה — היא נדונה כבר בין גדולי הפוסקים, ואין ספר זה בא להכריע בה, אלא להראות את מקורותיה בגמרא, ברמב"ם ובגר"א.</p>
+
+    <h3 id="sec8b">משיח בן יוסף כבר הגיע</h3>
+    <p>הספר נפתח במדרש על יוסף וציון, ובו מסתתר הרעיון החותם אותו: כפי שהאחים לא האמינו בתחילה שחלומות יוסף אכן יתגשמו — "המלוך תמלוך עלינו" — כך ייתכן שגם בדורנו, גם אם משיח בן יוסף כבר בא במובן ההלכתי שנתבאר — קיבוץ גלויות, ריבונות, הפסקת שיעבוד מלכויות — עדיין רבים אינם מכירים בו ככזה. יש בכך אזהרה עמוקה וגם עידוד גדול כאחד: אזהרה, כי כאשר אין מכירים בשלב שכבר קיים, קשה לקדם את השלב הבא אחריו; ועידוד, כי מי שמכיר במה שכבר קיים, זוכה להצטרף באופן פעיל להמשך התהליך, ולא רק לצפות בו מן הצד.</p>
+    <p>המדרש שממנו יצא הספר לימד אותנו יסוד: "כל מה שאירע ליוסף אירע לציון". סיפור יוסף לא נגמר בירידתו לבור ובמכירתו — הוא נגמר בפגישה, בהתוודעות, ובדברי יוסף לאחיו: "ולא אתם שלחתם אותי הנה כי האלקים". יהי רצון שנזכה לראות עד מהרה גם את המשך התהליך, ואת ההתוודעות השלמה, בביאת משיח בן דוד במהרה בימינו.</p>
+
+    <div class="sources">
+        <h3>📚 מקורות ומראי מקומות</h3>
+        <ol>
+            <li>בראשית מו, כח, ופירוש רש"י שם — "ואת יהודה שלח לפניו"</li>
+            <li>מלאכי ג, א — "הנני שלח מלאכי ופנה דרך לפני"</li>
+            <li>מדרש על פרשת ויגש — "מה שאירע ליוסף אירע לציון" (כפי שהובא בשיעור)</li>
+            <li>מסכת ברכות דף לד עמוד ב — מחלוקת רבי יוחנן ("כל הנביאים לא נתנבאו אלא לימות המשיח") ושמואל ("אין בין העולם הזה לימות המשיח אלא שעבוד מלכויות בלבד")</li>
+            <li>דברים טו, יא — "כי לא יחדל אביון מקרב הארץ"</li>
+            <li>רמב"ם, הלכות תשובה פרק ח</li>
+            <li>רמב"ם, הלכות מלכים פרקים יא–יב</li>
+            <li>כסף משנה על הרמב"ם, הלכות מלכים — קושיית הסתירה בפסקי הרמב"ם</li>
+            <li>תורת הגר"א, כמובא בדברי הרב יהודה אלקלעי ובספרים המביאים תורת הגר"א — יישוב הסתירה על ידי חלוקה בין משיח בן יוסף למשיח בן דוד</li>
+            <li>מסכת עבודה זרה דף ט עמוד א — "ששת אלפים שנה הוי עולם"</li>
+            <li>מסכת נדרים, כפי שהובא בשיעור — מחלוקת התנאים במניין שנות ימות המשיח, ורש"י שם על "ארבעים שנה אקוט בדור"</li>
+            <li>משנה מסכת שבת פרק ו, וגמרא שבת דף סג עמוד א — מחלוקת רבי אליעזר וחכמים על תכשיטים</li>
+            <li>ישעיהו ב, ד — "לא ישא גוי אל גוי חרב"</li>
+            <li>מסכת שבת דף קנא עמוד א — "ימים שאין בהם לא זכות ולא חובה"</li>
+            <li>מסכת שבת דף ל עמוד ב — מעשה רבן גמליאל דורש ("עתידה אשה שתלד בכל יום")</li>
+            <li>ישעיהו מ, ג–ד — "כל גיא ינשא"</li>
+            <li>דברים ל, ג — "ושב ה' אלקיך את שבותך"</li>
+            <li>ישעיהו יא, ו וט — "וגר זאב עם כבש", "כי מלאה הארץ דעה את ה'"</li>
+        </ol>
+    </div>
+
+    <div class="footer">
+        <strong>נכתב ונערך על ידי:</strong><br>
+        <strong>הרב יהודה טאוב</strong><br>
+        קרית אתא<br>
+        📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+        <div class="footer-more">
+            <h4>🎧 שיעורים נוספים של הרב</h4>
+            <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+            <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+            <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+        </div>
+    </div>
+
+</div>
+
+<a href="#top" class="scroll-top" id="scrollTop" aria-label="חזרה לראש העמוד">▲</a>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+        var t = document.querySelector(this.getAttribute('href'));
+        if (!t) return;
+        e.preventDefault();
+        t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+window.addEventListener('scroll', function () {
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+});
+</script>
+
+<script>
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    var NS       = 'koltoda.tts.';
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false, noHeVoice = false;
+    var clickToRead = true;
+
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+    function readPos() { try { return parseInt(localStorage.getItem(POS_KEY) || '0', 10) || 0; } catch (e) { return 0; } }
+
+    var G = '["\\u05f4\\u201d\\u2033]';
+    var R = "['\\u05f3\\u2019]";
+
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' ');
+        t = t.replace(/־/g, ' ');
+        t = t.replace(/\s*[–—]\s*/g, ', ');
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function chapterLabel(h) {
+        var d = h.getAttribute && h.getAttribute('data-chapter');
+        if (d && d.trim()) return d.trim();
+        var p = h.previousElementSibling;
+        if (p && p.classList && p.classList.contains('chapter-label')) {
+            return p.textContent.replace(/\s+/g, ' ').trim();
+        }
+        return '';
+    }
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (n.closest(SKIP)) return;
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            if (n.tagName === 'H2') {
+                var lbl = chapterLabel(n);
+                if (lbl && raw.indexOf(lbl) !== 0) raw = lbl + '. ' + raw;
+            }
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    function hint() {
+        if (noHeVoice) {
+            return 'לא נמצא קול עברי במחשב — ההקראה תישמע משובשת. ' +
+                   'ב-Windows: הגדרות ← שעה ושפה ← דיבור ← נהל קולות ← הוסף קולות ← עברית.';
+        }
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = readPos();
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        var was = noHeVoice;
+        noHeVoice = !he.length;
+        if (noHeVoice !== was && !isOn) say(hint());
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;
+                if (e.target.closest('a')) return;
+                if (window.getSelection && String(window.getSelection()).length) return;
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    var FS_MIN = 0.85, FS_MAX = 1.75, FS_STEP = 0.15, fontScale = 1;
+
+    function applyFontScale() {
+        document.documentElement.style.setProperty('--fs', String(fontScale));
+        var out = document.getElementById('fontScaleValue');
+        if (out) out.textContent = Math.round(fontScale * 100) + '%';
+        var dec = document.getElementById('fontSmaller'), inc = document.getElementById('fontBigger');
+        if (dec) dec.disabled = fontScale <= FS_MIN + 0.001;
+        if (inc) inc.disabled = fontScale >= FS_MAX - 0.001;
+    }
+
+    window.setFontScale = function (dir) {
+        fontScale = Math.min(FS_MAX, Math.max(FS_MIN, +(fontScale + dir * FS_STEP).toFixed(2)));
+        store('fs', String(fontScale));
+        applyFontScale();
+    };
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var savedFs = parseFloat(store('fs') || '1');
+        if (savedFs >= FS_MIN && savedFs <= FS_MAX) fontScale = savedFs;
+        applyFontScale();
+        if (readPos() > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+</body>
+</html>
