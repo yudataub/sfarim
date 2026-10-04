@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>חודש אלול — ימי הרצון והאהבה | הרב יהודה טאוב</title>
+<style>
+* { box-sizing: border-box; }
+html, body {
+    margin: 0; padding: 0;
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #1f2937;
+    min-height: 100vh;
+}
+p, li { font-size: 1.12em; line-height: 1.85; margin: 0 0 18px 0; }
+h2 { font-size: 1.9em; color: #7e22ce; border-right: 6px solid #7e22ce; padding-right: 18px; margin: 10px 0 22px 0; }
+h3 { font-size: 1.45em; color: #2563eb; margin: 30px 0 14px 0; }
+h4 { font-size: 1.2em; color: #059669; margin: 20px 0 10px 0; }
+.emphasis { color: #7e22ce; font-weight: bold; }
+em { color: #2563eb; font-style: italic; }
+
+.verse-box {
+    background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    border-right: 6px solid #7e22ce;
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin: 22px 0;
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 2;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.verse-box .ref { display:block; margin-top:10px; font-size:0.75em; color:#7e22ce; font-weight:bold; }
+.highlight-box {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    border-right: 6px solid #2563eb;
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin: 22px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-right: 6px solid #f59e0b;
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin: 22px 0;
+    font-style: italic;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.quote-box p:last-child { margin-bottom: 0; }
+.source-tag { display:block; margin-top:12px; font-style: normal; font-weight:bold; color:#92400e; font-size:0.85em; }
+.story-box {
+    background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    border-right: 6px solid #059669;
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin: 22px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.story-title { font-weight: bold; color: #059669; font-size: 1.15em; margin-bottom: 10px; display:block; }
+.qa-box {
+    background: #fff;
+    border: 2px dashed #ec4899;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 22px 0;
+}
+.qa-box .q { color:#ec4899; font-weight:bold; margin-bottom:8px; }
+.two-columns { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:22px 0; }
+.two-columns .col-purple { background: linear-gradient(135deg,#ede9fe,#f3e8ff); border-right:5px solid #7e22ce; border-radius:12px; padding:18px 20px; }
+.two-columns .col-gold { background: linear-gradient(135deg,#fef3c7,#fde68a); border-right:5px solid #f59e0b; border-radius:12px; padding:18px 20px; }
+@media (max-width:768px){ .two-columns{ grid-template-columns:1fr; } }
+.sources { background:#f3f4f6; border-radius:12px; padding:24px 28px; margin:22px 0; }
+.sources ol { padding-right: 22px; }
+.sources li { font-size: 0.98em; margin-bottom:8px; }
+
+.chapter-label { color:#ec4899; font-weight:bold; letter-spacing:1px; font-size:1.05em; margin-bottom:6px; }
+.in-chapter-box {
+    background: linear-gradient(135deg, #fce7f3 0%, #ede9fe 100%);
+    border-right: 6px solid #ec4899;
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin: 24px 0;
+}
+.in-chapter-box h4 { margin-top:0; color:#ec4899; }
+.in-chapter-box ul { padding-right: 20px; margin:0; }
+.in-chapter-box li { margin-bottom: 10px; font-size: 1.02em; }
+
+.intro-box {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    border-right: 6px solid #2563eb;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 18px 0 26px 0;
+    font-size: 1.02em;
+}
+
+/* ===== paginated book ===== */
+#book {
+    position: relative;
+    max-width: 900px;
+    margin: 30px auto 10px auto;
+    height: 87vh;
+    min-height: 560px;
+    padding: 0 70px;
+}
+.page {
+    display: none;
+    position: absolute;
+    inset: 0;
+    margin: 0 70px;
+    background: #fffefb;
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.18);
+    padding: 45px 55px;
+    flex-direction: column;
+    overflow: hidden;
+}
+.page.active { display: flex; animation: pageIn 0.45s ease; }
+@keyframes pageIn { from{ opacity:0; transform: scale(0.97); } to{ opacity:1; transform: scale(1); } }
+.page-content { overflow-y: auto; flex: 1 1 auto; padding-left: 6px; scrollbar-width: thin; }
+.page-content::-webkit-scrollbar { width: 8px; }
+.page-content::-webkit-scrollbar-thumb { background: #d8b4fe; border-radius: 8px; }
+.page-tag { font-size: 0.8em; color:#9ca3af; margin-bottom: 6px; }
+
+.main-title { font-size: 2.6em; font-weight:bold; text-align:center;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    -webkit-background-clip: text; background-clip:text; -webkit-text-fill-color: transparent; margin: 0 0 12px 0; }
+.subtitle { text-align:center; font-size:1.25em; color:#6b21a8; margin-bottom:10px; }
+.author { text-align:center; color:#78350f; font-weight:bold; margin-bottom: 18px; }
+.cover-page { justify-content:center; align-items:center; text-align:center; }
+.cover-decor { font-size: 2.4em; margin: 14px 0; letter-spacing: 10px; color:#f59e0b; }
+.cover-teaser { max-width: 480px; margin: 18px auto 0 auto; color:#4b5563; font-size:1em; line-height:1.8; }
+
+.toc-page h3 { text-align:center; color:#7e22ce; margin-top:0; }
+.toc-list { list-style:none; padding:0; margin:0; }
+.toc-list > li { margin-bottom: 16px; }
+.toc-chap-link { display:block; font-weight:bold; color:#7e22ce; font-size:1.15em; text-decoration:none; cursor:pointer; }
+.toc-chap-link:hover { text-decoration:underline; }
+.toc-sub { margin-top: 6px; font-size: 0.85em; color:#9ca3af; line-height: 1.9; }
+.toc-sub a { color:#9ca3af; text-decoration:none; cursor:pointer; }
+.toc-sub a:hover { color:#ec4899; text-decoration:underline; }
+
+.footer { text-align:center; }
+.footer h4 { text-align:center; }
+.footer-title { font-size:1.6em; color:#7e22ce; margin-bottom:14px; }
+
+/* navigation */
+.nav-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 54px; height: 54px; border-radius: 50%;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%);
+    color:#fff; border:none; font-size:1.6em; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: 0 4px 14px rgba(126,34,206,0.35);
+    transition: transform 0.15s, box-shadow 0.15s;
+    z-index: 5;
+}
+.nav-arrow:hover { transform: translateY(-50%) scale(1.08); }
+.nav-arrow:disabled { opacity: 0.25; cursor: default; transform: translateY(-50%); }
+#prevBtn { right: 0; }
+#nextBtn { left: 0; }
+
+.book-footer { max-width: 900px; margin: 6px auto 30px auto; display:flex; flex-direction:column; align-items:center; gap:10px; padding: 0 20px; }
+.dots { display:flex; flex-wrap:wrap; justify-content:center; gap:7px; max-width: 700px; }
+.dot { width:9px; height:9px; border-radius:50%; background:#c4b5fd; cursor:pointer; border:none; padding:0; transition: background 0.2s, transform 0.2s; }
+.dot.active { background:#7e22ce; transform: scale(1.35); }
+.page-counter { font-size:0.9em; color:#6b21a8; font-weight:bold; }
+
+@media (max-width: 900px) {
+    #book { padding: 0 44px; height: 82vh; }
+    .page { margin: 0 44px; padding: 30px 22px; }
+    .nav-arrow { width:44px; height:44px; font-size:1.3em; }
+    .main-title { font-size: 1.9em; }
+    h2 { font-size:1.5em; } h3{ font-size:1.2em; }
+}
+
+/* listen bar */
+.listen-bar {
+    position: sticky; bottom: 0;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+    margin: 0 auto; max-width: 900px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-radius: 14px;
+    border-right: 6px solid #f59e0b;
+    box-shadow: 0 -3px 14px rgba(0,0,0,0.12);
+    z-index: 20;
+}
+.listen-btn {
+    display:flex; align-items:center; gap:8px;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 100%);
+    color:#fff; border:none; border-radius:30px; padding:9px 20px;
+    font-size:0.95em; font-weight:bold; cursor:pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.listen-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(126,34,206,0.3); }
+.listen-btn-group { display:flex; gap:8px; }
+.listen-stop-btn {
+    background:#fff; color:#7e22ce; border:2px solid #7e22ce; border-radius:30px;
+    padding:7px 16px; font-size:0.9em; font-weight:bold; cursor:pointer;
+    transition: transform 0.15s, background 0.15s;
+}
+.listen-stop-btn:hover { transform: translateY(-2px); background:#f3e8ff; }
+.tts-clickable { cursor: pointer; transition: background 0.2s; border-radius:6px; }
+.tts-clickable:hover { background: rgba(245,158,11,0.12); }
+.listen-status { font-size:0.85em; color:#78350f; }
+.listen-rate { display:flex; align-items:center; gap:6px; font-size:0.85em; color:#78350f; margin-right:auto; }
+.listen-voice { display:flex; align-items:center; gap:6px; font-size:0.85em; color:#78350f; }
+.listen-voice select { border-radius:20px; border:1px solid #f59e0b; padding:4px 10px; font-family:inherit; background:#fff; max-width:150px; }
+.reading-highlight { background: linear-gradient(135deg, #fce7f3 0%, #e0e7ff 100%); border-radius:6px; box-shadow: 0 0 0 3px #ec4899 inset; }
+
+@media (max-width: 700px) {
+    .listen-bar { border-radius: 0; }
+    .listen-rate, .listen-voice { margin-right:0; }
+}
+
+@media print {
+    body { background:#fff; }
+    .nav-arrow, .book-footer, .listen-bar { display:none !important; }
+    #book { height:auto; padding:0; }
+    .page { position:static; display:block !important; margin:0 0 30px 0; box-shadow:none; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<div id="book">
+  <button class="nav-arrow" id="prevBtn" onclick="prevPage()" title="הקודם" aria-label="הקודם">›</button>
+  <button class="nav-arrow" id="nextBtn" onclick="nextPage()" title="הבא" aria-label="הבא">‹</button>
+
+  <!-- ============ עמוד 1: כריכה פנימית ============ -->
+  <section class="page cover-page" id="p-cover">
+    <div class="page-content">
+      <div class="cover-decor">✡ 🌙 ✡</div>
+      <h1 class="main-title">חוֹדֶשׁ אֱלוּל</h1>
+      <div class="subtitle">יְמֵי הָרָצוֹן וְהָאַהֲבָה — "אֲנִי לְדוֹדִי וְדוֹדִי לִי"</div>
+      <div class="author">מאת: הרב יהודה טאוב</div>
+      <p class="cover-teaser">
+          מה קרה בראש חודש אלול לפני אלפי שנים, וכיצד זה חוזר ומתעורר אצלנו מדי שנה מחדש?
+          מסע בעקבות עשרת ימי הרצון הראשונים של חודש אלול — מעלייתו של משה רבינו להר סיני
+          בפעם השלישית, דרך משל המלך וארוסתו, ועד לחמשת שלבי הנישואין הנחגגים בין הקב"ה
+          לעם ישראל מאלול ועד שמחת תורה. ספר על קרבה, אהבה, ותשובה מתוך שמחה.
+      </p>
+      <div class="cover-decor" style="font-size:1em; margin-top:26px; color:#9ca3af;">📖 השתמשו בחצים או בהחלקת אצבע כדי לדפדף</div>
+    </div>
+  </section>
+
+  <!-- ============ עמוד 2: מפתח עניינים ============ -->
+  <section class="page toc-page" id="p-toc">
+    <div class="page-content">
+      <h3>📑 תוכן העניינים</h3>
+      <ul class="toc-list">
+        <li>
+          <a class="toc-chap-link" onclick="goTo('ch1-open')">פרק ראשון: אלול בהיסטוריה והיום</a>
+          <div class="toc-sub">
+            <a onclick="goTo('ch1-a')">א. אלול בהיסטוריה והיום</a> ·
+            <a onclick="goTo('ch1-b')">ב. סדר החגים</a>
+          </div>
+        </li>
+        <li>
+          <a class="toc-chap-link" onclick="goTo('ch2-open')">פרק שני: תפקיד חודש אלול</a>
+          <div class="toc-sub">
+            <a onclick="goTo('ch2-1')">א. פסוקי אלול</a> ·
+            <a onclick="goTo('ch2-2')">ב. מקורות</a> ·
+            <a onclick="goTo('ch2-3')">ג. איש לרעיתו בחודש אלול</a> ·
+            <a onclick="goTo('ch2-4')">ד. והלכת בדרכיו</a> ·
+            <a onclick="goTo('ch2-5')">ה. ב' תפקידים באלול</a> ·
+            <a onclick="goTo('ch2-6')">ו. חודש אלול זמן מסוגל לאהבת ה'</a> ·
+            <a onclick="goTo('ch2-7')">ז. אותיות אלול</a> ·
+            <a onclick="goTo('ch2-8')">ח. אלול זמן הפגישות</a> ·
+            <a onclick="goTo('ch2-9')">ט. מעין ימות המשיח</a> ·
+            <a onclick="goTo('ch2-10')">י. אלול - לראות בטוב ה'</a> ·
+            <a onclick="goTo('ch2-11')">יא. הימים הנחמדים</a> ·
+            <a onclick="goTo('ch2-12')">יב. תשובה - לשוב לאבא</a> ·
+            <a onclick="goTo('ch2-13')">יג. נתרצה בשמחה</a> ·
+            <a onclick="goTo('ch2-14')">יד. חודש המסוגל להשגות רוחניות</a> ·
+            <a onclick="goTo('ch2-15')">טו. שמחה בחודש אלול</a> ·
+            <a onclick="goTo('ch2-16')">טז. הכנה לר"ה ע"י אהבה</a> ·
+            <a onclick="goTo('ch2-17')">יז. זמן אמירת הסליחות</a>
+          </div>
+        </li>
+        <li><a class="toc-chap-link" onclick="goTo('sources')">מקורות ומראי מקומות</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ פרק ראשון - עמוד פתיחה ============ -->
+  <section class="page" id="p-ch1-open">
+    <div class="page-content">
+      <div class="chapter-label">פרק ראשון</div>
+      <h2>אלול בהיסטוריה והיום</h2>
+      <div class="in-chapter-box">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+          <li><strong>א. אלול בהיסטוריה והיום</strong> — מה קרה כשעלה משה רבינו להר בראש חודש אלול לקבל לוחות אחרונות, ומדוע אותו אור עצמו חוזר ומאיר עלינו בכל שנה. כולל את משל המלך וארוסתו, על שבירת הלוחות ושטר הקידושין שנכתב מחדש.</li>
+          <li><strong>ב. סדר החגים</strong> — הצעה נועזת: חמשת השלבים שבדרך לחתונה — פגישות, אירוסין, נישואין, הבאה לבית, וחיבוק — כמפתח להבנת סדר החגים כולו, מאלול ועד שמחת תורה.</li>
+        </ul>
+      </div>
+      <p>נפתח את הספר בשאלה פשוטה, שכל אחד ששואל אותה לעצמו בתחילת חודש אלול נתקל בה: מנין לנו שכל החודש הזה, ולא רק יום הכיפורים עצמו, הוא זמן מיוחד של קרבת ה'? בפרק זה נעקוב אחר התשובה עד למקורה — עד לרגע ההיסטורי שבו נולד חודש אלול כפי שאנו מכירים אותו.</p>
+    </div>
+  </section>
+
+  <!-- ============ 1-א: אלול בהיסטוריה והיום ============ -->
+  <section class="page" id="p-ch1-a">
+    <div class="page-content">
+      <div class="page-tag">פרק ראשון · א</div>
+      <h2 id="section-ch1-a">א. אלול בהיסטוריה והיום</h2>
+      <p>
+          כל חג הוא חזרה על מועד שהיה בימים עברו — כמו פסח, שהוא חזרה על יציאת מצרים, וכמו שבועות,
+          שהוא חזרה על מתן תורה. וכפי שכתב הרמח"ל, האור שהיה מאיר בזמן ההוא ההיסטורי — חוזר ומאיר שוב
+          בכל שנה באותו מועד. השאלה המתבקשת היא: מה קרה בעבר בחודש אלול? ומה, בעצם, קורה בנו היום
+          כשהחודש הזה מגיע?
+      </p>
+      <p>על כך עונה הטור בפתיחת הלכות ראש השנה:</p>
+      <div class="quote-box">
+          <p>
+              תניא בפרקי ר' אליעזר: בראש חודש אלול אמר הקדוש ברוך הוא למשה, "עלה אלי ההרה" — שאז עלה
+              לקבל לוחות אחרונות. והעבירו שופר במחנה: משה עלה להר, שלא יטעו עוד אחר עבודה זרה, והקדוש
+              ברוך הוא נתעלה באותו שופר, שנאמר: "עָלָה אֱלֹהִים בִּתְרוּעָה, ה' בְּקוֹל שׁוֹפָר" (תהלים מז, ו).
+              לכן התקינו חז"ל שיהיו תוקעים בראש חודש אלול בכל שנה ושנה.
+          </p>
+          <span class="source-tag">טור, אורח חיים סימן תקפ"א</span>
+      </div>
+      <p>וכן כתב הטור בטעם אמירת הסליחות מראש חודש אלול:</p>
+      <div class="quote-box">
+          <p>
+              מנהג שתי הישיבות לומר סליחות ותחנונים בעשרת ימי תשובה... ושמענו שבמקצת ארצות נוהגים
+              להתחיל מראש חודש אלול, ואומרים שבו עלה משה להר בפעם השלישית וירד עם הלוחות השניות ביום
+              הכיפורים. וכל המוסיף לבקש רחמים — זכות הוא לו.
+          </p>
+          <span class="source-tag">טור, אורח חיים סימן תקפ"א</span>
+      </div>
+      <p>וכך מובא הדבר בתורה עצמה:</p>
+      <div class="verse-box">
+          "בָּעֵת הַהִוא אָמַר ה' אֵלַי: פְּסָל לְךָ שְׁנֵי לֻחֹת אֲבָנִים כָּרִאשֹׁנִים, וַעֲלֵה אֵלַי הָהָרָה, וְעָשִׂיתָ לְּךָ אֲרוֹן עֵץ."
+          <span class="ref">דברים י, א</span>
+      </div>
+      <p>
+          פירש רש"י: "בעת ההוא — לסוף ארבעים יום נתרצה לי, ואמר לי פסל לך". והחזקוני מוסיף ומדייק:
+          "בעת ההיא הוא כ"ט באב, הוא שנאמר בפרשת תשא: 'ויאמר ה' אל משה — פסל לך' וגו'".
+          <em>ואפשר לומר שהמילים "בעת ההיא" באו לרמוז לדורות, שאותה עת עצמה מזומנת ושבה לדורות עולם —
+          בכל שנה מחדש.</em>
+      </p>
+
+      <h3>משל המלך וארוסתו — שטר הקידושין שנקרע</h3>
+      <p>נתבונן יותר לעומק. קושיה פשוטה עולה מאליה: אם ביום הכיפורים אמר הקדוש ברוך הוא "סלחתי כדבריך",
+      הרי שיום הכיפורים עצמו הוא היום הגדול — ומנין לנו שכל החודש שלפניו הוא כבר "ימי רצון"? נראה
+      שהתשובה טמונה בפסוקי התורה עצמם, המתארים את מה שקרה בדיוק באותם הימים:</p>
+      <div class="verse-box">
+          וַיֹּאמֶר ה' אֶל מֹשֶׁה: פְּסָל לְךָ שְׁנֵי לֻחֹת אֲבָנִים כָּרִאשֹׁנִים, וְכָתַבְתִּי עַל הַלֻּחֹת אֶת הַדְּבָרִים אֲשֶׁר הָיוּ
+          עַל הַלֻּחֹת הָרִאשֹׁנִים אֲשֶׁר שִׁבַּרְתָּ... וַיֵּרֶד ה' בֶּעָנָן וַיִּתְיַצֵּב עִמּוֹ שָׁם, וַיִּקְרָא בְשֵׁם ה'. וַיַּעֲבֹר ה' עַל
+          פָּנָיו וַיִּקְרָא: ה' ה' אֵל רַחוּם וְחַנּוּן, אֶרֶךְ אַפַּיִם וְרַב חֶסֶד וֶאֱמֶת...
+          <span class="ref">שמות לד, א-ז</span>
+      </div>
+      <p>על המילים "פְּסָל לְךָ" כותב רש"י את המשל הידוע:</p>
+      <div class="story-box">
+          <span class="story-title">משל למלך שהניח את ארוסתו ביד השפחות</span>
+          <p>
+              "פסל לך — אתה שברת הראשונות, אתה פסל לך אחרות". משל למלך שהלך למדינת הים והניח ארוסתו
+              עם השפחות. מתוך קלקול השפחות, יצא עליה שם רע. עמד שושבינה וקרע את כתובתה, ואמר: "אם
+              יאמר המלך להורגה — אומר לו: עדיין אינה אשתך!". בדק המלך ומצא שלא היה הקלקול אלא מן השפחות,
+              ונתרצה לה. אמר לו שושבינה: כתוב לה כתובה אחרת, שהראשונה נקרעה. אמר לו המלך: אתה קרעת
+              אותה — אתה קנה לך נייר אחר, ואני אכתוב לה בכתב ידי.
+          </p>
+          <p>
+              כך המלך הוא הקדוש ברוך הוא, השפחות הן הערב רב, השושבין הוא משה רבינו, וארוסתו של הקדוש
+              ברוך הוא היא עם ישראל. לכך נאמר "פְּסָל לְךָ" — אתה, משה, הכן את הנייר, ואני אכתוב.
+          </p>
+          <span class="source-tag">רש"י, שמות לד, א</span>
+      </div>
+      <p>
+          מדברי רש"י אנו למדים יסוד עמוק: הלוחות הם, במובן מסוים, שטר הקידושין של עם ישראל לקדוש ברוך
+          הוא. שבירת הלוחות היא אפוא, כביכול, ניתוק אותם קידושין. בראש חודש אלול אומר הקדוש ברוך הוא
+          למשה רבינו: הגיע הזמן לכתוב שטר קידושין חדש.
+      </p>
+      <p>
+          עם ישראל, במשך השנה, חוטאים לקדוש ברוך הוא, וכביכול מתנתק מעט הקשר בינינו לבינו. בראש חודש
+          אלול אומר לנו הקדוש ברוך הוא: "בואו בניי, ונכתוב שטר חדש. בואו נחדש את המלכות, את קשר האהבה
+          שביננו". הרב יצחק הוטנר זצ"ל היה אומר, שתקיעת השופר אינה בגדר "קריאת שמע" — הודעה גרידא על
+          מלכות ה' — אלא היא <span class="emphasis">המלכה מחדש</span>. נמצא אפוא שכבר בראש חודש אלול היה אור גדול, והוא
+          עצם פסילת הלוחות; ולמחרת עלה משה כדי שהקדוש ברוך הוא יכתוב מחדש את עשרת הדברות.
+      </p>
+      <div class="highlight-box">
+          <p>
+              זוהי, אם כן, מהותו של חודש אלול: <strong>מחדשים את המלכות — מחדשים את קשר האהבה שביננו לבין
+              בוראנו.</strong> יום הכיפורים הוא יום החתונה עצמו, ומשום כך נהגו בנות ישראל לצאת אז לחפש שידוכין —
+          שכן כשם שיש חתונה למטה, יש חתונה למעלה. ומראש חודש אלול מתחילים כבר להתכונן לחתונה הגדולה:
+          פוסלים את הלוחות, והקדוש ברוך הוא כבר כותב את הדברים. על הלוחות הללו עולה כל יהודי בעצמו,
+          ההרה, לקראת יום החתונה.
+          </p>
+      </div>
+
+      <h3>שלוש עשרה מידות הרחמים</h3>
+      <p>מובא בשם האריז"ל בשער רוח הקודש: "כי בחודש אלול נפתחים י"ג מקורות של י"ג תיקוני דיקנא דעתיקא".
+      נראה לומר בפשטות: בחודש אלול מתגלים שלוש עשרה מידות הרחמים, ומקור הדבר הוא שהן ניתנו בדיוק
+      בימים אלה — שכן מיד כשעלה משה להר, בעת ההיא, קיבל את הי"ג מידות. נמצא שבחודש הזה דווקא מאירות
+      מידות הרחמים.</p>
+      <div class="highlight-box">
+          <p>הרב דיסקין שליט"א אומר: שלוש מתנות טובות קיבלנו בכפרת חטא העגל —</p>
+          <ul>
+              <li>חודש אלול (ארבעים ימי רצון)</li>
+              <li>יום הכיפורים</li>
+              <li>שלוש עשרה מידות הרחמים</li>
+          </ul>
+      </div>
+      <p>
+          מהותו של חודש אלול, אם כן, היא זו: אז עלה משה רבינו לקבל לוחות אחרונות — הוא "עֲלֵה אֵלַי הָהָרָה",
+          כלומר: בוא, התקרב אליי. בראש חודש אלול אומר הקדוש ברוך הוא לכל יהודי: "בני היקר, הגיע הזמן —
+          עֲלֵה אֵלַי הָהָרָה, בוא תתקרב אליי". כמה צריך להודות על החודש הנפלא הזה! וצריך "לעשות ארון עץ" —
+          לבנות כלים, להכין את עצמנו לקלוט את השפע הנפלא הזה לכל השנה כולה.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 1-ב: סדר החגים ============ -->
+  <section class="page" id="p-ch1-b">
+    <div class="page-content">
+      <div class="page-tag">פרק ראשון · ב</div>
+      <h2 id="section-ch1-b">ב. סדר החגים</h2>
+      <p>נציע כעת רעיון נוסף, שמסביר בעז"ה את סדר החגים כולו כמקשה אחת. הבה נתבונן: בסדר הנישואין
+      של חתן וכלה קיימים חמישה שלבים מובהקים:</p>
+      <div class="intro-box">
+          <ol style="padding-right:20px; margin:0;">
+              <li>תחילה — <strong>פגישות</strong> (ובלשון הגמרא בקידושין: "ועל דמקדש בלא שידוכי").</li>
+              <li><strong>אירוסין</strong> — הכלה אומרת "הן", אני רוצה להתחתן עם החתן הזה.</li>
+              <li><strong>נישואין.</strong></li>
+              <li><strong>מביאה לביתו.</strong></li>
+              <li>"<strong>וִימִינוֹ תְּחַבְּקֵנִי</strong>" (שיר השירים ב, ו).</li>
+          </ol>
+      </div>
+      <p>אלו הם, למעשה, חמשת שלבי החגים של הימים הנחמדים שמאלול ועד שמחת תורה:</p>
+      <div class="highlight-box">
+          <ul>
+              <li><strong>אלול — פגישות.</strong> "הַמֶּלֶךְ בַּשָּׂדֶה": נפגשים בשדה, לא במקום מוגדר, והחתן רוצה
+              להראות לכלה את טובו וחסדו. (כמו לפני מתן תורה, שאמר הקדוש ברוך הוא: "וִהְיִיתֶם לִי מַמְלֶכֶת
+              כֹּהֲנִים וְגוֹי קָדוֹשׁ").</li>
+              <li><strong>ראש השנה — אירוסין.</strong> עם ישראל אומרים למלך: בחרנו בך, אין לנו מלך אלא אתה.</li>
+              <li><strong>יום הכיפורים — יום חתונתו.</strong> נמחלים העוונות לגמרי, ומתאחדים החתן והכלה.</li>
+              <li><strong>סוכות — "כִּי יִצְפְּנֵנִי בְּסֻכֹּה".</strong> נכנסים לביתו של המלך, כעין משכן. חוגגים שבע ברכות,
+              וכל יום פנים חדשות (אושפיזין).</li>
+              <li><strong>שמחת תורה — חיבוק.</strong> מחבקים את ה' יתברך, וזה מתבטא בחיבוק ספר התורה.</li>
+          </ul>
+      </div>
+
+      <div class="qa-box">
+          <div class="q">שאלה א: מדוע נקראים "אירוסין" מלשון שהכלה נאסרת לכולם, ואילו "חתונה" נקראת מלשון "חתן"?</div>
+          <p>נראה לומר: באירוסין, עיקר הפעולה היא מצד הכלה — היא נאסרת לכולם, אבל מצב החתן אינו
+          משתנה בכך דבר. מה שאין כן בנישואין, שבהם החתן "יורד" אל הכלה כדי להתאחד עמה: הוא מתחייב
+          לתת לה כך וכך, "אנא איזון ואפרנס" — נמצא שכל עיקר הפעולה כאן היא מצד החתן.</p>
+      </div>
+      <div class="qa-box">
+          <div class="q">שאלה ב: מדוע בחג הפסח אנו עושים מעשים והכנות רבות לקראת החג, ואילו בחג השבועות איננו עושים כן?</div>
+          <p>
+              בפסח יש לעם ישראל, הכלה, הרבה הכנות ומעשים לקראת היציאה מן הרע — ממצרים. מה שאין כן
+              בשבועות, שאין שום מעשה מצדנו — הכל נעשה בחינם: מתן תורה ניתן לנו כמתנה. עבודה אחת בלבד
+              יש בשבועות, להראות שיום זה נוח ומקובל עלינו — ולכן לדעת הכל בעינן "לָכֶם". תפקיד האישה,
+              אם כן, הוא להראות לבעלה את שמחתה בו. ראש השנה זהו אירוסין, שבו הכלה בוחרת רק בחתן; ואילו
+              יום הכיפורים הוא החתונה — יום חתונתו ממש.
+          </p>
+      </div>
+
+      <p>וכל זאת מצאתי כתוב במפורש בספר עץ הדעת טוב, לרבי חיים ויטאל זצ"ל, על פרשת כי תצא:</p>
+      <div class="quote-box">
+          <p>
+              עיקר התשובה הזו, להיותה מקובלת, תהיה בחודש אלול הנקרא ירח ימים הנוראים, כי אז תפילתך
+              נשמעת ושערי תשובה פתוחים, כמו שכתוב "דִּרְשׁוּ ה' בְּהִמָּצְאוֹ" — ובסוד "אֲנִי לְדוֹדִי וְדוֹדִי לִי" ראשי
+              תיבות אלול. כי אז נהפך הקדוש ברוך הוא לידיד ואוהב אל האדם השב בתשובה, ובסוד ד' יודי"ן —
+              כנגד ארבעים יום שמראש חודש אלול עד יום הכיפורים.
+          </p>
+          <p>
+              ואחר יום הכיפורים בא חג האסיף, לאסוף את הנשמה הנקראת "אשתו" כנ"ל — ואז נקרא חג שמחתנו,
+              שמחת חתן וכלה, ואז זמן הנישואין. תבוא אליה, ותיקרא "בעל" נשמה, שליט עליה — וזהו שכתוב
+              "וּבְעָלָהּ", וגם היא ברצונה תרצה, "וְהָיְתָה לְּךָ לְאִשָּׁה" כנ"ל, וזה ביום שמחת תורה, כי אז השם
+              יתברך חתן ישראל הנקראים כלה כנודע.
+          </p>
+          <span class="source-tag">עץ הדעת טוב, פרשת כי תצא, לר' חיים ויטאל זצ"ל</span>
+      </div>
+      <p>
+          נמצא שגם דברי המקובלים מאשרים בדיוק את אותו סדר: פגישה, אירוסין, חתונה, כניסה לבית, וחיבוק —
+          כשבעה ימי החופה של סוכות מקדימים, ממש כדרך שיעקב אבינו הקדים שבעת ימי חופתה של רחל לעבודתו
+          בעבורה.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ פרק שני - עמוד פתיחה ============ -->
+  <section class="page" id="p-ch2-open">
+    <div class="page-content">
+      <div class="chapter-label">פרק שני</div>
+      <h2>תפקיד חודש אלול</h2>
+      <div class="in-chapter-box">
+        <h4>📖 בפרק זה:</h4>
+        <ul>
+          <li><strong>א. פסוקי אלול</strong> — שלושת ראשי-התיבות המפורסמים של החודש.</li>
+          <li><strong>ב. מקורות</strong> — מקורות היסוד לכל אחד משלושת הפסוקים, מבעל הטורים ועד ספר פנים יפות.</li>
+          <li><strong>ג. איש לרעיתו בחודש אלול</strong> — מדוע חודש אלול נועד גם לחיזוק האהבה בין איש לאשתו, ולא רק לאהבת ה'.</li>
+          <li><strong>ד. והלכת בדרכיו</strong> — כשם שהקדוש ברוך הוא מתקרב אלינו בחודש זה, כך אנו נדרשים להתקרב לזולתנו.</li>
+          <li><strong>ה. ב' תפקידים באלול</strong> — "רצוא ושוב": התקרבות לה' מצד אחד, וירידה אל הזולת מצד שני, כפי שמלמד ליקוטי מוהר"ן.</li>
+          <li><strong>ו. חודש אלול זמן מסוגל לאהבת ה'</strong> — כולל משל "המבצע בחנות" של הרב ליפשיץ שליט"א.</li>
+          <li><strong>ז. אותיות אלול</strong> — הרמז הצפון באותיות המילה "לו".</li>
+          <li><strong>ח. אלול זמן הפגישות</strong> — מנהג הליטאים להיפגש לפני החתונה, כמשל לחודש אלול.</li>
+          <li><strong>ט. מעין ימות המשיח</strong> — על "וּמָל ה' אֱלֹהֶיךָ אֶת לְבָבְךָ" לפי הרמב"ן.</li>
+          <li><strong>י. אלול — לראות בטוב ה'</strong> — כולל סיפור קצר על ר' יצחק בלעזר, ומנהג "אז תשמח בתולה במחול".</li>
+          <li><strong>יא. הימים הנחמדים</strong> — כינויו של ר' יחזקאל לוינשטיין זצ"ל לימים אלה, וסיפור קצר על ר' יצחק בלעזר בבית הכנסת.</li>
+          <li><strong>יב. תשובה — לשוב לאבא</strong> — מדוע אין המילה "תשובה" מופיעה כלל בפסוקי הרמז של אלול.</li>
+          <li><strong>יג. נתרצה בשמחה</strong> — ההבדל שבין סליחה גרידא לבין התרצות מתוך שמחה.</li>
+          <li><strong>יד. חודש המסוגל להשגות רוחניות</strong> — "אני לדודי" קודם, ורק אחר כך "ודודי לי".</li>
+          <li><strong>טו. שמחה בחודש אלול</strong> — מדוע דווקא פרשות "כי תבוא" ו"ראה", גדושות השמחה, נקראות בחודש זה.</li>
+          <li><strong>טז. הכנה לר"ה על ידי אהבה</strong> — מדוע יש להתכונן להמלכת ה' דווקא באמצעות אהבה.</li>
+          <li><strong>יז. זמן אמירת הסליחות</strong> — למה דווקא באשמורת הבוקר, ומשל "לעת מצא — זו אישה".</li>
+        </ul>
+      </div>
+      <p>לאחר שראינו בפרק הראשון את שורשו ההיסטורי של חודש אלול, נעבור כעת ונתבונן בשבעה עשר היבטים
+      של עבודת החודש הזה — כיצד הוא פועל בנו, מה תפקידו הכפול, וכיצד הוא, בעצם, זמן מסוגל במיוחד
+      להשגת אהבת ה'.</p>
+    </div>
+  </section>
+
+  <!-- ============ 2-1: פסוקי אלול ============ -->
+  <section class="page" id="p-ch2-1">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · א</div>
+      <h2 id="section-ch2-1">א. פסוקי אלול</h2>
+      <p>ישנם שלושה פסוקים, שראשי התיבות שלהם מאייתים את המילה "אלול", והם המפתח להבנת מהות החודש
+      כולו:</p>
+      <div class="verse-box">
+          <strong>אֲנִי לְדוֹדִי וְדוֹדִי לִי</strong>
+          <span class="ref">שיר השירים ו, ג</span>
+      </div>
+      <div class="verse-box">
+          <strong>אִישׁ לְרֵעֵהוּ וּמַתָּנוֹת לָאֶבְיֹנִים</strong>
+          <span class="ref">אסתר ט, כב</span>
+      </div>
+      <div class="verse-box">
+          <strong>אֶת לְבָבְךָ וְאֶת לְבַב</strong> (זַרְעֶךָ)
+          <span class="ref">דברים ל, ו</span>
+      </div>
+      <p>
+          שלושת הפסוקים הללו אינם צירוף מקרי בלבד — כפי שנראה בהמשך הפרק, כל אחד מהם פותח צוהר אחר
+          למהות החודש: הראשון עוסק בקשר האהבה בינינו לבין הקדוש ברוך הוא, השני בקשר שבין אדם לחברו,
+          והשלישי בעבודה הפנימית שבלב עצמו.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 2-2: מקורות ============ -->
+  <section class="page" id="p-ch2-2">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · ב</div>
+      <h2 id="section-ch2-2">ב. מקורות</h2>
+      <div class="quote-box">
+          <p>
+              "אֶת לְבָבְךָ וְאֶת לְבַב" — ראשי תיבות אלול. לכך נהגו להשכים ולהתפלל סליחות מאלול ואילך.
+              וכן "לוּלֵא הֶאֱמַנְתִּי לִרְאוֹת בְּטוּב ה'" (תהלים כז, יג) — "לולא" אותיות אלול, שמאלול ואילך חרדתי
+              נגד ה'.
+          </p>
+          <span class="source-tag">בעל הטורים, פרשת ניצבים</span>
+      </div>
+      <div class="quote-box">
+          <p>
+              והדרשנים אומרים, סמך לדבר: "אֲנִי לְדוֹדִי וְדוֹדִי לִי" ראשי תיבות אלול, וסופי תיבות ד' יודי"ן —
+              מספר ארבעים יום. וכן "וּמָל ה' אֱלֹהֶיךָ אֶת לְבָבְךָ וְאֶת לְבַב זַרְעֶךָ" ראשי תיבות אלול.
+          </p>
+          <span class="source-tag">ספר אבודרהם, סדר תפילת ראש השנה</span>
+      </div>
+      <div class="quote-box">
+          <p>
+              ולכן ירבה בכל החודש בתשובה ותפילה וצדקה, ונתנו רמז לזה: "וּמִשְׁלוֹחַ מָנוֹת אִישׁ לְרֵעֵהוּ וּמַתָּנוֹת
+              לָאֶבְיוֹנִים" (אסתר ט, כב) — ראשי תיבות אלול, לרמז שבחודש אלול ירבה במתנות לאביונים.
+          </p>
+          <span class="source-tag">חיי אדם, חלק ב, כלל קלח</span>
+      </div>
+
+      <h3>דרשו ה' בהמצאו — קראוהו בהיותו קרוב</h3>
+      <p>
+          הפסוק אומר: "דִּרְשׁוּ ה' בְּהִמָּצְאוֹ, קְרָאֻהוּ בִּהְיוֹתוֹ קָרוֹב" (ישעיהו נה, ו). חז"ל דרשו: "דרשו ה'
+          בהמצאו" — אלו עשרת ימי תשובה. ואם כן, מהו "קראוהו בהיותו קרוב"?
+      </p>
+      <div class="qa-box">
+          <div class="q">אם "דרשו ה' בהמצאו" הם כבר עשרת ימי תשובה עצמם, למה מוסיף הפסוק ואומר "קראוהו בהיותו קרוב"?</div>
+          <p>ויש לפרש: "קראוהו בהיותו קרוב" — שלא ימתין אדם בתשובה עד ראש השנה, אלא "בהיותו קרוב",
+          דהיינו בראש חודש אלול, שכן אמרו חז"ל שבראש חודש אלול שערי רחמים נפתחים, והוא זמן בית דין
+          לפני ראש השנה. וזהו "בהיותו קרוב".</p>
+      </div>
+      <div class="quote-box">
+          <p>ופרשנו עוד בזה מה שאמר דוד המלך עליו השלום: "יָמִים יֻצָּרוּ וְלוֹ אֶחָד בָּהֶם"</p>
+          <p>
+              ופירש רש"י: "ימים יוצרו" — כל השנה כולה. "ולו אחד בהם" — זה יום הכיפורים. ואמרו על זה:
+              "וְלִי מַה יָּקְרוּ רֵעֶיךָ אֵל" — קאי על ימי אלול, ששורשם הוא, כמו שכתב האר"י, שהם ימי ריעים
+              וימי רצון, שחודש זה מכפר על כל השנה.
+          </p>
+          <span class="source-tag">ספר פנים יפות, ויקרא פרק טז</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2-3: איש לרעיתו ============ -->
+  <section class="page" id="p-ch2-3">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · ג</div>
+      <h2 id="section-ch2-3">ג. איש לרעיתו בחודש אלול</h2>
+      <p>
+          כתב ה"חיי אדם": "וּמִשְׁלוֹחַ מָנוֹת אִישׁ לְרֵעֵהוּ וּמַתָּנוֹת לָאֶבְיוֹנִים" — ראשי תיבות אלול. ולכאורה
+          יש לתמוה: בשלמא "מתנות לאביונים" — זה עניין של צדקה, מובן היטב מדוע הוא סמל לחודש אלול.
+          אך מה עניינו של "איש לרעהו"?
+      </p>
+      <div class="highlight-box">
+          <p>
+              רואים מכאן, אם כן, שעניינו של חודש אלול אינו רק צדקה — אלא גם קרבה בין איש לרעהו,
+              <span class="emphasis">אהבת רעיתו</span> ממש. מזלו של אלול הוא מזל בתולה, שעניינו אהבה — ואין הכוונה רק
+              לאהבת ה', אלא גם לאהבת אשתו, "רעים אהובים".
+          </p>
+      </div>
+      <p>
+          ולכן תמצא שרבי נחמן מברסלב כותב בתורה פז שבליקוטי מוהר"ן (הנותן בים דרך), שחודש אלול הוא
+          זמן לתקן את מה שלא האיר עדיין באשתו. ומטעם זה קוראים בחודש אלול את פרשת "כי תצא", שכל
+          כולה סובבת סביב עניין האישה, ויש בה מצוות "וְשִׂמַּח אֶת אִשְׁתּוֹ".
+      </p>
+      <p>
+          אפשר להוסיף ולבאר מדוע זהו דווקא תפקידו המיוחד של חודש אלול: היות ובשביל להמליך את הקדוש
+          ברוך הוא, צריכים המַמליכים עצמם להיות מאוחדים, ביחד — כפי שכתב הסבא מקלם בהערתו הנוראה
+          לחודש אלול, וכפי שרואים גם במבנה ברכת "יוצר".
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 2-4: והלכת בדרכיו ============ -->
+  <section class="page" id="p-ch2-4">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · ד</div>
+      <h2 id="section-ch2-4">ד. והלכת בדרכיו</h2>
+      <p>
+          נבאר את הדברים בפשטות רבה יותר: קיימת מצוות "וְהָלַכְתָּ בִּדְרָכָיו" — וכשם שהקדוש ברוך הוא
+          בחודש הזה מתקרב אלינו, כך גם עלינו, בחודש הזה דווקא, להתקרב לרעיתנו. ובכך אנו מעוררים
+          הרבה יותר את הבחינה של "דוֹדִי לִי", מדין "ה' צִלְּךָ" — כשם שאדם עושה כלפי הזולת, כך נעשה
+          כלפיו משמים.
+      </p>
+      <div class="two-columns">
+          <div class="col-purple">
+              <strong>שיר השירים ב, טז</strong>
+              <p style="margin-top:8px;">"דּוֹדִי לִי וַאֲנִי לוֹ, הָרֹעֶה בַּשּׁוֹשַׁנִּים."</p>
+          </div>
+          <div class="col-gold">
+              <strong>שיר השירים ו, ג</strong>
+              <p style="margin-top:8px;">"אֲנִי לְדוֹדִי וְדוֹדִי לִי, הָרֹעֶה בַּשּׁוֹשַׁנִּים."</p>
+          </div>
+      </div>
+      <div class="qa-box">
+          <div class="q">מה פשר החילוף בין שני הפסוקים — פעם "דודי לי ואני לו" ופעם "אני לדודי ודודי לי"?</div>
+          <p>כתב רבי צדוק הכהן מלובלין בספרו פרי צדיק: "וזה עניין הרמז שכתב בשל"ה הקדוש: 'אני לדודי
+          ודודי לי' ראשי תיבות אלול. 'אני לדודי' — היינו שצריך אתערותא דלתתא (התעוררות מלמטה), כמו
+          שאמרו: 'פתחו לי פתח אחד של תשובה' וכו'. ואחר כך 'ודודי לי' — באתערותא דלעילא (התעוררות
+          מלמעלה), כמו שאמרו: 'ואני אפתח לכם פתחים'".</p>
+      </div>
+      <p>
+          וכן כתב החיד"א בספרו חומת אנך: "'אני לדודי ודודי לי' — פירשו ז"ל דהוא ראשי תיבות אלול, כי
+          הקדוש ברוך הוא מתרצה לישראל בחודש זה. וצריך להתעורר האדם בתחילה בתשובה, וזה הרמז 'אני
+          לדודי' — כשאני מתעורר ומתחבר עם דודי הקדוש ברוך הוא, אז 'ודודי לי' — דהבא ליטהר מסייעין
+          אותו, וביותר בחודש זה שיש בו התעוררות הרחמים".
+      </p>
+      <div class="highlight-box">
+          <p><strong>כיצד, אם כן, מעוררים אנו את "דודי לי"?</strong></p>
+          <ul>
+              <li><strong>א.</strong> על ידי "אני לדודי" — התעוררות שלנו קודם.</li>
+              <li><strong>ב.</strong> על ידי מעשינו, בבחינת מידה כנגד מידה: כל המרחם על הבריות — מרחמין עליו
+              מן השמים. על ידי שאנו מכבדים את רעיתנו, ואוהבים אותה יותר — נזכה שגם הקדוש ברוך הוא
+              יתנהג כך כלפינו.</li>
+          </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2-5: ב' תפקידים ============ -->
+  <section class="page" id="p-ch2-5">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · ה</div>
+      <h2 id="section-ch2-5">ה. ב' תפקידים באלול</h2>
+      <p>
+          נתן ה' בליבי שלכן זכיתי להיוולד בתאריך ב' באלול — שכן תפקידי הוא לדעת שיש שני תפקידים
+          באלול: להתקרב לקדוש ברוך הוא יתברך, ולהתקרב גם בבין אדם לחברו, לחיות למען הזולת. "אני
+          לדודי" הוא תפקיד אחד, ו"ודודי לי" — גם הוא תפקיד: להתנהג כמו הקדוש ברוך הוא, ולרדת אל
+          הזולת.
+      </p>
+      <div class="quote-box">
+          <p>
+              "וּכְשֶׁרוֹצֶה אָדָם לֵילֵךְ בְּדַרְכֵי הַתְּשׁוּבָה, צָרִיךְ לִהְיוֹת בָּקִי בַּהֲלִיכָה, וְצָרִיךְ לִהְיוֹת לוֹ שְׁנֵי בְּקִיאוּת:
+              הַיְנוּ בָּקִי בְּרָצוֹא, בָּקִי בְּשׁוֹב... וְזֶה בְּחִינַת: 'אִם אֶסַּק שָׁמַיִם שָׁם אָתָּה' — בְּחִינַת רָצוֹא, בָּקִי
+              בְּרָצוֹא. 'וְאַצִּיעָה שְּׁאוֹל הִנֶּךָּ' — בְּחִינַת וְנָפִיק, בְּחִינַת בָּקִי בְּשׁוֹב (שגם האדם ידע לרדת לנמוכים
+              ממנו — ילדיו, אשתו — ולהישאר עובד ה'). וְזֶה: 'אֲנִי לְדוֹדִי וְדוֹדִי לִי'. 'אני לדודי' — זה בחינת
+              רצוא. 'ודודי לי' — זה בחינת שוב. וזה סוד כוונת אלול, וזה עיקר כבודו."
+          </p>
+          <span class="source-tag">ליקוטי מוהר"ן, מהדורא קמא, סימן ו</span>
+      </div>
+      <p>
+          וזהו שכתוב: "וְכִבַּדְתּוֹ מֵעֲשׂוֹת דְּרָכֶיךָ" (ישעיהו נח) — "דרכיך" לשון רבים, שהאדם אוחז בשני
+          דרכים בבת אחת: להתקרב לקדוש ברוך הוא, ולהתקרב גם לרעיתו. וכשיש לו לאדם את שני הבקיאויות
+          הללו — אזי הוא הולך בדרכי התשובה, וזוכה לכבוד ה'.
+      </p>
+      <div class="verse-box">
+          וְאִם יַרְחִיב ה' אֱלֹהֶיךָ אֶת גְּבֻלְךָ... כִּי תִשְׁמֹר אֶת כָּל הַמִּצְוָה הַזֹּאת לַעֲשֹׂתָהּ, אֲשֶׁר אָנֹכִי מְצַוְּךָ
+          הַיּוֹם, לְאַהֲבָה אֶת ה' אֱלֹהֶיךָ וְלָלֶכֶת בִּדְרָכָיו כָּל הַיָּמִים...
+          <span class="ref">דברים יט, ח-ט</span>
+      </div>
+      <p>
+          פסוק מדהים זה, המופיע בפרשת שופטים, שואל למעשה: מה מצפים מאיתנו כדי שנזכה שה' ירחיב לנו
+          את גבול הארץ? והתשובה: לאהוב את ה' וללכת בדרכיו — כל התורה כולה על רגל אחת. וזוהי, בעצם,
+          עבודתו המרכזית של חודש אלול.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 2-6: זמן מסוגל לאהבת ה' ============ -->
+  <section class="page" id="p-ch2-6">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · ו</div>
+      <h2 id="section-ch2-6">ו. חודש אלול זמן מסוגל לאהבת ה'</h2>
+      <div class="highlight-box">
+          <p><strong>שלושה סימנים לכך שחודש אלול הוא זמן מסוגל דווקא לאהבת ה':</strong></p>
+          <ul>
+              <li><strong>א.</strong> מזלו של חודש אלול הוא בתולה — מזל המסמל אהבה, שבו ה' משפיע עלינו הרבה
+              אהבה.</li>
+              <li><strong>ב.</strong> "אני לדודי ודודי לי" ראשי תיבות אלול. מהו הביטוי "דוד"? הרב זמיר כהן מבאר
+              בספרו על שיר השירים: דוד הוא כמו ה"דוד מאמריקה" — זה שרק מחלק מתנות, לא מעניש ולא מעיר.
+              חודש אלול הוא חודש של רחמים.</li>
+              <li><strong>ג.</strong> "אֶת לְבָבְךָ וְאֶת לְבַב" ראשי תיבות אלול — ומה המשך הפסוק? "לְאַהֲבָה אֶת ה'
+              אֱלֹהֶיךָ". בחודש אלול זהו זמן נפלא לקנות אהבת ה'.</li>
+          </ul>
+      </div>
+      <div class="story-box">
+          <span class="story-title">מבצע ענק על קנינים רוחניים</span>
+          <p>
+              שמעתי מהרב חזקיהו מישקובסקי שליט"א, שאמר בשם בעלי המוסר: מה שמשיגים בחודשים אחרים
+              בהרבה עבודה — משיגים בחודש אלול בקלות. ונתן מורנו הרב ליפשיץ שליט"א משל לדבר: כמו
+              שיש בחנות "מבצע", ומוכרים דברים בחצי מחיר, כך בחודש אלול בורא עולם עושה "מבצע" על
+              קניינים רוחניים, שניתן לקנותם בחצי זמן עבודה. וכל מי שמחפש רוחניות — יש לו שמחה גדולה
+              בחודש הזה.
+          </p>
+      </div>
+      <p>
+          והנה "אני לדודי" — פירושו: אני נאמן לה' באהבתו, והוא נאמן לי באהבתו. ומעצם כך שכתוב תחילה
+          "אני לדודי", משמע שראשית כל, על היהודי להתחיל בחודש אלול לעבוד על אהבת ה'. ואז, מתוך
+          שה' אוהב אותנו מאוד — "כַּמַּיִם הַפָּנִים לַפָּנִים" — תתגלה אהבה גם אצלנו.
+      </p>
+      <p>
+          חודש אלול אינו רק "הקדמת יום הדין" בשלושים יום, אלא הוא זמן נפלא של רחמים מאת ה', שבו
+          ניתן לקנות מעלות נפלאות בעבודת ה' — בקלות יחסית.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 2-7: אותיות אלול ============ -->
+  <section class="page" id="p-ch2-7">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · ז</div>
+      <h2 id="section-ch2-7">ז. אותיות אלול</h2>
+      <p>מהו, אם כן, שמו של חודש זה — "אלול"?</p>
+      <div class="highlight-box">
+          <p>
+              "לו" — אמרו חז"ל: זו אשתו (על הפסוק "מַחְסוֹרוֹ אֲשֶׁר יֶחְסַר לוֹ"). מדוע? כי אותיות "לו" הן
+              אותיות המראות על חיבור — חיבור שמים וארץ, ו' — אות החיבור. שבט לוי נקרא כך על שם חיבורה
+              של לאה ליעקב, ועל שם שהם מחברים את הקדוש ברוך הוא לעם ישראל.
+          </p>
+      </div>
+      <p>
+          גם בתוך המילה "אלול" מצויות אותיות "לו". נתבונן, אם כן, מהו החיבור הצפון בחודש אלול: אמרו
+          חז"ל שיום חתונתו של הקדוש ברוך הוא הוא יום הכיפורים. ביום הכיפורים עם ישראל מתחתן עם
+          הקדוש ברוך הוא בחדר היחוד, בקודש הקודשים. ולכן אין לך ימים טובים כמו יום הכיפורים.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 2-8: זמן הפגישות ============ -->
+  <section class="page" id="p-ch2-8">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · ח</div>
+      <h2 id="section-ch2-8">ח. אלול זמן הפגישות</h2>
+      <div class="story-box">
+          <span class="story-title">מנהג הפגישה שלפני החתונה</span>
+          <p>
+              נהוג אצל בני עדות ליטא, שלפני החתונה נפגש החתן עם הכלה. מדוע? כדי שבחתונה עצמה כבר
+              יהיה מעט חיבור ביניהם — קשה מאוד להתחתן עם אדם שכלל אינו מכירים. רק כאשר יש מעט אהבה
+              וחיבה ביניהם קודם לכן, שייך להתחתן. כל מי שרואה חתן לפני החתונה — הוא מרקד סביב הכלה,
+              כולו מנסה לרצותה ולחבבה, "כִּמְשׂוֹשׂ חָתָן עַל כַּלָּה".
+          </p>
+      </div>
+      <p>
+          זהו חודש אלול, מזל בתולה: הקדוש ברוך הוא רוצה להתחתן איתנו בקרוב, ולפני החתונה צריך
+          להכשיר את הקרקע. מה עושה הקדוש ברוך הוא, כדי שהכלה לא תברח? הוא יורד אלינו — "הַמֶּלֶךְ
+          בַּשָּׂדֶה", "לִפְנֵי ה' כִּי בָא". פתאום נהיה קל להגיע אל המלך. "דודי" מגיע אליי. זהו חודש של מזל
+          בתולה, שבו המלך, כביכול, מחזר אחר הבתולה כדי לשאתה — ובחודש הזה אפשר להשיג בקלות קרבת
+          ה'. וזהו: "וּמָל ה' אֱלֹהֶיךָ אֶת לְבָבְךָ" — בחודש הזה ה' מל את לבבנו, ובקלות משיגים בו הרבה
+          אהבה ודבקות בה'.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 2-9: מעין ימות המשיח ============ -->
+  <section class="page" id="p-ch2-9">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · ט</div>
+      <h2 id="section-ch2-9">ט. מעין ימות המשיח</h2>
+      <div class="verse-box">
+          וּמָל ה' אֱלֹהֶיךָ אֶת לְבָבְךָ וְאֶת לְבַב זַרְעֶךָ, לְאַהֲבָה אֶת ה' אֱלֹהֶיךָ בְּכָל לְבָבְךָ וּבְכָל נַפְשְׁךָ, לְמַעַן חַיֶּיךָ.
+          <span class="ref">דברים ל, ו</span>
+      </div>
+      <p>בעל הטורים: "'את לבבך ואת לבב' — ראשי תיבות אלול. לכך נהגו להשכים ולהתפלל סליחות מאלול
+      ואילך".</p>
+      <div class="quote-box">
+          <p>
+              "ומל ה' אלהיך את לבבך" — זהו שאמרו: "הבא לטהר מסייעין אותו". מבטיחך שתשוב אליו בכל
+              לבבך, והוא יעזור אותך. ונראה מן הכתובים עניין זה: כי מזמן הבריאה הייתה רשות ביד האדם
+              לעשות כרצונו, צדיק או רשע — כל זמן התורה כן, כדי שיהיה להם זכות בבחירתם בטוב, ועונש
+              ברצותם ברע. אבל <span class="emphasis">לימות המשיח, תהיה הבחירה בטוב להם טבע</span> — לא יתאווה להם הלב
+              למה שאינו ראוי, ולא יחפוץ בו כלל. והיא המילה הנזכרת כאן, כי החמדה והתאווה — ערלה ללב,
+              ומול הלב הוא שלא יחמוד ולא יתאווה. וישוב האדם בזמן ההוא לאשר היה קודם חטאו של אדם
+              הראשון.
+          </p>
+          <span class="source-tag">רמב"ן, דברים ל, ו</span>
+      </div>
+      <div class="highlight-box">
+          <p>
+              גילו לנו רבותינו דבר נפלא: <strong>חודש אלול הוא מעין ימות המשיח</strong>, מעין מצבו של אדם
+              הראשון קודם החטא. בחודש זה יכול אדם לזכות שה' ימול את לבבנו — לזכות ללב חדש, לב מלא
+              אהבתו, לב שמתענג על ה'. אשרינו שזכינו למתנה נפלאה זו של חודש אלול!
+          </p>
+      </div>
+      <p>ולפי דרכנו למדנו: מהו חודש אלול? מילת הלב — ל... אהבת ה'. וכך כתב רבנו יונה בשערי תשובה:</p>
+      <div class="quote-box">
+          <p>
+              התבאר בתורה, כי יעזור ה' לשבים כאשר אין יד טבעם משגת, ויחדש בקרבם רוח טהורה להשיג
+              מעלת אהבתו, שנאמר: "וְשַׁבְתָּ עַד ה' אֱלֹהֶיךָ וְשָׁמַעְתָּ בְקֹלוֹ, כְּכֹל אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם, אַתָּה
+              וּבָנֶיךָ, בְּכָל לְבָבְךָ וּבְכָל נַפְשְׁךָ". ואומר בגוף העניין: "וּמָל ה' אֶת לְבָבְךָ וְאֶת לְבַב זַרְעֶךָ" —
+              להשיג אהבתו.
+          </p>
+          <span class="source-tag">שערי תשובה לרבנו יונה, שער א</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2-10: לראות בטוב ה' ============ -->
+  <section class="page" id="p-ch2-10">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · י</div>
+      <h2 id="section-ch2-10">י. אלול — לראות בטוב ה'</h2>
+      <p>
+          נוהגים לומר בחודשי אלול ותשרי את מזמור "לְדָוִד ה' אוֹרִי", משום שמוזכרים בו ראש השנה
+          ("ה' אוֹרִי"), יום הכיפורים ("יִשְׁעִי") וכיוצא בזה. יש לשאול: והיכן מרומז בו חודש אלול עצמו?
+      </p>
+      <div class="qa-box">
+          <div class="q">היכן, בפרק "לדוד ה' אורי", מרומז חודש אלול?</div>
+          <p>
+              כתב בעל הטורים: "'לוּלֵא הֶאֱמַנְתִּי לִרְאוֹת בְּטוּב ה'' (תהלים כז, יג) — 'לולא' אותיות אלול".
+              (ולמה בסדר הפוך? נראה ללמד שבאלול צריכים להסתכל אחורה, על מה שעשינו כל השנה).
+              נראה לומר שכתוב כאן, שבחודש אלול ניתן לזכות "לראות בטוב ה'" — כדי לחזק את האהבה
+              לקראת החתונה.
+          </p>
+      </div>
+      <div class="quote-box">
+          <p>
+              וכתיב "אני לדודי ודודי לי" ראשי תיבות אלול. כלומר, אם בני ישראל משתוקקים לראות בטוב ה'
+              ולשוב בתשובה שלמה לאביהם שבשמים — אזי תשוקתו עליהם, ומיד תקבלם... מכל אלה שמענו,
+              שהחודש הזה הוא זמן מוכן לשבים, וכל המבקש רחמים בחודש הזה — ימצאנו.
+          </p>
+          <span class="source-tag">מטה משה</span>
+      </div>
+      <div class="verse-box">
+          שׂוֹשׂ אָשִׂישׂ בַּה', תָּגֵל נַפְשִׁי בֵּאלֹהָי, כִּי הִלְבִּישַׁנִי בִּגְדֵי יֶשַׁע, מְעִיל צְדָקָה יְעָטָנִי, כֶּחָתָן יְכַהֵן פְּאֵר,
+          וְכַכַּלָּה תַּעְדֶּה כֵלֶיהָ.
+          <span class="ref">ישעיהו סא, י — הפטרת נצבים</span>
+      </div>
+      <p>
+          ומצאנו על כך בספר בני יששכר: "וממילא רווחא לן שמעתתא — הא דנהגו בנות ישראל לצאת במחול
+          ביום הכיפורים, ומי שאין לו אישה יפנה לשם. כי הוא יום שניתנו בו לוחות אחרונות, לקדש שוב
+          כנסת ישראל לדודה, בחינת 'לי' — היינו ארבעים יום האחרונים: שלושים ימי אלול, ועשרה ימים
+          מראש השנה עד יום הכיפורים. וביום הכיפורים נתרצה ה' לישראל בשמחה, וניתנו בו לוחות אחרונות
+          לקידושין כל ימי עולם — על כן הוקבע אותו היום לחתונות, לשידוך בנות ישראל".
+      </p>
+      <div class="quote-box">
+          <p>
+              "אָז תִּשְׂמַח בְּתוּלָה בְּמָחוֹל" (ירמיה לא, יב) — שמעתי מאת שאר בשרי, הרב החסיד הקדוש מוהר"ר
+              אלעזר זצ"ל מליזענסק: "אז תשמח בתולה" — רמז לחודש אלול, אשר מזלו בתולה, הנה תשמח.
+              "במחול" — כשימחול ה' עוונותיהם של ישראל.
+          </p>
+          <span class="source-tag">בני יששכר, מאמרי חודש אלול, מאמר א</span>
+      </div>
+      <p>
+          הוסיף אייל ויסברג שליט"א: "אלול" — אותיות א-לו-ל, יוצא "אל לו" — אמרנו ש"לו" זה אשתו, כנסת
+          ישראל, ומסביב יש ק"ל — ללמדך שבימים אלו הקדוש ברוך הוא מסביב לעם ישראל, מחזר סביבם
+          כחתן מסביב לכלה.
+      </p>
+      <p>וכיצד פותח ספר שערי תשובה? "מִן הַטּוֹבוֹת אֲשֶׁר הֵיטִיב הַשֵּׁם יִתְבָּרָךְ עִם בְּרוּאָיו — כִּי הֵכִין לָהֶם
+      הַדֶּרֶךְ לַעֲלוֹת מִתּוֹךְ פַּחַת מַעֲשֵׂיהֶם, וְלָנוּס מִפַּח פִּשְׁעֵיהֶם...". זהו חודש אלול: ה' עוזר היכן שכל השנה
+      לא השגנו, ומחדש בקרבנו רוח טהרה עצומה להשיג אהבתו — קרבה לאבא. ולמה דווקא כך? היות ובשביל
+      לזכות בדין, צריך שהמלך יאהב אותך.</p>
+      <p>ומתי קוראים בתורה את הפסוקים הללו? בשבת פרשת ניצבים, ערב ראש השנה — ללמדנו מהם ראש
+      השנה והימים הנלווים אליו: ימים שבהם יש רוח טהרה עצומה.</p>
+      <div class="quote-box">
+          <p>
+              אמר רבי עקיבא: אשריכם ישראל! לפני מי אתם מיטהרין, ומי מטהר אתכם — אביכם שבשמים,
+              שנאמר: "וְזָרַקְתִּי עֲלֵיכֶם מַיִם טְהוֹרִים וּטְהַרְתֶּם" (יחזקאל לו), ואומר: "מִקְוֵה יִשְׂרָאֵל ה'" (ירמיה
+              יז) — מה מקווה מטהר את הטמאים, אף הקדוש ברוך הוא מטהר את ישראל.
+          </p>
+          <span class="source-tag">משנה, מסכת יומא, סוף פרק ח</span>
+      </div>
+      <p>
+          כך צריך יהודי להרגיש בימים נפלאים אלו — "אשריכם, אשריכם"! צריך להרגיש שמחה עצומה, כמו
+          אדם שהיה לו חוב של מאה אלף שקל מנישואי ביתו, ופתאום התקשר אליו מנהל הבנק והודיע לו:
+          "הנה מחקנו לך את כל החוב העצום". וכשאדם שומע את החזן מקדש את חודש אלול — מתחילים
+          לרקוד מרוב שמחה: הנה הימים המתוקים והנפלאים מגיעים, ימים שבהם ה' שולח רוח טהרה נפלאה,
+          ימים שבהם אפשר להשיג קניינים גדולים בקלות — ולב מי לא ישמח?
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 2-11: הימים הנחמדים ============ -->
+  <section class="page" id="p-ch2-11">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · יא</div>
+      <h2 id="section-ch2-11">יא. הימים הנחמדים</h2>
+      <p>
+          בספר "לעבדך באמת" מובא, שרבי יחזקאל לוינשטיין זצ"ל היה קורא לימים אלו — "הימים הנחמדים".
+      </p>
+      <div class="story-box">
+          <span class="story-title">שהחיינו על החודש הנפלא</span>
+          <p>
+              הרב אוזן סיפר, שרבי יצחק בלעזר היה עולה לבימה בראש חודש אלול, ומודה להקדוש ברוך הוא
+              על החודש הנפלא. ואני שמעתי, שהיה פותח את ארון הקודש ומברך "שהחיינו" (כנראה בלי שם
+              ומלכות) על הימים הנפלאים שבאים.
+          </p>
+      </div>
+      <div class="quote-box">
+          <p>
+              ופרשנו עוד בזה מה שאמר דוד המלך עליו השלום: "יָמִים יֻצָּרוּ וְלוֹ אֶחָד בָּהֶם, וְלִי מַה יָּקְרוּ רֵעֶיךָ
+              אֵל, מֶה עָצְמוּ רָאשֵׁיהֶם. אֶסְפְּרֵם מֵחוֹל יִרְבּוּן, הֱקִיצֹתִי וְעוֹדִי עִמָּךְ" (תהלים קלט). ופירש רש"י:
+              "ימים יוצרו" — כל השנה כולה, "ולו אחד בהם" — זה יום הכיפורים. ואמרו על זה: "ולי מה יקרו
+              רעיך אל" — קאי על ימי אלול, ששורשם הוא, כמו שכתב האר"י, שהם ימי ריעים וימי רצון, שחודש
+              זה מכפר על כל השנה. ורמזו זה במשנה (כתובות פ"ה מ"ב): "נותנין לבתולה שנים עשר חודש" —
+              פירוש, שמזל אלול הוא בתולה, והיא מכפרת על שנים עשר חודש.
+          </p>
+          <p>
+              וכן אמרו במדרש, והביאו הטור (או"ח סי' תקפ"א), שהזקנים מקדימים מחודש אלול, וה' מכפר
+              שליש עוונות בעבור תשובת הזקנים המקדימים. ופירשו בזה את מה שאמר הנביא: "אָז תִּשְׂמַח
+              בְּתוּלָה בְּמָחוֹל, וּבַחוּרִים וּזְקֵנִים יַחְדָּו" — פירוש, שנמחלים עוונותיהם בחודש אלול שהוא מזל
+              בתולה, אפילו לבחורים, בזכות הזקנים. וזהו חסד ה', שמחשב ימי אלול — כל יום שהוא שתים
+              עשרה שעות, שעה אחת ליום — והם ימי קודש המכפרים על ימי חול.
+          </p>
+          <span class="source-tag">ספר פנים יפות, ויקרא פרק טז פסוק כא</span>
+      </div>
+      <div class="quote-box">
+          <p>
+              מתוך הזמנים של השנה נתייחד חודש אלול ועשרת ימי תשובה לימי רצון ורחמים, וזה אושר גדול
+              לאדם — כי ימי רצון הוא חיים ברצונו, ונפתחים שערי חסד ורחמים, ומתפשטת אורה מיוחדת
+              להאיר עיני האדם. והזמן מסוגל מאוד, ואפשר להשיג — בין בתשובה, בין בתורה ועבודה — במעט
+              עמל, מצד סגולת הזמן.
+          </p>
+          <span class="source-tag">ר' אהרון קוטלר זצ"ל</span>
+      </div>
+      <p>כתב רש"י על הפסוק "וַיֹּאמֶר: הַרְאֵנִי נָא אֶת כְּבֹדֶךָ" (שמות לג, יח): "ראה משה שהיה עת רצון
+      ודבריו מקובלים, והוסיף לשאול לראותו במראית כבודו". ומתי היה זה? כתב הרמב"ן: "אולי היה הרצון
+      הזה בסוף ארבעים יום השניים, על דעת רבותינו, כאשר נתרצה לו הקדוש ברוך הוא, ואמר: 'פסל לך
+      שני לוחות אבנים כראשונים'".</p>
+      <div class="highlight-box">
+          <p>למדנו מכאן שני דברים:</p>
+          <ul>
+              <li>א. מבואר בהדיא שזמן זה, ימי עליית משה בחודש אלול, היה עת רצון.</li>
+              <li>ב. בעת רצון אפשר לקבל דברים שבזמן רגיל אין מקבלים.</li>
+          </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2-12: תשובה - לשוב לאבא ============ -->
+  <section class="page" id="p-ch2-12">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · יב</div>
+      <h2 id="section-ch2-12">יב. תשובה — לשוב לאבא</h2>
+      <div class="qa-box">
+          <div class="q">מדוע בכל הפסוקים שראינו כרמז לחודש אלול, אין המילה "תשובה" מופיעה כלל?</div>
+          <p>
+              "אני לדודי ודודי לי" — עניין "דוד" הוא מתנות, או רעות, כמו "עֵת דּוֹדִים". "את לבבך" — לאהבה.
+              למדנו מכאן שאין עניינו של חודש אלול לחזור בתשובה על החטאים שעשינו — זאת עושים
+              בעשרת ימי תשובה עצמם. אלא עניינו לחזור לאבא: "איש לרעהו" — לחדש את האהבה, לשוב
+              לאבא, לקרבה של אבא. וזה כל עניינם של הפסוקים.
+          </p>
+      </div>
+      <div class="highlight-box">
+          <p>
+              שמעתי מהרב יהודה יוספי שליט"א ביאור חשוב ב"אני לדודי": אם ה"אני" של האדם, דהיינו כל
+              רצונותיו, יהיו כפופים ל"דודי" — שאדם יוותר על רצונו לכבוד בורא עולם — אז יזכה ל"דודי לי",
+              שהדוד יחשוב מה לעשות כדי שיהיה לו טוב. וזו בחינת "עֲשֵׂה רְצוֹנוֹ כִּרְצוֹנְךָ, כְּדֵי שֶׁיַּעֲשֶׂה רְצוֹנְךָ
+              כִּרְצוֹנוֹ".
+          </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2-13: נתרצה בשמחה ============ -->
+  <section class="page" id="p-ch2-13">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · יג</div>
+      <h2 id="section-ch2-13">יג. נתרצה בשמחה</h2>
+      <div class="quote-box">
+          <p>
+              "וָאֶתְנַפַּל לִפְנֵי ה' כָּרִאשֹׁנָה אַרְבָּעִים יוֹם" — שנאמר: "ועתה אעלה אל ה', אולי אכפרה". באותה
+              עלייה נתעכבתי ארבעים יום, נמצאו כלים בכ"ט באב, שהוא עלה בי"ח בתמוז. בו ביום נתרצה
+              הקדוש ברוך הוא לישראל, ואמר למשה: "פסל לך שני לוחות". עשה עוד ארבעים יום, נמצאו כלים
+              ביום הכיפורים — בו ביום נתרצה הקדוש ברוך הוא לישראל <span class="emphasis">בשמחה</span>, ואמר לו למשה:
+              "סלחתי כדברך". לכך הוקבע למחילה ולסליחה. ומנין שנתרצה ברצון שלם? שנאמר בארבעים של
+              לוחות אחרונות: "וְאָנֹכִי עָמַדְתִּי בָהָר כַּיָּמִים הָרִאשֹׁנִים" — מה הראשונים ברצון, אף האחרונים
+              ברצון. אמור מעתה: האמצעיים היו בכעס.
+          </p>
+          <span class="source-tag">רש"י, דברים ט, יח</span>
+      </div>
+      <div class="qa-box">
+          <div class="q">אם ה' כבר סלח לעם ישראל בכ"ט באב, מה נתחדש בארבעים היום הנוספים עד יום הכיפורים?</div>
+          <p>
+              נמצא שמה שמיוחד בארבעים היום הללו הוא זה: הרי כבר בכ"ט באב סלח ה' לעם ישראל, אלא
+              שביום הכיפורים <strong>נתרצה בשמחה</strong>. יש הבדל בין אדם הסולח לחברו שעשה לו דבר רע: יש
+              שרק אינו מעניש אותו, ויש שסולח ומחזיר את המצב כבתחילה, עד כדי אהבה כבתחילה — וזהו
+              הנעשה ביום הכיפורים.
+          </p>
+      </div>
+      <p>
+          לכן, מתחילת חודש אלול, יש כבר שמחה בין ישראל לה', ואפשר להשיג הרבה אהבה. נראה שהיות
+          ובסוף ארבעים היום הייתה שמחה — לכן ההשפעה הזו קיימת כבר מן ההתחלה.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 2-14: השגות רוחניות ============ -->
+  <section class="page" id="p-ch2-14">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · יד</div>
+      <h2 id="section-ch2-14">יד. חודש המסוגל להשגות רוחניות</h2>
+      <p>
+          "אני לדודי ודודי לי" — "דוד" לשון ידידות. בימים אלו יש ידידות בינינו לה', ומשיגים בקלות
+          דברים.
+      </p>
+      <div class="highlight-box">
+          <p>
+              חשבתי: "אני לדודי ודודי לי" — צריך תחילה שהאדם יתחיל, ואז ה' יוריד עליו שפע. וכך היה
+              מהתחלה: "פְּסָל לְךָ שְׁנֵי לֻחֹת אֲבָנִים... וְכָתַבְתִּי" — משה צריך לפסול ולהכין את הלוחות, ואז ה'
+              כותב עליהם. כך גם כל יהודי צריך להכין את ליבו — ואז ה' ישים בליבו את אהבתו ויראתו.
+          </p>
+      </div>
+      <p>
+          וזוהי בחינת: "כִּי תֵצֵא לַמִּלְחָמָה... וּנְתָנוֹ ה' אֱלֹהֶיךָ בְּיָדֶךָ" — ה' לא סתם ייתן בידך את האויב
+          הגדול, את היצר הרע, אלא: "כִּי תֵצֵא לַמִּלְחָמָה" — אז "וּנְתָנוֹ".
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 2-15: שמחה בחודש אלול ============ -->
+  <section class="page" id="p-ch2-15">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · טו</div>
+      <h2 id="section-ch2-15">טו. שמחה בחודש אלול</h2>
+      <p>לפי כל האמור, מובן היטב מדוע פרשת השמחה נקראת דווקא בחודש אלול — היא פרשת "כי תבוא",
+      שבה מופיע ארבע פעמים עניין השמחה:</p>
+      <div class="highlight-box">
+          <ul>
+              <li>"וְשָׂמַחְתָּ בְכָל הַטּוֹב" (מצוות הביכורים).</li>
+              <li>"עָשִׂיתִי כְּכֹל אֲשֶׁר צִוִּיתָנִי" — שמחתי ושימחתי בו.</li>
+              <li>"וְשָׂמַחְתָּ לִפְנֵי ה' אֱלֹהֶיךָ" — שמחה בברית.</li>
+              <li>"תַּחַת אֲשֶׁר לֹא עָבַדְתָּ... בְּשִׂמְחָה".</li>
+          </ul>
+      </div>
+      <p>
+          וכן קוראים בשבת מברכים חודש אלול את פרשת "ראה" (ראשי תיבות: ראה אלול הגיע), שבה מופיע
+          שבע פעמים הפועל "שמחה". ובאמת, מקדמת דנא לא היו אומרים כלל סליחות בחודש אלול, רק
+          בעשרת ימי תשובה — כמבואר בטור וברמב"ם, משום שמה עניין סליחות לראש השנה?
+      </p>
+      <div class="highlight-box">
+          <p>
+              נוסיף ונאמר: קוראים את פרשת השמחה בחודש אלול כדי ללמד את עם ישראל — <strong>אלול זה לא
+              "דוב", אלול זה "דוד"</strong>.
+          </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2-16: הכנה לר"ה ============ -->
+  <section class="page" id="p-ch2-16">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · טז</div>
+      <h2 id="section-ch2-16">טז. הכנה לראש השנה על ידי אהבה</h2>
+      <p>
+          ולפי זה נבין דבר נפלא: ראש השנה הוא יום המלכת ה'. כתוב: "כִּי לַה' הַמְּלוּכָה", "וּמוֹשֵׁל בַּגּוֹיִם",
+          "מַלְכוּתְךָ מַלְכוּת כָּל עוֹלָמִים, וּמֶמְשַׁלְתְּךָ בְּכָל דּוֹר וָדוֹר". בשביל להמליך את המלך, צריך מאוד
+          לאהוב אותו. לכן תוקן חודש אלול — כדי להתכונן להמלכת המלך, על ידי שאוהבים אותו. ולפי
+          כמה שתאהב את המלך — כך תזכה בראש השנה, שכן כך תהיה הממלכה כולה בהרבה יותר שמחה.
+      </p>
+      <p>
+          לכן קוראים בשבת הסמוכה לראש השנה את פרשת "ניצבים" (וזו תקנה מיוחדת, "תכלה שנה
+          וקללותיה"), שבה משה רבינו מזהיר כמה חשוב אהבת ה'. וכן כתוב ביהושע: "וְנִשְׁמַרְתֶּם מְאֹד
+          לְנַפְשֹׁתֵיכֶם לְאַהֲבָה אֶת ה' אֱלֹהֵיכֶם" (יהושע כג, יא). וכן קוראים בהפטרה: "שׂוֹשׂ אָשִׂישׂ בַּה', תָּגֵל
+          נַפְשִׁי בֵּאלֹהָי".
+      </p>
+      <div class="qa-box">
+          <div class="q">כיצד מוסיפים אהבת ה'?</div>
+          <p>
+              כיצד אדם אוהב את אשתו? הוא משמח אותה. וכיצד משמחים? מביעים לה תודה על כל מה
+              שנתנה לו. כך יהודי עומד ומתבונן כמה הטיב עמו ה', כמה זכות היא להיות יהודי — ומודה לה'
+              מאוד. וכמו שאמרו בזוהר, שאדם צריך לספר לה' את כל הטובות שעשה עמו.
+          </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2-17: זמן הסליחות ============ -->
+  <section class="page" id="p-ch2-17">
+    <div class="page-content">
+      <div class="page-tag">פרק שני · יז</div>
+      <h2 id="section-ch2-17">יז. זמן אמירת הסליחות</h2>
+      <div class="quote-box">
+          <p>
+              ומה שנוהגים לעמוד באשמורת קודם עלות השחר — הוא לפי שאמרו במדרש, שהקדוש ברוך הוא
+              שט בלילה בשמונה עשר עולמות, ובשלוש שעות אחרונות הוא שט בעולם הזה — והרי הוא קרוב
+              לנו בכל קראנו אליו באותו זמן.
+          </p>
+          <span class="source-tag">לבוש, אורח חיים סימן תקפ"א</span>
+      </div>
+      <div class="quote-box">
+          <p>
+              יש אומרים כי זמן בקשת רחמים הוא בסוף הלילה, שנאמר: "עַל זֹאת יִתְפַּלֵּל כָּל חָסִיד אֵלֶיךָ
+              לְעֵת מְצֹא" (תהלים לב, ו), ואמרו רז"ל: "לעת מצא — זו אישה", כלומר במשמרה השלישית, שבה
+              אישה מספרת עם בעלה.
+          </p>
+          <span class="source-tag">ריקאנטי, בראשית פרק ג</span>
+      </div>
+      <p>
+          כלומר, בזמן זה יש עת רצון מאוד שיהודי ידבר עם בורא עולם — אז הדיבורים חביבים מאוד לפני
+          המלך. וזהו תפקידו של זמן זה: כמו בפגישות, שמה עושים? מדברים אחד עם השני — כך באלול
+          צריך לדבר הרבה עם המלך. וכמו שמסביר בשו"ת נודע ביהודה (מהדורא תניינא, אבן העזר סימן כג),
+          שדרך בנות ישראל שהאישה מספרת עם בעלה קודם התשמיש — כך כל יהודי צריך להתחיל לדבר
+          עם הבורא בשעות אלו.
+      </p>
+      <p>
+          כמו ששמעתי מסבירים: הרי בסליחות יש הרבה מאוד פסוקי רחמים, לדוגמה, פותחים ב"אשרי", ואחר
+          כך:
+      </p>
+      <div class="verse-box">
+          וַאֲנַחְנוּ בְּרֹב חַסְדְּךָ נָבוֹא בֵיתֶךָ, נִשְׁתַּחֲוֶה אֶל הֵיכַל קָדְשְׁךָ בְּיִרְאָתֶךָ... רוֹמְמוּ ה' אֱלֹהֵינוּ וְהִשְׁתַּחֲווּ
+          לַהֲדֹם רַגְלָיו, קָדוֹשׁ הוּא... כִּי מִי בַשַּׁחַק יַעֲרֹךְ לַה', יִדְמֶה לַה' בִּבְנֵי אֵלִים? כִּי גָדוֹל אַתָּה וְעֹשֵׂה
+          נִפְלָאוֹת, אַתָּה אֱלֹהִים לְבַדֶּךָ... לְךָ ה' הַגְּדֻלָּה וְהַגְּבוּרָה וְהַתִּפְאֶרֶת וְהַנֵּצַח וְהַהוֹד, כִּי כֹל בַּשָּׁמַיִם
+          וּבָאָרֶץ, לְךָ ה' הַמַּמְלָכָה וְהַמִּתְנַשֵּׂא לְכֹל לְרֹאשׁ.
+          <span class="ref">מתוך פתיחת הסליחות</span>
+      </div>
+      <div class="highlight-box">
+          <p>
+              בסליחות שלאורך כל השנה אין אומרים קטע זה — רק בסליחות של אלול. מדוע? כי אין מטרת
+              הסליחות רק לבקש סליחה — וכמו שאמרו, שהקדוש ברוך הוא צריך לומר סליחות, לא רק אנחנו —
+              אלא הם ימים שבהם אנו מתקרבים למלך, ימים שבהם אנו זוכים להיות רצויים לפניו. וזה על ידי
+              שירות ותשבחות.
+          </p>
+      </div>
+      <p>
+          וכמו שמובא על ה"תרומת הדשן" בספר לקט יושר: "כי הגאון ז"ל היה מנגן מראש חודש אלול, בחול,
+          עד אחר יום הכיפורים, ב'ברוך שאמר', כמעט שעה אחת". אלו הם ימי חודש אלול — ימים של
+          דיבורים ארוכים ואוהבים עם בורא עולם.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ מקורות ============ -->
+  <section class="page" id="p-sources">
+    <div class="page-content">
+      <h2 style="border-color:#6b7280; color:#374151;">📚 מקורות ומראי מקומות</h2>
+      <div class="sources">
+          <ol>
+              <li>טור, אורח חיים סימן תקפ"א</li>
+              <li>דברים פרק י, א, עם פירוש רש"י וחזקוני</li>
+              <li>חיי אדם, חלק שני, כלל קלח</li>
+              <li>שמות פרק לד, א-י</li>
+              <li>מדרש אגדה ופירוש רש"י על "פסל לך" (שמות לד, א)</li>
+              <li>שער רוח הקודש לאר"י ז"ל</li>
+              <li>דברי הרב דיסקין שליט"א</li>
+              <li>עץ הדעת טוב לר' חיים ויטאל זצ"ל, פרשת כי תצא</li>
+              <li>בעל הטורים, פרשת ניצבים (דברים ל, ו)</li>
+              <li>ספר אבודרהם, סדר תפילת ראש השנה</li>
+              <li>חיי אדם, חלק ב-ג (הלכות שבת ומועדים), כלל קלח</li>
+              <li>ספר פנים יפות, ויקרא פרק טז, פסוקים ל וכא</li>
+              <li>שם משמואל, שמות, פרשת משפטים</li>
+              <li>רבי נחמן מברסלב, ליקוטי מוהר"ן, תורה פז ותורה ו (מהדורא קמא)</li>
+              <li>שיר השירים פרק ב, טז; פרק ו, ג</li>
+              <li>ר' צדוק הכהן מלובלין, פרי צדיק, דברים לראש חודש אלול</li>
+              <li>חיד"א, חומת אנך, שיר השירים פרק ו</li>
+              <li>דברים פרק יט, ח-ט (פרשת שופטים)</li>
+              <li>ספר "לעבדך באמת"</li>
+              <li>הרב זמיר כהן, ביאור לשיר השירים</li>
+              <li>דברים פרק ל, ו, עם פירוש בעל הטורים ורמב"ן</li>
+              <li>שערי תשובה לרבנו יונה, שער א</li>
+              <li>משנה, מסכת יומא, סוף פרק ח</li>
+              <li>תהלים כז, יג, עם פירוש בעל הטורים</li>
+              <li>מטה משה</li>
+              <li>ישעיהו פרק סא, י (הפטרת נצבים)</li>
+              <li>בני יששכר, מאמרי חודש אלול</li>
+              <li>יהושע פרק כג, יא</li>
+              <li>דברים פרק ט, יח, עם פירוש רש"י</li>
+              <li>לבוש, אורח חיים סימן תקפ"א</li>
+              <li>ריקאנטי, בראשית פרק ג</li>
+              <li>שו"ת נודע ביהודה, מהדורא תניינא, אבן העזר סימן כג</li>
+              <li>לקט יושר, חלק א (אורח חיים)</li>
+          </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ חתימת סיום ============ -->
+  <section class="page" id="p-end">
+    <div class="page-content footer">
+      <div class="cover-decor">✡</div>
+      <div class="footer-title">חתימה טובה ומועדים לשמחה</div>
+      <p><strong>נכתב ונערך על ידי:</strong></p>
+      <p><strong>הרב יהודה טאוב</strong></p>
+      <p>קרית אתא</p>
+      <p>📞 <strong>ליצירת קשר:</strong> 0527139520</p>
+      <div style="margin-top: 20px; padding: 22px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px; text-align:center;">
+          <h4 style="margin-top:0;">🎧 שיעורים נוספים של הרב</h4>
+          <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+          <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+          <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /#book -->
+
+<div class="listen-bar">
+    <div class="listen-btn-group">
+        <button class="listen-btn" id="listenBtn" onclick="toggleListen()">🔊 האזן לעמוד</button>
+        <button class="listen-stop-btn" onclick="stopListen()">⏹ עצור</button>
+    </div>
+    <span class="listen-status" id="listenStatus">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+    <div class="listen-rate">
+        <label for="rateRange">מהירות:</label>
+        <input type="range" id="rateRange" min="0.5" max="1.5" step="0.1" value="1" oninput="setListenRate(this.value)">
+    </div>
+    <div class="listen-voice">
+        <label for="voiceSelect">קול:</label>
+        <select id="voiceSelect" onchange="setListenVoice(this.value)"></select>
+    </div>
+</div>
+
+<div class="book-footer">
+    <div class="dots" id="dots"></div>
+    <div class="page-counter" id="pageCounter"></div>
+</div>
+
+<script>
+/* ===== ניווט בין עמודי הספר ===== */
+var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
+var current = 0;
+
+function idToIndex(id) {
+    for (var i = 0; i < pages.length; i++) { if (pages[i].id === 'p-' + id) return i; }
+    return -1;
+}
+
+function buildDots() {
+    var wrap = document.getElementById('dots');
+    wrap.innerHTML = '';
+    pages.forEach(function (p, i) {
+        var b = document.createElement('button');
+        b.className = 'dot';
+        b.title = 'עמוד ' + (i + 1);
+        b.onclick = function () { showPage(i); };
+        wrap.appendChild(b);
+    });
+}
+
+function updateChrome() {
+    var dots = document.querySelectorAll('.dot');
+    dots.forEach(function (d, i) { d.classList.toggle('active', i === current); });
+    document.getElementById('pageCounter').textContent = 'עמוד ' + (current + 1) + ' מתוך ' + pages.length;
+    document.getElementById('prevBtn').disabled = (current === pages.length - 1);
+    document.getElementById('nextBtn').disabled = (current === 0);
+}
+
+function showPage(idx, keepReading) {
+    if (idx < 0 || idx >= pages.length || idx === current) return;
+    pages[current].classList.remove('active');
+    current = idx;
+    pages[current].classList.add('active');
+    var pc = pages[current].querySelector('.page-content');
+    if (pc) pc.scrollTop = 0;
+    updateChrome();
+    if (!keepReading && isSpeaking) { stopListen(); }
+}
+
+function nextPage() { showPage(current + 1); }
+function prevPage() { showPage(current - 1); }
+function goTo(id) { var i = idToIndex(id); if (i !== -1) showPage(i); }
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { nextPage(); }
+    else if (e.key === 'ArrowRight') { prevPage(); }
+});
+
+var touchStartX = null;
+document.getElementById('book').addEventListener('touchstart', function (e) {
+    touchStartX = e.changedTouches[0].clientX;
+}, { passive: true });
+document.getElementById('book').addEventListener('touchend', function (e) {
+    if (touchStartX === null) return;
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) { if (dx < 0) nextPage(); else prevPage(); }
+    touchStartX = null;
+}, { passive: true });
+
+buildDots();
+pages[0].classList.add('active');
+updateChrome();
+
+/* ===== הקראה (Web Speech API) — מקריא עמוד נוכחי, עובר אוטומטית לעמוד הבא ===== */
+(function () {
+    var queue = [], queueIndex = 0, isSpeakingLocal = false, isPaused = false, rate = 1, playToken = 0;
+    var allVoices = [], selectedVoice = null;
+    var femaleHints = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy'];
+    window.isSpeaking = false;
+
+    function populateVoiceSelect(voices) {
+        var select = document.getElementById('voiceSelect');
+        if (!select) return;
+        select.innerHTML = '';
+        voices.forEach(function (v, i) {
+            var opt = document.createElement('option');
+            opt.value = i;
+            opt.textContent = v.name + (v.lang ? ' (' + v.lang + ')' : '');
+            select.appendChild(opt);
+        });
+    }
+
+    function pickVoice() {
+        var voices = speechSynthesis.getVoices();
+        var heVoices = voices.filter(function (v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; });
+        allVoices = heVoices.length ? heVoices : voices;
+        var femaleMatch = allVoices.find(function (v) {
+            var n = v.name.toLowerCase();
+            return femaleHints.some(function (h) { return n.indexOf(h) !== -1; });
+        });
+        selectedVoice = femaleMatch || allVoices[0] || null;
+        populateVoiceSelect(allVoices);
+        var select = document.getElementById('voiceSelect');
+        if (select && selectedVoice) select.value = allVoices.indexOf(selectedVoice);
+    }
+    if ('speechSynthesis' in window) {
+        speechSynthesis.onvoiceschanged = pickVoice;
+        pickVoice();
+    }
+
+    function cleanText(text) {
+        return text.replace(/\s+/g, ' ').trim();
+    }
+
+    function buildQueue() {
+        var scope = pages[current];
+        var nodes = scope.querySelectorAll('h2, h3, h4, p, li, .ref');
+        queue = Array.prototype.filter.call(nodes, function (n) {
+            return n.textContent.trim().length > 0;
+        });
+    }
+
+    function speakNext() {
+        if (queueIndex >= queue.length) {
+            if (isSpeakingLocal && !isPaused && current < pages.length - 1) {
+                showPage(current + 1, true);
+                queueIndex = 0;
+                buildQueue();
+                if (queue.length) { speakNext(); return; }
+            }
+            resetListenUI();
+            return;
+        }
+        var el = queue[queueIndex];
+        var myToken = playToken;
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+        el.classList.add('reading-highlight');
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        var utter = new SpeechSynthesisUtterance(cleanText(el.textContent));
+        utter.lang = 'he-IL';
+        if (selectedVoice) utter.voice = selectedVoice;
+        utter.rate = rate;
+        utter.onend = function () {
+            if (myToken !== playToken) return;
+            if (!isPaused) { queueIndex++; speakNext(); }
+        };
+        utter.onerror = function () {
+            if (myToken !== playToken) return;
+            if (!isPaused) { queueIndex++; speakNext(); }
+        };
+        speechSynthesis.speak(utter);
+    }
+
+    function resetListenUI() {
+        isSpeakingLocal = false; isPaused = false; queueIndex = 0;
+        window.isSpeaking = false;
+        var btn = document.getElementById('listenBtn');
+        if (btn) btn.textContent = '🔊 האזן לעמוד';
+        var status = document.getElementById('listenStatus');
+        if (status) status.textContent = 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה';
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function startFrom(idx) {
+        playToken++;
+        speechSynthesis.cancel();
+        buildQueue();
+        queueIndex = idx;
+        isSpeakingLocal = true; isPaused = false;
+        window.isSpeaking = true;
+        var btn = document.getElementById('listenBtn');
+        if (btn) btn.textContent = '⏸ השהה';
+        var status = document.getElementById('listenStatus');
+        if (status) status.textContent = 'מקריא...';
+        speakNext();
+    }
+
+    window.toggleListen = function () {
+        var status = document.getElementById('listenStatus');
+        if (!('speechSynthesis' in window)) { status.textContent = 'הדפדפן אינו תומך בהקראה'; return; }
+        if (!speechSynthesis.speaking && !speechSynthesis.paused) {
+            startFrom(isSpeakingLocal ? queueIndex : 0);
+        } else if (speechSynthesis.paused) {
+            speechSynthesis.resume();
+            isPaused = false; isSpeakingLocal = true; window.isSpeaking = true;
+            document.getElementById('listenBtn').textContent = '⏸ השהה';
+            status.textContent = 'מקריא...';
+            setTimeout(function () {
+                if (!isPaused && isSpeakingLocal && !speechSynthesis.speaking) { speakNext(); }
+            }, 300);
+        } else {
+            speechSynthesis.pause();
+            isPaused = true;
+            document.getElementById('listenBtn').textContent = '▶ המשך';
+            status.textContent = 'בהשהיה';
+        }
+    };
+
+    window.stopListen = function () {
+        playToken++;
+        speechSynthesis.cancel();
+        resetListenUI();
+    };
+
+    window.setListenRate = function (val) { rate = parseFloat(val); };
+    window.setListenVoice = function (idx) {
+        selectedVoice = allVoices[parseInt(idx, 10)] || null;
+        if (isSpeakingLocal && !isPaused) { startFrom(queueIndex); }
+    };
+
+    function attachClickToRead() {
+        var nodes = document.querySelectorAll('.page h2, .page h3, .page h4, .page p, .page li');
+        Array.prototype.forEach.call(nodes, function (el) {
+            el.classList.add('tts-clickable');
+            el.title = 'לחץ כדי להתחיל להקריא מכאן';
+            el.addEventListener('click', function (e) {
+                if (e.target.closest('a')) return;
+                if (window.getSelection && window.getSelection().toString().length > 0) return;
+                buildQueue();
+                var idx = queue.indexOf(el);
+                if (idx === -1) return;
+                startFrom(idx);
+            });
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', attachClickToRead);
+    } else {
+        attachClickToRead();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState === 'visible' && isSpeakingLocal && !isPaused &&
+            !speechSynthesis.speaking && !speechSynthesis.paused) {
+            speakNext();
+        }
+    });
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { playToken++; speechSynthesis.cancel(); resetListenUI(); }
+    });
+    window.addEventListener('beforeunload', function () { if ('speechSynthesis' in window) speechSynthesis.cancel(); });
+})();
+</script>
+</body>
+</html>
