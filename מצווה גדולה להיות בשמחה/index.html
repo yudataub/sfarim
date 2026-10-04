@@ -1,0 +1,2335 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="torah-html-article 2.7.0">
+<meta name="description" content="ספר דיגיטלי על מצוות השמחה, ההודיה והשירה לה' - מקורות מהתורה, חז\"ל והפוסקים, מאת הרב יהודה טאוב">
+<title>מצווה גדולה להיות בשמחה</title>
+<style>
+/* ===== 1. base.css ===== */
+:root {
+    --purple: #7e22ce;  --blue: #2563eb;   --green: #059669;
+    --gold:   #f59e0b;  --pink: #ec4899;   --ink:   #1f2937;
+    --paper:  #ffffff;  --muted: #6b7280;  --line:  rgba(0,0,0,.08);
+    --g-page:      linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --g-verse:     linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    --g-highlight: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    --g-quote:     linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    --g-story:     linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    --g-divider:   linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    --g-title:     linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    --fs: 1;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; padding: 40px 20px;
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: var(--g-page);
+    color: var(--ink);
+    line-height: 1.8;
+}
+.container {
+    max-width: 900px; margin: 0 auto;
+    padding: 60px 80px;
+    background: var(--paper);
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.1);
+}
+.main-title {
+    font-size: 3em; font-weight: bold; text-align: center; margin: 0 0 10px;
+    background: var(--g-title); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: var(--purple);
+}
+.subtitle { text-align: center; font-size: 1.25em; color: var(--muted); margin-bottom: 8px; }
+.author   { text-align: center; font-size: 1.05em; color: var(--purple); font-weight: bold; margin-bottom: 10px; }
+h2 { font-size: 2.2em; color: var(--purple); border-right: 6px solid var(--purple);
+     padding-right: 20px; margin: 50px 0 20px; }
+h3 { font-size: 1.8em; color: var(--blue);  margin: 35px 0 15px; }
+h4 { font-size: 1.5em; color: var(--green); margin: 25px 0 12px; }
+p, li { font-size: calc(1.15em * var(--fs)); line-height: 1.8; margin: 0 0 20px; text-align: justify; text-justify: inter-word; }
+li { margin-bottom: 10px; }
+.verse-box p, .section-divider, .chapter-card p, .footer p { text-align: center; }
+.toc li, .listen-bar p { text-align: right; }
+.emphasis { color: var(--purple); font-weight: bold; }
+em { color: var(--blue); font-style: italic; }
+.chapter-card {
+    min-height: 55vh; margin: 60px -80px 0; padding: 40px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: var(--g-title); color: #fff; text-align: center;
+}
+.chapter-card .num { font-size: 5.5em; font-weight: bold; line-height: 1; opacity: .85; }
+.chapter-card .name { font-size: 2.2em; font-weight: bold; margin-top: 18px; max-width: 18ch; }
+.chapter-divider {
+    display: flex; align-items: center; gap: 15px; margin: 45px 0;
+    color: var(--gold); font-size: 1.4em;
+}
+.chapter-divider::before, .chapter-divider::after {
+    content: ''; flex: 1; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.chapter-label {
+    display: inline-block; margin-bottom: 6px; padding: 3px 14px;
+    background: var(--purple); color: #fff; border-radius: 20px;
+    font-size: .55em; font-weight: bold; letter-spacing: .5px; vertical-align: middle;
+}
+.in-this-chapter {
+    background: var(--g-highlight); border-right: 6px solid var(--blue);
+    border-radius: 12px; padding: 22px 26px; margin: 22px 0 32px;
+}
+.in-this-chapter h4 { margin: 0 0 10px; font-size: 1.1em; color: var(--blue); }
+.in-this-chapter ul { margin: 0; padding-right: 20px; }
+.in-this-chapter li { font-size: 1em; margin-bottom: 6px; text-align: right; }
+.story-title { display: block; font-size: 1.25em; font-weight: bold; color: var(--green); margin-bottom: 12px; }
+.verse-box, .highlight-box, .quote-box, .story-box, .qa-box {
+    padding: 28px; margin: 30px 0; border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.verse-box     { background: var(--g-verse); border: 2px solid var(--purple);
+                 text-align: center; font-size: 1.3em; font-weight: 600; color: var(--purple); }
+.verse-box p   { font-size: calc(1em * var(--fs)); margin: 0; }
+.highlight-box { background: var(--g-highlight); border-right: 6px solid var(--blue);
+                 box-shadow: 0 5px 15px rgba(126,34,206,.15); }
+.quote-box     { background: var(--g-quote); border-right: 6px solid var(--gold); font-style: italic; }
+.story-box     { background: var(--g-story); border-right: 6px solid var(--green); }
+.qa-box        { background: #fff; border: 2px dashed var(--pink); }
+.verse-box p:last-child, .highlight-box p:last-child, .quote-box p:last-child,
+.story-box p:last-child, .qa-box p:last-child { margin-bottom: 0; }
+.source-tag { display: block; margin-top: 12px; font-size: .9em; font-style: normal;
+              color: var(--muted); font-weight: bold; }
+.section-divider {
+    background: var(--g-divider); color: #fff; text-align: center;
+    padding: 18px 25px; margin: 45px 0; border-radius: 10px;
+    font-size: 1.3em; font-weight: bold; letter-spacing: .5px;
+}
+.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 30px 0; }
+.two-columns > div { padding: 25px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,.1); }
+.col-purple { background: var(--g-verse);  border-top: 5px solid var(--purple); }
+.col-gold   { background: var(--g-quote);  border-top: 5px solid var(--gold); }
+.toc { background: #faf5ff; border: 2px solid #e9d5ff; border-radius: 12px; padding: 25px 30px; margin: 30px 0; }
+.toc h3 { margin-top: 0; color: var(--purple); }
+.toc ul { list-style: none; padding: 0; margin: 0; }
+.toc li { margin-bottom: 8px; }
+.toc a { color: var(--blue); text-decoration: none; font-size: 1.05em; }
+.toc a:hover { text-decoration: underline; color: var(--purple); }
+.toc > ul > li { margin-bottom: 14px; }
+.toc-chapter { font-weight: bold; font-size: 1.1em; color: var(--purple); }
+.toc-subs { display: block; margin-top: 3px; font-size: .9em; color: var(--muted); line-height: 1.7; }
+.toc-subs a { font-size: 1em; color: var(--muted); }
+.toc-subs a:hover { color: var(--blue); }
+.toc-subs span { margin: 0 6px; opacity: .5; }
+.chapter-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 22px;
+    background: linear-gradient(160deg, #fffdf7 0%, #fdf8ee 100%);
+    border: 1px solid #efe4cd; border-radius: 18px;
+    padding: 34px 30px; margin: 30px 0;
+}
+.chapter-grid .grid-title {
+    grid-column: 1 / -1; text-align: center; margin: 0 0 14px;
+    font-size: 1.6em; color: var(--purple); letter-spacing: 1px;
+    border: none; padding: 0;
+}
+.chapter-chip {
+    display: flex; align-items: center; gap: 12px;
+    color: var(--ink); text-decoration: none; font-size: 1.02em; line-height: 1.45;
+    padding: 6px 8px; border-radius: 10px; transition: background .18s, transform .18s;
+}
+.chapter-chip:hover { background: rgba(245,158,11,.12); transform: translateX(-3px); }
+.chapter-chip .n {
+    flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #c9982f; color: #fff; font-size: .82em; font-weight: bold;
+}
+.chapter-chip.is-front .n { background: #1e2a5a; font-size: .7em; }
+@media (max-width: 900px) { .chapter-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .chapter-grid { grid-template-columns: 1fr; padding: 24px 18px; } }
+.sources { background: #f9fafb; border-radius: 12px; padding: 25px 30px; margin-top: 50px; border: 1px solid var(--line); }
+.sources h3 { margin-top: 0; }
+.sources li { font-size: calc(1em * var(--fs)); }
+.footer { margin-top: 55px; padding-top: 30px; border-top: 3px solid var(--gold);
+          text-align: center; font-size: 1.05em; }
+.footer a { color: var(--blue); }
+.footer-more { margin-top: 30px; padding: 25px; border-radius: 10px;
+               background: var(--g-highlight); color: var(--ink); }
+.footer-more h4 { margin-top: 0; }
+.scroll-top {
+    position: fixed; bottom: 30px; left: 30px; z-index: 50;
+    width: 50px; height: 50px; border-radius: 50%;
+    background: var(--g-title); color: #fff; text-decoration: none;
+    display: none; align-items: center; justify-content: center;
+    font-size: 1.3em; box-shadow: 0 5px 15px rgba(0,0,0,.25);
+}
+.scroll-top.visible { display: flex; }
+.listen-bar {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 15px;
+    margin: 25px 0; padding: 18px 25px;
+    background: var(--g-quote); border-radius: 12px;
+    border-right: 6px solid var(--gold);
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.listen-btn-group { display: flex; gap: 8px; align-items: center; }
+.listen-btn {
+    display: flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
+    color: #fff; border: none; border-radius: 30px; padding: 10px 22px;
+    font-size: 1em; font-weight: bold; font-family: inherit; cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+}
+.listen-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(126,34,206,.3); }
+.listen-btn:active { transform: translateY(0); }
+.listen-stop-btn, .listen-skip-btn, .listen-size-btn {
+    background: #fff; color: var(--purple); border: 2px solid var(--purple);
+    border-radius: 30px; padding: 8px 16px; font-size: .95em; font-weight: bold;
+    font-family: inherit; cursor: pointer; transition: transform .15s, background .15s;
+}
+.listen-skip-btn { padding: 8px 12px; }
+.listen-stop-btn:hover, .listen-skip-btn:hover,
+.listen-size-btn:hover:not(:disabled) { transform: translateY(-2px); background: #f3e8ff; }
+.listen-size { display: flex; align-items: center; gap: 6px; font-size: .9em; color: #78350f; }
+.listen-size-btn { padding: 6px 12px; line-height: 1; }
+.listen-size-btn:disabled { opacity: .35; cursor: default; border-color: #d1d5db; color: var(--muted); }
+.listen-size-btn.big { font-size: 1.25em; }
+.listen-size output { font-weight: bold; min-width: 3.4em; text-align: center; }
+.listen-toggle-btn {
+    background: #fff; color: var(--purple); border: 2px solid var(--purple);
+    border-radius: 30px; padding: 8px 14px; font-size: .88em; font-weight: bold;
+    font-family: inherit; cursor: pointer; white-space: nowrap;
+    transition: transform .15s, background .15s, opacity .15s;
+}
+.listen-toggle-btn:hover { transform: translateY(-2px); background: #f3e8ff; }
+.listen-toggle-btn[aria-pressed="false"] {
+    color: var(--muted); border-color: #d1d5db; background: #f9fafb; opacity: .8;
+}
+.listen-toggle-btn:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+.listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+.listen-skip-btn:focus-visible, .listen-size-btn:focus-visible,
+.listen-voice select:focus-visible,
+.listen-rate input:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+.listen-status   { font-size: .95em; color: #78350f; flex: 1 1 200px; }
+.listen-progress { font-size: .9em; color: #78350f; font-weight: bold; white-space: nowrap; }
+.listen-rate, .listen-voice { display: flex; align-items: center; gap: 6px; font-size: .9em; color: #78350f; }
+.listen-rate input { accent-color: var(--purple); }
+.listen-rate output { font-weight: bold; min-width: 2.6em; }
+.listen-voice select {
+    border-radius: 20px; border: 1px solid var(--gold); padding: 4px 10px;
+    font-family: inherit; background: #fff; color: var(--ink); max-width: 190px;
+}
+.tts-clickable { cursor: pointer; transition: background .2s; border-radius: 6px; }
+.tts-clickable:hover { background: rgba(245,158,11,.10); }
+.reading-highlight {
+    background: var(--g-verse); border-radius: 8px;
+    box-shadow: 0 0 0 3px var(--pink) inset; transition: background .3s;
+    padding-right: 14px; padding-left: 14px;
+    margin-right: -14px; margin-left: -14px;
+}
+h2.reading-highlight { padding-right: 34px; }
+@media (max-width: 768px) {
+    body { padding: 15px 10px; }
+    .container { padding: 30px 22px; border-radius: 12px; }
+    .main-title { font-size: 2em; }
+    h2 { font-size: 1.6em; padding-right: 14px; margin-top: 35px; }
+    h3 { font-size: 1.35em; } h4 { font-size: 1.15em; }
+    p, li { font-size: calc(1.08em * var(--fs)); }
+    .two-columns { grid-template-columns: 1fr; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .qa-box { padding: 20px; }
+    .reading-highlight { padding-right: 10px; padding-left: 10px;
+                         margin-right: -10px; margin-left: -10px; }
+    h2.reading-highlight { padding-right: 24px; }
+    .listen-bar { padding: 15px; gap: 10px; }
+    .listen-status { flex: 1 1 100%; }
+    .listen-voice select { max-width: 140px; }
+    .scroll-top { bottom: 18px; left: 18px; width: 44px; height: 44px; }
+    .chapter-card { margin-left: -22px; margin-right: -22px; min-height: 42vh; padding: 30px 20px; }
+    .chapter-card .num { font-size: 3.8em; }
+    .chapter-card .name { font-size: 1.5em; }
+}
+@media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .01ms !important; animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    .listen-btn:hover, .listen-stop-btn:hover, .listen-skip-btn:hover { transform: none; }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --paper: #1c1b22; --ink: #e8e6ef; --muted: #a8a4b8; --line: rgba(255,255,255,.10);
+        --purple: #c084fc; --blue: #7dd3fc; --green: #4ade80; --gold: #fbbf24; --pink: #f9a8d4;
+        --g-page:      linear-gradient(135deg, #14131a 0%, #221f2e 100%);
+        --g-verse:     linear-gradient(135deg, #2a2440 0%, #3a2436 100%);
+        --g-highlight: linear-gradient(135deg, #1e2c44 0%, #262244 100%);
+        --g-quote:     linear-gradient(135deg, #3a2f16 0%, #4a3a18 100%);
+        --g-story:     linear-gradient(135deg, #16332a 0%, #14291f 100%);
+    }
+    .container { box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+    .toc     { background: #241f33; border-color: #3d2f57; }
+    .chapter-grid { background: linear-gradient(160deg, #262133 0%, #201c2b 100%); border-color: #3d3350; }
+    .chapter-chip { color: var(--ink); }
+    .chapter-chip .n { background: #b08a2e; }
+    .chapter-chip.is-front .n { background: #3b4a86; }
+    .sources { background: #201f28; }
+    .qa-box  { background: #201f28; }
+    .listen-status, .listen-progress, .listen-rate, .listen-voice { color: #fde68a; }
+    .listen-size { color: #fde68a; }
+    .listen-stop-btn, .listen-skip-btn, .listen-toggle-btn, .listen-size-btn { background: #2a2438; color: #e9d5ff; border-color: #c084fc; }
+    .listen-size-btn:disabled { background: #232029; color: #8b8698; border-color: #3f3b4a; }
+    .listen-toggle-btn[aria-pressed="false"] { background: #232029; color: #8b8698; border-color: #3f3b4a; }
+    .listen-stop-btn:hover, .listen-skip-btn:hover { background: #3a3050; }
+    .listen-voice select { background: #2a2438; color: var(--ink); }
+    .tts-clickable:hover { background: rgba(251,191,36,.12); }
+}
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; color: #000 !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important;
+                 box-shadow: none !important; border-radius: 0 !important; background: #fff !important; }
+    .scroll-top, .listen-bar, .chapter-card, .chapter-divider, .chapter-grid { display: none !important; }
+    .chapter-label { background: none !important; color: #4a0080 !important; padding: 0 !important; }
+    .in-this-chapter { page-break-inside: avoid; break-inside: avoid; }
+    p, li { text-align: justify; }
+    .reading-highlight { box-shadow: none !important; background: none !important; }
+    .tts-clickable { cursor: auto; }
+    h2 { page-break-before: always; break-before: page; font-size: 16pt !important; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    h3 { font-size: 13pt !important; } h4 { font-size: 12pt !important; }
+    p, li { font-size: 11pt !important; orphans: 3; widows: 3; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box, .section-divider {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; background: none !important;
+                  -webkit-text-fill-color: #4a0080 !important; color: #4a0080 !important; }
+    .footer { page-break-before: always; break-before: page; }
+    a { color: #000 !important; text-decoration: none; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #444; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+/* ===== 2. paginated.css ===== */
+body { padding: 20px 15px 0; overflow: hidden; }
+:root { --chrome-h: 150px; }
+#book {
+    max-width: 1000px; margin: 0 auto;
+    padding: 0; overflow: hidden;
+    height: calc(100dvh - var(--chrome-h));
+}
+.page {
+    display: none;
+    height: 100%;
+    padding: 45px 60px 55px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+}
+.page.active { display: block; animation: pageIn .35s ease-out; }
+@keyframes pageIn { from { opacity: 0; transform: scale(.985); } to { opacity: 1; transform: none; } }
+.page.page-cover, .page.page-end { display: none; }
+.page.page-cover.active, .page.page-end.active {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+}
+.page.page-cover .main-title { margin-bottom: 20px; }
+.page h2:first-child { margin-top: 0; }
+#book .chapter-card, #book .chapter-divider { display: none; }
+.book-nav {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 40;
+    display: flex; align-items: center; justify-content: center; gap: 18px;
+    padding: 12px 20px;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+}
+.nav-arrow {
+    width: 46px; height: 46px; border-radius: 50%; flex: 0 0 auto;
+    background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
+    color: #fff; border: none; font-size: 1.2em; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: transform .15s, opacity .15s;
+}
+.nav-arrow:hover:not(:disabled) { transform: scale(1.08); }
+.nav-arrow:disabled { opacity: .3; cursor: default; }
+.nav-arrow:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+.book-dots { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; max-width: 55vw; }
+.book-dot {
+    width: 10px; height: 10px; border-radius: 50%; padding: 0;
+    background: #d1d5db; border: none; cursor: pointer; transition: all .2s;
+}
+.book-dot:hover { background: var(--pink); }
+.book-dot.active { background: var(--purple); width: 26px; border-radius: 5px; }
+.book-dot:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+.book-counter { font-size: .9em; color: var(--muted); white-space: nowrap; }
+.book-listen-bar {
+    position: fixed; bottom: 70px; left: 0; right: 0; z-index: 39;
+    margin: 0; border-radius: 0; border-right: none;
+    border-top: 3px solid var(--gold);
+    transition: padding .2s;
+}
+.book-listen-bar.collapsed {
+    right: auto; width: auto; padding: 6px 10px;
+    z-index: 45;
+    bottom: 12px !important; left: 14px;
+    border-radius: 30px; border: 2px solid var(--gold); border-top: 2px solid var(--gold);
+    box-shadow: 0 6px 18px rgba(0,0,0,.22);
+    gap: 8px;
+}
+.book-listen-bar.collapsed .listen-status,
+.book-listen-bar.collapsed .listen-progress,
+.book-listen-bar.collapsed .listen-rate,
+.book-listen-bar.collapsed .listen-voice,
+.book-listen-bar.collapsed .listen-size,
+.book-listen-bar.collapsed .listen-toggle-btn,
+.book-listen-bar.collapsed .listen-skip-btn { display: none; }
+.book-listen-bar.collapsed .listen-btn { padding: 7px 18px; font-size: .95em; }
+.listen-collapse {
+    margin-right: auto;
+    width: 34px; height: 34px; border-radius: 50%;
+    background: #fff; color: var(--purple); border: 2px solid var(--purple);
+    font-size: 1em; line-height: 1; cursor: pointer; flex: 0 0 auto;
+    transition: transform .2s, background .15s;
+}
+.listen-collapse:hover { background: #f3e8ff; }
+.listen-collapse:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+.book-listen-bar.collapsed .listen-collapse { transform: rotate(180deg); }
+@media (max-width: 768px) {
+    body { padding: 10px 8px 0; }
+    .page { padding: 25px 20px; }
+    .book-listen-bar { bottom: 62px; }
+    .book-dots { max-width: 45vw; gap: 5px; }
+    .book-dot { width: 8px; height: 8px; }
+    .book-dot.active { width: 20px; }
+    .nav-arrow { width: 40px; height: 40px; }
+    .book-counter { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .page.active { animation: none; }
+}
+@media print {
+    body { overflow: visible; padding: 0; }
+    #book { height: auto; overflow: visible; }
+    .page, .page.page-cover, .page.page-end { display: block !important; height: auto; overflow: visible;
+                                              padding: 0; page-break-after: always; break-after: page; }
+    .book-nav, .book-listen-bar { display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="container" id="book">
+
+    <div class="page page-cover active" data-title="כריכה">
+        <h1 class="main-title" id="top">מצווה גדולה להיות בשמחה</h1>
+        <div class="subtitle">מקורות מן התורה, מחז"ל ומן הפוסקים על חובת השמחה, ההודיה והשירה לה' — ולמה זהו העיקר בעבודת ה'</div>
+        <div class="author">מאת: הרב יהודה טאוב</div>
+    </div>
+
+    <div class="page" data-title="מבט על הספר">
+        <nav class="chapter-grid" aria-label="מבט על פרקי הספר">
+            <h2 class="grid-title">פִּרְקֵי הַסֵּפֶר</h2>
+            <a class="chapter-chip is-front" href="#" data-page="4"><span class="n">◆</span>הקדמה: לשם מה נבראנו?</a>
+            <a class="chapter-chip" href="#" data-page="5"><span class="n">1</span>מה מטרת האדם בעולמו?</a>
+            <a class="chapter-chip" href="#" data-page="6"><span class="n">2</span>מדוע צריך להכיר טובה?</a>
+            <a class="chapter-chip" href="#" data-page="7"><span class="n">3</span>"תחת אשר לא עבדת... בשמחה"</a>
+            <a class="chapter-chip" href="#" data-page="8"><span class="n">4</span>באור הכוזרי לפסוק</a>
+            <a class="chapter-chip" href="#" data-page="9"><span class="n">5</span>מצווה מדאורייתא להיות שמח בחלקו</a>
+            <a class="chapter-chip" href="#" data-page="10"><span class="n">6</span>מצווה להודות לה' מתוך שמחה</a>
+            <a class="chapter-chip" href="#" data-page="11"><span class="n">7</span>היכן כתובה בהלכה החובה להודות?</a>
+            <a class="chapter-chip" href="#" data-page="12"><span class="n">8</span>מדוע נקראת השירה עבודה?</a>
+            <a class="chapter-chip" href="#" data-page="13"><span class="n">9</span>מדוע נענשים אם לא מודים לה'?</a>
+            <a class="chapter-chip" href="#" data-page="14"><span class="n">10</span>מה קורה כשאדם מודה לה'?</a>
+            <a class="chapter-chip" href="#" data-page="15"><span class="n">11</span>מנין שתפקיד האדם להודות?</a>
+            <a class="chapter-chip" href="#" data-page="16"><span class="n">12</span>מה נעשה בשמיים אחרי מאה ועשרים?</a>
+            <a class="chapter-chip" href="#" data-page="17"><span class="n">13</span>מה תפקיד דורנו?</a>
+            <a class="chapter-chip" href="#" data-page="18"><span class="n">14</span>כיצד משיגים אהבת ה'?</a>
+            <a class="chapter-chip" href="#" data-page="19"><span class="n">15</span>האם היום אנו מודים לה'?</a>
+            <a class="chapter-chip" href="#" data-page="20"><span class="n">16</span>מה עושים למעשה?</a>
+            <a class="chapter-chip" href="#" data-page="21"><span class="n">17</span>מעלות המתרגל להודות</a>
+            <a class="chapter-chip" href="#" data-page="22"><span class="n">18</span>חיוב הוצאת ההודאה בפה</a>
+            <a class="chapter-chip" href="#" data-page="23"><span class="n">19</span>כיצד זוכים להיות מאושרים</a>
+            <a class="chapter-chip" href="#" data-page="24"><span class="n">20</span>"ונהפוכו" לא רק בפורים</a>
+            <a class="chapter-chip" href="#" data-page="25"><span class="n">21</span>כיצד זוכים להתענג על ה'?</a>
+            <a class="chapter-chip" href="#" data-page="26"><span class="n">22</span>למה אנחנו בגלות וסובלים?</a>
+            <a class="chapter-chip" href="#" data-page="27"><span class="n">23</span>למה יש בעיות בשלום בית?</a>
+            <a class="chapter-chip" href="#" data-page="28"><span class="n">24</span>ההודיה - עיקר עבודת ה'</a>
+            <a class="chapter-chip" href="#" data-page="29"><span class="n">25</span>מצוות קידוש ה' בהודאה</a>
+            <a class="chapter-chip" href="#" data-page="30"><span class="n">26</span>אליעזר עבד אברהם - חיי הודיה</a>
+            <a class="chapter-chip" href="#" data-page="31"><span class="n">27</span>סיפור: להרגיש הודיה אמיתית</a>
+            <a class="chapter-chip" href="#" data-page="32"><span class="n">28</span>עצה לקנות הכרת הטוב ושלום בית</a>
+            <a class="chapter-chip" href="#" data-page="33"><span class="n">29</span>יסוד ושורש העבודה - למעשה</a>
+        </nav>
+    </div>
+
+    <div class="page" data-title="תוכן העניינים">
+        <h2>📑 תוכן העניינים</h2>
+        <div class="toc">
+            <ul>
+                <li><a class="toc-chapter" href="#" data-page="4">הקדמה: לשם מה נבראנו?</a>
+                    <span class="toc-subs"><a href="#" data-page="4">מידת הכרת הטוב</a><span>·</span><a href="#" data-page="4">משל שני הנוסעים</a><span>·</span><a href="#" data-page="4">משל הנמלים</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="5">1. מה מטרת האדם בעולמו?</a>
+                    <span class="toc-subs"><a href="#" data-page="5">לאהוב את ה'</a><span>·</span><a href="#" data-page="5">דברי הרמב"ן</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="6">2. מדוע צריך להכיר טובה?</a>
+                    <span class="toc-subs"><a href="#" data-page="6">הכרת הטוב למצרי</a><span>·</span><a href="#" data-page="6">רבי חייא ואשתו</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="7">3. "תחת אשר לא עבדת... בשמחה"</a>
+                    <span class="toc-subs"><a href="#" data-page="7">עבודה שבשמחה = שירה</a><span>·</span><a href="#" data-page="7">שאלות על הפסוק</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="8">4. באור הכוזרי לפסוק</a>
+                    <span class="toc-subs"><a href="#" data-page="8">שלושת יסודות העבודה</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="9">5. מצווה מדאורייתא להיות שמח בחלקו</a>
+                    <span class="toc-subs"><a href="#" data-page="9">'כיצד תרפא את חייך'</a><span>·</span><a href="#" data-page="9">רמב"ם, כלבו, שערי קדושה</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="10">6. מצווה להודות לה' מתוך שמחה</a>
+                    <span class="toc-subs"><a href="#" data-page="10">מזמור לתודה</a><span>·</span><a href="#" data-page="10">עבדו את ה' בשמחה</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="11">7. היכן כתובה בהלכה החובה להודות?</a>
+                    <span class="toc-subs"><a href="#" data-page="11">רמב"ם הלכות ברכות</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="12">8. מדוע נקראת השירה עבודה?</a>
+                    <span class="toc-subs"><a href="#" data-page="12">שיעבוד הלב</a><span>·</span><a href="#" data-page="12">סיפור ר' אריה לוין</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="13">9. מדוע נענשים אם לא מודים לה'?</a>
+                    <span class="toc-subs"><a href="#" data-page="13">מאה ברכות דוד המלך</a><span>·</span><a href="#" data-page="13">משל הדולרים והאבנים</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="14">10. מה קורה כשאדם מודה לה'?</a>
+                    <span class="toc-subs"><a href="#" data-page="14">קריעת גזר דין</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="15">11. מנין שתפקיד האדם להודות?</a>
+                    <span class="toc-subs"><a href="#" data-page="15">רמב"ן, מדרשים</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="16">12. מה נעשה בשמיים אחרי מאה ועשרים?</a>
+                    <span class="toc-subs"><a href="#" data-page="16">קרבן תודה שלא בטל</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="17">13. מה תפקיד דורנו?</a>
+                    <span class="toc-subs"><a href="#" data-page="17">פרשת ניצבים</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="18">14. כיצד משיגים אהבת ה'?</a>
+                    <span class="toc-subs"><a href="#" data-page="18">אל תקרי מה אלא מאה</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="19">15. האם היום אנו מודים לה'?</a>
+                    <span class="toc-subs"><a href="#" data-page="19">כוונת הלב בברכה</a><span>·</span><a href="#" data-page="19">מעשה באיש שמת</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="20">16. מה עושים למעשה - כיצד מודים?</a>
+                    <span class="toc-subs"><a href="#" data-page="20">רבע שעה ביום</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="21">17. מעלות המתרגל להודות</a>
+                    <span class="toc-subs"><a href="#" data-page="21">הצלה מגאווה</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="22">18. חיוב הוצאת ההודאה בפה</a>
+                    <span class="toc-subs"><a href="#" data-page="22">ספר החינוך</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="23">19. כיצד זוכים להיות מאושרים</a>
+                    <span class="toc-subs"><a href="#" data-page="23">איזהו עשיר השמח בחלקו</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="24">20. "ונהפוכו" לא רק בפורים</a>
+                    <span class="toc-subs"><a href="#" data-page="24">סיפור ר' שמואל הומינר</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="25">21. כיצד זוכים להתענג על ה'?</a>
+                    <span class="toc-subs"><a href="#" data-page="25">מסילת ישרים</a><span>·</span><a href="#" data-page="25">משל האבן והפטיש</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="26">22. למה אנחנו בגלות וסובלים?</a>
+                    <span class="toc-subs"><a href="#" data-page="26">שנאת חינם או חוסר שמחה</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="27">23. למה יש בעיות בשלום בית?</a>
+                    <span class="toc-subs"><a href="#" data-page="27">מצא או מוצא</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="28">24. ההודיה - עיקר עבודת ה'</a>
+                    <span class="toc-subs"><a href="#" data-page="28">עלינו לשבח</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="29">25. מצוות קידוש ה' בהודאה</a>
+                    <span class="toc-subs"><a href="#" data-page="29">שערי תשובה</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="30">26. אליעזר עבד אברהם - חיי הודיה</a>
+                    <span class="toc-subs"><a href="#" data-page="30">יפה שיחתן של עבדי אבות</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="31">27. סיפור: להרגיש הודיה אמיתית</a></li>
+                <li><a class="toc-chapter" href="#" data-page="32">28. עצה לקנות הכרת הטוב ושלום בית</a>
+                    <span class="toc-subs"><a href="#" data-page="32">היהודי מגרמניה</a><span>·</span><a href="#" data-page="32">רבי חייא ואשתו</a></span></li>
+                <li><a class="toc-chapter" href="#" data-page="33">29. יסוד ושורש העבודה - למעשה</a>
+                    <span class="toc-subs"><a href="#" data-page="33">ר' אלכסנדר זיסקינד</a><span>·</span><a href="#" data-page="33">תפילה לקנות הכרת הטוב</a></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- עמוד 4: הקדמה -->
+    <div class="page" data-title="הקדמה: לשם מה נבראנו?">
+        <span class="chapter-label">הקדמה</span>
+        <h2 id="section0" data-chapter="הקדמה">לשם מה נבראנו?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>מידת הכרת הטוב - היסוד שעליו בנויים חיי האדם, לפני הנישואין ואחריהם</li>
+                <li>סיפור: שני הנוסעים שלא ידעו לאן הם הולכים</li>
+                <li>משל: הנמלים והקן - איך מוצאים את היעד האמיתי</li>
+            </ul>
+        </div>
+        <p>ישנה מידה אחת שבה תלויים חיי האדם, גם בעולם הזה וגם בעולם הבא. בתורה ישנן מצוות חשובות רבות הקשורות למידה זו, וגם האושר של האדם תלוי בה. זוהי מידת <span class="emphasis">הכרת הטוב</span>.</p>
+        <p>לפני הנישואין קיים חיוב כיבוד הורים, וכל מטרת כיבוד ההורים היא לרכוש את מידת הכרת הטוב, כפי שכתוב בספר החינוך, מצווה ל"ג. לאחר הנישואין, כל שלום הבית תלוי בהכרת הטוב של הבעל לאשתו ושל האישה לבעלה.</p>
+        <p>מדוע קבע ה' את חיי התורה סביב מידה זו דווקא? שמעתי פעם יסוד נפלא: לא בגלל שיש הורים צריך לכבד אותם, אלא משום שצריך לרכוש את מידת הכרת הטוב - ולכן נתן לנו ה' הורים.</p>
+        <p class="emphasis">מה כל כך חשוב במידה זו? זו השאלה שהספר הזה בא לענות עליה.</p>
+
+        <div class="story-box">
+            <span class="story-title">שני הנוסעים שלא ידעו לאן הם הולכים</span>
+            <p>מעשה בשניים שיצאו לדרך: האחד בן עשירים, נסע במכונית יוקרתית ומשובחת, עם נהג צמוד, מפות, וכל מה שרק אפשר. חברו העני יצא ברגליו, ללא ליווי וללא ציוד.</p>
+            <p>למרבה הפלא הגיע העני ראשון ליעד. כיצד? בן העשירים, מרוב ביטחונו בעצמו, שכח לשאול: להיכן צריכים להגיע. וכך הסתובב שעות רבות בחיפוש אחר היעד. לעומתו, חברו הלך ברגל, אך ידע לאן צריכים להגיע.</p>
+            <p>היום, לצערנו, אנו עדים להרבה אנשים המשקיעים המון כוחות בקיום המצוות ובלימוד התורה, אך אינם יודעים מהו היעד. וכך הם מסתובבים ועושים המון דברים, אך ליעד האמיתי אינם מגיעים.</p>
+        </div>
+        <p class="emphasis">כדאי שנבדוק: האם אנו מחפשים את היעד ומודעים לו?</p>
+
+        <div class="story-box">
+            <span class="story-title">הנמלים והקן - כיצד מוצאים את היעד</span>
+            <p>אם יש לאדם הרבה נמלים בבית, אין צורך להרוג את כולן אחת-אחת. צריך למצוא את הקן שלהן, לרסס שם, וכולן ייעלמו.</p>
+            <p>יהודי שרוצה לעבוד את ה' צריך לדעת מהי המטרה הסופית, והשאר כבר יבוא בקלות. וכן כתב ה<em>מסילת ישרים</em>: "יסוד החסידות ושורש העבודה" - מה היסוד של הכול? "שיתברר ויתאמת אצל האדם מה חובתו בעולמו".</p>
+        </div>
+        <div class="highlight-box">
+            <p><span class="emphasis">היודע אתה מהי חובתך בעולמך?</span> קרא בספר הזה, ואולי תגלה שעד היום לא ידעת.</p>
+        </div>
+    </div>
+
+    <!-- עמוד 5: פרק 1 -->
+    <div class="page" data-title="מה מטרת האדם בעולמו?">
+        <span class="chapter-label">פרק 1</span>
+        <h2 id="section1">מה מטרת האדם בעולמו?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>הטעות הנפוצה: לחשוב שנבראנו כדי לקיים מצוות</li>
+                <li>דברי הרמב"ן: התכלית האמיתית של הבריאה</li>
+            </ul>
+        </div>
+        <p>ישנם רבים החושבים שנוצרנו כדי לקיים מצוות. משל למה הדבר דומה? לאדם החושב שהתחתן כדי לעזור לאשתו. מדוע באמת אדם מתחתן? כשם שאין לרבים מושג מדוע צריך לקיים מצוות, כך אין להרבה בני אדם מושג מדוע מתחתנים.</p>
+        <p>אדם מתחתן כדי להתאחד עם אשתו, כלשון הכתוב: "והיו לבשר אחד". וכשם שמי שעוזר לאשתו לא בהכרח אוהב אותה, כך גם לא כל מי שמקיים מצוות בהכרח אוהב את ה'. צריך לחפש באיזו צורה מי שעוזר לאשתו יאהב אותה יותר - וכך אולי נדע כיצד מי שעושה מצוות יאהב את ה' יותר.</p>
+        <div class="verse-box">
+            <p>"וְהָיָה אִם שָׁמֹעַ תִּשְׁמְעוּ אֶל מִצְוֹתַי אֲשֶׁר אָנֹכִי מְצַוֶּה אֶתְכֶם הַיּוֹם... לְאַהֲבָה אֶת ה' אֱלֹקֵיכֶם"</p>
+        </div>
+        <p>למה באנו לעולם? בשביל דבר אחד: <span class="emphasis">לאהוב את ה'</span>. <span class="emphasis">המצוות הן אמצעי להגיע לאהבת ה'</span>, לא המטרה עצמה.</p>
+        <div class="quote-box">
+            <p>"וְכַוָּנַת כָּל הַמִּצְוֹת שֶׁנַּאֲמִין בֵּאלֹקֵינוּ וְנוֹדֶה אֵלָיו שֶׁהוּא בְּרָאָנוּ, וְהִיא כַּוָּנַת הַיְּצִירָה, שֶׁאֵין לָנוּ טַעַם אַחֵר בִּיצִירָה הָרִאשׁוֹנָה, וְאֵין אֵל עֶלְיוֹן חָפֵץ בַּתַּחְתּוֹנִים מִלְּבַד שֶׁיֵּדַע (שֶׁיַּאֲמִין) הָאָדָם, וְיוֹדֶה לֵאלֹקָיו שֶׁבְּרָאוֹ."</p>
+            <span class="source-tag">רמב"ן, שמות י"ג, ט"ז</span>
+        </div>
+        <div class="highlight-box">
+            <p><strong>לשאלה:</strong> מהיכן למד הרמב"ן שבאנו לעולם להודות? היכן כתוב הדבר בתורה במפורש? והאם דבריו סותרים את המסקנה שנבראנו כדי לאהוב את ה'?</p>
+            <p>התשובה תתברר לאורך הספר: ההודיה והאהבה אינן שתי מטרות נפרדות. ההודיה על הטוב היא הדרך שבה האדם מגיע לאהבת ה' - וכפי שנראה בפרקים הבאים, זהו בדיוק מה שמלמד אותנו הכוזרי.</p>
+        </div>
+    </div>
+
+    <!-- עמוד 6: פרק 2 -->
+    <div class="page" data-title="מדוע צריך להכיר טובה?">
+        <span class="chapter-label">פרק 2</span>
+        <h2 id="section2">מדוע צריך להכיר טובה?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>עד היכן מגיע חיוב הכרת הטוב - אפילו למצרי הרשע</li>
+                <li>סיפור: הניצול מגרמניה שפגש את רוצחי משפחתו</li>
+                <li>רבי חייא ואשתו הממררת - ודאי בזכות טובה קטנה</li>
+            </ul>
+        </div>
+        <p>עד היכן מגיע חיוב הכרת הטוב? התורה אומרת: "לֹא תְתַעֵב מִצְרִי כִּי גֵר הָיִיתָ בְאַרְצוֹ" (דברים כ"ג, ח'). מפרש רש"י: אף על פי שזרקו את זכריכם ליאור, מה טעם? שהם היו לכם אכסניה בשעת הדחק.</p>
+        <p>פרעה שחט את ילדי ישראל והתרחץ בדמם, המצרים הרשעים הטביעו אותם בים, ובטיט הקירות שבנו זרקו את התינוקות. <span class="emphasis">האם להם צריך להכיר טובה?</span> אלא, בזמן שיעקב אבינו ירד עם בניו למצרים הייתה להם שעת הדחק, ואז המצרים קיבלו אותם והיו להם לאכסניה - לכן חייבים להכיר להם טובה. רשעים שעשו פעם אחת טובה, אפילו שאחרי כן השחיתו בצורה כה נוראה, עדיין חייבים להכיר להם טובה.</p>
+
+        <div class="story-box">
+            <span class="story-title">הניצול מגרמניה שפגש את רוצחי משפחתו</span>
+            <p>יהודי שהיה גר בגרמניה עבר את השואה הנוראה, ובה איבד את אשתו, ילדיו, אביו ואמו. יום אחד, בעודו הולך ברחובות כפר סבא, הוא רואה מול עיניו הנדהמות קבוצת תיירים מגרמניה, וביניהם - כמה מרוצחי ילדיו ואשתו.</p>
+            <p>ליבו מתעורר. הוא רוצה להזמין מיד אנשים שיודעים לחסל חשבונות, ולנקום את דם בניו ואשתו היקרה. ואז עולה במוחו הפסוק "לא תתעב מצרי כי גר היית בארצו". הוא חושב: גם אני הייתי גר בגרמניה שלושים שנה לפני השואה - אז אולי גם אני צריך להכיר טובה לגרמנים האלה?</p>
+            <p>"לא ולא!" זועק מוחו בכל תוקף. "זה לא ייתכן! הם לא טרחו בשבילי כלום, הם רק נהנו שגרתי שם ושילמתי מיסים כבדים. ועוד - הטוב הזה בטל ומבוטל לגמרי כנגד הרע שעשו!" איזו מחשבה מוזרה זו - להכיר טובה לגרמני מרושע?</p>
+            <p>ובכל זאת - זה מה שכתוב בתורה במפורש.</p>
+        </div>
+
+        <div class="story-box">
+            <span class="story-title">רבי חייא ודביתהו</span>
+            <p>"רַבִּי חִיָּא הֲוָה קָא מְצַעֲרָא לֵיהּ דְּבִיתְהוּ" - אשתו של רבי חייא הייתה מצערת אותו. "כִּי הֲוָה מַשְׁכַּח מִידִי, הֲוָה צָיִיר לָהּ בְּסוּדְרֵהּ וּמַיְתֵי נִיהלָהּ" - כשהיה רבי חייא מוצא דבר מה, היה כורך אותו בסודרו ומביא לה כמתנה.</p>
+            <p>"אָמַר לֵיהּ רַב, וְהָא קָא מְצַעֲרָא לֵיהּ לְמָר?" - אמר לו רב: הרי היא מצערת אותך? "אָמַר לֵיהּ, דַּיֵּנוּ שֶׁמְּגַדְּלוֹת בָּנֵינוּ, וּמַצִּילוֹת אוֹתָנוּ מִן הַחֵטְא" - אמר לו רבי חייא: די לנו בכך שנשותינו מגדלות את בנינו ומצילות אותנו מן החטא.</p>
+            <span class="source-tag">יבמות ס"ג ע"א</span>
+        </div>
+        <p>מדוע רבי חייא צריך להכיר טובה לאשתו? הרי היא לא עשתה זאת בשבילו, אלא בשביל עצמה - שהרי אלו ילדיה. ועוד, אכן היטיבה עמו, אך גם הרעה לו - מדוע לזכור רק את הטוב ולהתעלם מכל הרע?</p>
+        <div class="highlight-box">
+            <p>התשובה, כפי שנראה בפרקים הבאים, היא <span class="emphasis">שכל צלע של הכרת הטוב - כלפי מצרי, כלפי בן זוג, וכלפי הבורא עצמו - בונה באדם את אותה מידה בדיוק</span>. מי שמתרגל לראות רק את הטוב, גם כשיש גם רע, זוכה בסופו של דבר להכיר טובה גם לבורא עולם.</p>
+        </div>
+    </div>
+
+    <!-- עמוד 7: פרק 3 -->
+    <div class="page" data-title='"תחת אשר לא עבדת... בשמחה"'>
+        <span class="chapter-label">פרק 3</span>
+        <h2 id="section3">"תחת אשר לא עבדת... בשמחה"?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>הפסוק המפורסם על סיבת הקללות - וחמש תמיהות עליו</li>
+                <li>גילוי הגמרא בערכין: "עבודה שבשמחה" היא שירה</li>
+            </ul>
+        </div>
+        <p>ישנו פסוק מפורסם שבו מגלה התורה מדוע נענשים עם ישראל:</p>
+        <div class="verse-box">
+            <p>"תַּחַת אֲשֶׁר לֹא עָבַדְתָּ אֶת ה' אֱלֹקֶיךָ בְּשִׂמְחָה וּבְטוּב לֵבָב מֵרֹב כֹּל"<span class="source-tag" style="margin-top:6px;">דברים כ"ח, מ"ז</span></p>
+        </div>
+        <p>הפירוש המקובל לפסוק זה הוא: כל הקללות והעונשים באו מכיוון שלא קיימו <strong>מצוות</strong> בשמחה. אך אם נתבונן בפסוק, יש בו כמה תמיהות עצומות.</p>
+        <div class="qa-box">
+            <p><strong>קושיה:</strong> התורה נוקטת לשון <span class="emphasis">עבודה</span> - "תחת אשר לא עבדת". אך קיום המצוות אינו מכונה בדרך כלל "עבודה", אלא "שמירה" או "עשיית מצוות". לשון "עבודה" מופיעה בעיקר ביחס ללב - "ולעבדו בכל לבבכם". אם החיסרון היה אי-קיום המצוות בשמחה, מדוע נכתב בלשון עבודה דווקא?</p>
+        </div>
+        <p>הגמרא עצמה התקשתה בכך, וגילתה לנו יסוד מפתיע:</p>
+        <div class="quote-box">
+            <p>"אָמַר רַב יְהוּדָה אָמַר שְׁמוּאֵל, מִנַּיִן לְעִיקַּר שִׁירָה מִן הַתּוֹרָה?... רַב מַתְנָה אָמַר מֵהָכָא: 'תַּחַת אֲשֶׁר לֹא עָבַדְתָּ אֶת ה' אֱלֹקֶיךָ בְּשִׂמְחָה וּבְטוּב לֵבָב', <strong>אֵיזוֹ הִיא עֲבוֹדָה שֶׁבְּשִׂמְחָה וּבְטוּב לֵבָב? הֱוֵי אוֹמֵר זוֹ שִׁירָה</strong>."</p>
+            <span class="source-tag">תלמוד בבלי, ערכין י"א ע"א</span>
+        </div>
+        <p>כלומר: התורה אומרת כי העונשים והייסורים באו מכיוון שבני ישראל לא עשו עבודה מסוימת כאשר היו נמצאים בשמחה ובטוב לבב. ואיזו עבודה זו? לשיר ולהודות לה' יתברך על כל השפע שנתן להם.</p>
+        <div class="highlight-box">
+            <h4>עוד שאלות שהתעוררו על הפסוק:</h4>
+            <ul>
+                <li>כיצד למדה הגמרא מפסוק זה שיש מצווה לשיר שירים, ולא רק להיות שמח?</li>
+                <li>האם הגמרא אינה מוציאה את הפסוק מפשוטו - הרי בתורה כתוב שהעונש בא מכיוון שלא עשו מצוות בשמחה, ואילו הגמרא אומרת שהעונש בא בגלל שלא שרו שירים לה'?</li>
+                <li>הפסוק לא נכתב רק על הלויים בבית המקדש, אלא על כל יהודי ויהודי. כוונת הגמרא היא שגם לוי ששר מקיים את הפסוק, אך ודאי שכוונת התורה לכל עם ישראל.</li>
+            </ul>
+        </div>
+        <p>וממשיך הפסוק שאחריו: "וְעָבַדְתָּ אֶת אֹיְבֶיךָ אֲשֶׁר יְשַׁלְּחֶנּוּ ה' בָּךְ בְּרָעָב וּבְצָמָא וּבְעֵירֹם וּבְחֹסֶר כֹּל, וְנָתַן עֹל בַּרְזֶל עַל צַוָּארֶךָ עַד הִשְׁמִידוֹ אֹתָךְ" (דברים כ"ח, מ"ח). <span class="emphasis">איזו מידה כנגד מידה יש כאן?</span> לכאורה, אם החיסרון הוא בשמחה, היה ראוי שהעונש יהיה עצבון ורוח נכאה - מדוע דווקא רעב, צמא וחוסר כול?</p>
+        <div class="highlight-box">
+            <p><strong>לסיכום:</strong> חייבים אנו לנסות להבין. הרי התורה בפסוק זה מגלה לנו למה יש צרות רבות, ומתחדש כאן דבר מפתיע: ייתכן שיהודי שומר תורה ומצוות, ובכל זאת הוא לא <em>עובד</em> את ה' - כי לא הודה ולא שר לו על הטוב שקיבל.</p>
+        </div>
+    </div>
+
+    <!-- עמוד 8: פרק 4 -->
+    <div class="page" data-title="באור הכוזרי לפסוק">
+        <span class="chapter-label">פרק 4</span>
+        <h2 id="section4">באור הכוזרי לפסוק</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>שלושת יסודות עבודת ה' לפי הכוזרי: יראה, אהבה, שמחה</li>
+                <li>מצוות השמחה בחלקו - וסכנת ה"שמחה שמובילה לשחוק ותאווה"</li>
+            </ul>
+        </div>
+        <p>ספר הכוזרי, מאמר שלישי, מבאר את הפסוק הזה בדרך נפלאה:</p>
+        <div class="quote-box">
+            <p>"כָּל הֲנָאָה חוּשִׁית שֶׁהֶחָסִיד נֶהֱנֶה, זוֹכֵר הוּא לְבָרֵךְ אֶת הָאֱלֹקַ עָלֶיהָ. וְנִמְסַר לָנוּ בְּקַבָּלָה כִּי הַשִּׁעוּר הַקָּטָן בְּיוֹתֵר שֶׁבּוֹ אָדָם מִיִּשְׂרָאֵל יוֹצֵא יְדֵי חוֹבָתוֹ בְּתִשְׁבָּחוֹת לָאֱלֹקַ הוּא מֵאָה בְּרָכוֹת בְּכָל יוֹם, לֹא פָּחוֹת מִזֶּה... וְכָל אֲשֶׁר יוֹסִיף בְּרָכוֹת יוֹסִיף קִרְבָה אֶל הָאֱלֹקַ.</p>
+            <p>וְהִנֵּה אֵין סָפֵק בַּדָּבָר, שֶׁהָאַהֲבָה לָאֱלֹקַ וְהַיִּרְאָה מִפָּנָיו, נִכְנָסוֹת בְּנֶפֶשׁ הָאָדָם עַל יְדֵי קִיּוּם הַמִּצְווֹת הָאֵלֶּה... לְבַל תְּבִיאֵהוּ הַשִּׂמְחָה בַּשַּׁבָּתוֹת וּבַיָּמִים טוֹבִים לַמַּדְרֵגָה שֶׁאֵלֶיהָ מְבִיאִים הַשְּׂחוֹק וְהַתַּאֲווֹת וְהַבַּטָּלָה... <strong>וְיַעֲבֹר עַל מִצְוַת הַשִּׂמְחָה בְּחֶלְקוֹ, שֶׁנִּצְטַוֵּינוּ עָלֶיהָ בְּמַאֲמָר: 'וְשָׂמַחְתָּ בְּכָל הַטּוֹב אֲשֶׁר נָתַן לְךָ ה' אֱלֹקֶיךָ'.</strong> וְעַל יְדֵי זֶה יִמְעַט הַשֶּׁבַח שֶׁעָלָיו לְשַׁבֵּחַ עַל טוֹבַת הָאֱלֹקַ, כִּי הַשֶּׁבַח הוֹלֵךְ אַחַר הַשִּׂמְחָה. וְאָז יִתְקַיֵּם בּוֹ מַה שֶּׁנֶּאֱמַר: 'תַּחַת אֲשֶׁר לֹא עָבַדְתָּ אֶת ה' אֱלֹקֶיךָ בְּשִׂמְחָה וּבְטוּב לֵבָב וְעָבַדְתָּ אֶת אֹיְבֶיךָ' וְגוֹ'."</p>
+            <span class="source-tag">ספר הכוזרי, מאמר שלישי</span>
+        </div>
+        <p>הכוזרי מלמד אותנו יסוד גדול: אין להגזים בשמחת החג עד כדי שחוק, תאווה וביטול תפילה - אך גם אין לתת ליראה להביא לייאוש, כי אז יימנע האדם ממצוות השמחה בחלקו. וככל שהאדם ממעט בשמחה, כך הוא ממעט גם בשבח שעליו לתת לה' - <span class="emphasis">כי השבח הולך אחר השמחה</span>.</p>
+        <div class="highlight-box">
+            <h4>לסיכום: האם יש מצווה להיות שמח?</h4>
+            <ul>
+                <li>למדנו מהכוזרי שיש מצווה מהתורה להתבונן במה שיש לו לאדם, שהוא מתנה מה', ולהיות שמח בחלקו.</li>
+                <li>צריך להיזהר לא להיות בעצב או בפחד, כי זה גורם לחיסרון בשמחה.</li>
+                <li>ההודאה לה' מקרבת את האדם לבורא עולם.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- עמוד 9: פרק 5 -->
+    <div class="page" data-title="מצווה מדאורייתא להיות שמח בחלקו">
+        <span class="chapter-label">פרק 5</span>
+        <h2 id="section5">מצווה מדאורייתא להיות שמח בחלקו</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>הפסוק "ושמחת בכל הטוב" - מצווה עצמאית, לא רק הכנה למצווה אחרת</li>
+                <li>סיפור: הספר "כיצד תרפא את חייך" בביתו של קצין המשטרה</li>
+                <li>מקורות נוספים: רמב"ם, כלבו, שערי קדושה</li>
+            </ul>
+        </div>
+        <p>למדנו מדברי הכוזרי כי יש מצווה מהתורה להיות שמח בחלקו, שנתן לו ה' יתברך, שנאמר:</p>
+        <div class="verse-box">
+            <p>"וְשָׂמַחְתָּ בְכָל הַטּוֹב אֲשֶׁר נָתַן לְךָ ה' אֱלֹקֶיךָ וּלְבֵיתֶךָ, אַתָּה וְהַלֵּוִי וְהַגֵּר אֲשֶׁר בְּקִרְבֶּךָ"<span class="source-tag" style="margin-top:6px;">דברים כ"ו, י"א</span></p>
+        </div>
+        <p>מצוות השמחה אינה רק אמצעי לקיים מצווה אחרת - יש מצווה להיות בשמחה מחמת השפע הגדול שנתן לנו ה' יתברך, כשלעצמה. <span class="emphasis">הכוזרי מנה את מצוות "שמח בחלקו" בתור מצווה דאורייתא ממש</span>. התורה מלמדת אותנו שהאדם יכול <em>לבחור</em> להיות שמח.</p>
+        <p>כיצד יכול האדם להיות שמח? על כך כותב דוד המלך בספר תהילים: "מִזְמוֹר לְתוֹדָה... עִבְדוּ אֶת ה' בְּשִׂמְחָה" - השמחה וההודאה, מלמד אותנו דוד המלך, הן <em>"תְּרֵי רֵעִין דְּלָא מִתְפָּרְשִׁין"</em> - זוג רעים שלא נפרדים. כאשר אתה מודה לה', אתה נהיה שמח.</p>
+
+        <div class="story-box">
+            <span class="story-title">'תודה רבה לך, עגבנייה'</span>
+            <p>מעשה היה, והייתי צריך ללכת לביתו של קצין במשטרת ישראל. בזמן ששהיתי בביתו, ראיתי ספר בשם "כיצד תרפא את חייך". השם נשמע מעניין - פתחתי את הספר לראות מה הסוד שמצא המחבר לריפוי החיים. וכך היה כתוב שם, מפי מחבר שאינו יהודי:</p>
+            <p>"שנים חיפשתי כיצד יכול האדם להיות שמח ומאושר, מה יעשה שלא יהרוס את עצמו מרוב כעסים ועצבונות. לאחר חיפושים מצאתי את השיטה, והיא: כל בוקר כשאתה קם מהמיטה תאמר - 'תודה רבה לך, מיטה יקרה, שנתת לי לישון עליך. תודה רבה לך, שמיכה נפלאה, שחיממת אותי'. אתה הולך לאכול, תאמר - 'תודה רבה לך, עגבנייה, שאת מרשה לי לאכול אותך'. ולאחר שאכלת, תאמר - 'תודה רבה לך, עגבנייה, היית מאוד טעימה'. כך תמשיך בכל דבר, ומה טוב שתקבע לך זמן מסוים ביום, רבע שעה, שבו תראה את כל הדברים היפים בחייך."</p>
+        </div>
+        <div class="qa-box">
+            <p>"בָּרוּךְ הוּא אֱלֹקֵינוּ שֶׁהִבְדִּילָנוּ מִן הַטּוֹעִים" - אין אנו צריכים להודות לדומם או לצומח, אלא למלך מלכי המלכים, שיושב ומחכה לשבחים שלנו! ככתוב: "וְאַתָּה קָדוֹשׁ, יוֹשֵׁב (ממתין ומצפה) תְּהִלּוֹת יִשְׂרָאֵל".</p>
+            <p><strong>אבל למדתי מכאן קל וחומר גדול:</strong> ומה כאשר אדם מודה להבל וריק הוא נהיה שמח - כאשר אדם מודה למלך מלכי המלכים, שאנו יודעים כמה הוא נהנה לשמוע אותנו, על אחת כמה וכמה שהוא נמלא שמחה.</p>
+        </div>
+
+        <h3>מקורות נוספים למצוות השמחה התמידית</h3>
+        <div class="quote-box">
+            <p>"לֹא יְהֵא אָדָם בַּעַל שְׂחוֹק וּמַהֲתַלּוֹת וְלֹא עָצֵב וְאוֹנֵן, אֶלָּא שָׂמֵחַ... וְלֹא יְהֵא בַּעַל נֶפֶשׁ רְחָבָה נִבְהָל לְהוֹן, וְלֹא עָצֵב וּבָטֵל מִמְּלָאכָה, אֶלָּא בַּעַל עַיִן טוֹבָה, מְמַעֵט בְּעֵסֶק וְעוֹסֵק בַּתּוֹרָה, <strong>וְאוֹתוֹ הַמְעַט שֶׁהוּא חֶלְקוֹ יִשְׂמַח בּוֹ</strong>."</p>
+            <span class="source-tag">רמב"ם, הלכות דעות פרק ב', הלכה ז'</span>
+        </div>
+        <div class="quote-box">
+            <p>"'אֲשֶׁר בָּרָא שָׂשׂוֹן וְשִׂמְחָה' - רוצה לומר לכבודו, כי כבוד ה' בשמחת הנפש, כדי שתהיה מוכנה לקבל מהודו. כי היגון סותם מקורי הנפש, והיא מחיצה מפסקת בינה לבין אלוקיה... שכל מי שנותן מחשבת יגון בליבו, קרוב לכפור בה' יתברך. הלא תראה ש'אֵין הַשְּׁכִינָה שׁוֹרָה לֹא מִתּוֹךְ עַצְבוּת אֶלָּא מִתּוֹךְ דְּבַר שִׂמְחָה' - וזהו כבודו יתברך."</p>
+            <span class="source-tag">כלבו, סימן ע"ה</span>
+        </div>
+        <div class="quote-box">
+            <p>"הָעַצְבוּת מְסַלֶּקֶת אֶת הַשְּׁכִינָה, הָעַצְבוּת גּוֹרֶמֶת מְנִיעַת הָעֲבוֹדָה וְקִיּוּם הַמִּצְוֹת... וְהִיא שַׁעַר הַתְחָלַת גֵּרוּי הַסָּתַת הַיֵּצֶר הָרָע אֲפִלּוּ אִם הוּא צַדִּיק... וְגַם גּוֹרֶמֶת סִלּוּק רוּחַ הַקֹּדֶשׁ מֵעָלָיו. וְהַהֵפֶךְ בִּהְיוֹתוֹ עוֹבֵד אֶת ה' יִתְבָּרֵךְ בְּשִׂמְחָה... כִּי הַשִּׂמְחָה מוֹסִיפָה חֵשֶׁק רַב וְאַהֲבָה לְהִתְדַּבֵּק בּוֹ יִתְבָּרֵךְ."</p>
+            <span class="source-tag">שערי קדושה, חלק ב', שער ד'</span>
+        </div>
+        <p>ומקור נוסף לעיקרון הזה: כאשר אתה נותן מתנה לחברך, מה ישמח אותך יותר מ"תודה רבה"? כשתראה אותו שמח במתנה שנתת לו - זה נותן לך חשק לתת לו עוד. ה' נותן לנו מתנות: חיים, בריאות, פרנסה. <span class="emphasis">דבר ראשון שה' רוצה הוא לראות אותך שמח במתנה שנתן לך</span>, אחרת אין חשק לתת לך שוב.</p>
+        <div class="highlight-box">
+            <h4>לסיכום: מקורות למעלה ולמצווה להיות בשמחה תמיד</h4>
+            <ul>
+                <li>הרמב"ם מונה את מידת השמחה בין המידות הטובות.</li>
+                <li>הכלבו: יש בזה מצווה, מחמת שעל ידי כך כבוד ה' יכול לשרות עליו.</li>
+                <li>שערי קדושה: העצבות גורמת שהשכינה תסתלק - וזה מעין דברי הכלבו.</li>
+                <li>יש חיוב להיות בשמחה, שכן היא מולידה חשק רב להידבק בבורא.</li>
+                <li>ר' ירוחם ממיר: החיוב מדין הכרת הטוב - להראות למיטיבך שמחה במתנתו.</li>
+                <li>תומר דבורה: יש חיוב להיות בשמחה, מדין "והלכת בדרכיו".</li>
+                <li>יש מוסיפים: כשאדם שמח, הוא משמח את השכינה - כאב ששמח כשבניו שמחים.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- עמוד 10: פרק 6 -->
+    <div class="page" data-title="מצווה להודות לה' מתוך שמחה">
+        <span class="chapter-label">פרק 6</span>
+        <h2 id="section6">מצווה להודות לה' מתוך שמחה</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>פירוש הפסוק "תחת אשר לא עבדת" שלב אחר שלב</li>
+                <li>"עבדו את ה' בשמחה" - הקשר בין מזמור לתודה לפרשת התוכחה</li>
+                <li>מאה קללות, מאה ברכות, מאה פעמים "תודה"</li>
+            </ul>
+        </div>
+        <p>מצווה גדולה נוספת נובעת מהשמחה: <span class="emphasis">שמחמת השמחה בחלקו יבוא האדם לשבח ולהודות לה'</span>. הגמרא בערכין והכוזרי מסבירים את הפסוק "תחת אשר לא עבדת את ה' אלקיך בשמחה ובטוב לבב" כך:</p>
+        <ol>
+            <li>השמחה בפסוק אינה שמחה מחמת קיום המצוות, אלא שמחה מחמת הטוב הגשמי שהשפיע ה' עלינו.</li>
+            <li>השמחה מחייבת את האדם בעבודה מיוחדת לה' יתברך.</li>
+            <li>ומהי אותה עבודה? השיר והשבח לחי העולמים.</li>
+        </ol>
+        <div class="highlight-box">
+            <p><strong>בקיצור:</strong> יהודי! קיבלת דברים טובים מבורא עולם - זה מחייב אותך בעבודה. ומהי העבודה הזו? הודיה, שיר ושבח לבורא עולם.</p>
+        </div>
+        <p>ופירוש הפסוק כך: "תחת אשר לא <strong>עבדת</strong> את ה' אלקיך" - במה לא עבדת? בעבודה כזאת שצריך לעשות כשנמצאים בשמחה ובטוב לבב. ואיזו עבודה ה' רוצה שנעבוד כשאנחנו בשמחה ובטוב לבב? הודיה, שבח ושיר לה' יתברך. ולמה תהיה בשמחה ובטוב לבב מלכתחילה? מחמת רוב כל שנתן לך ה' יתברך.</p>
+
+        <h3>עבדו את ה' בשמחה</h3>
+        <p>ב"מזמור לתודה", תהלים פרק ק' פסוק ב', אנו אומרים משפט מפורסם: <span class="emphasis">"עבדו את ה' בשמחה"</span>. פסוק זה מקביל בדיוק לפסוק בתורה: "תחת אשר לא עבדת את ה' אלקיך בשמחה ובטוב לבב מרוב כל". מאה הקללות באות בגלל שלא עובדים את ה' בשמחה.</p>
+        <div class="qa-box">
+            <p><strong>קושיה:</strong> קיום המצוות מכונה בדרך כלל "שמירה" ("שָׁמַרְתִּי פִקּוּדֶיךָ") או "עשייה" ("נָטִיתִי לִבִּי לַעֲשׂוֹת חֻקֶּיךָ"). לא מצינו בשום מקום שקיום המצוות מוגדר כ"עבודה". מדוע אם כן אמר דוד "עבדו את ה' בשמחה", ולא "קיימו" או "שמרו מצוותיו בשמחה"?</p>
+            <p><strong>תירוץ:</strong> כלשון הרמב"ם, הלכות לולב פרק ח': "הַשִּׂמְחָה שֶׁיִּשְׂמַח אָדָם בַּעֲשִׂיַּת הַמִּצְוָה וּבְאַהֲבַת הָקֵל שֶׁצִּוָּה בָּהֶן, עֲבוֹדָה גְּדוֹלָה הִיא." בספר "והיית אך שמח" מבואר: רצון הבורא הוא שכאשר הוא מיטיב לנו ואנו שמחים ומאושרים, נעשה לכבודו עבודה - ומהי העבודה שהוא רוצה מאיתנו כשטוב לנו? שירה והודאה לכבודו יתברך.</p>
+        </div>
+        <p>וכך פירוש הפסוק "עבדו את ה'": תעשו עבודה לה' כאשר אתם בשמחה. ומהי העבודה? "בֹּאוּ לְפָנָיו בִּרְנָנָה" - תשירו ותודו לו. מדוע? "דְּעוּ כִּי ה' הוּא אֱלֹקִים וְלוֹ אֲנַחְנוּ" - תפנימו שאת הטוב קיבלתם ממנו, ולא אתם עשיתם לכם את הטוב, ולכן תנו תודה והלל לה'.</p>
+        <p>השירה וההלל בזמן השמחה מוגדרים "עבודה" (כמו שכתב רש"י על מגילה י"ח: "אף הודאה עבודה של מקום הוא"), משום שהם <span class="emphasis">משעבדים</span> את הלב להכיר שכל הטוב מגיע מאת הבורא. וכשם שהתפילה מוגדרת "עבודה שבלב" (תענית ב' ע"א: "ולעבדו בכל לבבכם, איזו היא עבודה שהיא בלב - הוי אומר זו תפילה"), כך ההודאה מוגדרת עבודה - ששתיהן גורמות לאדם להכיר שכל הטוב מגיע מהבורא.</p>
+        <div class="highlight-box">
+            <p>התורה מלמדת אותנו: כל הצרות והייסורים שבאים לעם ישראל בגלות הם מחמת שכאשר ה' מביא עלינו טובות ואנחנו שמחים בהם, אין אנחנו מודים לה' ושרים לו. אנחנו נזכרים בה' רק כאשר רע לנו. אם כן, אין ברירה אלא להביא עלינו עוד ועוד צרות וייסורים. <span class="emphasis">ניתן לבחור בחיים: או מאה פעמים להודות, או מאה קללות ולבכות.</span></p>
+        </div>
+        <p>מזמור לתודה הוא פרק ק' בתהילים; ק' בגימטרייה - מאה; וגם המילה "מודים" עולה בגימטרייה מאה. לרמז שצריך מאה פעמים להודות ביום.</p>
+    </div>
+
+    <!-- עמוד 11: פרק 7 -->
+    <div class="page" data-title="היכן כתובה בהלכה החובה להודות לה'?">
+        <span class="chapter-label">פרק 7</span>
+        <h2 id="section7">היכן כתובה בהלכה החובה להודות לה'?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>רמב"ם: מ"ובכל מאודך" למדים חובה להודות אפילו על הרע</li>
+                <li>ר' ירוחם ליבוביץ: כפיות טובה היא גזל ממש</li>
+            </ul>
+        </div>
+        <div class="quote-box">
+            <p>"שָׁמַע שְׁמוּעָה טוֹבָה מְבָרֵךְ 'בָּרוּךְ אַתָּה ה' אֱלֹקֵינוּ מֶלֶךְ הָעוֹלָם הַטּוֹב וְהַמֵּטִיב', שָׁמַע שְׁמוּעָה רָעָה מְבָרֵךְ 'בָּרוּךְ דַּיָּן הָאֱמֶת', וְחַיָּב אָדָם לְבָרֵךְ עַל הָרָעָה בְּטוֹב נֶפֶשׁ כְּדֶרֶךְ שֶׁמְּבָרֵךְ עַל הַטּוֹבָה בְּשִׂמְחָה, שֶׁנֶּאֱמַר 'וְאָהַבְתָּ אֵת ה' אֱלֹקֶיךָ וְגוֹ' וּבְכָל מְאֹדֶךָ', וּבִכְלַל הָאַהֲבָה הַיְּתֵרָה שֶׁנִּצְטַוֵּינוּ בָּהּ, שֶׁאֲפִלּוּ בְּעֵת שֶׁיֵּצֶר לוֹ יוֹדֶה וִישַׁבַּח בְּשִׂמְחָה."</p>
+            <span class="source-tag">רמב"ם, הלכות ברכות פרק י', הלכה ג'</span>
+        </div>
+        <p>למדנו ברמב"ם: מהציווי "ובכל מאודך" התחייבנו להודות לה' על כל מה שהוא נותן לנו - אפילו על הדברים הרעים, וקל וחומר שחייבים להודות על הטובים. בזמן חז"ל היו מודים לה' בשם ומלכות; היום לא נהגו כך, אבל ודאי חובה על האדם גם היום להודות לה' על כל דבר טוב שקורה לו.</p>
+        <p>לצערנו הרב, הרבה אנשים מכירים הלכה זו רק לגבי "צריך אדם לברך על הרעה", אך אינם יודעים שעל הטובה חייבים בקל וחומר. וזוהי מצווה מדאורייתא המביאה את האדם לאהבת ה'.</p>
+        <p><strong>היכן מופיע בשולחן ערוך החיוב לשיר שירי הודיה לה'?</strong> "וַאֲפִלּוּ שִׁירָה בַּפֶּה עַל הַיַּיִן אֲסוּרָה, שֶׁנֶּאֱמַר 'בַּשִּׁיר לֹא יִשְׁתּוּ יַיִן' (ישעיה כ"ד, ט'), וּכְבָר נָהֲגוּ כָּל יִשְׂרָאֵל לוֹמַר דִּבְרֵי תִּשְׁבָּחוֹת אוֹ שִׁיר שֶׁל הוֹדָאוֹת וְזִכְרוֹן חַסְדֵי הַקָּדוֹשׁ בָּרוּךְ הוּא עַל הַיַּיִן" (שולחן ערוך, אורח חיים סימן תק"ס).</p>
+        <div class="quote-box">
+            <p>"לֹא כַּאֲשֶׁר אָנוּ חוֹשְׁבִים, כִּי עִנְיַן הַכָּרַת הַטּוֹבָה אוֹ כְּפִיּוּת הַטּוֹבָה הוּא רַק בְּגֶדֶר מַעֲלָה וְיִתְרוֹן הַכְשֵׁר, כִּי אִם דִּינִים יֵשׁ לוֹ עָלָיו, וְגָזֵל מַמָּשׁ יֵשׁ בְּיָדוֹ, וְעַל פִּי דִּין מַמָּשׁ יֵשׁ עַל הַמְקַבֵּל לְהִתְבּוֹנֵן וּלְהַכִּיר אֶת הַנּוֹתֵן גָּדְלוֹ וְרוֹמְמוּתוֹ, וּלְהַכִּיר אֶת הַנּוֹתֵן וְטוֹבָתוֹ."</p>
+            <span class="source-tag">ר' ירוחם ליבוביץ זצ"ל, ספר דעת חכמה ומוסר</span>
+        </div>
+        <p>כשם שלגבי חברו חייב האדם להתבונן בטובה שחברו הביא לו, ולהכיר לו טובה, ולהוסיף אהבה כלפי הנותן - כך חייבים אנו להתבונן בטובות שנתן לנו ה', לשמוח בהן, ולאהוב את ה' מחמתן.</p>
+        <div class="highlight-box">
+            <h4>לסיכום:</h4>
+            <ul>
+                <li>יש מצווה מדאורייתא להיות שמח מחמת הטוב הגשמי שקיבלת מה'.</li>
+                <li>השמחה מחייבת הודיה, שיר ושבח לה' יתברך - וזו עבודה גדולה.</li>
+                <li>מי שלא מודה לה' על המתנות שקיבל - זה עלול לגרום שייקחו ממנו אותן.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- עמוד 12: פרק 8 -->
+    <div class="page" data-title="מדוע נקראת השירה עבודה?">
+        <span class="chapter-label">פרק 8</span>
+        <h2 id="section8">מדוע נקראת השירה עבודה?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>שלושה יסודות עבודת ה' לפי הכוזרי, ומהי "עבודה שבלב"</li>
+                <li>ניסיון העוני וניסיון העושר - שתי דרכים לשעבד את הלב</li>
+                <li>סיפור: היהודי שבלע סיגריה בוערת מרוב יראת כבוד</li>
+            </ul>
+        </div>
+        <div class="quote-box">
+            <p>"כְּלָלוֹ שֶׁל דָּבָר, שְׁלוֹשָׁה הֵם יְסוֹדוֹת עֲבוֹדַת הָאֱלֹקַ עַל פִּי תּוֹרָתֵנוּ: הַיִּרְאָה וְהָאַהֲבָה וְהַשִּׂמְחָה. הִתְקָרֵב אֶל אֱלֹקֶיךָ בְּכָל אַחַת מֵאֵלֶּה... כִּי כְּשֵׁם שֶׁהַתְּחִנּוֹנִים צְרִיכִים מַחְשָׁבָה וְכַוָּנָה, כָּךְ גַּם הַשִּׂמְחָה בִּדְבַר הָאֱלֹקַ וּבְמִצְוָתוֹ צְרִיכָה מַחְשָׁבָה וְכַוָּנָה... וְאִם תַּעֲלֶה עֲלִיזוּתְךָ בַּמִּצְווֹת אֶל מַדְרֵגַת הַזֶּמֶר וְהָרִקּוּד, יִהְיוּ לְךָ גַּם אֵלֶּה עֲבוֹדַת הָאֱלֹקִים, וְאַף עַל יָדָם תִּדְבַּק בָּעִנְיָן הָאֱלֹקִי."</p>
+            <span class="source-tag">ספר הכוזרי, מאמר שני</span>
+        </div>
+        <p>מבואר שהשירה לה' נקראת "עבודה" לה'. מה פירוש המושג "עבודה"? "'לְאַהֲבָה אֶת ה' אֱלֹקֵיכֶם וּלְעָבְדוֹ בְּכָל לְבַבְכֶם' - אֵיזוֹ הִיא עֲבוֹדָה שֶׁהִיא בַּלֵּב? הֱוֵי אוֹמֵר זוֹ תְּפִלָּה" (תענית ב' ע"א). מדוע נקראת התפילה עבודה שבלב? "עבודה" מלשון עבד - הכנעה. כאשר אדם מכיר בליבו שהכול מאת הבורא יתברך, הוא נכנע לפניו, כי לעולם לא ימרוד אדם במי שנותן לו הכול מכול.</p>
+        <p>מטרת התפילה היא להגיע למצב שבו לב האדם מבין שכל מה שיש לו הוא מאת הבורא. <span class="emphasis">למדנו כאן דבר נפלא: לא בשביל לבקש בקשות מתפללים (זה רק האמצעי), אלא בשביל לקנות אמונה - שהכול מאיתו יתברך.</span> יש שתי דרכים לשעבד את הלב לבורא עולם:</p>
+        <div class="two-columns">
+            <div class="col-purple">
+                <h4 style="margin-top:0;">ניסיון העוני</h4>
+                <p>כשאין לך דברים - אתה מתפלל, ועל ידי הבקשה אתה מבין שהכול מגיע מאת ה'.</p>
+            </div>
+            <div class="col-gold">
+                <h4 style="margin-top:0;">ניסיון העושר</h4>
+                <p>כשיש לך דברים - אתה מודה לבורא עולם שהביא לך אותם.</p>
+            </div>
+        </div>
+        <p>לפי זה, לא מספיק שאדם מודה לה' יתברך בפיו בלבד. כשם שבשעת צרה הוא מתפלל מכל ליבו, כך תהיה ההודיה - שכל ליבו יחוש קרבת ה'. ולכן כתב הכוזרי שאם עולה עליזותו של אדם עד למדרגת הזמר והריקוד, גם זה עבודת ה'. אפשר גם לקרוא מתוך ההודיה לה' שירי שבח והודיה, כגון: נשמת, ברכי נפשי, אנעים זמירות, מזמור לתודה, אל אדון, עזרת אבותינו.</p>
+
+        <div class="story-box">
+            <span class="story-title">היהודי שבלע סיגריה בוערת</span>
+            <p>עובדה הייתה אצל אחד הצדיקים זי"ע, ר' אריה לוין זצ"ל, שבעירו גר יהודי אחד ירוד ושפל מאוד, עד ששכח אפילו את עיקר השבת. הצדיק היה מקרב אותו באהבה יתרה, בבחינת "אוהב את הבריות ומקרבן לתורה".</p>
+            <p>פעם אחת הלך אותו יהודי ברחוב באמצע יום שבת קודש, כשסיגריה בפיו, ופתאום ראה מרחוק שהצדיק מתקרב ובא כנגדו. חשב: אם יראה אותי הצדיק מחלל שבת, יהיה לו צער עצום שאין לשער - ואיך אוכל לגרום לו כזה צער וכאב, ואאבד את קרבתי הגדולה אליו? אך גם לזרוק את הסיגריה אינו יכול, כי הצדיק ירגיש בדבר.</p>
+            <p>ובלע את הסיגריה הבוערת, אף שהיה בכך סכנה - רק כדי שלא יבוא צער וכאב לצדיק.</p>
+        </div>
+        <p>זהו כוח <em>היראה מחמת אהבה</em>: כאשר אדם מתבונן בדעתו שאבינו שבשמים אוהב אותו באהבה גדולה ועצומה, וגומל לו חסדים מרובים וטובות עצומות, נופלת עליו יראה ופחד שלא לגרום לו צער כביכול - שהרי עלול הדבר לבטל את האהבה ביניהם. וזה הרעיון שדרשו חז"ל על "מָה ה' אֱלֹקֶיךָ שׁוֹאֵל מֵעִמְּךָ כִּי אִם לְיִרְאָה" - "אל תקרי מה אלא מאה": באמצעות מאה הודיות שמודה אדם מתוך פנימיות הלב, בבחינת "אשירה לה' בחיי", אפשר לו גם היום להשיג יראה, שכן הוא חושש לגרום צער לאבינו שבשמים שאוהב אותו כל כך.</p>
+        <div class="highlight-box">
+            <p><strong>יסוד נוסף מהגמרא:</strong> "וְכֵיוָן שֶׁבָּא דָוִד בָּאתָה תְּפִלָּה... וְכֵיוָן שֶׁבָּאת תְּפִלָּה בָּאתָה עֲבוֹדָה... וְכֵיוָן שֶׁבָּאת עֲבוֹדָה בָּאתָה תּוֹדָה... מִסְתַּבְּרָא עֲבוֹדָה וְהוֹדָאָה חֲדָא מִלְּתָא הִיא." מבאר רש"י: "חדא מילתא היא - אף הודאה עבודה של מקום הוא" (מגילה י"ח ע"א). כלומר, עבודה והודאה הם למעשה אותו דבר.</p>
+        </div>
+        <div class="highlight-box">
+            <h4>לסיכום:</h4>
+            <ul>
+                <li>"עבודה" פירושה שיעבוד הלב להרגשה שהכול מגיע מאת ה'.</li>
+                <li>יש שתי דרכים לזה: כשחסר לך - לבקש; כשיש לך - להודות.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- עמוד 13: פרק 9 -->
+    <div class="page" data-title="מדוע נענשים אם לא מודים לה'?">
+        <span class="chapter-label">פרק 9</span>
+        <h2 id="section9">מדוע נענשים אם לא מודים לה'?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>מאה אנשים שמתו בכל יום בזמן דוד המלך - ותקנת מאה הברכות</li>
+                <li>נתון מדהים מימינו: 28,000 חולים בשנה, מאה ליום</li>
+                <li>משל: האיש שזרק דולרים ואבנים מקומה 80</li>
+            </ul>
+        </div>
+        <p>כתוב בתורה מהו העונש על חוסר ההודיה: "וְעָבַדְתָּ אֶת אֹיְבֶיךָ אֲשֶׁר יְשַׁלְּחֶנּוּ ה' בָּךְ בְּרָעָב וּבְצָמָא וּבְעֵירֹם וּבְחֹסֶר כֹּל, וְנָתַן עֹל בַּרְזֶל עַל צַוָּארֶךָ עַד הִשְׁמִידוֹ אֹתָךְ" (דברים כ"ח, מ"ח).</p>
+        <p>באור הדברים לפי פשוטו: אדם שלא מודה לה' יתברך על כל הטוב שנותן לו - ה' כביכול אומר לו: אם אינך מכיר שאני נתתי לך, אקח את הדברים, ואולי כך תבין שהכול ממני. כדרך שאומרים לילד: אם אינך אומר תודה - לא ניתן לך. כך כביכול אומר הבורא: מי שלא יודע שהדברים הם ממני, לא מגיע לו.</p>
+        <div class="quote-box">
+            <p>"הַסּוּג הָרְבִיעִי, הֵם הַטּוֹבוֹת שֶׁהֵיטִיב ה' לְבֶן אָדָם בּוֹדֵד... וְעַל כָּל אַחַת מִטּוֹבוֹת אֵלֶּה מְחֻיָּב הָאָדָם בַּעֲבוֹדָה יְתֵרָה לֵאלֹקִים... וּמִי שֶׁמַּמְרֶה אֶת הָאֱלֹקִים בַּטּוֹבוֹת אֲשֶׁר נָתַן לוֹ בְּאֹפֶן מְיֻחָד, שֶׁלֹּא מוֹדֶה עֲלֵיהֶם... הֲרֵי הוּא נוֹפֵל מִכָּל מַדְרֵגוֹתָיו הַמְיֻחָדוֹת, וְהַבּוֹרֵא עוֹשֶׂה עִמּוֹ חֶשְׁבּוֹן מְדֻקְדָּק בָּעוֹלָם הַזֶּה... וְעוֹנְשׁוֹ יִהְיֶה עוֹד יוֹתֵר חָמוּר בָּעוֹלָם הַבָּא."</p>
+            <span class="source-tag">חובת הלבבות, פרק ו'</span>
+        </div>
+
+        <h3>מאה אנשים, מאה קללות, מאה ברכות</h3>
+        <p>מצאנו כבר בהיסטוריה כזה דבר. דוד המלך תיקן מאה ברכות, שכתוב עליו "הֻקַם עֹל" - בגימטרייה מאה, כי בכל יום היו מתים מאה נפשות מישראל ולא היו יודעים על מה, עד שחקר והבין ברוח הקודש, ותיקן להם לישראל מאה ברכות (טור אורח חיים סימן מ"ו).</p>
+        <div class="quote-box">
+            <p>"תִּקְּנוּ חֲכָמֵינוּ לְבָרֵךְ בְּכָל יוֹם מֵאָה בְּרָכוֹת, מִפְּנֵי שֶׁהָיָה קַבָּלָה בְּיָדָם מִפִּי דָוִד הַמֶּלֶךְ עָלָיו הַשָּׁלוֹם... שֶׁהָיוּ מֵתִים מִיִּשְׂרָאֵל מֵאָה נְפָשׁוֹת בְּכָל יוֹם וְלֹא הָיוּ יוֹדְעִים עַל מָה הָיוּ מֵתִים, עַד שֶׁחָקַר וְהֵבִין בְּרוּחַ הַקֹּדֶשׁ שֶׁעָלָיו, שֶׁהָיָה מִפְּנֵי שֶׁלֹּא הָיוּ מְשַׁבְּחִין וּמְבָרְכִין כָּרָאוּי לַה' יִתְבָּרֵךְ עַל כָּל טוֹבוֹתָיו שֶׁהִשְׁפִּיעַ עֲלֵיהֶם, עַל כֵּן הָיוּ מֵתִים בְּעֹנֶשׁ זֶה. לְפִיכָךְ עָמַד הוּא וְתִקֵּן לָהֶם לְיִשְׂרָאֵל מֵאָה בְּרָכוֹת שֶׁיְּבָרְכוּ בְּכָל יוֹם, כְּנֶגֶד הַמֵּאָה שֶׁמֵּתוּ, וּמֵאָז פָּסְקוּ לָמוּת."</p>
+            <span class="source-tag">הלבוש, סימן מ"ז</span>
+        </div>
+        <p>מדוע דווקא מאה? שכן מאה הוא בניין שלם, עשר ברכות לכל אחת מעשר הספירות - כשיש ברכה יש השפעה בכל, וכשאין ברכה יש חסרון בכל. ובלשון ספר הרוקח: "מה ה' אלקיך שואל מעמך - אל תקרי 'מה' אלא 'מאה', להגן על צ"ח קללות הכתובים במשנה תורה, וכשתדרוש 'גם כל חלי וכל מכה' - הרי מאה".</p>
+
+        <div class="highlight-box">
+            <h4>נתון מדהים מימינו</h4>
+            <p>לפי נתוני "עזר מציון", בשנת תשע"ב חלו במחלה הארורה 28,000 איש. בחשבון פשוט: 354 ימים בשנה, מהם כ-74 ימי שבת וחג, נשארים 280 ימי חול. יוצא כי בכל יום מימות החול חלו כמאה איש - בדיוק כמו בזמן דוד המלך! והנתון הזה חוזר על עצמו שנה אחר שנה. צריך לגלות מה ה' שואל מאיתנו בדור הזה.</p>
+        </div>
+
+        <div class="story-box">
+            <span class="story-title">דולרים ואבנים מקומה שמונים</span>
+            <p>אדם אחד עלה לחדר בקומה שמונים. כאשר רצה לצאת, לחץ על הידית - אך אבוי, הידית לא נפתחה. יצא האיש למרפסת וזעק לעזרה, אך אף אחד לא שמע. פתאום עלה בליבו רעיון: הוציא את ארנקו והחל לזרוק ערימות של דולרים לכיוון הרחוב שמתחתיו, בוודאי - חשב - ירימו האנשים את ראשם לראות מהו מקור השפע, ואוכל לבקש את עזרתם.</p>
+            <p>והנה עטו האנשים על השטרות, דחפו ורדפו - אך אף אחד לא ניסה לחשוב מי זרק אותם. "מה יהיה גורלי?" הרהר האיש. והנה ראה אבנים שנשארו מהבנייה, ועלה בליבו רעיון נוסף. חיכה שהמדרכה תחתיו תתרוקן, לקח אבן וזרק. העוברים ושבים נבהלו והזעיקו משטרה. ענה האיש לשאלת השוטרים: "כאשר מישהו לא מבין בטובות, צריך לבוא אליו ברעות".</p>
+            <p><strong>הנמשל:</strong> ה' שולח ליהודי הרבה דברים טובים, אך אנשים לא זוכרים בכלל מי שלח - רק עסוקים לתפוס עוד ועוד. מה עושה ה'? לא נעים, אך זו הברירה היחידה: לזרוק אבנים, צרות וייסורים, ואז נזכרים בבורא עולם, שנותן הכול.</p>
+        </div>
+        <p class="emphasis">בואו ניזכר כשיש דולרים - שלא נצטרך אבנים.</p>
+    </div>
+
+    <!-- עמוד 14: פרק 10 -->
+    <div class="page" data-title="מה קורה כשאדם מודה לה' יתברך?">
+        <span class="chapter-label">פרק 10</span>
+        <h2 id="section10">מה קורה כשאדם מודה לה' יתברך?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>האם יש מחיצת ברזל בין ישראל לאביהם שבשמים?</li>
+                <li>כוח ההודיה לקרוע גזרי דין ולמחול על עוון</li>
+            </ul>
+        </div>
+        <p><strong>כיצד מבטלים גזירות רעות?</strong> "אָמַר רַבִּי אֶלְעָזָר, מִיּוֹם שֶׁחָרַב בֵּית הַמִּקְדָּשׁ נִפְסְקָה חוֹמַת בַּרְזֶל בֵּין יִשְׂרָאֵל לַאֲבִיהֶם שֶׁבַּשָּׁמַיִם" (ברכות ל"ב ע"ב). אך במקום אחר מובא: "אֲפִלּוּ מְחִצָּה שֶׁל בַּרְזֶל אֵינָהּ מַפְסֶקֶת בֵּין יִשְׂרָאֵל לַאֲבִיהֶם שֶׁבַּשָּׁמַיִם" (סוטה ל"ח ע"ב). האם ישנה מחיצה או לא?</p>
+        <div class="qa-box">
+            <p>מיישב המהרש"א: "לְעִנְיַן תְּפִלָּה דְּרַחֲמֵי קָאָמַר דְּאֵינָהּ נִשְׁמַעַת כָּל כָּךְ מִיּוֹם שֶׁחָרַב בֵּית הַמִּקְדָּשׁ, אֲבָל לְעִנְיַן שִׁבְחוֹ יִתְבָּרֵךְ בִּקְדֻשָּׁה וּבְרָכוֹ, הָא אָמְרִינָן דַּאֲפִלּוּ מְחִצָּה שֶׁל בַּרְזֶל אֵינָהּ מַפְסֶקֶת בֵּין יִשְׂרָאֵל לַאֲבִיהֶם שֶׁבַּשָּׁמַיִם."</p>
+            <p>כלומר: כיום תפילותינו אינן תמיד בכוונה ובלב הרצויים לה', ולכן יש מחיצות רבות המפסיקות. אבל <span class="emphasis">כשיהודי מודה לה', אף מלאך לא מעיז להפסיק שבחו של מלך מלכי המלכים</span>, וכך אף מחיצה אינה מפסקת, ושבחו מגיע עד למלך מלכי המלכים.</p>
+        </div>
+        <div class="quote-box">
+            <p>"אָמַר רַבִּי יְהוֹשֻׁעַ בֶּן לֵוִי, כָּל הָעוֹנֶה 'אָמֵן יְהֵא שְׁמֵיהּ רַבָּא' בְּכָל כֹּחוֹ, קוֹרְעִין לוֹ גְּזַר דִּינוֹ."</p>
+            <span class="source-tag">שבת קי"ט ע"ב</span>
+        </div>
+        <p>נתבונן מהו המקור לכך שמי שעונה "אמן יהא שמיה רבא" - גם אם יש עליו גזרה רעה, זו מתבטלת בזכות מצווה זו. הפסוק שעליו מבססים זאת: "בִּפְרֹעַ פְּרָעוֹת בְּיִשְׂרָאֵל בְּהִתְנַדֵּב עָם בָּרְכוּ ה'" - "בפרוע פרעות" הכוונה לביטול הפורענויות שנגזרו על ישראל (רש"י). ומדוע בוטלו הגזרות? "בהתנדב עם ברכו ה'" - כשמתנדבים ישראל לברך את בוראם, כלומר להודות לו. וכמו ש"מאה ברכות" משמעו מאה הודיות, כך "בפרוע פרעות" משמעו: מי שמודה לה', מתבטלות ממנו גזרות רעות.</p>
+        <p>וממשיכה הגמרא שם: "רַבִּי חִיָּא בַּר אַבָּא אָמַר רַבִּי יוֹחָנָן, אֲפִלּוּ יֵשׁ בּוֹ שֶׁמֶץ שֶׁל עֲבוֹדָה זָרָה מוֹחֲלִין לוֹ" - מכאן שהמודה לה' מוחלים לו על חטאיו.</p>
+        <div class="verse-box">
+            <p>"לֹא הִבִּיט אָוֶן בְּיַעֲקֹב וְלֹא רָאָה עָמָל בְּיִשְׂרָאֵל, ה' אֱלֹקָיו עִמּוֹ וּתְרוּעַת מֶלֶךְ בּוֹ"<span class="source-tag" style="margin-top:6px;">במדבר כ"ג, כ"א</span></p>
+        </div>
+        <p>מתי ה' לא מביט בעבירות שאדם עושה? כאשר "ה' אלוקיו עמו" - כשהאדם מרגיש שה' נמצא עמו ואוהבו, ו"תרועת מלך בו" - כשהוא שר ומריע למלך. ואז ה' אוהב אותו, ו"עַל כָּל פְּשָׁעִים תְּכַסֶּה אַהֲבָה".</p>
+        <div class="highlight-box">
+            <p><strong>לסיכום:</strong> בכוח ההודיה לה' - לקרוע כל גזר דין, ואפילו למחול על עבודה זרה.</p>
+        </div>
+    </div>
+
+    <!-- עמוד 15: פרק 11 -->
+    <div class="page" data-title="מנין שתפקיד האדם להודות?">
+        <span class="chapter-label">פרק 11</span>
+        <h2 id="section11">מנין שתפקיד האדם בעולם להודות לה'?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>מדוע חמור כל כך חוסר בהכרת הטוב? מבט לעולם הבא ותפקיד האדם</li>
+                <li>למה אנו נקראים "יהודים" - עם ששמו הוא הודיה</li>
+                <li>מדרשים: "לא בראתי עולמי אלא בשביל שירה וזמרה"</li>
+            </ul>
+        </div>
+        <p>מדוע מגיע עונש כה חמור על חוסר בהודיה? כדי להבין זאת נצטרך לברר מה תפקיד האדם בעולם, ומה יעשה בעולם הבא.</p>
+        <p>למה קוראים ליהודי דווקא "יהודי", ולא "ראובני" או "שמעוני"? כי מטרת היהודי היא <span class="emphasis">להודות</span>. למה קוראים לנו "עם ישראל"? כי מטרתנו לשיר שירים לה'.</p>
+        <div class="quote-box">
+            <p>"'כָּל פֹּעַל ה' לַמַּעֲנֵהוּ' - הַכֹּל עָשָׂה בִּשְׁבִיל קִלּוּסוֹ, כְּמוֹ 'עֱנוּ לַה' בְּתוֹדָה'."</p>
+            <span class="source-tag">רש"י, משלי ט"ז, ד'</span>
+        </div>
+        <div class="quote-box">
+            <p>"מַאי 'כִּי זֶה כָּל הָאָדָם' - כָּל הָעוֹלָם לֹא נִבְרָא אֶלָּא בִּשְׁבִיל זֶה. כְּלוֹמַר, כִּי הָעוֹלָם נִבְרָא לְצֹרֶךְ בְּנֵי אָדָם, וּבְנֵי אָדָם נִבְרְאוּ לְשַׁבֵּחַ וּלְהוֹדוֹת לַקָּדוֹשׁ בָּרוּךְ הוּא, וּלְעָבְדוֹ וּלְיִרְאָה אוֹתוֹ. וְאֵלּוּ שֶׁעוֹשִׂין כֵּן, מְקַיְּמִין הָעוֹלָם; וְהַשְּׁאָר הֲרֵי הֵן כִּבְהֵמָה שֶׁאֵין עוֹשִׂין הַדְּבָרִים שֶׁנִּבְרְאוּ בִּשְׁבִילָן."</p>
+            <span class="source-tag">שיטה מקובצת, ברכות ו' ע"ב</span>
+        </div>
+        <div class="quote-box">
+            <p>"אָמַר הַקָּדוֹשׁ בָּרוּךְ הוּא, אֶפְתַּח לְשׁוֹן פֶּה שֶׁל כָּל בְּנֵי בָּשָׂר וָדָם, כְּדֵי שֶׁיִּהְיוּ מְקַלְּסִין לְפָנַי בְּכָל יוֹם וּמַמְלִיכִין אוֹתִי בְּאַרְבַּע רוּחוֹת הָעוֹלָם, <strong>שֶׁאִלְמָלֵא שִׁירָה וְזִמְרָה שֶׁהֵם אוֹמְרִים לְפָנַי בְּכָל יוֹם, לֹא בָּרָאתִי אֶת עוֹלָמִי</strong>."</p>
+            <span class="source-tag">מדרש אותיות דרבי עקיבא, נוסח א', אות א'</span>
+        </div>
+        <p>ומנין שאף אדם הראשון פתח פיו בשירה? שנאמר: "מִזְמוֹר שִׁיר לְיוֹם הַשַּׁבָּת, טוֹב לְהֹדוֹת לַה' וּלְזַמֵּר לְשִׁמְךָ עֶלְיוֹן" (תהלים צ"ב) - טוב להודות לה' בארץ מתוך בני אדם, ולזמר לשמך עליון בשמי מרום בתוך מלאכי השרת.</p>
+        <div class="quote-box">
+            <p>"וְכַוָּנַת כָּל הַמִּצְוֹת שֶׁנַּאֲמִין בֵּאלֹקֵינוּ וְנוֹדֶה אֵלָיו שֶׁהוּא בְּרָאָנוּ, וְהִיא כַּוָּנַת הַיְּצִירָה... וְכַוָּנַת רוֹמְמוּת הַקּוֹל בַּתְּפִלּוֹת, וְכַוָּנַת בָּתֵּי הַכְּנֵסִיּוֹת וּזְכוּת תְּפִלַּת הָרַבִּים, זֶהוּ שֶׁיִּהְיֶה לִבְנֵי אָדָם מָקוֹם בּוֹ יִתְקַבְּצוּ וְיוֹדוּ לָקֵל שֶׁבְּרָאָם וְהִמְצִיאָם, וִיפַרְסְמוּ זֶה וְיֹאמְרוּ לְפָנָיו: בְּרִיּוֹתֶיךָ אֲנַחְנוּ."</p>
+            <span class="source-tag">רמב"ן, שמות י"ג, ט"ז</span>
+        </div>
+        <div class="quote-box">
+            <p>"אֲבָל הַשֵּׁם בָּרָא אֶת הָאָדָם בַּתַּחְתּוֹנִים שֶׁיַּכִּיר אֶת בּוֹרְאוֹ וְיוֹדֶה לִשְׁמוֹ."</p>
+            <span class="source-tag">רמב"ן, דברים ל"ב, כ"ו</span>
+        </div>
+        <div class="quote-box">
+            <p>"לְעוֹלָם יִצְעַק אָדָם עַל הֶעָתִיד לָבוֹא וִיבַקֵּשׁ רַחֲמִים, וְיִתֵּן הוֹדָיָה עַל מַה שֶּׁעָבַר וְיוֹדֶה וִישַׁבַּח כְּפִי כֹּחוֹ. וְכָל הַמַּרְבֶּה לְהוֹדוֹת אֶת ה' וּלְשַׁבְּחוֹ תָּמִיד, הֲרֵי זֶה מְשֻׁבָּח."</p>
+            <span class="source-tag">רמב"ם, הלכות ברכות פרק י'</span>
+        </div>
+        <p>וכעין זה אנו אומרים בברכת "אלוקי נשמה": <span class="emphasis">"כָּל זְמַן שֶׁהַנְּשָׁמָה בְקִרְבִּי מוֹדֶה אֲנִי לְפָנֶיךָ"</span>. ובברכת "הקל הקדוש" אומרים: <span class="emphasis">"וְכָל הַקְּדוֹשִׁים בְּכָל יוֹם יְהַלְלוּךָ סֶּלָה"</span>.</p>
+        <div class="highlight-box">
+            <h4>מקורות נוספים (מהערות המחבר)</h4>
+            <p>הרמב"ן על "לֹא תִרְצַח לֹא תִנְאָף לֹא תִגְנֹב" (שמות כ', י"ג) כותב: הנה ציוויתיך להודות שאני בורא הכול, בלב ובמעשה, ולכבד את האבות בעבור שהם שותפים ביצירה. אם כן, השמר פן תחבל את מעשה ידיי ותשפוך דם האדם אשר בראתי לכבודי ולהודות לי - <span class="emphasis">מדוע אסור לרצוח? כי אז יהיה פחות מי שיודה</span>.</p>
+            <p>ובספר שערי תשובה מבואר על "בֶּן תִּשְׁעִים לָשׁוּחַ" - מלשון "יִשְׁפֹּךְ שִׂיחוֹ" ו"וַיֵּצֵא יִצְחָק לָשׂוּחַ בַּשָּׂדֶה": יצחק אבינו תיקן את תפילת מנחה, כי לאחר שהגיע לגיל תשעים, ראוי לו שכל עסקו יהיה בתפילות ובתהילות השם ולשיח בנפלאותיו.</p>
+        </div>
+    </div>
+
+    <!-- עמוד 16: פרק 12 -->
+    <div class="page" data-title="מה נעשה בשמיים אחרי מאה ועשרים?">
+        <span class="chapter-label">פרק 12</span>
+        <h2 id="section12">מה נעשה בשמיים אחרי מאה ועשרים?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>קרבן תודה - הקרבן היחיד שלא יתבטל לעתיד לבוא</li>
+                <li>מכתב מאליהו: מדוע כפיות טובה מסכנת את חלקנו בעולם הבא</li>
+            </ul>
+        </div>
+        <p>מדוע כל כך חשוב לה' שנודה לו? לשם כך נצטרך להבין מה יעשה האדם בעולם הבא. בברכת "יוצר אור" נאמר: "וְכֻלָּם מְשַׁבְּחִים וּמְפָאֲרִים וּמַעֲרִיצִים..." - כולם שרים ומודים לה', שירת המלאכים. ובתפילת "ובא לציון" נאמר: "יְהִי רָצוֹן... וְנִזְכֶּה לְחַיֵּי הָעוֹלָם הַבָּא לְמַעַן יְזַמֶּרְךָ כָבוֹד וְלֹא יִדֹּם, ה' אֱלֹקַי לְעוֹלָם אוֹדֶךָּ" - <span class="emphasis">בשמים נשיר ונזמר לה' יתברך</span>.</p>
+        <div class="quote-box">
+            <p>"וִימֵי הוֹדָאָה זֶה בְּחִינַת שַׁעֲשׁוּעַ עוֹלָם הַבָּא, כִּי זֶה עִקַּר שַׁעֲשׁוּעַ עוֹלָם הַבָּא - לְהוֹדוֹת וּלְהַלֵּל לִשְׁמוֹ הַגָּדוֹל יִתְבָּרֵךְ וּלְהַכִּיר אוֹתוֹ יִתְבָּרֵךְ... כִּי שְׁאָר כָּל הַדְּבָרִים יִתְבַּטְּלוּ לֶעָתִיד, כֻּלָּם בִּבְחִינַת: כָּל הַקָּרְבָּנוֹת בְּטֵלִין, חוּץ מִקָּרְבַּן תּוֹדָה שֶׁלֹּא יִשָּׁאֵר לֶעָתִיד רַק בְּחִינַת תּוֹדָה וְהוֹדָאָה."</p>
+            <span class="source-tag">ליקוטי מוהר"ן, חלק ב', תורה ב'</span>
+        </div>
+        <div class="quote-box">
+            <p>"לֶעָתִיד לָבוֹא כָּל הַקָּרְבָּנוֹת בְּטֵלִין וְקָרְבַּן תּוֹדָה אֵינוֹ בָּטֵל, כָּל הַתְּפִלּוֹת בְּטֵלוֹת הַהוֹדָאָה אֵינָהּ בְּטֵלָה, הֲדָא הוּא דִכְתִיב 'קוֹל שָׂשׂוֹן וְקוֹל שִׂמְחָה קוֹל חָתָן וְקוֹל כַּלָּה' (ירמיה ל"ג) - קוֹל אוֹמְרִים 'הוֹדוּ אֶת ה' צְבָאוֹת' וְגוֹ' זוֹ הוֹדָאָה, 'וּמְבִיאִין תּוֹדָה בֵּית ה'' זֶה קָרְבַּן תּוֹדָה."</p>
+            <span class="source-tag">מדרש רבה, ויקרא פרשה ט'</span>
+        </div>
+        <p>וכן אומרים במזמור "אשרי יושבי ביתך", הנאמר שלוש פעמים בכל יום: "אֲרוֹמִמְךָ אֱלֹקַי הַמֶּלֶךְ וַאֲבָרְכָה שִׁמְךָ לְעוֹלָם וָעֶד. בְּכָל יוֹם אֲבָרְכֶךָּ וַאֲהַלְלָה שִׁמְךָ לְעוֹלָם וָעֶד." מדוע נכפלה לשון ברכה? מבואר: מי שמרומם את שם ה' בעולם הזה יזכה בעולם הבא לדרגה גבוהה יותר לברך את שם ה'. ומי שבעולם הזה זוכה לברך את שם ה', יזכה לעולם ועד להלל את שמו.</p>
+        <div class="highlight-box">
+            <p>ומכאן מובן מאמר חז"ל: "כָּל הָאוֹמֵר תְּהִלָּה לְדָוִד בְּכָל יוֹם מֻבְטָח לוֹ שֶׁהוּא בֶּן הָעוֹלָם הַבָּא" - אין הכוונה למי שרק אומר בפיו, אלא למי שמקיים ובאמת נוהג להודות לה' על כל דבר טוב שנותן לו כל ימיו - יש בו את מהות העולם הבא, ששם זו העבודה. "אָמַר רַבִּי יְהוֹשֻׁעַ בֶּן לֵוִי: כָּל הָאוֹמֵר שִׁירָה בָּעוֹלָם הַזֶּה זוֹכֶה וְאוֹמְרָהּ לָעוֹלָם הַבָּא" (סנהדרין צ"א ע"ב).</p>
+        </div>
+        <p>המכתב מאליהו (חלק א', עמוד 50-51) מבאר יסוד עמוק ביותר: "אָמְרוּ חַז"ל: כָּל הַכּוֹפֵר בְּטוֹבָתוֹ שֶׁל חֲבֵרוֹ, סוֹפוֹ שֶׁיִּכְפֹּר בְּטוֹבָתוֹ שֶׁל מָקוֹם. מַהוּ 'לְבַסּוֹף'?" כאשר ימות האדם ונפשו תשוב אל עולם האמת, תבין הנפש את הדברים כפי שהם באמת, אך שאיפותיה הרעות אשר היו לה בחייה כבר נקבעו בה והיו לקניין נפש. כך גם בעניין הכפירה בטובה: מי שלא הכיר טובה, גם כשיגיע לעולם האמת ויבין את הצורך בהכרת הטובה, לא יוכל להרגיש בהודאה - <span class="emphasis">בתענוג ההודאה שיהיה לעתיד לבוא, שהיא הדבקות בו יתברך</span>. וזה המוסר שייסרו חז"ל את כפויי הטובה: שיפסידו, חלילה, את חלקם לעולם הבא.</p>
+        <div class="highlight-box">
+            <p>ולכן דווקא בשירת הים, שנאמרה בלשון עתיד ("אָז יָשִׁיר"), רומזת התורה לתחיית המתים - כי, כדברי הזוהר הקדוש: "כָּל מַאן דְּזָכֵי לְהַאי שִׁירָתָא בְּהַאי עָלְמָא, זָכֵי לָהּ בְּעָלְמָא דְּאָתֵי" - <span class="emphasis">מי ששר היום, יזכה ל"אז ישיר" בתחיית המתים</span>.</p>
+        </div>
+    </div>
+
+    <!-- עמוד 17: פרק 13 -->
+    <div class="page" data-title="מה תפקיד דורנו?">
+        <span class="chapter-label">פרק 13</span>
+        <h2 id="section13">מה תפקיד דורנו?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>פרשת ניצבים ו"אחד עשר הפרשיות" - האם רומזות לדורנו?</li>
+                <li>שתי חזרות בתשובה: מיראה, ומאהבה מתוך שפע</li>
+            </ul>
+        </div>
+        <p>בדורנו אנו השפיע ה' שפע עצום על עם ישראל - שפע שלא היה כמותו מאז ימי שלמה המלך. מה רוצה ה' מאיתנו? תפקיד הדור שלנו הוא לתקן את פגם החורבן: שלא הודו לה' יתברך כאשר היה להם שפע טוב. בדורנו נתן ה' שפע רב, וביקש ממנו להודות.</p>
+        <p>בחומש דברים יש אחת עשרה פרשיות. מובא בשם הגר"א, בספר "נבואה והשגחה", שכל פרשה כנגד מאה שנים באלף השישי. לפי זה, פרשת ניצבים היא כנגד המאה השמינית - המאה שלנו - ואכן חלקים גדולים ממנה התקיימו בדורנו. מה כתוב בפרשה זו שה' רוצה מהדור שלנו, הדור שחזר לארץ ישראל?</p>
+        <div class="verse-box">
+            <p>"וְהָיָה כִי יָבֹאוּ עָלֶיךָ כָּל הַדְּבָרִים הָאֵלֶּה... וַהֲשֵׁבֹתָ אֶל לְבָבֶךָ בְּכָל הַגּוֹיִם אֲשֶׁר הִדִּיחֲךָ ה' אֱלֹקֶיךָ שָׁמָּה. וְשַׁבְתָּ עַד ה' אֱלֹקֶיךָ וְשָׁמַעְתָּ בְקֹלוֹ... אַתָּה וּבָנֶיךָ בְּכָל לְבָבְךָ וּבְכָל נַפְשֶׁךָ"<span class="source-tag" style="margin-top:6px;">דברים ל', א'-ב'</span></p>
+        </div>
+        <p>"וְאֵין יִשְׂרָאֵל נִגְאָלִין אֶלָּא בִּתְשׁוּבָה, וּכְבָר הִבְטִיחָה תוֹרָה שֶׁסּוֹף יִשְׂרָאֵל לַעֲשׂוֹת תְּשׁוּבָה בְּסוֹף גָּלוּתָן וּמִיָּד הֵן נִגְאָלִין" (רמב"ם, הלכות תשובה פרק ז'). <span class="emphasis">תנועת התשובה התחילה בדורנו.</span> ומהמשך הפרשה: "וְשָׁב ה' אֱלֹקֶיךָ אֶת שְׁבוּתְךָ... וְשָׁב וְקִבֶּצְךָ מִכָּל הָעַמִּים" - עם ישראל חוזר לארץ ישראל. "אִם יִהְיֶה נִדַּחֲךָ בִּקְצֵה הַשָּׁמָיִם, מִשָּׁם יְקַבֶּצְךָ ה' אֱלֹקֶיךָ" - גם מרוסיה ומתימן, מכל מקום בעולם, כל יהודי יכול להגיע לארץ ישראל.</p>
+        <div class="qa-box">
+            <p><strong>קושיית המפרשים:</strong> כיוון שכבר אמר שישובו בתשובה בפסוק ב', למה חוזר עוד פעם בפסוק ו' שישובו בתשובה?</p>
+            <p><strong>תירוץ:</strong> בפסוק ב' יש חזרה בתשובה <em>מיראה</em> ("והיה כי יבואו עליך כל הדברים... הברכה והקללה") - עדיין אין זו תשובה מעולה, וגם אינה מתקנת את החטא הקדום של עם ישראל שלא עבדו את ה' כשהיה להם שפע גדול. אחרי שבאים לארץ, ובמיוחד בעשרים השנה האחרונות, יש שפע גדול וטוב, כמו שכתוב "וְהֵיטִבְךָ" - וכאן צריך תשובה חדשה: לעבוד את ה' כשיש שפע. ומהי אותה עבודה? לאהוב את ה' על ידי שמודים לו על כל השפע הטוב שנתן לנו.</p>
+        </div>
+        <p>אם כן, תפקיד דורנו - שאין בו גזרות ורדיפות - להתחיל לעבוד את ה' מאהבה, ולא ליפול מחמת השפע הגדול ל"כוחי ועוצם ידי עשה לי את החייל הזה", אלא להודות לה' על כל השפע. וצריך לדעת שבדורנו יש סייעתא דשמיא מיוחדת לזכות לאהבת ה': "וּמָל ה' אֱלֹקֶיךָ אֶת לְבָבְךָ... לְאַהֲבָה אֶת ה' אֱלֹקֶיךָ" - כמו שכתב הרמב"ן שיתקיים בנו "הבא להיטהר מסייעים אותו".</p>
+        <div class="highlight-box">
+            <p>וממשיכה הפרשה: "רְאֵה נָתַתִּי לְפָנֶיךָ הַיּוֹם אֶת הַחַיִּים וְאֶת הַטּוֹב... אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם <strong>לְאַהֲבָה אֶת ה' אֱלֹקֶיךָ לָלֶכֶת בִּדְרָכָיו</strong>". שים לב: מה ה' מבקש בעיקר? לאהוב אותו וללכת במידותיו הטובות - שהרי זה הודגש בנפרד משאר המצוות. "הַעִדֹתִי בָכֶם הַיּוֹם אֶת הַשָּׁמַיִם וְאֶת הָאָרֶץ, הַחַיִּים וְהַמָּוֶת נָתַתִּי לְפָנֶיךָ הַבְּרָכָה וְהַקְּלָלָה... וּבָחַרְתָּ בַּחַיִּים" - <span class="emphasis">במה תלויים החיים והמוות? "לְאַהֲבָה אֶת ה' אֱלֹקֶיךָ, לִשְׁמֹעַ בְּקֹלוֹ וּלְדָבְקָה בוֹ."</span></p>
+        </div>
+    </div>
+
+    <!-- עמוד 18: פרק 14 -->
+    <div class="page" data-title="כיצד משיגים אהבת ה'?">
+        <span class="chapter-label">פרק 14</span>
+        <h2 id="section14">כיצד אדם משיג אהבת ה'?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>"אל תקרי מה אלא מאה" - מה הקשר בין יראה קשה למאה ברכות קלות</li>
+                <li>שפת רש"י: "דכיון דנהנה צריך להודות למי שבראם"</li>
+            </ul>
+        </div>
+        <p>לימד אותנו הכוזרי: כאשר אדם מודה לה' על כל דבר טוב שנתן לו, זה מביא אותו לאהוב את ה'. וכן דרשו על "וְאָהַבְתָּ אֵת ה' אֱלֹקֶיךָ... בְּכָל מְאֹדֶךָ" - "בכל מידה ומידה שהוא מודד לך, הווי מודה לו במאוד מאוד; על ידי שתודה לו על כל דבר, תאהב אותו".</p>
+        <p>במסכת מנחות (מ"ג ע"ב) אמרו: "חַיָּב אָדָם לְבָרֵךְ מֵאָה בְּרָכוֹת בְּכָל יוֹם, שֶׁנֶּאֱמַר 'וְעַתָּה יִשְׂרָאֵל מָה ה' אֱלֹקֶיךָ שׁוֹאֵל מֵעִמָּךְ'". כיצד למדו חז"ל מהפסוק "מה ה' אלוקיך שואל מעמך" חיוב מאה ברכות? "אַל תִּקְרָא 'מָה' אֶלָּא 'מֵאָה'".</p>
+        <div class="qa-box">
+            <p><strong>קושיה:</strong> הן ניצבת ועומדת קושיית הגמרא (ברכות ל"ג): האם יראת שמים דבר פעוט הוא? הרי יראת שמים היא דבר קשה מאוד, ככתוב: "אִם תְּבַקְשֶׁנָּה כַכָּסֶף וְכַמַּטְמוֹנִים תַּחְפְּשֶׂנָּה" (משלי ב'). וכיצד אמר עליה הכתוב מה שפירושו "מעט", כמו "ונחנו מה", וכי אם בסך הכול "ליראה"?</p>
+            <p><strong>תשובה:</strong> בא בורא עולם וגילה לנו שיש <span class="emphasis">דרך קלה ונוחה</span>, בבחינת "מה", להגיע ליראת שמים, אהבת ה', ולעבדו בכל הלב והנפש - והיא מאה הודיות בכל יום. על ידי שאדם מודה לה' באמת מכל ליבו על הדברים הטובים שנותן לו, הוא זוכה להגיע ליראת שמים ולאהבת ה' מתוך הכרת הטוב.</p>
+        </div>
+        <div class="quote-box">
+            <p>"רַזַ"ל אָמְרוּ לְתָרֵץ קֻשְׁיָא 'מָה ה' אֱלֹקֶיךָ'. אַל תִּקְרֵי 'מָה' אֶלָּא 'מֵאָה'. וְזֶה רֶמֶז עַל ק' בְּרָכוֹת שֶׁחַיָּב אָדָם לְבָרֵךְ בְּכָל יוֹם... וְלֹא הָיָה זֶה טֹרַח גָּדוֹל לָאָדָם בְּהַשְׁלָמַת ק' בְּרָכוֹת, אָמַר 'מָה ה' אֱלֹקֶיךָ שׁוֹאֵל מֵעִמָּךְ'."</p>
+            <span class="source-tag">ספר צרור המור, פרשת עקב</span>
+        </div>
+        <p>מה יסוד הברכה? הודיה לה' על מה שנתן לנו. כדברי רש"י (ברכות ל"ה ע"א): <span class="emphasis">"דְּכֵיוָן דְּנֶהֱנָה, צָרִיךְ לְהוֹדוֹת לְמִי שֶׁבְּרָאָם"</span>. ולכן תיקן דוד המלך את "מזמור לתודה" בפרק ק' בתהילים, לרמוז שצריך האדם לומר "תודה" מאה פעם ביום - וכן המילה "מודים" עולה בגימטרייה מאה. וכתב רש"י על סוטה מ' ע"א: "עַל שֶׁאָנוּ מוֹדִים לָךְ - עַל שֶׁנָּתַתָּ בְּלִבֵּנוּ לִהְיוֹת דְּבוּקִים בָּךְ וּמוֹדִים לָךְ" - <span class="emphasis">שעל ידי שמודים לה' זוכים להיות דבוקים בו.</span></p>
+    </div>
+
+    <!-- עמוד 19: פרק 15 -->
+    <div class="page" data-title="האם היום אנו מודים לה'?">
+        <span class="chapter-label">פרק 15</span>
+        <h2 id="section15">האם היום אנו מודים לה'?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>שתי כוונות בברכה: כוונת המילים, וכוונת הלב</li>
+                <li>סיפור: הנפטר שנדון על ברכות שאמר בלי כוונת לב</li>
+            </ul>
+        </div>
+        <p>הרבה אנשים נפלו לרדיפת הממון - כל היום רוצים רק עוד ועוד. חלקם נפלו לחוסר אמונה, ובכלל אינם חושבים שה' נתן, אלא "כוחי ועוצם ידי עשה לי את החייל הזה". ויש שמברכים, אך "כמצוות אנשים מלומדה", ללא רגש הכרת הטוב לה' - וזה כמעט כמו לא לברך כלל.</p>
+        <p>כבר רבות נכתב על חשיבות אמירת הברכות באופן נכון ועל הכוונה במילים. אך ישנה כוונה עמוקה יותר, שמתבארת מעיון קל בגמרא, שם מבואר מקורו של חיוב ברכת הנהנין: "סְבָרָא הוּא, אָסוּר לוֹ לָאָדָם שֶׁיֵּהָנֶה מִן הָעוֹלָם הַזֶּה בְּלֹא בְּרָכָה". ומהי הסברה? מפרש רש"י: "דְּכֵיוָן דְּנֶהֱנָה, צָרִיךְ לְהוֹדוֹת לְמִי שֶׁבְּרָאָם".</p>
+        <div class="two-columns">
+            <div class="col-purple">
+                <h4 style="margin-top:0;">כוונת המוח</h4>
+                <p>שידע בשעת הברכה את פירוש המילים היוצאות מפיו, ושלא ישוטטו רעיונותיו בזמן שהוא מדבר עם בוראו.</p>
+            </div>
+            <div class="col-gold">
+                <h4 style="margin-top:0;">כוונת הלב</h4>
+                <p>הרגש והשתפכות הנפש - קיום ה"סברה" המחייבת את האדם להודות. זוהי עיקרה של הברכה, וללא זה, לא קוימה מטרתה כלל.</p>
+            </div>
+        </div>
+        <p>ועל דבר זה - שלא מודים לה' <span class="emphasis">עם רגש</span> - חרה אף ה' בעמו: "יַעַן כִּי נִגַּשׁ הָעָם הַזֶּה בְּפִיו וּבִשְׂפָתָיו כִּבְּדוּנִי וְלִבּוֹ רִחַק מִמֶּנִּי, וַתְּהִי יִרְאָתָם אֹתִי מִצְוַת אֲנָשִׁים מְלֻמָּדָה" (ישעיה כ"ט, י"ג).</p>
+        <div class="story-box">
+            <span class="story-title">האיש שנדון כל יום על ברכות ללא כוונה</span>
+            <p>מעשה באחד שמת, ולאחר שנים עשר חודש נגלה בחלום לאחד מקרוביו. אמר לו: "בכל יום דנים אותי על שלא הייתי מדקדק לברך ברכת המוציא, ברכת הפירות וברכת המזון בכוונת הלב". שאל אותו קרובו: "והלא אין משפט רשעים בגהינום אלא שנים עשר חודש?" אמר לו: "אין דנים אותי בפורענויות חזקים כמו בשנים עשר החודשים הראשונים" - אך עדיין דנים אותו על כך.</p>
+            <span class="source-tag">ספר חסידים, סימן מ"ו; מובא בחיי אדם, חלק א' כלל ה'</span>
+        </div>
+        <p>ספר חסידים מזהיר: אסור לזרוק ברכה מהפה במהירות, אלא יכוון האדם לבו לברך לשם בוראו אשר הפליא חסדו עמו ונתן לו את הפירות או הלחם ליהנות מהם - ולא יעשה כאדם העושה דבר במנהג בלבד, ומוציא דברים מפיו בלא הגיון הלב.</p>
+    </div>
+
+    <!-- עמוד 20: פרק 16 -->
+    <div class="page" data-title="מה עושים למעשה - כיצד מודים לה'?">
+        <span class="chapter-label">פרק 16</span>
+        <h2 id="section16">מה עושים למעשה - כיצד מודים לה'?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>ההצעה המעשית: רבע שעה רצופה של הודיה בכל בוקר</li>
+                <li>"לא נפלאת היא ולא רחוקה" - כי קרוב אליך הדבר בפיך ובלבבך</li>
+            </ul>
+        </div>
+        <p>קשה לעורר את הלב - אין זה דבר קל. הפתרון הנפלא ביותר שיש: שכל יום ייקח האדם פסק זמן, לפחות רבע שעה, ויתחיל להודות לה' יתברך על הטוב. אפשר עד מאה הודאות, במילים שלו: "תודה רבה ה' על זה ועל זה", וכן הלאה. וכשהלב יתעורר, יפתח ספר תהילים מפרק צ"ה ואילך ויתחיל לקרוא בכל הרגש.</p>
+        <p>נלמד מחז"ל כיצד עושים זאת: חז"ל תיקנו ברכות השחר - הרבה הודיות לה' על דברים שונים. כך אדם צריך לרשום לעצמו הרבה דברים להודות עליהם - מסתבר שראוי כשלושים דברים לפחות. לאחר ההודיה תיקנו חז"ל פסוקי דזמרה - כך ראוי לאדם להתמלא בהכרת הטוב לה' ולשיר לו שירים, לומר פסוקי תהילים שמדברים אליו וכדומה. <span class="emphasis">העיקר לומר פסוקי הודיה.</span></p>
+        <p>דבר זה צריך לקחת לפחות כחמש עשרה דקות רצופות. לא מועיל שאדם מודה פה ושם - צריך רצף, כי רק כך הלב מתעורר. אפשר להוסיף גם במשך כל היום, אבל לא פחות מחמש עשרה דקות רצופות בבוקר. ניתן לרשום על דף במשך היום את כל הדברים הטובים שקרו, ואז למחרת בשעת ההודיה יודה לה' עליהם.</p>
+        <div class="verse-box">
+            <p>"כִּי הַמִּצְוָה הַזֹּאת אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם, לֹא נִפְלֵאת הִוא מִמְּךָ וְלֹא רְחֹקָה הִוא"<span class="source-tag" style="margin-top:6px;">דברים ל', א'</span></p>
+        </div>
+        <p>על איזו מצווה מדובר? אם התורה לא כתבה במפורש, כנראה משום שיש מצווה אחת שכל הפרשה זועקת אותה. מסביר הרמב"ן: לשוב אל ה' בכל הלב - כלומר, אנחנו שומרי מצוות, אבל רגש הכרת הטוב כלפי ה' חסר; וה' רוצה לב, "רַחֲמָנָא לִבָּא בָּעֵי". ושמא יאמר האדם: וכי משיגים לב? זה קשה מאוד! ממשיכה התורה: "לֹא בַשָּׁמַיִם הִוא... וְלֹא מֵעֵבֶר לַיָּם הִוא" - התורה יודעת שיאמרו: לבנות לב זה קשה מאוד, מי יכול?</p>
+        <div class="highlight-box">
+            <p>באה התורה ואומרת: <span class="emphasis">"כִּי קָרוֹב אֵלֶיךָ הַדָּבָר מְאֹד, בְּפִיךָ וּבִלְבָבְךָ לַעֲשׂתוֹ"</span>. תדבר עם ה' בפה שלך, מילים מהלב - תודה, תבקש - בזה תקנה אהבת ה'; בדוק ומנוסה. אם אדם ידבר יום-יום עם ה', יודה לו על כל מה שנתן לו, יאמר לו פסוקי הודיה מכל הלב ויבקש מה' יתברך את מה שחסר לו כמו מאבא טוב.</p>
+        </div>
+    </div>
+
+    <!-- עמוד 21: פרק 17 -->
+    <div class="page" data-title="מעלות המתרגל להודות">
+        <span class="chapter-label">פרק 17</span>
+        <h2 id="section17">מעלות נפלאות שזוכה המתרגל להודות לה'</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>ההודיה כתרופה נגד גאווה - "כוחי ועוצם ידי"</li>
+                <li>הזוהר: מצוות האהבה עולה על כל עבודות שבעולם</li>
+            </ul>
+        </div>
+        <p>בנוסף לכל המעלות שנמנו עד כה, מי שיתרגל להודות יזכה לאמונה שהכול מאת ה', ויזכה גם לענווה - שהיא מידה טובה מכל המידות הטובות.</p>
+        <div class="quote-box">
+            <p>"הִשָּׁמֶר לְךָ פֶּן תִּשְׁכַּח אֶת ה' אֱלֹקֶיךָ" (דברים ח', י"א) - אַזְהָרָה שֶׁלֹּא יִתְגָּאוּ בְּנֵי יִשְׂרָאֵל כְּשֶׁהַקָּדוֹשׁ בָּרוּךְ הוּא מַשְׁפִּיעַ לָהֶם טוֹבָה, וְיֹאמְרוּ שֶׁבְּכֹחָם וּבְעֹצֶם יָדָם וְעַמְלָם עָשׂוּ וְהִרְוִיחוּ כָּל זֶה, וְלֹא יַחֲזִיקוּ טוֹבָה לְהַקָּדוֹשׁ בָּרוּךְ הוּא מֵחֲמַת גַּאֲוָנָם."</p>
+            <span class="source-tag">רמב"ן, סמ"ג לאוין ס"ד</span>
+        </div>
+        <p>שעל זה עונה המקרא: "פֶּן תֹּאכַל וְשָׂבָעְתָּ... וְרָם לְבָבֶךָ, וְשָׁכַחְתָּ אֶת ה' אֱלֹקֶיךָ... וְאָמַרְתָּ בִּלְבָבֶךָ, כֹּחִי וְעֹצֶם יָדִי עָשָׂה לִי אֶת הַחַיִל הַזֶּה, וְזָכַרְתָּ אֶת ה' אֱלֹקֶיךָ כִּי הוּא הַנֹּתֵן לְךָ כֹּחַ לַעֲשׂוֹת חָיִל". מכאן אזהרה שלא יתגאה האדם במה שחננו הבורא - בין בממון, בין ביופי, בין בחכמה - אלא יהיה עניו מאוד ושפל ברך לפני ה' ולפני אנשים, <span class="emphasis">ויודה לבוראו שחננו זו המעלה.</span></p>
+        <div class="highlight-box">
+            <p>כשמתבוננים בפסוקים רואים שהתורה מציעה את ההודאה לה' כהצלה מגאווה. לכן ברכת המזון מופיעה בפרשה בסמוך לפני איסור הגאווה - שכן ההודאה לה' מצילה מהגאווה של "כוחי ועוצם ידי". <span class="emphasis">צריך לדעת שדבר זה כה גדול, שלפני שאדם עוסק בכל דבר רוחני שבעולם, חייב הוא ליחד שעה לשם כך.</span></p>
+        </div>
+        <div class="quote-box">
+            <p>"רְחִימוּ דָא סָלִיק עַל כָּל פּוּלְחָנִין דְּעָלְמָא" - מצוות האהבה עולה על כל העבודות שבעולם. "בְּהַאי אִתְיַיקַּר שְׁמֵיהּ דְּקֻדְשָׁא בְּרִיךְ הוּא יַתִּיר מִכֹּלָּא" - במצוות אהבה מתכבד שמו של הקדוש ברוך הוא יותר מכול. "וְאִתְבָּרֵיךְ בְּרִיךְ הוּא לְעָלַם וּלְעָלְמֵי עָלְמִין" - על ידי אהבת האדם להקדוש ברוך הוא נמשך שפע ברכות לכל הספירות, לעולם ולעולמי עולמים.</p>
+            <span class="source-tag">זוהר הקדוש, פרשת ואתחנן</span>
+        </div>
+        <p>יוצא שבזמן שאדם מודה להקדוש ברוך הוא, הוא עושה את הדבר הגדול ביותר שיכול לעשות בעולם. ועוד, שאחרי כן כל המצוות שהוא עושה יהיו מתוך אהבה - נמצא שכל מצוותיו במשך היום שוות הרבה יותר. ועוד יזכה האדם, על ידי ההודיה, להגיע ליראת הרוממות - שכן אדם שמודה כל יום לה' לא מסוגל אחר כך לחטוא, שהרי כיצד יחטא למי שעשה לו כל כך הרבה טובות. וכן הוא מתבייש לחטוא למי שהוא יודע שמחר עליו לבוא ולהודות לו.</p>
+    </div>
+
+    <!-- עמוד 22: פרק 18 -->
+    <div class="page" data-title="חיוב הוצאת ההודאה בפה">
+        <span class="chapter-label">פרק 18</span>
+        <h2 id="section18">מקורות לחיוב להוציא הודאה מפיו</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>ספר החינוך: מדוע לא די להאמין בלב, וצריך לומר בפה</li>
+                <li>משל הפטיש והאבן הגדולה - כיצד "מפוצצים" לב אבן</li>
+            </ul>
+        </div>
+        <div class="quote-box">
+            <p>"לְפִי שֶׁהָאָדָם מְעוֹרֵר מַחְשְׁבוֹתָיו וּמְצַיֵּר בִּלְבָבוֹ הָאֱמֶת בְּכֹחַ דִּבְרֵי פִּיו, עַל כֵּן בְּהֵיטִיב אֵלָיו הַשֵּׁם בָּרוּךְ הוּא... רָאוּי לוֹ לְעוֹרֵר לְבָבוֹ בְּדִבְרֵי פִּיהוּ, וְלַחְשֹׁב כִּי הַכֹּל הִגִּיעַ אֵלָיו מֵאֵת אֲדוֹן הָעוֹלָם, וִיסַפֵּר חֲסָדָיו יִתְבָּרֵךְ עָלֵינוּ וְעַל כָּל עַם יִשְׂרָאֵל דֶּרֶךְ כְּלָל."</p>
+            <span class="source-tag">ספר החינוך, מצווה תר"ו</span>
+        </div>
+        <p>ספר "תורת המנחה" מוסיף יסוד חשוב: כל ההשגה, הידיעה והעבודה אינה אלא בלב, והיא בכוח - <span class="emphasis">וצריך להוציאה מן הכוח אל הפועל על ידי הפה</span>. וכשמאמין בלב ומוציא בפה, השיג האדם את תכלית המבוקש והגיע למעלה הגדולה - מעלת השכל, ונדבק בשכל האלוקי.</p>
+        <div class="quote-box">
+            <p>"וְכַאֲשֶׁר מוֹצִיאָה לַפֹּעַל בַּפֶּה, כְּאִלּוּ כָּרַת בְּרִית מִילָה בְּפִיו וְגִלָּה וְסִלֵּק הָעָרְלָה. וּבְהִגָּלוֹתוֹ וְהֵרָאוֹתוֹ כֹּחַ הָאֱמוּנָה שֶׁבַּלֵּב בַּפֶּה, אָז הוּא נִקְשָׁר וְנִדְבָּק בַּשֵּׂכֶל הָאֱלֹקִי."</p>
+            <span class="source-tag">ספר תורת המנחה, דרשה כ"ד</span>
+        </div>
+        <p>וזהו שאמר משה לישראל: "כִּי קָרוֹב אֵלֶיךָ הַדָּבָר מְאֹד בְּפִיךָ וּבִלְבָבְךָ לַעֲשׂתוֹ" - מהו "לעשותו"? להידבק בזוהר העליון. כך שאלו ישראל את משה: "באיזה עניין אנו יכולים להשיג ולהידבק ביוצר הכול?" אמר להם: "קרוב אליכם הדבר מאוד, בפיך ובלבבך לעשותו".</p>
+        <div class="two-columns">
+            <div class="col-purple">
+                <h4 style="margin-top:0;">אבן עזרא, פרשת נצבים</h4>
+                <p>"בפיך ובלבבך" - שכל המצוות עיקרן הלב, ויש מהן זכר בפה לחיזוק הלב.</p>
+            </div>
+            <div class="col-gold">
+                <h4 style="margin-top:0;">אבן עזרא, פרשת ואתחנן</h4>
+                <p>עיקר כל המצוות ליישר את הלב, ורובן זֵכֶר בלבד. והמזיד והשוגג יוכיחו - שהמעשה בפה משפיע על הלב.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- עמוד 23: פרק 19 -->
+    <div class="page" data-title="כיצד זוכים להיות מאושרים">
+        <span class="chapter-label">פרק 19</span>
+        <h2 id="section19">כיצד זוכים להיות מאושרים</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>חובת הלבבות: מדוע אי-הכרה בטוב הורסת את השמחה בו</li>
+                <li>"איזהו עשיר - השמח בחלקו"</li>
+            </ul>
+        </div>
+        <div class="quote-box">
+            <p>"הִתְחַיְּבוּ אַנְשֵׁי הַחָכְמָה וְהַמַּדָּע לְהָעִיר מִי שֶׁלֹּא הֵבִין טוֹבוֹת הַבּוֹרֵא... כִּי כַּמָּה טוֹבוֹת מָנַע בְּעָלֵיהֶן לֵהָנוֹת מֵהֶן, וְעִרְבֵּב שִׂמְחָתוֹ בָּהֶן, חֶסְרוֹן הַכָּרָתוֹ אוֹתָן וִידִיעָתוֹ מַעֲלוֹתָן... וּכְשֶׁמְּעִירִים אֶת בַּעֲלֵי הַטּוֹבוֹת לְהַכִּיר אָפְנֵי יִתְרוֹנָן... יִגְדַּל שִׁבְחָם וְתִרְבֶּה הוֹדָאָתָם לַמֵּטִיב לָהֶם, וְיַגִּיעוּ בָּזֶה אֶל הַתַּעֲנוּג וְהַהֲנָאָה בָּהֶן בָּעוֹלָם הַזֶּה, וְלִשְׂכָר טוֹב לָעוֹלָם הַבָּא."</p>
+            <span class="source-tag">חובת הלבבות, שער הבחינה</span>
+        </div>
+        <p><span class="emphasis">כשאדם לא מכיר בטובות שיש לו - הוא לא נהנה מהן ולא שמח בהן.</span> אך כשמעוררים את בעל הטובה להתבונן כל יום בטובות ה' ולבוא מתוך כך להודיה ולאהבת ה' - שבשביל זה נתן ה' את הטובות - הוא זוכה להנאה ולתענוג בעולם הזה, ולשכר טוב בעולם הבא.</p>
+        <div class="quote-box">
+            <p>"אֵיזֶהוּ עָשִׁיר? הַשָּׂמֵחַ בְּחֶלְקוֹ."</p>
+            <span class="source-tag">משנה, אבות פרק ד', משנה א'</span>
+        </div>
+        <p>אדם שמסתכל על מה שיש לו, ולא על מה שחסר לו - הוא שמח ומאושר, ומכוח זה מודה לה'. ובקהלת נאמר: "וְשִׁבַּחְתִּי אֲנִי אֶת הַשִּׂמְחָה אֲשֶׁר אֵין טוֹב לָאָדָם תַּחַת הַשֶּׁמֶשׁ כִּי אִם לֶאֱכֹל וְלִשְׁתּוֹת וְלִשְׂמוֹחַ, וְהוּא יִלְוֶנּוּ בַעֲמָלוֹ" (קהלת ח', ט"ו). מפרש רש"י: "'את השמחה' - שיהא שמח בחלקו ועוסק בפקודים ישרים משמחי לב, ולא יהא שטוף אחר הרבות הון בנשך ומרבית וגזל".</p>
+        <div class="highlight-box">
+            <p>כל מי שאינו שמח בחלקו ושטוף אחרי הממון, בא לידי עבירות גזל ואונאה וריבית; ומי שאינו שמח בחלקו לעניין אהבת אשתו, שטוף אחר נשים ומהרהר באשת איש. "לאכול ולשתות" - ממה שחנן לו הקדוש ברוך הוא, ולשמוח בחלקו. <span class="emphasis">אין דבר טוב יותר מלהיות שמח בחלקו.</span> השמחה מונעת את האדם מלחטוא בעבירות שבין אדם לחברו, ומביאה אותו לאהבת אשתו, ומשם - לאהבת כל ישראל. כל פעם שאדם מתאמץ לשמוח, הוא מוסיף במידת השמחה בחלקו - כי כדי לשמוח, חייבים להתרכז במה שיש.</p>
+        </div>
+    </div>
+
+    <!-- עמוד 24: פרק 20 -->
+    <div class="page" data-title='"ונהפוכו" לא רק בפורים'>
+        <span class="chapter-label">פרק 20</span>
+        <h2 id="section20">"ונהפוכו" לא רק בפורים</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>חידוש הטור: "הרעה לעובדי ה' - היא שמחתם וטובתם"</li>
+                <li>סיפור: השמחה מבעד לייסורים של ר' שמואל הומינר זצוק"ל</li>
+            </ul>
+        </div>
+        <p>במשנה שנינו: "חייב אדם לברך על הרעה כדרך שמברך בשמחה על הטובה". מקובל בעולם שהסיבה לכך היא שה' עושה רק טוב - וזה נכון. אבל ישנו חידוש נפלא, שחובה לכל יהודי לדעתו, שחידש רבנו הטור ונפסק בשולחן ערוך (סימן רכ"ב, סעיף ג'):</p>
+        <div class="quote-box">
+            <p>"כִּי הָרָעָה לְעוֹבְדֵי הַשֵּׁם הִיא שִׂמְחָתָם וְטוֹבָתָם, כֵּיוָן שֶׁמְּקַבֵּל מֵאַהֲבָה מַה שֶּׁגָּזַר עָלָיו הַשֵּׁם, נִמְצָא שֶׁבְּקַבָּלַת רָעָה זוֹ הוּא עוֹבֵד אֶת הַשֵּׁם, שֶׁהִיא שִׂמְחָה לוֹ."</p>
+            <span class="source-tag">טור, שולחן ערוך אורח חיים רכ"ב, ג'</span>
+        </div>
+        <p>פירוש חדש בטעם השמחה וההודאה: היות וכשקורה לאדם רעה, הוא זוכה לקיים בכך הרבה מאוד מצוות - ולכן הוא שמח, לא בייסורים עצמם אלא בכך שזיכה אותו ה' בהרבה מצוות. יהודי בן מעלה מפנים לעצמו: המצווה הגדולה ביותר היא לחשוב שאני אוהב את ה' וה' אוהב אותי. וכיוון שכשרע לאדם קשה יותר לחשוב זאת - כי לעיניים זה נראה הפוך - נמצא שאם למרות הקושי האמין שה' אוהב אותו ועושה איתו רק טוב, קיים היום מצווה גדולה, ולכן הוא שמח מאוד. <span class="emphasis">נמצא שיש "ונהפוכו" כל השנה - כשרע לך, זה הכי טוב לך.</span></p>
+        <div class="quote-box">
+            <p>"כְּשֶׁיַּחְשֹׁב הָאָדָם שֶׁכָּל מַה שֶּׁהַקָּדוֹשׁ בָּרוּךְ הוּא עוֹשֶׂה עִמּוֹ לְטוֹבָתוֹ הוּא עוֹשֶׂה... הִנֵּה לֹא תֶחֱלַשׁ אַהֲבָתוֹ מִפְּנֵי כָּל דֹּחַק אוֹ כָּל צַעַר, אֶלָּא אַדְּרַבָּא תִּגְבַּר וְנוֹסְפָה בּוֹ תָּמִיד."</p>
+            <span class="source-tag">מסילת ישרים, פרק י"ט</span>
+        </div>
+
+        <div class="story-box">
+            <span class="story-title">"איזה טוב, איזה אושר..."</span>
+            <p>שלושת רבעי שנה התייסר ר' שמואל הומינר זצוק"ל, מחבר ספר "עבד המלך", במחלה האיומה. המצב הידרדר והייסורים כתשו את הגוף. בני המשפחה ומקורביו סבבו את המיטה, פניהם מכורכמות - ורק על פני החולה הייתה שפוכה נהרה: "אח, כמה טוב, איזה אושר..."</p>
+            <p>טוב? אושר? הרי לא הוא אומר זאת - השולחן ערוך אומר זאת: "הרעה לעובדי ה' - היא שמחתם וטובתם! כיוון שמקבל עליו באהבה מה שגזר עליו ה', נמצא שבקבלת רעה זו, עובד את ה'". השולחן ערוך - הרי זו הלכה.</p>
+            <p>אך לגבי ר' שמואל, הגדרה זו כללית מדי - ולכן הוא פירט אותה לפרטיה. כמה מצוות מקיים האדם בקבלת הייסורים באהבה?</p>
+        </div>
+        <div class="highlight-box">
+            <ul>
+                <li><strong>א.</strong> "וְיָדַעְתָּ עִם לְבָבֶךָ כִּי כַּאֲשֶׁר יְיַסֵּר אִישׁ אֶת בְּנוֹ, ה' אֱלֹקֶיךָ מְיַסְּרֶךָּ".</li>
+                <li><strong>ב.</strong> "מוּסַר ה' בְּנִי אַל תִּמְאָס".</li>
+                <li><strong>ג.</strong> "וְאַל תָּקֹץ בְּתוֹכַחְתּוֹ".</li>
+                <li><strong>ד.</strong> מצוות הביטחון - "בִּטְחוּ בַה' עֲדֵי עַד", "הִנֵּה קֵל יְשׁוּעָתִי אֶבְטַח וְלֹא אֶפְחָד" - האם יש טובה גדולה מזו?</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- עמוד 25: פרק 21 -->
+    <div class="page" data-title="כיצד זוכים להתענג על ה'?">
+        <span class="chapter-label">פרק 21</span>
+        <h2 id="section21">כיצד זוכים להתענג על ה'?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>המסילת ישרים: התענוג על ה' - כבר בעולם הזה או רק בבא?</li>
+                <li>דוגמאות מחיי אישה ואיש: לראות את ה' בכל שמחה קטנה</li>
+                <li>משל: המלך, האבן הגדולה והפטיש</li>
+            </ul>
+        </div>
+        <div class="quote-box">
+            <p>"יְסוֹד הַחֲסִידוּת וְשֹׁרֶשׁ הָעֲבוֹדָה הַתְּמִימָה הוּא שֶׁיִּתְבָּרֵר וְיִתְאַמֵּת אֵצֶל הָאָדָם מַהִי חוֹבָתוֹ בְּעוֹלָמוֹ... וְהִנֵּה מַה שֶּׁהוֹרוּנוּ חֲכָמֵינוּ זִכְרוֹנָם לִבְרָכָה הוּא, שֶׁהָאָדָם לֹא נִבְרָא אֶלָּא לְהִתְעַנֵּג עַל ה' וְלֵהָנוֹת מִזִּיו שְׁכִינָתוֹ, שֶׁזֶּהוּ הַתַּעֲנוּג הָאֲמִתִּי וְהָעִדּוּן הַגָּדוֹל מִכָּל הָעִדּוּנִים שֶׁיְּכוֹלִים לְהִמָּצֵא. וּמְקוֹם הָעִדּוּן הַזֶּה בֶּאֱמֶת הוּא הָעוֹלָם הַבָּא."</p>
+            <span class="source-tag">מסילת ישרים, פרק א'</span>
+        </div>
+        <div class="qa-box">
+            <p><strong>שאלה שהתעוררה:</strong> המסילת ישרים פותח - "האדם לא נברא אלא להתענג" - ומסיים - "ומקום העידון..."; פתח ב"תענוג" וסיים ב"עידון" - מדוע? מבאר ה"עלי שור": "נראה מדיוק דבריו חידוש עצום, כי מקומו של התענוג על ה' הוא <em>העולם הזה</em>!"</p>
+            <p>ומוסיף ה"אור הצפון" (הסבא מסלבודקא): "תענוג זה לא רק על עולם הבא נאמר, אלא גם על העולם הזה - מוקף הוא האדם עונג ועידון בלי גבול ובלי תכלית... רק ההרגל, מתוך קביעות ותמידיות, הוא המפריע להרגשת הנועם, הוא המחליש ופוגם את התענוג."</p>
+        </div>
+        <p>כיצד אדם מתענג על ה' יתברך כבר כאן בעולם הזה? אדם שהצליח לקנות בליבו רגש חזק מאוד שכל מה שקורה לו הוא רק מה' יתברך, וביטל ממנו את הגאווה של "כוחי ועוצם ידי" - על כל דבר טוב שיש לו הוא מודה לה', וממילא כשהוא מתענג מדבר מסוים, הוא מתענג <em>על ה'</em>.</p>
+        <div class="two-columns">
+            <div class="col-purple">
+                <h4 style="margin-top:0;">דוגמה מחיי אישה</h4>
+                <p>ילד חדש מתחיל לחייך, מתחיל לצחוק - כמה שמחה זה גורם לאמא! אישה שחיה שכל הטוב מביא ה', מודה ומתענגת על ה' בכל חיוך של ילד, בכל שלב בהתפתחותו. זהו חיים של להתענג על ה'.</p>
+            </div>
+            <div class="col-gold">
+                <h4 style="margin-top:0;">דוגמה מחיי איש</h4>
+                <p>אברך הולך ללמוד תורה בכולל, ובעזרת ה' נהנה וטוב לו שם. הוא מודה ומתענג על ה', וחושב: מי יצר כזה מושג נפלא של כוללים, שאפשר לשבת ולומד ועוד לקבל מלגה? בזמן הלל היו צריכים לשלם כדי להיכנס לבית המדרש, והיום משלמים לי! כמה נפלאה התורה הקדושה - תענוג של לימוד, כשכל חידוש הוא חי שה' הוא הנותן לו אותו, ככתוב "נותן התורה" - <strong>והוא מתענג על ה'.</strong></p>
+            </div>
+        </div>
+        <div class="quote-box">
+            <p>"'אָז תִּתְעַנַּג עַל ה'' - אִם תִּתְעַנַּג אֶת הַשַּׁבָּת תִּתְעַנַּג עַל ה', כְּלוֹמַר יַשְׁפִּיעַ לְךָ טוֹבוֹת עַד שֶׁתִּתְעַנַּג עָלָיו וְתוֹדֶה בּוֹ וּבְטוּבוֹ כִּי מֵאִתּוֹ הַכֹּל וּבְיָדוֹ, וְהַתַּעֲנוּג עַל ה' הוּא תַּעֲנוּג הַנֶּפֶשׁ."</p>
+            <span class="source-tag">רד"ק, ישעיה נ"ח, י"ד</span>
+        </div>
+        <p>עבודה גדולה היא להגיע לכך, וזוהי ענווה אמיתית. אבל נתן לנו ה' דרך נפלאה: "בפיך ובלבבך לעשותו" - על ידי דיבורים בפה, נוצר עוד ועוד לב.</p>
+        <div class="story-box">
+            <span class="story-title">משל המלך, האבן הגדולה והפטיש</span>
+            <p>סיפר רבנו הקדוש (מברסלב) לרבי יעקב יוסף על עבודת ה', כדרכו תמיד: משל למלך ששלח את בנו למרחקים ללמוד חכמות. אחר כך בא הבן לבית המלך, מלומד בכל החכמות. פעם אחת ציווה המלך על הבן לקחת אבן גדולה מאוד, כמו אבן ריחיים, ולשאת אותה אל עליית ביתו.</p>
+            <p>מסתמא לא היה יכול הבן להרים את האבן, כי הייתה גדולה וכבדה מאוד. ונצטער הבן מאוד על שאינו יכול למלא את רצון אביו המלך - עד שגילה לו המלך את דעתו: "היעלה על דעתך שאני מצווה עליך דבר כבד כזה - לקחת את האבן כמו שהיא ולהרים אותה? התוכל לעשות דבר כזה על פי חכמתך? כל כוונתי הייתה שתיקח פטיש חזק ותכה בו, ותפוצץ את האבן לחתיכות קטנות - ובזה תוכל להעלות את האבן אל העלייה."</p>
+            <p><strong>הנמשל:</strong> כמו כן ציווה עלינו ה' יתברך שנישא את לבבנו אליו בשמים, ולבבנו הוא לב אבן גדול וכבד מאוד, ואי אפשר להרים אותו בשום אופן. רק על ידי שנקח פטיש - שהוא הדיבור - ועל ידו נשבר ונפוצץ את לב האבן, אז נוכל להרים אותו להשם יתברך.</p>
+            <span class="source-tag">ספר השתפכות הנפש, אות מ"ח</span>
+        </div>
+        <p>ושאל את רבנו הרב הצדיק רבי יודיל: "איך לוקחים לב?" (כלומר, כיצד זוכים שהדיבורים ייאמרו מתוך התעוררות הלב?) השיב רבנו: "תאמרו לי, אצל איזה צדיק קיבלתם התעוררות הלב? העיקר הוא האמירה בפה - להרבות בפה דיבורים של תחנות ובקשות. <span class="emphasis">והתעוררות הלב באה ממילא.</span>"</p>
+    </div>
+
+    <!-- עמוד 26: פרק 22 -->
+    <div class="page" data-title="למה אנחנו בגלות וסובלים צרות?">
+        <span class="chapter-label">פרק 22</span>
+        <h2 id="section22">למה אנחנו בגלות וסובלים צרות?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>הסתירה בין הגמרא (שנאת חינם) לתורה (חוסר שמחה) - וכיצד מתיישבת</li>
+                <li>יעקב, לאה ורחל: מה זו "שנואה" בדרגות גבוהות של אהבה</li>
+                <li>מדוע בית שני נחרב בגלל מה שקורה בבית פנימה</li>
+            </ul>
+        </div>
+        <p>פרק חשוב ביותר. "אֲבָל מִקְדָּשׁ שֵׁנִי שֶׁהָיוּ עוֹסְקִין בְּתוֹרָה וּבְמִצְוֹת וּגְמִילוּת חֲסָדִים, מִפְּנֵי מָה חָרַב? מִפְּנֵי שֶׁהָיְתָה בּוֹ שִׂנְאַת חִנָּם, לְלַמֶּדְךָ שֶׁשְּׁקוּלָה שִׂנְאַת חִנָּם כְּנֶגֶד שָׁלוֹשׁ עֲבֵרוֹת: עֲבוֹדָה זָרָה, גִּלּוּי עֲרָיוֹת וּשְׁפִיכוּת דָּמִים" (יומא ט' ע"ב).</p>
+        <div class="qa-box">
+            <p><strong>שאלות:</strong> כיצד ייתכן שאדם העוסק בגמילות חסדים - ולא רק גומל חסד אלא <em>עוסק</em> בכך - ובכל זאת יש בו שנאה? ומדוע דווקא "אלו לאלו", ביטוי המבטא קרבה - השנאה הייתה בין הקרובים דווקא? וכיצד יתכן ששנאת חינם חמורה יותר מעבודה זרה, גילוי עריות ושפיכות דמים?</p>
+        </div>
+        <p>ולעומת זאת, הרמב"ן (בחוקותי, ויקרא כ"ו, ט"ז) כותב, וכן מובא בזוהר, שהקללות בפרשת "כי תבוא" הן כנגד חורבן בית שני והגלות עד ימינו אנו - הפרשה שבה מבואר שהעונש בא בגלל חוסר שמחה. <span class="emphasis">לפי זה יש סתירה מפורשת בין התורה לגמרא</span>: הגמרא אומרת ששנאת חינם החריבה את בית שני, והתורה אומרת שהקללות באו בגלל חוסר שמחה. כיצד תיתכן הסתירה?</p>
+        <div class="highlight-box">
+            <p>מבאר הרב שך (מחשבת מוסר, חלק א'): "בדרגות גבוהות יותר, כל חיסרון באהבת אחים ואהבת חברים - נחשב לשנאה". כאשר הגמרא אומרת ששררה שנאת חינם, הכוונה שלא אהבו מספיק אחד את השני.</p>
+        </div>
+        <div class="qa-box">
+            <p><strong>ראיה מהתורה:</strong> "וַיָּבֹא גַּם אֶל רָחֵל <strong>וַיֶּאֱהַב</strong> גַּם אֶת רָחֵל מִלֵּאָה... וַיַּרְא ה' <strong>כִּי שְׂנוּאָה</strong> לֵאָה" (בראשית כ"ט). הפסוקים כביכול סותרים: בפסוק הראשון נאמר שיעקב אהב את רחל <em>יותר</em> מלאה - ומשמע במפורש שאהב גם את לאה. ואילו בפסוק הבא כתוב שלאה "שנואה"? וכי ייתכן שיעקב אבינו, מהאבות הקדושים, שנא את אשתו?</p>
+            <p><strong>מתרצים רבנו בחיי והרמב"ן:</strong> חס ושלום שישנא יעקב את לאה, אלא ייאמר עליה "שנואה" ביחס לרחל, שהייתה אהובה יותר. <span class="emphasis">כלומר: בדרגות אהבה עמוקות, אפילו פחות-אהבה נקרא "שנאה".</span></p>
+        </div>
+        <p>מדוע נחרב בית שני? לא היה אוהב את אשתו כגופו. היו חסדים, גמ"חים ועוד - אבל בבית פנימה לא שרתה אהבה ואחווה. התופעה מוכרת גם בימינו: עוסקים בתורה, בגמילות חסדים, אך בבית עם האישה אין אהבת ישראל. אומרים בשם ר' חיים ויטאל זצ"ל, שמידותיו של האדם נמדדות אך ורק לפי יחסו אל אשתו - כי רק בבית האדם עושה מה שבאמת מבטא את מידותיו, ולא בגלל מניעים של כבוד וכדומה.</p>
+        <p>עיקר מטרת מצוות בין אדם לחברו היא לתקן את המידות; ואם רואים שבבית אתה לא אוהב - סימן שחסר לך במידת אהבה, שהרי מידה היא תמיד אותה מידה אצל כולם. ממילא גם אהבת ישראל, או שנאת חינם, הכול נמדד לפי מה שקורה בבית עם האישה. ובגלל חסרון באהבת איש לאשתו נחרב בית המקדש, ואנחנו עדיין בגלות. הנביא מלאכי, האחרון שהיה בבית שני, הזהיר את העם על חסרון באהבת האישה: "וַאֲמַרְתֶּם עַל מָה? עַל כִּי ה' הֵעִיד בֵּינְךָ וּבֵין אֵשֶׁת נְעוּרֶיךָ אֲשֶׁר אַתָּה בָּגַדְתָּה בָּהּ" (מלאכי ב', י"ד).</p>
+        <div class="highlight-box">
+            <p>בזה מתורץ מדוע "לא נתגלה עוונם" - כי אף אחד לא יודע מה קורה בתוך הבית; מדובר בחסרון אהבה, וזה דבר שרק ה' רואה. וכעת מובן כיצד ייתכן שאדם עוסק בתורה ובגמ"חים ובכל זאת יש שנאת חינם, ומה שאומר הירושלמי "אלו לאלו" - שהכוונה שבין איש לאשתו לא הייתה אהבה.</p>
+        </div>
+        <p>עוד יש לשאול: מדוע כל כך חמור חוסר אהבה? הגמרא בערכין ט"ו מבארת: "תחת אשר לא עבדת את ה' אלקיך" - במה לא עבדת? בעבודת השמחה. ומהי עבודת השמחה? הודיה שבח ושיר לה' יתברך. מדוע להיות בשמחה ובטוב לבב? מחמת רוב כל שנתן לך ה'. <span class="emphasis">בקיצור: לא הייתה לך הכרת הטוב על מתנות ה', ולא הודית.</span></p>
+        <p>למה אין לאדם הכרת הטוב כלפי ה'? כי הוא מקבל את הכול כמובן מאליו - מובן לו שהוא צריך להיות בריא, שתהיה לו פרנסה, שישב בכולל ויקבל משכורת. מתי נזכרים בבורא עולם? רק כאשר חסר משהו, ואז מתחילים לצעוק: "מדוע לקחת לי? למה אני סובל?" - ושואל בורא עולם: והיכן היית עד עכשיו? היכן ההודיה מכל הלב? האם רק כשרע לך אני קיים?</p>
+        <div class="highlight-box">
+            <p><strong>מדוע אין לאדם שלום בית?</strong> כל יועץ נישואין יאמר: הדבר הכי חשוב לשלום בית הוא הכרת הטוב. לא לחיות במחשבה שהכול מובן מאליו - באת הביתה, יש אוכל? תתבונן מי קנה אותו, מי בישל, מי שם על השולחן, מי הלביש את הילדים, מי בכלל הביא לך ילדים. לחיות עם רגש של הכרת הטוב כלפי בן הזוג הוא השורש לשלום בית - אחרת יש שנאת חינם, או לפחות חסרון באהבה.</p>
+        </div>
+        <p><span class="emphasis">נמצא כי אין סתירה בין הגמרא והתורה:</span> הגמרא דיברה על בין אדם לחברו, והתורה דיברה על בין אדם למקום - ושתיהן נוגעות באותה נקודה בדיוק: חסרון בהכרת הטוב, שגורם גם לחוסר אהבת ה' וגם לחוסר אהבת בן הזוג.</p>
+        <p>ולמה שנאת חינם חמורה מכל העבירות? "מִפְּנֵי מָה עָנַשׁ הַכָּתוּב בְּיוֹתֵר לִכְפוּיֵי טוֹבָה? מִפְּנֵי שֶׁהוּא כְּעִנְיַן כְּפִירָה בְּהַקָּדוֹשׁ בָּרוּךְ הוּא. אַף הַכּוֹפֵר בְּהַקָּדוֹשׁ בָּרוּךְ הוּא כּוֹפֵר טוֹב הוּא. הָאָדָם הַזֶּה כּוֹפֶה טוֹבָתוֹ שֶׁל חֲבֵרוֹ, לְמָחָר הוּא כּוֹפֶה טוֹבָתוֹ שֶׁל קוֹנוֹ." (משנת ר' אליעזר, פרק ז'). בשביל לרכוש את מידת הכרת הטוב כלפי ה', צריך לרכוש אותה קודם בבית: אם אדם מתרגל להודות לאשתו, לחיות עם הכרת הטוב לאשתו, אז יוכל להגיע גם להרגשת הטוב כלפי ה' - אך מי שלא חי עם הרגשת הטוב לאשתו, גם כלפי ה' אין לו הכרת הטוב פנימית, רק חיצונית.</p>
+        <div class="highlight-box">
+            <p><strong>לסיכום:</strong> לא יעזור לאדם שהוא יודע הרבה תורה ועוסק במצוות ובגמילות חסדים, אם אינו חש הכרת הטוב כלפי אשתו בשיעור המביא לאהבה - הוא עדיין חסר הרבה מאוד מעבודת ה'. הייסורים והצרות באים בגלל חוסר הודיה לה'. <span class="emphasis">מה למעשה?</span> לשבת כל יום רבע שעה-חצי שעה, להתבונן כמה טובות עושה בן הזוג, עד שתחוש הכרת הטוב כלפיו; ועוד רבע שעה, להתבונן כמה טובות עשה ה' ולהודות לו בפה, במילים שלך, עליהן.</p>
+        </div>
+    </div>
+
+    <!-- עמוד 27: פרק 23 -->
+    <div class="page" data-title="למה יש בעיות בשלום בית?">
+        <span class="chapter-label">פרק 23</span>
+        <h2 id="section23">למה יש היום בעיות רבות בשלום בית?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>מאמר הרה"ג מרגולין שליט"א: "מצא" או "מוצא" - הגמרא שרה לחתן</li>
+                <li>מדוע הטוב "מובן מאליו" והרע "לא נשכח"</li>
+            </ul>
+        </div>
+        <p>הגמרא בברכות מביאה: "בְּמַעֲרָבָא כִּי נָסֵיב אֵינָשׁ אִתְּתָא, אָמְרִי לֵיהּ הָכִי: מָצָא אוֹ מוֹצֵא?" - במערבא, כשאיש נשא אישה, שרו לו: "מצא" או "מוצא"? "מצא" - ככתוב "מָצָא אִשָּׁה מָצָא טוֹב"; "מוצא" - ככתוב "וּמוֹצֵא אֲנִי מַר מִמָּוֶת אֶת הָאִשָּׁה". וכי מה חשבו אנשי מערבא כששרו לחתן ביום חופתו "מוצא הוא מר ממוות"? אם כן למה לו להינשא לה?</p>
+        <div class="qa-box">
+            <p><strong>מסביר הגאון מוילנא:</strong> "מצא" - לשון עבר, "מוצא" - לשון הווה. בדרך כלל, העבר תמיד מצטייר כטוב ומלא יותר מן ההווה, ואילו את ההווה מעריכים כרע יותר. <span class="emphasis">אדם מתרגל לטוב ולוקח אותו כמובן מאליו, אך לרע קשה לו עד בלתי אפשרי להתרגל.</span></p>
+        </div>
+        <p>מסביר הרה"ג מרגולין שליט"א: כשמעמיקים בדברים, מוצאים שרוצים לתת לחתן כלי לשמר את השלום בבית לאורך ימים. מה גורם לבעיות? שאדם לוקח את מעלות בן זוגו כמובנות מאליהן. "וודאי שאשתי יודעת לאפות שטרודלים טעימים ומצליחה גם לארגן את הילדים לבית הספר - אבל זה, נו, כל אישה יכולה". לעומת זאת, הרע מתחדש והולך: "שוב היא לא התקשרה לשאול מה שלום אמא שלי? כמה פעמים אני צריך להזכיר לה זאת?" - הכעסים מתעצמים, כי הטוב אינו זקוק למחמאות והוא מובן מאליו, ורק הרע מתמשך ומתחדש וראוי לכל נזיפה אפשרית.</p>
+        <div class="highlight-box">
+            <p>ביום החתונה מזכירים לחתן הנרגש והמאושר את התופעה הזו: ה"מצא טוב" נדחק לעבר ונשכח, ו"המוצא מר ממוות" מתמשך והולך. ואומרים לחתן: <span class="emphasis">אל תיתן למהלך הזה להוביל אותך.</span> היה ער לסכנה זו של כפיות טובה, ההורסת כל חלקת שלווה בבית הנבנה. כאשר תמשיך את ה"מצא" אל ההווה, יימשכו חיי הנישואין ללא שחיקה מתמדת.</p>
+        </div>
+        <p>וראה כמה נפלא: הדבר החשוב ביותר לשלום בית הוא הדבר החשוב ביותר לעבודת ה'. וראוי לאדם, כשם שהוא עושה רשימה של כמה דברים טובים נתן לו ה' יתברך, כך יעשה רשימה כמה דברים טובים נתן לו בן זוגו שחננו הקל - ואפשר גם על זה להודות לה'.</p>
+        <p>למה נתן ה' בבן הזוג חסרונות ויתרונות - ולא רק בבית אלא בכל בני האדם? מה תפקיד האדם? לשמח. מה זה לשמח? לדעת למצוא את הדברים הטובים ולהלל. אמר ר' חיים ויטאל שאדם צריך לתקן קודם את הנפש הבהמית, ורק אז יכול לעבוד עם הנפש הרוחנית - אחרת יום אחד יבעט בהכול. אדם שלא עובד על מידותיו בבית, שלמרות שבועטים בו הוא משבח ומקלס, זוכה לתקן את הגוף כך שגם הוא לומד להתפעל ולהכיר טובה - ויעשה כך גם בעבודת ה'.</p>
+    </div>
+
+    <!-- עמוד 28: פרק 24 -->
+    <div class="page" data-title="ההודיה - עיקר עבודת ה'">
+        <span class="chapter-label">פרק 24</span>
+        <h2 id="section24">מנין שההודיה היא הדבר החשוב בעבודת ה'?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>סדרת שאלות-ותשובות קצרות: "עלינו לשבח" על מה בדיוק?</li>
+                <li>למה יש טיפשים וגויים בעולם - ומה "עין רעה" מהתלמידים של בלעם</li>
+            </ul>
+        </div>
+        <div class="qa-box">
+            <p><strong>"עלינו לשבח לאדון הכול"</strong> - על מה? על שהנחנו תפילין? לא. על שקראנו קריאת שמע? לא. על שהתפללנו? לא. <strong>על מה כן?</strong> על שאנחנו כורעים ומשתחווים ומודים. זה העיקר - להודות, ובשביל זה נבראנו.</p>
+        </div>
+        <p>בברכת "אהבת עולם" אנו אומרים "וְקֵרַבְתָּנוּ לְשִׁמְךָ הַגָּדוֹל" - למה קירב אותנו ה'? בשביל להודות לו. המדהים הוא שאפילו ל"ייחדך" מגיעים רק אחר כך.</p>
+        <p>מה המצווה הגדולה ביותר שיש לנער? "כיבוד אב ואם" - מדוע? כי העיקר הוא ללמוד להכיר טובה. מה המצווה הגדולה ביותר שיש לנשוי? לכבד את אשתו - אך על ידי שמודה לה.</p>
+        <p>כיצד ניתן לראות מהבריאה עצמה שכל מטרתה רק להודות לה'? לשם מה ברא ה' חסרונות כגון עייפות, רעבון, צמא, מחלות וייסורים ועוד המון דברים? בשביל להודות לו. למה יש טיפשים בעולם? שנודה שאנחנו חכמים. למה יש גויים בעולם? שנודה שאנחנו יהודים. "עַם זוּ יָצַרְתִּי לִי, תְּהִלָּתִי יְסַפֵּרוּ". במדרש: "אין לך שנואה לפני הקדוש ברוך הוא יותר מכפיות טובה". והרמב"ן כותב שמטרת כל המצוות היא להודות.</p>
+        <p>לשם מה נוצרה שבת? השביתה ממלאכה, האמונה, הכבוד והעונג - הכול בשביל להודות (כמו שמסביר הרד"ק על "אז תתענג על ה'"). וכן כתוב ב"מזמור שיר ליום השבת" שמטרת השבת "טוב להודות לה'".</p>
+        <p>מה התפילה הגדולה ביותר? "יהא שמיה רבא" - שבה מבקשים שכולם יודו. למה "עלינו לשבח" זו סגולה גדולה לתפילה? כי כשאדם מודה, המלאכים מתביישים לסגור את הפתחים - ואז עם ההודיה נכנסת גם התפילה.</p>
+        <p>למה נחרב בית שני? בגלל שלא הודו לה'. למה נגזרו על אבותינו ארבעים שנה במדבר? כי בכו והתלוננו במקום להודות. למה הועילה תורתם של בית ראשון? כי לא הודו על התורה שלמדו. "מָה ה' אֱלֹקֶיךָ שׁוֹאֵל מֵעִמָּךְ" - אמרו חז"ל "אל תקרי מה אלא מאה" - כוונת חז"ל שמה רוצה ה' מיהודי? מאה הודאות בכל יום, כי זה העיקר להודות לה'.</p>
+        <div class="highlight-box">
+            <p>"עַיִן רָעָה, וְרוּחַ גְּבוֹהָה, וְנֶפֶשׁ רְחָבָה - מִתַּלְמִידָיו שֶׁל בִּלְעָם הָרָשָׁע" (משנה, אבות ה'). למה מי שיש בו שלושה דברים אלו, למרות שמקיים המון מצוות, הוא מתלמידיו של בלעם הרשע? כי שלושת הדברים הללו הם ההפך מלהודות - שהם שלושת המונעים מלהודות, המובאים בחובת הלבבות.</p>
+        </div>
+    </div>
+
+    <!-- עמוד 29: פרק 25 -->
+    <div class="page" data-title="מצוות קידוש ה' בהודאה">
+        <span class="chapter-label">פרק 25</span>
+        <h2 id="section25">מצוות קידוש ה' כאשר אדם מודה לה'</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>ספר שערי תשובה: חילול השם חמור מכל העבירות</li>
+                <li>ההודאה כמצוות קידוש ה' - בפני מי מקדשים כשמודים בלב?</li>
+            </ul>
+        </div>
+        <div class="quote-box">
+            <p>"וְהִנֵּה עִקַּר כָּל הָעֳנָשִׁים הַנִּזְכָּרִים בַּמַּדְרֵגָה הַזֹּאת, מִפְּנֵי חִלּוּל הַתּוֹרָה... כִּי עֲוֹן חִלּוּל גָּדוֹל מִכָּל הָעֲבֵרוֹת, וְלֹא יִתָּכֵן לְהִתְכַּפֵּר בִּתְשׁוּבָה וְיִסּוּרִים... 'אֵין מַאֲרִיכִים בְּפֻרְעָנוּת לְעֹנֶשׁ חִלּוּל הַשֵּׁם, אֶחָד שׁוֹגֵג וְאֶחָד מֵזִיד'."</p>
+            <span class="source-tag">ספר שערי תשובה, שער שלישי, אות קנ"ח</span>
+        </div>
+        <p>ועתה עמוד והתבונן בגודל חיובנו לקדש את השם: כי עיקר מה שקידשנו השם יתברך בתורתו ובמצוותיו, והבדילנו להיות לו לעם, הוא כדי לקדשו וליראה ממנו - ראוי שיהיו מקדישיו קדושים, כמו שנאמר: "וְלֹא תְחַלְּלוּ אֶת שֵׁם קָדְשִׁי וְנִקְדַּשְׁתִּי בְּתוֹךְ בְּנֵי יִשְׂרָאֵל אֲנִי ה' מְקַדִּשְׁכֶם" (ויקרא כ"ב, ל"ב).</p>
+        <p>ונאמר: "צִוָּה לְעוֹלָם בְּרִיתוֹ, קָדוֹשׁ וְנוֹרָא שְׁמוֹ" (תהלים קי"א, ט') - בעבור שקדוש ונורא שמו, ציווה לעולם בריתו וקידשנו במצוותיו כדי ליראה ממנו, ולכן כתוב אחריו: "רֵאשִׁית חָכְמָה יִרְאַת ה'". ועל ידי קדושת המצוות נחשב האדם, בהקדישו את השם יתברך, כאחד עם הקדושים העליונים המקדישים ומעריצים אותו: "אֵל נַעֲרָץ בְּסוֹד קְדֹשִׁים רַבָּה".</p>
+        <div class="highlight-box">
+            <p>כמה דברים נפלאים למדנו מדבריו: <span class="emphasis">שאדם שמודה לה', מקיים בכך את המצווה הגדולה ביותר - לקדש את ה'.</span> למה יש מצוות ולימוד תורה? כדי שנהיה קדושים, כמו שאומרים "וקידשנו במצוותיו". ולמה צריך להיות קדושים? ה' רוצה שכלי קדוש יהלל אותו, ולא כלי מלא גשמיות. <span class="emphasis">מטרת עם ישראל: לקדש את ה', דהיינו להודות לו ולהללו.</span></p>
+        </div>
+        <div class="qa-box">
+            <p><strong>ישאל השואל:</strong> כשאני מודה לה' - בפני מי אני מקדש את ה'?</p>
+            <p><strong>תשובה:</strong> בפני עצמך. כמו שלמדנו שמטרת התפילה היא לשעבד את ליבך, כך גם ההודיה בונה את הלב שלך. וכל פעם שאדם מהלל את שם ה', שמו מהולל בכל העולמות העליונים. וכך כתוב בזוהר הקדוש: "חוֹבָה עַל הָאִישׁ לְסַפֵּר תָּמִיד לִפְנֵי הַקָּדוֹשׁ בָּרוּךְ הוּא וּלְפַרְסֵם כָּל נֵס פְּרָטִי... וְאִם תֹּאמַר לָמָּה הוּא חוֹב עַל הָאָדָם לְסַפֵּר נִסֵּי הַקָּדוֹשׁ בָּרוּךְ הוּא וַהֲרֵי הַקָּדוֹשׁ בָּרוּךְ הוּא יוֹדֵעַ הַכֹּל? אֶלָּא וַדַּאי צָרִיךְ הָאָדָם לְפַרְסֵם הַנִּסִּים וּלְסַפֵּר לִפְנֵי הַקָּדוֹשׁ בָּרוּךְ הוּא כָּל מַה שֶּׁעָשָׂה עִמּוֹ, לְפִי שֶׁכָּל אוֹתָם הַדִּבּוּרִים עוֹלִים לְמַעְלָה, וְכָל הֲמוֹנֵי מַלְאֲכֵי מַעְלָה מִתְקַבְּצִים וְרוֹאִים אוֹתָם, וְהֵם מוֹדִים וּמְשַׁבְּחִים לִפְנֵי הַקָּדוֹשׁ בָּרוּךְ הוּא."</p>
+            <span class="source-tag">זוהר הקדוש, פרשת בא</span>
+        </div>
+    </div>
+
+    <!-- עמוד 30: פרק 26 -->
+    <div class="page" data-title="אליעזר עבד אברהם - חיי הודיה">
+        <span class="chapter-label">פרק 26</span>
+        <h2 id="section26">דוגמא בתורה לחיי תפילה והודיה</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>"יפה שיחתן של עבדי אבות יותר מתורתן של בנים" - למה?</li>
+                <li>שלוש התנהגויות של אליעזר: לשוחח עם ה', להודות, ולספר לכולם</li>
+            </ul>
+        </div>
+        <p>ישנה פרשה בתורה שנכפלה באריכות עצומה - פרשת שליחות אליעזר עבד אברהם, שיש בה שישים ושבעה פסוקים, וכל הסיפור חוזר על עצמו פעמיים: פעם כשקורה, ופעם כשאליעזר מספר אותו למשפחת רבקה. חז"ל התקשו: כיצד ייתכן שעל הלכות סוכה או גט כתובים כמה פסוקים בלבד, ואילו כאן, פרק שלם באריכות עצומה?</p>
+        <div class="qa-box">
+            <p><strong>תירצו חז"ל:</strong> "יָפָה שִׂיחָתָן שֶׁל עַבְדֵי אָבוֹת יוֹתֵר מִתּוֹרָתָן שֶׁל בָּנִים". פירושו: יותר חביב לפני ה' מה שעשה העבד אליעזר, מאשר לימוד תורה וקיום מצוות. מה עשה אליעזר שכל כך חביב לפני הבורא?</p>
+        </div>
+        <p>נתבונן: אליעזר מגיע לבאר. מה הוא עושה? אולי קורא לעזרה, מחפש מי יעזור לו? לא.</p>
+        <div class="verse-box">
+            <p>"ה' אֱלֹקֵי אֲדֹנִי אַבְרָהָם, הַקְרֵה נָא לְפָנַי הַיּוֹם וַעֲשֵׂה חֶסֶד עִם אֲדֹנִי אַבְרָהָם"<span class="source-tag" style="margin-top:6px;">בראשית כ"ד, י"ב</span></p>
+        </div>
+        <p>אליעזר פונה לה' במילים שלו, ללא סידור, ללא זמן תפילה קבוע - יש לו בעיה, והוא <em>משוחח</em> עם הבורא, כמו שכתוב "אֶשְׁפֹּךְ לְפָנָיו שִׂיחִי", "וַיֵּצֵא יִצְחָק לָשׂוּחַ בַּשָּׂדֶה" - זהו "יפה שיחתן".</p>
+        <p>אחרי שבחסדי שמים מצא את רבקה, מה הוא עושה? "וַיִּקֹּד הָאִישׁ וַיִּשְׁתַּחוּ לַה', וַיֹּאמֶר בָּרוּךְ ה' אֱלֹקֵי אֲדֹנִי אַבְרָהָם אֲשֶׁר לֹא עָזַב חַסְדּוֹ וַאֲמִתּוֹ מֵעִם אֲדֹנִי". מדרש רבה: "'ויקוד האיש וישתחווו לה'' - מכאן שמודים על בשורה טובה". <span class="emphasis">אליעזר מודה, אבל לא מסתפק במילים "ברוך ה'" - הוא מוסיף ברכה ארוכה להודות לה' על הנס שאירע לו.</span> כך רוצה ה' מיהודי בכל פעם שקורה לו משהו טוב - לא מספיק לומר "ברוך ה'" בקצרה; ספר תהילים מלא במזמורי הודיה - "מזמור לתודה", "ברכי נפשי" - תודה ממש, מכל הלב, בהתלהבות וברצינות.</p>
+        <p>וכשמגיע אליעזר לאנשים שאינם מאמינים בה', מה עושה? הוא לא ממתין, אלא מיד: "לֹא אֹכַל עַד אִם דִּבַּרְתִּי דְּבָרָי" - ומספר להם את כל הניסים שה' עשה עמו, בבחינת "שִׂיחוּ בְּכָל נִפְלְאוֹתָיו". <span class="emphasis">יש מצווה עצומה לספר על ניסי ה' - זה כלול במצוות קידוש ה', לספר לכולם את נפלאותיו.</span></p>
+        <p>וכשהוא שומע שלבן ובתואל מסכימים לתת לו את רבקה - מה הוא עושה? נותן להם "לחיים", "מזל טוב"? לא. "וַיְהִי כַּאֲשֶׁר שָׁמַע עֶבֶד אַבְרָהָם אֶת דִּבְרֵיהֶם, וַיִּשְׁתַּחוּ אַרְצָה לַה'". מיד כשהוא שומע שהם מסכימים, הוא משתחווה ארצה להודיה - אליעזר בטוח שלא הם הסכימו, אלא ה' נתן בליבם להסכים. <span class="emphasis">זה נקרא לחיות אמונה ולהודות.</span></p>
+        <div class="highlight-box">
+            <p>אליעזר חי את דברי הרמב"ן: "אֵין לָאָדָם חֵלֶק בְּתוֹרַת מֹשֶׁה רַבֵּנוּ עַד שֶׁנַּאֲמִין בְּכָל דְּבָרֵינוּ וּמִקְרֵינוּ שֶׁכֻּלָּם נִסִּים, אֵין בָּהֶם טֶבַע וּמִנְהָגוֹ שֶׁל עוֹלָם, בֵּין בְּרַבִּים בֵּין בְּיָחִיד."</p>
+        </div>
+        <p>ויש לציין דבר נפלא: בפרשה זו רואים שאם רוצים לשכנע המון אנשים באמונה, מה שצריך הוא שאנחנו עצמנו נהיה חזקים מאוד באמונה - ואם נהיה חזקים, נוכל לחזק הרבה. הראיה: לבן ובתואל, אנשים רחוקים מיראת שמים, אמרו לאליעזר: "מֵה' יָצָא הַדָּבָר, לֹא נוּכַל דַּבֵּר אֵלֶיךָ רַע אוֹ טוֹב" - מנין ללבן מה דיבר ה'? אלא, מפני שאליעזר סיפר להם את הניסים בהתלהבות ובאמונה כה עצומה, הדבר חדר לליבם, עד שהבינו שאם רואים ניסים כאלה - זה סימן שמה' יצא הדבר, ונכנסה בהם יראת שמים מכוח אליעזר.</p>
+        <div class="highlight-box">
+            <p><strong>לסיכום, שלושה דברים למדנו מהפרשה:</strong></p>
+            <ul>
+                <li>כשיש בעיה - משוחחים עם ה' ומבקשים עזרה, בכל מילה, בכל זמן.</li>
+                <li>כשה' עושה דבר טוב - מודים מכל הלב ומברכים את ה' באריכות, לא רק במילה קצרה.</li>
+                <li>מספרים לכולם את ניסי ה', כדי שכולם יכירו את מלכותו. זכור: רוצה להשפיע על אחרים? חזק קודם את האמונה שלך עצמך, ותוכל להשפיע.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- עמוד 31: פרק 27 -->
+    <div class="page" data-title="סיפור: להרגיש הודיה אמיתית">
+        <span class="chapter-label">פרק 27</span>
+        <h2 id="section27">סיפורים על הודיה לה'</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>סיפור: כמה זמן לוקח להרגיש באמת את ה"מודים"</li>
+            </ul>
+        </div>
+        <div class="story-box">
+            <span class="story-title">"וכי סבור אתה שהרגשת ההודאה באה כל כך בקלות?"</span>
+            <p>מעשה ביהודי אחד שנזקק לדבר עם רבי יצחק דוד בעניין מסוים. כשהגיע לבית הכנסת, ראה אותו אוחז בברכות האמצעיות של תפילת שמונה עשרה. ביקש מאחד הנוכחים שכשיראה שרבי יצחק דוד מגיע לברכת "מודים" - יקרא לו. סבור היה שממודים ועד סוף התפילה לא אורך הדבר זמן רב כל כך.</p>
+            <p>כשהגיע רבי יצחק דוד לברכת "מודים", קראו לו לבית הכנסת. עמד האיש והמתין עד בוש - אך רבי יצחק דוד עדיין שקוע כל כולו בתפילתו. לאחר זמן רב, כשסיים את תפילתו, שאלו הממתין: "מדוע התעכבת זמן רב כל כך לפני שהתחלת בברכת מודים?"</p>
+            <p>ענה רבי יצחק דוד: <span class="emphasis">"וכי סבור הנך שהרגשת ההודאה להשי"ת באה כל כך בקלות? צריך לשהות ולעבוד עד שמרגישים את הרגשת ההודאה."</span></p>
+        </div>
+    </div>
+
+    <!-- עמוד 32: פרק 28 -->
+    <div class="page" data-title="עצה לקנות הכרת הטוב ושלום בית">
+        <span class="chapter-label">פרק 28</span>
+        <h2 id="section28">עצה נפלאה לקנות רגש הכרת הטוב ושלום בית</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>חזרה למעשה בניצול מגרמניה - היסוד שמאחורי "רחם על עצמך"</li>
+                <li>האור החיים: מדוע נקמה מרעילה את מידותיו של הנוקם</li>
+                <li>מסקנה מעשית לחיי הנישואין ולעבודת ה'</li>
+            </ul>
+        </div>
+        <p>חזרנו לשאלה שפתחנו בה: עד היכן מגיע חיוב הכרת הטוב? ליהודי שפגש את הגרמנים ורצה לנקום, אומרת לו התורה יסוד נפלא: <em>"יהודי יקר, אתה פוגש מצרי רשע מרושע, מגיע לו מיתה ברגע זה - אמת. אבל תאמר לי, יהודי, מה יתן לך ומה יוסיף לך אם תנקום באותו מצרי? האם המידות שלך ישתפרו בכך? האם על ידי זה תוכל לעבוד את ה' טוב יותר? האם זה יעזור לך באהבת ה'?"</em> התשובה: לא ולא. לא רק שזה לא יעזור - זה גם ישחית אותך מאוד.</p>
+        <div class="quote-box">
+            <p>"'וְנָתַן לְךָ רַחֲמִים וְרִחֲמְךָ' - כִּי צִוָּה עַל עִיר הַנִּדַּחַת שֶׁיַּהַרְגוּ כָּל הָעִיר לְפִי חֶרֶב, וּמַעֲשֶׂה זֶה <strong>יוֹלִיד טֶבַע הָאַכְזָרִיּוּת בְּלֵב הָאָדָם</strong>... לָזֶה אָמַר לָהֶם הַבְטָחָה שֶׁיִּתֵּן לָהֶם ה' 'רַחֲמִים', הַגַּם שֶׁהַטֶּבַע יוֹלִיד בָּהֶם הָאַכְזָרִיּוּת, מְקוֹר הָרַחֲמִים יַשְׁפִּיעַ בָּהֶם 'כֹּחַ הָרַחֲמִים' מֵחָדָשׁ לְבַטֵּל כֹּחַ הָאַכְזָרִיּוּת שֶׁנּוֹלַד בָּהֶם מִכֹּחַ הַמַּעֲשֶׂה."</p>
+            <span class="source-tag">אור החיים, דברים י"ג, י"ח</span>
+        </div>
+        <p>רואים מכאן שכאשר אדם עושה מעשה רע, גם אם מגיע לצד השני - זה הורס את מידותיו שלו. אומרת לך התורה: כשאתה רואה את המצרי, <span class="emphasis">רחם על עצמך</span> - במקום להרוס את מידותיך על ידי הנקמה, בוא ותבנה את מידותיך. כיצד? תכיר לו טובה על מה ששהית בארצו זמן מה - זה יעזור לך מאוד, זה יבנה בך את מידת הכרת הטוב. ובאותה מידה תוכל לאהוב את בורא עולם, ובאותה מידה תוכל לזכות לשכר העולם הבא.</p>
+        <p>לא מספיק מה שהוא כבר עשה לך - האם אתה רוצה שיהרוס אותך עוד? אדרבה, שיבנה אותך על ידי שתצליח להכיר טובה אפילו לכזה אדם - ואחר כך יהיה לך קל מאוד להכיר טובה לבורא עולם. זה השכל הישר והטוב שמלמדת אותנו התורה.</p>
+        <div class="story-box">
+            <span class="story-title">רבי חייא: "זה יבנה אותי או יהרוס אותי?"</span>
+            <p>עוד מסופר בעין יעקב על רבי חייא ואשתו הממררת אותו: שואל אותו רב - "למה אתה מחפש להכיר טובה לאשתך, הרי היא עושה לך כל כך הרבה צרות?" עונה לו רבי חייא: "רב יקירי, תאמר לי: אם אני לא אכיר טובה לאשתי, זה יבנה אותי או יהרוס אותי? יהרוס אותי מאוד - שכן אתרגל שנותנים לי ואני לא מחזיר. אם אינני מכיר טובה על כך, אני עלול להגיע למצב שה' ייתן לי ואני לא אכיר לו טובה. לכן אני חושב: מה טוב יש בה, במה אני כן נהנה ממנה - ובזה אני מכיר לה טובה. כך אני זוכה להיבנות, להיות מכיר טובה לבורא עולם."</p>
+        </div>
+        <div class="highlight-box">
+            <p>יהודי, יהודייה יקרה! אתה מגיע הביתה - אם תחשוב כמה בן/בת הזוג שלך "לא בסדר", זה יבנה אותך או יהרוס אותך? יהרוס אותך עד מאוד. אז למענך, השתדל להסתכל רק על מה שטוב עשו למענך, ותודה על כך מכל הלב. <span class="emphasis">זה ייתן לך גם חיים מאושרים בעולם הזה, וגם חיי נצח נפלאים.</span></p>
+        </div>
+    </div>
+
+    <!-- עמוד 33: פרק 29 -->
+    <div class="page" data-title="יסוד ושורש העבודה - למעשה">
+        <span class="chapter-label">פרק 29</span>
+        <h2 id="section29">דוגמאות מעשיות לעבודת ההודאה - מתוך "יסוד ושורש העבודה"</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>ר' אלכסנדר זיסקינד זצוק"ל - החיים שהיו שרשרת בלתי-פוסקת של הודיה</li>
+                <li>עשרות דוגמאות מעשיות: איך מודים על ממש כל דבר</li>
+                <li>תפילה לקנות את מידת הכרת הטוב</li>
+            </ul>
+        </div>
+        <div class="highlight-box">
+            <p>ר' אלכסנדר זיסקינד זצוק"ל, מחבר הספר "יסוד ושורש העבודה", היה עובד ה' יתברך שהוריש לנו דוגמה חיה כיצד מיישמים את כל מה שלמדנו בספר הזה, מן התיאוריה אל היום-יום ממש. הגרש"ז אויערבך זצ"ל היה הוגה רבות בספרו וזירז אחרים ללומדו תמידים כסדרם, ואמר: "בצעירותנו היה ספר זה הרבי שלנו". ר' לוי יצחק מברדיטשוב זי"ע כתב עליו בהסכמתו: "מעודו לא מש מתוך האוהל... טהר גברא כמוהו מי יורה להורות לעם את הדרך ילכו בה".</p>
+        </div>
+        <div class="story-box">
+            <span class="story-title">שיר השירים שהמלאכים הקשיבו לו</span>
+            <p>ר' אריה לוין זצ"ל היה מספר בשם הגאון ר' נחומקה מהורדנה זיע"א: כך היה מנהגו של ר' אלכסנדר זיסקינד זצ"ל בערב שבת קודש - היה טובל במקווה, רוחץ פניו ידיו ורגליו, לובש בגדי לבן של שבת, והולך לבית הכנסת כשבידו מגילת שיר השירים כשרה, שנכתבה כמו ספר תורה, והוא עצמו כתבה. והיה קורא שיר השירים במתינות, במתיקות גדולה ובהתלהבות, בדבקות נוראה.</p>
+            <p>"קבלה בידינו מאבותינו, שמלאכי מעלה היו פוסקים מלומר שירה, והיו עומדים ושומעים ומקשיבים לקול נעימת אמירת שיר השירים שלו - שהיה בוקע רקיעים."</p>
+        </div>
+        <p>וכתב הוא עצמו בספרו, כיצד עבד את ה' יתברך בכל רגע מחייו:</p>
+        <div class="quote-box">
+            <p>"הָיִיתִי נִזְהָר מְאֹד לִתֵּן הוֹדָאָה וְשֶׁבַח לְהַשֵּׁם יִתְעַלֶּה עַל כָּל מַה שֶּׁהִגִּיעָה עָלַי, הֵן אֵיזוֹ רָעָה... קְטַנָּה אוֹ גְּדוֹלָה מִכָּל מַה שֶּׁהַפֶּה יוּכַל לְדַבֵּר וְהַלֵּב לַחְשֹׁב, הָיִיתִי מַצְדִּיק עָלַי אֶת הַדִּין בְּשִׂמְחָה, וְנָתַתִּי לְהַשֵּׁם יִתְבָּרֵךְ גַּם כֵּן הוֹדָאָה עַל זֶה בְּשִׂמְחָה עֲצוּמָה בָּזֶה הַלָּשׁוֹן: 'יוֹצְרִי וּבוֹרְאִי, אַתָּה צַדִּיק עַל כָּל הַבָּא עָלַי, כִּי אֱמֶת עָשִׂיתָ וַאֲנִי הִרְשַׁעְתִּי, וַאֲנִי נוֹתֵן לְךָ שֶׁבַח וְהוֹדָאָה עַל זֶה, יוֹצְרִי וּבוֹרְאִי, כִּי בְּוַדַּאי לְטוֹבָתִי עָשִׂיתָ לִי סִבָּה זוֹ'."</p>
+            <span class="source-tag">ספר יסוד ושורש העבודה</span>
+        </div>
+        <p>וכן על כל טובה קטנה או גדולה, נתן הודאה ושבח על הטובה שגמלו - הן על דבר מצווה, הן על דבר הרשות. וזאת מלבד החיוב מהמשנה הקדושה ("חייב אדם לברך על הרעה כשם שהוא מברך על הטובה"), אלא <span class="emphasis">מגודל אהבת השם יתברך שהייתה תקועה בליבו בתמידות.</span></p>
+        <h3>דוגמאות שהביא בעצמו</h3>
+        <div class="highlight-box">
+            <ul>
+                <li><strong>על חדר מיוחד לעבודת ה':</strong> "יוצרי ובוראי, אני נותן לך הודאה גדולה על שנתת לי חדר מיוחד לעבודתך הקדושה, לא כפי מעשיי הטובים, רק למען רחמיך הרבים וחסדיך הגדולים" - ואמר זאת אף כמה פעמים ביום.</li>
+                <li><strong>על כותל רעוע שלא נפל בעת עוברו תחתיו:</strong> בכל פעם שהיה צריך לעבור ליד חומה רעועה שעמדה ליפול, היה מתפלל לפני כן שתישמר, ולאחר שעבר בשלום נתן הודאה: "יוצרי ובוראי, יתברך שמך בפי כל חי, אני נותן שבח והודאה לך שהצלת אותי שלא נפלה החומה עלי".</li>
+                <li><strong>על אגרת שלום שהגיעה מבניו:</strong> "יוצרי ובוראי, אני נותן שבח והודאה לך שבשרתני בשורה טובה מבריאות בניי ובני בניי".</li>
+                <li><strong>על בגדי שבת:</strong> "אני נותן לך הודאה על שנתת לי בגדים חשובים לכבוד שבת קודש, לא כפי מעשיי הטובים, רק ברחמיך הרבים וחסדיך הגדולים" - שכן חשב בליבו כמה צדיקים גדולים חסרים בגדים כאלה.</li>
+                <li><strong>על בגד חם בחורף:</strong> על כל עת שלבש בגד צמר חם, נתן הודאה - שכן שיער שבהעדרו היה מגיע לו צער גדול מקרירות.</li>
+                <li><strong>על היכולת לענות "קדושה" ו"אמן יהא שמיה רבא" עם הציבור:</strong> כשלא הוצרך לצאת באמצע התפילה, נתן הודאה מיוחדת על כך.</li>
+                <li><strong>"שעשה לי כל צרכי":</strong> כל דבר שהיה נצרך לו, ולא הוצרך לחפש או לשאול מאחרים - היה כופל את ההודאה על כך בפה מלא, בשמחה, כמה פעמים זה אחר זה - אף על דברים קטנים לגמרי, כי חשב כמה גדולים אין ידם משגת אף לדברים קלים, ואילו הוא אינו חסר מכל.</li>
+                <li><strong>על המשחזת שבה חידד את הסכין בכל ערב שבת:</strong> נתן הודאה על מצווה קטנה זו בכל שבוע ושבוע.</li>
+            </ul>
+        </div>
+        <div class="quote-box">
+            <p>"יוֹצְרִי וּבוֹרְאִי יִתְבָּרֵךְ שְׁמוֹ, כָּל מַה שֶּׁבָּרָאתָ לִכְבוֹדְךָ בָּרָאתָ, שֶׁיֵּהָנוּ מֵהֶם בְּרִיּוֹתֶיךָ" - וְשָׂמַחְתִּי אָז בֶּאֱלֹקוּתוֹ יִתְבָּרֵךְ וְזִכְרוֹ לָעַד בְּהַנָּאַת בְּרִיאָה זוֹ, כִּי חָשַׁבְתִּי בְּדַעְתִּי שֶׁבְּוַדַּאי יִהְיֶה זֶה לְמֶרֶד וּלְמַעַל חָלִילָה לֵהָנוֹת מִבְּרִיאַת יוֹצְרִי וּבוֹרְאִי יִתְבָּרֵךְ וְלֹא אֶתֵּן לוֹ הוֹדָאָה עַל זֶה אַף בְּמַחְשַׁבְתִּי."</p>
+        </div>
+        <p>וכן להיפך, על כל ייסורים - היה מצדיק את הדין באותה מיידיות. אפילו על כאב שיניים שהיה לו כמעט בכל יום, אף בעת שהכאב היה גדול מאוד עד שלא היה יכול ללמוד - היה מצדיק עליו את הדין כמעט בכל רגע: "ואתה צדיק"; ובעת התפילה, במקום שאסור להפסיק, היה מצדיק את הדין במחשבתו בלבד. וכן על הפסד ממון קטן ביותר. <span class="emphasis">וכשההפסד או הצער חלף - היה נותן הודאה מיוחדת על כך: "מודה אני לך, יוצרי ובוראי, בפי כל חי, ששלחת רפואה לכאבי הגדול".</span></p>
+        <div class="quote-box">
+            <p>"נִתְאַמֵּת אֶצְלִי הָאֱמוּנָה שְׁלֵמָה וַאֲמִתִּית, כָּל מַה שֶּׁיַּגִּיעַ לָאָדָם, הֵן אֵיזֶה נַחַת וְטוֹבָה אֲפִלּוּ קְטַנָּה מְאֹד, הֵן אֵיזֶה הֶפְסֵד וְיִסּוּרִין, הַכֹּל מֵאִתּוֹ יִתְבָּרֵךְ וְיִתְעַלֶּה בְּהַשְׁגָּחָתוֹ פְּרָטִית... לָכֵן נִתְאַמֵּת אֶצְלִי בְּחִיּוּב גָּמוּר, עַל כֵּן טוֹבָה שֶׁהִגִּיעַנִי, הֵן גְּדוֹלָה הֵן קְטַנָּה, שֶׁהִיא מֵאִתּוֹ יִתְבָּרֵךְ וְיִתְעַלֶּה וּבְהַשְׁגָּחָתוֹ, לִתֵּן עָלֶיהָ שֶׁבַח וְהוֹדָאָה בַּלֵּב וּבַפֶּה, וּלְהֵפֶךְ עַל הַיִּסּוּרִין... לְהַצְדִּיק עָלַי אֶת הַדִּין."</p>
+        </div>
+        <p>וכשמצא דבר אבוד (כמו כיסוי-פנים שחשב שאבד, ולבסוף נמצא): "יוצרי ובוראי יתברך שמך, אני נותן לך שבח והודיה על שהחזרת לי אבדתי". וסיכם ליוצאי חלציו: "עבודה זו חִקְקוּ על לבבכם, ותיזהרו בה מאוד מאוד, כי על כל אלה יביא אלוקים במשפט על כל נעלם, אם רע אם טוב".</p>
+        <div class="highlight-box">
+            <h4>שמחה תמידית</h4>
+            <p>כל ההנהגות הללו, כתב, באו לאדם מתוך גודל ההתפארות בתמידות בבוראו יתברך - שמחה שאין למעלה הימנה, שיש לו אלוק כזה שלא תיכזב אלוקותו לעולמי עד, שברא עולמות לאין ספור לקילוסו, ובחר גם בו, בשר ודם, מגודל טובו, להיות עבד לו בתוך עם קדוש - <span class="emphasis">והיה בליבו בתמידות התפארות גדול שזכה להיות עבד עולם לאלוק כזה.</span></p>
+        </div>
+        <div class="quote-box">
+            <p>עדות מרבינו הקדוש מלובלין: היה רגיל צדיק זה להודות לה' על כל דבר קטן שנעשה עמו - למשל אם נפלה זכוכית ולא נשברה, הודה לה' על החסד; וכמו כן אם עבר תחת כותל רעוע ולא נפל, הודה לה' על החסד. <strong>וזה עבודה גדולה ונוראה!</strong> כאשר העיד רבנו הקדוש מלובלין, שגילו לו מן השמים <span class="emphasis">שחשוב מאוד אצל הקדוש ברוך הוא סדר התנהגותו של הצדיק הזה</span>, וגודל תמימות ליבו לפני ה'.</p>
+            <span class="source-tag">שומר אמונים, חלק א', עמוד קל"ה</span>
+        </div>
+
+        <div class="verse-box">
+            <p style="font-size:.85em; text-align:right; font-weight:normal;">תפילה לקנות את מידת הכרת הטוב</p>
+            <p style="text-align:right; font-weight:normal; font-style:italic;">
+            אנא ה', רחמן מלא רחמים, חמול עלי ועל כל עמך בית ישראל בעת הזאת,<br>
+            ותעזור לנו לראות תמיד רק את הטוב שעושים לנו,<br>
+            ונזכה להכיר טובה לכל מי שעשה לנו,<br>
+            ועל מה שעשו לנו רעה - לא נתבונן ולא נחשוב,<br>
+            רק נרצה תמיד להודות ולשבח על כל טובה שעשו לנו,<br>
+            עזור לנו בוראנו שנהיה כלים ראויים לעולם הנצח,<br>
+            והרי מידת הכרת הטוב היא אחת מהמידות הנפלאות<br>
+            לזכות על ידן לחיי נצח נצחים, להיות דבוקים בך באמת,<br>
+            וכמו שכתב רש"י: "על שאנו מודים לך" -<br>
+            על שנתת בליבנו להיות דבוקים בך ומודים לך,<br>
+            אנא עזרנו שנראה תמיד את הטוב שעושים לנו חברינו<br>
+            ונכיר להם על כך טובה תמיד,<br>
+            ומתוך כך נבוא גם לזכור חסדיך<br>
+            ולהיות מודים לך ודבוקים בך לנצח.<br>
+            יהיו לרצון אמרי פי והגיון ליבי לפניך, ה' צורי וגואלי.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="page" data-title="מקורות">
+        <div class="sources">
+            <h2>📚 מקורות ומראי מקומות</h2>
+            <ol>
+                <li>רמב"ן שמות י"ג, ט"ז; ורמב"ן דברים ל"ב, כ"ו - מטרת היצירה: שנודה לה' שבראנו.</li>
+                <li>דברים כ"ח, מ"ז - "תחת אשר לא עבדת את ה' אלקיך בשמחה ובטוב לבב מרוב כל".</li>
+                <li>תלמוד בבלי, ערכין י"א ע"א - עבודה שבשמחה היא שירה.</li>
+                <li>ספר הכוזרי, מאמר שני ושלישי - שלושת יסודות העבודה: יראה, אהבה, שמחה.</li>
+                <li>דברים כ"ו, י"א - "ושמחת בכל הטוב אשר נתן לך ה' אלקיך".</li>
+                <li>תהלים ק', ב' - "עבדו את ה' בשמחה", ומזמור לתודה.</li>
+                <li>רמב"ם הלכות ברכות פרק י'; הלכות דעות פרק ב'; הלכות לולב פרק ח'; הלכות תשובה פרק ז'.</li>
+                <li>כלבו סימן ע"ה; שערי קדושה חלק ב' שער ד'.</li>
+                <li>תלמוד בבלי תענית ב' ע"א, ברכות ל"ב ע"ב, סוטה ל"ח ע"ב, מגילה י"ח ע"א, שבת קי"ט ע"ב, ערכין ט"ו, יומא ט' ע"ב, סנהדרין צ"א ע"ב, יבמות ס"ג ע"א.</li>
+                <li>ירושלמי יומא פרק ד'.</li>
+                <li>חובת הלבבות, שער הבחינה ושער ו'.</li>
+                <li>מסילת ישרים, פרק א' ופרק י"ט.</li>
+                <li>ספר החינוך, מצווה תר"ו ומצווה ל"ג.</li>
+                <li>ספר שערי תשובה, שער שני ושער שלישי.</li>
+                <li>ספר יסוד ושורש העבודה לר' אלכסנדר זיסקינד מהוראדנא.</li>
+                <li>ליקוטי מוהר"ן חלק ב' תורה ב'; חיי מוהר"ן; ספר השתפכות הנפש.</li>
+                <li>מכתב מאליהו חלק א'; שומר אמונים חלק א'.</li>
+                <li>שולחן ערוך אורח חיים סימן רכ"ב, תק"ס; טור ולבוש אורח חיים סימן מ"ו-מ"ז; ספר הרוקח הלכות ברכות סימן ש"כ.</li>
+                <li>דברי רש"י על התורה, על ברכות ל"ה ע"א וסוטה מ' ע"א, ועל משלי ט"ז.</li>
+                <li>מדרש רבה (בראשית, ויקרא, במדבר), מדרש שוחר טוב, מדרש 'אותיות רבי עקיבא', משנת ר' אליעזר.</li>
+                <li>ספר תומר דבורה פרק ב'; ספר צרור המור פרשת עקב; ספר דעת תורה לר' ירוחם ליבוביץ; ספר יסוד ושורש העבודה.</li>
+                <li>זוהר הקדוש פרשת בא, פרשת ואתחנן; זוהר חדש פרשת כי תבוא.</li>
+                <li>דברים פרק ל' (פרשת ניצבים).</li>
+                <li>ספר "והיית אך שמח"; חוברת "וידעת כי שלום אהלך" מאת הרב פרידלנדר זצ"ל.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="page page-end" data-title="חתימה">
+        <div class="footer" style="border: none; margin: 0;">
+            <strong>נכתב ונערך על ידי:</strong><br>
+            <strong>הרב יהודה טאוב</strong><br>
+            רחוב סוקולוב 30, קריית אתא<br>
+            📞 <strong>ליצירת קשר, להערות ולתרומות להפצת החוברת:</strong> 0527139520 · 04-8436092<br>
+            <em>מותר להעתיק ולהפיץ</em><br><br>
+
+            <div class="footer-more">
+                <h4>🎧 שיעורים נוספים של הרב</h4>
+                <p><strong>ניתן לשמוע עוד שיעורים נפלאים בנושא ההודיה לה':</strong></p>
+                <p>📻 <strong>קו קול תודה - גברים:</strong> 03-6171190</p>
+                <p>📻 <strong>קו קול תודה - נשים:</strong> 03-6171180</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="listen-bar book-listen-bar">
+    <div class="listen-btn-group">
+        <button class="listen-btn" id="listenBtn" onclick="toggleListen()"
+                aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן</button>
+        <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+        <button class="listen-skip-btn" onclick="skipListen(1)"  aria-label="פסקה הבאה"  title="פסקה הבאה">⏭</button>
+        <button class="listen-stop-btn" onclick="stopListen()"   aria-label="עצור הקראה">⏹</button>
+        <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()"
+                aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+    </div>
+    <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+    <span class="listen-progress" id="listenProgress"></span>
+    <div class="listen-rate">
+        <label for="rateRange">מהירות:</label>
+        <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1"
+               oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)" aria-label="מהירות הקראה">
+        <output id="rateValue" for="rateRange">1.0×</output>
+    </div>
+    <div class="listen-voice">
+        <label for="voiceSelect">קול:</label>
+        <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+    </div>
+    <div class="listen-size">
+        <button class="listen-size-btn" id="fontSmaller" onclick="setFontScale(-1)"
+                aria-label="הקטן את הטקסט" title="הקטן את הטקסט">א−</button>
+        <output id="fontScaleValue">100%</output>
+        <button class="listen-size-btn big" id="fontBigger" onclick="setFontScale(1)"
+                aria-label="הגדל את הטקסט" title="הגדל את הטקסט">א+</button>
+    </div>
+    <button class="listen-collapse" id="listenCollapse" onclick="toggleListenBar()"
+            aria-expanded="true" aria-label="קפל את סרגל ההאזנה" title="קפל את סרגל ההאזנה">⌄</button>
+</div>
+
+<nav class="book-nav" aria-label="ניווט בין עמודי הספר">
+    <button class="nav-arrow" id="bookPrev" onclick="bookJump(-1)" aria-label="עמוד קודם">▶</button>
+    <div class="book-dots" id="bookDots"></div>
+    <span class="book-counter" id="bookCounter"></span>
+    <button class="nav-arrow" id="bookNext" onclick="bookJump(1)" aria-label="עמוד הבא">◀</button>
+</nav>
+
+<script>
+/* ===== paginated.js ===== */
+(function () {
+    'use strict';
+
+    var book = document.getElementById('book');
+    if (!book) return;
+
+    var pages = Array.prototype.slice.call(book.querySelectorAll('.page'));
+    if (!pages.length) return;
+
+    var KEY = 'koltoda.book.page.' + (document.title || location.pathname);
+    var cur = 0;
+
+    var $dots    = document.getElementById('bookDots');
+    var $counter = document.getElementById('bookCounter');
+    var $prev    = document.getElementById('bookPrev');
+    var $next    = document.getElementById('bookNext');
+
+    pages.forEach(function (p, i) {
+        if (!$dots) return;
+        var b = document.createElement('button');
+        b.className = 'book-dot';
+        b.type = 'button';
+        var label = (p.getAttribute('data-title') || ('עמוד ' + (i + 1)));
+        b.setAttribute('aria-label', label);
+        b.title = label;
+        b.addEventListener('click', function () { go(i); });
+        $dots.appendChild(b);
+    });
+
+    function render() {
+        pages.forEach(function (p, i) { p.classList.toggle('active', i === cur); });
+        if ($dots) {
+            Array.prototype.forEach.call($dots.children, function (d, i) {
+                d.classList.toggle('active', i === cur);
+                d.setAttribute('aria-current', i === cur ? 'true' : 'false');
+            });
+        }
+        if ($counter) $counter.textContent = 'עמוד ' + (cur + 1) + ' מתוך ' + pages.length;
+        if ($prev) $prev.disabled = (cur === 0);
+        if ($next) $next.disabled = (cur === pages.length - 1);
+        pages[cur].scrollTop = 0;
+        try { localStorage.setItem(KEY, String(cur)); } catch (e) {}
+    }
+
+    function go(i, fromTts) {
+        i = Math.max(0, Math.min(i, pages.length - 1));
+        if (i === cur) return false;
+        cur = i;
+        render();
+        if (!fromTts && typeof window.ttsRebuild === 'function') window.ttsRebuild();
+        return true;
+    }
+
+    var $bar = document.querySelector('.book-listen-bar');
+    var $nav = document.querySelector('.book-nav');
+
+    function measureChrome() {
+        var navH = $nav ? $nav.offsetHeight : 0;
+        var collapsed = $bar && $bar.classList.contains('collapsed');
+        if ($bar) $bar.style.bottom = collapsed ? '' : navH + 'px';
+        var total = navH + (!collapsed && $bar ? $bar.offsetHeight : 0);
+        document.documentElement.style.setProperty('--chrome-h', (total + 26) + 'px');
+    }
+
+    window.toggleListenBar = function () {
+        if (!$bar) return;
+        var collapsed = $bar.classList.toggle('collapsed');
+        try { localStorage.setItem('koltoda.book.barCollapsed', collapsed ? '1' : '0'); } catch (e) {}
+        var b = document.getElementById('listenCollapse');
+        if (b) {
+            b.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+            b.title = collapsed ? 'הצג את כל פקדי ההאזנה' : 'קפל את סרגל ההאזנה';
+        }
+        measureChrome();
+    };
+
+    try { if (localStorage.getItem('koltoda.book.barCollapsed') === '1') window.toggleListenBar(); } catch (e) {}
+
+    measureChrome();
+    window.addEventListener('resize', measureChrome);
+    window.addEventListener('orientationchange', measureChrome);
+    if (window.ResizeObserver && $bar) new ResizeObserver(measureChrome).observe($bar);
+
+    window.bookNext = function () { return go(cur + 1, true); };
+    window.bookJump = function (dir) { go(cur + dir); };
+    window.bookGo   = function (i) { go(i); };
+    window.bookPage = function () { return cur; };
+
+    document.addEventListener('keydown', function (e) {
+        var t = e.target;
+        if (t && /^(INPUT|SELECT|TEXTAREA)$/.test(t.tagName)) return;
+        if (e.key === 'ArrowLeft')       { e.preventDefault(); go(cur + 1); }
+        else if (e.key === 'ArrowRight') { e.preventDefault(); go(cur - 1); }
+        else if (e.key === 'Home')       { e.preventDefault(); go(0); }
+        else if (e.key === 'End')        { e.preventDefault(); go(pages.length - 1); }
+        else if (e.key === 'PageDown')   { e.preventDefault(); go(cur + 1); }
+        else if (e.key === 'PageUp')     { e.preventDefault(); go(cur - 1); }
+    });
+
+    var sx = 0, sy = 0, tracking = false;
+    book.addEventListener('touchstart', function (e) {
+        if (e.touches.length !== 1) return;
+        sx = e.touches[0].clientX; sy = e.touches[0].clientY; tracking = true;
+    }, { passive: true });
+    book.addEventListener('touchend', function (e) {
+        if (!tracking) return;
+        tracking = false;
+        var t = e.changedTouches[0];
+        var dx = t.clientX - sx, dy = t.clientY - sy;
+        if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.8) return;
+        go(dx < 0 ? cur + 1 : cur - 1);
+    }, { passive: true });
+
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest ? e.target.closest('[data-page]') : null;
+        if (!a) return;
+        e.preventDefault();
+        var target = a.getAttribute('data-page');
+        var i = /^\d+$/.test(target) ? parseInt(target, 10) - 1
+                                     : pages.indexOf(document.getElementById(target));
+        if (i >= 0) go(i);
+    });
+
+    var saved = 0;
+    try { saved = parseInt(localStorage.getItem(KEY) || '0', 10) || 0; } catch (e) { saved = 0; }
+    cur = (saved > 0 && saved < pages.length) ? saved : 0;
+    render();
+})();
+</script>
+
+<script>
+/* ===== tts.js ===== */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    var NS       = 'koltoda.tts.';
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false, noHeVoice = false;
+    var clickToRead = true;
+
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+    function readPos() { try { return parseInt(localStorage.getItem(POS_KEY) || '0', 10) || 0; } catch (e) { return 0; } }
+
+    var G = '["\\u05f4\\u201d\\u2033]';
+    var R = "['\\u05f3\\u2019]";
+
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' ');
+        t = t.replace(/־/g, ' ');
+        t = t.replace(/\s*[–—]\s*/g, ', ');
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function chapterLabel(h) {
+        var d = h.getAttribute && h.getAttribute('data-chapter');
+        if (d && d.trim()) return d.trim();
+        var p = h.previousElementSibling;
+        if (p && p.classList && p.classList.contains('chapter-label')) {
+            return p.textContent.replace(/\s+/g, ' ').trim();
+        }
+        return '';
+    }
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (n.closest(SKIP)) return;
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            if (n.tagName === 'H2') {
+                var lbl = chapterLabel(n);
+                if (lbl && raw.indexOf(lbl) !== 0) raw = lbl + '. ' + raw;
+            }
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    function hint() {
+        if (noHeVoice) {
+            return 'לא נמצא קול עברי במחשב — ההקראה תישמע משובשת. ' +
+                   'ב-Windows: הגדרות ← שעה ושפה ← דיבור ← נהל קולות ← הוסף קולות ← עברית.';
+        }
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = readPos();
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        var was = noHeVoice;
+        noHeVoice = !he.length;
+        if (noHeVoice !== was && !isOn) say(hint());
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;
+                if (e.target.closest('a')) return;
+                if (window.getSelection && String(window.getSelection()).length) return;
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    var FS_MIN = 0.85, FS_MAX = 1.75, FS_STEP = 0.15, fontScale = 1;
+
+    function applyFontScale() {
+        document.documentElement.style.setProperty('--fs', String(fontScale));
+        var out = document.getElementById('fontScaleValue');
+        if (out) out.textContent = Math.round(fontScale * 100) + '%';
+        var dec = document.getElementById('fontSmaller'), inc = document.getElementById('fontBigger');
+        if (dec) dec.disabled = fontScale <= FS_MIN + 0.001;
+        if (inc) inc.disabled = fontScale >= FS_MAX - 0.001;
+    }
+
+    window.setFontScale = function (dir) {
+        fontScale = Math.min(FS_MAX, Math.max(FS_MIN, +(fontScale + dir * FS_STEP).toFixed(2)));
+        store('fs', String(fontScale));
+        applyFontScale();
+    };
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var savedFs = parseFloat(store('fs') || '1');
+        if (savedFs >= FS_MIN && savedFs <= FS_MAX) fontScale = savedFs;
+        applyFontScale();
+        if (readPos() > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+</body>
+</html>
