@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>בשמחה ובטוב לבב — עיונים לראש השנה</title>
+<style>
+/* ============================= base.css ============================= */
+:root {
+    --purple: #7e22ce;  --blue: #2563eb;   --green: #059669;
+    --gold:   #f59e0b;  --pink: #ec4899;   --ink:   #1f2937;
+    --paper:  #ffffff;  --muted: #6b7280;  --line:  rgba(0,0,0,.08);
+    --g-page:      linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --g-verse:     linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    --g-highlight: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    --g-quote:     linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    --g-story:     linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    --g-divider:   linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    --g-title:     linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0; padding: 40px 20px;
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: var(--g-page);
+    color: var(--ink);
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 900px; margin: 0 auto;
+    padding: 60px 80px;
+    background: var(--paper);
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.1);
+}
+
+/* ---------- כותרות ---------- */
+.main-title {
+    font-size: 3em; font-weight: bold; text-align: center; margin: 0 0 10px;
+    background: var(--g-title); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: var(--purple);
+}
+.subtitle { text-align: center; font-size: 1.25em; color: var(--muted); margin-bottom: 8px; }
+.author   { text-align: center; font-size: 1.05em; color: var(--purple); font-weight: bold; margin-bottom: 10px; }
+
+h2 { font-size: 2.2em; color: var(--purple); border-right: 6px solid var(--purple);
+     padding-right: 20px; margin: 50px 0 20px; }
+h3 { font-size: 1.8em; color: var(--blue);  margin: 35px 0 15px; }
+h4 { font-size: 1.5em; color: var(--green); margin: 25px 0 12px; }
+/* יישור לשני הצדדים — חובה בסגנון הבית, נותן מראה של ספר מודפס. */
+p, li { font-size: 1.15em; line-height: 1.8; margin: 0 0 20px; text-align: justify; text-justify: inter-word; }
+li { margin-bottom: 10px; }
+.verse-box p, .section-divider, .chapter-card p, .footer p { text-align: center; }
+.toc li, .listen-bar p { text-align: right; }
+
+.emphasis { color: var(--purple); font-weight: bold; }
+em { color: var(--blue); font-style: italic; }
+
+/* ---------- מעבר בין פרקים ---------- */
+.chapter-card {
+    min-height: 55vh; margin: 60px -80px 0; padding: 40px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: var(--g-title); color: #fff; text-align: center;
+}
+.chapter-card .num { font-size: 5.5em; font-weight: bold; line-height: 1; opacity: .85; }
+.chapter-card .name { font-size: 2.2em; font-weight: bold; margin-top: 18px; max-width: 18ch; }
+.chapter-divider {
+    display: flex; align-items: center; gap: 15px; margin: 45px 0;
+    color: var(--gold); font-size: 1.4em;
+}
+.chapter-divider::before, .chapter-divider::after {
+    content: ''; flex: 1; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.chapter-label {
+    display: inline-block; margin-bottom: 6px; padding: 3px 14px;
+    background: var(--purple); color: #fff; border-radius: 20px;
+    font-size: .55em; font-weight: bold; letter-spacing: .5px; vertical-align: middle;
+}
+.in-this-chapter {
+    background: var(--g-highlight); border-right: 6px solid var(--blue);
+    border-radius: 12px; padding: 22px 26px; margin: 22px 0 32px;
+}
+.in-this-chapter h4 { margin: 0 0 10px; font-size: 1.1em; color: var(--blue); }
+.in-this-chapter ul { margin: 0; padding-right: 20px; }
+.in-this-chapter li { font-size: 1em; margin-bottom: 6px; text-align: right; }
+
+.story-title { display: block; font-size: 1.25em; font-weight: bold; color: var(--green); margin-bottom: 12px; }
+
+/* ---------- קופסאות תוכן ---------- */
+.verse-box, .highlight-box, .quote-box, .story-box, .qa-box {
+    padding: 28px; margin: 30px 0; border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.verse-box     { background: var(--g-verse); border: 2px solid var(--purple);
+                 text-align: center; font-size: 1.3em; font-weight: 600; color: var(--purple); }
+.verse-box p   { font-size: 1em; margin: 0; }
+.highlight-box { background: var(--g-highlight); border-right: 6px solid var(--blue);
+                 box-shadow: 0 5px 15px rgba(126,34,206,.15); }
+.quote-box     { background: var(--g-quote); border-right: 6px solid var(--gold); font-style: italic; }
+.story-box     { background: var(--g-story); border-right: 6px solid var(--green); }
+.qa-box        { background: #fff; border: 2px dashed var(--pink); }
+.verse-box p:last-child, .highlight-box p:last-child, .quote-box p:last-child,
+.story-box p:last-child, .qa-box p:last-child { margin-bottom: 0; }
+
+.source-tag { display: block; margin-top: 12px; font-size: .9em; font-style: normal;
+              color: var(--muted); font-weight: bold; }
+
+.section-divider {
+    background: var(--g-divider); color: #fff; text-align: center;
+    padding: 18px 25px; margin: 45px 0; border-radius: 10px;
+    font-size: 1.3em; font-weight: bold; letter-spacing: .5px;
+}
+
+.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 30px 0; }
+.two-columns > div { padding: 25px; border-radius: 12px; box-shadow: 0 3px 10px rgba(0,0,0,.1); }
+.col-purple { background: var(--g-verse);  border-top: 5px solid var(--purple); }
+.col-gold   { background: var(--g-quote);  border-top: 5px solid var(--gold); }
+
+/* ---------- תוכן עניינים / מקורות / חתימה ---------- */
+.toc { background: #faf5ff; border: 2px solid #e9d5ff; border-radius: 12px; padding: 25px 30px; margin: 30px 0; }
+.toc h3 { margin-top: 0; color: var(--purple); }
+.toc ul { list-style: none; padding: 0; margin: 0; }
+.toc li { margin-bottom: 8px; }
+.toc a { color: var(--blue); text-decoration: none; font-size: 1.05em; }
+.toc a:hover { text-decoration: underline; color: var(--purple); }
+.toc > ul > li { margin-bottom: 14px; }
+.toc-chapter { font-weight: bold; font-size: 1.1em; color: var(--purple); }
+.toc-subs { display: block; margin-top: 3px; font-size: .9em; color: var(--muted); line-height: 1.7; }
+.toc-subs a { font-size: 1em; color: var(--muted); }
+.toc-subs a:hover { color: var(--blue); }
+.toc-subs span { margin: 0 6px; opacity: .5; }
+
+.chapter-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 22px;
+    background: linear-gradient(160deg, #fffdf7 0%, #fdf8ee 100%);
+    border: 1px solid #efe4cd; border-radius: 18px;
+    padding: 34px 30px; margin: 30px 0;
+}
+.chapter-grid .grid-title {
+    grid-column: 1 / -1; text-align: center; margin: 0 0 14px;
+    font-size: 1.6em; color: var(--purple); letter-spacing: 1px;
+    border: none; padding: 0;
+}
+.chapter-chip {
+    display: flex; align-items: center; gap: 12px;
+    color: var(--ink); text-decoration: none; font-size: 1.02em; line-height: 1.45;
+    padding: 6px 8px; border-radius: 10px; transition: background .18s, transform .18s;
+}
+.chapter-chip:hover { background: rgba(245,158,11,.12); transform: translateX(-3px); }
+.chapter-chip .n {
+    flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #c9982f; color: #fff; font-size: .82em; font-weight: bold;
+}
+.chapter-chip.is-front .n { background: #1e2a5a; font-size: .7em; }
+
+@media (max-width: 900px) { .chapter-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .chapter-grid { grid-template-columns: 1fr; padding: 24px 18px; } }
+
+.sources { background: #f9fafb; border-radius: 12px; padding: 25px 30px; margin-top: 50px; border: 1px solid var(--line); }
+.sources h3 { margin-top: 0; }
+.sources li { font-size: 1em; }
+
+.footer { margin-top: 55px; padding-top: 30px; border-top: 3px solid var(--gold);
+          text-align: center; font-size: 1.05em; }
+.footer a { color: var(--blue); }
+
+.scroll-top {
+    position: fixed; bottom: 30px; left: 30px; z-index: 50;
+    width: 50px; height: 50px; border-radius: 50%;
+    background: var(--g-title); color: #fff; text-decoration: none;
+    display: none; align-items: center; justify-content: center;
+    font-size: 1.3em; box-shadow: 0 5px 15px rgba(0,0,0,.25);
+}
+.scroll-top.visible { display: flex; }
+
+/* ---------- סרגל ההאזנה ---------- */
+.listen-bar {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 15px;
+    margin: 25px 0; padding: 18px 25px;
+    background: var(--g-quote); border-radius: 12px;
+    border-right: 6px solid var(--gold);
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+.listen-btn-group { display: flex; gap: 8px; align-items: center; }
+.listen-btn {
+    display: flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
+    color: #fff; border: none; border-radius: 30px; padding: 10px 22px;
+    font-size: 1em; font-weight: bold; font-family: inherit; cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+}
+.listen-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(126,34,206,.3); }
+.listen-btn:active { transform: translateY(0); }
+.listen-stop-btn, .listen-skip-btn {
+    background: #fff; color: var(--purple); border: 2px solid var(--purple);
+    border-radius: 30px; padding: 8px 16px; font-size: .95em; font-weight: bold;
+    font-family: inherit; cursor: pointer; transition: transform .15s, background .15s;
+}
+.listen-skip-btn { padding: 8px 12px; }
+.listen-stop-btn:hover, .listen-skip-btn:hover { transform: translateY(-2px); background: #f3e8ff; }
+
+.listen-toggle-btn {
+    background: #fff; color: var(--purple); border: 2px solid var(--purple);
+    border-radius: 30px; padding: 8px 14px; font-size: .88em; font-weight: bold;
+    font-family: inherit; cursor: pointer; white-space: nowrap;
+    transition: transform .15s, background .15s, opacity .15s;
+}
+.listen-toggle-btn:hover { transform: translateY(-2px); background: #f3e8ff; }
+.listen-toggle-btn[aria-pressed="false"] {
+    color: var(--muted); border-color: #d1d5db; background: #f9fafb; opacity: .8;
+}
+.listen-toggle-btn:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+.listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+.listen-skip-btn:focus-visible, .listen-voice select:focus-visible,
+.listen-rate input:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+
+.listen-status   { font-size: .95em; color: #78350f; flex: 1 1 200px; }
+.listen-progress { font-size: .9em; color: #78350f; font-weight: bold; white-space: nowrap; }
+.listen-rate, .listen-voice { display: flex; align-items: center; gap: 6px; font-size: .9em; color: #78350f; }
+.listen-rate input { accent-color: var(--purple); }
+.listen-rate output { font-weight: bold; min-width: 2.6em; }
+.listen-voice select {
+    border-radius: 20px; border: 1px solid var(--gold); padding: 4px 10px;
+    font-family: inherit; background: #fff; color: var(--ink); max-width: 190px;
+}
+
+.tts-clickable { cursor: pointer; transition: background .2s; border-radius: 6px; }
+.tts-clickable:hover { background: rgba(245,158,11,.10); }
+.reading-highlight {
+    background: var(--g-verse); border-radius: 6px;
+    box-shadow: 0 0 0 3px var(--pink) inset; transition: background .3s;
+}
+
+/* ---------- נייד ---------- */
+@media (max-width: 768px) {
+    body { padding: 15px 10px; }
+    .container { padding: 30px 22px; border-radius: 12px; }
+    .main-title { font-size: 2em; }
+    h2 { font-size: 1.6em; padding-right: 14px; margin-top: 35px; }
+    h3 { font-size: 1.35em; } h4 { font-size: 1.15em; }
+    p, li { font-size: 1.08em; }
+    .two-columns { grid-template-columns: 1fr; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .qa-box { padding: 20px; }
+    .listen-bar { padding: 15px; gap: 10px; }
+    .listen-status { flex: 1 1 100%; }
+    .listen-voice select { max-width: 140px; }
+    .scroll-top { bottom: 18px; left: 18px; width: 44px; height: 44px; }
+    .chapter-card { margin-left: -22px; margin-right: -22px; min-height: 42vh; padding: 30px 20px; }
+    .chapter-card .num { font-size: 3.8em; }
+    .chapter-card .name { font-size: 1.5em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .01ms !important; animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    .listen-btn:hover, .listen-stop-btn:hover, .listen-skip-btn:hover { transform: none; }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --paper: #1c1b22; --ink: #e8e6ef; --muted: #a8a4b8; --line: rgba(255,255,255,.10);
+        --purple: #c084fc; --blue: #7dd3fc; --green: #4ade80; --gold: #fbbf24; --pink: #f9a8d4;
+        --g-page:      linear-gradient(135deg, #14131a 0%, #221f2e 100%);
+        --g-verse:     linear-gradient(135deg, #2a2440 0%, #3a2436 100%);
+        --g-highlight: linear-gradient(135deg, #1e2c44 0%, #262244 100%);
+        --g-quote:     linear-gradient(135deg, #3a2f16 0%, #4a3a18 100%);
+        --g-story:     linear-gradient(135deg, #16332a 0%, #14291f 100%);
+    }
+    .container { box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+    .toc     { background: #241f33; border-color: #3d2f57; }
+    .chapter-grid { background: linear-gradient(160deg, #262133 0%, #201c2b 100%); border-color: #3d3350; }
+    .chapter-chip { color: var(--ink); }
+    .chapter-chip .n { background: #b08a2e; }
+    .chapter-chip.is-front .n { background: #3b4a86; }
+    .sources { background: #201f28; }
+    .qa-box  { background: #201f28; }
+    .listen-status, .listen-progress, .listen-rate, .listen-voice { color: #fde68a; }
+    .listen-stop-btn, .listen-skip-btn, .listen-toggle-btn { background: #2a2438; color: #e9d5ff; border-color: #c084fc; }
+    .listen-toggle-btn[aria-pressed="false"] { background: #232029; color: #8b8698; border-color: #3f3b4a; }
+    .listen-stop-btn:hover, .listen-skip-btn:hover { background: #3a3050; }
+    .listen-voice select { background: #2a2438; color: var(--ink); }
+    .tts-clickable:hover { background: rgba(251,191,36,.12); }
+}
+
+/* ---------- הדפסה A4 ---------- */
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; color: #000 !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important;
+                 box-shadow: none !important; border-radius: 0 !important; background: #fff !important; }
+    .scroll-top, .listen-bar, .chapter-card, .chapter-divider, .chapter-grid { display: none !important; }
+    .chapter-label { background: none !important; color: #4a0080 !important; padding: 0 !important; }
+    .in-this-chapter { page-break-inside: avoid; break-inside: avoid; }
+    p, li { text-align: justify; }
+    .reading-highlight { box-shadow: none !important; background: none !important; }
+    .tts-clickable { cursor: auto; }
+    h2 { page-break-before: always; break-before: page; font-size: 16pt !important; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    h3 { font-size: 13pt !important; } h4 { font-size: 12pt !important; }
+    p, li { font-size: 11pt !important; orphans: 3; widows: 3; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box, .section-divider {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; background: none !important;
+                  -webkit-text-fill-color: #4a0080 !important; color: #4a0080 !important; }
+    .footer { page-break-before: always; break-before: page; }
+    a { color: #000 !important; text-decoration: none; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #444; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+}
+
+/* ============================= paginated.css ============================= */
+body { padding: 20px 15px 0; overflow: hidden; }
+
+#book {
+    max-width: 1000px; margin: 0 auto;
+    padding: 0; overflow: hidden;
+    height: calc(100vh - 150px);
+}
+
+.page {
+    display: none;
+    height: 100%;
+    padding: 45px 60px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+}
+.page.active { display: block; animation: pageIn .35s ease-out; }
+@keyframes pageIn { from { opacity: 0; transform: scale(.985); } to { opacity: 1; transform: none; } }
+
+.page.page-cover, .page.page-end { display: none; }
+.page.page-cover.active, .page.page-end.active {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+}
+.page.page-cover .main-title { margin-bottom: 20px; }
+.page h2:first-child { margin-top: 0; }
+
+#book .chapter-card, #book .chapter-divider { display: none; }
+
+/* ---------- ניווט ---------- */
+.book-nav {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 40;
+    display: flex; align-items: center; justify-content: center; gap: 18px;
+    padding: 12px 20px;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+}
+.nav-arrow {
+    width: 46px; height: 46px; border-radius: 50%; flex: 0 0 auto;
+    background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
+    color: #fff; border: none; font-size: 1.2em; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: transform .15s, opacity .15s;
+}
+.nav-arrow:hover:not(:disabled) { transform: scale(1.08); }
+.nav-arrow:disabled { opacity: .3; cursor: default; }
+.nav-arrow:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+
+.book-dots { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; max-width: 55vw; }
+.book-dot {
+    width: 10px; height: 10px; border-radius: 50%; padding: 0;
+    background: #d1d5db; border: none; cursor: pointer; transition: all .2s;
+}
+.book-dot:hover { background: var(--pink); }
+.book-dot.active { background: var(--purple); width: 26px; border-radius: 5px; }
+.book-dot:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+
+.book-counter { font-size: .9em; color: var(--muted); white-space: nowrap; }
+
+.book-listen-bar {
+    position: fixed; bottom: 70px; left: 0; right: 0; z-index: 39;
+    margin: 0; border-radius: 0; border-right: none;
+    border-top: 3px solid var(--gold);
+}
+
+@media (max-width: 768px) {
+    body { padding: 10px 8px 0; }
+    #book { height: calc(100vh - 190px); }
+    .page { padding: 25px 20px; }
+    .book-listen-bar { bottom: 62px; }
+    .book-dots { max-width: 45vw; gap: 5px; }
+    .book-dot { width: 8px; height: 8px; }
+    .book-dot.active { width: 20px; }
+    .nav-arrow { width: 40px; height: 40px; }
+    .book-counter { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page.active { animation: none; }
+}
+
+@media print {
+    body { overflow: visible; padding: 0; }
+    #book { height: auto; overflow: visible; }
+    .page, .page.page-cover, .page.page-end { display: block !important; height: auto; overflow: visible;
+                                              padding: 0; page-break-after: always; break-after: page; }
+    .book-nav, .book-listen-bar { display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="container" id="book">
+
+    <!-- עמוד 1: כריכה פנימית -->
+    <div class="page page-cover active" data-title="כריכה">
+        <h1 class="main-title" id="top">בשמחה ובטוב לבב</h1>
+        <div class="subtitle">עיונים לראש השנה — מפרשת כי תבוא ועד יום הכיפורים</div>
+        <div class="author">מאת: הרב יהודה טאוב</div>
+    </div>
+
+    <!-- עמוד 2: מבט-על — רשת כל הפרקים -->
+    <div class="page" data-title="מבט על הספר">
+        <nav class="chapter-grid" aria-label="מבט על פרקי הספר">
+            <h2 class="grid-title">תּוֹכֶן הָעִנְיָנִים</h2>
+            <a class="chapter-chip" href="#" data-page="4"><span class="n">1</span>שני הדינים של ראש השנה</a>
+            <a class="chapter-chip" href="#" data-page="5"><span class="n">2</span>פרשת כי תבוא: ברכה שאין כדוגמתה, וקללות נוראות</a>
+            <a class="chapter-chip" href="#" data-page="6"><span class="n">3</span>מדוע קוראים כי תבוא לפני ראש השנה</a>
+            <a class="chapter-chip" href="#" data-page="7"><span class="n">4</span>מדוע ראש השנה קודם ליום הכיפורים</a>
+        </nav>
+    </div>
+
+    <!-- עמוד 3: מפתח עניינים מפורט -->
+    <div class="page" data-title="תוכן העניינים">
+        <h2>📑 תוכן העניינים</h2>
+        <div class="toc">
+            <ul>
+                <li>
+                    <a class="toc-chapter" href="#" data-page="4">פרק א · שני הדינים של ראש השנה</a>
+                    <span class="toc-subs"><a href="#" data-page="4">"כבני מרון" — הדין הראשון</a><span>·</span><a href="#" data-page="4">שלושה ספרים — הדין השני</a></span>
+                </li>
+                <li>
+                    <a class="toc-chapter" href="#" data-page="5">פרק ב · פרשת כי תבוא: ברכה שאין כדוגמתה, וקללות נוראות</a>
+                    <span class="toc-subs"><a href="#" data-page="5">"ושמחת בכל הטוב"</a><span>·</span><a href="#" data-page="5">הר גריזים והר עיבל</a><span>·</span><a href="#" data-page="5">"תחת אשר לא עבדת בשמחה"</a></span>
+                </li>
+                <li>
+                    <a class="toc-chapter" href="#" data-page="6">פרק ג · מדוע קוראים כי תבוא לפני ראש השנה</a>
+                    <span class="toc-subs"><a href="#" data-page="6">ביאור ראשון: כפיות טובה</a><span>·</span><a href="#" data-page="6">ביאור שני: שמחה במצוות</a></span>
+                </li>
+                <li>
+                    <a class="toc-chapter" href="#" data-page="7">פרק ד · מדוע ראש השנה קודם ליום הכיפורים</a>
+                    <span class="toc-subs"><a href="#" data-page="7">קרוב אליך הדבר מאוד</a><span>·</span><a href="#" data-page="7">קודם ממליכים, ואחר כך מבקשים</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- עמוד 4: פרק א -->
+    <div class="page" data-title="פרק א · שני הדינים של ראש השנה">
+        <span class="chapter-label">פרק א</span>
+        <h2 id="section1">שני הדינים של ראש השנה</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>"כבני מרון" — הדין הראשון: חי או מת</li>
+                <li>שלושה ספרים — הדין השני, הנחתם רק ביום הכיפורים</li>
+            </ul>
+        </div>
+
+        <p>הרגילות לחשוב על ראש השנה כעל יום דין אחד, שבו נחתם גורלו של האדם לשנה הקרובה. אך כאשר מתבוננים במקורות, מתגלה שביום הזה מתקיימים למעשה שני דינים נפרדים, שונים באופיים זה מזה לגמרי. הדין האחד עוסק במהותו הבסיסית ביותר של האדם — האם הוא נחשב, במובן העמוק, "חי" או "מת". הדין השני עוסק באיכות חייו בעולם הזה — פרנסתו, בריאותו, שלוותו — ורק הוא ממתין ונחתם בסופו של דבר ביום הכיפורים.</p>
+
+        <h3>"כבני מרון" — הדין הראשון</h3>
+        <p>המשנה קובעת שראש השנה הוא יום שבו כל אחד ואחד עובר לפני בוראו בנפרד, ממש כמו שהרועה מעביר את צאנו אחד אחד כדי למנותו:</p>
+        <div class="verse-box"><p>"בְּאַרְבָּעָה פְרָקִים הָעוֹלָם נִדּוֹן... וּבְרֹאשׁ הַשָּׁנָה כָּל בָּאֵי עוֹלָם עוֹבְרִין לְפָנָיו כִּבְנֵי מָרוֹן."<span class="source-tag">משנה, ראש השנה פרק א משנה ב</span></p></div>
+        <p>הביטוי "כבני מרון" מלמד שבדין הזה אין התחשבנות כללית, אין "ממוצע" של האנושות כולה, ואין מסתתרים בתוך ההמון. כל אדם נבחן בפני עצמו, לפי מהותו שלו — לא לפי מה שהוא עשה בפועל השנה, אלא לפי מה שהוא <span class="emphasis">בעצם</span>. זהו דין על עצם הקיום, לא עדיין על תוכנו.</p>
+
+        <h3>שלושה ספרים — הדין השני</h3>
+        <p>אלא שמיד לאחר מכן מלמדת אותנו הגמרא שהדין הזה אינו אחיד לכל אדם באותה מידה. הוא מתחלק לשלוש דרגות:</p>
+        <div class="quote-box"><p>"שְׁלֹשָׁה סְפָרִים נִפְתָּחִין בְּרֹאשׁ הַשָּׁנָה: אֶחָד שֶׁל רְשָׁעִים גְּמוּרִים, וְאֶחָד שֶׁל צַדִּיקִים גְּמוּרִים, וְאֶחָד שֶׁל בֵּינוֹנִים. צַדִּיקִים גְּמוּרִים נִכְתָּבִים וְנֶחְתָּמִים לְאַלְתַּר לְחַיִּים, רְשָׁעִים גְּמוּרִים נִכְתָּבִים וְנֶחְתָּמִים לְאַלְתַּר לְמִיתָה, וּבֵינוֹנִים תְּלוּיִים וְעוֹמְדִים מֵרֹאשׁ הַשָּׁנָה וְעַד יוֹם הַכִּפּוּרִים. זָכוּ — נִכְתָּבִים לְחַיִּים, לֹא זָכוּ — נִכְתָּבִים לְמִיתָה."<span class="source-tag">תלמוד בבלי, ראש השנה טז עמוד א</span></p></div>
+        <p>כאן בדיוק מתגלה החלוקה בין שני הדינים. הצדיק הגמור והרשע הגמור — מהותם ידועה, ולכן דבר קיומם נחתם מיד בראש השנה עצמו. אבל רובנו, ה"בינוניים", שרויים בעמדת ביניים: קיומנו אינו מוטל בספק, אך <span class="emphasis">תוכן</span> החיים הללו — האם יהיו שנה של ברכה או שנה של קושי — נשאר פתוח ותלוי. הימים שבין ראש השנה ליום הכיפורים אינם רק "הפסקה" בין שתי חתימות; הם הזמן שבו נקבע בפועל איזו שנה תהיה זו. וזה בדיוק מה שמבטא ההבחנה בין הדין על מהות האדם, חי או מת, לבין הדין על חיי העולם הזה — שרק הוא ממתין ונחתם ביום הכיפורים.</p>
+        <p>הבנה זו מלווה אותנו לאורך הפרקים הבאים: אם ראש השנה קובע קיום, ועשרת הימים שלאחריו קובעים תוכן — הרי שהשאלה המרכזית של הימים הללו היא כיצד באמת עומדים בפני הדין הזה, ומה מכריע אותו לטובה.</p>
+    </div>
+
+    <!-- עמוד 5: פרק ב -->
+    <div class="page" data-title="פרק ב · פרשת כי תבוא">
+        <span class="chapter-label">פרק ב</span>
+        <h2 id="section2">פרשת כי תבוא: ברכה שאין כדוגמתה, וקללות נוראות</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>"ושמחת בכל הטוב" — שלושה דברים בברכה</li>
+                <li>הר גריזים והר עיבל — בין הברכה לקללה</li>
+                <li>"תחת אשר לא עבדת בשמחה" — שלושה דברים בקללה</li>
+            </ul>
+        </div>
+
+        <p>פרשת כי תבוא בנויה כמסע דרמטי: היא נפתחת בברכה שאין כדוגמתה בכל התורה, עוברת דרך טקס מרשים על שני הרים, ומסתיימת בתוכחה הארוכה והקשה ביותר שבתורה — תשעים ושמונה קללות. כדי להבין את הפרשה כיחידה אחת, יש לשים לב לכך שהפתיחה והסיום אינם רק ניגודים מקריים, אלא הד ספרותי מכוון זה לזה.</p>
+
+        <h3>"ושמחת בכל הטוב" — שלושה דברים בברכה</h3>
+        <p>בסיום פרשת הביכורים, לקראת חתימת הקטע, מופיע הפסוק:</p>
+        <div class="verse-box"><p>"וְשָׂמַחְתָּ בְכָל הַטּוֹב אֲשֶׁר נָתַן לְךָ ה' אֱלֹהֶיךָ וּלְבֵיתֶךָ."<span class="source-tag">דברים פרק כו פסוק יא</span></p></div>
+        <p>בפסוק הזה גלומים שלושה יסודות: <span class="emphasis">שמחה</span> — לא רק קבלת הטוב אלא שמחה בו. <span class="emphasis">בכל</span> — לא רק בחלק מהטוב אלא בכולו. ו<span class="emphasis">הטוב</span> — ההכרה שמה שקיבל הוא באמת טוב. ומיד לאחר מכן פותחת התורה בברכה יוצאת דופן:</p>
+        <div class="highlight-box"><p>"וְהָיָה אִם שָׁמוֹעַ תִּשְׁמַע בְּקוֹל ה' אֱלֹהֶיךָ... וּבָאוּ עָלֶיךָ כָּל הַבְּרָכוֹת הָאֵלֶּה וְהִשִּׂיגֻךָ."<span class="source-tag">דברים פרק כח פסוקים א־ב</span></p></div>
+        <p>מפרשים רבים עמדו על כך שברכה זו, המבטיחה עלייה "עֶלְיוֹן עַל כָּל גּוֹיֵי הָאָרֶץ", היא ברכה שאין לה מקבילה בכל התורה כולה — לא בהיקפה ולא בעוצמת לשונה.</p>
+
+        <h3>הר גריזים והר עיבל</h3>
+        <p>באמצע הפרשה, לפני שמגיעים לברכות ולקללות עצמן, מתוארת עמידה סמלית ומכוננת: שנים עשר השבטים נחלקים לשני הרים, ומכריזים יחד ברכות וקללות על עצם הבחירה בין הטוב לרע.</p>
+        <div class="verse-box"><p>"אֵלֶּה יַעַמְדוּ לְבָרֵךְ אֶת הָעָם עַל הַר גְּרִזִּים... וְאֵלֶּה יַעַמְדוּ עַל הַקְּלָלָה בְּהַר עֵיבָל."<span class="source-tag">דברים פרק כז פסוקים יב־יג</span></p></div>
+        <p>הטקס הזה, המתרחש בדיוק במרכז הפרשה, אינו מקרי. הוא מציב בפני העם, פיזית וממשית, את שתי הדרכים גם יחד — לפני שממשיכים אל הברכות המפורטות ולאחר מכן אל התוכחה הקשה. הוא כאילו אומר: הבחירה עודנה פתוחה, ושני ההרים עומדים זה מול זה.</p>
+
+        <h3>"תחת אשר לא עבדת בשמחה" — שלושה דברים בקללה</h3>
+        <p>לאחר תיאור הברכות, פותחת התורה בתוכחה הארוכה. והנה, בדיוק כשם שהברכה נפתחה בשלושה יסודות, כך גם התוכחה הנוראה כולה מתומצתת, לקראת סיומה, באותם שלושה יסודות בדיוק — הפוכים:</p>
+        <div class="quote-box"><p>"תַּחַת אֲשֶׁר לֹא עָבַדְתָּ אֶת ה' אֱלֹהֶיךָ בְּשִׂמְחָה וּבְטוּב לֵבָב מֵרֹב כֹּל."<span class="source-tag">דברים פרק כח פסוק מז</span></p></div>
+        <p>שוב מופיעים שלושה יסודות: <span class="emphasis">בשמחה</span>, <span class="emphasis">בטוב לבב</span>, ו<span class="emphasis">מרב כל</span>. ההקבלה בין הפתיחה לסיום היא כמעט מילולית, ומעוררת שאלה: כיצד ייתכן שתשעים ושמונה קללות נוראות כאלה תלויות, לפי לשון הכתוב, בדבר אחד בלבד — שמחה?</p>
+
+        <div class="two-columns">
+            <div class="col-purple">
+                <h4 style="margin-top:0;">בפתיחה — שלוש מילים של ברכה</h4>
+                <p style="margin-bottom:0;">שמחה · בכל · הטוב<br>"וְשָׂמַחְתָּ בְכָל הַטּוֹב"</p>
+            </div>
+            <div class="col-gold">
+                <h4 style="margin-top:0; color: var(--purple);">בסיום — שלוש מילים של קללה</h4>
+                <p style="margin-bottom:0;">בשמחה · ובטוב לבב · מרב כל<br>"לֹא עָבַדְתָּ... בְּשִׂמְחָה"</p>
+            </div>
+        </div>
+
+        <p>שאלה זו בדיוק, ומקומה של הפרשה בלוח השנה — היא שמובילה אותנו לפרק הבא.</p>
+    </div>
+
+    <!-- עמוד 6: פרק ג -->
+    <div class="page" data-title="פרק ג · מדוע קוראים כי תבוא לפני ראש השנה">
+        <span class="chapter-label">פרק ג</span>
+        <h2 id="section3">מדוע קוראים פרשת כי תבוא לפני ראש השנה?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>ביאור ראשון: כפיות טובה כענף של כפירה</li>
+                <li>ביאור שני: שמחה במצוות מכפרת הכל</li>
+            </ul>
+        </div>
+
+        <p>מנהג ישראל לקרוא את פרשת כי תבוא, על תשעים ושמונה הקללות שבה, בשבת שלפני ראש השנה. לכאורה תמוה: מדוע לפתוח את השנה החדשה, דווקא בסמיכות ליום הדין, בקריאה של קללות כה קשות? והתמיהה מתחדדת עוד יותר לנוכח לשון הכתוב עצמו, שתולה את כל הפורענות הזו בדבר יחיד:</p>
+
+        <div class="qa-box">
+            <p><strong>קושיה:</strong> התורה כותבת שכל תשעים ושמונה הקללות מגיעות "תַּחַת אֲשֶׁר לֹא עָבַדְתָּ... בְּשִׂמְחָה". וקשה מאוד לומר שכל הפורענות הנוראה הזו באה רק מפני שלא היו שמחים.</p>
+        </div>
+
+        <p>בעניין זה הובאו שני ביאורים, שכל אחד מהם חושף זווית שונה של אותה תשובה, ושתיהן נוגעות ישירות למהותו של ראש השנה.</p>
+
+        <div class="two-columns">
+            <div class="col-purple">
+                <h4 style="margin-top:0;">ביאור ראשון</h4>
+                <p>הסיבה היא שלא הודו לה'. וכל תכלית הבריאה כולה היא להודות לשמו יתברך — ומי שאינו ממלא את התכלית הזו, מאבד למעשה את זכות קיומו.</p>
+            </div>
+            <div class="col-gold">
+                <h4 style="margin-top:0; color: var(--purple);">ביאור שני</h4>
+                <p>למעשה הם נענשו בגין ריבוי עוונות, אלא שהקב"ה גילה: אילו היו שמחים במצוות, היה מכפר להם על הכל. שמחה במצוה מבטלת את הדין שכנגד העברה.</p>
+            </div>
+        </div>
+
+        <h3>ביאור ראשון: כפיות טובה כענף של כפירה</h3>
+        <p>לפי ההבנה הראשונה, אין מדובר ב"עונש קטן על חטא קטן". כפיות טובה כלפי הקב"ה אינה רק חוסר נימוס — היא, במהותה, סוג של כפירה. חז"ל הביאו רעיון זה בלשון חריפה:</p>
+        <div class="quote-box"><p>"מִפְּנֵי מָה עָנַשׁ הַכָּתוּב בְּיוֹתֵר לִכְפוּיֵי טוֹבָה? מִפְּנֵי שֶׁהוּא כְּעִנְיַן כְּפִירָה בְּהַקָּדוֹשׁ בָּרוּךְ הוּא."<span class="source-tag">משנת רבי אליעזר, פרשה ז</span></p></div>
+        <p>שכן כל הבריאה כולה, מטרתה להודות לשמו יתברך. מי שאינו עושה זאת — מבטל למעשה את הטעם שלשמו נברא. ומכאן הקשר הישיר לראש השנה: אם המידה שקובעת את זכות הקיום היא ההודאה, הרי שהעצה הפשוטה והברורה ביותר לזכות בדין אינה טיעון משפטי מורכב, אלא <span class="emphasis">להודות ולהלל לשמו יתברך</span> — בדיוק כפי שעושים בתפילות ימים נוראים.</p>
+
+        <h3>ביאור שני: שמחה במצוות מכפרת הכל</h3>
+        <p>ההבנה השנייה הולכת בכיוון שונה במקצת. לפיה, האמת היא שהעם נענש בגלל ריבוי עוונות ממשיים, ולא רק בגלל חוסר שמחה. אלא שהקב"ה גילה כאן סוד: אילו היו שמחים בקיום המצוות, הייתה שמחה זו מכפרת על הכל. שכן שמחה במצוה מעמידה את האדם בבחינת "בן" — לא עבד הממלא חובה בעל כורחו, אלא בן השמח לעשות רצון אביו. ומעמד זה של "בנים" נושא עמו ישועה מיוחדת: "יִשָּׂא פָנָיו", "בְּאוֹר פְּנֵי מֶלֶךְ חַיִּים" — ובכוחו למחול הכל.</p>
+        <p>וכך ממש בראש השנה: אם אדם שמח בה', הרי שגם עם מגיעים תשעים ושמונה קללות במאזניים, הכל נמחל, בבחינת "עַל כָּל פְּשָׁעִים תְּכַסֶּה אַהֲבָה". שני הביאורים, אף שדרכיהם שונות, מגיעים לאותה נקודה: השמחה אינה תוספת נעימה לעבודת ה', אלא כלי ממשי המשנה את מאזני הדין עצמם. וזהו בדיוק המסר שקוראים אותו, מתוך פרשת כי תבוא, בפתח השנה החדשה.</p>
+    </div>
+
+    <!-- עמוד 7: פרק ד -->
+    <div class="page" data-title="פרק ד · מדוע ראש השנה קודם ליום הכיפורים">
+        <span class="chapter-label">פרק ד</span>
+        <h2 id="section4">מדוע ראש השנה לפני יום הכיפורים?</h2>
+        <div class="in-this-chapter">
+            <h4>📖 בפרק זה:</h4>
+            <ul>
+                <li>קרוב אליך הדבר מאוד</li>
+                <li>קודם ממליכים, ואחר כך מבקשים</li>
+            </ul>
+        </div>
+
+        <div class="qa-box">
+            <p><strong>השאלה המפורסמת:</strong> מדוע לא נקבע סדר הפוך — שקודם יתכפרו העוונות ביום הכיפורים, ורק לאחר מכן, נקי מחטא, יעמוד האדם בראש השנה ויזכה להיכתב לשנה טובה ומתוקה?</p>
+        </div>
+
+        <p>שאלה זו נשארת מתוחה כל עוד רואים בעשרת הימים שבין ראש השנה ליום הכיפורים רק "פרוזדור טכני" הדרוש להשלמת התהליך. אך שני יסודות, שהם המשך ישיר לפרקים הקודמים, מיישבים אותה מן היסוד.</p>
+
+        <h3>קרוב אליך הדבר מאוד</h3>
+        <p>היסוד הראשון נוגע לעצם טיבה של התשובה. פרשת נצבים, הנקראת אף היא סמוך לראש השנה, מלמדת שהתשובה אינה הישג רחוק שיש להתאמץ ולהגיע אליו במשך שנה שלמה, אלא דבר קרוב ונגיש בכל רגע:</p>
+        <div class="verse-box"><p>"כִּי הַמִּצְוָה הַזֹּאת... לֹא נִפְלֵאת הִוא מִמְּךָ וְלֹא רְחֹקָה הִוא... כִּי קָרוֹב אֵלֶיךָ הַדָּבָר מְאֹד, בְּפִיךָ וּבִלְבָבְךָ לַעֲשֹׂתוֹ."<span class="source-tag">דברים פרק ל פסוקים יא, יד</span></p></div>
+        <p>הרמב"ן, בפירושו לפסוקים אלה, מבאר שהכתוב נאמר בלשון עתיד־הווה דווקא כדי להבטיח שהדבר אכן יתקיים: גם אם נדחת "בקצה השמים", תוכל תמיד לשוב אל ה' ולעשות ככל אשר ציווה, "כִּי אֵין הַדָּבָר נִפְלָא וְרָחוֹק מִמְּךָ, אֶלָּא קָרוֹב אֵלֶיךָ מְאֹד לַעֲשׂוֹתוֹ בְּכָל עֵת וּבְכָל מָקוֹם".<span class="source-tag">רמב"ן, פירוש על התורה, דברים פרשת נצבים ל, יא</span></p>
+        <p>מכאן שאין צורך "לסיים" תהליך תשובה שלם לפני ראש השנה כתנאי לעמוד בדין. אדרבה: חז"ל לימדו שאפילו הרהור תשובה בלבד, בלב שלם, כבר נחשב לתשובה של ממש — עד כדי כך שהגמרא קובעת שאדם המקדש אישה על תנאי שהוא צדיק, אפילו אם היה רשע גמור, הקידושין תקפים מספק, שמא הרהר תשובה בלבו באותו הרגע ונעשה צדיק.<span class="source-tag">תלמוד בבלי, קידושין דף מט עמוד ב</span> אם כך, עשרת הימים שבין ראש השנה ליום הכיפורים אינם תנאי מוקדם לזכות בדין, אלא מתנה: זמן נוסף שניתן לנו כדי להעמיק ולבסס את התשובה שכבר החלה.</p>
+
+        <h3>קודם ממליכים, ואחר כך מבקשים</h3>
+        <p>היסוד השני קשור ישירות לביאור הראשון שנלמד בפרק הקודם — שההודאה וההלל לה' הם עצמם העצה לזכות בדין. ראש השנה אינו נפתח בבקשת סליחה, אלא בהמלכה: תקיעת שופר, פסוקי מלכויות, וההכרזה "הַיּוֹם הֲרַת עוֹלָם". וזהו סדר טבעי והכרחי: קודם ממליכים את המלך, ורק לאחר מכן, מתוך מעמד של קרבה, פונים אליו בבקשת מחילה. אדם שמבקש חנינה ממלך שטרם קיבל עליו את מלכותו — בקשתו חסרת יסוד.</p>
+        <p>וכך מצטרפים כל חלקי המסע: תחילה, בראש השנה, מכתירים את הקב"ה למלך מתוך שמחה — כפי שנלמד שהשמחה וההודאה הן עצמן המפתח לזכות בדין. ואז, במשך עשרת ימי תשובה, מתוך אותה קרבה שכבר נוצרה, ניגשים לתקן את הפרטים — לא מפני שהתשובה רחוקה או קשה, אלא מפני שהיא "קרוב אליך מאוד", וניתן לה זמן להעמיק. וביום הכיפורים נחתם הדין השני, זה שעל תוכן החיים, בדיוק כפי שלמדנו בפרק הראשון של ספר זה.</p>
+    </div>
+
+    <!-- עמוד 8: מקורות -->
+    <div class="page" data-title="מקורות">
+        <div class="sources">
+            <h2>📚 מקורות ומראי מקומות</h2>
+            <ol>
+                <li>משנה, ראש השנה פרק א משנה ב</li>
+                <li>תלמוד בבלי, ראש השנה טז עמוד א</li>
+                <li>דברים פרק כו פסוק יא</li>
+                <li>דברים פרק כח פסוקים א־ב</li>
+                <li>דברים פרק כז פסוקים יב־יג (הר גריזים והר עיבל)</li>
+                <li>דברים פרק כח פסוק מז</li>
+                <li>משנת רבי אליעזר, פרשה ז</li>
+                <li>דברים פרק ל פסוקים יא, יד (פרשת נצבים)</li>
+                <li>רמב"ן, פירוש על התורה, דברים פרשת נצבים ל, יא</li>
+                <li>תלמוד בבלי, קידושין דף מט עמוד ב</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- עמוד 9: חתימה -->
+    <div class="page page-end" data-title="חתימה">
+        <div class="footer" style="border: none; margin: 0;">
+            <strong>נכתב ונערך על ידי:</strong><br>
+            <strong>הרב יהודה טאוב</strong><br>
+            קרית אתא<br>
+            📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+            <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px; color: #1f2937;">
+                <h4>🎧 שיעורים נוספים של הרב</h4>
+                <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+                <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+                <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="listen-bar book-listen-bar">
+    <div class="listen-btn-group">
+        <button class="listen-btn" id="listenBtn" onclick="toggleListen()"
+                aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן</button>
+        <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+        <button class="listen-skip-btn" onclick="skipListen(1)"  aria-label="פסקה הבאה"  title="פסקה הבאה">⏭</button>
+        <button class="listen-stop-btn" onclick="stopListen()"   aria-label="עצור הקראה">⏹</button>
+        <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()"
+                aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+    </div>
+    <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+    <span class="listen-progress" id="listenProgress"></span>
+    <div class="listen-rate">
+        <label for="rateRange">מהירות:</label>
+        <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1"
+               oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)" aria-label="מהירות הקראה">
+        <output id="rateValue" for="rateRange">1.0×</output>
+    </div>
+    <div class="listen-voice">
+        <label for="voiceSelect">קול:</label>
+        <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+    </div>
+</div>
+
+<nav class="book-nav" aria-label="ניווט בין עמודי הספר">
+    <button class="nav-arrow" id="bookPrev" onclick="bookJump(-1)" aria-label="עמוד קודם">▶</button>
+    <div class="book-dots" id="bookDots"></div>
+    <span class="book-counter" id="bookCounter"></span>
+    <button class="nav-arrow" id="bookNext" onclick="bookJump(1)" aria-label="עמוד הבא">◀</button>
+</nav>
+
+<script>
+/* ============================= paginated.js ============================= */
+(function () {
+    'use strict';
+
+    var book = document.getElementById('book');
+    if (!book) return;
+
+    var pages = Array.prototype.slice.call(book.querySelectorAll('.page'));
+    if (!pages.length) return;
+
+    var KEY = 'koltoda.book.page.' + (document.title || location.pathname);
+    var cur = 0;
+
+    var $dots    = document.getElementById('bookDots');
+    var $counter = document.getElementById('bookCounter');
+    var $prev    = document.getElementById('bookPrev');
+    var $next    = document.getElementById('bookNext');
+
+    pages.forEach(function (p, i) {
+        if (!$dots) return;
+        var b = document.createElement('button');
+        b.className = 'book-dot';
+        b.type = 'button';
+        var label = (p.getAttribute('data-title') || ('עמוד ' + (i + 1)));
+        b.setAttribute('aria-label', label);
+        b.title = label;
+        b.addEventListener('click', function () { go(i); });
+        $dots.appendChild(b);
+    });
+
+    function render() {
+        pages.forEach(function (p, i) { p.classList.toggle('active', i === cur); });
+        if ($dots) {
+            Array.prototype.forEach.call($dots.children, function (d, i) {
+                d.classList.toggle('active', i === cur);
+                d.setAttribute('aria-current', i === cur ? 'true' : 'false');
+            });
+        }
+        if ($counter) $counter.textContent = 'עמוד ' + (cur + 1) + ' מתוך ' + pages.length;
+        if ($prev) $prev.disabled = (cur === 0);
+        if ($next) $next.disabled = (cur === pages.length - 1);
+        pages[cur].scrollTop = 0;
+        try { localStorage.setItem(KEY, String(cur)); } catch (e) {}
+    }
+
+    function go(i, fromTts) {
+        i = Math.max(0, Math.min(i, pages.length - 1));
+        if (i === cur) return false;
+        cur = i;
+        render();
+        if (!fromTts && typeof window.ttsRebuild === 'function') window.ttsRebuild();
+        return true;
+    }
+
+    window.bookNext = function () { return go(cur + 1, true); };
+    window.bookJump = function (dir) { go(cur + dir); };
+    window.bookGo   = function (i) { go(i); };
+    window.bookPage = function () { return cur; };
+
+    document.addEventListener('keydown', function (e) {
+        var t = e.target;
+        if (t && /^(INPUT|SELECT|TEXTAREA)$/.test(t.tagName)) return;
+        if (e.key === 'ArrowLeft')       { e.preventDefault(); go(cur + 1); }
+        else if (e.key === 'ArrowRight') { e.preventDefault(); go(cur - 1); }
+        else if (e.key === 'Home')       { e.preventDefault(); go(0); }
+        else if (e.key === 'End')        { e.preventDefault(); go(pages.length - 1); }
+        else if (e.key === 'PageDown')   { e.preventDefault(); go(cur + 1); }
+        else if (e.key === 'PageUp')     { e.preventDefault(); go(cur - 1); }
+    });
+
+    var sx = 0, sy = 0, tracking = false;
+    book.addEventListener('touchstart', function (e) {
+        if (e.touches.length !== 1) return;
+        sx = e.touches[0].clientX; sy = e.touches[0].clientY; tracking = true;
+    }, { passive: true });
+    book.addEventListener('touchend', function (e) {
+        if (!tracking) return;
+        tracking = false;
+        var t = e.changedTouches[0];
+        var dx = t.clientX - sx, dy = t.clientY - sy;
+        if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.8) return;
+        go(dx < 0 ? cur + 1 : cur - 1);
+    }, { passive: true });
+
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest ? e.target.closest('[data-page]') : null;
+        if (!a) return;
+        e.preventDefault();
+        var target = a.getAttribute('data-page');
+        var i = /^\d+$/.test(target) ? parseInt(target, 10) - 1
+                                     : pages.indexOf(document.getElementById(target));
+        if (i >= 0) go(i);
+    });
+
+    var saved = parseInt(localStorage.getItem(KEY) || '0', 10);
+    cur = (saved > 0 && saved < pages.length) ? saved : 0;
+    render();
+})();
+</script>
+
+<script>
+/* ============================= tts.js ============================= */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    var NS       = 'koltoda.tts.';
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false;
+    var clickToRead = true;
+
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+
+    var G = '["\\u05f4\\u201d\\u2033]';
+    var R = "['\\u05f3\\u2019]";
+
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' ');
+        t = t.replace(/־/g, ' ');
+        t = t.replace(/\s*[–—]\s*/g, ', ');
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (n.closest(SKIP)) return;
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    function hint() {
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = parseInt(localStorage.getItem(POS_KEY) || '0', 10);
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;
+                if (e.target.closest('a')) return;
+                if (window.getSelection && String(window.getSelection()).length) return;
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var saved = parseInt(localStorage.getItem(POS_KEY) || '0', 10);
+        if (saved > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+</body>
+</html>
