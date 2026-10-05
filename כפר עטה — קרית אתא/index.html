@@ -1,0 +1,2191 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="torah-html-article 2.7.0">
+<title>סיפורה של אדמת קודש — כפר עטה (קרית אתא)</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #1f2937;
+  line-height: 1.8;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fffdfb;
+  padding: 60px 80px;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+h1.main-title {
+  font-size: 3em;
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+.subtitle {
+  text-align: center;
+  font-size: 1.4em;
+  color: #6b21a8;
+  margin-bottom: 6px;
+}
+.dates {
+  text-align: center;
+  font-size: 1.1em;
+  color: #92400e;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.author {
+  text-align: center;
+  font-size: 1.1em;
+  color: #374151;
+  margin-bottom: 40px;
+}
+h2 {
+  font-size: 2.2em;
+  color: #7e22ce;
+  border-right: 6px solid #7e22ce;
+  padding-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 1.6em;
+  color: #2563eb;
+  margin-top: 34px;
+  margin-bottom: 14px;
+}
+h4 {
+  font-size: 1.3em;
+  color: #059669;
+  margin-top: 26px;
+  margin-bottom: 10px;
+}
+p, li {
+  font-size: 1.12em;
+  line-height: 1.85;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+ul, ol { padding-right: 28px; }
+.emphasis { color: #7e22ce; font-weight: 700; }
+em { color: #2563eb; font-style: italic; }
+strong { font-weight: 700; }
+
+/* chapter label */
+.chapter-label {
+  text-align: center;
+  color: #ec4899;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 1.05em;
+  margin-top: 60px;
+  margin-bottom: -6px;
+}
+h2 { text-align: center; border-right: none; padding-right: 0; }
+h2::before { content: ""; }
+
+/* boxes */
+.verse-box, .highlight-box, .quote-box, .story-box, .qa-box, .in-chapter-box, .sources, .footer {
+  border-radius: 12px;
+  padding: 26px 30px;
+  margin: 30px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.verse-box {
+  background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+  border: 2px solid #a78bfa;
+  text-align: center;
+  font-size: 1.25em;
+  font-style: italic;
+  color: #4c1d95;
+}
+.highlight-box {
+  background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+  border-right: 6px solid #2563eb;
+  box-shadow: 0 5px 15px rgba(126,34,206,0.15);
+}
+.chapter-intro {
+  background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+  border-right: 6px solid #2563eb;
+  box-shadow: 0 5px 15px rgba(126,34,206,0.15);
+  border-radius: 12px;
+  padding: 26px 30px;
+  margin: 10px 0 30px 0;
+  font-size: 1.05em;
+}
+.in-chapter-box {
+  background: linear-gradient(135deg, #f3e8ff 0%, #fdf2f8 100%);
+  border: 2px dashed #c084fc;
+  border-radius: 12px;
+  padding: 22px 30px;
+  margin: 0 0 40px 0;
+}
+.in-chapter-box h4 { margin-top: 0; color: #7e22ce; }
+.in-chapter-box ul { margin: 0; }
+.in-chapter-box li { margin-bottom: 8px; text-align: right; }
+.quote-box {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-right: 6px solid #f59e0b;
+  font-style: italic;
+  color: #78350f;
+}
+.quote-box .source-tag {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 700;
+  color: #92400e;
+  font-size: 0.9em;
+}
+.story-box {
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdfa 100%);
+  border-right: 6px solid #059669;
+}
+.qa-box {
+  background: #fff;
+  border: 2px dashed #ec4899;
+}
+.qa-box .q { color: #be185d; font-weight: 700; margin-bottom: 10px; }
+.qa-box .a { color: #1f2937; }
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 30px 0;
+}
+.two-columns .col-purple, .two-columns .col-gold {
+  border-radius: 12px;
+  padding: 22px 24px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.two-columns .col-purple { background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 100%); border-right: 5px solid #7e22ce; }
+.two-columns .col-gold { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-right: 5px solid #f59e0b; }
+.two-columns h4 { margin-top: 0; }
+
+/* section divider used sparingly inside a chapter */
+.section-divider {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+  color: #fff;
+  text-align: center;
+  padding: 18px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 40px 0;
+}
+
+/* chapter transition — full screen card */
+.chapter-transition {
+  width: 100%;
+  min-height: 55vh;
+  margin: 60px 0 0 0;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #4c1d95 0%, #ec4899 55%, #f59e0b 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+.chapter-transition .ct-label {
+  font-size: 1.2em;
+  letter-spacing: 4px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+.chapter-transition .ct-number {
+  font-size: 7em;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+.chapter-transition .ct-title {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-top: 10px;
+  max-width: 700px;
+}
+.chapter-transition .ct-sub {
+  font-size: 1.1em;
+  opacity: 0.92;
+  margin-top: 16px;
+  max-width: 640px;
+}
+
+/* decorative divider before h2 */
+.deco-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 50px 0 40px 0;
+}
+.deco-divider .line {
+  height: 3px;
+  flex: 1;
+  max-width: 260px;
+  background: linear-gradient(90deg, transparent, #f59e0b, #ec4899, transparent);
+  border-radius: 3px;
+}
+.deco-divider .icon { font-size: 1.6em; color: #7e22ce; }
+
+.toc {
+  background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 100%);
+  border: 2px solid #c084fc;
+  border-radius: 14px;
+  padding: 30px 34px;
+  margin: 40px 0;
+}
+.toc h3 { margin-top: 0; color: #7e22ce; }
+.toc ol { padding-right: 22px; }
+.toc li { margin-bottom: 10px; font-size: 1.1em; }
+.toc a { color: #4c1d95; text-decoration: none; font-weight: 600; }
+.toc a:hover { text-decoration: underline; }
+.toc .sub-list { font-weight: 400; font-size: 0.92em; color: #4b5563; margin: 4px 0 10px 20px; }
+.toc .sub-list a { color: #6b21a8; font-weight: 400; }
+
+.sources {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 30px 34px;
+}
+.sources h3 { margin-top: 0; }
+.sources ol { padding-right: 22px; }
+.sources li { font-size: 0.98em; text-align: justify; margin-bottom: 14px; }
+
+figure.image-placeholder {
+  margin: 26px 0;
+  padding: 18px;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  border: 2px dashed #9ca3af;
+  border-radius: 12px;
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.95em;
+}
+figure.image-placeholder .icon { font-size: 2em; display:block; margin-bottom: 6px; }
+
+.footer {
+  background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+  text-align: center;
+  margin-top: 60px;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7e22ce, #ec4899);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.scroll-top.visible { opacity: 1; pointer-events: auto; }
+
+sup.fn { color: #ec4899; font-weight: 700; }
+sup.fn a { color: #ec4899; text-decoration: none; }
+
+@media (max-width: 768px) {
+  .container { padding: 30px 20px; }
+  h1.main-title { font-size: 2em; }
+  h2 { font-size: 1.6em; }
+  .two-columns { grid-template-columns: 1fr; }
+  .chapter-transition .ct-number { font-size: 4.5em; }
+  .chapter-transition .ct-title { font-size: 1.5em; }
+}
+
+@media print {
+    @page { size: A4 portrait; margin: 20mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+    .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+    .scroll-top { display: none !important; }
+    h2 { page-break-before: always; break-before: page; }
+    h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+    h3, h4 { page-break-after: avoid; break-after: avoid; }
+    .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box, .chapter-intro, .in-chapter-box {
+        page-break-inside: avoid; break-inside: avoid;
+    }
+    .toc { page-break-after: always; break-after: page; }
+    .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+    h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+    .footer { page-break-before: always; break-before: page; }
+    [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+    .chapter-transition { min-height: 0; page-break-before: always; break-before: page; page-break-after: always; break-after: page; }
+    .deco-divider { page-break-before: avoid; }
+}
+
+  /* ---------- סרגל ההאזנה (נוסף אוטומטית) ---------- */
+  :root{
+    --lb-purple:#7e22ce; --lb-blue:#2563eb; --lb-green:#059669;
+    --lb-gold:#f59e0b; --lb-pink:#ec4899; --lb-muted:#6b7280;
+    --fs: 1;
+  }
+  .listen-bar{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid var(--lb-gold);
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+  }
+  .listen-btn-group{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .listen-btn{
+    display:flex; align-items:center; gap:8px;
+    background:linear-gradient(135deg, var(--lb-purple) 0%, var(--lb-pink) 100%);
+    color:#fff; border:none; border-radius:30px; padding:10px 22px;
+    font-size:1em; font-weight:bold; font-family:inherit; cursor:pointer;
+    transition:transform .15s, box-shadow .15s;
+  }
+  .listen-btn:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,.3); }
+  .listen-btn:active{ transform:translateY(0); }
+  .listen-stop-btn, .listen-skip-btn, .listen-size-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 16px; font-size:.95em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .listen-skip-btn{ padding:8px 12px; }
+  .listen-stop-btn:hover, .listen-skip-btn:hover,
+  .listen-size-btn:hover:not(:disabled){ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-size{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-size-btn{ padding:6px 12px; line-height:1; }
+  .listen-size-btn:disabled{ opacity:.35; cursor:default; border-color:#d1d5db; color:var(--lb-muted); }
+  .listen-size-btn.big{ font-size:1.25em; }
+  .listen-size output{ font-weight:bold; min-width:3.4em; text-align:center; }
+  .listen-toggle-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 14px; font-size:.88em; font-weight:bold;
+    font-family:inherit; cursor:pointer; white-space:nowrap;
+    transition:transform .15s, background .15s, opacity .15s;
+  }
+  .listen-toggle-btn:hover{ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-toggle-btn[aria-pressed="false"]{
+    color:var(--lb-muted); border-color:#d1d5db; background:#f9fafb; opacity:.8;
+  }
+  .listen-toggle-btn:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+  .listen-skip-btn:focus-visible, .listen-size-btn:focus-visible,
+  .listen-voice select:focus-visible,
+  .listen-rate input:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-status{ font-size:.95em; color:#78350f; flex:1 1 200px; }
+  .listen-progress{ font-size:.9em; color:#78350f; font-weight:bold; white-space:nowrap; }
+  .listen-rate, .listen-voice{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-rate input{ accent-color:var(--lb-purple); }
+  .listen-rate output{ font-weight:bold; min-width:2.6em; }
+  .listen-voice select{
+    border-radius:20px; border:1px solid var(--lb-gold); padding:4px 10px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:190px;
+  }
+  .tts-clickable{ cursor:pointer; transition:background .2s; border-radius:6px; }
+  .tts-clickable:hover{ background:rgba(245,158,11,.10); }
+  .reading-highlight{
+    background:linear-gradient(135deg,#e0e7ff 0%,#fce7f3 100%); border-radius:8px;
+    box-shadow:0 0 0 3px var(--lb-pink) inset; transition:background .3s;
+    padding-right:14px; padding-left:14px;
+    margin-right:-14px; margin-left:-14px;
+  }
+  .audio-player{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid #f59e0b;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  }
+  .audio-player-title{ font-size:1.05em; font-weight:bold; color:#92400e; flex:1 1 100%;}
+  .audio-player audio{ flex:1 1 260px; min-width:220px; height:40px;}
+  .audio-chapter-select{
+    border-radius:20px; border:1px solid #f59e0b; padding:6px 12px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:260px;
+  }
+  .audio-get{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; flex:1 1 100%;}
+  .audio-download{
+    display:inline-flex; align-items:center; gap:6px;
+    background:linear-gradient(135deg,#7e22ce 0%,#ec4899 100%);
+    color:#fff; text-decoration:none; border-radius:30px; padding:8px 18px;
+    font-size:0.95em; font-weight:bold; transition:transform .15s, box-shadow .15s;
+  }
+  .audio-download:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,0.3);}
+  .audio-pick-btn{
+    background:#fff; color:#7e22ce; border:2px solid #7e22ce;
+    border-radius:30px; padding:7px 16px; font-size:0.9em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .audio-pick-btn:hover{ transform:translateY(-2px); background:#f3e8ff;}
+  .audio-note{ font-size:0.9em; color:#92400e;}
+  h2.reading-highlight{ padding-right:34px; }
+  @media(max-width:768px){
+    .listen-bar{ padding:15px; gap:10px; }
+    .listen-status{ flex:1 1 100%; }
+    .listen-voice select{ max-width:140px; }
+  }
+  @media print{
+    .listen-bar{ display:none !important; }
+    .audio-player { display: none !important; }
+    .reading-highlight{ box-shadow:none !important; background:none !important; }
+    .tts-clickable{ cursor:auto; }
+  }
+  /* fs scaling for plain body paragraphs/list items, applied additively so it
+     doesn't fight whatever base font-size the article already declares */
+  .container p, .container li{ font-size: calc(1em * var(--fs)); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1 data-a="01-0" class="main-title" id="top">סיפורה של אדמת קודש</h1>
+<div class="subtitle">כפר עטה (קרית אתא) — הסמוך לאושא, מקום ישיבת הסנהדרין</div>
+<div class="dates">תרפ"ה – תשפ"ב</div>
+<div class="author">נערך על ידי הרב יהודה טאוב · עבור הבאים לבית האירוח שברחוב סוקולוב 30 · כל הזכויות שמורות</div>
+
+
+  <div class="listen-bar">
+      <div class="listen-btn-group">
+          <button class="listen-btn" id="listenBtn" onclick="toggleListen()" aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן למאמר</button>
+          <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+          <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+          <button class="listen-skip-btn" onclick="skipListen(1)" aria-label="פסקה הבאה" title="פסקה הבאה">⏭</button>
+          <button class="listen-skip-btn" onclick="skipChapter(1)" aria-label="פרק הבא" title="פרק הבא">⏩</button>
+          <button class="listen-stop-btn" onclick="stopListen()" aria-label="עצור הקראה">⏹ עצור</button>
+          <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()" aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+      </div>
+      <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+      <span class="listen-progress" id="listenProgress"></span>
+      <div class="listen-rate">
+          <label for="rateRange">מהירות:</label>
+          <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1" oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)" aria-label="מהירות הקראה">
+          <output id="rateValue" for="rateRange">1.0×</output>
+      </div>
+      <div class="listen-voice">
+          <label for="voiceSelect">קול:</label>
+          <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+      </div>
+      <div class="listen-size">
+          <span>גודל טקסט:</span>
+          <button class="listen-size-btn" id="fontSmaller" onclick="setFontScale(-1)" aria-label="הקטן את הטקסט" title="הקטן את הטקסט">א−</button>
+          <output id="fontScaleValue">100%</output>
+          <button class="listen-size-btn big" id="fontBigger" onclick="setFontScale(1)" aria-label="הגדל את הטקסט" title="הגדל את הטקסט">א+</button>
+      </div>
+  </div><div class="audio-player no-tts">
+    <div class="audio-player-title">🎧 האזנה להקלטה — קול הילה</div>
+    <select class="audio-chapter-select" aria-label="בחירת פרק להאזנה" hidden>
+        <option value="https://yudataub.github.io/taub-audio/%D7%A1%D7%A4%D7%A8_%D7%9B%D7%A4%D7%A8_%D7%A2%D7%98%D7%94_%D7%A7%D7%A8%D7%99%D7%AA_%D7%90%D7%AA%D7%90.mp3" data-seg="01">פתח דבר · מבוא: אדמת קודש, סיפורו של שם העיר · מקומות בעיר · רבנים · דמויות הוד, מייסדים וראשונים · דמויות הוד, עסקנים וחסידים</option>
+    </select>
+    <audio controls preload="none"></audio>
+    <div class="audio-get">
+        <a class="audio-download" href="https://yudataub.github.io/taub-audio/%D7%A1%D7%A4%D7%A8_%D7%9B%D7%A4%D7%A8_%D7%A2%D7%98%D7%94_%D7%A7%D7%A8%D7%99%D7%AA_%D7%90%D7%AA%D7%90.mp3" download target="_blank" rel="noopener">📥 להורדת קובץ השמיעה לחץ כאן</a>
+        <button type="button" class="audio-pick-btn" hidden>📂 בחר את הקובץ שהורדת</button>
+        <input type="file" class="audio-pick-input" accept="audio/*" multiple hidden>
+        <span class="audio-note"></span>
+    </div>
+</div>
+
+<div class="toc">
+<h3>📑 תוכן העניינים</h3>
+<ol>
+<li><a href="#preface">פתח דבר — מטרת החוברת ומקומות לסיור</a></li>
+<li><a href="#intro">מבוא: אדמת קודש — סיפורו של שם העיר</a>
+  <div class="sub-list">
+    <a href="#intro-name">שם העיר: כפר עטה</a> ·
+    <a href="#intro-mikvaot">המקוואות הסמוכות באושא העתיקה</a> ·
+    <a href="#intro-ata">וכיצד נהיה כפר אתא?</a> ·
+    <a href="#intro-style">סגנון העיר</a> ·
+    <a href="#intro-founding">כיצד הוקם המקום?</a> ·
+    <a href="#intro-klita">חבלי קליטה</a>
+  </div>
+</li>
+<li><a href="#section1">פרק א׳ — מקומות בעיר</a></li>
+<li><a href="#section2">פרק ב׳ — רבנים</a></li>
+<li><a href="#section3">פרק ג׳ — דמויות הוד: מייסדים וראשונים</a></li>
+<li><a href="#section4">פרק ד׳ — דמויות הוד: עסקנים וחסידים</a></li>
+<li><a href="#sources">הערות שוליים ומקורות</a></li>
+</ol>
+</div>
+
+<h2 data-a="01-1" id="preface" style="text-align:center;">פתח דבר</h2>
+
+<div class="chapter-intro">
+בספר <em>'עמודיה שבעה'</em> מסופר על אביו של ר' אברהם גניחובסקי זצ"ל, שבהיותו כבן חמש עשרה נסע ברכבת במחלקה השלישית — הזולה ביותר — והנה הוא רואה שם את החפץ חיים, נוסע לבדו ללא מלווים. הוא ניגש אליו והתיישב לצדו. החפץ חיים התעניין בשלומו, מי הוא וממי הוא בא, ואז החל לספר לו על כל שלשלת משפחתו, כדי לחזקו ולעודדו להמשיך בתפארת דרכי אבותיו.
+</div>
+
+<p data-a="01-2">שני דברים נלמדים מכאן: <strong>א.</strong> אחת הדרכים להתחזק ביהדות היא לדעת שאבותינו היו הם עצמם שומרי תורה ומצוות. <strong>ב.</strong> הדיבור בכך היה חשוב גם בעיני החפץ חיים עצמו, שראה לנכון להשקיע מזמנו כדי לספר זאת לנער צעיר. ומכאן שגם ללמוד ולדעת שמייסדי העיר קרית אתא היו אנשים שומרי תורה ומצוות, יש בזה חיזוק גדול ללכת בדרכיהם — דרכי ה'. זוהי מטרתה של חוברת זו: להביא לפני הקורא, בין אם הוא תושב העיר ובין אם הוא אורח חולף, את סיפורה הנשכח־למחצה של אדמת קודש זו, ואת דמויותיהם של האנשים שהפכו כפר נטוש לעיר של תורה.</p>
+
+<div class="quote-box">
+"השם יתברך הושיע לנו להתיישב מחדש על אדמת קודש בכפר עטה, הסמוך לאושה מקום ישיבת הסנהדרין"<sup class="fn"><a href="#fn1" id="fnr1">1</a></sup>
+<span class="source-tag">הרב מנדלזון זצ"ל, במכתבו לאדמו"ר מפיאסצנה, תרצ"ט — הנוסח שעל פיו נכתבה כותרת הכריכה</span>
+</div>
+
+<h3 data-a="01-3">מקומות לסיור</h3>
+<p data-a="01-4">למי שמבקש לצאת ולראות את המקומות המסופרים בחוברת זו במו עיניו, הרי רשימת עיקרי האתרים:</p>
+<ol>
+<li data-a="01-5">בית הכנסת הגדול ברחוב המיסדים — בית הכנסת העתיק בעיר, מלפני כ־150 שנה.</li>
+<li data-a="01-6">בית הכנסת פיאסצנה (העצמאות 100), על שם האדמו"ר הי"ד.</li>
+<li data-a="01-7">בית הכנסת על שם ר' ישעיה'לה שפירא, אחי האדמו"ר מפיאסצנה.</li>
+<li data-a="01-8">ישיבת מעוז חיים לשעבר — קופת חולים שנהפכה לישיבה, וכיום כולל, עם מקום לאירוח.</li>
+<li data-a="01-9">ישיבת מאקווא — המקום הגדול בתורה בעיר: מנין ותיקין, מנין חסידי, מקווה, חדר ועוד.</li>
+<li data-a="01-10">שיכון סיגעט — מקום שהיה בעבר משכנו של האדמו"ר מקרעטשניף־סיגעט, וכיום שיכון חרדי, תלמוד תורה חדש ובית הכנסת. מול השיכון בית הכנסת החדש של הרב איפרגן.</li>
+<li data-a="01-11">שיכון פא"י לשעבר.</li>
+</ol>
+
+<div class="deco-divider"><div class="line"></div><div class="icon">✡</div><div class="line"></div></div>
+
+<h2 data-a="01-12" id="intro" style="text-align:center;">מבוא: אדמת קודש — סיפורו של שם העיר</h2>
+
+<div class="chapter-intro">
+לפני שנפגוש את בתי הכנסת, הרבנים והדמויות שיישבו את אדמת כפר עטה, ראוי לעצור על עצם שמו של המקום. שם מקום אינו עניין טכני גרידא — יש בו רמז, יש בו כוונה, ולעיתים יש בו אף נבואה שלא מדעת. פרק זה מברר מהיכן צמח השם "כפר עטה", כיצד הוא הפך ל"כפר אתא", ומה ניתן ללמוד מכך על אופיים הרוחני של מייסדי המקום.
+</div>
+
+<div class="in-chapter-box">
+<h4 data-a="01-13">📖 במבוא זה:</h4>
+<ul>
+<li data-a="01-14">שם העיר: כפר עטה — בין "כופרתא" ל"על טהרת הקודש"</li>
+<li data-a="01-15">המקוואות העתיקות שנמצאו סמוך לאושא</li>
+<li data-a="01-16">וכיצד נהיה כפר אתא — סיפור ה"טעות" שהפכה לגאולה</li>
+<li data-a="01-17">סגנון העיר — אחדות, עבודה ועזרה הדדית</li>
+<li data-a="01-18">כיצד הוקם המקום — ר' ישעיהו שפירא ורכישת האדמה</li>
+<li data-a="01-19">חבלי קליטה — המשפחות הראשונות וגידול היישוב</li>
+</ul>
+</div>
+
+<h3 data-a="01-20" id="intro-name">שם העיר</h3>
+
+<p data-a="01-21">בין השרידים האחרונים של הכפר העות'מאני "כופרתא", הנמצאים עד היום בחצר בית הכנסת הגדול, אפשר עדיין לחוש נגיעה במקום שממנו הכל התחיל. ראשוני המייסדים שבאו למקום קראו לו <span class="emphasis">כפר עטה</span>. לא נודע לנו במדויק מדוע ולמה החליטו לקרוא למקום כך, ואף לא ברור אם הם באמת היו הראשונים שקראו למקום בשם זה<sup class="fn"><a href="#fn2" id="fnr2">2</a></sup>.</p>
+
+<p data-a="01-22">שלושה הסברים מובאים למקור השם:</p>
+
+<p data-a="01-23"><strong>א.</strong> הפירוש המקובל הוא שלפני כן היה במקום כפר ערבי בשם "כופרתא", וכפר עטה דומה בצליל לשם הערבי. מקור לשם הערבי מצאנו בירושלמי (שביעית פרק ו הלכה א): "תחומי א"י כל שהחזיקו עולי בבל... <span class="emphasis">וכברתה</span> ובית זניתה וקובעיא ומילתא דכור ובירייא רבתא". בעל 'תבואות הארץ' (מובא בספר 'וזה גבול הארץ') כותב: "'כברתה' עד היום למערב שתעמר (שפרעם) כשעה אחת, הכפר כופרתא". בירושלמי שוטנשטיין עמוד 44 הביאו פירוש זה על דברי הירושלמי (אמנם רבים חולקים בזיהוי המקום).</p>
+
+<p data-a="01-24"><strong>ב.</strong> יש אומרים שהשם על שם הסנהדרין שישבה שם וחשבה עצה בענייני הלכה — "עטה" מלשון עצה<sup class="fn"><a href="#fn3" id="fnr3">3</a></sup>.</p>
+
+<div class="qa-box">
+<p data-a="01-25" class="q">קושיה: וכי אפשר לקרוא למקום "עטה" במקום "כופרתא"?</p>
+<p data-a="01-26" class="a">כל מי שקרא את מגילת אסתר יודע שכאשר הופכים שם ארמי ללשון הקודש, כותבים אותו בסופו באותיות תא — כמו אספתא, פורתא, ויזתא, חרבונא וכיו"ב. לפי זה היו צריכים לקרוא למקום "כפר אתא", ואילו "כפר עטה" הוא, לכאורה, טעות בכל אות ואות. ואכן, הוועדה שבתש"ה שינתה את השם ל"כפר אתא" — עיקר טענתה היה שהשם "עטה" אינו לפי כללי הדקדוק העברי. אם כן, מה היתה דעתם של הראשונים החסידים שדווקא בחרו בשם זה?</p>
+</div>
+
+<p data-a="01-27"><strong>ג.</strong> מגלה לנו האדמו"ר מקרטשניף: שרצו החסידים הראשונים שתיבנה עיר <span class="emphasis">ע</span>ל <span class="emphasis">ט</span>הרת <span class="emphasis">ה</span>קודש (ר"ת עט"ה).</p>
+
+<h4 data-a="01-28" id="intro-mikvaot">המקוואות הסמוכות באושא העתיקה</h4>
+
+<p data-a="01-29">בשנים האחרונות (תשס"ח) נתגלה בחפירות ארכיאולוגיות באושא העתיקה — הנמצאת אחרי גבעת רם, בסמוך לרכסים (קיבוץ אושא הקרוי על שמה אינו נמצא במקומה המדויק) — מכלול בתי בד לשמן ובתי גת ליין. וליד כל אחד מהם מקווה טהרה. המקוואות עודן שלמות, וניתן לרדת במדרגות שנחצבו לפני כ־2,000 שנה ולהיכנס לתוכן (מומלץ מאוד לביקור בין הזמנים עם המשפחה).</p>
+
+<div class="qa-box">
+<p data-a="01-30" class="q">מדוע צריך מקווה טהרה ליד בית הבד?</p>
+<p data-a="01-31" class="a">
+יש גמרא מפורשת במסכת נידה (ו, ב) המתייחסת למקוואות אלו במקום הזה: "חבריא מדכן בגלילא" — חברים היו עושים את יינם ושמנם בטהרה בגליל. ולשם מה היו צריכים להקפיד על טהרה, לאחר חורבן המקדש?<br><br>
+<strong>רש"י</strong> כותב: החברים ציפו שבמהרה יבנה המקדש, ולכן הכינו את היין שיהיה כשר לניסוך, ואת השמן שיהיה כשר למנחות.<br><br>
+<strong>הרשב"א</strong> כותב: "חבריא מדכן בגלילא — כלומר, דכיון שהיו קרובין לחורבן הבית, היו מצפין לבנינו, והיו עדיין מרגילין עצמן לטהר חוליהן בטהרת הקדש". החברים ציפו לבניין המקדש, ולכן הרגילו עצמם לאכול הכול בטהרה, כדי שיהיו רגילים באכילת קדשים בטהרה כשיבוא המקדש.<br><br>
+זהו המושג המכונה בש"ס <em>"חולין על טהרת הקודש"</em> — אוכל שאין בו קדושת תרומה או קודש, אך בעליו החליט להתייחס אליו כאוכל קדוש שאסור לטמאו, כדי להרגיל עצמו לשמור על אכילת קדשים בטהרה (רש"י, חולין ב, ב).
+</p>
+</div>
+
+<p data-a="01-32">מי היו אותם "חברים"? יתכן מאוד שמדובר בחברי הסנהדרין שהיו במקום. על פי חז"ל, באושא ישבה הסנהדרין במשך כעשר שנים, ובין החכמים שפעלו בה נזכרים רבן שמעון בן גמליאל נשיא הסנהדרין, בנו רבי יהודה הנשיא, רבי יהודה בר עילאי, רבי מאיר, רבי שמעון בן יוחאי ועוד.</p>
+
+<div class="story-box">
+כשגיליתי את טעם המקוואות הללו, הרגשתי שממש רוח הקודש נזרקה בצדיקים ובחסידים שגרו בקרית אתא לפני כשמונים שנה. אותם צדיקים תהו מדוע נקרא המקום בפי הראשונים "כפר עטה" — והשיבו: היות ומקום זה נבנה על טהרת הקודש. "עטה" ראשי תיבות <span class="emphasis">ע</span>ל <span class="emphasis">ט</span>הרת <span class="emphasis">ה</span>קודש. אולי לא כולם ידעו זאת, אך מקימי המקום היו יהודים חסידים יראי שמים, חסידי קוזניץ ופיאסצנה מוורשה, ודבר זה היה חביב עליהם עד מאוד — עד כדי כך שגם שנים רבות לאחר שהוחלף השם רשמית ל"כפר אתא", המשיכו הם עצמם לקרוא למקום "כפר עטה" (ראה מכתבים של האדמו"ר מקרעטשניף ור' בנימין מנדלזון זצ"ל).<br><br>
+והנה, שנים רבות לאחר מכן, מתברר בחפירות שבמקום זה עצמו גרו חברים שהקפידו לאכול את חוליהם "על טהרת הקודש"<sup class="fn"><a href="#fn4" id="fnr4">4</a></sup>. הם התאמצו מאוד, ולפני כל דריכת יין ושמן היו טובלים. על כן יאה ונאה לקרוא למקום זה כפר עטה — על טהרת הקודש. נסיים בתפילה לבורא עולם, שנזכה במהרה לראות כיצד מקום זה, הבנוי על אדמת קודש שבה שמרו לאכול על טהרת הקודש, ייהפך כולו להיות מקום על טהרת הקודש.
+</div>
+
+<h4 data-a="01-33" id="intro-ata">וכיצד נהיה כפר אתא?</h4>
+
+<p data-a="01-34">הכל התחיל בטעות. מנהלי מפעל האריגים "אתא" שלחו מסמכים באנגלית לצ'כיה, וכאשר תרגמו אותם בחזרה לעברית, כתבו במקום "עטה" (Ata) — "אתא". ואותה טעות הפכה את שם המקום, כלשון הגמרא (פסחים קיב, א): "שבשתא כיון דעל — על" (טעות, כיון שנכנסה — נכנסה). תושבים רבים ניסו במשך השנים להחזיר את שם המקום לשמו המקורי, ולא עלה בידם (היו רבנים שהמשיכו במשך שנים לקרוא למקום "כפר עטה" — ראה אגרות הרב מנדלזון בשנת תשי"ב).</p>
+
+<p data-a="01-35">יתכן שהחליטו לקרוא כך למקום על שם הפסוק "אָמַר שֹׁמֵר אָתָא בֹקֶר" (ישעיהו כא), שבו הקב"ה מבשר שהגיע עת הגאולה<sup class="fn"><a href="#fn5" id="fnr5">5</a></sup>. ובמלבי"ם שם מבואר ש"בא" פירושו התחיל לבוא, ו"אתא" פירושו בא לגמרי. וכאשר הגיע למקום הסופר ש"י עגנון, אמר למנהל מפעל אתא שאין זה סתם טעות, אלא יש בדבר רמז נפלא: "אתא" ראשי תיבות — <span class="emphasis">א</span>ריגים <span class="emphasis">ת</span>וצרת <span class="emphasis">א</span>רצנו.</p>
+
+<p data-a="01-36">מפעל אתא היה מפעל אריגים מצליח מאוד, ששיווק אריגים איכותיים לחו"ל, וממש הציל את הכפר מרעב — הוא היה מקור פרנסה לעשרות יהודים, והפך את פני המקום. שם המקום והמפעל מזכירים לכולם את המעלה שיש בדברים שהם תוצרת ארצנו — ארץ הקודש.</p>
+
+<div class="qa-box">
+<p data-a="01-37" class="q">האם באמת יש מצווה לקנות אריגים ותוצרת מהארץ?</p>
+<p data-a="01-38" class="a">הפסוק אומר (תהלים קב, טו): "כִּי רָצוּ עֲבָדֶיךָ אֶת אֲבָנֶיהָ וְאֶת עֲפָרָהּ יְחֹנֵנוּ" — יתכן שבכלל אהבת אבניה נכללת גם אהבת כל דבר שנוצר בארץ. ובכל אופן, יש בזה ודאי מצוות ישוב הארץ.</p>
+</div>
+
+<div class="quote-box">
+"אחים חביבים! כל דבר המחזק את כחו של ישראל בארצנו הקדושה הרי הוא כלול במצוה הגדולה השקולה ככל המצוות שבתורה, שהיא: ישוב ארץ ישראל, חזקתה ובנינה... התחזקו להשתמש בתוצרת ארץ ישראל מעשי ידי אחינו, בוני חרבותיה, ונזכה כולנו לגאולה שלמה במהרה בקרוב".
+<span class="source-tag">ממכתב רב, שנת תרצ"ד — שנת הקמת מפעל אתא</span>
+</div>
+
+<div class="quote-box">
+"אעפ"י שמצד ההלכה אין דין קדימה לפירות ארץ ישראל, מכל מקום משום חבת הארץ ומצות ישוב ארץ ישראל מצוה להדר אחרי אתרוגי ארץ ישראל, כדי להחזיק ידי העמלים בה לישב הארץ באוכלוסי ישראל... מטעם זה אני אומר מצוה וגם חובה היא לבכר תוצרת הארץ בתבואתה ותעשייתה".
+<span class="source-tag">הגר"ב עוזיאל, הראשון לציון והרב הראשי לארץ ישראל</span>
+</div>
+
+<p data-a="01-39">לא לחינם קראה הטעות והשם "אתא" נכנס לתודעה — המצווה לקנות מתוצרת הארץ צריכה חיזוק גדול גם היום, להעדיף תמיד את תוצרת הארץ על פני תוצרת חו"ל, ובמיוחד בפירות שיש בהם קדושה מיוחדת.</p>
+
+<div class="deco-divider"><div class="line"></div><div class="icon">📖</div><div class="line"></div></div>
+
+<h3 data-a="01-40" id="intro-style">סגנון העיר</h3>
+
+<p data-a="01-41">בכמה וכמה דברים מיוחדים נתייחדה העיר קרית אתא: האחדות בין הקהילות האשכנזים והספרדים; פועלי מלאכה יראי שמים וחשובים בקהילה; יהודים שעושים בהתנדבות; העזרה ההדדית; והמגורים לצד חילונים דלת ליד דלת, מתוך אחווה ושלום — ולא ללמוד ממעשיהם.</p>
+
+<h4 data-a="01-42">האחדות בין הקהילות</h4>
+
+<p data-a="01-43">אחד הדברים המיוחדים בעיר זו הוא האחדות בין כל הקהילות. לדוגמה: כשהיה ר' שלמה קופצ'יק עורך התוועדויות בי"ט כסלו, היו מסבים שם ה'עטרת משה' והרב שלוזינגר, ואנשי המזרחי, ופעילי פא"י, וקנאים מהונגריה — כאיש אחד. בכפר עטה של אז, כמו בקרית אתא של היום, לא מכירים במשחק "מצא את ההבדל": אין מחיצות ואין חציצות, אין חוגים ואין סוגים, כולם משפחה יהודית אחת גדולה. מוטיב זה חוזר על עצמו הן בקרב מתרפקי ההיסטוריה והן בקרב רושמי קורות ההווה.</p>
+
+<h4 data-a="01-44">ועל העבודה</h4>
+<p data-a="01-45">דבר נוסף מיוחד בעיר זו הוא האפשרות להיות יהודי עובד למלאכתו, ויחד עם זה יהודי ירא שמים הקובע עתים לתורה — שגם בני הקהילה מכבדים אותו מאוד עבור כך. שילוב זה של עובדי ה' ויגיעי כפיים, שלא שינו כהוא זה ממלבושם ומשפתם, לא היה חזון נפרץ בקהילות אחרות.</p>
+
+<h4 data-a="01-46">עזרה הדדית</h4>
+<p data-a="01-47">בקרית אתא נהוג בכל שמחה לעזור לבעל השמחה: ילד כי ייוולד, בני הקהילה מתגייסים יחד לדאוג לכל צרכי השמחה מהתחלה ועד הסוף — עד שאבי הבן יכול להגיע לשמחתו בלא לדאוג לפרט אחד.</p>
+
+<h4 data-a="01-48">מגורים לצד החילונים</h4>
+<p data-a="01-49">אחד הדברים המיוחדים בעיר הוא המגורים לצד חילונים ללא "מלחמות דת" — הפוך: כולם מכבדים מאוד את הדתיים והחרדים בעיר. אף האדמו"ר ממאקווא גר בבניין שבו גרות גם משפחות חילוניות, גרים זה לצד זה ומסוגלים לכך; אין כאן שיכון חרדי נפרד. והתועלת בדבר, כפי שכתב מנכ"ל 'ערכים': כל אדם חרדי הגר בעיר חילונית הוא שגריר של ערכים בעל כורחו — כאשר האדם החילוני רואה כיצד מתנהג שכנו השומר תורה ומצוות, הדבר משפיע עליו מאוד. ואכן, בקרית אתא יש מאות רבות של משפחות חוזרים בתשובה.</p>
+
+<div class="deco-divider"><div class="line"></div><div class="icon">✡</div><div class="line"></div></div>
+
+<h3 data-a="01-50" id="intro-founding">כיצד הוקם המקום?</h3>
+
+<p data-a="01-51">בימים שלפני שנת תרפ"ה היה המקום בידי משפחה ערבית עשירה מביירות, משפחת <span class="emphasis">סורסוק</span>. במקום הושיבו המשפחה אריסים ערבים/בדואים שעיבדו את האדמה, כשה"חמישית" (מס היבול) הועברה למשפחת סורסוק, שנציגה — מוכתר הכפר — ישב בבית האבן, בית אדון הכפר ("בית הבק" בערבית), במקום שבו נמצא כיום בית פישר.</p>
+
+<p data-a="01-52">במשך שנים רבות לא ניתן היה לקנות קרקעות בארץ ישראל — התורכים, שחששו משלטון יהודי בארץ, לא הרשו ליהודים לקנות קרקעות. בשנת ת"ר, השנה שראה בה הגר"א את תחילת סימני הגאולה, ניתנה רשות חלקית ליהודים לקנות קרקעות בארץ. ולאחר שבחסדי שמים נפל שלטון התורכים בשנת תרע"ח והבריטים נכנסו לארץ, יכלו היהודים לקנות קרקעות כרצונם — וכאן נזדמנה ליהודים קניית קרקע בגודל עצום, במחיר מוזל יחסית.</p>
+
+<div class="highlight-box">
+<h4 data-a="01-53" style="margin-top:0;">המצווה לקנות קרקע</h4>
+<p data-a="01-54" style="margin-bottom:0;">בורא עולם דאג שרוב קרקעות ארץ ישראל של ימינו ייקנו בגאולת קרקע — בכסף, ולא באמצעות חזקת מלחמה, כדרך שקנה אברהם אבינו את הקרקע הראשונה בארץ ישראל: "בְּכֶסֶף מָלֵא יִתְּנֶנָּה לִּי" (בראשית כג, ט). הטעם לכך: יש מצווה לא רק ליישב את הארץ אלא גם לאהוב אותה ולחבבה, וקנייה בכסף גורמת לאדם לחבב את הדבר — כמו שכתב רש"י (שמות טו, טז) על הפסוק "עַם זוּ קָנִיתָ": חיבבת משאר אומות, כחפץ הקנוי בדמים יקרים, שחביב על האדם. מצווה זו נוהגת גם בימינו: חוץ מהמצווה לגור בארץ ישראל, יש לכל יהודי לקנות קרקע ובית בארץ ישראל — ומצווה זו חביבה מאוד בעיני בורא עולם, כפי שאנו רואים שכמעט כל יהודי צריך להשקיע סכום גדול מכספו במשך כשלושים שנה כדי לקנות בית בארץ ישראל.</p>
+</div>
+
+<h4 data-a="01-55">מייסד כפר עטה — ר' ישעיהו שפירא</h4>
+
+<p data-a="01-56">בראשית 1925 רכש חנקין, נציג "הכשרת הישוב", ממשפחת סורסוק — ממרי בוטרוס ומנחלה טואיני — קרוב ל־65 אלף דונם בעמק ג'ידרו (עמק זבולון). באותם ימים קנתה 'קהילת ציון' — חברה שמטרתה היתה לרכוש קרקעות בארץ ישראל ולמכור אותן ליהודים ברחבי העולם — קרקעות רבות בצפון הארץ, בתכנון להשיג את יתרת הכסף ממכירה ליהודים מחבבי הארץ. אך אז פרץ משבר: מועד התשלום קרב, הכיס ריק, והסכנה גדולה וממשית שהשטח הנפלא הזה יישמט מהידיים.</p>
+
+<p data-a="01-57">כאן נכנס לתמונה יהודי חשוב מאוד — <span class="emphasis">ר' ישעיהו שפירא</span>. ר' ישעיה נולד בגרודזיסק בי"א שבט תרנ"א (20.1.1891), בן זקונים לאביו רבי אלימלך שפירא, האדמו"ר מגרודזיסק, מבני שושלת קוז'ניץ, מגדולי האדמו"רים בפולין בדורו. אחיו היחיד מאב ואם היה <span class="emphasis">רבי קלונימוס קלמן (קלמיש) שפירא</span>, שנולד כשנה וחצי לפניו והתפרסם לימים כרבי מפיאסצנה, מחבר הספר 'חובת התלמידים'.</p>
+
+<p data-a="01-58">במשפחתו היתה חיבה גדולה לארץ ישראל: סבו היה הרבי הראשון בפולין שהשתמש ביינות כרמל תוצרת ארץ ישראל, הזמין חיטים למצות ואתרוגים מהארץ, וביטא את אהבתו לה בדרכים רבות נוספות<sup class="fn"><a href="#fn10" id="fnr10">10</a></sup>. מקרובי משפחתו נמסר: "הורונו פיטמונו באהבת ישראל, אהבת ארץ ישראל עפ"י התורה והמצוות. טרם ידענו לקרוא 'אבא־אמא' ידענו להגיד 'ארץ ישראל שלנו'! טרם ידענו להבחין בין טוב לרע, ידענו שארץ ישראל היא מקומנו".</p>
+
+<p data-a="01-59">בי"ח שבט תרע"ד, מיד לאחר נישואיו, עלה ר' ישעיה בפעם הראשונה לארץ ישראל (משפחתו לא עלתה עמו, שכן חמיו התנגד לעלייה). עם פרוץ מלחמת העולם הראשונה חזר לפולין והתיישב בוורשה, אך הטיף לעלייה בעיירות שעבר בהן. בתר"פ עלה שוב, לבדו, והתמנה למנהל מחלקת העלייה — עיקר תפקידו היה לארגן עליית יהודים שומרי תורה ומצוות לארץ, ולסייע לישובים דתיים וחקלאיים להתבסס. בשנת תרפ"ד החליט לחזור לפולין ולהעלות את משפחתו.</p>
+
+<h4 data-a="01-60">"התעוררי, התעוררי"</h4>
+
+<p data-a="01-61">כששמע ר' ישעיה על משבר חברת קהילת ציון, הציע רעיון: הוא ממילא נוסע עכשיו לפולין להביא את משפחתו, וכשיפגוש שם את היהודים פנים אל פנים, ידבר עמם על חשיבות מצוות ישוב הארץ — "הארץ הקדושה שהכל מצפים לראותה, חמדת כל ישראל וחמדת השי"ת. כל העליונים והתחתונים — תשוקתם אליה" (מתוך אגרת הגר"א). שלוש מטרות עמדו לנגד עיניו: <strong>א.</strong> גאולת הקרקעות, שלא יפלו בחזרה לידי סורסוק. <strong>ב.</strong> עליית יהודים לארץ ישראל. <strong>ג.</strong> גאולת הארץ מידי החילונים, להטביע בה צורת חיי תורה ומצוות.</p>
+
+<div class="quote-box">
+"בשביל יהדות שומרת התורה והמצוות ארץ ישראל היא הרבה יותר ממרכז, כל סגולת ישראל וקדושתו ודבקותו בצור ישראל מותנים בא"י... אילו היתה היהדות הדתית לכל פלגותיה מגייסת את כוחותיה הטובים ביותר מכל המקצועות ומשרישה אותם בא"י, אפשר היה על ידי כך לא רק להציל את היהדות בא"י ולהטביע עליה את הצורה המקורית הקדומה של יהדות וחיי תורה, כי אם היא היתה משמשת גם מקור השפעה לדבר ה' לכל הגולה כולה".
+<span class="source-tag">ר' ישעיהו שפירא, עיתון 'ההד', גיליון י', תרצ"ב<sup class="fn"><a href="#fn6" id="fnr6">6</a></sup></span>
+</div>
+
+<p data-a="01-62">אמר ועשה: ביום ג', ט"ז באייר תרפ"ד, נסע לוורשה ולשאר ערי פולין, ומסר דרשות נלהבות על חשיבות ארץ ישראל. יהודים נסחפו אחריו במהירות עצומה, וכבר בסיום הדרשות חתמו רבים על קניית קרקע. כך הקים כמה אגודות לקניית קרקעות, שאחת מהן קונה את כפר אתא. העיתון היהודי 'היינט'<sup class="fn"><a href="#fn7" id="fnr7">7</a></sup> דיווח, חודש לאחר נסיעתו, כי הוקמה אגודת התיישבות בשם 'עבודת ישראל', וחמישים וחמישה חברים נרשמו אליה באופן מיידי. קבוצה זו התאחדה עם קבוצת הרב ישראל אלעזר הופשטיין (נכד אחותו של ר' ישעיה), שהוקמה קודם לכן בעיירה קוז'ניץ. ימים ספורים לאחר מכן נוסדה בבית כנסת אחר בוורשה אגודת התיישבות נוספת בעלת שם זהה — אותם עשרים ושניים חברים נפגוש בהמשך כמקימי כפר אתא.</p>
+
+<p data-a="01-63">עיתון 'הארץ'<sup class="fn"><a href="#fn8" id="fnr8">8</a></sup> דיווח כי בימי שהותו בפולין ארגן הרב ארבע אגודות במטרה לקנות שנים עשר אלף דונם קרקע. ועיתון 'העולם'<sup class="fn"><a href="#fn9" id="fnr9">9</a></sup> תיאר: "ההתעוררות החדשה הזאת באה בגלל ביקורו של הרב ר' ישעיה שפירא, אחד מגדולי החסידות הפולנית, ששב מארץ ישראל לפולניה לפני חודשים כדי לעשות תעמולה בין החסידים... הרב שפירא יצא בימים אלו בדרכו חזרה לארץ ישראל, ואיתו נסעו גם חסידים אחדים, באי כח האגודות האלה שירכשו את האדמה ויעשו את ההכנות הדרושות לשם יסוד מושבה חדשה".</p>
+
+<p data-a="01-64">בסוף 1924 בחרה אגודת 'עבודת ישראל' בחבר אהרן לוין לנסוע לארץ ולאתר עבור חבריה אדמות לרכישה. אליו הצטרף שמחה טבצניק. הם התקשרו עם ר' ישעיהו שפירא, ולאחר שכמה הצעות נדחו, הוצעו אדמות 'כופריתא' במזרח עמק זבולון, בהן חיו אריסיו של סורסוק. בראשית 1925 הוחלט באסיפה כללית בוורשה לרכוש כעשרת אלפי דונם קרקע חקלאית באמצעות חברת קהיליית ציון האמריקאית, בתשלומים. עם דמי הקדימה חזר נציג האגודה לארץ, ונוכח שאין בידיו די כסף לכל השטח — צורפו לרכישה גם אנשים פרטיים בעלי הון ששאפו להתיישבות דתית־חקלאית. כך נמנו על רוכשי האדמות שלוש קבוצות: חברי 'עבודת ישראל־ורשה'; קומץ יהודים בודדים ממקומות שונים בפולין; וקבוצת יהודים נוספת שקנתה אדמות באמצעות האגודה.</p>
+
+<p data-a="01-65">לימים, כאשר התעורר בלבול רב בענייני הקרקעות — שכן רבים קנו ולא הגיעו, ובינתיים התיישבו אחרים על אדמתם, וחלק לא סיימו לשלם — נכנס ר' ישעיהו שפירא לעובי הקורה והצליח להביא שלום בין כולם, ובזכותו המשיך היישוב להתקיים עד היום הזה.</p>
+
+<div class="in-chapter-box" style="margin-bottom:0;">
+<h4 data-a="01-66" style="margin-top:0;">ציוני דרך בקורות חייו של ר' ישעיהו שפירא</h4>
+<ul>
+<li data-a="01-67">י"ח שבט תרע"ד — עלייה ראשונה לארץ ישראל, שם פגש את הרב קוק וראה בו את רבו.</li>
+<li data-a="01-68">מקים תנועת הפועל המזרחי (לפני כן היה קיים רק המזרחי).</li>
+<li data-a="01-69">תרפ"ו — מתמנה למחלקת החרדים של קק"ל.</li>
+<li data-a="01-70">מנהל בנק זרובבל.</li>
+<li data-a="01-71">תש"ג — עובר לכפר פינס, קונה משק, לקיים בגופו את עבודת אדמת הקודש.</li>
+<li data-a="01-72">ה' סיון תש"ה — נפטר, לאחר שגופו נחלש בשנות השואה.</li>
+</ul>
+</div>
+
+<div class="deco-divider"><div class="line"></div><div class="icon">📖</div><div class="line"></div></div>
+
+<h3 data-a="01-73" id="intro-klita">חבלי קליטה</h3>
+
+<p data-a="01-74">לאחר הקנייה מהערבים עלו על הקרקע ארבע המשפחות שקנו אדמה שלא בקשר לקבוצת 'עבודת ישראל־וורשה', שכן כבר היו בארץ ישראל: שמואל אברמסקי (חסיד סדיגורא), יהושע פישר (חסיד רדזין), שמחה טבצניק, ושאול צבי לנדאו — כולם יהודים חרדים לדבר ה'.</p>
+
+<p data-a="01-75">לאחר מכן החלו להגיע טיפין־טיפין החסידים מוורשה. בתחילה הגיעה קבוצה קטנה של שמונה ראשי משפחות (הנשים והילדים נשארו בהתחלה בחו"ל), שנקראה באידיש "דה פינף אונ־צוואנציקערס" — "קבוצת ה־25", על שם 25 הדונמים שקנה כל אחד מהם. קבוצה זו פחדה תחילה לגור בכפר עטה עצמו, בהיעדר ניסיון בחקלאות, ונשארה לגור בחיפה, ואילו את גרשון דרמן שלחו לכפר עטה לנסות ולראות כיצד מצליחה עבודת האדמה.</p>
+
+<p data-a="01-76">בהמשך הגיעו לאט־לאט חלק נוסף מהקונים — סה"כ כ־13 משפחות מתוך כלל הרוכשים, בעוד רוב רובם נשאר בוורשה. בנוסף גרו במקום משפחות נוספות שהגיעו ללא קשר לחסידי וורשה, חלקן קנו קרקעות וחלקן גרו בשכירות. בסך הכול, עד שנת תרפ"ט מנתה העיר כ־20 משפחות. בשנת תרפ"ז פינו הערבים סופית את המקום: לבית הבק נכנסה משפחת פישר (ועוד כמה משפחות), ולמקום שהיה מסגד נכנסה משפחה, ולאחר שלוש שנים הפך המקום לבית הכנסת — הוא השטיבלך, בית הכנסת הגדול של היום.</p>
+
+<div class="story-box">
+<span class="emphasis">משה מרדכי בוים</span>, מגרעין המתיישבים החקלאים הראשונים, מוצאו מהעיירה סטאשוב שבמחוז קיילצה. הוא הושפע מדרשותיו הנלהבות של רב עירו, רבי יהודה לייב גראובארט, על בניין הארץ וישוב ארץ ישראל, ועלה ארצה — ובניגוד לרבים מתושבי העיירה, הוא דווקא הפך להיות איכר, עובד אדמה. כה רבה היתה תשוקתו למלא את דבר הרב, שיהודים יהיו עובדי אדמה, עד שהנחיל את אהבתו ותשוקתו לאדמה גם לבניו ולנכדיו — ורפת משפחת בוים היתה, כל ימי כתיבת חוברת זו, הרפת האחרונה שנותרה בקרית אתא.<br><br>
+בנימה נוסטלגית סיפר ר' משה מרדכי על ימיו הראשונים בכפר: כיצד הגיעו, אחרי 18 יום של טלטולים וסערות ים על "טרנטה" של אונייה רומנית עתיקה — עשרת האברכים הצעירים הראשונים — לכפר נידח זה בשלהי הקיץ של שנת תרפ"ה. התנאים היו עלובים ביותר, אפילו לפי המושגים הפרימיטיביים של מזרח אירופה: מים היו הערבים מביאים בכלים על גבי חמוריהם ומוכרים במשורה; לחם אפו הנשים פעם בשבוע בתנורי חמר ("טאבונים") ערביים. באותה תקופה ישב כל אחד מהמתיישבים במרחק ניכר מהשני, ללא ארגון מאחד. מתוך 300 המשפחות מוורשה שקנו קרקע, עלו רק שמונה בתקופה ההיא — ומתוכן חזרו שש בחזרה לפולין. מי שבעיקר נשאר היו אלו שחיסלו את עסקיהם באירופה ולא היה להם לאן לחזור.
+</div>
+
+<p data-a="01-77">בשנת תרפ"ז הקים בוים רפת בכפר עטה: הם נסעו לכפר הבדואי סאסא וקנו שם כמה פרות ערביות, שהניבו אז תפוקת חלב של 600–1,000 ליטר בשנה בלבד. בימינו, בזכות ברכת התורה "ארץ זבת חלב ודבש", פרה ממוצעת בארץ ישראל מניבה תפוקת חלב של כ־10,600 ליטר בשנה.</p>
+
+<div class="in-chapter-box" style="margin-bottom:0;">
+<h4 data-a="01-78" style="margin-top:0;">גידול האוכלוסייה בעיר</h4>
+<ul>
+<li data-a="01-79">1925 — 3 משפחות</li>
+<li data-a="01-80">1931 — 33 תושבים</li>
+<li data-a="01-81">1935 — 400 תושבים</li>
+<li data-a="01-82">1940 — 1,200 תושבים</li>
+<li data-a="01-83">1945 — 2,500 תושבים</li>
+<li data-a="01-84">1956 — 3,000 תושבים</li>
+<li data-a="01-85">1968 — 27,000 תושבים</li>
+</ul>
+</div>
+
+<p data-a="01-86" style="margin-top:26px;">לימים תהפוך קרית אתא לסמל של אחדות קהילתית, שבה כולם מכירים איש את רעהו ושמחים בשמחת חברם — עדות לכך שגם המספרים היבשים הללו מספרים סיפור של רוח.</p>
+
+
+<div class="chapter-transition">
+  <div class="ct-label">פרק ראשון</div>
+  <div class="ct-number">א</div>
+  <div class="ct-title">מקומות בעיר</div>
+  <div class="ct-sub">בתי כנסת, ישיבות, שיכונים ובתי ספר — מסע בין האתרים שבנו את קרית אתא</div>
+</div>
+
+<div class="deco-divider"><div class="line"></div><div class="icon">📖</div><div class="line"></div></div>
+
+<div class="chapter-label">פרק א׳</div>
+<h2 data-a="01-87" id="section1">מקומות בעיר</h2>
+
+<div class="chapter-intro">
+כל אבן בקרית אתא מספרת סיפור. פרק זה יוצא לסיור בין בתי הכנסת, הישיבות, השיכונים ובתי הספר של העיר — לא כרשימת אתרים יבשה, אלא כמסע אחר האנשים שבנו אותם באגורות ספורות ובמסירות אין־קץ. כל מבנה כאן הוא תוצאה של החלטה של יחיד או קבוצה לייסד עוד פינת קדושה על אדמת הקודש הזאת.
+</div>
+
+<div class="in-chapter-box">
+<h4 data-a="01-88">📖 בפרק זה:</h4>
+<ul>
+<li data-a="01-89">בית הכנסת על שם ר' ישעיה'לה שפירא — רחוב הרב פינסקר</li>
+<li data-a="01-90">ישיבת מאקווא</li>
+<li data-a="01-91">בית הכנסת על שם האדמו"ר מפיאסצנה</li>
+<li data-a="01-92">בית הכנסת מאקווא — דמבינסקי</li>
+<li data-a="01-93">התלמוד תורה — משלוש קריאות שם ועד היום</li>
+<li data-a="01-94">שיכון סיגעט — חצרו של האדמו"ר מקרעטשניף</li>
+<li data-a="01-95">בית הכנסת הגדול</li>
+<li data-a="01-96">בית הכנסת היכל שלמה ושיכון פא"י</li>
+<li data-a="01-97">הצריף האחרון בעיר</li>
+<li data-a="01-98">בית הכנסת אור המערב</li>
+<li data-a="01-99">בית הספר יבנה</li>
+<li data-a="01-100">עמק זבולון או נחלת אשר — שאלה בגבולות השבטים</li>
+<li data-a="01-101">השמטות — קרית אתא כפי שהיא כיום</li>
+</ul>
+</div>
+
+<h3 data-a="01-102">בית הכנסת ע"ש ר' ישעיה'לה — ברחוב הרב פינסקר</h3>
+
+<p data-a="01-103">על לוח שיש מעל דלת הכניסה לבית הכנסת ברחוב פינסקר מספר שתיים, בעיר הצפונית קרית אתא, חקוקות המילים: <em>"בית הכנסת הפועל המזרחי על שם הרב ישעיהו שפירא זצ"ל, מייסד קרית אתא"</em>. תלמידיו של ר' ישעיהו שפירא — מייסד הכפר, כפי שנפגש בהרחבה במבוא — הקימו על שמו בית כנסת זה, שנקרא בעבר "בית ישעיהו" ונקרא היום בית הכנסת הפועל המזרחי.</p>
+
+<p data-a="01-104">לפי תחקיר של מיכה קליין, ר' ישעיהו שפירא הוא זה ששכנע את הרוכשים לקנות קרקע בארץ ישראל באמצעות הרצאות ושיעורים, עד ששכנע כמה קבוצות, והוא עצמו סייע להביא את הקניין לידי מעשה בארץ. הם קנו 4,800 דונם בין אושא לשפרעם — מקום שבו ישבה הסנהדרין — ואדמות חברת "עבודת ישראל־וורשה" יועדו להקמת מושבה בשם "כפר עטא", על שם כפר האריסים הערבי "כופרתא" (Kufrata), שאדמותיו נקנו מהאפנדי, משפחת סורסוק.</p>
+
+<p data-a="01-105">בית הכנסת משמש כיום בעיקר את הקהילה הבוגרת בעיר; בכל יום מתקיים בו מניין ראשון בשעה 5:30, שיועד בעיקרו לעובדים ולפועלים. רב העיר הקודם, הרב שלוזינגר זצ"ל, נהג למסור בו שיעור בליל שבת, בשבת הגדול ובשבת שובה.</p>
+
+<div class="story-box">
+פעם שאל הרב את ר' מאיר שפריר ז"ל מדוע הוא מוסר שיעור בבית הכנסת דווקא בשבת שובה, שבה יש דרשה של רב העיר עצמו. ענה לו ר' מאיר שהרב מוסר את השיעור באידיש, והציבור כאן יודע רק עברית. כששמע זאת הרב, אמר: "אז אני אבוא למסור אצלכם שיעור בליל שבת בעברית" — וכך היה במשך שנים. ובכל זאת ר' מאיר שפריר פחד מקפידתו של הרב, ולא היה מוסר את שיעורו בשבת שובה ובשבת הגדול, כדי שלא לפגוע בדרשת הרב.
+</div>
+
+<h3 data-a="01-106">ישיבת מאקווא</h3>
+
+<p data-a="01-107">מן העניין לציין כי בלוחצם על הרב ממאקאווא לקבל עליו את עול הרבנות בכפר אתא, חברו יחד גדולי הדור: בעל ה'חזון איש' זי"ע, כ"ק האדמו"ר מהר"א מבעלזא זי"ע, וכ"ק האדמו"ר מגור בעל ה'בית ישראל' זי"ע — כולם שכנעו יחד את הרב ממאקאווא להתעטר בעטרת הרבנות. הוא לא קיבל את הרבנות, עד שהובטח לו שגם כאן יוכל להקים ישיבה ולהרביץ תורה לתלמידים — רק אז נענה להצעה.</p>
+
+<p data-a="01-108">התוכנית להקים ישיבה חסידית בכפר אתא נראתה בימים ההם לא רק כ"הלכתא למשיחא" אלא כחלום באספמיא. אולם סייעתא דשמיא עמדה לרב ממאקאווא, שהחליט: כאן תקום ישיבה חסידית — והצליח לראות בהגשמת שאיפתו. מחותנו, האדמו"ר מקופיטשניץ אשר בארה"ב, רבי אברהם יהושע העשיל, תרם את המגרש שעליו הוקם בניין הישיבה.</p>
+
+<div class="story-box">
+כששמע האדמו"ר מקופיטשניץ שיש ישיבה בכפר אתא ה"גולה אחר גולה", עוברת ממקום למקום ואין לה בניין משלה, החליט לתרום כסף לקניית שטח אדמה עבורה. אלא שכאשר הגיע לארץ, ניגשו אליו חסידי קרלין וסיפרו לו שאין מקווה לנשים באזורם בתל אביב. הוא לא ידע מה לעשות — מצד אחד, על פי ההלכה אין דבר גדול ממקווה; מצד שני, הכסף כבר נועד לישיבה בכפר אתא. פנו הרבנים אל החזון איש שיכריע, ואמר: <strong>שהכסף ילך לישיבה בכפר אתא</strong>.<br><br>
+שאל האדמו"ר מקופיטשניץ: מה שהרבה אומר אני מקבל, אבל תורה וללמוד אני צריך — מדוע ישיבה קודמת? השיב לו החזון איש: אנו צריכים לראות שיהיה מי שילך למקווה; אם תהיה ישיבה, יהיה המשך לתורה ולקדושה. כיום ידוע לכולם עד כמה השפיעה הישיבה על כלל בני העיר. מספר האדמו"ר ממאקווא שליט"א ששמע, שכאשר חזר האדמו"ר מקופיטשניץ לאמריקה הוא לא נרגע — הלך ואסף כסף, ובסוף בנו גם מקווה בתל אביב.
+</div>
+
+<p data-a="01-109">בשדרות הציונות פינת סוקולוב היה שטח ריק שנקנה לישיבה, אך מועצת העירייה לא נתנה אישורי בנייה, וטענה שיש כבר אזור בתי כנסת ברחוב המיסדים, ואין צורך במקום נוסף — היא חששה שהחרדים רוצים להתרחב עוד ועוד. שנים על גבי שנים התנהלו הדיונים<sup class="fn"><a href="#fn11" id="fnr11">11</a></sup>.</p>
+
+<div class="qa-box">
+<p data-a="01-110" class="q">שאלו את העטרת משה: מה אתם צריכים בניין כה גדול לישיבה כה קטנה?</p>
+<p data-a="01-111" class="a">השיב: אנו בטוחים שאלו המתנגדים לנו ישובו בתשובה שלמה וירצו להתפלל — לכן אנחנו צריכים מקום בשבילם. ובאמת, בחסדי שמים, המקום התמלא במניין ספרדי "ותיקין" שרבים מהמתפללים בו הם חוזרים בתשובה מן העיר.</p>
+</div>
+
+<p data-a="01-112">בשנים האחרונות התרבו מאוד בני הקהילה והחסידים, וכך התחילו לבנות בקומת הקרקע אולם טיש, גן ילדים חסידי, חדר חסידי, מקווה טהרה ועוד. בשנת תשפ"א החליטו שהמקום כבר אינו מספיק, והחלו להקים קומה שלישית למבנה.</p>
+
+<div class="story-box">
+כיצד הסתיים הסיפור עם העירייה? היה יהודי שגר ליד העירייה, ומהנדס העירייה חרג ובנה מרפסת בתוך שטחו. אותו יהודי איים שאם לא יאושר לעטרת משה בניין הישיבה, יתבע את המהנדס על החריגה — והאיום עזר. גם לאחר מכן היה צריך לקבל אישורים מהוועדה בחיפה, והרב נסע פעמים רבות לבקש שיאשרו את הבניין, עד שבחסדי ה' התקבל האישור.
+</div>
+
+<p data-a="01-113"><strong>גלגולי הישיבה:</strong> בינתיים, עד קבלת האישור, קנה העטרת משה בניין ברחוב סוקולוב 36 בערך, במקום שהיה בו מלון "עמק זבולון". וביום ג' ר"ח אלול תשי"ז נחנך הבניין ונכנסו התלמידים ללמוד בישיבה החדשה.</p>
+
+<h3 data-a="01-114">בית הכנסת ע"ש האדמו"ר מפיאסצנה</h3>
+
+<div class="highlight-box">
+<h4 data-a="01-115" style="margin-top:0;">מי היה האדמו"ר? — סיפור "הגיבן הקדוש"</h4>
+<p data-a="01-116" style="margin-bottom:0;">רבי שלמה קרליבך נהג לספר את סיפורו של "הגיבן הקדוש" על רבי קלונימוס קלמיש שפירא, האדמו"ר מפיאסצנה — אחיו של ר' ישעיהו שפירא, מייסד כפר עטה. סיפור זה, המובא להלן במלואו, מגלה טפח מגדולת האיש שקהילתו התיישבה בכפר אתא.</p>
+</div>
+
+<div class="story-box">
+"אחד המורים הגדולים בזמן המודרני היה רבי קלונימוס קלמן שפירא, האדמו"ר מפיאסצ'נה, שנרצח בגטו ורשה. הוא אמר שילדים בני חמש כבר זקוקים למורה שיחבר את נשמתם לשמים — ולכן הקים 'ממלכת ילדים'. היה לו בית ספר שלמדו בו אלפי ילדים, והוא היה אביהם, אמם וחברם הטוב ביותר. הוא הועבר בידי הנאצים לגטו ורשה בשנת 1940, ושם כתב את הספר 'אש קודש', המסכם את השיעורים שהעביר בחשכת הגטו. הוא נרצח במחנה המוות טרבלינקה.<br><br>
+"כשיצא ספרו לאור אחרי המלחמה, יופיו הכה בי וחדר עמוק ללבי. שאלתי בכל מקום אפשרי: 'איפה הילדים האלה?' נאמר לי שלא שרד מהם איש. אבל יום אחד, לפני כמה שנים, הלכתי לאורך רחוב הירקון בתל־אביב, ומולי ראיתי איש גיבן, כפוף ושבור, פניו יפיפיות אך גופו מעוות. הוא טאטא את הרחובות. אמרתי: 'שלום עליכם'. הוא ענה בפולנית כבדה: 'כן, אני מפיאסצ'נה'. שאלתי אם ראה את האדמו"ר. הוא אמר: 'מה זאת אומרת ראיתי אותו? הייתי תלמיד בבית הספר שלו מגיל חמש עד אחת־עשרה. כשהייתי בן אחת־עשרה נלקחתי לאושוויץ... הצליפו בי והכו אותי ובעטו בי, ומעולם לא שבתי לאיתני; לכן אני נראה כך. אין לי אף איש בעולם'.<br><br>
+"אמרתי: 'ידידי המתוק, כל חיי חיכיתי לראות אדם שהיה מילדיו של הרבי מפיאסצ'נה, ספר לי בבקשה אחת מתורותיו'. הביט בי בזעם: 'אתה חושב שאפשר להיות באושוויץ חמש שנים ועדיין לזכור?' 'כן,' אמרתי, 'התורות של הרבי — איך אפשר לשכוח אותן?' אז הוא רחץ ידיו, סידר עניבתו, ואמר: 'מעולם לא היתה שבת כמו אותה שבת. רקדנו אלפי ילדים, והרבי שר ברכה למלאכים הקדושים, ובין המנות אמר דברי תורה — ואחרי כל דבר תורה היה אומר: קינדערלאך, תזכרו, הדבר הגדול ביותר בעולם הוא לעשות טוב למישהו'.<br><br>
+"נאנח הגיבן: 'הורי אינם, כל משפחתי מתו. וככה הייתי באושוויץ — לבדי, ורציתי להתאבד. וברגע האחרון שמעתי את קולו של המורה שלי: ילדים, עשו משהו טוב למישהו אחר. אתה יודע כמה טובות אפשר לעשות באושוויץ בלילה? הייתי הולך מאיש לאיש ושואל למה הוא בוכה, אוחז בידיהם ובוכה איתם. זה היה נותן לי כוח ליום הבא. וכשהגעתי שוב לקצה גבול היכולת, ירדתי לחוף הים בתל אביב, חלצתי נעליי, ועמדתי להיכנס לתוך הים ולהטביע את עצמי — ולא יכולתי שלא לשמוע שוב את קול רבי: ילדים, תזכרו, הדבר הגדול ביותר הוא לעשות טוב למישהו'."
+</div>
+
+<h4 data-a="01-117">הרבי מפיאסצנה וקרית אתא</h4>
+
+<p data-a="01-118">כיצד הגיעו חסידי פיאסצנה לקרית אתא? יש מעידים שהאדמו"ר, שחיבב מאוד את ארץ ישראל, שלח אותם לשם<sup class="fn"><a href="#fn12" id="fnr12">12</a></sup>, שכן זה היה הכפר שאחיו — ר' ישעיהו שפירא — היה ממקימיו, וכל ההתעוררות להקימו נבעה בוורשה. גם גיסו של הרבי, ר' שלום יוסף שפירא, קנה בכפר אתא אדמה. הנכדה ליבי קופצי'יק, המתעדת את סיפורה של סבתה אסתר (חמותו של הרב דיסקין, רב העיר בימינו), מספרת: "סבא ראובן [גשייד] היה חסיד פיאסצנה... האדמו"ר ביקש מכמה חסידים שיעלו לארץ ישראל, והוא מאוד כיבד את מי שהחליט לעלות. סבא ראובן ומשפחתו הגיעו לארץ והתיישבו בירושלים, ולאחר תקופה, במצוות האדמו"ר, עברו לכפר אתא". וכך גם נכתב בעיתון 'העולם' (מאי 1938): "כפר עטה הוא הכפר שנוסד ע"י חברת 'עבודת ישראל' ביוזמת הרבי מפיאסצ'נה". יתרה מזאת: מיכה קליין מצא ראיות ממסמכים מפורשים שהאדמו"ר מפיאסצנה עצמו קנה קרקעות בקרית אתא — יתכן שחשב לעלות בעצמו לכפר אתא, לאחר עליית חסידיו, אלא שלא רצה לעזוב את צאן מרעיתו בחוץ לארץ.</p>
+
+<div class="story-box">
+בשנת תרפ"ה, כשאחיו ר' ישעיה'לה נסע לפולין להעלות את אשתו ובניו ומסר נאומים על מצוות קניית קרקע, נחפז אחיו — האדמו"ר מפיאסצנה — בגודל תשוקתו וקיים את מצוות ישוב הארץ באופן ייחודי: מכר את כל רכושו, ביתו וכל דברי הערך שהיו לו בפיאסצנה, וקנה לו אחוזת נחלה בפרוורי כפר אתא. כשהציעו לו אנשי שלומו לעזור בכספם, אמר להם: "א קונץ צו קויפען מיט יענעמס געלט" (כלום זו חכמה לקנות בכסף של אחרים?). יש אדם היושב בארץ ישראל בגופו ולא בנפשו, ויש שזוכה לקיים את המצווה רק בנפשו ולא בגופו — ואם עדיין לא זכה הרבי לקיים בגופו את מצוות ישיבת ארץ הקודש, הרי שבנפשו ורוחו היה בה תמיד, וכל ימיו חי ביסורי אהבה לארץ הקודש (מעובד מהספר 'אש קודש', עמ' ש"ג).
+</div>
+
+<div class="quote-box">
+"ראש העיר הנצחי של קרית אתא הוא הגאון הקדוש האדמו"ר מפיאסצינה הי"ד, בעל 'חובת התלמידים', שחסידיו שהיו מאוגדים בחברת 'עבודת ישראל' בוורשה הם שיסדו את כפר אתא".
+<span class="source-tag">הרב שמואל שלוזינגר זצ"ל, רב העיר</span>
+</div>
+
+<div class="story-box">
+כאשר הרב שלמה לורנץ שליט"א, שהעריך את גדלותו של הרב שלוזינגר, אמר לו לפני שלושים שנה: "מה אתה מתבזבז בקרית אתא? בוא לבני ברק, שם ישכימו לפתחך, יהיה לך הכל, ואילו כך אתה הולך לאיבוד" — ענה לו הרב שלוזינגר: "את אדמות 'קרית אתא' גאלו חסידי פיאסצנה מהערבים, והם כולם נהרגו בפולין על קידוש ה'. זו אדמה קדושה! החזון איש שלח לשם את הרב מנדלסון לכהן ברבנות, וכשהרב מנדלסון עזב, בא חותני הרב גפן". (מקור: עטרות שמואל)
+</div>
+
+<h3 data-a="01-119">בית הכנסת מאקווא — דמבינסקי</h3>
+
+<p data-a="01-120">את בית הכנסת תרם <span class="emphasis">ר' ישראל דמבינסקי</span>, תלמידו של האדמו"ר מפיאסצנה, יהודי חם ותוסס לכל דבר שבקדושה ובגמילות חסדים. בהתחלה תרם דמבינסקי את קרקעו כדי שהרב ממאקווא יתפלל בה, והתפללו אז בצריף; במשך השנים אסף כסף ובנו במקום בית הכנסת "מחזיקי הדת", והרב ממאקווא קבע בו את תפילתו. כיום גם גני מאקווא נמצאים על שטחו של דמבינסקי. בקומת הקרקע הקים גם בית הכנסת אורחים — כל מי שנקלע לעיר קיבל שם חדר ללא תשלום — וכן קרן גמ"ח הלוואות, הקיימת עד היום (אחראי עליה כיום הרב אלימלך שטמר הי"ו). ר' ישראל נפטר בכ"ו תשרי תשל"ה.</p>
+
+<p data-a="01-121">מי היה אותו ר' ישראל? כאשר ר' ישעיה'לה שכנע את היהודים לעלות לארץ, אמר האדמו"ר מפיאסצנה לר' ישראל שיעלה. הוא כנראה עלה כבר בהתחלה (אין על כך תיעוד ודאי), אך במאורעות תרפ"ט (1929), שבהם נשרף חלק גדול מכפר עטה, חזר דמבינסקי לפולין, ורק בשנת 1936 שב עם כל משפחתו לכפר עטה. הוא היה הסנדלר של כפר עטה — וכיצד אותו חסיד וקדוש נהיה סנדלר?</p>
+
+<div class="qa-box">
+<p data-a="01-122" class="q">כשתכנן ר' ישראל לעלות לארץ ישראל, אמר לו האדמו"ר מפיאסצנה שילמד מקצוע כדי שיהיה לו ממה להתפרנס בארץ.</p>
+<p data-a="01-123" class="a">
+כך למד להיות סנדלר, וידועים דברי ה'חתם סופר' שבארץ ישראל יש מצווה להיות סנדלר: "ולא לבד עבודת קרקע אלא לימוד כל האומנויות משום ישוב וכבוד ארץ ישראל, שלא יאמרו לא נמצא בכל א"י סנדלר ובנאי וכדומה ויביאום מארצות רחוקות". דמבינסקי, שהיה ירא שמים מאוד, עבד חצי יום בסנדלריה ואת שאר הזמן הקדיש ללימוד תורה, ואמרו עליו שכל סנדל שתיקן החזיק עד שיבה טובה — כדברי חז"ל על חנוך תופר המנעליים, שעל כל תפירה ותפירה היה מייחד ייחודים.
+</p>
+</div>
+
+<p data-a="01-124">לאחר השואה ופטירתו של האדמו"ר מפיאסצנה, נעשה ר' ישראל תלמידו של ר' אהרן ראטה בעל 'שומר אמונים', שהתאכסן בביתו בביקורו הקצר בקרית אתא, והורה לו שלתיקון נפשו כדאי שיפתח הכנסת אורחים — וכן עשה. הוא התחבר מאוד לר' משה טאוב זצ"ל<sup class="fn"><a href="#fn13" id="fnr13">13</a></sup>, שהיה גם חסיד שומר אמונים. משהחליט לעבור לירושלים, השכיר את דירתו לר' שמעון בניש; אלא שעם הצהרת האו"ם על חלוקת הארץ פרצו מהומות והדרך לירושלים נעשתה קשה, ולכן חזר בו והחליט להישאר בכפר אתא, ולחלוק את הצריף הקטן שלו עם ר' שמעון בניש. הצריף המחולק הפך במהרה לכתובת קבועה להכנסת עוד ועוד אורחים<sup class="fn"><a href="#fn14" id="fnr14">14</a></sup> — כתובתם הראשונה של פליטי שואה רבים שהגיעו לכפר אתא ללא קרוב וגואל, שם מצאו בית חם וארוחה חמה, ואף חתונות נערכו שם עבור פליטי השואה. הוא היה יהודי שגר בצריף קטן ללא ריצוף עד סוף ימיו בשנת תשל"ה — אך ביתו היה פתוח לכל אחד.</p>
+
+<h3 data-a="01-125">התלמוד תורה</h3>
+
+<p data-a="01-126">התלמוד תורה בקרית אתא החליף במשך שנותיו שלושה שמות: "שארית ישראל", "בית יהודה", ו"תורה תמימה".</p>
+
+<div class="story-box">
+הרה"ח ר' ישראל מאיר בנצלוביץ הי"ו מספר כי סבו, ר' עקיבא מונקיטובער, היה בונה ומקים עולה של תורה בקרית אתא הקדומה — ואף הקים את ה"גערע שטיבל" (שטיבל חסידי גור) ברח' כצנלסון. "סבא הגיע ארצה בשנת תרצ"ד־תרצ"ה והשתקע בכפר אתא, שהיה אז מקום שממה של ממש. משחשש מה יהיה עם חינוך ילדיו, ובביקורו הקרוב של רבו מרן ה'אמרי אמת' זי"ע, הביע את חששותיו, אך מרן הבטיח לו: 'דיינע קינדער וועלן נישט קאלייע ווערן' (הילדים שלך לא יתקלקלו). סבא הקים את התלמוד תורה הראשון וכן את מוסד 'בית יעקב' הראשון בכפר אתא — הכל התנהל דרך הצריף הקטן שלו, ששימש ללימודים בשעות הבוקר והצהריים, ובלילה למקום לינה" (מתוך כתבה בהמבשר).
+</div>
+
+<p data-a="01-127">בהמשך אנו קוראים על הצריף של התלמוד תורה מתיאורו של ר' יוסף מתתיהו אנגל ז"ל, פליט שואה שהסתופף בצל רבינו: "על גבעה קטנה בלב כפר אתא עומדים מספר צריפים. באחד מהם שוכן התלמוד תורה עם כמה כיתות — זהו הת"ת של הרב מנדלזון, שכן את המלמדים היה הוא לבדו בוחר, ורובם הביא מירושלים: לשיטתו, רק אם המלמד הוא ירא שמים אמיתי ניתן לצפות שיצמיח פירות משובחים. ברור שצריך כישורים וידיעות, אבל יראת שמים היא התנאי הראשון". ואמנם הצליח החינוך בת"ת שלו, ופירותיו ניכרים כיום בכל פינותיה של הארץ התורתית. צריף זה שימש גם כאכסניה לבחורים פליטים ועולים חדשים בלילות, בהשכמה למניין ספרדי, בשבת שחרית לבית מדרש פועלי אגודת ישראל, ובשבת אחר הצהריים למועדון הנוער האגודתי.</p>
+
+<div class="story-box">
+בימים שהיה חסר מלמד בתלמוד תורה, פנה הרב מנדלזון לחזון איש שיעזור למצוא מלמד טוב. אמר החזון איש לר' יעקב פינקלשטיין, שהיה אז בחור, שייסע לכפר עטה להיות מלמד. שאל ר' יעקב: הרב, נשארתי בבני ברק — כיצד אסע לכפר עטה? אמר לו החזון איש: ומי אמר שחתמתי נישואין עם בני ברק, אולי גם אני אעבור לכפר עטה. הסביר ר' חיים קניבסקי: בבני ברק השתמשו במים שנשאבו באמצעות חשמל, והחזון איש התנגד מאוד לשימוש בחשמל בשבת, ואילו בכפר עטה היה מים מהבריכה של אברמסקי ללא משאבות חשמליות — לכן חשב החזון איש שאולי יעבור לכפר עטה (וכששמעו על כך בבני ברק, נבהלו מאוד שמא יעזוב אותם, וסידרו את המשאבות שיפעלו ללא חשמל בשבת).
+</div>
+
+<p data-a="01-128">בתקופת קום המדינה (תש"ח–תשי"ב) הצטרפו רוב התלמודי תורה לזרם הרביעי (חינוך חרדי במימון המדינה בשנים הראשונות), אך בכפר אתא נשארו בהתחלה עצמאיים — הוראה מפורשת של החזון איש לשמור על תלמוד תורה אחד (בשפה העברית) שיישאר עצמאי לגמרי, ללא מימון המדינה, "על טהרת הקודש". מדוע חשש החזון איש מחינוך בראשות המדינה? בספר 'אש התורה' (עמ' 163) מובא שאמר: "הובטחנו מפי הגבורה כי לא תישכח מפי זרעו... ואם לא היו מסכימים [גדולי התורה לזרם הרביעי] היתה ההבטחה האלוקית מתקיימת ישירות מידם של מחזיקי תורה בכל עיר ומושבה" — כלומר, כשהכסף מגיע מידי אנשים כשרים ויראי שמים, יש הרבה יותר סייעתא דשמיא בחינוך. בשנת תשי"ב, עם הקמת החינוך העצמאי, הצטרף אליו התלמוד תורה בכפר אתא.</p>
+
+<h3 data-a="01-129">שיכון סיגעט</h3>
+
+<div class="highlight-box">
+<h4 data-a="01-130" style="margin-top:0;">האדמו"ר מקרעטשניף מגיע לארץ</h4>
+<p data-a="01-131" style="margin-bottom:0;">משעלה הרבי מקרטשניף זצוק"ל<sup class="fn"><a href="#fn15" id="fnr15">15</a></sup> לארץ הקודש וירד בנמל חיפה בשנת תש"ה, מצא בחיפה עשרות בעלי־בתים שהיו מקושרים בעבר לחצרות נדבורנה־קרעטשניף, ושמחו מאוד על בואו והפצירו בו שיישאר בקרבם. אולם הרבי, שנפשו נקשרה בירושלים עוד בהיותו בחוץ לארץ, לא הסכים להישאר בחיפה — ורק לאחר שפרצה מלחמת תש"ח, כשקשה היה למצוא מנוח בירושלים, הועלתה ההצעה שיעבור לכפר אתא "עד יעבור זעם".</p>
+</div>
+
+<p data-a="01-132">בכפר אתא מצא הרבי את הרה"ח ר' אברהם יוסף וידר ז"ל, במקורו מסיגעט, שהחל להביא עמו חסידים ואנשי מעשה, ואט־אט התקבצו סביבו מבקשי ד'. הרב דרוקמן, רבה של קרית מוצקין, זוכר מימי ילדותו את האדמו"ר עובר מבית כנסת לבית כנסת באזור הקריות, מעודד בכל מקום את פליטי השואה להתחזק בתורה ובמצוות.</p>
+
+<p data-a="01-133">כשהסתיימה המלחמה חפץ הרבי לשוב לירושלים, אך בעקבות סיבות טכניות נמסרה דירתו לאחרים, וראה בכך סימן מן השמים להיענות להפצרת תושבי כפר אתא שנקשרו אליו. הוא אף נסע לתל־אביב אל הרה"ק מבעלזא לשאול בעצתו, ומשקיבל את אישורו, החליט לכונן את חצר קודשו בכפר אתא. באותם ימים כיהן שם כרב רבי בנימין מנדלזון זצ"ל, ואמר עליו הרה"ק מבעלזא, בזהירותו הידועה להמליץ טוב על ישראל: "בכל הערים מכהנים רבנים חסידיים, ואולם בקרית אתא ישנו רב 'חניוק'" — כלומר מי שמחמיר יותר מחסידות עצמה.</p>
+
+<h4 data-a="01-134">תחנה א׳: הצריף שהכיל הכל</h4>
+
+<p data-a="01-135">ברחוב הלל נמצא צריף קטנטן מפח, בו שני חדרים ומטבח קטן. את החדר הראשון הסבו לבית מדרש, ואת השני למגורים צפופים. הצריף להט בחום עז בקיץ וקפא בקור עז בחורף, אך האש הגדולה שליהטה סביב הרבי סחפה המונים, עד שבית המדרש הקטן והצפוף היה צר מהכיל את הבאים. אף שהיה קנאי גדול בדרכו של רבו האדמו"ר מסטמר, קיבל הרבי את כל היהודים באהבה גדולה — יהודים רבים מחוגי המזרחי, במיוחד מחיפה והקריות, באו לחצרו.</p>
+
+<p data-a="01-136">בשנת תש"י, כשמלאו שלוש שנים לבנו הגדול, החל הרבי לתור אחר מקום לימודים הולם, אך במקום נידח זה לא מצא. כך הוסב בית המדרש גם לכיתת לימודים קטנה — ה"חיידר" היחיד באידיש בכל הארץ מלבד ירושלים, שנפתח עם שלושה־ארבעה ילדים.</p>
+
+<h4 data-a="01-137">תחנה שנייה: ברחוב בית לחם</h4>
+
+<p data-a="01-138">ר' משה אלי' גרוס ז"ל, מהחסידים המסורים שבצל הרבי, פעל לאתר מקום חלופי לפעילות הרוחנית. לאחר מסע חיפושים<sup class="fn"><a href="#fn16" id="fnr16">16</a></sup> הגיעו להסכמה עם ר' דוד קינס, שהעמיד לרשות הרבי מגרש ברחוב בית לחם<sup class="fn"><a href="#fn17" id="fnr17">17</a></sup>. עם המעבר, בי' סיון תשי"ב, חולק היכל בית המדרש לשניים: בחלקו האחד המשיך בית המדרש, ובשני התקיים ה"חיידר" שכבר מנה ארבע־חמש כיתות. שמעו הגיע לכל הכפרים והעיירות שבסביבה, וגם רבה של העיר הרב שלוזינגר זצ"ל שלח את ילדיו ללמוד שם. אפילו מחיפה נשלחו ילדים — האב היה מגיע ביום ראשון לכפר אתא ושוהה שם עם בנו כל השבוע עד שבת, אצל הרבי שלמרות קוטנו במידותיו היה ליבו הגדול מכיל את כולם.</p>
+
+<p data-a="01-139">על פי עקרונותיו שקיבל מרבותיו הק', שלא לערב לימודים זרים<sup class="fn"><a href="#fn18" id="fnr18">18</a></sup>, נאלץ הרבי להתמודד עם קשיים כספיים עצומים בהחזקת התלמוד תורה על חשבונו הפרטי; בכל יום חמישי היה עליו לשלם למלמדים, כשהכסף הושג תמיד בדרך נס. כוחות רבים השקיע בנפיון מלמדיו, בעקבות אמרתו החריפה של זקנו הק' הרבי ר' מרדכי'לה מנדבורנה זי"ע, שמלמד שאינו הגון עלול להשפיע רוח שאינה כשירה על התלמידים לכל ימי חייהם.</p>
+
+<h4 data-a="01-140">תחנה אחרונה: הכל נהפך לטובה</h4>
+
+<div class="story-box">
+לאחר שהות ארוכה בארה"ב לגיוס תרומות, חזר הרבי ארצה ורכש שני מגרשים גדולים ברח' ירושלים, במקום מרכזי וסמוך לבית הכנסת הגדול, במטרה להקים שם בית מדרש גדול, ישיבה ותלמוד תורה. הוא הגיש בקשת רישיון, ואף נערכה הנחת אבן פינה בהשתתפות קהל רב. אלא שבדיוק באותם ימים נחגג יום העצמאות, ושני ילדים מה"חיידר" המקומי לבשו בגדי שק והסתובבו ברחובות לאות מחאה. עד מהרה נודע הסיפור לפקידי הרשויות, שסירבו לאשר את התכנית באמרם שאין רצונם לתמוך "בגידול ילדים קיצוניים".<br><br>
+במשך שנתיים התנהלה מלחמה על המגרשים, עד שהרבי נכנע והגיע לפשרה: הוא ייתן לעירייה את שני המגרשים ברחוב המרכזי, ובתמורה יקבל חמישה מגרשים גדולים מחוץ לכפר אתא — מקום שממה, ללא תשתיות חשמל ומים. הצינורות הארוכים שנמשכו מבתי שכנים כדי לספק תאורה ומים היו מכמירי לב. אך אחרי שנים ספורות, כשהצליחו להתמודד עם ההפרעות הגשמיות, הבינו שהיתה זו יד ה' שסיבבה זאת, להיות רחוקים משאון העיר ומחילולי שבת בפרהסיא. באותה תקופה אפילו שם הרחוב עדיין לא ניתן מטעם העירייה, והחסידים קראו למקום "רחוב אור החיים", עד שהוחלף לרחוב י.ל. פרץ.
+</div>
+
+<p data-a="01-141">בסביבות שנת תשכ"ב נפתחה במקום ישיבת "ציון באור החיים". הרבי בעצמו מסר מדי יום שיעורים לבחורים: בגמרא ברכות לפני התפילה (כידוע מהרה"ק הרבי ר' מאיר'ל מקרעטשניף זי"ע, שלימוד גמרא ברכות לפני התפילה בימות חול מסוגל לתפילה מתוך התלהבות ודביקות), בספר התניא, ולאחר התפילה — כמה סעיפים בטור בית יוסף, וכן ב'חפץ חיים' וב'משנה ברורה'. שכונה זו, שגדלה סביב חצרו, קיימת עד היום, הומה במשפחות חרדיות ובילדי חמד. גם אחרי שעזב הרבי את כפר אתא בשנת תשמ"ב, לא זנח את קהילתו ושמר עמה על קשר חם. הוא נלב"ע בט"ז באייר ה'תשס"ו.</p>
+
+<h3 data-a="01-142">בית הכנסת הגדול</h3>
+
+<p data-a="01-143">בית הכנסת שברחוב המיסדים הוא המבנה האחרון שנשאר לפליטה מימי היישוב הערבי בעיר, וקיים כבר יותר מ־300 שנה. בעיתון 'דרכנו' מסופר שכשמכרו הערבים את הכפר לחברת 'עבודת ישראל', הם התנו שלא ישברו את המסגד אלא יהפכו אותו למקום תפילה. היהודים שאלו את הרבנים אם הדבר מותר — והרבנים אישרו (כן פסק המשנה ברורה, סימן קנד ס"ק מה). ומאז התפללו במקום זה רבני היישוב — הרב מנדלזון והרב שלוזינגר.</p>
+
+<h3 data-a="01-144">בית הכנסת היכל שלמה — ושיכון פא"י</h3>
+
+<div class="story-box">
+ר' שמעון ביניש זצ"ל עבר את מחנות השואה ונותר בודד בעולמו, אך לא ברוחו, שהיתה חזקה באמונה מאוד. הוא עלה לארץ ישראל, הגיע לקרית אתא, ניהל את סניף פא"י בעיר והפעיל פעילות ענפה ועצומה: מדרשות ערב, מתמידים, מועדני ערב לבנים ולבנות. רבים מתושבי העיר חייבים לו את חייהם הרוחניים. גם לאחר שעבר לניו יורק, המשיך לנהל את המועדנים בעיר על ידי תרומות שהשיג מארה"ב.<br><br>
+לר' שמעון היה חבר ממחנות הריכוז ושמו שלמה, ששניהם חלו יחד במחלת הטיפוס. שלמה יוסף זכה לראות בגאולה יחד עם ר' שמעון בי"ד אייר תש"ד, אך המלחמה נתנה בו את אותותיה, וב־ח' טבת תשי"ג נפטר בן 47 בלבד, ללא ילדים. בצוואתו הקדיש כ־24 אלף לירות לר' שמעון, הכרת טובה על ידידותו החמה במחנות. ר' שמעון סירב לקבל את הכסף באופן אישי, והסכים לקבלו רק עבור מפעל ציבורי שיישא את שם המנוח. לקראת ראש השנה תשי"ד רכשה אלמנתו של שלמה מגרש ברחוב יהודה הלוי 9 עבור בית כנסת — 990 מ"ר, במחיר 1,200 לירות.
+</div>
+
+<p data-a="01-145"><strong>בהקמה:</strong> ר' שמעון בניש היה איש חזון ובעל מעוף, וביקש לבנות בית כנסת גדול ומהודר, לא "שטיבל", וכתב ביומנו: "מה לעשות, אנשים קטנים אינם יכולים להתרומם קצת ולהתייחס בחיוב לדבר גדול". ואכן, בית הכנסת שהוקם היה מהמפוארים ביותר שנבנו בארץ ישראל באותם שנים. כבר בר"ח ניסן תשי"ד התקיימה חגיגת הנחת אבן הפינה, ולראש השנה תשט"ו היה הבית משוכלל בהדרו — למרות היות ר' שמעון חסר ניסיון לחלוטין בתחום הבנייה, ולמרות שעבד רוב שעות היום לפרנסתו במפעל אתא. ר' שמעון לא גילה לכולם שהכסף היה מיועד בעיקרו בעבורו, אלא אמר לכולם שזו תרומת אשת המנוח — כך הסתיר את גודל ההקרבה שהקריב באותם ימי צנע.</p>
+
+<div class="story-box">
+הרב ברמן, ששימש כרב בית הכנסת החל משנת תשל"ד, מספר על תחילת הקשר עם 'היכל שלמה': "חזרנו לארץ בחודש אב תשל"ג... הלכתי בשבת אחר הצהריים לטייל בסביבה כדי למצוא מקום תפילה קרוב. הגעתי לרח' יהודה הלוי, והנה פוגש אותי ר' שמעון בניש, נותן לי שלום עליכם במאור פנים, ואומר: 'אולי אתה רוצה להשתתף בשיעור שמתקיים עתה?' התברר שהוא מלמד בספר 'תפארת שלמה'. נכנסתי, מסביב לשולחן ישבו כעשרים איש, מוסיף מקבילות מרש"י ורמב"ן, מדרש וזוהר, משלב סיפור חסידי, אמרה שנונה. מעולם לא חשתי מתיקות כזו בספר חסידי". בתום השיעור שאל אותו ר' שמעון היכן הוא מתפלל, והזמינו ל'היכל שלמה' — "אתה מוזמן". וכך, מאותה שבת ראשונה, נותר הרב ברמן בבית הכנסת עד היום — למעלה מארבעים שנה.
+</div>
+
+<p data-a="01-146">בעיצומו של חורף תשל"ד הזמין ר' שמעון את הרב ברמן ואמר: "אני עומד לעזוב בקרוב את קרית אתא עקב נישואיי, וברצוני להפקיד בידך את ההנהגה הרוחנית של בית הכנסת... תשמור לי על בית הכנסת". כך הועבר לו התפקיד. השיעור הקבוע בדף היומי, שנוסד על ידי ר' שמעון עצמו בחודש הראשון לחנוכת 'היכל שלמה' בתשט"ו, נמסר לאחר מכן על ידי הרה"ג ר' מוטל ארזון ז"ל, וכיום ממשיך אותו הרב חיים וינשטוק הי"ו.</p>
+
+<p data-a="01-147"><strong>שכון פא"י:</strong> הסניף של פועלי אגודת ישראל בקרית אתא היה אחד הסניפים הגדולים והחזקים ביותר בארץ בשנים של קום המדינה. בימים ההם היה יותר חרדים בקרית אתא מאשר בבני ברק, כך היה לפי תוצאות הבחירות הראשונות לממשלה.</p>
+
+<h3 data-a="01-148">הצריף האחרון בעיר</h3>
+
+<p data-a="01-149">ברחוב בית לחם 1 קיים עד היום צריף עתיק מימים ימימה, ששייך היה בעבר לרב <span class="emphasis">שלום אליעזר ברוין זצ"ל</span> — יהודי מסאטמר שעלה ארצה לאחר השואה, וקבע את משכנו בכפר אתא, כרב המקום כיהן אז הגה"ח רבי בנימין מנדלזון זצ"ל. סיפור חייו המלא — כולל נס ההצלה שהחזיק בו בעקשנות בהלכות שבת גם בעת הפצצה — מובא בהרחבה בפרק ג', "דמויות הוד". ר' שלום גר ברחוב בית לחם על אדמת בית פישר (בית הבק), ובמקום מגוריו שם החל בחיפוש מקומות לימוד וחינוך ראויים לילדיו.</p>
+
+<h3 data-a="01-150">בית הכנסת אור המערב</h3>
+
+<p data-a="01-151">הרב משה מימון הקים מבנה שיועד להיות תלמוד תורה, אך מחמת חוסר כספים לא הצליח לסיים את המבנה בשלמותו. שנים לאחר מכן שימש המקום לצרכי בית הכנסת.</p>
+
+<h3 data-a="01-152">בית הספר יבנה</h3>
+
+<p data-a="01-153">בשנת תרצ"ה נוסד בית הספר בכפר עטה על ידי הרב אוסקורן, שהגיע לכפר מרחובות לשם כך. בית הספר מנה בימיו הראשונים פחות מעשרה תלמידים, ובכפר היה אז רק צריף קטן שבו למדו ילדי החרדים. בבית הספר החדש למדו יחד דתיים וחילונים — דבר שכמובן לא התאים למי שהקפיד על חינוך ילדיו, ולכן מהדברים הראשונים שדאג להם הרב מנדלזון, משהגיע לעיר, היה להקים תלמוד תורה מסודר.</p>
+
+<p data-a="01-154">בית הספר נקרא "יבנה" על שם הישוב יבנה, בו שכנה הסנהדרין בימי ר' יוחנן בן זכאי. בזמן מצור הרומאים על ירושלים יצא ריב"ז מהעיר, ומאספסינוס, שנהנה מחכמתו, ביקש שלא יחריבו את יבנה, שם ישבו תלמידי חכמים ולמדו תורה — ובזכות זו שרד העם היהודי את החורבן הגדול. שם דומה ניתן כבר בשנת תרפ"ה לבית ספר בליטא, שהוקם על ידי מהרי"ל בלוך כדי להציל ילדים מבתי הספר של המשכילים, שבהם למדו גם לכפור באלוקים.</p>
+
+<p data-a="01-155">בית הספר בכפר עטה שכן תחילתו בצריף משפחת שרמן. בית הספר מומן משכר לימוד ההורים, שרבים מהם התקשו לשלם אותו במצב הכלכלי הקשה. מסופר שיום אחד הודיע המנהל שתלמיד שלא ישלם לא יבוא יותר — ולמחרת לא הופיע אף תלמיד! כשראה זאת הרב אוסקורן, אמר לכולם לחזור ללימודים. משגדל בית הספר, עבר לבית צינובר, בניין לא מסויד וחסר הרבה דברים, שבו למדו כמה כיתות יחד, דתיים וחילונים.</p>
+
+<p data-a="01-156">בשנת תש"ה, עם העלייה במספר העולים, הוחלט על ידי המועצה המקומית לבנות בית ספר, וההורים החילוניים ביקשו להפריד את ילדיהם — כך נבנו שני בתי ספר על אותו מגרש ברחוב רמז. בשנת תשי"ב כבר למדה כל שכבת גיל בכיתה משלה. גלי העלייה הביאו עולים רבים, ובשלב מסוים בנתה המועצה קומה נוספת רק לבית הספר החילוני — דבר שעורר זעם ונערכו הפגנות. בשנת תשי"ג עזב המנהל מונק, ובמשך שנים רבות ניהל מר מרדכי מרגלית את בית הספר, שמטרתו — כפי שכתב במסמכיו — "להקנות לילד אהבת תורה ויראת שמים, מידות הגונות והרגלים נאים".</p>
+
+<p data-a="01-157">בשנת תש"כ בנתה העירייה מבנה חדש בסוף רחוב הרצל, אז קצה הכפר, ולשם עבר בית הספר הדתי. באותה שנה הצליחו לארגן גם כיתה שלמה לתיכון, ובשנת תשכ"ד נחנך התיכון במקום שבו נמצאת כיום האולפנה, ומר מרגלית עבר לנהלו. במקומו נכנס מאיר שפריר ז"ל, בוגר ישיבת הדרום שברחובות, תלמידם של הרב בר־שאול והרב שך זצ"ל. הוא הגביר את הפעילות התורנית בשעות אחר הצהריים, הביא רבנים מהאזור לדבר בפני התלמידים, והנהיג ימי שדה ושיעורי טבע מתוך אהבתו הגדולה לאדמת הארץ. בית הספר גדל תחתיו עד ל־900 תלמידים.</p>
+
+<div class="story-box">
+כשבנותיו של מר שפריר הגיעו לגיל תיכון, לא הסכים לשלוח אותן לתיכון בעיר בשל רמתו הדתית, ושלח אותן לאולפנה סגולה בקרית מוצקין — דבר שההנהלה הכללית ראתה בשלילה, וכתבה נגדו דו"ח מלא בהשמצות שהביא לעזיבתו בתשל"ז. אלא שהקב"ה שילם לו שכרו כפול: בגשמיות, כשביקש שילומים ממשלת גרמניה בעד נכות שנגרמה לו בשואה, השתמש דווקא באותו דו"ח מלא ההשמצות כהוכחה, ובקשתו התקבלה. וברוחניות — כל בנותיו התחתנו עם בני תורה, וכל נכדיו הלכו ללמוד בישיבות קדושות.
+</div>
+
+<h3 data-a="01-158">עמק זבולון או נחלת אשר</h3>
+
+<p data-a="01-159">שאלה מעניינת מתעוררת מתוך פסוקי התורה עצמם: לאיזה שבט שייכת בעצם קרית אתא?</p>
+
+<div class="two-columns">
+<div class="col-purple">
+<h4 data-a="01-160">עמק זבולון — לפי הגמרא</h4>
+<p data-a="01-161" style="margin-bottom:0;">בברכת יעקב נאמר (בראשית מט, יג): "זְבוּלֻן לְחוֹף יַמִּים יִשְׁכֹּן וְהוּא לְחוֹף אֳנִיֹּת וְיַרְכָתוֹ עַל צִידֹן". ובגמרא (בבא בתרא קכב, א) מסופר שהחלוקה נעשתה באורים ותומים: "זבולן עולה — תחום עכו עולה עמו".</p>
+</div>
+<div class="col-gold">
+<h4 data-a="01-162">נחלת אשר — לפי הכתובים</h4>
+<p data-a="01-163" style="margin-bottom:0;">בשירת דבורה (שופטים ה, יז): "אָשֵׁר יָשַׁב לְחוֹף יַמִּים". ובחלוקת הארץ (יהושע יט, כד–כט): "וּפָגַע בְּכַרְמֶל הַיָּמָּה... עַד צִידוֹן רַבָּה". וכן (שופטים א, לא): "אָשֵׁר לֹא הוֹרִישׁ אֶת יֹשְׁבֵי עַכּוֹ".</p>
+</div>
+</div>
+
+<div class="qa-box">
+<p data-a="01-164" class="q">כיצד מיישב הגר"א את הסתירה?</p>
+<p data-a="01-165" class="a">הגר"א (על יהושע י"ט, י"ד) מבאר: "הא דכתיב וירכתו על צידון וכתיב זבולן לחוף ימים ישכון, על כרחך צריך לומר שגבול זבולון מפסיק באמצע גבול אשר, והולך על צידון רבה, ושם מתפשט קצת לרוחב כתבנית ירך — וזהו שאמר 'וירכתו על צידון'". כלומר, בתוך נחלת אשר היתה מובלעת של זבולון שהגיעה עד חוף הים, החל מאזור עכו ועד צידון. ומה שאמרו בגמרא שבגורל זבולון עלה "עכו", אין הכוונה לעיר עכו עצמה אלא לתחומה. ולפי זה, קרית אתא נמצאת למעשה בנחלת אשר.</p>
+</div>
+
+<h3 data-a="01-166">השמטות</h3>
+
+<p data-a="01-167">הרב מנדלזון האמין, עוד לפני קום המדינה, שהקמתה היא "אתחלתא דגאולה". לאחר קום המדינה נהג לתת דרשות ביום העצמאות בכיכר המרכזית ולומר: "אילו זכינו... אילו זכינו... היתה כבר גאולה שלמה". מבין כל הקריות, קרית אתא היא החרדית מכולן.</p>
+
+<p data-a="01-168">המרא דאתרא הגר"ש שלוזינגר זצ"ל שמר על צביון העיר מכל משמר, ונלחם ללא חת נגד פגיעה בחומות הכשרות והצניעות. כיום ממשיך את דרכו בנו הרה"ג רבי טוביה, שמונה תחתיו על ידי רבני העיר ובראשם כ"ק גאב"ד מאקווא. בעיר פועלת הישיבה לצעירים בראשות הרה"ג צבי פוסטבסקי שליט"א, כולל הרב גפני, ובית הכנסת "חניכי הישיבות". בישיבת מאקווא פועל כולל גבוה להוראה, כולל "ישראל סבא" ובית מדרש מרכזי "ברכת משה", ואברכים רבים מוסרים שיעורים בדף היומי ברחבי העיר.</p>
+
+<p data-a="01-169">מוסדות החינוך מפותחים גם כן: ת"ת "תורה תמימה" של החינוך העצמאי, בניהולו של הרב יוסף רוטנברג; בית הספר "בית יעקב" בניהול הגב' קסטנר מחיפה; גני הילדים של אגו"י ואור חדש בניהול הרב חגי רבינסקי. בעיר גם שיכון סיגעט — ארבעה בניינים שהוקמו על ידי האדמו"ר מקרעטשניף ירושלים, ובהם מתגוררים רק חרדים, עם בית כנסת ומקווה צמוד. בעיר מציינים גם את מערכת הכשרות והעירוב המהודרים, ואת סיום הש"ס שנערך בהשתתפות הגאון הגדול רבי אהרון ליב שטינמן שליט"א.</p>
+
+<p data-a="01-170">קרית אתא היא עיר עם תשתית חרדית: אברך שיגיע לעיר יוכל למסור שיעורים באחד מתוך 120 בתי הכנסת שבה, ולקבל גיבוי מלא מרבני העיר, שיקלטו אותו בזרועות פתוחות.</p>
+
+
+<div class="chapter-transition">
+  <div class="ct-label">פרק שני</div>
+  <div class="ct-number">ב</div>
+  <div class="ct-title">רבנים</div>
+  <div class="ct-sub">חמישה מנהיגי רוח שהטביעו את חותמם על העיר, מייסודה ועד ימינו</div>
+</div>
+
+<div class="deco-divider"><div class="line"></div><div class="icon">✡</div><div class="line"></div></div>
+
+<div class="chapter-label">פרק ב׳</div>
+<h2 data-a="01-171" id="section2">רבנים</h2>
+
+<div class="chapter-intro">
+מקום מגורים משתנה, אך מנהיג רוחני מותיר בו חותם לדורות. קרית אתא זכתה בכל תקופותיה למרא דאתרא שהיה יותר מרב מקומי — היה זה אב לקהילה שלמה, שופט, מחנך, ולעיתים אף מגן פיזי על ציבור מבוהל. פרק זה עוקב אחר חמישה רבנים שכל אחד מהם הטביע את חותמו על העיר: הרב בנימין מנדלזון, מייסד רבנות המקום; העטרת משה, שהחזיר לעיר את זהותה החסידית; הרב יהודה גפן, שנספה במלוא מרצו; הרב שמואל שלוזינגר, שכיהן כמעט חמישים שנה; והרה"ק ר' שמעון למברגר, ממשיך השושלת בימינו.
+</div>
+
+<div class="in-chapter-box">
+<h4 data-a="01-172">📖 בפרק זה:</h4>
+<ul>
+<li data-a="01-173">הרב בנימין מנדלזון — רבה הראשון של כפר עטה</li>
+<li data-a="01-174">העטרת משה — קהילת מאקווא עוברת לכפר אתא</li>
+<li data-a="01-175">הרב יהודה גפן — תלמיד חכמי לובלין</li>
+<li data-a="01-176">הרב שמואל שלוזינגר — בית רב העיר</li>
+<li data-a="01-177">הרה"ק ר' שמעון למברגר שליט"א</li>
+</ul>
+</div>
+
+<h3 data-a="01-178">הרב בנימין מנדלזון</h3>
+
+<p data-a="01-179">רבה הראשון של כפר עטה היה <span class="emphasis">הרב בנימין מנדלסון זצ"ל</span> (תרס"ד – כ"ד באייר תשל"ט), חסיד גור וראש ישיבה במשך עשר שנים בעיר בודזאנוב. באותם ימים היה נסמך על שולחן חותנו העשיר, עד שגילה שרעייתו מתחמקת מלשבת עמו בארוחות — כי חותנו ירד מנכסיו, ורק לרבינו דאגו לארוחה טובה, ואילו הרבנית והוריה אכלו לחם צר. משנודע לו הדבר, החליט לקבל משרה רבנית שיוכל להתפרנס בעצמו. באותה עת התפנתה משרת דיינות בעיירה פלאצק, מקום שבו שימש אביו כראש ישיבה. הקהילה רצתה בו מאוד, וכשבוע לפני הבחירות היה כמעט מובטח שיזכה — אלא שאז הציע ראש הישיבה בפלאצק את מועמדותו שלו, ורבי בנימין, שלא רצה להציע עצמו כנגד רבו שלימדו תורה, ויתר. (לימים התברר שאותו ויתור היה הצלת חייו.)</p>
+
+<div class="story-box">
+לרב מנדלסון לא היו ילדים במשך כמה שנים. הוא ביקש ברכה מה'אמרי אמת'<sup class="fn"><a href="#fn19" id="fnr19">19</a></sup>, והאדמו"ר אמר לו שיעלה לארץ הקודש, שארץ ישראל היא סגולה לבנים<sup class="fn"><a href="#fn20" id="fnr20">20</a></sup>. את רישיון העלייה קיבל מתוך מכסה מיוחדת של אגודת ישראל, בהוראה מפורשת של ה'אמרי אמת': "הוא בעל השפעה, נשמה יקרה ומרוממת, ונוכחותו בארץ ישראל תהיה לברכה ולתועלת". בתמוז תרצ"ד עלה מפולין לארץ ישראל, ובאמת בשנת תרצ"ח נולד לו בנו בכורו, הרב מנחם מנדל מנדלזון, לימים רב מושב קוממיות ונשיא קרן השביעית.
+</div>
+
+<p data-a="01-180">אחד מתושבי הכפר זכר את הרב מנדלסון מהישיבה, והציע למנותו לרב העיר. ההצעה התקבלה, והוא מונה לרב היישוב בט"ו באב תרצ"ד, וכיהן שם שמונה עשרה שנה. הרב מנדלסון סבר שיש קדושה מיוחדת במקום זה, הסמוך לאושא — מקום מושב הסנהדרין. כשהגיע לכפר עטה, היה כל הכפר מרוכז בכמה צריפים על הגבעה ליד בית הכנסת, שהיה שריד בית תפילה מוסלמי נטוש — הבניין היחיד מאבן בכל הכפר. סמוך לו עמד צריף המקווה, ולידו בית השחיטה לעופות. ממול עמד בית הרב — צריף עץ שבו גר עם אשתו וילדיו הקטנים, ומולו צריף החדר. הרב היה חרד לדבר ה' מאוד, ענה לשאלות מכל רחבי הארץ, וביתו שימש גם בית דין לכל הענינים, לרבות גיטין וחליצה.</p>
+
+<div class="story-box">
+את המקווה הקיים עד היום ברחוב המיסדים הקים הרב מנדלסון מיד עם בואו לכהן בכפר עטה — עד אז היו נוסעים לטבול בחיפה או בכפר חסידים, בעגלה רתומה או אף ברכיבה על חמור, מרחק של ארבעה ק"מ<sup class="fn"><a href="#fn21" id="fnr21">21</a></sup>. מספר האדמו"ר ממאקווא: כאשר הגיעו יהודים פליטי שואה לכפר אתא, פגשו את הרב מנדלסון סוחב עצים ברחובה של עיר כדי לחמם את המקווה — ומסירות זו לאידישקייט השפיעה עליהם מאוד להישאר יהודים תורניים.<br><br>
+כשגמרו לבנות את המקווה, חסרו במקום דלת וחלון. פנו לר' נפתלי שוורץ, נגר במקצועו, שיתרום למקום דלת וחלון, ובעזרת ה' בזכות זה יזכה לילדים — שכן חיכה שנים רבות. ר' נפתלי בנה את הדלת והחלון, וזכה לשני בנים יקרים שפארו את כפר אתא. שנים אחר כך היה אומר: חבל שלא ביקשו ממנו לבנות עוד משהו למקווה — אז היה זוכה לבן שלישי.
+</div>
+
+<p data-a="01-181">גדולי ישראל העריכו את הרב מנדלסון מאוד. כששאל האדמו"ר מקרעטשניף את האדמו"ר מבעלזא היכן לגור, אמר לו: לך לכפר אתא, שם יש "פטרצייטישער רב" (רב של פעם) — כמו לפני מאתיים שנה. מספר ר' חסידה: כשנודע בסביבה על השחיטה המהודרת בהשגחת הרב מנדלזון, באו קצבים מהסביבה לקנות בשר חלק. כשנודע הדבר לראשי היהדות החרדית בחיפה, בא הרב אברהם יצחק קליין לכפר אתא, נכח בשחיטה ובדק את הסכינים — ומאז מכרו בחיפה בשר חלק מכפר אתא.</p>
+
+<h4 data-a="01-182">"מאשפות ירים אביון"</h4>
+
+<p data-a="01-183">בתקופת נשיאותו, כאשר רבים מניצולי המלחמה התיישבו בעיר עם עלייתם ארצה, קיבלם הרב בזרועות פתוחות, ויגע רבות עבורם שיזכו להקים בתים חדשים — הכניס לחופה כשישים עד שבעים משפחות מהם, דאג לשידוכים הגונים ועמל להשיאם בכבוד. רבים מהם היו שבורים בגופם ורצוצים בנפשם ולא רצו לחשוב על הקמת בית חדש, אך הרב חיזק את רוחם וסייע להם להתנער מתוך האפר ולהקים דורות חדשים. הוא לא רק חיתן אותם — הוא גידל אותם ממש. אותם יהודים הקימו בהמשך דורות ישרים, וצאצאיהם כיום נמנים על המשפחות החשובות ביהדות החרדית.</p>
+
+<div class="story-box">
+צריפו של הגר"ב התחלק לחדרים מספר, קירותיו מקושטים בשורות ספרים. שולחן בית מדרש ארוך, עם ספסלי עץ כבדים, ולידו הרב יושב בראש, אור פניו קורן תמיד. שם התקיימו דיני תורה ושיעורי תורה בנגלה, בהוראה ובחסידות, ובשבת וביום טוב נהפך השולחן לשולחן הסעודה. שם ערכו זקני החסידים בכל מוצאי שבת קודש את סעודת "מלווה מלכה", לרוב בהשתתפות הרב עצמו — ר' משה טאוב, תלמיד חכם ישיש, מספר עובדות מצדיקים, הגר"ב מאזין, ולבסוף מפטיר בדברי תורה וחסידות ובדברי חיזוק בשבחה של ארץ ישראל (מתוך 'מרביצי תורה בעולם החסידות', אהרן סורסקי).
+</div>
+
+<h4 data-a="01-184">על משמרת הקודש</h4>
+
+<div class="story-box">
+בחודש ניסן תש"ח קרה דבר מצער: בין פעילי ומפקדי ההגנה בכפר אתא היה מפקד לא־יהודי מכת ה"סובוטניקים" (שומרי שבת שאינם יהודים), וכשנהרג באחת הפעולות, רצו פעילי ההגנה להביאו לקבורה בבית העלמין היהודי. אנשי החברא־קדישא נדרשו, באיומי רובים, לקבור את הגוי בבית העלמין. אולם הרב התנגד: "אני מוכן להספיד אותו ולהרעיף עליו הילת גבורה, אך לא להביאו לקבר ישראל". אנשי הח"ק החזיקו מעמד במסירות נפש. משראה המפקד שרבינו מתעקש, קרא לכיתת חייליו, הורה להם להקיף את צריפו ברובים שלופים, והודיע כי אם רבינו לא ישנה דעתו — חייו בסכנה.<br><br>
+לימים שאלו את המפקד, יוחאי בן־נון בעל עיטור "גיבור ישראל", מדוע לא קברו את החייל בעצמם. השיב: "אני לעולם לא אחלל בית קברות יהודי. אני לא רוצה שעל המצבה שלי יהיה כתוב שאני הייתי זה שחיללתי בית קברות יהודי. רציתי שהרב יתיר, כי אם הרב יתיר אז לא חיללתי". בכל אותן שעות מאוימות ישב רבינו ולמד בצריפו. הרבנית הבריחה את הילדים לשכנים, וכשפקעה סבלנות החיילים, החלו לזרוק אבנים גדולות לתוך הצריף — אחת מהן נחתה במרכז המיטה שבה היתה אמורה להיות בתו הקטנה, שנמלטה בעוד מועד. בסופו של דבר נכנס לעובי הקורה ר' משה יהודה גליד, ממבכירי ההגנה באזור, ושכנע את הלוחמים שאין סיכוי לשנות את דעת הרב — ושמוטב שיזהרו מגחלתו. גם לאחר קבורת החייל ליד הגדר המשיכו האבנים, עד שכמה חיילים דתיים מהמחלקה שהרב היה רבם הודיעו: אם זה לא ייפסק מיד, בעד כל אבן ישלמו "בריסוק איברים" — והטרור חדל (מהספר 'נזר הקודש').
+</div>
+
+<h4 data-a="01-185">עזיבת הכפר</h4>
+
+<p data-a="01-186">לקראת שנת השמיטה תשי"ב פנו בני מושב קוממיות לחזון איש שיעזור להם למצוא רב, והחזון איש הפנה אותם לרב מנדלסון. הרב, שסבל מאוד מהמצב הרוחני שהחל להתערער בכפר אתא, הסכים לעבור למקום שבו התנהגו כולו על פי רצון ה'<sup class="fn"><a href="#fn22" id="fnr22">22</a></sup>. עזיבתו לא היתה פשוטה כלל וכלל — קשה היתה לרבים רבים מהתושבים שהיו קשורים אליו בכל לב ונפש<sup class="fn"><a href="#fn23" id="fnr23">23</a></sup>. בעת הפרידה בכו כולם בדמעות שליש, עד כדי כך שהיו אנשים שנשכבו למרגלות הרכב כדי שלא יוכל לנסוע<sup class="fn"><a href="#fn24" id="fnr24">24</a></sup>. ר' דוד שאול ברסלבר זצ"ל סיפר שכשעמד לנסוע יחד עם משלחת תושבים אל מרן מבעלזא לבקשו שהרב לא יעזוב, פנה אליו הרב וביקש בתחנונים: "ר' דוד שאול, אנא רחמו עלי ואל תעשו לי את זה, הרי אתם יודעים שהמקום בכפר אתא כבר לא בשבילי".</p>
+
+<p data-a="01-187">כאשר עזב, עברו עמו עוד משפחות רבות — יותר ממניין — שהיו כרוכים אחריו<sup class="fn"><a href="#fn25" id="fnr25">25</a></sup>. החזו"א התפעל מאוד שיהודים עוזבים את מקומם ומקום עבודתם כדי להמשיך להיות ליד הרב, אף שלא הסכים שיש בכך חיוב הלכתי<sup class="fn"><a href="#fn26" id="fnr26">26</a></sup>.</p>
+
+<div class="two-columns">
+<div class="col-purple">
+<h4 data-a="01-188">לעבור למקום תורני נפרד</h4>
+<p data-a="01-189" style="margin-bottom:0;">טעמו של החזון איש לרב מנדלסון: במצב היהדות של אז, חשוב קיומו של מקום ישוב הנושא צביון תורני מלא. יש עדיפות לחזק ישוב שיכריז ויתקיים כולו תחת שלטון התורה, על פני חיזוק כמות מספרית של שומרי תורה במקום מעורב עם חילונים (נזר הקודש, שכ"ה).</p>
+</div>
+<div class="col-gold">
+<h4 data-a="01-190">להישאר במקום מעורב</h4>
+<p data-a="01-191" style="margin-bottom:0;">הרבה מגדולי ישראל אחזו שצריך להמשיך לגור במקום חילוני, ובמיוחד בקרית אתא — שכן מצד מצוות ישוב הארץ יש חיוב לבנות ולחזק עוד מקום קדושה, "הרחיבי מקום אהלך", ולקרב את כלל אחינו בית ישראל, שהמגורים לצדם משפיעים עליהם להחזירם בתשובה<sup class="fn"><a href="#fn27" id="fnr27">27</a></sup>.</p>
+</div>
+</div>
+
+<p data-a="01-192">עזיבת הרב את כפר אתא היתה רעידת אדמה בעיר למשך דורות: קרוב למאתיים משפחות מהחדרים לדבר ה' עקרו את דירתן בתקופה ההיא — כמאה ושלושים משפחות לבני ברק, כחמישים לירושלים ולערים אחרות, ועוד כעשרים לקוממיות. במשך כחמישים שנה מאז נהגו רוב הצעירים שהתחתנו לעזוב את העיר, ורק כעבור כחמישים שנה החלה להיבנות לאט־לאט קהילה חדשה של צעירים הבאים לגור בעיר בקביעות.</p>
+
+<div class="story-box">
+בספר 'מעשה איש' (ח"ג עמ' צט) מסופר: קבוצת עולים חדשים שהתיישבה בכפר אתא לאחר השואה הגיעה לבני ברק לחג השבועות, לחזות בגדולת החזון איש. מרוב התרגשות פרצו בבכי. אחד הנוכחים שאל: למה לא לעשות כאן בארץ קהילות נפרדות כמו בהונגריה, שהקנאים היה להם רבנות משל עצמם, והדבר הציל את היהדות? השיב רבינו: "היום אין זה הזמן לעשות קהילות נפרדות. אנחנו צריכים לקרב, להוציא יקר מזולל — אם נעשה בכפר אתא קהילה נפרדת, ישנם יהודים שלא יסכימו ללכת אליה ואדרבה יתרחקו. ובימים כתיקונם, כשעם ישראל היה כתיקונו והרפורמים באו לקלקל, אז היו צריכים קהילה נפרדת. לא כן היום, שרויים אנו במצב של שבורים ורצוצים, וצריך ללקט נשברים, לקרב עוד יהודי לתורה ומצוות, עוד ילד לחדר ולישיבה — ועל ידי קהילות נפרדות נרחיק את אלו מהתורה, ואנחנו רוצים לקרב גם אותם".
+</div>
+
+<h4 data-a="01-193">סיפורים</h4>
+
+<div class="story-box">
+<strong>הפרשת תרומות ומעשרות:</strong> כדי לחזק את הקדושה ואהבת המצוות התלויות בארץ בלב אנשי הכפר ובמיוחד בלב הילדים, לא שלח הרב שליח פשוט להפריש את התרומות והמעשרות, אלא הפריש אותם בעצמו — הלך מגורן לגורן וממשק למשק, באופן חגיגי וברוב פאר והדר. היה מקהיל את הציבור ודורש בפניו על המצווה היקרה שיהודי הגולה לא זכו לקיימה אלפיים שנה. ואחר כך היה אוכל ושותה עם הציבור ומשמיע תהילה לבורא עולם. אף את הילדים היה מביא למצווה זו, ואומר להם: כשבית המקדש היה קיים היו עולים לרגל ומביאים את המעשרות כדי שיראו את בית המקדש וילמדו לירא מה'. מכאן שראייה מביאה לידי יראה — הביטו בילדים היקרים על המעשרות שציווה עלינו הקב"ה, ותלמדו לירא ממנו (מתוך עיתון 'דרכנו', ה' שבט תרצ"ה).
+</div>
+
+<div class="story-box">
+<strong>מצווה ראשונה:</strong> מספר הרה"ג ר' מנחם מנדל מנדלזון זצ"ל: יום הכניסי למצוות חל בעיצומו של שבת קודש. התכוננתי למצוות קריאת שמע, מצוותי הראשונה מדאורייתא, והחלטתי לאומרה מתוך הסידור בדקדוק. אבי זצ"ל הורה לי: "תתפלל ערבית בעל פה, ולא מתוך הסידור!" כששאלתי מדוע, השיב: הרי זו המצווה הראשונה שלך מדאורייתא, ובבית הכנסת כאן משתמשים בחשמל בשבת (בבית אבי לא השתמשו), ומאחר שהחזון איש שולל שימוש באור חשמל בשבת, לא רציתי שהמצווה הראשונה שלך תיעשה שלא בשלמותה — שאם היית מתפלל מתוך הסידור היית נהנה מאור החשמל.
+</div>
+
+<div class="story-box">
+<strong>עירוב:</strong> סיפר רבי יעקב אדלשטיין (רבה של רמת השרון) ששמע מהחזו"א, שההנהגה שלא לטלטל ולסמוך על עירוב אינה חומרא אלא עיקר הדין, כי קשה מאוד לסדר עירוב כדבעי. וכשהרב מנדלסון הוציא 400 לירות (סכום גדול בימים ההם) על עירוב, ועדיין לא ידע אם זה טוב — המשיל החזו"א משל על עמוד החשמל היקר, שרק אם היו מסדרים את העירוב באותה רמת דיוק ניתן היה לסמוך עליו. ובכל זאת זירז החזון איש לעשות עירוב, ושאלוהו הרי לא סומך עליו — ואמר: אכן לא לסמוך, אבל בכל זאת עירוב צריך שיהיה.
+</div>
+
+<div class="story-box">
+<strong>ויראו ממך:</strong> סיפר ר' נתן פריד לחזון איש שנוכח בדין תורה אצל הרב מנדלזון עם צד ערבי, וכשנכנס הערבי לדיון, החל ממש לרעוד מפחד. תמה ר' נתן על כך, שהרי הערבי רגיל להימצא עם יהודים. אמר לו החזון איש: אינך יודע למה? הרי כתוב "וְרָאוּ כָּל עַמֵּי הָאָרֶץ כִּי שֵׁם ה' נִקְרָא עָלֶיךָ וְיָרְאוּ מִמֶּךָּ" — הוא נכנס לדיון, ראה את הרב, וקיבל מורא (מעשה איש ח"ג עמ' קי"ד).
+</div>
+
+<div class="story-box">
+<strong>לאמץ לבבות נשברים:</strong> סיפר דוד ישעיה שייקביץ ז"ל, סגן ראש המועצה מטעם פא"י: בשעת מלחמת השחרור, כשהיה סכנת נפשות לנוע בדרכים, ביקש ממנו הרב לסדר לו טנק צבאי כדי לנסוע למחנה הצבאי הסמוך "לדבר שם דברי חיזוק". ר' דוד סידר את הרכב והתלווה אליו — ולתדהמתו, כל הנסיעה הממוקדת נועדה לחייל בודד בלבד. תמה: וכי בשביל אדם אחד היה צריך הרב לטרוח את כל הטורח הזה? ענה הרב: "היהודי הזה הוא ניצול שואה מפולין, זה עתה חזר מחמש שנים איומות, שבור ורצוץ בגופו ובנפשו, ועוד לא הספיק לנשום לרווחה בארץ ישראל, וכבר נשלח שוב ללחום ולסכן את חייו. לכן נסעתי במיוחד אליו לחזק ולאמץ את לבבו שלא ייפול לייאוש". כששאלוהו לימים מה עמד מאחורי מסירותו הנפלאה עבור כל דיבור של הרב, ענה ר' דוד: "וכי לזו אתה קורא מסירות נפש? זה היה פשוט 'א מחיה' ותענוג להימצא במחיצתו. כאשר הפעולה שהטיל עלי הצליחה, היה הרב מכריז עלי בבית הכנסת לעיני כל — 'דוד ישעיה עשה כך וכך בהצלחה מרובה!' אך כשלא הצליחה, היה דופק על הבימה ואומר: 'דוד ישעיה אינו אשם בכלום, אני הוא זה שיעצתי לו, האשמה תלויה רק בי'" (עיתון המבשר, כ"א חשון תשע"ח).
+</div>
+
+<div class="story-box">
+<strong>ברכותיו:</strong> מספר גאב"ד מאקווא: הרב היה איש אלוקים קדוש, כל ברכותיו עשו פרי, ובזכותו הגן על סביבתו כולה. לפני מלחמת השחרור בתש"ח, כשנקראו מאות תושבי כפר אתא להתגייס, באו כולם להיפרד מהרב ולקבל את ברכתו לשמירה — והדבר היה לפלא: כל אלו שקיבלו את ברכתו הקדושה חזרו מהמלחמה בשלום (עיתון המבשר, כ"א חשון תשע"ח).
+</div>
+
+<p data-a="01-194">לעניין יראת שמים מספר ר' חסידה: הביאו פעם פר גדול, ובעת השחיטה חשתי שפגעתי בו במפרקת. נתתי את הסכין לבדיקת הרב, שלא מצא פגם והרשה לשחוט שוב, אך ביודעי שלא ייתכן שלא נותר רושם, ביקשתי בדיקה נוספת — והרב אכן מצא רושם. מאז הנהיג שלא לסמוך על עצמו בלבד בבדיקת הסכין, ולעיתים ישבו עד אחר חצות הלילה לברר הלכה כדי להכשיר בהמה, ואף שלח לחזון איש בבני ברק או לרבי שמעון אהרן פולנסקי בירושלים. הרב גם קבע שרק בבית כנסת שבו עורכים סעודת יארצייט לכבוד ההילולא ידלגו על אמירת תחנון — ועד היום כך המנהג במאקווא.</p>
+
+<h3 data-a="01-195">העטרת משה</h3>
+
+<div class="highlight-box">
+<h4 data-a="01-196" style="margin-top:0;">העיר מאקו בחו"ל</h4>
+<p data-a="01-197" style="margin-bottom:0;">העיר מאקו (ביידיש: מאַקאָוו) היא עיר בדרום מזרח הונגריה, במרחק 20 ק"מ מגבול רומניה. יהודים החלו להתיישב בה במאה ה־18, וב־1740 הוקצה למגוריהם רובע מיוחד. בשנת 1900 מנתה הקהילה 1,642 יהודים, ובימי זוהרה נמנו בה אלפים שניהלו חיים יהודיים תוססים, עד שכינוה "ירושלים של הונגריה".</p>
+</div>
+
+<p data-a="01-198">רבי משה פארהאנד<sup class="fn"><a href="#fn28" id="fnr28">28</a></sup> הגיע למאקאווא לכהן כאב"ד בפרשת וירא תרע"ד, וחיבר את הספר 'אוהל משה'. את הישיבה במקום ניהל חתנו ר' אפרים רונפלד זצ"ל. בשנת תרצ"ו נשא רבי משה נתן נטע למברגר זצ"ל<sup class="fn"><a href="#fn29" id="fnr29">29</a></sup> את בתו של ר' אפרים, נכדתו של רבי משה פארהאנד, ומאז הוכתר כדיין הקהילה וכיד ימין הרב. בי"ז בסיוון תש"ד, בעיצומם של ימי השואה, נפטר הרב פארהאנד, ועל פי צוואתו נתמנה הרב למברגר ליורשו — שבוע בדיוק לפני שגורשו יהודי מאקאווא לגטו סגד. הרב למברגר ניהל את הקהילה גם במחנות ברגן־בלזן וטרזיינשטט, ובחסדי ה' ניצל חלק נכבד ממנה. עד תחילת תקופת הקומוניזם עלו רוב בני הקהילה לארץ ישראל או היגרו לארה"ב, ואף הוא עלה לירושלים בשנת תשי"ב.</p>
+
+<h4 data-a="01-199">כיצד הגיע האדמו"ר ממאקווא לכפר אתא?</h4>
+
+<p data-a="01-200">בשנת תשי"ב בערך היו בני הקהילה החרדית בכפר אתא יראים ושלמים, רובם עמלים בפרנסתם במפעלי תעשייה באזור חיפה, וחייהם התרכזו סביב בית המדרש, ששמעו בו תורה מפי הגה"צ רבי בנימין מנדלסון. אמנם במרחק מועט התפשטו הקריות, שבהן היה סימן קלוש לחיים יהודיים, והשבת נתחללה בפרהסיא. שומרי האמונים בכפר אתא ראו עצמם כמובלעת חרדית מנותקת מהסביבה החילונית, וכינו את מקומם — "בני ברק אשר בצפון"<sup class="fn"><a href="#fn30" id="fnr30">30</a></sup>. בבחירות תש"ט קיבלה מפלגת החזית הדתית יותר קולות בכפר אתא מאשר בבני ברק עצמה!</p>
+
+<p data-a="01-201">היהודים הישרים לא השלימו עם החלטת רבם, הרב מנדלסון, לעקור למושב קוממיות, אולם הבטיח להם שלא יעזוב עד שישיג רב שימלא את מקומו. וכך, לרצונו<sup class="fn"><a href="#fn31" id="fnr31">31</a></sup>, עלה לתפקיד הגה"צ רבי משה נתן נטע לעמבערגר, ששימש קרוב לשבע עשרה שנה כרבה של מאקאווא — וכיהן בקרית אתא במשך שלושים שנה, כחבר הרבנות וממונה על המקוואות, הכשרות (מהדרין) והחברא קדישא. תחילה דחה הרב ממאקאווא את ההצעה, שכן חפץ להמשיך ולהסתופף בד' אמות של הלכה, אולם חזקו עליו דבריהם של גדולי הדור, ובייחוד השפעתו של כ"ק האדמו"ר מהר"א מבעלזא. וכך, בל"ג בעומר תשי"ב, הגיע האדמו"ר לכהן כרב בקרית אתא.</p>
+
+<div class="quote-box">
+מרגלא בפומיה תדיר, שהוא מודה ומשבח לבורא כל עולמים שהושיבו "בקרן זווית", הרחק ממרכזי היהדות החרדית — וממילא אינו מעורב בכל המחלוקות הצצות ועולות מדי פעם. מאוד דאבה נפשו על פירוד הלבבות בין החרדים, והיה זועק שלו היו מתקנים דבר זה, בפתע היה בא האדון אל היכלו — וזה הגורם העיקרי לעיכוב הגאולה. לפיכך ניצב כחומה בצורה שלא להכניס לקרית אתא שום מודעות ואסיפות מעוררות מחלוקת, וקירב את כל העדות והחוגים, למען יחיו באהבה ואחווה ושלום.
+</div>
+
+<h3 data-a="01-202">הרב יהודה גפן</h3>
+
+<p data-a="01-203">נולד בשנת תר"ע, למד בישיבת חכמי לובלין אצל ר' מאיר שפירא זצ"ל, ונמנה על חשובי תלמידיו. הרב גפן העלה על הכתב את שיעורי רבו וכן חלק מדרשותיו ומאמריו באגדה, ובכל שנות נדודיו עם פרוץ המלחמה — בפולין, ברוסיה, בסיביר ובגרמניה — נשא עמו את הכתבים לכל מקום גלותו ושמר עליהם כבבת עינו, ואף הוסיף לכתוב ולערוך מן הזיכרון עוד דרשות ומאמרים ששמע מרבו<sup class="fn"><a href="#fn32" id="fnr32">32</a></sup>.</p>
+
+<p data-a="01-204">בשנת תרצ"ו נהיה רב עיר בעירה ליפסק שבפולין. בשואה נמלט לרוסיה, ומשם הוגלה לסיביר, ושם מסר נפשו על קיום התורה והמצוות. בשנת תש"ט עלה לארץ והתגורר בחליסה שבחיפה, שם הקים יחד עם האדמו"ר מויז'ניץ את ישיבת "יח"ל ישראל" — בהמשך לישיבת "בית ישראל" שברומניה ולישיבת חכמי לובלין — וכיהן בה כראש הישיבה. בשנת תשי"ג נערכו בחירות לרבנות קרית אתא, ובין שלושת המועמדים היו העטרת משה והרב גפן; העטרת משה הסיר את מועמדותו לטובתו, מחשש שייבחר מועמד שלישי, פחות מקובל על הציבור. וכך, בר"ח אדר תשי"ג, עבר הרב גפן לכהן כרבה של קרית אתא, ופעל רבות לחיזוק התורה והחינוך — עד שהתמסר להקמת בניין תלמוד תורה חדש הנושא את שמו: "בית יהודה".</p>
+
+<div class="story-box">
+רבי יהודה לייב לא זכה לראות בהשלמת מפעלו. בכ"ו בשבט תשי"ז, בעת שהשתתף בכנס רבנים ועסקנים למען העולים יוצאי הונגריה, נשא את נאומו החוצב על עדיפותה של ארץ ישראל וקרא לכל יהודי שומר תורה לעלות אליה. לא הספיק לדבר אלא חמש דקות, ובאמצע שהזכיר את דברי רבו מהר"ם מלובלין, צנח תחתיו והשיב נשמתו ליוצרו — צעיר לימים, בן ארבעים ושבע בלבד, <em>כמניין שנותיו של רבו המובהק</em> מהר"ם שפירא זצ"ל, שאף הוא נפטר באמצע הכנות לעלייה לארץ ישראל. מנוחתו כבוד בבית העלמין הישן בקרית אתא, בחלקה שבה קבורים רבים מוותיקי כפר אתא.
+</div>
+
+<h3 data-a="01-205">בית רב העיר — הרב שמואל שלוזינגר זצ"ל</h3>
+
+<p data-a="01-206">שמואל נולד בתרצ"ה. בתש"ח החל ללמוד בישיבת תפארת ישראל בחיפה, וכשסיים ביקש לעבור לפוניבז', אך במחסור החמור בישיבות גדולות באותם ימים נקבע שרק בחור שיורו לו ראשי הישיבה ללכת יוכל להתקבל — והוא לא קיבל אישור. הוא לא ויתר: הגיע עם אביו לישיבה וביקש להתקבל, ללא הצלחה. באיסרו חג פסח תשי"א נסע לישיבה, קיבל מזרון מחבר, וישן במסדרון בלי מזון מהישיבה — כך העביר את כל הקיץ ואלול, עד שבחורף תשי"ב הודיע לו הרב דוד פוברסקי שהתקבל. בישיבה למד בין היתר אצל הרב אליהו אליעזר דסלר, שבו ראה את רבו המובהק, ואצל הרב יחזקאל לוינשטיין.</p>
+
+<p data-a="01-207">בתשי"ז נפטר רבה של כפר אתא הרב יהודה ליב גפן. עסקני המקום הכריזו שמי שיזכה להינשא לבתו, מלכה, ימלא את מקומו. בניסן אותה שנה התארס שמואל עם מלכה, והחל לכהן כרב המקום בהיותו בן עשרים ושתיים בלבד, בהמלצת הרב מטשעבין. בחתונתם הגיע הרב מפוניבז' לסדר את הקידושין, ומרן הרב שך זצ"ל היה נוכח; לראשו חבש שטריימל בשבת, לבקשת בני הקהילה.</p>
+
+<div class="story-box">
+בשנת תשכ"ז הקים כולל אברכים שמומן ברובו מכיסו הפרטי, ובעת מצוקה אף מכר מגרש בכרמל שקיבל מדודתו כדי לשלם משכורות. בפנקסי הקבלות הישנים, על סכומים של אלפי שקלים, מופיע שם הנדיב תמיד באותה מילה: "בעילום שם" — הלא הוא הרב עצמו. לפעמים היה רץ לדואר להוציא את קצבתו מהביטוח הלאומי ורץ לכולל לחלק משכורות. בתשכ"ח בא אליו העסקן ר' שלמה לורנץ והתחנן שיעבור לבני ברק, עם הבטחת רבנות רמת אהרן. הרב סירב: "כפר אתא היא אדמה קדושה שנרכשה על ידי יהודים יראים ושלמים מחברת עבודת ישראל שהוקמה בוורשא. יש לי פיקדון אותו קיבלתי מרבו הראשון של הישוב, ואיני יכול לעזוב את הפיקדון הזה".
+</div>
+
+<div class="story-box">
+מספר הרה"ג ר' משה חיים שניידר שליט"א: בתקופה ההיא ערכו אנשי הימין חנוכת אנדרטה בכפר אתא, אליה הוזמן ראש הממשלה דאז מר מנחם בגין, ואף הגר"ש שולזינגר נאלץ להשתתף מתוקף תפקידו. הרב, שהיה ידוע בזכרונו הפנומנלי, פנה אל בגין והזכיר לו זיכרונות מבית אבא ומהתלמוד תורה שלמד בו בעיירה ברוסיה. בגין ההמום שכח לרגעים היכן הוא נמצא, אחז בזרוע הרב וטייל אתו סביב הבמה למעלה מחצי שעה, כשכל הקהל ממתין. בגין הושפע עמוקות, ולמחרת בכנסת הכריז מעל הדוכן: "אתמול הייתי בכפר אתא ופגשתי שם רב צעיר ואינטליגנטי, אני שמח לראות שלא אלמן ישראל" (מתוך כתבה בהמבשר).
+</div>
+
+<p data-a="01-208">בתשל"ג הקים את תלמוד התורה "תורה תמימה", ושימש כנשיא הישיבה לצעירים המקומית שנוסדה ב־1990. הרב שמואל שלוזינגר זצ"ל היה רב העיר בין השנים תשי"ז–תשס"ד. כשהקים כאמור את כולל האברכים הראשון, פנה לר' אליהו רוטנברג שליט"א שיעזור בעול ההחזקה; ר' אלי, יחד עם ר' מאיר שפריר ז"ל, הלכו בין אנשי הקהילה והחתימו אותם על הוראות קבע, וכעבור כשבועיים כבר עמד לכולל משענת יציבה. כולל זה, הוותיק ביותר בעיר, קיים עד היום — במשך שנים רבות היה הכולל היחיד באזור, שבו למדו יחד אברכים ספרדים, אשכנזים וחסידים.</p>
+
+<h3 data-a="01-209">הרה"ק ר' שמעון למברגר שליט"א</h3>
+
+<div class="quote-box">
+מדי שבת בשבתו סמוכים על שולחנו של ה"מאקאווער־רב" שליט"א עשרות בחורים מכל הישיבות, החפצים למצוא מזון לנפשם הרעבה ולהתעלות במסילה העולה בית א־ל. השבתות בקרית אתא ידועות לתהילה, ספוגות בניחוחה של חסידות מטעמה העתיק־יומין. חסידים רבים המציינים בערגה את "א פארצייטישע שבתים" בצל הקודש. כל שעות היום מלאים משיעורי תורה וחסידות: קודם סעודת ליל שבת עוברים על פירושי ה'רבנו בחיי' על הפרשה, בצפרא דשבתא לפנות בוקר מעורר השחר יחד עם בני הקהילה, בשיעורים בלמעלה מעשרה ספרי הלכה וחסידות, ובסעודת רעווא דרעווין מתעלים לפסגות רוחניות — "ההרגשה כאילו ניצבים באחד מפרברי פולין הוותיקים".
+<span class="source-tag">המודיע, ה' סיון תשע"ה</span>
+</div>
+
+
+<div class="chapter-transition">
+  <div class="ct-label">פרק שלישי</div>
+  <div class="ct-number">ג</div>
+  <div class="ct-title">דמויות הוד — מייסדים וראשונים</div>
+  <div class="ct-sub">האברכים והמשפחות שהגיעו ראשונים לכפר הנטוש, והפכו אותו לעיר של תורה</div>
+</div>
+
+<div class="deco-divider"><div class="line"></div><div class="icon">✡</div><div class="line"></div></div>
+
+<div class="chapter-label">פרק ג׳</div>
+<h2 data-a="01-210" id="section3">דמויות הוד — מייסדים וראשונים</h2>
+
+<div class="chapter-intro">
+עיר אינה נבנית רק מרבנים ומבתי כנסת — היא נבנית מאנשים פשוטים שהחליטו יום אחד להישאר. פרק זה, הראשון מתוך שניים המוקדשים ל"דמויות הוד" של כפר אתא, מוקדש לגרעין הראשונים: איכרים, שוחטים, מלמדים ובעלי עסקים זעירים, שלכל אחד מהם היה חלק בבניית התשתית הרוחנית של המקום. חלקם מוכרים כבר מפרקי המבוא — כאן נכיר אותם לעומק.
+</div>
+
+<div class="in-chapter-box">
+<h4 data-a="01-211">📖 בפרק זה:</h4>
+<ul>
+<li data-a="01-212">ר' משה מרדכי בוים — האיכר הראשון</li>
+<li data-a="01-213">ר' נחום אברהם ספרא — השוחט מפרנקפורט</li>
+<li data-a="01-214">ר' משה טאוב — "הצדיק מכפר אתא"</li>
+<li data-a="01-215">הרב שלום אליעזר ברוין — נס ההצלה בסאטמר</li>
+<li data-a="01-216">הרב אריה יהודה פלדמן — המחנך שלא נשכח</li>
+</ul>
+</div>
+
+<h3 data-a="01-217">ר' משה מרדכי בוים</h3>
+
+<p data-a="01-218">ר' משה מרדכי בוים, מגרעין המתיישבים החקלאים הראשונים בכפר עטה, פגשנו כבר במבוא לחוברת זו — האיכר שהגיע מסטאשוב שבמחוז קיילצה בעקבות דרשותיו הנלהבות של רב עירו על יישוב הארץ, והפך, בניגוד לרוב בני עירו, לעובד אדמה של ממש. מספר יהושע איבשיץ: "אני זוכר היטב את הרה"ח ר' משה מרדכי בוים ז"ל... כה רבה היתה תשוקתו ליישב את הארץ ולהפריח את אדמתה, שהצליח להנחיל אותה גם לבניו ולנכדיו. כל ימי היותי תושב קרית אתא, משפחת בוים עסקה בענף החקלאות; גם הרפת שלהם היתה, לפי זיכרוני, הרפת האחרונה בקרית אתא".</p>
+
+<div class="story-box">
+כשנשאל על תקופתו הראשונה בכפר, סיפר כיצד הגיעו — עשרת האברכים הצעירים הראשונים — אחרי שמונה עשרה יום של טלטולים וסערות ים על "טרנטה" של אונייה רומנית עתיקה, לכפר נידח זה בשלהי קיץ תרפ"ה, שנת הקמתו. התנאים היו עלובים ביותר, אפילו לפי המושגים הפרימיטיביים של מזרח אירופה: מים היו הערבים מביאים על גבי חמוריהם ומוכרים במשורה, ולחם היו הנשים אופות פעם בשבוע בטאבונים ערביים. "הערבים הרשעים לא שכחו אף פעם שהם חייבים לקיים את המצווה היחידה שלהם — הלכה..." כך נקטע תיאורו, כפי שנשמר במקורות שבפנינו, אך גם השבר הזה מספר את מה שהיה ברור לכל בני הדור ההוא: החיים כאן נבנו יום־יום, מתוך מסירות שאין לתארה במילים.
+</div>
+
+<h3 data-a="01-219">ר' נחום אברהם ספרא</h3>
+
+<p data-a="01-220">אחד מפארי התושבים בכפר אתא, תלמיד חכם עצום, היה הגאון רבי נחום אברהם ספרא זצ"ל. בחוץ לארץ היה חסיד קאפוסט<sup class="fn"><a href="#fn33" id="fnr33">33</a></sup>, ושימש שוחט ובודק בק"ק פרנקפורט במשך שנים רבות. בכפר אתא היה מגיע להתוועדויות י"ט כסלו שארגן ר' שלמה קופצ'יק, וכשקרא את המאמר השני היה זה בקולות וברקים, כל פניו אש להבה.</p>
+
+<p data-a="01-221">בתקופת הרב מנדלזון נחשב הגרנ"א ספרא לדמות המשפיעה ביותר בכפר אחרי המרא דאתרא עצמו — בכל פעם שהרב מנדלזון נעדר, היה מורה לתושבים לפנות אליו עם שאלותיהם. גם מרן ה'בית ישראל' העריכו ביותר, ובביקוריו הקיציים בחיפה תמיד ביקר בביתו. בשנת תשט"ו, כשביקר ה'בית ישראל' בכפר אתא, קם בפני שני יהודים שנכנסו אליו — ר' משה טאוב ור' נחום ספרא. כשחלה הרב ספרא בבני ברק, הגיע הרבי מגור לבקרו, ובמשך שבועות שלח מדי שבוע שליח לדרוש בשלומו — חוץ משבוע אחד שבו לא הגיע השליח, ובאותו שבוע נפטר הרב ספרא.</p>
+
+<div class="story-box">
+סיפר הגר"ש ממאקאווא: היה גר ברחוב הלל, ליד האדמו"ר מקרעטשניף, ובתו ארנרייך גרה ברחוב חפץ חיים. בשבת קודש היה נוהג ללכת לבקרה, ובדרך היה הולך באמצע הכביש, ראשו ועיניו מכוסים בטלית. כששאלוהו מדוע — הלוא זה מסוכן — השיב: יש כאן הרבה אנשים שמכירים אותי, לצערנו מחללי שבת, והם מתביישים לראות אותי בשבת, לכן אני הולך באמצע הכביש מכוסה בטלית, שאני לא אראה אותם והם לא יראו אותי.
+</div>
+
+<p data-a="01-222">נלב"ע י"ב אייר תשכ"ב. במסע הלווייתו יצאו כל תושבי הכפר לפתחו לחלוק לו כבוד אחרון, ולאחר ההספדים נטמן בבית הקברות הישן יחד עם שישה ספרי תורה פסולים — לאמור: קיים בזה מה שכתוב בזה. מנוחתו כבוד בבית העלמין הישן בקרית אתא, גוש ב, חלקה א, שורה 7.</p>
+
+<h3 data-a="01-223">ר' משה טאוב</h3>
+
+<p data-a="01-224">הרבי מקרעטשניף היה מרבה לספר על ר' משה טאוב, יהודי צדיק שגר בקרית אתא. לאחר פטירתו התגלה ר' משה לרבי בחלום, ושאלו הרבי מה נעשה בדינו; הצביע לו ר' משה על ה'חק לישראל', כאומר: הצלחתי לעבור את דין שמים בזכות שהיתה לי קביעות בחק לישראל. לכן יוצאי חלציו של ר' משה מקפידים עד היום ביותר על לימוד ה'חק' יום ביומו.</p>
+
+<div class="story-box">
+מספר הגה"ח רבי ישראל מאיר ברנר שליט"א: "בכפר אתא דאז התגורר זקני הצדיק הנודע רבי משה טויב זצ"ל, שהיה תלמיד חכם מופלג וידיד נאמן לרבי נחום אברהם ספרא. באחת השנים ביום פורים שיגר לו הרב ספרא משלוח מנות ובו כרטיס הגרלה, ולמרבה הפלא הכרטיס עלה בגורל בסכום גדול. למחרת התנהל בבית הכנסת ויכוח גדול: רבי משה טען שהרב ספרא לא התכוון לתת לו זכייה בסכום כה גבוה, אבל הרב ספרא סירב לקבל את הכרטיס חזרה — עד שהגיעו לפשרה: בסכום זה יערכו קידוש בבית הכנסת, ושאר הסכום למחייתו של רבי משה. בו השיא רבי משה את ילדיו, ובו קנה חלקת קבר בבית העלמין העתיק בצפת — ועל מצבתו נחקק 'הצדיק מכפר אתא'." מוסיף הרה"ח ר' יעקב גשייד שליט"א: רבי משה טויב היה נוסע בכל ערב חודש להתפלל על חלקת קברו בצפת, נסיעה שארכה אז שעות רבות — אך בכל ערב ראש חודש היה נצפה עולה על אוטובוס לחיפה ומשם לצפת, ובדרך חזרתו שוב אותו מסלול. אחרי פטירתו, נשאל לא אחת מרן ה'בית ישראל' זי"ע: "ווי ליגט רבי משה טויב?" (היכן קבור רבי משה טויב?).
+</div>
+
+<p data-a="01-225">עוד סיפר ר' יעקב, שרבי משה היה מלמד את ילדי הכפר גמרא בשעות הערב — לאור נרות, שכן לא היה חשמל בבתים. הילדים, שובבים ומלאי מרץ, היו חותכים את הנרות למחציתם כדי שיסיימו את בעירתם במהרה והלימודים יסתיימו בהקדם. רבי משה, שהיה יהודי מורם מעם, לא העלה על דעתו את מעשה הקונדס, ושאל אותם בתמימות: "למה קניתם היום נרות קטנים כל כך?!"</p>
+
+<div class="story-box">
+"ר' חיים, אתה זוכר את ר' אפרים טויב ואת ר' דוד ברסלבר ז"ל שניהלו את המכולת ואת חנות הירקות זה לצד זה בהרמוניה נדירה?" שואל ר' גימפל את אחיו הגדול, ושניהם צוהלים בחדוות זיכרון. "שני יהודים יקרים, שניהם 'חסידישע ערליכע אידן'. אני זוכר את ר' דוד ברסלבר יושב בחנותו עם 'חאלעטל' [סינר], גם כשמעלות החום עברו ארבעים מעלות, משרת את הקונים במאור פנים... ומשהגיע זמן תפילת מנחה, לא היסס ר' דוד להסיר את הסינר וללבוש חליפה מכובדת, ולהותיר את החנות פתוחה לכל דכפין באומרו: 'איך גיי דאווענען מנחה, איך קום שוין צוריק' (אני הולך להתפלל מנחה, אני כבר חוזר) — ולא חשש שמישהו ינצל את יציאתו לגניבה. אדרבה, תמיד היה מוסיף למשקל הקמח והסוכר, כדי שחלילה לא יהיה חייב ללקוחות".
+</div>
+
+<h3 data-a="01-226">הרב שלום אליעזר ברוין</h3>
+
+<div class="highlight-box">
+<h4 data-a="01-227" style="margin-top:0;">מסאטמר להרמנשטט</h4>
+<p data-a="01-228" style="margin-bottom:0;">ערש לידתו של ר' שלום אליעזר עמדה בסאטמר, מרכז יהודי וחסידי גדול ומפורסם. מגיל ילדות ניכר בשקידתו ובהתמדתו, ודבק בהנהגתו הברוכה של הרה"ק רבי יואל טייטלבוים זצוק"ל, בעל ה'דברי יואל'. עם נישואיו לרעיה מהעיר הרמנשטט (סיביו שברומניה), שב לסאטמר, אך כשחמיו נפטר בטרם עת וביקש מאשתו שלא תעזוב את עירה, ולאחר שנועץ ברבו הצדיק, שהכריע כי למען כיבוד אם עליהם לעבור, היגר ר' שלום אליעזר עם משפחתו הצעירה להרמנשטט.</p>
+</div>
+
+<div class="story-box">
+<h4 data-a="01-229" style="margin-top:0; color:#059669;">נס ההצלה בימי השואה</h4>
+מצוות כיבוד אם זו הצילה למעשה את חיי המשפחה: תקופה קצרה לאחר מכן כבשו הגרמנים את סאטמר, וכל בני עיר מוצאו — הוריו, אחיו ואחיותיו — הוגלו ולא שבו. רק משום שידם של הרשעים לא שלטה בסיביו, ניצל הוא ובני ביתו. בכל אותה תקופה סוערת לא הזניח את חינוך ילדיו, ואף כשנסגרו מוסדות הלימוד שכר מורים פרטיים ללמדם תורה ותפילה.<br><br>
+באחד מימי המלחמה הגיעו לעיר שני אחיו כפליטי חרב, וסיפרו שכל בני המשפחה עלו על מוקדם, ואילו הם ניצלו בניסי ניסים. הם תכננו לעלות לארץ הקודש עם קבוצה שהתארגנה לעלות בשלוש אניות מיוחדות, וגם כ"ק האדמו"ר מויז'ניץ בעל ה'אמרי חיים' עמד להצטרף. האחים שכנעו את ר' שלום אליעזר לשלוח עמם את בנו ובתו הגדולים, והוא ניאות.<br><br>
+בשבת שלפני הנסיעה נשמעה אזעקה בעת שהלך ברחוב עם בנו אליהו, כבן שתים עשרה. הילד, שקשתה עליו הריצה בנעליים החדשות שנקנו לו לכבוד הנסיעה, פשט אותן ורץ יחף אל המקלט. ר' שלום אליעזר נזדעזע: היתכן שבנו לא יודע את הלכות איסור טלטול בשבת במקום שאין עירוב? אף שהיתה זו שעת פיקוח נפש, גמלה בליבו החלטה שאינו מוכן שבנו לא יימצא תחת שבט חינוכו — ועל אתר החליט לוותר על נסיעת ילדיו, שנשארו עמו.<br><br>
+לבסוף נסעו אחיו לבדם, וההפלגה הסתיימה באסון: אונייתם, "מפקורה" (מלשון הפקר), הוטבעה בהפצצה גרמנית על כל נוסעיה, הי"ד. בעמידתו התקיפה על משמר חינוך בניו, הציל ר' שלום אליעזר את חיי ילדיו. (אגב, האדמו"ר מויז'ניץ, בהגיעו לחוף וכשראה את שם האונייה "מפקורה", סירב בכל תוקף לעלות אליה, כי שמא קא גרים.)
+</div>
+
+<p data-a="01-230">תקופה קצרה לאחר המלחמה עלה ר' שלום אליעזר ברוין ארצה, וקבע את משכנו בכפר אתא, שם כיהן אז כרב הגה"ח רבי בנימין מנדלסון זצ"ל, ור' שלום אליעזר נדבק אליו בעבותות אהבה. גר ברחוב בית לחם, על נחלת ברדוגו הסמוכה לבית האבן (בית פישר). במקום מגוריו זה, שבו קיים עד היום הצריף האחרון בעיר — כפי שנפגש כבר בפרק א' — היו צעדיו הראשונים בחיפוש מקומות לימוד וחינוך ראויים לילדיו, ולימד עמם שעות ארוכות הלכות תרומות ומעשרות התלויות בארץ. תפילותיו היו לשם דבר, בדבקות ובהשתפכות הנפש. בשנת תשי"א השיא את בתו חיה צירל לרבי אליעזר הגר, האדמו"ר השני מחסידות סרט־ויז'ניץ; האדמו"ר הנוכחי, רבי יעקב הגר, הוא נכדו.</p>
+
+<div class="quote-box">
+לפני פטירתו כינס את ילדיו ומסר להם את צוואתו, שישמרו בכל מצב על השלום והאחדות ביניהם, בתוכחה מוסתרת באהבה גלויה: "שמי שלום עוזר — אם תחיו אתם בשלום כאן, אהיה אני לכם מלמעלה לעוזר"...
+</div>
+
+<p data-a="01-231">דבריו נותרו חרותים בלב צאצאיו, המתכנסים מדי שנה ביום היארצייט שלו (י' אייר תשמ"ח) מכל קצוות הארץ ומחוצה לה, לשמר את מורשתו — ורבים מהם באים לקרית אתא לראות את המקום שבו גר אביהם הצדיק.</p>
+
+<h3 data-a="01-232">הרב אריה יהודה פלדמן זצ"ל</h3>
+
+<p data-a="01-233">נולד בשבט תרס"ח בבודפסט, ולמד בבחרותו בישיבות חשובות בגאלאנטא, במטרסדורף ובפרשבורג. בי"ט אדר ב' תרצ"ח עלה עם קבוצת בחורים מטעם אגודת ישראל לארץ ישראל, והתקשר בעבותות אהבה למהרי"ץ דושינסקיא בירושלים.</p>
+
+<div class="story-box">
+לאחר שהרב מנדלזון נהיה לרבה של כפר אתא, חיפש מלמד ירא שמים לתלמוד תורה, ונסע לחזון איש להיוועץ. החזו"א ענה שיחשוב על מישהו ראוי וישלחו. כעבור ימים ספורים נסע הרב מנדלזון לירושלים אל מהרי"ץ דושינסקיא, וסיפר שהוא מחפש מלמד; מיד ענה המהרי"ץ: "יש לי בחור מיוחד, ירא שמים, שאך עכשיו עולה לארץ ישראל, ואשלח אותו אליכם" — ותוך ימים ספורים כבר היה יודל פלדמן הבחור ברכבת מתל אביב לכיוון כפר עטה. באמצע הדרך ניגש אליו ר' ישראל יעקב פינקלשטיין ז"ל<sup class="fn"><a href="#fn34" id="fnr34">34</a></sup> ושאלו לאן פניו מועדות; כששמע שהוא הולך להורות בתלמוד תורה בכפר עטה, מיהר להשיב: "הרי החזו"א שלח אותי בדיוק מאותה סיבה!" בהגיעם ליעדם, הכניס אותם הרב מנדלזון, שלא ציפה שגם החזו"א וגם המהרי"ץ ישלחו מועמדים, יחד — כל אחד לימד חצי יום.
+</div>
+
+<h4 data-a="01-234">סוד ההצלחה</h4>
+
+<p data-a="01-235">כ"ק גאב"ד מאקאווא שליט"א אומר: "הדבר העיקרי הוא דמות המחנך, עליו להיות קודש הקדשים, בחינת עיניך רואות את מוריך. בדורנו היה בכפר אתא מלמד הרב יהודה פלדמן, שמאז פטירתו לפני ארבעים שנה ועד היום תלמידיו מזכירים אותו בגעגועים — כי ראו איך התפלל, איך עמד כל התפילה מתחילה עד סוף, איך למד פרקי אבות, איך בחודש אב סיפר בבכיות את אגדות החורבן". "דברים היוצאים מן הלב נכנסים אל הלב" — כך הגדיר כוחו המיוחד, שהצליח להקרין ולהשפיע לטווח כה ארוך, שגם אחרי יובל וחצי יזכרו אלפי תלמידים במחנכם.</p>
+
+<div class="story-box">
+<strong>מסירות לתלמידים:</strong> בהפסקות, במקום לנוח, היה ר' יודל מעניק שיעור פרטי לתלמיד נוסף שהתקשה בקריאה — באותה עוצמה ובאותה התלהבות שנתן לשיעור עצמו. לא בחינם טענו שכל ילד שעבר אצל ר' יודל פלדמן, גם אם קשה הבנה, בסופו של דבר ידע לקרוא — בזכות ליבו הרחב ומסירות נפשו. בזמן מסוים הקצתה עיריית קרית אתא סכום כסף עבור מזכירות; מה עשה הרב פלדמן? שילם את הכסף למורי עזר עבור תלמידים מתקשים, ועשה בעצמו את עבודת המזכירות.
+</div>
+
+<div class="story-box">
+<strong>הסיפור היה הפרס:</strong> בשבת אחר הצהריים הקים ר' יודל "מתמידים", שם התאספו ילדים מכל רחבי העיר לשמוע פנינים על פרקי אבות ואת סיפוריו של המנהל עצמו — "היום ב'מתמידים' צריך לחלק פרס, ארטיק או ממתק; אבל אז הסיפור היה הפרס, ועוד איזה פרס — הביא ילדים ממש ממרחקים", מספר תלמיד. "בחודש אב היתה קייטנה, וריכז המנהל את כל הכיתות באותו חדר, והיו גומעים בשקיקה את סיפוריו. לא אשכח את התנועות, איך שדיבר — הרגשת כאילו בית המקדש נפל ממש עכשיו לידו".
+</div>
+
+<div class="story-box">
+<strong>היכן הרהיטים?</strong> ביתו הפשוט והצנוע ברחוב המייסדים 19 היה ספוג בצדקה ובגמילות חסדים. הוא לא רצה לעבור לדירה מרווחת יותר, ונימק: כאן הוא ליד בית הכנסת, המקווה ותלמידיו בת"ת — ולמה לו לעבור למקום רחוק יותר? התלמידים מספרים: בבחירת מעונו הפשוט המחיש הרב בתיאור החי ביותר את מה שהנחיל בשיעוריו — שכל העולם הזה הוא עראי, ולא כדאי להשקיע בו. ביתו היה גם בית הכנסת אורחים: בתום תפילת שחרית תמיד מצא את האורח, גבאי הצדקה, הגלמוד או המדוכא, שיתלווה אליו הביתה לארוחת בוקר ולמילוי כל צרכיו.
+</div>
+
+<p data-a="01-236"><strong>עשה לך רב:</strong> כשהחליט הרב מנדלזון לעזוב לקוממיות, היה זה קשה במיוחד לר' יודל, שהיה קשור אליו בכל נימי נפשו. כשהגיע הרב לתלמוד תורה להיפרד, וחילק לכל תלמיד חצי גרוש כמזכרת, הלך המנהל אחריו ובכה ללא הפוגות — ומחזה זה מלווה את התלמידים עד היום: "כשאני פוגש תלמידים שלמדו איתי, השאלה הראשונה היא: האם אתה זוכר את הבכי?" הקשר לא נפסק, ור' יודל נסע לקבל פני רבו בכל חול המועד, כברת דרך ארוכה מכפר עטה לקוממיות. הרב מנדלזון התבטא על כוחו של ר' יודל "לקחת קוויטלאך".</p>
+
+<p data-a="01-237"><strong>מנהל בחסד עליון:</strong> מלבד היותו מנהל, היה הרב פלדמן גם מורה בכיתות א' וב', ניהל גם את בית הספר לבנות, ואף פתח סניף ת"ת בשיכונים. היה תקופה שניהל בבת אחת ארבעה מוסדות: תלמוד תורה, בית יעקב, סמינר לבנות, וסניף בשיכונים — וביחד עם זה גם לימד. לא הסכים לבזבז לירה על נסיעה באוטובוס לסניף בשיכונים, כדי לשמור אותה לתלמוד תורה. לא רצה מזכירה בתלמוד תורה, כדי לשמור על קדושת התלמידים, ומשמש בעצמו כמזכיר — וכשנפטר, נדרשו ארבעה אנשים כדי למלא את מקומו.</p>
+
+<div class="story-box">
+כותב אחד מתלמידיו: "המחנך שלי היה הרה"ג ר' יהודה פלדמן זצ"ל, דמות מופת לרבים בהיותו צדיק תמים ותלמיד חכם מופלג — ואם היתה ניתנת לי רשות הייתי מגדיר אותו בלי ספק כאחד מל"ו הצדיקים של הדור ההוא. רבי יודל לימד אותנו מכיתה א' עד כיתה ו', כאשר כל הכיתות היו מחוברות יחד ובכל אחת חמישה ילדים. בכיתתי למד להבחל"ח הגה"צ רבי מנחם מנדל מנדלזון זצ"ל אב"ד קוממיות. היינו כשלושים ילדים, אבל אין לי מילים לתאר את האווירה הנעלה שהיתה לנו בתלמוד תורה במחיצתו".
+</div>
+
+<p data-a="01-238">עוד רבים רבים הסיפורים על ר' יודל פלדמן, הכתובים בספר 'מחנך של פעם' — משם לוקטו הסיפורים הנ"ל. בשנים הראשונות היה הולך כל שבת לקרוא בתורה ברמת יוחנן, לילדים שהוריהם גרו שם. היה קורא בתורה בחינם וכן שליח ציבור בימים נוראים ולא רצה לקבל תשלום — ועל כך יש שלט עד היום בבית הכנסת היכל שלמה.</p>
+
+
+<div class="chapter-transition">
+  <div class="ct-label">פרק רביעי</div>
+  <div class="ct-number">ד</div>
+  <div class="ct-title">דמויות הוד — עסקנים וחסידים</div>
+  <div class="ct-sub">מהחסיד שהקים הכנסת אורחים ועד רב העיר של ימינו — ומבעד לעיניהם, גלריה שלמה של יהודים פשוטים וגדולים</div>
+</div>
+
+<div class="deco-divider"><div class="line"></div><div class="icon">📖</div><div class="line"></div></div>
+
+<div class="chapter-label">פרק ד׳</div>
+<h2 data-a="01-239" id="section4">דמויות הוד — עסקנים וחסידים</h2>
+
+<div class="chapter-intro">
+פרק זה, השני מבין פרקי "דמויות הוד", עובר מהמייסדים הראשונים אל דור העסקנים שהמשיך לבנות את העיר — ר' ראובן גשייד ומשפחתו הענפה, ר' שלמה קופצ'יק וחתנו הרב אליהו דיסקין (רב העיר בימינו), ומוכתר הכפר לשעבר ר' יהושע פישר. בסיומו — שני מקבצי זיכרונות מהעיתונות התורנית, המצרפים גלריה שלמה של דמויות נוספות שלא זכו לפרק בפני עצמו, אך בלעדיהן התמונה לא היתה שלמה.
+</div>
+
+<div class="in-chapter-box">
+<h4 data-a="01-240">📖 בפרק זה:</h4>
+<ul>
+<li data-a="01-241">ר' ראובן גשייד ומשפחתו</li>
+<li data-a="01-242">ר' שלמה קופצ'יק</li>
+<li data-a="01-243">הרב אליהו דיסקין שליט"א — רב העיר בימינו</li>
+<li data-a="01-244">ר' יהושע פישר — מוכתר הכפר</li>
+<li data-a="01-245">זיכרונות כפר אתא — מתוך המודיע ומתוך המבשר</li>
+</ul>
+</div>
+
+<h3 data-a="01-246">ר' ראובן גשייד ומשפחתו</h3>
+
+<p data-a="01-247">מספרת הנכדה ליבי קופצ'יק, המתעדת את סיפור סבתה אסתר (חמותו של הרב דיסקין, רב העיר בימינו): "סבתא אסתר נולדה בשנת 1924 בוורשה, להוריה סבא ראובן גשייד ואשתו נחמה. סבא ראובן היה חסיד פיאסצנה. האדמו"ר, הרב קלונימוס קלמיש שפירא, העמיד חסידות מיוחדת המדברת על העבודה האישית של כל אחד — כתב את הספרים 'חובת התלמידים', 'הכשרת האברכים' ועוד. האדמו"ר ביקש מכמה חסידים שיעלו לארץ ישראל, וכיבד מאוד את מי שהחליט לעלות. סבא ראובן ומשפחתו הגיעו לארץ והתיישבו בירושלים, ולאחר תקופה, במצוות האדמו"ר, עברו לכפר אתא". סבא ראובן ניהל חנות ירקות, ולאחר תקופה חנות לתשמישי קדושה (במקום שבו כיום קניון עזריאלי). בכפר אתא היו כשמונה משפחות מחסידי פיאסצנה, ועד היום קיים שם בית כנסת על שמם.</p>
+
+<p data-a="01-248">בתם, סבתא אסתר, עלתה לארץ מפולין בת שמונה ולמדה בירושלים, ולאחר שהמשפחה עברה לכפר אתא למדה בחיפה. אביה קנה לה כינור, שבו ניגנה מהלב ומהנשמה, ורשם אותה לסמינר בתל אביב — ושם, בשיעורי תניא, התקרבה לחב"ד. לאחר תקופה התחתנה עם ר' שלמה קופצ'יק.</p>
+
+<p data-a="01-249">בנם, נחמן גשייד, זכה להדפיס את הכתבים של האדמו"ר מפיאסצנה<sup class="fn"><a href="#fn35" id="fnr35">35</a></sup>. בן נוסף, ר' ישראל גשייד, נעשה מנהל הת"ת אחרי הרב פלדמן — האדמו"ר מפיאסצנה עצמו היה הסנדק שלו. כבר בצעירותו ניכרה בו התכונה להקנות תורה ולהשפיע יראת שמים, והיה למורה מחנך בבית הספר; מקשיי הפרנסה עסק גם בביטוח, עד שקיבל ברכת צדיקים להתמסר לתחום. בפטירתו הפתאומית של הרב יהודה פלדמן, ביקש ממנו מרן ה'בית ישראל' זי"ע להיכנס לניהול בית הספר, שנותר "כספינה שאין לה קברניט". למרות הקושי הכלכלי, השליך הכל מנגד וניהל שלושה בתי ספר, ופעל גם במסגרת ועדת הקליטה של אגודת ישראל.</p>
+
+<div class="story-box">
+מסופר שכעשרים שנה לאחר שעזב הרב מנדלזון את כפר אתא, פגש העטרת משה את הגר"ב בחתונה ועדכן אותו במתרחש בת"ת. הגר"ב לקח נייר, שלף עט וכתב לר' ישראל גשייד איגרת: "אמנם התפטרתי מהרבנות בקרית אתא, אבל מהרבנות על בני ידידי הרב ר' ראובן ז"ל לא התפטרתי".
+</div>
+
+<h3 data-a="01-250">ר' שלמה קופצ'יק</h3>
+
+<p data-a="01-251">הרה"ח ר' שלמה קופצ'יק ז"ל, ממייסדי קהילת חב"ד בכפר אתא, עסק בקירוב תושבי העיר לתורת החסידות. לאחר שלמד בישיבת ויז'ניץ ברומניה, התחבר לחסידות חב"ד והשתלב עד מהרה בקרב חסידיה הנלהבים. כשהגיע לפרקו, כתב לרבו הרה"ק רבי יוסף יצחק מליובאוויטש זי"ע על כמה הצעות שידוכין, וקיבל תשובה במברק: "יבחר בהצעת גשייד" — בתו של ר' ראובן גשייד, מהמייסדים הוותיקים של כפר אתא. בל"ג בעומר תש"ז נשא את רעייתו והקים את ביתו בכפר אתא.</p>
+
+<p data-a="01-252">לפרנסתם עבדו הוא ורעייתו בהוראה — הוא בכפר אתא ובחיפה, היא כמורה ומנהלת בבית ספר 'בית יעקב' בחיפה. בד בבד מסר שיעורי חסידות, ארגן התוועדויות בימי דפגרא, ושלח דו"חות על פעילותו לרבי מליובאוויטש, שהשיבו לו וכיוונו אותו בפעולתו. חותנו, ר' ראובן גשייד, עלה ארצה עם קבוצת חברים שדבקו ברבם האדמו"ר מפיאסצנה — מייסדי כפר אתא, כפי שנודע לנו. כשהיה ר' שלמה עורך התוועדויות בי"ט כסלו, כבר נודע לנו כיצד היו מסבים שם ה'עטרת משה' והרב שולזינגר ואנשי המזרחי ופעילי פא"י כאיש אחד. ה'עטרת משה' הקפיד לכנותו "הרב רבי שלמה", שכן כשקראו לו "ר' שלמה" בעודו אצל רבו, מיהר הרבי מליובאוויטש לתקן: "הרב רבי שלמה".</p>
+
+<p data-a="01-253">ר' ראובן גשייד ור' שלמה קופצ'יק גרו זה מעל זה ברחוב העצמאות, במקום שבו נמצאת כיום מאפיית ברכת משה. ביתם היה פתוח לכל אחד — מי שצריך היה לקבל ארוחה, תרומה או הלוואה, ידע את הכתובת. ר' שלמה הכיר את כל העיר: הגיע לבקר כל עולה חדש, ודאג שיירשמו ילדיהם במסגרת חינוך הולמת.</p>
+
+<h3 data-a="01-254">הרב אליהו דיסקין שליט"א</h3>
+
+<p data-a="01-255">בטבת תשמ"ג נישא הרב אליהו דיסקין לרחל, בת הרב שלמה קופצ'יק שליח חב"ד בקרית אתא. למד בכולל בקרית אתא ובקריות במשך חמש שנים, וקיבל שם סמיכה מטעם הרבנות הראשית לישראל. תחילה בא לקרית אתא רק "כדי ללכת" — ועד שילך, שקד על תלמודו בכולל מאקאווא ונבחן להיתר הוראה. לאחר שהחל למסור שיעורים בעיר, הציעו לו להתמנות כרב בתי הספר מטעם משרד החינוך, ואז קיבל מכתב מהרבי מליובאוויטש זיע"א<sup class="fn"><a href="#fn36" id="fnr36">36</a></sup> עם הוראה להישאר בקרית אתא. "מאז קבלת המכתב ועד לביאת המשיח הוא שם — בשמחה, בשליחות, ובעשייה."</p>
+
+<p data-a="01-256">ההתחלה היתה עם שנים עשר איש בבית פרטי, תפילה ושיעורי תורה. "אין כמו שיעור תורה כדי לקרב יהודי אל המקור", מצהיר הרב דיסקין. אט אט נוצר מעגל מתחזקים, הקהילה גדלה, והוקמו מוסדות לילדי הקהילה — לחב"ד שבעה גנים ו־210 ילדים. מקרית אתא יוצאים כל בוקר שלושה אוטובוסים ושני מיניבוסים, 192 ילדים, למוסדות חב"ד באזור.</p>
+
+<div class="story-box">
+<h4 data-a="01-257" style="margin-top:0; color:#059669;">בית התמחוי</h4>
+חב"ד קנתה לה שם טוב בעיר בזכות בית התמחוי המשגשג: "התחלנו פעילות של חלוקת מזון שבועית לנזקקים, אחרי כמה שנים ראינו שיש צורך בבית תמחוי, בנינו מטבח ופרסמנו — ובית התמחוי הלך והתרחב". מדי יום מחלק בית התמחוי 170 מנות, כולל משלוחים עד הבית. בתי ספר בעיר שרואים ילד רעב מרימים טלפון, והילד מקבל ארוחת צהריים חמה. "איך אפשר אחר כך לסרב לקבל שיעור תורה?!"
+</div>
+
+<div class="story-box">
+<h4 data-a="01-258" style="margin-top:0; color:#059669;">בית הכנסת חב"ד</h4>
+"בית הכנסת הראשון היה בתוך נגרייה ישנה שהפכנוה לבית כנסת. הרחבנו כאן ושם... הגענו ל־103 מקומות ישיבה והמקום נעשה צר מהכיל", מספר הרב דיסקין. "ביקשנו רשות התרחבות. ראש העיר התנגד: 'אינני מוכן שבית הכנסת ייראה טלאי על גבי טלאי. תגייס חצי מיליון דולר ותבנה בניין נורמלי'. נרתעתי — מנין אשיג סכום כזה? הוא אמר: 'מה זה בשבילך?! צא לעיר ותבקש מכל משפחה הוראת קבע של אלף דולר!' כינסנו את ועד בית הכנסת, וניסינו. בתוך חודש נאספו 230 חתימות" — והבין הרב דיסקין ש"לפעמים, רק לפעמים, ראש העיר יודע יותר טוב ממנו איך צריך לעבוד". התרומות תוך כמה חודשים הגיעו ל־750 חתימות, מכל מי שיש לו לב יהודי — מתנגדים, דתיים לאומים, חסידים, ספרדים, תימנים, ואפילו שמאלנים גמורים. "שמתי לב שכל עוד אין פוליטיקאי שמסית, כל יהודי רוצה שלפחות הילדים יספגו ערכים". בית הכנסת נבנה מתרומות קטנות שנאספו רק בתוך קרית אתא, וכיום מעל שישים אחוז מתושבי העיר חתומים על תרומות קבועות למרכז הרוחני — כל תקציב הפעילות, כחמישה מיליון שקלים בשנה, מבוסס על תרומות קרית־אתאים, ללא שום תקציב מגוף ציבורי.
+<span class="source-tag">מבוסס על עיתון המודיע, מ. מורג, כ"ח מרחשוון תשס"ח</span>
+</div>
+
+<h4 data-a="01-259">גאב"ד מאקווא בעד הרב דיסקין</h4>
+
+<p data-a="01-260">מינויו של הרב דיסקין לרבה של קרית אתא הגיע לאחר סאגה ארוכה. הרקע: תקנה חדשה, מיוזמת ח"כ טומי לפיד, לביטול שני תקנים לרבני ערים (אשכנזי וספרדי), שהביאה למפח נפש בערים רבות. תקופה ארוכה נראה היה שאין דבר שיעצור את בחירתו של הרב דיסקין — עד שהרב הראשי לישראל, הרב שלמה עמאר, ביקש להציב מועמד משלו, הרב אליהו מימון. בראש התובעים למען בחירת הרב דיסקין ניצב גאב"ד מאקווא שליט"א, שנפגש כמה פעמים עם הגר"ש עמאר והציג בפניו את פעילותו רבת השנים של הרב דיסקין למען יהדות העיר. בסיוע העסקן והעיתונאי ר' מנחם גשייד, ר' יוסי אליטוב ואביו הרב שמעון אליטוב, גובש הסכם, ובמקביל הושג אישור חריג ממשרד המשפטים לשני תקנים — אשכנזי וספרדי. כך נסללה הדרך לבחירתו של הרב דיסקין כרב עיר.</p>
+
+<h3 data-a="01-261">ר' יהושע פישר</h3>
+
+<p data-a="01-262">יהושע פישר היה מוכתר הכפר — רבים אינם יודעים שהיה יהודי חסידי, ירא שמים. כשנפטר, שלח רבה הראשון של כפר אתא, הרב מנדלזון, מכתב הכרת תודה לר' ראובן גשייד:</p>
+
+<div class="quote-box">
+"נודעתי על ידך שידידי ר' יהושע פישר ע"ה הלך לעולמו... והעיקר שכל דבר טוב שזכינו לעשות בכפר אתא — ת"ת, שחיטה, לרומם כבוד ת"ח ויר"ש וכו' — היה הוא עליו השלום עומד כחומה להבריח המסטינים, ומבטל עצמו, דעתו ומפלגתו... אם הרב אמן כן, צריך להיות כן, חשב והוציא לפועל, וכל הטוב שבא על ידי זה נחשב לזכותו... אבקשך תלך לנחם אלמנתו בשמי. גם תכתוב לי שמו ושם אביו ז"ל בדיוק, שאוכל ללמוד משניות עבורו..."
+<span class="source-tag">בנימין מנדלזון, רב דפה</span>
+</div>
+
+<p data-a="01-263">מה כוונת הרב שיהושע פישר יגיע למקום רבותיו הקדושים? הסביר האדמו"ר ממאקווא: יהושע היה חסיד רדז'ין, והיה הולך עם ציצית תכלת כמנהג רבותיו — וזוהי כוונת הרב. יהושע דאג לעולים החדשים: קיבל אותם, שיכן אותם בביתו, ודאג להם לעבודה עד שמצאו דירה או צריף למגורים.</p>
+
+<div class="story-box">
+בספר 'נזר הקודש' (עמ' ר"א) מובא מכתב שכתב ר' עזריאל רוטר זצ"ל, איש המקוואות והחברא קדישא בכפר אתא: בתקופה שבה שררה בבית הרב עניות כה גדולה שלא היה לחם לפי הטף, לקח עמו ר' יהושע שני יהודים ויצאו לקבץ מעות עבור ילדי הרב, והצליחו להכניס סכום נאה, בחשבם שהרב יקבלנו באושר. אלא שהרב סירב לקבל, באומרו: "יהודים יקרים, קחו את הכסף והכניסוהו לבית השוחט — ידו של השוחט אסור שתרעד, ואילו ידי שלי יכולה לרעוד". זהו הרב שהאדמו"ר מהר"א מבעלזא זיע"א אמר עליו שהתאים להיות רב לפני מאתיים שנה.
+</div>
+
+<p data-a="01-264"><strong>בית פישר — בית הבק:</strong> "בית הבק" (היום "בית פישר") נבנה כנראה בשנת 1880 בערך, והיה הבניין המרכזי במרכז הכפר הערבי כופרתא — משם התנהלו ענייני הכפר, אוחסן היבול, נשמרו הבהמות ושוכנו האורחים. תושבי הכפר, אריסים שהתפרנסו מבקר, צאן ופלחה, חילקו את היבול בעת האסיף לחמש ערמות: אחת (חמישית) למוכתר, נציג משפחת סורסוק, ושאר היבול לאריס ולמשפחתו — ממש כמבואר בתורה אצל יוסף (בראשית מז, כג–כד): "וְהָיָה בַּתְּבוּאֹת וּנְתַתֶּם חֲמִישִׁית לְפַרְעֹה וְאַרְבַּע הַיָּדֹת יִהְיֶה לָכֶם". כשהוקם היישוב היהודי, גר בבית זה מוכתר הכפר עצמו — יהושע פישר, שהורישו לאגודת "תו"מ" (תורה ומלאכה) להקדשה לפעילות ציבורית. במבנה שוכנים כיום המוזיאון העירוני לתולדות המקום ובית הכנסת "מעלות הגיבורים".</p>
+
+<div class="deco-divider"><div class="line"></div><div class="icon">📖</div><div class="line"></div></div>
+
+<h3 data-a="01-265">זיכרונות כפר אתא — מתוך המודיע</h3>
+
+<div class="chapter-intro">
+"יהודים יקרים ומיוחדים גרו כאן", משחזר הר"ר ישראל גשייד הי"ו, מוותיקי היישוב, לשעבר מנהל בית הספר החרדי, בנו של הרה"ח ר' ראובן ז"ל. "קרית אתא היתה מקום קטן, אבל איכותי. איכות אנושית היתה כאן". באותם ימים מלאה העיר בשומרי תורה ומצוות — קהילה הונגרית, יהודי פולין, שטיבל גוראי, שטיבל חסידי פיאסצנא, שיכון מרמרוש, בית כנסת קרעטשניף־סיגעט, שיכון פא"י — מאות משפחות ששומרות אמונים לה' ולתורתו. הפרק שלהלן הוא מקבץ דיוקנאות קצרים של אותם ימים, כפי שנשמרו בעדות בני הדור ובעיתונות התורנית.
+</div>
+
+<p data-a="01-266">המייסדים של הפיאסצנא שטיבל היו <span class="emphasis">ר' נחמן זיידמן ואשתו</span>, חשוכי ילדים שבנו את השטיבל; כשהמאקאווער רב היה מוסר שם שיעור, היתה גב' זיידמן באה לעזרת נשים להקשיב. יהודים עם תמימות נדירה — כמו <span class="emphasis">הרה"ח רבי משה טאוב</span>, קוזמירער אייניקל, שראייתו מתפלל בהתלהבותו וריקודיו בתפילה כל יום גרמה לנפש הרואה להיכסף לאלוקיה. "כילדים היה תדיר מדבר אלינו בחיוכו הנצחי, ספוג בחסידות שורשית".</p>
+
+<p data-a="01-267">ודמויות נוספות, משלל הגוונים: <span class="emphasis">הגאון רבי נחום אברהם ספרא</span>, מחסידי קאפוסט, שקיבל תשובות בהלכה מהמהרש"ם מבראזן; <span class="emphasis">רבי עקיבא בנצלוביץ</span>, שהיה מסיים כל שנה את כל הש"ס; <span class="emphasis">רבי אלחנן מרגלית</span>, גבאי שטיבל הגוראי; <span class="emphasis">רבי זלמן וקסמן</span>, יהודי הונגרי עושה מצבות שהתגורר בדירת שני חדרים, אך כל יהודי שהגיע לכפר אתא וביקש לאכול או לישון ידע ללכת אליו, ולעתים שהו בביתו שבועיים — עד שר' ישראל דמבינסקי הקים הכנסת אורחים בבית הכנסת מאקווא; <span class="emphasis">ר' הערש מיילעך קליין</span>, ששלח את ילדו הקטן לבדו בלילות חשוכים לצריף הישיבה, ובתשובה לדודה שנבהלה השיב: "ככה אני למדתי וככה סבא שלי למד וככה אבא שלי למד וככה צומחים לומדי תורה"; <span class="emphasis">ר' ישראל דמבינסקי</span>, איש החסד שהסנדלרייה שלו היתה גם מקום שאנשים שפכו בו את ליבם; <span class="emphasis">ר' יודל פלדמן</span>, מנהל התלמוד תורה ובית יעקב, שגר עם שנים עשר ילדיו במטבחון של שתי אמות על שתי אמות, ובכל זאת היה זה הבית השקט ביותר בקרית אתא; ו<span class="emphasis">ר' אברהם יודא בינדר</span>, שסירב לוותר על השלייקעס גם במחיר קידום בעבודה, וכשהיה מספר סיפורי צדיקים בסעודות מלווה־מלכה אצל המאקאווער רב, יכלו לשמוע משק כנפי זבוב — "אנשים היו מקבלים 'שחרור' מעזרה בבית במוצאי שבת תמורת הבטחתם לחזור עם סיפור שלו".</p>
+
+<p data-a="01-268">בית הכנסת <span class="emphasis">אהל פנחס — פא"י</span> התייחד ב'קאפעלע' (מקהלה) של שנים עשר חברים ששרה בתפילה את מארשי גור, בניצוחו של ר' מיכל הימלפארב. כפר עטה היתה מעוז של פא"י, ועד היום חיים בה שרידי "הפא"י'ניקעס", מתפללים ב"היכל שלמה" וב"אהל פנחס". מספרים משמו של כ"ק גאב"ד מאקווא שליט"א שהגר"ב מנדלזון מסר שיעור דף היומי בפא"י לשלושים משתתפים, אך משבאו מהגרויסע־שוהל (בית הכנסת הגדול) לומר שהוא רב העיר וצריך למסור שם, עבר לשם והשיעור הצטמצם למתי מעט — הרב הצר על כך, כי בלמידה קבועה כל יום יש השפעה גדולה יותר.</p>
+
+<div class="story-box">
+"ר' דוד ישעי' שייקביץ, איש פא"י, היתה לו אמונה ונאמנות להגר"ב מנדלזון, שכתב עליו שהוא מקנא בעולם הבא שלו — על שהציל נשמות רבות והתרוצץ לילות כימים לסדר פרנסות לעולים משארית הפליטה. שייקביץ היה סגן ראש מועצה, והגר"ב ביקש ממנו לסדר שלא יצטרך לשבת במועצה הדתית מטעם המדינה. לצורך כך היה צריך את קול המזרחי בהצבעה, והלך שייקביץ וויתר לו על המנדט שלו לתפקיד סגן ראש העיר — מעמד ומשכורת — כדי שיצביע לטובת העניין. כשבא לבשר על כך להגר"ב, נשק על ראשו מרוב שמחה. כשנפטר, ביקש גאב"ד מאקווא ממחותנו הגרמ"מ מנדלזון שליט"א להספידו — היה זה יום שישי גשום, ובכל זאת אחז שצריך להכיר לו טובה, וביקש שאת דבר הקנאה בעולם הבא יאמר בלשון הקודש, כדי שכל המלווים יבינו".
+</div>
+
+<div class="in-chapter-box" style="margin-top:34px;">
+<h4 data-a="01-269">מעלות בקרית אתא — כפי שמסכם ר' ישראל גשייד</h4>
+<ul>
+<li data-a="01-270">"אולי קשה יותר לחנך בעיר מעורבת, אבל התוצרת טובה יותר — הילד מתחשל, סופג מגיל רך שהוא והילד החילוני יצורים אחרים".</li>
+<li data-a="01-271">בעיר חילונית יש יתרון של עשיית דברים שבלעדיך לא היו נעשים: "אני פוגש אנשים שרק בזכות בית הספר הם נותרו יהודים שומרי שבת — זה דיני נפשות".</li>
+<li data-a="01-272">אין מחיצות ואין חציצות, אין חוגים ואין סוגים — כולם משפחה יהודית אחת גדולה.</li>
+<li data-a="01-273">"סימן ההיכר של יליד קרית אתא הוא קודם כל חביבות בלתי רגילה".</li>
+<li data-a="01-274">"כל מי שגדל בעיר, כל מי שעזב אותה, אוהב את המקום. חן המקום על יושביו ונוטשיו".</li>
+<li data-a="01-275">אברך בן תורה בעיר שקטה, רחוקה ממרכז הארץ, אינו "קופץ" לחתונות ולאירועים ומפסיד ערב לימוד.</li>
+<li data-a="01-276">"ההזדמנות לפתח כישרונות חבויים... אברך שמוסר שיעור מדי יום מפתח כושר ביטוי וביטחון עצמי. אם במרכז הארץ אתה רוצה את זה — בקרית אתא רוצים את זה ממך".</li>
+</ul>
+</div>
+
+<p data-a="01-277" style="margin-top:26px;">לדוגמה ממחישה את רוח האחדות: ר' ישראל גשייד, אגודאי מוצהר, יצא לחודשים ארוכים לחוץ לארץ ללוות את חכם עמנואל דודאשווילי, רבם של יהודי גרוזיה, לאסוף כסף לקליטתם — ולא ביקש שכר, רק שימנו לילדיו מזכרות. וכספי מכירת החמץ שקיבל הרב שלוזינגר זצ"ל, רב ליטאי, העביר לחסידות תולדות אהרן בירושלים, שמימיו לא ביקר בה — רק בזכות היכרותו עם רבי ישראל דבנסקי, חסיד תולדות אהרן. שם העיר אשר הכל בה מעורב.</p>
+<p data-a="01-278" style="font-size:0.95em; color:#6b7280; text-align:left; margin-top:-10px;">(נערך מתוך עיתון המודיע, מ. מורג, כ"ח במרחשון תשס"ח, עמ' 36–40)</p>
+
+<h3 data-a="01-279">זיכרונות כפר אתא — מתוך המבשר</h3>
+
+<div class="story-box">
+<h4 data-a="01-280" style="margin-top:0;">הרה"ח ר' עקיבא מונקיטובער ז"ל</h4>
+ר' עקיבא בנצלוביץ ז"ל, ממופלגי חסידי גור בקרית אתא, נקרא בחיבה "ר' עקיבא מונקיטובער" על שם מוצאו מהעיירה מונקיטוב הפולנית. היה דמות הוד ממש — כשהיה הולך בחול המועד סוכות עם ה"קאפעטע" המבריק והספודיק הגבוה וארבעת המינים בידו, היו כולם מביטים בו בהערצה.<br><br>
+מספר ר' גימפל בניש: "הוא היה הגבאי של כספי ה'כוללות' שהחסידים נתנו עבור מרן ה'בית ישראל' זי"ע. הייתי עולה לקומה השנייה, בה גר ר' עקיבא בשני חדרים קטנים, ומבעד לדלת הייתי שומע באופן קבוע את המהום קולו העבה כשהוא עוסק בתורה. תמיד מצאתי אותו רכון על גמרא גדולה. ר' עקיבא היה עורך סעודה גדולה בכל שנה בה' שבט, כיומא דהילולא של ה'שפת אמת' — ורק אחרי פטירתו בה' שבט תשל"א נודע לנו שר' עקיבא נולד גם הוא בה' שבט, כמו שכתוב שהקב"ה ממלא שנותיהם של צדיקים מיום ליום."<br><br>
+הנכד, הרה"ח ר' ישראל מאיר בנצלוביץ הי"ו, מוסיף: סבא הגיע ארצה בתרצ"ד–תרצ"ה והשתקע בכפר אתא, שהיה אז מקום שממה. הקים את ה"גערע שטיבל" ברח' כצנלסון, את התלמוד־תורה הראשון, ואת המוסדות התורניים הראשונים של אגודת ישראל במקום, כפי שכבר נודע לנו. גם את החברא־קדישא של כפר אתא הקים בעשר אצבעותיו — וכדי לזכור תמיד את יום המיתה, רכש חלקת קבורה עוד בחייו; אך כשנפטר ידידו הקרוב הרה"ח ר' לייבל ודיסלבסקי ז"ל ולא היתה חלקה מוכנה עבורו, מסר לו מיד את חלקתו שלו, ומיהר לרכוש חלקה חדשה לעצמו — כדי שלא יהיה יום אחד בלי חלקה מוכנה המזכירה לו את יום המיתה.
+</div>
+
+<div class="story-box">
+<h4 data-a="01-281" style="margin-top:0;">הרה"ח ר' יהודה עזריאל רוטר ז"ל — איש המקוואות והחברא קדישא</h4>
+"לא היה יהודי בכפר אתא שלא ידע כי לכל צרה וצוקה יש כתובת אחת ויחידה: ר' עזריאל רוטר. הבית שלנו היה פתוח לכל דכפין", מספר בנו, הרה"ח ר' יחיאל רוטר הי"ו. "הטלפון היה מצלצל אצלנו בשעה 2 בלילה כמו בשעה 4 אחר הצהריים — אם מישהו שבק חיים, מתקשרים לאבא. בשבתות ובחגים היו מתדפקים על דלתנו לפני קידוש או אחריו, ואבא היה צועד למרחקים לעשות את מלאכת הקודש".<br><br>
+הרה"ח ר' עקיבא מילר הי"ו הראה בשיכון סיגעט את המקווה שבבניין ישיבת קרעטשניף, ששימש גם את כ"ק אדמו"ר מקרעטשניף־ירושלים זצוק"ל. "בעקבות הקופה הריקה נאלצנו להמשיך להשתמש במקווה הישן. יום אחד הגיע אלי ר' עזריאל רוטר ז"ל ואמר שהוא רוצה לשפץ את כל המקווה על חשבונו. שאלתי: ר' עזריאל, כסף מנלן? הוא לא שאל שאלות, נכנס לעובי הקורה ושיפץ בעלות של 20,000 ₪ — כסף שגייס בהתרמות, אך זוהי רק דוגמה קטנטנה ממעשיו".<br><br>
+בנו ר' יחיאל: "טהרתם של ישראל עלתה לאבא בבריאותו ממש. בשנים הראשונות לא היה מקווה לטהרת הנפטרים, ואבא יצא למסע גיוס כספים לבנייתו. הוא לקח על עצמו את כל ניהול המקוואות בעיר, כאילו היה זה רכושו הפרטי: 'תעשה את מה שצריך, הכי טוב שרק שייך, למרות שזה יקר, כי הכסף לא יהיה בעיה!' אחרי פטירתו סיפר לי הגר"ש שולזינגר זצ"ל שלא ישכח את הריקוד שלו בגמר מקווה טבילת הכלים, שרקד בהתלהבות: 'אשריכם ישראל... מה מקוה מטהר את הטמאים...'"
+</div>
+
+<p data-a="01-282" style="font-size:0.95em; color:#6b7280; text-align:left; margin-top:-10px;">(מקבצי זיכרונות אלה ערוכים מתוך כתבותיו של יוסף מאיר האס בעיתון המבשר, ומעיתון המודיע)</p>
+
+
+<div class="deco-divider"><div class="line"></div><div class="icon">✡</div><div class="line"></div></div>
+
+<div class="sources" id="sources">
+<h3>📚 הערות שוליים ומקורות</h3>
+<ol>
+<li id="fn1">במקום אחר ראה הרב את קרית אתא כהמשך לאושא של פעם, מקום בו ישבה הסנהדרין כעשר שנים ושם תוקנו תקנות אושא (אמנם לפי המידע אושא העתיקה נמצאת במרחק של כ־2 ק"מ מקרית אתא). ביום ב' י"ג אדר א' תשפ"ב הראה עורך חוברת זו את הנוסח הנ"ל מהמכתב לאדמו"ר מפיאסצנה לאדמו"ר ממאקווא שליט"א, שנהנה ממנו מאוד וביקש להשאיר אצלו את ספר 'אגרות הרב' להראותו לכל החסידים. יהי רצון שנזכה להרגיש תמיד שאנו — באדמת קודש. <a href="#fnr1">↑</a></li>
+<li id="fn2">המקובל הוא שהמתיישבים הראשונים קראו למקום "כפר עטה", ולפני כן נקרא המקום "כופרתא". אך יש המפריכים סברה זו, שכן בצילום מפה בריטית משנות השלושים מופיע שם המקום k.eta (כפר־עטה), במפה מוזמנת על ידי הסוכנות משנות העשרים מופיע kefr etta, ובמפה צרפתית משנת 1900 מופיע kefr et ta — ולכן לטענתם מעולם לא היה כפר ערבי בשם "כופרתא", ותמיד נקרא המקום כפר עטה. ואכן, בחיפוש בעיתונים ישנים לא נמצא באף עיתון שהמקום נקרא בעבר "כופרתא". <a href="#fnr2">↑</a></li>
+<li id="fn3">ביאור זה מופיע כבר בעלון 'דרכנו' בשנת תרצ"ו, הנמצא בהיברובוקס. <a href="#fnr3">↑</a></li>
+<li id="fn4">"על טהרת הקודש" הוא כינוי הלכתי בהלכות טומאה וטהרה לאוכל שאין עליו קדושת תרומה או קודש, אך בעליו החליט להתייחס אליו כאוכל קדוש שאסור לטמאו ואסור לאוכלו בטומאה, כדי להרגיל את עצמו לשמור על אכילת קדשים בטהרה — כך שגם אוכלי הקדשים שברשותו יישארו בטהרה (רש"י, חולין ב, ב). וגם לאחר החורבן מסופר בגמרא שנזהרו לאכול בטהרה (רש"י, נידה ו, ב: "חבריא מדכן בגלילא" — חברים שבגליל מטהרים יינם לנסכים ושמנם למנחות, שמא ייבנה בית המקדש בימיהם). <a href="#fnr4">↑</a></li>
+<li id="fn5">יאה שם זה למקום, שכן בשנותיו הראשונות היתה אדמת הכפר רוויה לא רק ממי גשמים אלא גם מדמעותיהם של אותם ראשונים. הם נאחזו בקרקע בחוזקה, נעצו בה את כיסופיהם ואת אהבתם לציון, ונלחמו להעלות עוד טיפת קדושה — למרות יקיריהם, אותם טמנו באדמה בזה אחר זה, באדמה שספגה את דמעותיהם כמו את נחישותם. הם לא נכנעו לקדחת השחורה ולמלריה הממאירה, ושבו והתחילו הכל מהתחלה, מתוך כוחות שהקב"ה טבע בהם ומרחשי לבם שהנה עומד השם לפקוד את עמו ואת ארצו. <a href="#fnr5">↑</a></li>
+<li id="fn6">שפירא י', ההד, תרצ"ב, גיליון י'. <a href="#fnr6">↑</a></li>
+<li id="fn7">היינט, 27 ביוני 1924. <a href="#fnr7">↑</a></li>
+<li id="fn8">הארץ, 13 באוגוסט 1924. <a href="#fnr8">↑</a></li>
+<li id="fn9">העולם, 5 בספטמבר 1924. <a href="#fnr9">↑</a></li>
+<li id="fn10">י' אלפסי, אנציקלופדיה לחסידות, כרך א', ירושלים תשמ"ו, עמ' תר"כ–תרכ"ג. <a href="#fnr10">↑</a></li>
+<li id="fn11">בשלב ראשון הייתה הישיבה בצריף של בית הכנסת ברחוב ירושלים, ובהמשך ברחוב סוקולוב 38 בערך. <a href="#fnr11">↑</a></li>
+<li id="fn12">על חיבתו של האדמו"ר לאדמת ארץ ישראל אפשר ללמוד מהסיפור הבא: כאשר המצב הכלכלי באירופה היה קשה, הציע לו הרב ישעיה למכור חלק מהאדמות שקנה. על כך קיבל ממנו מכתב רווי אהבה לארץ: "דע נא יקירי כי גחלים אתה חותה על ראשי, והרי זה דומה למי שעומד רגל אחת בגן עדן, ובא המלאך ולקחו בידו וברגליו ומשליכו מגן עדן לגהינום... עיני זלגו דמעות בהעלות זאת על רעיוני, להתרחק חס ושלום עתה אחר שהיתה לי קצת נגיעה בארץ ישראל" (המכתב מובא בספר 'זכרון קודש' לבעל 'אש קודש', עמ' 138). <a href="#fnr12">↑</a></li>
+<li id="fn13">ר' משה טאוב היה איש חסיד, שבעלותו ארצה נקשר לגור. מי שראה אותו מתפלל, נכספה נפשו לאלוקיו למראה התלהבותו וריקודיו בתפילה שבכל יום (מתוך המודיע, כ"ח חשוון תשס"ח). <a href="#fnr13">↑</a></li>
+<li id="fn14">עד כמה גדולה היתה מידת הכנסת האורחים באותה עת בכפר עטה, סיפר ר' צבי קפקה שיחי' על סבו ישעיה דידקוביץ, שגר בסוף רחוב סוקולוב ובביתו שני חדרים: באחד גרו הוא ומשפחתו, ואת השני נתן לתשע נערות שעלו לארץ לאחר השואה. <a href="#fnr14">↑</a></li>
+<li id="fn15">מתולדותיו בקצרה: הרב צבי הירש רוזנבוים, האדמו"ר מקרטשניף־סיגט, נולד בשנת תר"פ בסיגוט שברומניה. נסמך להוראה בישיבת סטמר, ונקשר בקשר אמיץ לאדמו"ר מסטמר. בקיץ תרצ"ז שהה בחצר זקנו, שם החל ללמוד את ספר התניא ונפשו נקשרה בו כל ימי חייו — בהזדמנות אמר שבבחרותו גמר את ספר התניא מאה ואחת פעמים. בהתמדתו הגדולה רצה האדמו"ר רבי חיים מרדכי מנדבורנא לקחתו כחתן לבתו, אך פרצה השואה. ביום ג' כ"ד אייר תש"ד העלו הצוררים את רבינו, את זקנו ואת כל בית זקנו על הקרונות לאושוויץ, ושם, בניסי ניסים, הפנו אותו ואת דודו האדמו"ר מקרעטשניף ימינה בעוד שאר משפחתו נשלחה שמאלה הי"ד. בכ"ח תמוז תש"ה הגיע לארץ ישראל בראש קבוצת בחורים, ונכנס ללמוד בישיבת מהרי"ץ דושינסקיא, שחיבבו ביותר. כנצר הראשון של בית קרעטשניף שהגיע לארה"ק, החל מיד בהנהגת החסידים. בשנת תש"ו נישא לבת האדמו"ר מנדבורנא, שגם היא ניצלה בחסדי שמים, בהשתתפות גדולי הדור שהתגוררו בירושלים. <a href="#fnr15">↑</a></li>
+<li id="fn16">בימים ההם הציעו לרבה מגרש ברחוב ירושלים ליד בית הכנסת של מאקווא, אולם קרוב לשם היה קולנוע אתא. הרבי נסע לחזון איש ושאל האם ראוי לבנות בית כנסת ליד הקולנוע. אמר החזו"א: אדרבה כדאי מאוד, שאנשים ההולכים לקולנוע ישמעו זמירות שבת ומי יודע אולי זה יעורר אותם. שאל הרבי: אבל אנשים שיבואו לכפר וירדו בתחנה המרכזית וישאלו היכן הרבי גר, ויאמרו להם "ליד הקולנוע" — האם זה מתאים? השיב החזו"א: על זה אני לא יכול לענות. <a href="#fnr16">↑</a></li>
+<li id="fn17">גם הרב שלום עוזר ברוין (חמיו של האדמו"ר מסרט ויז'ניץ), שהיה גר בסמוך — במקום שבו עומד עד היום הצריף של ברדוגו, כנראה הצריף האחרון בעיר — סייע בקניית המקום. <a href="#fnr17">↑</a></li>
+<li id="fn18">הרבי סבר שאין ללמוד כלל לימודי חול בתלמוד תורה, ולכן גם התלמוד תורה של החינוך העצמאי לא היה טוב בעיניו. היתה תקופה שרצו לעשות פשרה — בבוקר ילמדו בחינוך העצמאי, ובצהריים מי שירצה ילמד לימודי חול אצל הרבי — אך הרבי לא הסכים. <a href="#fnr18">↑</a></li>
+<li id="fn19">האמרי אמת אהב את ארץ הקודש מאוד, ביקר בה חמש פעמים, ורצה מאוד לקבוע בה את דירתו — ורק בגלל חסידיו חזר לחוץ לארץ. <a href="#fnr19">↑</a></li>
+<li id="fn20">כדברי רש"י ריש פרשת לך לך: "ושם אעשך לגוי גדול, וכאן אי אתה זוכה לבנים". מסופר על רב שהגיע לארץ ישראל לכנסיה הגדולה של אגודת ישראל בתשי"ד, ונכנס לבקר אצל הרב מבריסק. עשרים שנה עברו מנישואיו ולא נולדו לו ילדים. אמר לו הרב מבריסק: ארץ ישראל אינה נכנסת בחשבון כפי שכתוב אצל אברהם אבינו, לכן עליך להישאר בארץ ותיוושע. אלא שהיו לרב חשבונות אחרים, ולפני חזרתו נכנס שוב ליטול ברכת פרידה — וחזר הרב מבריסק על דבריו. גם הרבנית שמעה, והודיעה לבעלה שאינה נוסעת. הם התיישבו בתל אביב, וכעבור שנה נולד להם בן (שאל אביך ויגדך, ח"ב עמ' נ"ה). <a href="#fnr20">↑</a></li>
+<li id="fn21">נספר קצת על יהודי יקר זה: הרה"ח רבי ישראל יצחק חסידה ז"ל נולד בתר"ע בעיירה ז'יררדוב הסמוכה לוורשה. בתרפ"ה עלתה משפחתו לארץ ישראל. לאחר בואו למד את אמנות השחיטה והבדיקה, והיה למוהל ומנקר מומחה, ונסמך על ידי ר' יוסף חיים זוננפלד, הראי"ה קוק, הרב פראנק, ר' פנחס עפשטיין והרב מטעפליק. בשנת תרצ"ה נקרא על ידי הגאון החסיד רבי בנימין מנדלזון זצ"ל, רב המושב כפר עטה, לכהן כשוחט ובודק במקום — כשלושה חודשים בלבד לאחר בוא הרב עצמו. בהתחלה היה יד ימינו של הרב, וסייע בהקמת התלמוד תורה, בית יעקב, מערכת העירוב, מקווה הטהרה ועוד, וכיהן כמזכירו וכשלוחו האישי. <a href="#fnr21">↑</a></li>
+<li id="fn22">בשנת תשי"ט, שנת שמיטה, תקף ארבה אזורים נרחבים בארץ. נחיל ענק התנפל על שדות הסביבה, אך כשהגיע לגבול מושב קוממיות התרחש מחזה מדהים: המזיקים הפנו עורף ונעלמו תוך שניות, ובשדות קוממיות לא אירע כל נזק. תושבי קוממיות, ששמרו על השמיטה, הבינו שהנס אירע להם בזכות שמירתה. הרב בנימין מנדלסון עצמו כתב במכתבו: "והנה בא מחנה גדול של ארבה עד לגבול קוממיות, וכשאך הגיעו לגבולנו תיכף פנו לנו עורף... ולא הזיקו מאומה". וכשסופר על הנס למרן הגאון מבריסק זצוק"ל, אמר שצריך לפרסם זאת ברבים. <a href="#fnr22">↑</a></li>
+<li id="fn23">להלן רשימה חלקית של חסידי הרב מנדלסון שעברו עמו: ר' משה טויב, ר' ישראל דמבינסקי, ר' ראובן גישייד, ר' לייב בלומנקראנץ, ר' חיים יצחק סטניסלבובסקי, ר' אלימלך טורק, ר' שמחה שנקר, האחים ר' שמחה ור' ישראל טבצניק (שהפעילו בכפר מפעל תעשיית חלווה "בשם השחר"), ר' מרדכי גרינבלום ועוד. <a href="#fnr23">↑</a></li>
+<li id="fn24">שמעתי שהרב פלדמן, מנהל התלמוד תורה, היה בין אלו שנשכבו על הרצפה כדי שהרב לא יעזוב. <a href="#fnr24">↑</a></li>
+<li id="fn25">לדוגמה: הרה"ח רבי יעקב גוטמן התגורר בקרית אתא ועבד בחברת החשמל בחיפה. בכפר אתא הכיר את הגר"ב מנדלזון ודבק בו עד אחרית ימיו — נטש את עבודתו ועקר את דירתו למושב קוממיות, אליו עבר גם הגר"ב לשמש כרב (נכדו הוא משה גוטמן, שהוציא את הספר 'נזר הדור' על הרב מנדלזון). <a href="#fnr25">↑</a></li>
+<li id="fn26">שמעתי שהרבנית מנדלסון נשארה לגור בכפר אתא ולא רצתה לעבור לקוממיות, מקום ללא חשמל ומים. לאחר שנתיים קרא לה החזו"א לביתו לשכנעה. באותו לילה הסתובב החזו"א הלוך ושוב ואמר לר' יחזקאל ברטלר שעימו: מה אני אומר לרבנית, הרי ההלכה אומרת (כתובות קי, ב) "מוציאין מנוה הרעה לנוה היפה, אבל לא מנוה היפה לנוה הרעה" — כלומר אין חיוב על האישה לעבור ממקום טוב גשמית למקום רע (מובא ב'נזר הדור' עמ' ש"א). מכאן שהחזו"א סבר שאין חיוב לעבור לקוממיות; הרב מנדלסון עצמו יתכן ולא סבר כך אלא רק המליץ עליהם טעם טוב, שכן לאחיו יעקב מנדלסון, שגר בקרית אתא, אמר להמשיך לגור בה כדי לשמור על כשרות הבשר. שתי בנות ר' יעקב ממשיכות לגור בקרית אתא עד היום — משפחת הרב פוסטבסקי, ראש הישיבה לצעירים, והרב ברגר, חזן ימים נוראים בחניכי הישיבות. האדמו"ר ממאקווא חביב עליו לספר שהחזו"א קרא לכפר אתא — "נווה היפה"! <a href="#fnr26">↑</a></li>
+<li id="fn27">הרב קניבסקי זצוק"ל היה ממליץ וממריץ באברכים שיגורו בכל חלקי הארץ, שבכל מקום יתארגנו כמה אברכים ויסדירו את עניני הכשרות והדת. גם מרן החזון איש זצוק"ל היה ממליץ ומבקש מאברכים שיתפזרו לגור בכל חלקי הארץ ולא יתרכזו רק בבני ברק, "כדי שהם ישפיעו על סביבתם" — וידוע שהורה לאברכים מבני משפחתו וממקורביו לגור בפתח תקווה לאחר חתונתם (ארחות רבינו, חלק א', עמ' רל"ד). כאשר נשאל אחד אם זה לא יזיק לחינוך ילדיו, השיב: "אכן, לכך נתכוונתי, לבי סמוך ובטוח כי דאגתך לעתידם הרוחני של ילדיך תדריך את מנוחתך, ויש סיכויים שתקים שם תלמוד תורה עבורם ונמצאו גם אחרים ניצולים". וליהודי חרדי במקום נידח שביקש לעבור לסביבה דתית השיב: "מה טוב שיהא מצוי במקום כזה לפחות יהודי אחד כמוך" (פאר הדור ב', קמא). גם הגראי"ל שטיינמן, שכיהן בראשות ישיבת חפץ חיים בכפר סבא, ביקש כמה פעמים לעבור לבני ברק, אך מרן עיכב בעדו בטענה שעליו להתגורר במקום שיש בו צורך בחיזוק היהדות. הגר"ח קניבסקי סיפר (דרך שיחה ח"ב עמ' ת"מ) שהחזון איש לא קבע מושבו בירושלים, כי רצה להשפיע ביישוב החדש — "רציתי לשתול בו קצת נטיעות של תורה... אם לא אצליח לשתול, אזי אלך לגיהנום אני עם יושביה כאחד". מנכ"ל 'ערכים' הרב יוסף ווליס שליט"א מסביר: הקב"ה רוצה ליישב את הארץ לא רק בבתים ועצים אלא גם בבני תורה, המשפיעים אמונה ואהבת ה' על סביבתם — כל יהודי הגר בערים אלו הוא, בלי לעשות מעשה, שגריר של ערכים. <a href="#fnr27">↑</a></li>
+<li id="fn28">זקנו של רבי משה פארהאנד, הגאון הצדיק רבי יהושע, נמנה על גדולי קהילת נייטרא, ובעת שהתקבל בממלכה האוסטרו־הונגרית חוק המחייב לבחור שם משפחה, לא הפנה לכך את מוחו כלל, שקוע כל כולו בלימודו. כשהגיעו פקידי הרשות ומצאוהו שקוע בסוגיה, רמז להם בקוצר רוח: "נו?" משהוסבר לו שעליו לבחור שם, ולו גם שם של חפץ, הצביע לעבר הפרוכת שעל ארון הקודש — ורצה לומר "וילון". אלא שהפקיד שדיבר הונגרית בלבד שאל אדם אחר כיצד קוראים לוילון בגרמנית, וזה השיב "פארהאנג", אך הפקיד לא שמע היטב וכתב "פארהאנד" בדל"ת — וכך נשאר שם המשפחה לדורות עולם. <a href="#fnr28">↑</a></li>
+<li id="fn29">כ"ק הגה"צ ר' משה נתן נטע למברגר זצוק"ל נולד בט' תמוז תרס"ט בעיר פולגאר שבהונגריה, לאביו ר' מנחם מענדל למברגר זצוק"ל אב"ד פולגאר. בבחרותו גלה למקום תורה לישיבת בעל שו"ת המהרש"ג. באלול תרצ"ו נשא את בת הגה"ק ר' אפרים רוזנפלד זצוק"ל, ונתמנה לדומ"ץ במאקאווא, לעזר האב"ד. שתה כוס התרעלה בימי המלחמה, ואחריה חזר למאקאווא וייסד מחדש את קהילתה עד שנת תשי"ב, אז עלה לארה"ק והתיישב בכפר עטה־קרית אתא, ומשם הפיץ תורה על פני תבל. נתעלה לגנזי מרומים בכ' חשוון תשמ"ג ומנוחתו כבוד בקרית אתא. <a href="#fnr29">↑</a></li>
+<li id="fn30">לדוגמה: באגרות הרב מנדלזון (קע) מופיע מכתב מחאה שכתב לחברת החשמל, כיצד הביאו פועלים יהודים לתקן את החשמל בשבת במקום שרובם ככולם שומרי שבת. <a href="#fnr30">↑</a></li>
+<li id="fn31">כך מופיע במפורש באגרות הרב (קמ"ג): לבקשת בני הכפר שהרב יבוא רק אחרי פסח, ענה שאין הדבר אפשרי היות וצריכים אותו בקוממיות, ולכן דיבר עם הרב ממאקווא שיבוא לפחות עד א' אייר. הקשר בין העטרת משה לרב מנדלסון המשיך: לימים השיא בנו של הרב מנדלסון, הרב מנחם מנדל, את בנו הר' אהרן, עם נכדתו של העטרת משה, בתו של ר' שמעון למברגר ממאקווא. <a href="#fnr31">↑</a></li>
+<li id="fn32">מתוך "חיי נשמות אויר ארצך" — פירושים ומאמרים מהגר"מ (העטרת משה), שנאספו ונערכו בידי הרה"ג רבי יהודה לייב גפן זצ"ל, מבחירי תלמידי מהר"ם שפירא זצ"ל: "כל החותם מנחיל ארצות בברכת הארץ, ומושיע את ישראל בבונה ירושלים — הרי זה בור, וכל שאינו אומר ברית ותורה בברכת הארץ, ומלכות בית דוד בבונה ירושלים — לא יצא ידי חובתו" (ברכות מ"ט). הארץ אשר הנחיל ה' לאבותינו טובה כפולה ומכופלת: מעלתה הטבעית — ארץ זבת חלב ודבש; ומעלתה הרוחנית העולה על הכל — ארץ אשר ה' דורש אותה תמיד, מרכזה ירושלים. חיבת הארץ נשרשת עמוק בנפש האומה, ושתי השקפות יש בדבר: מי שרואה בה רק עניין מדיני, לו כל הארצות שוות; ומי שרואה בה קדושה בעשר קדושות, בשביל השכינה שלא זזה ממנה, בשביל הברית והחסד שנשבע ה' לאבותינו, בשביל מצוות התלויות בה — ועל אחת כמה וכמה ירושלים, בשביל מקום המקדש ומלכות בית דוד (רש"י ברכות מ"ח). <a href="#fnr32">↑</a></li>
+<li id="fn33">חסידות קאפוסט היא חצר חסידית, ענף של חסידות חב"ד שפוצלה וניהלה חצר בפני עצמה במחצית השנייה של המאה ה־19 ותחילת המאה ה־20. מייסד השושלת היה המהרי"ל, בנו של האדמו"ר השלישי מחב"ד (הצמח צדק). לאחר שני דורות שבה החצר והתמזגה עם חסידות חב"ד ליובאוויטש. <a href="#fnr33">↑</a></li>
+<li id="fn34">רבי יעקב פינקלשטיין ז"ל עבר לפני העמוד בשנת אבלותו והתפלל בנוסח אשכנז כמנהגו, ומצא מתנגדים על שאינו מתפלל נוסח ספרד. כשהגיעה משלחת מכפר אתא לדון בעניין אחר לפני החזון איש, העלו גם עניין זה — קם החזון איש, הביט לעבר ר' יעקב ואמר: "אתם שיניתם, הם אלו ששינו" (מעשה איש ג'). <a href="#fnr34">↑</a></li>
+<li id="fn35">מה היה סיפורם של כתבי האדמו"ר מפיאסצנה? במלחמת העולם השנייה, בתוך הגטו, מסר האדמו"ר שיעורים בעל פה בכל שבת במשך שלוש שנים, ובכל מוצאי שבת שיחזר וכתב את הדברים. לפני שנלקח לטרבלינקה, הניח את כל כתביו בקופסה שנקברה מתחת לבניין שבו שהה. לאחר המלחמה, בעת פינוי הגטו לבניית שכונה, נמצאה הקופסה עם הכתבים ומכתב לאחיו ישעיהו שפירא בתל אביב, שבו כתב שהבטיח שכל מי שילמד מהכתבים יראה ניסים רבים בחייו. הקופסה הגיעה למוזיאון בוורשה, ושם, בעקבות מכתב שנמצא, אותרו הכתבים ויצאו לאור בספר "אש קודש". במקומות רבים בעולם העוסקים בחקר השואה לומדים את המסמך הזה, ומתפלאים מדי פעם: יושב יהודי במלחמה הקשה, חדור אמונה, ומלמד דברי תורה בעל פה! <a href="#fnr35">↑</a></li>
+<li id="fn36">הרב דיסקין, המשמש גם רבה של חסידות חב"ד בקרית אתא, קיבל במהלך חייו כמה שטרות דולר חתומים בידי הרבי מליובאוויטש, בעלי ערך סנטימנטלי רב עבורו. בחודש מאי 2015 פרצו לביתו ובין השאר נגנבו השטרות. "גנבו כסף של שתי עמותות ותכשיטים, אבל הכי כואב לי על השטרות שהרבי נתן לי במשך השנים, בסגולה להצלחה, עם ברכות שכתובות על כל אחד. אלה מזכרות שאין להן ערך בידי הגנבים, אבל הן יקרות לי מאוד — אין להן תחליף". הרב פנה לגנבים דרך העיתון שיחזירו את השטרות. בעת ביקור בקבר רבי מאיר בעל הנס בטבריה, כשכל השטרות בידו, ניגש הגנב (או שליחו) לאדם ושאל אם הוא מכיר אנשי חב"ד — וביקש שייקח את המעטפה לסניף חב"ד, אף שאמר שאם ייקח את זה לעצמו זה שווה הרבה כסף, אך הוא בטוח שלא יעשה כן. האיש אכן מסר את המעטפה לסניף, ושם זיהו את השטרות כשייכים לרב דיסקין, שמיהר לנסוע לטבריה ביום שישי, לפני כניסת השבת, להשיבם לידיו. <a href="#fnr36">↑</a></li>
+</ol>
+</div>
+
+
+
+<div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+</div>
+
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+window.addEventListener('scroll', function() {
+  document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+});
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+  link.addEventListener('click', function(e){
+    var target = document.querySelector(link.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
+  });
+});
+</script>
+
+<script>
+/* =============================================================================
+   קול תודה — מנוע הקראה למאמרים תורניים   |   tts.js   v2.0
+   -----------------------------------------------------------------------------
+   העתק את הקובץ הזה כמות שהוא לתוך תגית <script> בסוף ה-HTML.
+   אין לכתוב אותו מחדש, לקצר או "לשפר" תוך כדי יצירת מאמר — הוא נבדק כך.
+   Web Speech API בלבד: בלי API חיצוני, בלי מפתח, בלי רשת, בלי עלות.
+   ============================================================================= */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    var NS       = 'koltoda.tts.';
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false, noHeVoice = false;
+    var clickToRead = true;
+
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+    function readPos() { try { return parseInt(localStorage.getItem(POS_KEY) || '0', 10) || 0; } catch (e) { return 0; } }
+
+    var G = '["\\u05f4\\u201d\\u2033]';
+    var R = "['\\u05f3\\u2019]";
+
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' ');
+        t = t.replace(/־/g, ' ');
+        t = t.replace(/\s*[–—]\s*/g, ', ');
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function chapterLabel(h) {
+        var d = h.getAttribute && h.getAttribute('data-chapter');
+        if (d && d.trim()) return d.trim();
+        var p = h.previousElementSibling;
+        if (p && p.classList && p.classList.contains('chapter-label')) {
+            return p.textContent.replace(/\s+/g, ' ').trim();
+        }
+        return '';
+    }
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (n.closest(SKIP)) return;
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            if (n.tagName === 'H2') {
+                var lbl = chapterLabel(n);
+                if (lbl && raw.indexOf(lbl) !== 0) raw = lbl + '. ' + raw;
+            }
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    function hint() {
+        if (noHeVoice) {
+            return 'לא נמצא קול עברי במחשב — ההקראה תישמע משובשת. ' +
+                   'ב-Windows: הגדרות ← שעה ושפה ← דיבור ← נהל קולות ← הוסף קולות ← עברית.';
+        }
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = readPos();
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        var was = noHeVoice;
+        noHeVoice = !he.length;
+        if (noHeVoice !== was && !isOn) say(hint());
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;
+                if (e.target.closest('a')) return;
+                if (window.getSelection && String(window.getSelection()).length) return;
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    var FS_MIN = 0.85, FS_MAX = 1.75, FS_STEP = 0.15, fontScale = 1;
+
+    function applyFontScale() {
+        document.documentElement.style.setProperty('--fs', String(fontScale));
+        var out = document.getElementById('fontScaleValue');
+        if (out) out.textContent = Math.round(fontScale * 100) + '%';
+        var dec = document.getElementById('fontSmaller'), inc = document.getElementById('fontBigger');
+        if (dec) dec.disabled = fontScale <= FS_MIN + 0.001;
+        if (inc) inc.disabled = fontScale >= FS_MAX - 0.001;
+    }
+
+    window.setFontScale = function (dir) {
+        fontScale = Math.min(FS_MAX, Math.max(FS_MIN, +(fontScale + dir * FS_STEP).toFixed(2)));
+        store('fs', String(fontScale));
+        applyFontScale();
+    };
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var savedFs = parseFloat(store('fs') || '1');
+        if (savedFs >= FS_MIN && savedFs <= FS_MAX) fontScale = savedFs;
+        applyFontScale();
+        if (readPos() > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+<script data-audio-cues="" type="application/json">{"01":[0.1,2.61,4.36,42.96,44.88,52,58.66,63.69,68.7,76.05,84.49,97.59,99.84,103.95,105.64,110.34,113.88,118.16,122.85,127.76,132.07,133.79,156.32,159.57,198.16,205.54,210.15,241.57,249.8,252.84,281.95,285.08,347.61,369.09,371.29,406.44,431.93,449.94,454.11,468.64,482.01,483.91,502.32,504.62,539.89,541.68,560.78,562.76,575.99,578.52,615.36,617.5,641.56,671.32,673.66,724.31,727.91,763.97,796.22,827.37,861.27,863.8,903.27,953.76,987.19,1040.84,1058.18,1062.15,1068.84,1073.83,1077.68,1079.91,1086.64,1091.75,1093.61,1112.79,1143.17,1179.55,1201.68,1204.06,1208.17,1212.66,1216.91,1221.47,1226.85,1232.5,1238.3,1249.53,1251.38,1253.08,1257.95,1259.86,1263.2,1266.33,1270.3,1274.47,1276.53,1279.75,1282.18,1284.73,1286.81,1291.46,1295.12,1299.51,1325.62,1355.6,1374.7,1376.6,1401.96,1425.74,1444.08,1449.29,1465.35,1482.51,1499.08,1502.19,1506.58,1524.2,1527.48,1603.31,1606.42,1647.77,1677.8,1685.93,1716.92,1775.25,1777.1,1785.2,1836,1892.12,1894.03,1897.44,1927.38,1950.32,1986.39,1989.58,2022.54,2040.16,2043.51,2089.98,2117.66,2121.18,2162.46,2164.57,2196.05,2199.7,2245.64,2276.09,2292.21,2294.6,2329.59,2332.14,2344.04,2346.09,2374.59,2405.14,2437.03,2476.56,2518.05,2520.91,2527.2,2530.13,2547,2550.09,2567.93,2570.58,2606.06,2607.77,2629.54,2663.73,2696.91,2708.99,2710.68,2712.33,2716.62,2720.66,2724.47,2728.12,2731.33,2734.04,2788.3,2839.49,2874.24,2876.44,2914.34,2916.59,2918.62,2969.66,2986.41,2989.08,3008.3,3010.72,3028.55,3054.62,3056.27,3096.25,3098.07,3100.3,3126.53,3178.34,3181.61,3218.33,3264.05,3266.34,3294.72,3344.17,3348.91,3391.37,3421.2,3462.54,3465.72,3468.95,3470.65,3474.56,3478.74,3481.96,3486.39,3490.75,3493.4,3534.18,3536.8,3561.66,3601.02,3622.41,3624.45,3649.58,3676.87,3679.7,3682.2,3715.97,3718.4,3767.53,3782.3,3786.04,3802.53,3804.37,3840.92,3877.62,3914.94,3938.1,3941.3,3943,3945.94,3948.19,3952.33,3955.64,3960.03,3962.98,4020.64,4043.16,4088.31,4090.54,4126.04,4173.68,4196.95,4199.65,4240.52,4268.15,4269.93,4272.08,4274.88,4330.35,4332.63,4346.92,4368.73,4423.78,4427.28,4455.82,4536.48,4573.46,4578.03,4587.65,4597.9,4604.38,4609.37,4617.19,4625.07,4638.33,4671.72,4679.74,4683.21,4687.16,4693.23]}</script><script data-audio-player="">
+/* =============================================================================
+   audio-player.js — נגן ההקלטה (MP3 שהופק מראש ב-edge-tts)
+   הדבק מילה במילה. נפרד לגמרי מ-tts.js (ההקראה החיה של הדפדפן).
+   ============================================================================= */
+(function () {
+    var box = document.querySelector('.audio-player');
+    if (!box) return;
+
+    var audio  = box.querySelector('audio');
+    var select = box.querySelector('.audio-chapter-select');
+    if (!audio || !select) return;
+
+    var KEY = 'koltoda.audio.ch.' + (document.title || '');
+
+    /* מפת תזמונים: { "01": [0, 3.2, 9.7, ...] } — זמן תחילת כל פסקה בקטע.
+       נוצרת ב-make-audio.mjs מקובצי ה-SRT של edge-tts. */
+    var CUES = {};
+    var tag = document.querySelector('script[data-audio-cues]');
+    if (tag) { try { CUES = JSON.parse(tag.textContent || '{}'); } catch (e) {} }
+
+    var seg = null;      // מזהה הקטע הפעיל, למשל "01"
+    var line = -1;       // אינדקס הפסקה המודגשת
+
+    /* ---------- הדגשה ---------- */
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+        line = -1;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+
+        /* בספר מתחלף — מדפדפים לעמוד של הפסקה, כמו בהקראה החיה */
+        var pg = el.closest ? el.closest('.page') : null;
+        if (pg && !pg.classList.contains('active') && window.bookGo) {
+            var pages = [].slice.call(document.querySelectorAll('#book .page'));
+            var i = pages.indexOf(pg);
+            if (i > -1) { window.bookGo(i); return; }
+        }
+
+        /* גוללים רק אם הפסקה מחוץ למסך, כדי לא לחטוף את הדף מהקורא */
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    /* איזו פסקה נאמרת עכשיו — האחרונה שזמן ההתחלה שלה כבר עבר */
+    function lineAt(starts, t) {
+        var lo = 0, hi = starts.length - 1, ans = 0;
+        while (lo <= hi) {
+            var mid = (lo + hi) >> 1;
+            if (starts[mid] <= t) { ans = mid; lo = mid + 1; } else { hi = mid - 1; }
+        }
+        return ans;
+    }
+
+    audio.addEventListener('timeupdate', function () {
+        var starts = CUES[seg];
+        if (!starts || !starts.length) return;
+        var i = lineAt(starts, audio.currentTime);
+        if (i === line) return;
+        line = i;
+        var el = document.querySelector('[data-a="' + seg + '-' + i + '"]');
+        if (el) highlight(el);
+    });
+
+    /* ---------- קבצים שנבחרו מהמחשב ----------
+       דפדפן לא יכול לקרוא נתיב מקומי מעצמו (תיקיית ההורדות חסומה לו), אבל
+       קובץ שהמשתמש בוחר בעצמו מותר. ממפים לפי שם הקובץ, כך שאפשר לבחור את
+       כל פרקי הספר בבת אחת. ההדגשה עובדת גם ככה — התזמונים כבר בדף. */
+    var picked = {};
+    var note   = box.querySelector('.audio-note');
+    var input  = box.querySelector('.audio-pick-input');
+    var pickBtn = box.querySelector('.audio-pick-btn');
+
+    function say(msg) { if (note) note.textContent = msg || ''; }
+
+    /* קישור הורדה שלא מולא עדיין מוסתר מהקורא — אין טעם ב"לחץ כאן" מת.
+       הבדיקה היא על ה-href עצמו, כך שברגע שמדביקים כתובת הוא מופיע לבד. */
+    var dl = box.querySelector('.audio-download');
+    if (dl && (dl.getAttribute('href') || '#') === '#') dl.style.display = 'none';
+
+    function baseName(u) {
+        try { u = decodeURIComponent(u); } catch (e) {}
+        return u.split('/').pop();
+    }
+
+    function srcFor(opt) {
+        return picked[baseName(opt.value)] || opt.value;
+    }
+
+    if (pickBtn && input) {
+        pickBtn.addEventListener('click', function () { input.click(); });
+        input.addEventListener('change', function () {
+            var files = [].slice.call(input.files || []);
+            if (!files.length) return;
+            var names = {};
+            for (var i = 0; i < select.options.length; i++) names[baseName(select.options[i].value)] = true;
+
+            var matched = 0, spare = [];
+            files.forEach(function (f) {
+                if (names[f.name]) { picked[f.name] = URL.createObjectURL(f); matched++; }
+                else spare.push(f);
+            });
+            /* קובץ יחיד בשם אחר — מניחים שהוא של הפרק המוצג */
+            if (!matched && spare.length === 1) {
+                picked[baseName(select.options[select.selectedIndex].value)] = URL.createObjectURL(spare[0]);
+                matched = 1;
+            }
+            say(matched ? 'נטענו ' + matched + ' קבצים מהמחשב.' : 'שמות הקבצים לא תואמים לפרקים.');
+            if (matched) load(select.selectedIndex, true);
+        });
+    }
+
+    /* הקובץ לא נמצא בנתיב היחסי — מכוונים להורדה ולבחירה ידנית */
+    audio.addEventListener('error', function () {
+        if (!audio.getAttribute('src')) return;
+        say('קובץ השמע לא נמצא לצד הדף. הורד אותו ואז בחר אותו כאן.');
+    });
+
+    /* ---------- ניווט בין פרקים ---------- */
+    function load(i, autoplay) {
+        var opt = select.options[i];
+        if (!opt) return;
+        select.selectedIndex = i;
+        seg = opt.getAttribute('data-seg');
+        clearHighlight();
+        audio.src = srcFor(opt);
+        try { localStorage.setItem(KEY, String(i)); } catch (e) {}
+        if (autoplay) {
+            var p = audio.play();
+            /* דפדפן שחוסם ניגון אוטומטי זורק — לא נשאיר Promise תלוי */
+            if (p && p.catch) p.catch(function () {});
+        }
+    }
+
+    select.addEventListener('change', function () { load(select.selectedIndex, true); });
+
+    /* סיום פרק — מנקה הדגשה וממשיך לבא אחריו מעצמו, כמו בהקראה החיה.
+       (השהיה לעומת זאת משאירה את ההדגשה — היא מסמנת איפה עצרנו.) */
+    audio.addEventListener('ended', function () {
+        clearHighlight();
+        if (select.selectedIndex < select.options.length - 1) {
+            load(select.selectedIndex + 1, true);
+        } else {
+            try { localStorage.removeItem(KEY); } catch (e) {}
+        }
+    });
+
+    /* חוזרים לפרק שבו עצרנו — בלי לנגן מעצמו */
+    var saved = 0;
+    try { saved = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (e) {}
+    if (saved < 0 || saved >= select.options.length) saved = 0;
+    load(saved, false);
+})();
+
+</script></body>
+</html>
