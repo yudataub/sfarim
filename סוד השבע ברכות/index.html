@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="torah-html-article 2.7.0">
+<title>סוד השבע ברכות</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px;
+    font-family: 'Segoe UI', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #1f2937;
+  }
+  .container {
+    max-width: 900px; margin: 0 auto; background: #fffefc;
+    padding: 60px 80px; border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  }
+  h1.main-title {
+    font-size: 3em; font-weight: bold; text-align: center; margin-bottom: 10px;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 50%, #f59e0b 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .subtitle { text-align: center; font-size: 1.3em; color: #4b5563; margin-bottom: 8px; }
+  .author { text-align: center; font-size: 1.05em; color: #6b7280; margin-bottom: 40px; }
+  h2 {
+    font-size: 2.2em; color: #7e22ce; border-right: 6px solid #7e22ce;
+    padding-right: 20px; margin-top: 50px;
+  }
+  h3 { font-size: 1.6em; color: #2563eb; margin-top: 34px; }
+  h4 { font-size: 1.35em; color: #059669; margin-top: 26px; }
+  p, li { font-size: 1.15em; line-height: 1.85; text-align: justify; }
+  p { margin: 0 0 20px 0; }
+  ol, ul { padding-right: 28px; }
+  li { margin-bottom: 14px; }
+  .emphasis { color: #7e22ce; font-weight: bold; }
+  em { color: #2563eb; font-style: italic; }
+
+  .chapter-label {
+    display: inline-block; font-size: 1em; color: #ec4899; font-weight: bold;
+    letter-spacing: 2px; margin-top: 60px; margin-bottom: 4px;
+  }
+
+  .in-chapter-box {
+    background: linear-gradient(135deg, #fdf4ff 0%, #fce7f3 100%);
+    border: 2px dashed #d946ef; border-radius: 14px; padding: 20px 26px;
+    margin: 10px 0 30px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  }
+  .in-chapter-box h4 { margin-top: 0; color: #a21caf; font-size: 1.15em; }
+  .in-chapter-box ul { margin: 8px 0 0 0; padding-right: 22px; }
+  .in-chapter-box li { font-size: 1.02em; margin-bottom: 6px; text-align: right; }
+
+  .highlight-box {
+    background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+    border-right: 6px solid #2563eb; border-radius: 12px; padding: 26px 30px; margin: 26px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .verse-box {
+    background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 100%);
+    border-right: 6px solid #7e22ce; border-radius: 12px; padding: 26px 30px; margin: 26px 0;
+    text-align: center; font-size: 1.25em; box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .quote-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-right: 6px solid #f59e0b; border-radius: 12px; padding: 26px 30px; margin: 26px 0;
+    font-style: italic; box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .quote-box p { text-align: justify; }
+  .source-tag { display: block; margin-top: 10px; font-style: normal; font-weight: bold; color: #92400e; text-align: left; }
+  .story-box {
+    background: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+    border-right: 6px solid #059669; border-radius: 12px; padding: 26px 30px; margin: 26px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .story-box h4 { margin-top: 0; }
+  .qa-box {
+    background: #fff; border: 2px dashed #ec4899; border-radius: 12px;
+    padding: 22px 26px; margin: 22px 0;
+  }
+  .section-divider {
+    width: 100%; padding: 22px 0; margin: 40px 0; border-radius: 10px; text-align: center;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+    color: #fff; font-size: 1.4em; font-weight: bold; box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+  .thin-divider {
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    margin: 50px 0 40px 0;
+  }
+  .thin-divider .line {
+    height: 3px; flex: 1; max-width: 260px;
+    background: linear-gradient(90deg, transparent, #f59e0b, #ec4899, transparent);
+    border-radius: 3px;
+  }
+  .thin-divider .icon { font-size: 1.6em; }
+
+  .chapter-transition {
+    width: 100%; min-height: 55vh; border-radius: 18px; margin: 60px 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; color: #fff;
+    background: linear-gradient(135deg, #7e22ce 0%, #ec4899 55%, #f59e0b 100%);
+    box-shadow: 0 10px 30px rgba(126,34,206,0.35);
+  }
+  .chapter-transition .num { font-size: 6em; font-weight: bold; opacity: 0.9; line-height: 1; }
+  .chapter-transition .title { font-size: 2em; font-weight: bold; margin-top: 10px; padding: 0 30px; }
+  .chapter-transition .sub { font-size: 1.15em; opacity: 0.9; margin-top: 14px; }
+
+  .questions-list li, .answers-list li { text-align: justify; }
+  .questions-list { background: #faf5ff; border-radius: 12px; padding: 24px 24px 24px 24px; }
+  .answers-list { background: #f0fdf4; border-radius: 12px; padding: 24px 24px 24px 24px; }
+
+  .toc { background: #f5eaff; border-radius: 14px; padding: 26px 30px; margin: 30px 0; }
+  .toc h3 { margin-top: 0; color: #7e22ce; }
+  .toc ul { list-style: none; padding-right: 6px; }
+  .toc li { margin-bottom: 10px; font-size: 1.1em; }
+  .toc a { color: #4c1d95; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  .sources { background: #f3f4f6; border-radius: 12px; padding: 26px 30px; margin-top: 50px; }
+  .sources h3 { margin-top: 0; }
+  .sources li { font-size: 1em; }
+
+  .footer {
+    margin-top: 60px; padding-top: 30px; border-top: 2px solid #e5e7eb;
+    text-align: center; font-size: 1.05em; color: #374151;
+  }
+
+  .scroll-top {
+    position: fixed; bottom: 30px; left: 30px; width: 46px; height: 46px; border-radius: 50%;
+    background: #7e22ce; color: #fff; display: none; align-items: center; justify-content: center;
+    text-decoration: none; font-size: 1.3em; box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  }
+
+  @media (max-width: 768px) {
+    body { padding: 10px; }
+    .container { padding: 30px 20px; }
+    h1.main-title { font-size: 2.1em; }
+    h2 { font-size: 1.6em; }
+    .chapter-transition .num { font-size: 4em; }
+    .chapter-transition .title { font-size: 1.4em; }
+  }
+
+  @media print {
+      @page { size: A4 portrait; margin: 20mm 18mm; }
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      body { background: #fff !important; padding: 0 !important; font-size: 11pt; }
+      .container { max-width: 100% !important; padding: 0 !important; box-shadow: none !important; }
+      .scroll-top { display: none !important; }
+      h2 { page-break-before: always; break-before: page; }
+      h2:first-of-type { page-break-before: avoid; break-before: avoid; }
+      h3, h4 { page-break-after: avoid; break-after: avoid; }
+      .verse-box, .highlight-box, .quote-box, .story-box, .two-columns, .qa-box, .in-chapter-box {
+          page-break-inside: avoid; break-inside: avoid;
+      }
+      .toc { page-break-after: always; break-after: page; }
+      .chapter-transition { min-height: auto; padding: 30px 0; page-break-before: always; break-before: page; }
+      .main-title { font-size: 26pt !important; -webkit-text-fill-color: #4a0080 !important; background: none !important; }
+      h2 { font-size: 16pt !important; } h3 { font-size: 13pt !important; } p, li { font-size: 11pt !important; }
+      .footer { page-break-before: always; break-before: page; }
+      [style*="display: flex"], [style*="display: grid"] { display: block !important; }
+  }
+
+  /* ---------- סרגל ההאזנה (נוסף אוטומטית) ---------- */
+  :root{
+    --lb-purple:#7e22ce; --lb-blue:#2563eb; --lb-green:#059669;
+    --lb-gold:#f59e0b; --lb-pink:#ec4899; --lb-muted:#6b7280;
+    --fs: 1;
+  }
+  .listen-bar{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid var(--lb-gold);
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+  }
+  .listen-btn-group{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .listen-btn{
+    display:flex; align-items:center; gap:8px;
+    background:linear-gradient(135deg, var(--lb-purple) 0%, var(--lb-pink) 100%);
+    color:#fff; border:none; border-radius:30px; padding:10px 22px;
+    font-size:1em; font-weight:bold; font-family:inherit; cursor:pointer;
+    transition:transform .15s, box-shadow .15s;
+  }
+  .listen-btn:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,.3); }
+  .listen-btn:active{ transform:translateY(0); }
+  .listen-stop-btn, .listen-skip-btn, .listen-size-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 16px; font-size:.95em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .listen-skip-btn{ padding:8px 12px; }
+  .listen-stop-btn:hover, .listen-skip-btn:hover,
+  .listen-size-btn:hover:not(:disabled){ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-size{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-size-btn{ padding:6px 12px; line-height:1; }
+  .listen-size-btn:disabled{ opacity:.35; cursor:default; border-color:#d1d5db; color:var(--lb-muted); }
+  .listen-size-btn.big{ font-size:1.25em; }
+  .listen-size output{ font-weight:bold; min-width:3.4em; text-align:center; }
+  .listen-toggle-btn{
+    background:#fff; color:var(--lb-purple); border:2px solid var(--lb-purple);
+    border-radius:30px; padding:8px 14px; font-size:.88em; font-weight:bold;
+    font-family:inherit; cursor:pointer; white-space:nowrap;
+    transition:transform .15s, background .15s, opacity .15s;
+  }
+  .listen-toggle-btn:hover{ transform:translateY(-2px); background:#f3e8ff; }
+  .listen-toggle-btn[aria-pressed="false"]{
+    color:var(--lb-muted); border-color:#d1d5db; background:#f9fafb; opacity:.8;
+  }
+  .listen-toggle-btn:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-btn:focus-visible, .listen-stop-btn:focus-visible,
+  .listen-skip-btn:focus-visible, .listen-size-btn:focus-visible,
+  .listen-voice select:focus-visible,
+  .listen-rate input:focus-visible{ outline:3px solid var(--lb-purple); outline-offset:2px; }
+  .listen-status{ font-size:.95em; color:#78350f; flex:1 1 200px; }
+  .listen-progress{ font-size:.9em; color:#78350f; font-weight:bold; white-space:nowrap; }
+  .listen-rate, .listen-voice{ display:flex; align-items:center; gap:6px; font-size:.9em; color:#78350f; }
+  .listen-rate input{ accent-color:var(--lb-purple); }
+  .listen-rate output{ font-weight:bold; min-width:2.6em; }
+  .listen-voice select{
+    border-radius:20px; border:1px solid var(--lb-gold); padding:4px 10px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:190px;
+  }
+  .tts-clickable{ cursor:pointer; transition:background .2s; border-radius:6px; }
+  .tts-clickable:hover{ background:rgba(245,158,11,.10); }
+  .reading-highlight{
+    background:linear-gradient(135deg,#e0e7ff 0%,#fce7f3 100%); border-radius:8px;
+    box-shadow:0 0 0 3px var(--lb-pink) inset; transition:background .3s;
+    padding-right:14px; padding-left:14px;
+    margin-right:-14px; margin-left:-14px;
+  }
+  .audio-player{
+    display:flex; flex-wrap:wrap; align-items:center; gap:15px;
+    margin:25px 0; padding:18px 25px;
+    background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);
+    border-radius:12px; border-right:6px solid #f59e0b;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+  }
+  .audio-player-title{ font-size:1.05em; font-weight:bold; color:#92400e; flex:1 1 100%;}
+  .audio-player audio{ flex:1 1 260px; min-width:220px; height:40px;}
+  .audio-chapter-select{
+    border-radius:20px; border:1px solid #f59e0b; padding:6px 12px;
+    font-family:inherit; background:#fff; color:#1f2937; max-width:260px;
+  }
+  .audio-get{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; flex:1 1 100%;}
+  .audio-download{
+    display:inline-flex; align-items:center; gap:6px;
+    background:linear-gradient(135deg,#7e22ce 0%,#ec4899 100%);
+    color:#fff; text-decoration:none; border-radius:30px; padding:8px 18px;
+    font-size:0.95em; font-weight:bold; transition:transform .15s, box-shadow .15s;
+  }
+  .audio-download:hover{ transform:translateY(-2px); box-shadow:0 5px 15px rgba(126,34,206,0.3);}
+  .audio-pick-btn{
+    background:#fff; color:#7e22ce; border:2px solid #7e22ce;
+    border-radius:30px; padding:7px 16px; font-size:0.9em; font-weight:bold;
+    font-family:inherit; cursor:pointer; transition:transform .15s, background .15s;
+  }
+  .audio-pick-btn:hover{ transform:translateY(-2px); background:#f3e8ff;}
+  .audio-note{ font-size:0.9em; color:#92400e;}
+  h2.reading-highlight{ padding-right:34px; }
+  @media(max-width:768px){
+    .listen-bar{ padding:15px; gap:10px; }
+    .listen-status{ flex:1 1 100%; }
+    .listen-voice select{ max-width:140px; }
+  }
+  @media print{
+    .listen-bar{ display:none !important; }
+    .audio-player { display: none !important; }
+    .reading-highlight{ box-shadow:none !important; background:none !important; }
+    .tts-clickable{ cursor:auto; }
+  }
+  /* fs scaling for plain body paragraphs/list items, applied additively so it
+     doesn't fight whatever base font-size the article already declares */
+  .container p, .container li{ font-size: calc(1em * var(--fs)); }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1 data-a="01-0" class="main-title" id="top">סוד השבע ברכות</h1>
+  <div class="subtitle">עיון בביאור שבע ברכות החתונה — בשאלות ותשובות</div>
+  <div class="author">מאת: הרב יהודה טאוב</div>
+
+
+  <div class="listen-bar">
+      <div class="listen-btn-group">
+          <button class="listen-btn" id="listenBtn" onclick="toggleListen()" aria-pressed="false" aria-label="הפעל או השהה הקראה">🔊 האזן למאמר</button>
+          <button class="listen-skip-btn" onclick="skipChapter(-1)" aria-label="פרק קודם" title="פרק קודם">⏪</button>
+          <button class="listen-skip-btn" onclick="skipListen(-1)" aria-label="פסקה קודמת" title="פסקה קודמת">⏮</button>
+          <button class="listen-skip-btn" onclick="skipListen(1)" aria-label="פסקה הבאה" title="פסקה הבאה">⏭</button>
+          <button class="listen-skip-btn" onclick="skipChapter(1)" aria-label="פרק הבא" title="פרק הבא">⏩</button>
+          <button class="listen-stop-btn" onclick="stopListen()" aria-label="עצור הקראה">⏹ עצור</button>
+          <button class="listen-toggle-btn" id="clickReadBtn" onclick="toggleClickRead()" aria-pressed="true" aria-label="לחיצה על פסקה מתחילה הקראה">👆 לחיצה: פעילה</button>
+      </div>
+      <span class="listen-status" id="listenStatus" role="status" aria-live="polite">לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה</span>
+      <span class="listen-progress" id="listenProgress"></span>
+      <div class="listen-rate">
+          <label for="rateRange">מהירות:</label>
+          <input type="range" id="rateRange" min="0.5" max="1.6" step="0.1" value="1" oninput="setListenRate(this.value)" onchange="applyListenRate(this.value)" aria-label="מהירות הקראה">
+          <output id="rateValue" for="rateRange">1.0×</output>
+      </div>
+      <div class="listen-voice">
+          <label for="voiceSelect">קול:</label>
+          <select id="voiceSelect" onchange="setListenVoice(this.value)" aria-label="בחירת קול"></select>
+      </div>
+      <div class="listen-size">
+          <span>גודל טקסט:</span>
+          <button class="listen-size-btn" id="fontSmaller" onclick="setFontScale(-1)" aria-label="הקטן את הטקסט" title="הקטן את הטקסט">א−</button>
+          <output id="fontScaleValue">100%</output>
+          <button class="listen-size-btn big" id="fontBigger" onclick="setFontScale(1)" aria-label="הגדל את הטקסט" title="הגדל את הטקסט">א+</button>
+      </div>
+  </div><div class="audio-player no-tts">
+    <div class="audio-player-title">🎧 האזנה להקלטה — קול הילה</div>
+    <select class="audio-chapter-select" aria-label="בחירת פרק להאזנה" hidden>
+        <option value="https://yudataub.github.io/taub-audio/%D7%A1%D7%95%D7%93_%D7%94%D7%A9%D7%91%D7%A2_%D7%91%D7%A8%D7%9B%D7%95%D7%AA.mp3" data-seg="01">סוד השבע ברכות · שהכל ברא לכבודו · יוצר האדם, יצירה ראשונה ומעשה · מתנת החיים, עוד טעמים לברכת "יוצר האדם" · אשר יצר את האדם, מצא אשה מצא טוב · שוש תשיש, שמחת האם בישראל · אשר ברא ששון ושמחה, סיום שבע הברכות</option>
+    </select>
+    <audio controls preload="none"></audio>
+    <div class="audio-get">
+        <a class="audio-download" href="https://yudataub.github.io/taub-audio/%D7%A1%D7%95%D7%93_%D7%94%D7%A9%D7%91%D7%A2_%D7%91%D7%A8%D7%9B%D7%95%D7%AA.mp3" download target="_blank" rel="noopener">📥 להורדת קובץ השמיעה לחץ כאן</a>
+        <button type="button" class="audio-pick-btn" hidden>📂 בחר את הקובץ שהורדת</button>
+        <input type="file" class="audio-pick-input" accept="audio/*" multiple hidden>
+        <span class="audio-note"></span>
+    </div>
+</div>
+
+  <div class="toc">
+    <h3>📑 תוכן העניינים</h3>
+    <ul>
+      <li><a href="#section1">פתיחה — סוד השבע ברכות</a></li>
+      <li><a href="#section2">פרק א: שהכל ברא לכבודו</a></li>
+      <li><a href="#section3">פרק ב: יוצר האדם — יצירה ראשונה ומעשה</a></li>
+      <li><a href="#section4">פרק ג: מתנת החיים — עוד טעמים לברכת יוצר האדם</a></li>
+      <li><a href="#section5">פרק ד: אשר יצר את האדם — מצא אשה מצא טוב</a></li>
+      <li><a href="#section6">פרק ה: שוש תשיש — שמחת האם בישראל</a></li>
+      <li><a href="#section7">פרק ו: אשר ברא ששון ושמחה — סיום שבע הברכות</a></li>
+    </ul>
+  </div>
+
+  <!-- ============ פתיחה ============ -->
+  <span class="chapter-label">פתיחה</span>
+  <h2 data-a="01-1" id="section1">סוד השבע ברכות</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-2">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-3">כיצד נקראות שבע הברכות בלשון חז"ל, וכנגד מה תוקנו</li>
+      <li data-a="01-4">מהי באמת "השראת שכינה" — מציאות מורגשת או רעיון מופשט</li>
+      <li data-a="01-5">מקורות לכך ששכינה שורה בין איש לאשתו</li>
+      <li data-a="01-6">כיצד לכוון בברכת המזון להודות על מתנת בן/בת הזוג</li>
+      <li data-a="01-7">שני סיפורים על כבוד האישה ושלום בית</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-8">ברכת חתנים הם שבע ברכות. וכתב הכלבו (סי' ע"ה) ששבע ברכות אלו הן כנגד שבע חופות שעשה הקדוש ברוך הוא לאדם הראשון בגן עדן. ונראה שהן כנגד שבעת ימי בראשית אשר העולם נברא בהם, כי סיבת הזיווג היא עיקר יצירת העולם התחתון, שלא נברא אלא לפריה ורביה, שנאמר "לא תהו בראה לשבת יצרה" (ישעיה מה, יח; גיטין מא ב), ולכן הם שבעת ימי המשתה גם כן (מטה משה, גמילות חסדים ח"ג, הכנסת כלה פ"א).</p>
+    <p data-a="01-9" style="margin-bottom:0;">עוד נראה לומר: בית יהודי הוא הקמת משכן לה'. כשם שבהקמת המשכן היו שבעת ימי המילואים, כך בבית היהודי עושים שבעה ימי מילואים — בסעודות ובהודיות דבר יום ביומו.</p>
+  </div>
+
+  <h3 data-a="01-10">❓ שאלות</h3>
+  <ol class="questions-list">
+    <li data-a="01-11">כיצד נקראים השבע ברכות בלשון חז"ל?</li>
+    <li data-a="01-12">מדוע חשוב כל כך ללמוד את הביאור של השבע ברכות?</li>
+    <li data-a="01-13">כנגד מה תיקנו את שבע הברכות?</li>
+    <li data-a="01-14">איזו ברכה כנגד איזו?</li>
+    <li data-a="01-15">חז"ל אומרים (סוטה יז, א): "איש ואשה זכו שכינה ביניהן" — כיצד יש להתייחס ל"שכינה": האם זו מציאות של קדושה נשגבה ולא מוחשית, או שהיא מציאות מורגשת ביותר בתוך הבית, המשפיעה מאוד על כל אחד הנמצא בו?</li>
+    <li data-a="01-16">הבא ראיה להגדרה/לפירוש זה של השראת השכינה.</li>
+    <li data-a="01-17">כיצד שבע הברכות מביאות להשראת השכינה?</li>
+    <li data-a="01-18">האם ידוע לך מקור מהתורה שהשכינה שורה בין איש לאשתו?</li>
+    <li data-a="01-19">היכן בברכת המזון תוכל לכוון להודות לה' על בן/בת זוגך הנפלא/ה?</li>
+  </ol>
+
+  <h3 data-a="01-20">💡 תשובות</h3>
+  <ol class="answers-list">
+    <li data-a="01-21">ברכת חתנים היא השם המדויק. כך מובא בשיטה מקובצת (כתובות ח, א) בשם תלמידי הר"י ז"ל: "ברכת חתנים נקרא הששה ברכות שהוזכרו למעלה, וההמון קוראים אותן שבע ברכות מפני שמונים מכללם ברכת בורא פרי הגפן".</li>
+    <li data-a="01-22">הכלל בכל המועדים הוא: כדי לזכות לקבל את ההשפעות של המועד, יש לדקדק ולהיזהר באותן המצוות שנתייחדו לאותו מועד — שכן כל ההשפעה וכל הקדושה של המועד מושרשות במצוות אלו. כך גם בנישואין: כל ההצלחה שאנו מקווים לזכות בה על ידי שבע הברכות גנוזה וצפונה בברכות עצמן, בכוונה באמירתן ברגש של אהבה והודיה. משם נשאב את האור והשפע לחיים מלאים באהבה ובשמחה.</li>
+    <li data-a="01-23">בגמרא (יבמות סב, ב) מבואר שלפני שהאדם מתחתן הוא חסר <strong>ש</strong>מחה, <strong>ב</strong>רכה, <strong>ח</strong>ומה, <strong>א</strong>דם, <strong>ש</strong>לום, <strong>ת</strong>ורה <strong>ו</strong>טובה — וסימנך "שב"ח אשתו" (חיד"א, מדבר קדמות נ, יג). כנגד שבע מתנות אלו תיקנו חז"ל שבע ברכות. וכן, כמובא לעיל, הן כנגד שבעת ימי הבריאה או שבע חופות אדם הראשון.</li>
+    <li data-a="01-24">קשה לדעת בבירור איזו ברכה כנגד איזו, אך נבאר במעט: כנגד שמחה — "שוש תשיש". כנגד ברכה — "שהכל ברא לכבודו". כנגד חומה — "בנין עדי עד". כנגד אדם — "יוצר האדם". כנגד שלום — "רעים אהובים". כנגד תורה — "גפן", שהרי "גפן זה תורה" (חולין צב, א); כשם שבגפן טמון היין, כך בתורה טמונים סודות נפלאים (וביין רמוזים סודות, כידוע). כנגד טובה — "אשר ברא עשרה מיני שמחה".</li>
+    <li data-a="01-25">המושג "שכינה" אינו רק מציאות רעיונית, אלא מתאר דבר מוגדר ומורגש מאוד. במקום שיש בו השראת שכינה <span class="emphasis">ניתן להרגיש את השי"ת, את טובו המופלג ואת אהבתו הנפלאה לברואיו</span> יותר משאר המקומות. השראת השכינה מביאה שמחה גדולה בכל חלקי הנפש — ממש כמו מי שנמצא בנוכחות אדם טוב מאוד, שפניו מקרינים אהבה ונדיבות, ונוכחותו מעוררת באופן טבעי רגשות שמחה נעלים. אווירה מיוחדת זו, השורה בבית שיש בו שלום, היא מציאות מורגשת שמשפיעה על כל הבאים בתוכו — ובמיוחד על הילדים הגדלים בו. לכן אמרו חז"ל: אין שכינה שורה אלא מתוך שמחה, שעצבות ושכינה הם תרתי דסתרי.</li>
+    <li data-a="01-26">על הפסוק "וִיהִי נֹעַם אֲדֹנָי אֱלֹהֵינוּ עָלֵינוּ" (תהלים צ, יז) מפרש רש"י: "ויהי נועם ה' אלהינו — שכינתו ותנחומיו". להרגיש את נעימותו וטובו של ה' — זוהי השראת השכינה. וכן פירש רש"י על "ותרועת מלך בו" (במדבר כג, כא) — לשון חיבה ורעות, וכן תרגם אונקלוס: "ושכינת מלכהון ביניהון".</li>
+    <li data-a="01-27">בשבע הברכות טמון סוד השכינה, שביד החתן והכלה לזכות שתהיה שרויה ביניהם למשך כל חייהם. כאשר חיים עם רגש הודיה לה' על כל הטוב שבשמחת הנישואין, כפי שמפורט בברכות אלו, זוכים להשראת שכינה תמידית בביתם.</li>
+    <li data-a="01-28">המשך חכמה (ויקרא טו, לא) מבאר את דרשת ר' עקיבא (סוטה יז, א): "איש ואשה זכו — שכינה ביניהם, לא זכו — אש אוכלתם", וכך יש לפרש את "בטמאם את משכני בתוכם" — "בתוכם" רומז דווקא בין איש לאשתו.</li>
+    <li data-a="01-29">בברכה הרביעית של ברכת המזון — ברכת "הטוב והמטיב" — מוזכר חמש פעמים שהקב"ה טוב ומטיב: "הַמֶּלֶךְ הַטּוֹב וְהַמֵּטִיב לַכֹּל... שֶׁבְּכָל יוֹם וָיוֹם הוּא הֵטִיב הוּא מֵטִיב הוּא יֵיטִיב לָנוּ". נראה שכאן מקום להודות על מתנת בן/בת הזוג, שאף עליה נאמרו חמישה "טוב": (א) "לא טוב היות האדם לבדו" מול "מצא אשה מצא טוב"; (ב) עד שלא נבראה האשה — "לא טוב היות האדם לבדו", ומשנבראה — "והנה טוב מאוד" (מדרש תהלים, מזמור נט); (ג) "אשה טובה מתנה טובה לבעלה" (יבמות סג, ב); (ד) "וטוב לב משתה תמיד — זה שיש לו אשה טובה" (בבא בתרא קמה, ב); (ה) "למען ייטב לי בעבורך" (אברהם אבינו). כדאי לכוון בפרט בשלוש הלשונות "הוּא הֵטִיב הוּא מֵטִיב הוּא יֵיטִיב" — עבר, הווה ועתיד: להודות על העבר שקיבל מתנה טובה, על ההווה שיש לו אשה טובה, ועל העתיד שבזכותה יזכה לטובה נוספת.</li>
+  </ol>
+
+  <div class="story-box">
+    <h4 data-a="01-30">🕯️ סיפור: להתאמץ להשכין שלום בית</h4>
+    <p data-a="01-31">מסופר על ר' חיים זוננפלד זצ"ל: כששמע על סכסוך שנפל בין איש לאשתו, לא נח ולא שקט עד שהביא את שני הצדדים לפיוס. פעם, בשעת לילה מאוחרת, לא היסס להעיר איש משנתו כדי להביא שלום בינו לבין אשתו. כשראה שהעקשנות נתרככה, היה פותח בכך שהשכינה שרויה בגלות וסובלת יסורים מבנים שגלו מעל שולחן אביהם, ושהמחזיקים במחלוקת גורמים לה להסתלק ממעונם. וכששאלוהו מדוע כזו דחיפות, השיב במשל למשיח היושב בפתחי רומא ומתיר רגל אחת בלבד מהתחבושת בכל פעם, כדי שלא יתעכב אם יבוא לגאול — "ככל שתקדימו להשלים, כן תמהר השכינה לחזור למעונה, ממנה גורשה בעטיה של המחלוקת שביניכם" (ספר האיש על החומה, עמ' 339).</p>
+  </div>
+
+  <div class="story-box">
+    <h4 data-a="01-32">💌 סיפור: כבודו של רבי עקיבא איגר לרעייתו</h4>
+    <p data-a="01-33">במכתב שנדפס בספר חוט המשולש (עמ' קצא), כותב רבי עקיבא איגר לשני ידידים שהציעו לו להינשא שנית זמן קצר לאחר פטירת אשתו הראשונה, בתוך ימי השלושים: "האם אשכח אהבת אשת נעורים, יונתי תמתי... היא היתה בעזרי למעט תורת ה' אשר בקרבי... היא הסתירה ממני דאגת הפרנסה שלא להשביתני מעבודת ה'... ואנכי השכול, נגוע ומוכה, כלי שבור... איה איפה ירעו גדיותי, את מי אשיח דאגותי וירווח לי". מכתב זה, שנכתב מתוך כאב עמוק, מגלה עד כמה האישה היא שותפה של ממש בעבודת ה' של בעלה.</p>
+  </div>
+
+  <div class="thin-divider"><div class="line"></div><div class="icon">✡</div><div class="line"></div></div>
+
+  <div class="chapter-transition">
+    <div class="num">א</div>
+    <div class="title">שהכל ברא לכבודו</div>
+    <div class="sub">הברכה הראשונה — הודיה על בריאת העולם כולו</div>
+  </div>
+
+  <!-- ============ פרק א ============ -->
+  <span class="chapter-label">פרק א</span>
+  <h2 data-a="01-34" id="section2">שהכל ברא לכבודו</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-35">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-36">כיצד מבאר רש"י את שייכות ברכה זו לחתונה, ומה הקושי בביאורו</li>
+      <li data-a="01-37">ביאור הרמ"ה: הזיווג הוא עיקר יצירת העולם התחתון</li>
+      <li data-a="01-38">מדוע דווקא בחתונה מודים על בריאת העולם כולו</li>
+      <li data-a="01-39">מקומות נוספים בהם ההודיה השלמה היא הודיה "מבראשית"</li>
+      <li data-a="01-40">מהי הזכות המיוחדת שיש בעצם היכולת להודות לה'</li>
+    </ul>
+  </div>
+
+  <div class="verse-box">
+    <p data-a="01-41"><strong>בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁהַכֹּל בָּרָא לִכְבוֹדוֹ.</strong></p>
+  </div>
+
+  <p data-a="01-42">שבע הברכות פותחות בברכת "שהכל ברא לכבודו" — הודיה על בריאת עולם נפלא, שברא השי"ת לטובתנו, עם אפשרות מיוחדת לתת בו כבוד לשמו. במה קשורה ברכה זו כללית כל כך, על בריאת העולם כולו, לשמחת חתן וכלה?</p>
+
+  <h3 data-a="01-43">❓ שאלות</h3>
+  <ol class="questions-list">
+    <li data-a="01-44">כיצד ביאר רש"י את ברכת "שהכל ברא לכבודו"?</li>
+    <li data-a="01-45">מה קשה על ביאור רש"י?</li>
+    <li data-a="01-46">כיצד מסביר הרמ"ה מדוע נתקנה ברכת "שהכל ברא לכבודו" בנישואין?</li>
+    <li data-a="01-47">הבא ביאור שלישי, מה שייכת ברכה זו לנישואין?</li>
+    <li data-a="01-48">היכן עוד מצאנו שהודיה מושלמת היא הודיה "מראשית"?</li>
+    <li data-a="01-49">מה הפירוש "ברוך הוא אלוקינו שבראנו לכבודו"?</li>
+    <li data-a="01-50">הסבר את המילים בברכת יוצר: "טוֹב יָצַר כָּבוֹד לִשְׁמוֹ"!</li>
+    <li data-a="01-51">על מה מודים בברכת "שהכל ברא לכבודו"?</li>
+    <li data-a="01-52">היכן מצאנו במקומות נוספים שמודים לה' על הזכות להודות לו?</li>
+    <li data-a="01-53">כיצד ביאר ה"הפלאה" מדוע חתונה היא הזמן להודות על בריאת העולם?</li>
+    <li data-a="01-54">איזה ביאור נוסף מביא ה"שערי אהבה" לקשר שבין ברכה זו לנישואין?</li>
+  </ol>
+
+  <h3 data-a="01-55">💡 תשובות</h3>
+  <ol class="answers-list">
+    <li data-a="01-56">רש"י (כתובות ח, א) מבאר: "שהכל ברא לכבודו" אינה מכלל ברכות ההודיה על הנישואין עצמם, אלא שייכת לאסיפת העם הנאספים שם לגמול חסד — זכר לחסד שעשה הקב"ה עם אדם הראשון, שנעשה לו "שושבין" ונתעסק בו. אסיפה זו לשם גמילות חסד היא בעצמה כבוד המקום, ולכך נתקנה ברכה זו. מוסיף בספר <em>יקר מפז</em>: לא רק הזכרת החסד שעשה הקב"ה היא הכבוד, אלא ההליכה בדרכיו — שכשם שהוא משמח חתנים, כך גם אנו. לפי זה, ראוי שכל הבא לשמח חתן וכלה יחשוב: הנני הולך כעת בדרכי הקב"ה, שאף הוא משמח חתנים.</li>
+    <li data-a="01-57">לכאורה קשה: הרי כל חסד שאנו עושים הוא בגדר "מה הוא מבקר חולים אף אתה מבקר חולים" — ומדוע לא תיקנו ברכה זו גם בביקור חולים או בלוויית המת? מיישבים (פסקי רי"ד, כתובות): ברכות אלו טעונות אמירה בעשרה, ובכך יש כבוד שמים מיוחד — "ברוב עם הדרת מלך" — ולכן דווקא בנישואין, שמעצם מהותם מתקיים בהם ריבוי עם, תיקנו ברכה זו.</li>
+    <li data-a="01-58">הרמ"ה (מובא באבודרהם) מבאר באופן אחר: ברכה זו נתקנה כדי להזכיר את סיבת הזיווג, שהוא עיקר יצירת העולם התחתון — שהרי העולם לא נברא אלא לפריה ורביה, שנאמר "לא תהו בראה לשבת יצרה". וזהו כבודו של מקום, שאין כבוד הבורא ניכר אלא על ידי בריותיו, שנאמר "כל הנקרא בשמי ולכבודי בראתיו". וכן כתב המאירי: "הזיווג בא לפרות ולרבות ולקיים היישוב... וזהו כבודו של מקום, שעל ידי בריותיו כבודו מתפרסם". ומוסיף בעל <em>יסוד ושורש העבודה</em>: כל הרבייה מרבה כבוד שמים, שהרי כל נולד הוא עוד "עבד לבורא" — ולכן שמח ר' משה איויער ז"ל שמחה גדולה בכל לידה, זכר או נקבה כאחד, שהרי משניהם יוצא נחת רוח לבורא.</li>
+    <li data-a="01-59">בנישואין אנו משבחים ומודים להקב"ה על הטוב והחסד הנפלא שבמציאות של שמחת חתן וכלה. במעמד נפלא זה ניתן להגיע להודיה להשי"ת בצורה המוחשית והמושלמת ביותר — ולכן תיקנו חז"ל להתחיל את ההודיה דווקא מ"בראשית", מבריאת העולם כולו.</li>
+    <li data-a="01-60">ר' ירוחם ממיר זצ"ל הביא לכך מקור מהתורה: בהבאת ביכורים אין מודים רק על הפרי שביכר, ואף לא על הנחלה או השדה שהוציאה אותו, אלא פותחים דווקא ב"ארמי אבד אבי וירד מצרימה..." — ועל כל השתלשלות הדורות שהביאה עד הרגע הזה. מכאן למד יסוד: חובת הכרת הטוב מחייבת להודות על כל השרשור שהביא לחסד הנוכחי, ולא רק על החסד עצמו. כך גם בחנוכה מודים "על הנסים" על כל תקופת הגלות, וכן בברכת המזון — הברכה היחידה מדאורייתא לכולי עלמא — מודים על יציאת מצרים, ברית ותורה, שהביאו אותנו עד ארץ ישראל.</li>
+    <li data-a="01-61">כתוב בברייתא (סוף מסכת אבות): "כל מה שברא הקדוש ברוך הוא בעולמו, לא בראו אלא לכבודו" — כלומר שיכירו בני העולם בטוב ה', עד שירגישו רגשי הערצה וכבוד כלפיו יתברך. בכך יזכו הבריות להיות דבוקים בו וליהנות מטובו.</li>
+    <li data-a="01-62">הקב"ה המציא אפשרות שהיחס של הברואים כלפיו ישפיע כביכול עליו יתברך — לגרום לו נחת רוח, או חלילה את ההיפך, כמו שכתוב: "וַיִּנָּחֶם ה' כִּי עָשָׂה אֶת הָאָדָם... וַיִּתְעַצֵּב אֶל לִבּוֹ" (בראשית ו, ו). המצאה זו היא חסד מדהים ביותר, שהרי לבורא עולם לא היה חסר דבר לפני בריאת העולם, והוא לא היה זקוק לכבוד שלנו. השי"ת המציא זאת רק כדי לתת לנו הזדמנות לזכות לעולם הבא — וזהו "טוֹב יָצַר כָּבוֹד לִשְׁמוֹ": הקב"ה, שהוא טוב ומטיב, יצר את האפשרות עצמה לתת כבוד לשמו.</li>
+    <li data-a="01-63">מודים על כך שעם בריאת העולם המציא לנו השי"ת את האפשרות לאהוב אותו, להודות לו ולשבחו, ובכך לכבדו — ושלכבוד זה תהיה משמעות אמיתית וחשובה למעלה, ככתוב "יְהִי כְבוֹד ה' לְעוֹלָם, יִשְׂמַח ה' בְּמַעֲשָׂיו" (תהלים קד, לא). מבאר הספורנו: כאשר יגיע כבוד ה' לעולם — שיכירו כולם בכבודו ובטוב תכליתו — בזה ישמח ה' במעשיו, ירווה נחת מברואיו.</li>
+    <li data-a="01-64">(א) במודים דרבנן אומרים "על שאנו מודים לך" — ומבאר רש"י שמודים על הזכות עצמה להודות. (ב) "חַסְדֵי ה' אַזְכִּיר... כְּעַל כֹּל אֲשֶׁר גְּמָלָנוּ ה'" (ישעיהו סג, ז) — מבאר ה<em>באר משה</em>: החסד הגדול מכל הוא שיש לנו את האפשרות להזכיר תהילותיו. (ג) הילולת רשב"י חלה בספירת הוד שבהוד, ומבאר הרב דניאל פריש זצ"ל שמודים בה על הזכות להודות. (ד) "כִּי טוֹב חַסְדְּךָ מֵחַיִּים, שְׂפָתַי יְשַׁבְּחוּנְךָ" (תהלים סג, ד) — מבאר המלבי"ם: החיים אינם תכלית לעצמם, אלא אמצעי שעל ידם שפתי ישבחוך, וזו תכלית החיים. (ה) ר' צדוק הכהן כתב על "ועל הכל אנחנו מודים לך": זה עולה על כל שאר הטובות — מה שזכינו להיות מודים לך.</li>
+    <li data-a="01-65">ה"הפלאה" (כתובות שם) מבאר: תכלית בריאת כל העולם היא בשביל האדם, ובו נשלמת הבריאה — אולם האדם עצמו אינו נשלם עד שנזדווגה לו בת זוגו. נמצא, כשנשא אדם את חוה, נשלמה הבריאה כולה בשלמות; ולכן מברכים על הבריאה כולה — "שהכל ברא לכבודו" — דווקא בשעת הנישואין.</li>
+    <li data-a="01-66">בספר שערי אהבה מבואר: ברכה זו נועדה להיאמר בתחילת הסעודה, כדי שנעלה על ליבנו את מטרת ההתכנסות. אילו שאלנו את חכמי האומות למה נברא העולם, היו עונים שנברא כמקום ניסיון, או כמקום גשמי שיש להינזר ממנו. אך האמת עמוקה יותר: הקב"ה גילה בעצמו את סוד מטרת הבריאה — "שהכל ברא לכבודו". העולם הוא מקום שיש בו הרבה הסתר, אך גם הרבה גילוי, ודרכו ניתן להכיר את מידותיו האמיתיות של הבורא — טובו וחסדו ואהבתו לברואיו. ומשנזכה להכיר זאת, נבוא לכבדו ולשאוף לעשות נחת רוח לפניו. בשעת שמחת חתן וכלה יש גילוי מיוחד של מידות אלו, ולכן זו הזדמנות מיוחדת להעמיק את הידיעה הזו ולחזק את הזדהותנו עם שמחת בני הזוג.</li>
+  </ol>
+
+  <div class="thin-divider"><div class="line"></div><div class="icon">📖</div><div class="line"></div></div>
+
+  <div class="chapter-transition">
+    <div class="num">ב</div>
+    <div class="title">יוצר האדם — יצירה ראשונה ומעשה</div>
+    <div class="sub">מדוע מברכים פעמיים "יוצר האדם" בחופה</div>
+  </div>
+
+  <!-- ============ פרק ב ============ -->
+  <span class="chapter-label">פרק ב</span>
+  <h2 data-a="01-67" id="section3">יוצר האדם — יצירה ראשונה ומעשה</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-68">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-69">הסתירה בגמרא: "עלה במחשבה" לברוא שניים, ולבסוף נברא אחד</li>
+      <li data-a="01-70">מדוע דווקא באדם, ולא בבעלי החיים, נבראו זכר ונקבה כגוף אחד</li>
+      <li data-a="01-71">מה בין דבקות איש ואשתו לדבקות בין שאר קרובים</li>
+      <li data-a="01-72">מדוע האשה היא חלק מנפשו של האדם, ולא רק מגופו</li>
+      <li data-a="01-73">מדוע נתקנו שתי ברכות נפרדות — אחת על המחשבה ואחת על המעשה</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-74" style="margin-bottom:0;">כתב רש"י (כתובות ח, א): ברכת "יוצר האדם" תוקנה ליצירה ראשונה של אדם הראשון. בגמרא (ברכות סא, א) מבואר: "רבי אבהו רמי — כתיב 'זכר ונקבה בראם', וכתיב 'כי בצלם אלהים עשה את האדם'?! הא כיצד? בתחילה עלה במחשבה לבראת שנים, ולבסוף לא נברא אלא אחד". ובגמרא בכתובות (ח, א) מבואר שמחלוקת תנאים אם מברכים בחופה על "יוצר האדם" פעם אחת או פעמיים, כתלות בשאלה אם הולכים אחר המחשבה או אחר המעשה. ותוספות הרא"ש (ברכות מו, ב) והאבודרהם מבארים: מי שסובר לברך שתיים — האחת כנגד המחשבה (יצירה ראשונה, גוף אחד), והשנייה כנגד המעשה (יצירה שנייה, פירוד לזכר ונקבה).</p>
+  </div>
+
+  <h3 data-a="01-75">❓ שאלות</h3>
+  <ol class="questions-list">
+    <li data-a="01-76">מה הפירוש "במחשבה היה שתיים, ולבסוף אחד" — וכי חלילה יש שינוי אצל הקב"ה?</li>
+    <li data-a="01-77">האם גם אצל הבהמות היה שינוי כזה בין המחשבה למעשה?</li>
+    <li data-a="01-78">היכן רעיון זה כתוב בפסוק "ויאמר האדם זאת הפעם עצם מעצמי ובשר מבשרי... על כן יעזב איש את אביו ואת אמו ודבק באשתו"?</li>
+    <li data-a="01-79">האם גם היום קיימת "יצירה ראשונה" ו"יצירה שנייה"?</li>
+    <li data-a="01-80">האם האשה היא רק חלק מגופו של האדם, או גם חלק מנפשו? הסבר!</li>
+    <li data-a="01-81">כיצד מן הרצון להיות נשוי נוכל ללמוד על תכלית האדם — לאהוב את בוראו?</li>
+    <li data-a="01-82">היכן הוטבע באדם הרצון להרגיש אהוב?</li>
+    <li data-a="01-83">מדוע השרוי בלא אשה נקרא "פלג גופא"?</li>
+    <li data-a="01-84">הסבר, לפי זה, מדוע לא שייך דיון "מי חשוב ממי" — האיש או האשה.</li>
+    <li data-a="01-85">מתהליך יצירת האשה למד הראב"ד שרצון ה' הוא שהאדם יאהב את רעייתו — כיצד ניתן להוכיח שזהו רצון ה'?</li>
+    <li data-a="01-86">הקשה בעל ה"ערבי נחל": אם עניין זה (יצירה אחת לשניהם) היה רק באדם הראשון, הרי מאז ועד היום נוצר הזכר לעצמו והנקבה בפני עצמה?</li>
+    <li data-a="01-87">מדוע צריך להודות גם על המחשבה וגם על המעשה?</li>
+    <li data-a="01-88">איזו ברכה נתקנה כנגד המחשבה, ואיזו כנגד המעשה?</li>
+    <li data-a="01-89">מדוע לא תיקנו חז"ל ברכה אחת על שתי היצירות?</li>
+    <li data-a="01-90">הבא ראיה ממקומות נוספים שבהם יש להודות על כל פרט בנפרד.</li>
+  </ol>
+
+  <h3 data-a="01-91">💡 תשובות</h3>
+  <ol class="answers-list">
+    <li data-a="01-92">המפרשים מבארים שאין הכוונה חלילה ששינה הקב"ה את דעתו, אלא ש"עלה במחשבה" היינו שזו הייתה מטרתו של הקב"ה מלכתחילה — שיהיו נפרדים. אולם בפועל ברא אותם תחילה כמציאות אחת, ורק אחר כך הפרידם, כדי שהאחדות ביניהם תהיה של קשר נפשי עמוק וחזק שאין כדוגמתו בין שני ברואים אחרים. כך כתב הגר"א (משלי ט, י): "כדי שיהא אהבה ואחוה ביניהם יותר מאחיו ושאר קרוביו, שיהיו גוף אחד ממש".</li>
+    <li data-a="01-93">לא. אופן יצירה זה — מחשבה של שניים ומעשה של אחד המתפצל לשניים — היה רק במין האדם. הרשב"א (שו"ת ח"א סי' ס) מבאר שבשאר בעלי החיים נברא הזכר בפני עצמו והנקבה בפני עצמה מלכתחילה, ורק באדם ברא הקב"ה יחיד ולקח ממנו את האשה, כדי שתהיה דבקותם חזקה יותר מדבקות הבן להוריו.</li>
+    <li data-a="01-94">הרמב"ן מבאר: לבעלי החיים אין דבקות קבועה בנקבותיהם — הזכר בא על כל נקבה שימצא והולך לדרכו. אך אצל האדם, מאחר שהאשה נלקחה בשעת הבריאה מעצם ובשר האדם עצמו ("עצם מעצמי ובשר מבשרי"), הוטבע בטבעו שיהיה דבק בה תמיד — "על כן יעזב איש את אביו ואת אמו ודבק באשתו". גם המילה "בשר" מציינת קרבה משפחתית ("כי אחינו בשרנו הוא"), ומכאן שהאדם רואה את אשתו קרובה לו יותר משאר בני משפחתו.</li>
+    <li data-a="01-95">כן. אף שעל דרך הפשט רק אצל אדם הראשון היו שתי היצירות בפועל, מאז הוטבע בכל הזכרים והנקבות רצון להיות אחד — בכל דור, האדם מוצא את שלמותו רק כשמתאחד עם אשתו, שהיא בבחינת "אחת מצלעותיו". וכן על פי הזוהר, בכל זוג יש שתי יצירות: יצירה ראשונה — כשהם למעלה, בשמים, הם נשמה אחת; ויצירה שנייה — כשיורדים לעולם הזה הם נפרדים זה מזה.</li>
+    <li data-a="01-96">גם חלק מנפשו. רגש החסרון המוטבע באדם מקורו לא רק בכך שניטלה ממנו הצלע הגופנית, אלא גם בכך שגם בתכונות נפשו ניטל חלק מסוים, וממנו נבראו תכונות נפשה של האשה. יש דברים המצויים אצל האשה ואינם מצויים אצל האיש — "בינה יתירה ניתנה לנשים", תכונת סבלנות ועדינות בגידול ילדים, הבנה מיוחדת בחינוך (וכשרה אמנו נאמר "כל אשר תאמר אליך שרה שמע בקולה"). לאיש, לעומת זאת, יש בעיקר כוח ועוצמה וחכמת ניהול. שלמות האדם מושגת רק כששני חלקי הנפש מתאחדים — האיש נותן חוסן ומשענת, והאשה נותנת רוך, חום ומסירות.</li>
+    <li data-a="01-97">האדם מטבע בריאתו משתוקק לידידות ואהבה, וכל אדם נולד עם "רעב" לאהבה אמיתית. מבין כל סוגי האהבה (אם, אב, רעים) הגדולה מכולן היא קשר הנישואין, המגיע לרבדים העמוקים ביותר של הנפש. ומכיוון שמטרת האדם היא לגדול ברוחניות ולהכיר את בוראו, שורש הרצון לאהבה הזה נועד, בסופו של דבר, להוביל אותו לחשוק בהקב"ה עצמו.</li>
+    <li data-a="01-98">בילקוט שמעוני (בראשית רמז כב) מבואר שהפסוק "לא טוב היות האדם לבדו" הוא אחד מעשרה מאמרות שבהם נברא העולם — ומכאן שהיתה כאן בריאה ממש: הקב"ה טבע באדם את הרצון לבן זוג, לאהוב ולהרגיש אהוב. לפי זה, אין פירוש הפסוק שהקב"ה "התבונן וראה" שלא טוב לאדם לבד, אלא שהקב"ה יצר באדם מציאות חדשה — שירגיש בעצמו שאינו טוב בהיותו לבד, וכך יתענג וישמח בנישואיו.</li>
+    <li data-a="01-99">מכיוון שיש לאשה בדיוק את החלק החסר לאיש, רק ביחד יש להם את כל התכונות הדרושות לאדם השלם. תכונות אלה דרושות לשלמות אישיותו, ולכן מי שאינו נשוי הוא במובן מסוים "פלג גוף" — חצי מציאות בלבד — ורק על ידי קשר הנישואין משלימים בני הזוג את מציאותם ונעשים לדבר שלם אחד, כמו שנאמר: "זָכָר וּנְקֵבָה בְּרָאָם... וַיִּקְרָא אֶת שְׁמָם אָדָם".</li>
+    <li data-a="01-100">כשם שלא שייך להשוות בין המוח והלב — מי חשוב יותר, מי נחוץ יותר — כך גם האיש והאשה הם שני פנים שונים של עניין אחד, כשם שהמוח והלב הם איברים שונים המרכיבים גוף אחד.</li>
+    <li data-a="01-101">הראב"ד (בעלי הנפש) מבאר: לטובת האדם ולהנאתו הגדולה נברא כך — שאילו נברא זכר ונקבה כשאר הברואים, הייתה האשה אצלו כנקבת הבהמה אצל זכר: אינה כפופה לו ואינה עומדת לשמשו, וגם אינם מיוחדים זה לזה. אך מכיוון שהאשה נלקחה מצלעו, היא נחשבת לו כאחד מאבריו, ולכן טבעי הוא שיאהב אותה כגופו ויכבדה אף יותר מגופו, וכן היא — לעובדו ולאוהבו כנפשה, כי ממנו לוקחה. מעצם תהליך בריאה מיוחד זה, שלא כדרך שאר הברואים, מוכח שזה רצון ה' שיאהב אותה.</li>
+    <li data-a="01-102">ה"ערבי נחל" (בשם הראב"ד) תירץ: כל הנשמות שהיו ושעתידות להיות היו כלולות באדם הראשון — נשמות זכרים ונקבות יחד. כאשר נלקחה צלעו ונעשתה חוה, נכללו בה כל נשמות הנקבות, ובאדם עצמו נשארו כל נשמות הזכרים. לכן כל הזיווגים שבעולם, בכל דור, בנויים על אותה מתכונת — שהאשה היא כביכול "אחת מצלעותיו" של האיש, ממש כמו באדם הראשון.</li>
+    <li data-a="01-103">כי בכל אחת מהיצירות הייתה טובה עצומה לאדם. ביצירה הראשונה — שנבראו כגוף אחד — מודים על כך שרק בזכות זה קיימת עד היום אהבה, אחווה, שלום ורעות בין בני זוג. ביצירה השנייה — שנבראו שניים נפרדים — מודים על כך שרק בהיותם שניים יכולים הם לעזור זה לזה.</li>
+    <li data-a="01-104">תוספות הרא"ש (ברכות מו, ב) והאבודרהם מבארים: ברכת "יוצר האדם" הראשונה נתקנה כנגד יצירת אדם הראשון עד שלא ניטלה ממנו הצלע (כנגד המחשבה, יצירה ראשונה), וברכת "אשר יצר את האדם" השנייה — כנגד המעשה בפועל (יצירה שנייה, לאחר הפרדת חוה).</li>
+    <li data-a="01-105">תיקנו חז"ל שתי ברכות מפני שדרכו של המודה להודות על כל פרט ופרט בנפרד, ולא לכלול הודיות שונות בברכה אחת, אף שלכאורה ניתן היה לתקן ברכה אחת הכוללת את שתיהן.</li>
+    <li data-a="01-106">כך מצאנו בליל הסדר — על כל אחד מלשונות הגאולה כוס בפני עצמה. וכן ב"ברכות השחר" מודים על כל מעלה ומעלה בברכה נפרדת: "פוקח עוורים", "מלביש ערומים" וכו'. וכן בתהלים (קלו) חוזר הכתוב ומפרט: "לְמַכֵּה מְלָכִים גְּדֹלִים... כִּי לְעוֹלָם חַסְדּוֹ. וַיַּהֲרֹג מְלָכִים אַדִּירִים... כִּי לְעוֹלָם חַסְדּוֹ" וכו' — ולא כותב הכל במשפט אחד. ללמדך: על כל שלב וכל חידוש נוסף יש לעשות הודאה נפרדת.</li>
+  </ol>
+
+  <div class="thin-divider"><div class="line"></div><div class="icon">✡</div><div class="line"></div></div>
+
+  <div class="chapter-transition">
+    <div class="num">ג</div>
+    <div class="title">מתנת החיים</div>
+    <div class="sub">עוד טעמים לברכת "יוצר האדם"</div>
+  </div>
+
+  <!-- ============ פרק ג ============ -->
+  <span class="chapter-label">פרק ג</span>
+  <h2 data-a="01-107" id="section4">מתנת החיים — עוד טעמים לברכת "יוצר האדם"</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-108">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-109">מדוע נצרכה "יצירה ראשונה" חסרה, כדי שנלמד להכיר בטובה השלמה</li>
+      <li data-a="01-110">ביאור החפץ חיים: הודיה על עצם מתנת החיים</li>
+      <li data-a="01-111">היישוב לקושיה "נוח לו לאדם שלא נברא"</li>
+      <li data-a="01-112">מדוע תוקנה ברכה זו דווקא בחתונה ולא בלידה</li>
+    </ul>
+  </div>
+
+  <p data-a="01-113">לאחר שביארנו מדוע נצרכות שתי ברכות — אחת כנגד המחשבה ואחת כנגד המעשה — יש להוסיף ולשאול: מדוע בכלל צריך להודות על "היצירה הראשונה", זו שקדמה להפרדת חוה מן האדם? הלוא לא זכה בה האדם דבר בפועל, אלא רק חש בה חיסרון?</p>
+
+  <h3 data-a="01-114">❓ שאלות</h3>
+  <ol class="questions-list">
+    <li data-a="01-115">איזה ביאור נוסף מצאנו ברבותינו מדוע צריך להודות על היצירה הראשונה? הסבר בקצרה.</li>
+    <li data-a="01-116">לפי ביאור זה, האם כלולה בברכה זו הודיה גם על שנות חייו של האדם כרווק? הסבר.</li>
+    <li data-a="01-117">מדוע דווקא בדבר זה בחר הבורא לברוא באדם חיסרון, ולהשלימו אחר כך?</li>
+    <li data-a="01-118">היכן מצאנו במקום נוסף שיצר הקב"ה חיסרון, כדי שנדע להודות אחר כך?</li>
+    <li data-a="01-119">לפי ביאור זה (החפץ חיים), על מה מודים בברכת "יוצר האדם"?</li>
+    <li data-a="01-120">יש תמהים על ברכה זו, הרי אמרו חז"ל (עירובין יג, ב): "נוח לו לאדם שלא נברא משנברא" — כיצד אם כן מודים על יצירת האדם?</li>
+    <li data-a="01-121">קיימא לן שברכת העץ קודמת ל"שהכל", היות וברכה פרטית קודמת לכללית — לכאורה היה צריך להקדים ברכת "יוצר האדם" ל"שהכל ברא לכבודו"?</li>
+    <li data-a="01-122">הסבר כיצד ברכה זו צריכה להביא לאדם שמחה כל ימי חייו.</li>
+    <li data-a="01-123">איזו מצוות עשה נובעת מהכרת הטוב על מתנת החיים?</li>
+    <li data-a="01-124">מדוע לא מודים על מתנת החיים בלידה עצמה, ורק תיקנו ברכת "יוצר האדם" בחתונה?</li>
+    <li data-a="01-125">לפי הביאור הראשון, שמודים כאן על היצירה הראשונה — האם עדיין קשה הקושיה הנ"ל?</li>
+  </ol>
+
+  <h3 data-a="01-126">💡 תשובות</h3>
+  <ol class="answers-list">
+    <li data-a="01-127">בספר שערי אהבה מבואר: מלבד מה שביארו הראב"ד והרשב"א שהדבר נצרך כדי שהקשר בין בני הזוג יהיה חזק ביותר, יש ביצירה הראשונה עוד הטבה גדולה. כיוון שהיופי והשמחה שבהתאחדות הנשמה הם מהגילויים הגדולים ביותר של טובו יתברך, כדי לייצר גילוי זה הייתה נצרכת הפרדת הנשמות — שכן רק כך יכולים בני האדם להכיר באמת בטוב הגדול שבדבר. מתנה גדולה זו ניתנת לאדם רק בשעת החתונה, לאחר חיפוש, ממש כדוגמת מי שהיה זקוק להשתלת כליה וחיפש תורם — שרק הוא מכיר באמת ובהערכה מלאה בטובתה של כליה בריאה.</li>
+    <li data-a="01-128">כן. דווקא הרגשת החיסרון והחיפוש בשנות הרווקות היא שמאפשרת לאדם, כאשר הוא זוכה למצוא את זיווגו, להכיר באמת ובהערכה מלאה בגודל המתנה שקיבל. לולא הרגיש את החיסרון, לא היה יכול להכיר בטובה במלואה.</li>
+    <li data-a="01-129">כדי שהאדם יכיר בטובו הגדול של השי"ת. אדם שלא טעם טעם חיסרון לא היה יכול להיות שש ושמח בחלקו כמי שהבין מתחילה את חסרונו. לכן במכוון ברא הקב"ה יצירה ראשונה חסרה, כדי שהאדם ילמד להעריך, ולישוש ולשמוח כאשר יזכה ליצירה השנייה (שיר מעון, לגאון ר' שמעון סופר מקראקא).</li>
+    <li data-a="01-130">ה"בן איש חי" מבאר מדוע הקדים ה' גלות ומרירות לישראל, קודם שקיים את הבטחתו להעניק להם ארץ זבת חלב ודבש: אילו היו בני ישראל פרים ורבים בארץ כנען בנחת ובכבוד, לא היו מרגישים כלל את ערך הטובה, ולא היו מודים לה' עליה. לכן הגלה אותם למצרים, כדי שכאשר יגאלו — יכירו בערך הטובה ויודו לה' עליה. יסוד זה — שהקב"ה בורא לעיתים חסרונות וקשיים כדי שהאדם ילמד אחר כך להעריך ולהודות — הוא יסוד גדול המסביר חלק ניכר מהצרות והייסורים שבעולם, שכן אין הטוב ניכר אלא בהעדרו.</li>
+    <li data-a="01-131">מודים להקב"ה על "מתנת החיים" עצמה — על עצם זה שהשי"ת בראנו ושם אותנו בתוך התוכנית הנפלאה של העולם. כדברי החפץ חיים (שם עולם ח"א פרק כ): "מה מאד צריך האדם לשמוח בימי החיים שנתן לו השם יתברך, שעל ידם יוכל להשיג העונג הנצחי... כאשר יתבונן היטב בזה יבוא לאהוב את ה' אהבה עזה עבור החיים שנתן לו השם יתברך".</li>
+    <li data-a="01-132">יש להבחין בין "נוח" ל"טוב": נוח לשבת בבטלה, אך טוב לפעול ולייצר דברים מועילים; נוח לנסוע ברכב, אך טוב ללכת ברגל ולאמץ את השרירים. "נוח לו לאדם שלא נברא" נאמר מבחינת הנוחות בלבד — שכן ההתמודדויות הלא-נוחות שבעולם מרובות מן הנוחות. אך כולם מודים שהעולם טוב הוא, שהרי הקב"ה טוב ומטיב, אלא שהטוב מגיע מתוך עשייה והתמודדות. וכן אנו אומרים בכל יום "ברוך אלוקינו שבראנו לכבודו", ובמודים דרבנן "יוצרנו יוצר בראשית", ובברכת "בורא נפשות" מודים שברא נפשות רבות — מוכח מכל אלה שוודאי טוב לו לאדם שנברא. עוד מתרץ בעל ה<em>לב שמחה</em> (אדמו"ר מגור זצ"ל): הרמב"ם מקדים בסדר הברכות את "יוצר האדם" ל"שהכל ברא לכבודו", ואילו אנו נוהגים להקדים "שהכל ברא לכבודו" — כי לולא הקדמה זו (המלמדת שהאדם יכול להרבות כבוד שמים) עדיין הייתה קשה השאלה כיצד מברכים "יוצר האדם" למרות "נוח לו שלא נברא"; אך כשהאדם יודע להשתמש בעולם הזה כדי להרבות כבוד שמים, אזי טוב לו שנברא, ורק אז יכול לברך "יוצר האדם".</li>
+    <li data-a="01-133">וזהו בדיוק מה שביאר בעל ה"לב שמחה" (ראה תשובה קודמת) — שלמעשה הרמב"ם אכן מקדים את "יוצר האדם" כדין ברכה פרטית, ורק אנו נוהגים אחרת, מהטעם שנתבאר: כדי שתקדים ההכרה ש"שהכל ברא לכבודו" ורק אחר כך אפשר לברך בשמחה שלמה על עצם היצירה.</li>
+    <li data-a="01-134">ככל שהאדם יתבונן בכך שניתנו לו החיים כדי להשיג באמצעותם עונג נצחי בעולם הבא (על ידי תורה ומצוות), הוא יבוא לאהוב את ה' אהבה עזה על כל רגע ורגע של חיים שניתן לו — גם אם ימי חייו אינם תמיד ימי שמחה גלויה, שכן בכל רגע יש בידו ללקט עוד "פנינים" יקרות מתוך התורה והמצוות.</li>
+    <li data-a="01-135">מצוות כיבוד אב ואם. כותב ה"חינוך" (מצוה לג): משורשי מצווה זו, שראוי לאדם להכיר ולגמול חסד למי שעשה עמו טובה, ושיתן אל ליבו כי האב והאם הם סיבת היותו בעולם, ולכן ראוי לו לעשות עמם כל כבוד וטובה שביכולתו — שכן הם הביאוהו לעולם ויגעו בו כמה יגיעות בקטנותו.</li>
+    <li data-a="01-136">מפני שרק בנישואין נעשה האדם שלם, כמאמר הגמרא (יבמות סג, א): "כל אדם שאין לו אשה אינו אדם, שנאמר: זכר ונקבה בראם... ויקרא את שמם אדם". לפי הביאור הראשון (שמודים כאן על היצירה הראשונה), רק בנישואין ניתן להודות על כך, שכן כל התועלת שביצירה הראשונה — שנבראו כגוף ונשמה אחת — מתגלה ומתממשת דווקא בנישואין.</li>
+    <li data-a="01-137">לא. שכן לפי ביאור זה אין מברכים באופן כללי על עצם היצירה וקיומו של האדם בעולם (שעליה שייכת השאלה "נוח או טוב"), אלא באופן ספציפי על היצירה הראשונה — שנבראו גוף אחד — ועל התועלת המיוחדת הנובעת מכך: קשר האהבה העמוק בין בני הזוג. הודיה זו עומדת בפני עצמה, ואינה נסתרת כלל מקושיית "נוח לו".</li>
+  </ol>
+
+  <div class="story-box">
+    <h4 data-a="01-138">💃 סיפור: הריקוד לפני הכלה</h4>
+    <p data-a="01-139">מסופר בגמרא (כתובות יז, א): רבי יהודה בר אילעאי היה נוטל בד הדס ומרקד לפני הכלה, ואומר: "כלה נאה וחסודה". וכן מעשה ברב שמואל בר רב יצחק, שהיה מרקד לפני הכלה בשלושה בדי הדס, זורקם בזה אחר זה וחוזר ותופסם. אמר לו רב זירא: "קא מכסיף לן סבא" (אתה מבייש אותנו, זקן). כשנפטר, נעשה עמוד אש מפסיק בינו לבין העולם — ומקובלנו שאין עמוד אש נעשה אלא למי שיחיד בדורו או לשניים בדורו. אמר רבי זירא: "אהניה ליה שטותיה (או: שיטתיה) לסבא" — כלומר, זכה לכך בזכות מסירותו לכבוד הכלה. חז"ל למדונו בזה יסוד: הזוהר (יתרו פו.) מבאר שרק ישראל נקראים "אדם", משום שהם "הדבקים בה' אלוקיכם" — ולפי זה מובן מדוע דווקא לאחר הנישואין נקרא האדם "אדם" בשלמות, שכן רק אז זוכה הוא להשראת שכינה, כשמצטרפת אות א' (הרומזת ל"אלופו של עולם") לתיבת "דם".</p>
+  </div>
+
+  <div class="thin-divider"><div class="line"></div><div class="icon">📖</div><div class="line"></div></div>
+
+  <div class="chapter-transition">
+    <div class="num">ד</div>
+    <div class="title">אשר יצר את האדם</div>
+    <div class="sub">מצא אשה מצא טוב</div>
+  </div>
+
+  <!-- ============ פרק ד ============ -->
+  <span class="chapter-label">פרק ד</span>
+  <h2 data-a="01-140" id="section5">אשר יצר את האדם — מצא אשה מצא טוב</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-141">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-142">מדוע האדם לבדו נחשב "לא טוב"</li>
+      <li data-a="01-143">פירוש "והתקין לו ממנו בנין עדי עד"</li>
+      <li data-a="01-144">ההבדל שבין "מצא אשה מצא טוב" ל"מוצא אני מר ממוות את האשה"</li>
+      <li data-a="01-145">מדוע "טובים השניים מן האחד" הוא הרבה יותר ממתמטיקה פשוטה</li>
+    </ul>
+  </div>
+
+  <div class="quote-box">
+    <p data-a="01-146">אמר רבי יהודה: אשרי כלה שנאה וחסודה... שנינו במדרש תהלים (מזמור נט): "מצא אשה מצא טוב" — את מוצא, עד שלא נבראת האשה, מה כתיב, "לא טוב היות האדם לבדו" (בראשית ב, יח). משנבראה, מה כתיב, "וירא אלהים את כל אשר עשה והנה טוב מאד" (שם א, לא). הוי, מצא טוב.</p>
+    <span class="source-tag">מדרש תהלים, מזמור נט</span>
+  </div>
+
+  <h3 data-a="01-147">❓ שאלות</h3>
+  <ol class="questions-list">
+    <li data-a="01-148">נסה להסביר מדוע האדם לבדו מוגדר "לא טוב", ורק בנישואין הוא זוכה להיות אדם טוב.</li>
+    <li data-a="01-149">מהו "והתקין לו ממנו בנין עדי עד"?</li>
+    <li data-a="01-150">היכן בברכה זו מודים על מתנת בן/בת הזוג, ההופכת אותנו להיות אדם שלם וטוב?</li>
+    <li data-a="01-151">ישנם שני פסוקים על האשה: על אשה טובה נאמר "מצא אשה מצא טוב", ואילו על אשה רעה נאמר "מוצא אני מר ממוות את האשה". במה זה תלוי?</li>
+    <li data-a="01-152">מדוע על האשה הטובה נאמר בלשון עבר "מצא", ואילו על הרעה בלשון הווה "מוצא"?</li>
+    <li data-a="01-153">שלמה המלך אומר: "טובים השניים מן האחד" — וכי החכם מכל אדם בא ללמד אותנו מתמטיקה בסיסית של ילדים בגן, ששניים הם יותר מאחד?</li>
+  </ol>
+
+  <h3 data-a="01-154">💡 תשובות</h3>
+  <ol class="answers-list">
+    <li data-a="01-155">עד שלא נבראה האשה נאמר על האדם "לא טוב היות האדם לבדו" — שהרי לבדו הוא בבחינת "פלג גוף" בלבד, חסר את חלקי הנפש שהוענקו לאשה. משנבראה האשה, ומתאחדים בני הזוג לשלמות אחת, מתקיים "וירא אלהים את כל אשר עשה והנה טוב מאד" — הוי, מצא טוב. שלמותו הטובה של האדם מושגת אפוא רק באמצעות הזיווג.</li>
+    <li data-a="01-156">האבודרהם מבאר: לשון "והתקין" משמעה "תיקון" שעשה לו הקב"ה, כנגד מה שנאמר "לא טוב היות האדם לבדו" — במתנת האשה נעשה האדם "מתוקן". והאשה עצמה נקראת "בנין" (וכתוב "וַיִּבֶן ה' אֱלֹהִים אֶת הַצֵּלָע"), ובנין זה אינו רק לעולם הזה אלא "עדי עד" — גם לעולם הבא.</li>
+    <li data-a="01-157">בהשגת שלמות הנשמה בנישואין זוכים בני הזוג יחד ליעד הנפלא של הבריאה — "בנין עדי עד", היעד הנצחי של העולם, עולם הבא. כאן, בברכה השנייה שבנוסח "יוצר האדם"/"אשר יצר", מודים דווקא על היצירה השנייה: על כך שהאשה, שנלקחה כ"בנין" מן הצלע, משלימה את האדם לא רק בעולם הזה אלא עדי עד.</li>
+    <li data-a="01-158">הדבר תלוי בהכרת הטוב. אדם החושב "מוצא אני" — שמצא בעצמו את זיווגו, ללא הכרת תודה כלפי ה' — אין לו הכרת הטוב, וממילא גם לא כלפי אשתו; ומתקיים בו "מוצא אני מר ממות את האשה". אבל המרגיש "מצא אשה" — שהוא חש בכל ליבו שזו מציאה שה' זימן לו — פיו לא פוסק מלהודות להקב"ה על כך, וגם כלפי אשתו הוא חש הכרת הטוב על כל דבר; ומובטח לו "מצא אשה מצא טוב".</li>
+    <li data-a="01-159">לשון העבר "מצא" מבטאת הכרה שהדבר כבר נגמר וניתן לו במתנה משמים, ומכאן שביעות רצון והודיה תמידית. לעומת זאת, לשון ההווה "מוצא" מבטאת תהליך מתמשך של חיפוש עצמי ותלונה — יחס שאינו של הכרת הטוב, אלא של תביעה מתמדת שאינה מסתפקת במה שיש.</li>
+    <li data-a="01-160">שלמה המלך מלמד כאן יסוד עמוק: השילוב של שניים, ובמיוחד שניים מנוגדים באופיים, יוצר משהו חדש הגדול מסך חלקיו — יותר משניים. אדם אחד לבדו נשאר תמיד עם דרך החשיבה הקודמת והישנה שלו; לעומת זאת, מציאות של שניים מנוגדים מאפשרת הגעה למקום משודרג ומועשר יותר מכל אחד לבדו.</li>
+  </ol>
+
+  <div class="thin-divider"><div class="line"></div><div class="icon">✡</div><div class="line"></div></div>
+
+  <div class="chapter-transition">
+    <div class="num">ה</div>
+    <div class="title">שוש תשיש</div>
+    <div class="sub">שמחת האם בישראל</div>
+  </div>
+
+  <!-- ============ פרק ה ============ -->
+  <span class="chapter-label">פרק ה</span>
+  <h2 data-a="01-161" id="section6">שוש תשיש — שמחת האם בישראל</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-162">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-163">מדוע נמשלה גאולת ישראל לשמחת אם בבניה</li>
+      <li data-a="01-164">מהי הדרך האמיתית להכרת כבודה של האישה</li>
+    </ul>
+  </div>
+
+  <h3 data-a="01-165">❓ שאלות</h3>
+  <ol class="questions-list">
+    <li data-a="01-166">מדוע המשילו חז"ל את גאולת ישראל לאם בישראל השמחה בבניה?</li>
+    <li data-a="01-167">מהי הדרך האמתית שבעזרתה מגיעים להכרת כבודה האמתי של האשה?</li>
+  </ol>
+
+  <h3 data-a="01-168">💡 תשובות</h3>
+  <ol class="answers-list">
+    <li data-a="01-169">בברכה זו המשילו חז"ל את גאולת ישראל לאם מאושרת עד אין קץ, שבניה נמצאים עמה בביתה בשמחה. מלבד הכמיהה וההודיה על הגאולה שבברכה, ביקשו חז"ל ללמדנו מהו ההישג הגדול ביותר של הכלה — הבאת חיים של תינוק לעולם, וחינוכו בחום, בעדינות, בשקט ובשמחה, לבניית תשתית נפשית של אמון בטוב האלוקי. זו פסגת השאיפות, הנמשלת לגאולה בשל חשיבותה העצומה, וזהו התפקיד העליון ביותר שרק האשה יכולה למלא. כך מצאנו בדבורה הנביאה, שלמרות הישגיה הרוחניים והגשמיים העצומים כשופטת ישראל, בשירת ניצחונה מגדירה היא את מהות עצמה: "עַד שַׁקַּמְתִּי דְּבוֹרָה, שַׁקַּמְתִּי אֵם בְּיִשְׂרָאֵל" — בכך גאוותה.</li>
+    <li data-a="01-170">בתרבות הכללית קיים בלבול בסולם הערכים, ומכאן בלבול גם בשאלה כיצד מגיעים להכרת כבודה האמתי של האשה. חלק מהתרבות הכללית מסית נשים לזנוח את כשרונן הייחודי ולפתח צד שאינו טבעי להן, תוך זלזול בכבוד ה"אם בישראל" — ותהליכים אלו קשורים לעלייה בשיעורי הדיכאון, החרדה והגירושין. לעם ישראל יש מסר לעולם: כבודה האמתי של האשה יבוא מתוך הכרת ערכה העליון כ"אם בישראל". כאשר האשה שומרת על אישיותה העדינה, השקטה והטהורה, החברה כולה נהנית מפחות מתח ואלימות, ומתקדמת לעבר שלווה, שמחה ואמונה. בחיים היהודיים התורניים, הצדדים הנשיים נערצים בעינינו יותר מהתפקידים הגבריים — "יכבדנה יתר מגופו" (רמב"ם) — והאשה היא "מלכת הבית" ו"היהלום שבכתר".</li>
+  </ol>
+
+  <div class="thin-divider"><div class="line"></div><div class="icon">📖</div><div class="line"></div></div>
+
+  <div class="chapter-transition">
+    <div class="num">ו</div>
+    <div class="title">אשר ברא ששון ושמחה</div>
+    <div class="sub">סיום שבע הברכות</div>
+  </div>
+
+  <!-- ============ פרק ו ============ -->
+  <span class="chapter-label">פרק ו</span>
+  <h2 data-a="01-171" id="section7">אשר ברא ששון ושמחה — סיום שבע הברכות</h2>
+
+  <div class="in-chapter-box">
+    <h4 data-a="01-172">📖 בפרק זה:</h4>
+    <ul>
+      <li data-a="01-173">שנים עשר סוגי השמחה שבברכה האחרונה</li>
+      <li data-a="01-174">כיצד אהבת בני זוג מגבירה את אהבת ה' — יותר מהמלאכים</li>
+      <li data-a="01-175">סוד השכינה ושנים עשר השערים הנפתחים בעת הנישואין</li>
+      <li data-a="01-176">מדוע התלות "השרוי בלא אשה שרוי בלא ברכה" תלויה בכבוד ההדדי</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <p data-a="01-177" style="margin-bottom:0;">העולם שלנו, מבחינת התפקוד הגשמי, היה יכול להתקיים ולפעול באופן מושלם גם ללא רגשות השמחה. הקב"ה ברוב חסדו רצה שהברואים לא רק יתקיימו בעולם אלא ייהנו וישמחו, ולכן המציא את מציאות השמחה ותכנן עליה את כל התוכנית הרוחנית של הבריאה. השי"ת אף לא הסתפק בסוג אחד של שמחה, אלא המציא רגשות רבים ושונים — כל אחד גילוי נוסף של חסדו וטובו. בברכה האחרונה של שבע הברכות מפרטים את כל סוגי השמחה: <strong>שָׂשׂוֹן, וְשִׂמְחָה, חָתָן, וְכַלָּה, גִּילָה, רִנָּה, דִּיצָה, וְחֶדְוָה, אַהֲבָה, וְאַחֲוָה, וְשָׁלוֹם, וְרֵעוּת</strong>. אף שאנו נהנים מרגשות אלו בכל יום, תיקנו חז"ל לברך עליהם בהזדמנות אחת בלבד — בשמחת חתן וכלה, שבה יש אפשרות להכיר ולהרגיש בטוב ובחסד ה' באופן שאינו נגלה כה בבירור בהזדמנויות אחרות.</p>
+  </div>
+
+  <h3 data-a="01-178">❓ שאלות</h3>
+  <ol class="questions-list">
+    <li data-a="01-179">כיצד אהבה בין איש לאשתו מביאה לאהבת ה'?</li>
+    <li data-a="01-180">הסבר כיצד ייתכן שיש סוג של אהבת ה' שאנו יכולים להשיג יותר מהמלאכים.</li>
+    <li data-a="01-181">לסיכום: מנה שלוש מטרות לאהבה שבין בני הזוג.</li>
+    <li data-a="01-182">הבא ראיה שאהבה ושמחה בין איש לאשתו גורמות שפע עצום לעם ישראל כולו.</li>
+    <li data-a="01-183">בברכה זו אנו מזכירים ברכות רבות שמקבלים בנישואין — מחמת מה מקבלים כל כך הרבה ברכה על ידי הנישואין?</li>
+    <li data-a="01-184">מהם שנים עשר המתנות שכתב הזוהר שמקבלים בנישואין?</li>
+    <li data-a="01-185">האם עצם הנישואין מקנה את המתנות, או שהאחדות בין בני הזוג היא המקנה אותן? הבא ראיה!</li>
+    <li data-a="01-186">הבא ראיה מברכת "שים שלום" למה שגורם לכל הברכות שיש בנישואין.</li>
+    <li data-a="01-187">מדוע הגמרא כותבת דווקא את הצד השלילי — "כל השרוי בלא אשה..." — ולא כותבת "השרוי עם אשה זוכה לכל הברכות"?</li>
+    <li data-a="01-188">כיצד כבוד לאשה יכול להביא לכבוד לבורא עולם?</li>
+  </ol>
+
+  <h3 data-a="01-189">💡 תשובות</h3>
+  <ol class="answers-list">
+    <li data-a="01-190">בספר ראשית חכמה (שער האהבה, ספ"ד) מובא בשם רבי יצחק דמן עכו שהנישואין הם אמצעי חשוב, ואף הכרחי, להשגת אהבת ה' מושלמת. הרב מרדכי גיפטער זצ"ל מבאר (בהקדמתו לשיר השירים): אהבת ה' במלואה פירושה ביטול גמור של האוהב אל הנאהב, עד כדי דבקות ואיחוד. כדי להגיע לכך, צריך אדם להרגיש אהבה כזו דרך החוש — וזה מה שמתאפשר לו על ידי הדבקות הגמורה שבינו לבין אשתו ("על כן יעזוב איש את אביו ואת אמו ודבק באשתו"). מי שזוכה לדבקות זו עם אשתו, מוכשר להתעלות לאותה דבקות שלמה של ביטול האוהב בנאהב שיש באהבת ה'. וזהו שאמרו חז"ל: "כל אדם שאין לו אשה שרוי בלא טובה" (יבמות סב, ב) — הטובה שהיא טובה בעצם היא דבקות בה' יתברך, וללא אשה אי אפשר להגיע לכך.</li>
+    <li data-a="01-191">כיוון שיש לנו גוף, ניתן להשתמש ברגשות האהבה הגשמיים שלו כדי להגביר את רגשי אהבת ה' באופן שהנשמה לבדה אינה יכולה להשיג. למלאכים, לעומת זאת, אין אפשרות לחוות את האהבה שיש בין בני זוג, ולכן חסר להם באהבת ה' — מגילת שיר השירים אין לה משמעות בשבילם. לפי זה, לנו — הברואים הגשמיים — יש אפשרות להשיג את אהבת ה' יותר מכל מלאכי מעלה, שהרי רק בנו יש רגשות אהבה מופלגים אלה, ובידינו להשתמש בהם לאהבת ה'. וזהו מה שדרשו חז"ל על "וְאָהַבְתָּ אֵת ה' אֱלֹהֶיךָ בְּכָל לְבָבְךָ" — "בשני יצריך" — שדווקא בזכות שני היצרים שיש לנו, יש לנו אפשרות להגיע לאהבת ה' יותר מברואי כל העולמות שאינם מכירים ברגשות אלו.</li>
+    <li data-a="01-192">שלוש מטרות לאהבה שבין בני הזוג: (א) קיום העולם. (ב) להמשיל ולקרב לדמיוננו, במידת האפשר, את האהבה העצומה שבין ה' לעם סגולתו. (ג) יכולת השפעה ממשית על העולמות העליונים באמצעות האהבה האנושית — שכן מעלת האדם על שאר הנבראים היא שניתנה לו יכולת לשלוט בעולם באמצעות מעשיו ("תַּמְשִׁילֵהוּ בְּמַעֲשֵׂי יָדֶיךָ"), וכפי שהאדם נוהג באהבה בעולם הזה, כך הוא מעורר ומזרז את התנהגות האהבה העליונה — בין כנסת ישראל לדודה — ובכך יש לאהבה זו תפקיד מכריע בזירוז הגאולה.</li>
+    <li data-a="01-193">נראה שחז"ל רצו לסיים את שבע הברכות בהבטחת ה' על שמחת חתן וכלה שתהיה בגאולה, כדי שהשבע ברכות יהוו הודיה לה' מראשית ועד אחרית — מבריאת העולם ועד הגאולה. שכן הנישואין מחברים ראשית לאחרית: הם מחברים את הדור הראשון לדור האחרון, ובזכות הנישואין מתחבר אדם הראשון עד דור הגאולה. לכן ראוי להודות בשעה זו מראשית ועד אחרית — ויהי רצון שנזכה במהרה להבטחה: "הֵן גָּאַלְתִּי אֶתְכֶם אַחֲרִית כְּרֵאשִׁית לִהְיוֹת לָכֶם לֵאלֹהִים, אֲנִי ה' אֱלֹהֵיכֶם".</li>
+    <li data-a="01-194">על פי הזוהר החדש (חוקת): לפני הנישואין אין השכינה שורה על האדם, שאינה שורה על מקום פגום. וכשאינה שורה עליו, היא מונעת ממנו שנים עשר מתנות עליונות. אך כשנושא אישה, הוא מתדבק בשכינה, וכל שנים עשר השערים נפתחים להוסיף ברכות על ראשו, שכן הוא יושב "בסתר הגבירה" (השכינה) ומשתלם כמו שלמעלה.</li>
+    <li data-a="01-195">כל השרוי בלא אשה שרוי בלא: <strong>טובה</strong> ("לא טוב היות האדם לבדו"), <strong>שמחה</strong> ("ושמחת אתה וביתך"), <strong>ברכה</strong> ("להניח ברכה אל ביתך"), <strong>שלום</strong> ("וידעת כי שלום אהלך"), <strong>עזרה</strong> ("אעשה לו עזר כנגדו"), <strong>כפרה</strong> ("וכפר בעדו ובעד ביתו"), <strong>תורה</strong> ("האם אין עזרתי בי ותושיה נדחה ממני"), <strong>חכמה</strong> ("חכמות נשים בנתה ביתה"), <strong>חיים</strong> ("ראה חיים עם אשה אשר אהבת"), <strong>רצון</strong> ("מצא אשה מצא טוב ויפק רצון מה'"), <strong>עושר</strong> ("בטח בה לב בעלה ושלל לא יחסר"), ו<strong>כבוד</strong> ("אשת חן תתמוך כבוד") — שנים עשר, כנגד שנים עשר השערים הנפתחים לו בנישואיו.</li>
+    <li data-a="01-196">האחדות ובני הזוג עצמם. רבא אמר לבני מחוזא: "אוקירו לנשייכו כי היכי דתתעתרו" — כבדו את נשותיכם כדי שתתעשרו (בבא מציעא נט, א). מכאן שהברכה העליונה המגיעה לבני הזוג תלויה ביחס ביניהם, ואין הברכה ניתנת אוטומטית עם עצם הנישואין, אלא היא תלויה באהבה ובכבוד ההדדי הקיים בפועל ביניהם.</li>
+    <li data-a="01-197">בברכת "שים שלום" אומרים: "כִּי בְּאוֹר פָּנֶיךָ נָתַתָּ לָּנוּ ה' אֱלֹהֵינוּ תּוֹרַת חַיִּים וְאַהֲבַת חֶסֶד, צְדָקָה וּרְחָמִים, בְּרָכָה וְשָׁלוֹם". "מאור הפנים" הזה הוא השכינה המאירה על החתן והכלה בשעת חתונתם, והוא נשאר איתם לכל חייהם — אם הם שומרים עליו בזהירות הנדרשת, בשלום בית ובכבוד הדדי.</li>
+    <li data-a="01-198">מכיוון שלא כל נשוי זוכה לכל המתנות (הדבר תלוי בכמות השלום-בית שביניהם), לכן ניסחו חז"ל את הדבר כלפי הצד השלילי בלבד — "השרוי בלא אשה ודאי שרוי בלא ברכה" — אך מי שנשוי, יש ויש (תלוי במידת עבודתו על הזוגיות ובכבוד ההדדי).</li>
+    <li data-a="01-199">אדם בעל דרגה מתבונן בטוב הנפלא שיש באשתו, ומתוך כך מגיע להערצת בורא עולם שברא בריאה כה נפלאה — ממש כמו המתבונן בפירות הנפלאים שברא הקב"ה בעולמו, ומגיע מתוך כך לאהוב, לשבח ולפאר את שמו הגדול. כך למשל: התבוננות בבינה היתירה שנתן ה' באשה, ברגש הנפלא שבה, בשמחתה בהבאת ילד לעולם ובחינוכו בחום ובעדינות — כל אלו מובילים להכרת גדולתו של הבורא. ולסיכום כל הברכה: הקב"ה נטע בנו את היכולת להיות שמחים — מציאות שאין לשאר בעלי החיים כלל — וככל שנודה לו על כך ביתר רגש ואהבה, כך נזכה ליותר ברכה במשך כל ימי חיינו.</li>
+  </ol>
+
+  <div class="section-divider">🕊️ בזכות שבע הברכות — נזכה במהרה לשמחת חתן וכלה בירושלים הבנויה 🕊️</div>
+
+  <div class="sources">
+    <h3>📚 מקורות ומראי מקומות</h3>
+    <ol>
+      <li>מסכת כתובות ז ע"ב – ח ע"א (סוגיית שבע הברכות)</li>
+      <li>מסכת ברכות סא ע"א (סוגיית "עלה במחשבה")</li>
+      <li>מסכת יבמות סב ע"ב, סג ע"א; מסכת סוטה יז ע"א; מסכת בבא מציעא נט ע"א; מסכת בבא בתרא קמה ע"ב</li>
+      <li>מסכת עירובין יג ע"ב</li>
+      <li>רש"י על מסכת כתובות ח ע"א; רש"י על תהלים צ, יז; רש"י על במדבר כג, כא</li>
+      <li>רמב"ן, רשב"א (שו"ת ח"א סי' ס), ראב"ד (בעלי הנפש) — על בראשית ב, יח–כד</li>
+      <li>הגר"א על משלי ט, י</li>
+      <li>תוספות הרא"ש, מסכת ברכות מו ע"ב; אבודרהם, סדר ברכת חתנים</li>
+      <li>ספר הכלבו סי' ע"ה; מטה משה, גמילות חסדים ח"ג; הטור, הקדמה לאבן העזר</li>
+      <li>המאירי וה"הפלאה" על מסכת כתובות ח ע"א; פסקי רי"ד, כתובות</li>
+      <li>ספר שערי אהבה; ספר ראשית חכמה, שער האהבה; ספר יסוד ושורש העבודה, שער א פרק ה</li>
+      <li>ספר החינוך, מצוה לג; החפץ חיים, שם עולם ח"א פרק כ</li>
+      <li>ספר ערבי נחל, פרשת בראשית</li>
+      <li>מדרש תהלים, מזמור נט; ילקוט שמעוני, בראשית רמז כב; אבות דרבי נתן פרק לו</li>
+      <li>זוהר חדש, פרשת חוקת; תיקוני זוהר, תיקון י"ד; זוהר פרשת יתרו פו ע"א</li>
+      <li>מכתב רבי עקיבא איגר זצ"ל, נדפס בספר חוט המשולש עמ' קצא</li>
+      <li>סיפור ר' חיים זוננפלד זצ"ל, ספר האיש על החומה עמ' 339</li>
+      <li>הרב מרדכי גיפטער זצ"ל, הקדמה למגילת שיר השירים (הוצאת מסורה)</li>
+    </ol>
+  </div>
+
+  <div class="footer">
+    <strong>נכתב ונערך על ידי:</strong><br>
+    <strong>הרב יהודה טאוב</strong><br>
+    קרית אתא<br>
+    📞 <strong>ליצירת קשר:</strong> 0527139520<br><br>
+
+    <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); border-radius: 10px;">
+        <h4>🎧 שיעורים נוספים של הרב</h4>
+        <p><strong>ניתן לשמוע עוד שיעורים נפלאים:</strong></p>
+        <p>📻 <strong>קול הלשון - קול תודה:</strong> 03-6171190</p>
+        <p>🌐 <strong>באתר:</strong> <a href="https://www.kol-toda.co.il/">www.kol-toda.co.il</a></p>
+    </div>
+  </div>
+</div>
+<a href="#top" class="scroll-top" id="scrollTop">▲</a>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var id = this.getAttribute('href').slice(1);
+        var target = document.getElementById(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    var scrollTop = document.getElementById('scrollTop');
+    window.addEventListener('scroll', function () {
+      scrollTop.style.display = window.scrollY > 400 ? 'flex' : 'none';
+    });
+  });
+</script>
+
+<script>
+/* =============================================================================
+   קול תודה — מנוע הקראה למאמרים תורניים   |   tts.js   v2.0
+   -----------------------------------------------------------------------------
+   העתק את הקובץ הזה כמות שהוא לתוך תגית <script> בסוף ה-HTML.
+   אין לכתוב אותו מחדש, לקצר או "לשפר" תוך כדי יצירת מאמר — הוא נבדק כך.
+   Web Speech API בלבד: בלי API חיצוני, בלי מפתח, בלי רשת, בלי עלות.
+   ============================================================================= */
+(function () {
+    'use strict';
+
+    var bar = document.querySelector('.listen-bar');
+    if (!('speechSynthesis' in window)) {
+        if (bar) bar.innerHTML = '<span class="listen-status">הדפדפן שלך אינו תומך בהקראה קולית. נסה Chrome, Edge או Safari.</span>';
+        return;
+    }
+    var synth = window.speechSynthesis;
+
+    var NS       = 'koltoda.tts.';
+    var POS_KEY  = NS + 'pos.' + (document.title || location.pathname);
+    var MAX_CHUNK = 180;
+    var SKIP     = '.footer, .toc, .sources, .listen-bar, .book-nav, .in-this-chapter, .chapter-card, .chapter-grid, .no-tts';
+
+    var chunks = [], elCount = 0, idx = 0, built = false, selfAdvancing = false;
+    var isOn = false, paused = false, autoPaused = false;
+    var token = 0, watchdog = null;
+    var rate = 1, voices = [], voice = null, userPickedVoice = false, noHeVoice = false;
+    var clickToRead = true;
+
+    var $btn    = document.getElementById('listenBtn');
+    var $status = document.getElementById('listenStatus');
+    var $rate   = document.getElementById('rateRange');
+    var $rateVal= document.getElementById('rateValue');
+    var $voice  = document.getElementById('voiceSelect');
+    var $prog   = document.getElementById('listenProgress');
+    var BTN_LABEL = ($btn && $btn.textContent.trim()) || '🔊 האזן למאמר';
+
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(NS + k); localStorage.setItem(NS + k, v); } catch (e) { return null; } }
+    function readPos() { try { return parseInt(localStorage.getItem(POS_KEY) || '0', 10) || 0; } catch (e) { return 0; } }
+
+    var G = '["\\u05f4\\u201d\\u2033]';
+    var R = "['\\u05f3\\u2019]";
+
+    function ab(pattern, replacement) {
+        return [new RegExp('(^|[^\\u05d0-\\u05ea])([ובלכמשהד]{0,2})' + pattern + '(?![\\u05d0-\\u05ea])', 'g'),
+                '$1$2' + replacement];
+    }
+    var ABBREV = [
+        ab('זצוק' + G + 'ל', 'זכר צדיק וקדוש לברכה'),
+        ab('זצ' + G + 'ל', 'זכר צדיק לברכה'),
+        ab('ז' + G + 'ל', 'זכרונו לברכה'),
+        ab('ע' + G + 'ה', 'עליו השלום'),
+        ab('שליט' + G + 'א', 'שליטא'),
+        ab('הקב' + G + 'ה', 'הקדוש ברוך הוא'),
+        ab('בס' + G + 'ד', 'בסייעתא דשמיא'),
+        ab('בעז' + G + 'ה', 'בעזרת השם'),
+        ab('ב' + G + 'ה', 'ברוך השם'),
+        ab('אע' + G + 'פ', 'אף על פי'),
+        ab('אע' + G + 'ג', 'אף על גב'),
+        ab('עפ' + G + 'י', 'על פי'),
+        ab('ע' + G + 'פ', 'על פי'),
+        ab('ע' + G + 'י', 'על ידי'),
+        ab('עפ' + G + 'ר', 'על פי רוב'),
+        ab('כמו' + G + 'כ', 'כמו כן'),
+        ab('א' + G + 'כ', 'אם כן'),
+        ab('מ' + G + 'מ', 'מכל מקום'),
+        ab('כ' + G + 'ש', 'כל שכן'),
+        ab('ק' + G + 'ו', 'קל וחומר'),
+        ab('י' + G + 'ל', 'יש לומר'),
+        ab('צ' + G + 'ל', 'צריך לומר'),
+        ab('צ' + G + 'ע', 'צריך עיון'),
+        ab('עיי' + G + 'ש', 'עיין שם'),
+        ab('וע' + G + 'ע', 'ועיין עוד'),
+        ab('ד' + G + 'ה', 'דיבור המתחיל'),
+        ab('ס' + G + 'ק', 'סעיף קטן'),
+        ab('שו' + G + 'ע', 'שולחן ערוך'),
+        ab('שו' + G + 'ת', 'שאלות ותשובות'),
+        ab('או' + G + 'ח', 'אורח חיים'),
+        ab('יו' + G + 'ד', 'יורה דעה'),
+        ab('אה' + G + 'ע', 'אבן העזר'),
+        ab('חו' + G + 'מ', 'חושן משפט'),
+        ab('משנ' + G + 'ב', 'משנה ברורה'),
+        ab('ע' + G + 'א', 'עמוד א'),
+        ab('ע' + G + 'ב', 'עמוד ב'),
+        ab('וכו' + R, 'וכולי'),
+        ab('וכד' + R, 'וכדומה'),
+        ab('וגו' + R, 'וגומר'),
+        ab('עמ' + R, 'עמוד'),
+        ab('סי' + R, 'סימן'),
+        ab('סע' + R, 'סעיף'),
+        ab('הל' + R, 'הלכות'),
+        ab('ר' + R, 'רבי')
+    ];
+
+    var INWORD_G = /([א-ת])["״”″]([א-ת])/g;
+
+    var NUM_CTX = /(?:פרק|פרקים|יום|בימי|סימן|סעיף|עמוד|דף|אות|שנת|שנה|כרך|חלק|שער|מזמור|פסוק|הלכה|משנה|מספר|סי|עמ)\s*$/;
+    var HASHEM = /(^|[^א-ת])([ובלכמש]?)ה['׳’](?![א-ת])/g;
+
+    function hashem(t) {
+        return t.replace(HASHEM, function (m, pre, prefix, off, str) {
+            if (NUM_CTX.test(str.slice(0, off + pre.length))) return m;
+            return pre + prefix + 'השם';
+        }).replace(/יקוו?ק/g, 'השם');
+    }
+
+    function forSpeech(text) {
+        var t = text;
+        for (var i = 0; i < ABBREV.length; i++) t = t.replace(ABBREV[i][0], ABBREV[i][1]);
+        t = hashem(t);
+        t = t.replace(INWORD_G, '$1$2').replace(INWORD_G, '$1$2');
+        t = t.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, ' ');
+        t = t.replace(/[←-⇿⌀-➿⬀-⯿️‍⃣]/g, ' ');
+        t = t.replace(/־/g, ' ');
+        t = t.replace(/\s*[–—]\s*/g, ', ');
+        t = t.replace(/([.,!?:;])(?=\S)/g, '$1 ');
+        return t.replace(/\s+/g, ' ').trim();
+    }
+
+    function splitSentences(text) {
+        var out = [], re = /[^.!?…׃]*[.!?…׃]+\s*|[^.!?…׃]+$/g, m;
+        while ((m = re.exec(text)) !== null) {
+            if (m[0] === '') { re.lastIndex++; continue; }
+            out.push(m[0]);
+        }
+        return out.length ? out : [text];
+    }
+
+    function splitLong(s) {
+        var out = [], cur = '';
+        function pushWord(w) {
+            while (w.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                out.push(w.slice(0, MAX_CHUNK));
+                w = w.slice(MAX_CHUNK);
+            }
+            if (cur && (cur + ' ' + w).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+            cur += (cur ? ' ' : '') + w;
+        }
+        s.split(/([,;])/).forEach(function (b) {
+            if (b.length > MAX_CHUNK) b.split(' ').forEach(pushWord);
+            else {
+                if (cur && (cur + b).length > MAX_CHUNK) { out.push(cur); cur = ''; }
+                cur += b;
+            }
+        });
+        if (cur) out.push(cur);
+        return out;
+    }
+
+    function chunkText(text) {
+        var out = [], cur = '';
+        splitSentences(text).forEach(function (s) {
+            if (s.length > MAX_CHUNK) {
+                if (cur) { out.push(cur); cur = ''; }
+                splitLong(s).forEach(function (p) { out.push(p); });
+            } else if (cur && (cur + s).length > MAX_CHUNK) { out.push(cur); cur = s; }
+            else cur += s;
+        });
+        if (cur) out.push(cur);
+        return out.map(function (s) { return s.trim(); }).filter(function (s) { return s.length > 0; });
+    }
+
+    function isBook() { return !!document.getElementById('book'); }
+    function scopeRoot() {
+        return document.querySelector('#book .page.active') || document.querySelector('.container') || document.body;
+    }
+    function invalidate() { built = false; }
+    window.ttsRebuild = function () {
+        invalidate();
+        if (selfAdvancing) return;
+        if (isOn && !paused) { build(); if (chunks.length) startFrom(0); else stopListen(); }
+    };
+
+    function chapterLabel(h) {
+        var d = h.getAttribute && h.getAttribute('data-chapter');
+        if (d && d.trim()) return d.trim();
+        var p = h.previousElementSibling;
+        if (p && p.classList && p.classList.contains('chapter-label')) {
+            return p.textContent.replace(/\s+/g, ' ').trim();
+        }
+        return '';
+    }
+
+    function build() {
+        if (built) return;
+        var nodes = scopeRoot().querySelectorAll('h1, h2, h3, h4, p, li');
+        chunks = []; elCount = 0; built = true;
+        Array.prototype.forEach.call(nodes, function (n) {
+            if (n.closest(SKIP)) return;
+            if (n.tagName === 'LI' && n.parentElement && n.parentElement.closest('li')) return;
+            var raw = n.textContent.replace(/\s+/g, ' ').trim();
+            if (!raw) return;
+            if (n.tagName === 'H2') {
+                var lbl = chapterLabel(n);
+                if (lbl && raw.indexOf(lbl) !== 0) raw = lbl + '. ' + raw;
+            }
+            var spoken = forSpeech(raw);
+            if (!spoken) return;
+            var e = elCount++;
+            chunkText(spoken).forEach(function (t) { chunks.push({ el: n, e: e, text: t }); });
+        });
+    }
+
+    function firstChunkOfEl(e) {
+        for (var i = 0; i < chunks.length; i++) if (chunks[i].e === e) return i;
+        return -1;
+    }
+
+    function hint() {
+        if (noHeVoice) {
+            return 'לא נמצא קול עברי במחשב — ההקראה תישמע משובשת. ' +
+                   'ב-Windows: הגדרות ← שעה ושפה ← דיבור ← נהל קולות ← הוסף קולות ← עברית.';
+        }
+        return clickToRead
+            ? 'לחץ כדי להתחיל האזנה, או לחץ על כל פסקה כדי להתחיל להקריא ממנה'
+            : 'לחץ כדי להתחיל האזנה. לחיצה על הטקסט לא תפעיל הקראה.';
+    }
+
+    function say(msg) { if ($status) $status.textContent = msg; }
+
+    function setBtn(label, pressed) {
+        if (!$btn) return;
+        $btn.textContent = label;
+        $btn.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    }
+
+    function progress() {
+        if (!$prog) return;
+        if (!isOn || !chunks.length) { $prog.textContent = ''; return; }
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        $prog.textContent = 'פסקה ' + (cur.e + 1) + ' מתוך ' + elCount;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+    }
+
+    function reset(keepBookmark) {
+        stopWatchdog();
+        isOn = false; paused = false; autoPaused = false; idx = 0;
+        setBtn(BTN_LABEL, false);
+        clearHighlight();
+        if (!keepBookmark) { try { localStorage.removeItem(POS_KEY); } catch (e) {} }
+        say(hint());
+        if ($prog) $prog.textContent = '';
+    }
+
+    function savePos() { if (isBook()) return; try { localStorage.setItem(POS_KEY, String(idx)); } catch (e) {} }
+
+    function speak() {
+        stopWatchdog();
+        if (idx >= chunks.length) {
+            if (isOn && typeof window.bookNext === 'function') {
+                selfAdvancing = true;
+                var found = false, tries = 0;
+                while (tries++ < 200 && window.bookNext()) {
+                    invalidate(); build();
+                    if (chunks.length) { found = true; break; }
+                }
+                selfAdvancing = false;
+                if (found) { idx = 0; speak(); return; }
+            }
+            reset(false); say('ההקראה הסתיימה. 🎉'); return;
+        }
+        var item = chunks[idx], my = token, advanced = false;
+        highlight(item.el);
+        progress();
+
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.lang = 'he-IL';
+        if (voice) u.voice = voice;
+        u.rate = rate;
+
+        function advance() {
+            if (my !== token || advanced) return;
+            advanced = true;
+            stopWatchdog();
+            idx++; savePos();
+            if (!paused) speak();
+        }
+        u.onend = advance;
+        u.onerror = function (ev) {
+            if (my !== token) return;
+            if (ev && (ev.error === 'canceled' || ev.error === 'interrupted')) return;
+            advance();
+        };
+
+        synth.speak(u);
+        startWatchdog(my);
+    }
+
+    function startWatchdog(my) {
+        stopWatchdog();
+        var silent = 0;
+        watchdog = setInterval(function () {
+            if (my !== token) { stopWatchdog(); return; }
+            if (!isOn || paused) return;
+            if (synth.speaking || synth.pending || synth.paused) { silent = 0; return; }
+            if (++silent >= 2) { stopWatchdog(); idx++; savePos(); speak(); }
+        }, 1000);
+    }
+    function stopWatchdog() { if (watchdog) { clearInterval(watchdog); watchdog = null; } }
+
+    function startFrom(i) {
+        token++;
+        stopWatchdog();
+        synth.cancel();
+        build();
+        idx = Math.max(0, Math.min(i, chunks.length - 1));
+        isOn = true; paused = false; autoPaused = false;
+        setBtn('⏸ השהה', true);
+        say('מקריא...');
+        savePos();
+        speak();
+    }
+
+    window.toggleListen = function () {
+        if (!isOn && !synth.speaking && !synth.paused) {
+            build();
+            var saved = readPos();
+            startFrom(saved > 0 && saved < chunks.length ? saved : 0);
+            return;
+        }
+        if (paused || synth.paused) {
+            paused = false; isOn = true;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            if (synth.paused) {
+                synth.resume();
+                setTimeout(function () { if (isOn && !paused && !synth.speaking && !synth.pending) { token++; speak(); } }, 350);
+            } else {
+                token++; speak();
+            }
+        } else {
+            paused = true;
+            synth.pause();
+            setBtn('▶ המשך', false);
+            say('בהשהיה');
+        }
+    };
+
+    window.stopListen = function () { token++; stopWatchdog(); synth.cancel(); reset(false); };
+
+    window.skipListen = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var target = cur.e + dir;
+        if (dir < 0 && idx > firstChunkOfEl(cur.e)) target = cur.e;
+        target = Math.max(0, Math.min(elCount - 1, target));
+        startFrom(firstChunkOfEl(target));
+    };
+
+    window.skipChapter = function (dir) {
+        build();
+        if (!chunks.length) return;
+        var cur = chunks[Math.min(idx, chunks.length - 1)];
+        var best = -1;
+        for (var i = 0; i < chunks.length; i++) {
+            if (chunks[i].el.tagName !== 'H2') continue;
+            if (dir > 0 && chunks[i].e > cur.e) { best = i; break; }
+            if (dir < 0 && chunks[i].e < cur.e) best = i;
+        }
+        if (best < 0) { if (typeof window.bookJump === 'function') window.bookJump(dir); return; }
+        startFrom(best);
+    };
+
+    window.setListenRate = function (val) {
+        rate = parseFloat(val);
+        store('rate', String(rate));
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        if ($rate) $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1));
+    };
+    window.applyListenRate = function (val) {
+        window.setListenRate(val);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    window.setListenVoice = function (name) {
+        var found = voices.filter(function (v) { return v.name === name; })[0];
+        if (!found) return;
+        voice = found; userPickedVoice = true;
+        store('voice', name);
+        if (isOn && !paused) { token++; synth.cancel(); speak(); }
+    };
+
+    var FEMALE = ['female', 'hila', 'naayah', 'carmit', 'zira', 'noa', 'sharon', 'ivy', 'nicole'];
+    function isHe(v) { return v.lang && v.lang.toLowerCase().indexOf('he') === 0; }
+    function isFemale(v) {
+        var n = v.name.toLowerCase();
+        return FEMALE.some(function (h) { return n.indexOf(h) !== -1; });
+    }
+
+    function populate() {
+        if (!$voice) return;
+        $voice.innerHTML = '';
+        var he = voices.filter(isHe), other = voices.filter(function (v) { return !isHe(v); });
+        function group(label, list) {
+            if (!list.length) return;
+            var g = document.createElement('optgroup');
+            g.setAttribute('label', label);
+            list.forEach(function (v) {
+                var o = document.createElement('option');
+                o.value = v.name;
+                o.textContent = v.name.replace(/^Microsoft\s+/, '').replace(/\s*-\s*Hebrew.*$/i, '');
+                g.appendChild(o);
+            });
+            $voice.appendChild(g);
+        }
+        group('עברית', he);
+        group('שפות אחרות', other);
+        if (voice) $voice.value = voice.name;
+    }
+
+    function loadVoices() {
+        var all = synth.getVoices();
+        if (!all.length) return;
+        var he = all.filter(isHe);
+        voices = he.concat(all.filter(function (v) { return !isHe(v); }));
+        var was = noHeVoice;
+        noHeVoice = !he.length;
+        if (noHeVoice !== was && !isOn) say(hint());
+        if (!userPickedVoice) {
+            var saved = store('voice');
+            voice = (saved && voices.filter(function (v) { return v.name === saved; })[0])
+                 || he.filter(isFemale)[0] || he[0] || all[0] || null;
+        }
+        populate();
+    }
+    synth.onvoiceschanged = loadVoices;
+    loadVoices();
+
+    function readableNodes() {
+        var nodes = document.querySelectorAll(
+            '.container h1, .container h2, .container h3, .container h4, .container p, .container li');
+        return Array.prototype.filter.call(nodes, function (el) { return !el.closest(SKIP); });
+    }
+
+    function applyClickMode() {
+        readableNodes().forEach(function (el) { el.classList.toggle('tts-clickable', clickToRead); });
+        var b = document.getElementById('clickReadBtn');
+        if (!b) return;
+        b.textContent = clickToRead ? '👆 לחיצה: פעילה' : '👆 לחיצה: כבויה';
+        b.setAttribute('aria-pressed', clickToRead ? 'true' : 'false');
+        b.title = clickToRead
+            ? 'לחיצה על פסקה מתחילה להקריא ממנה. לחץ כאן כדי לכבות.'
+            : 'לחיצה על פסקה לא תפעיל הקראה. לחץ כאן כדי להפעיל.';
+    }
+
+    window.toggleClickRead = function () {
+        clickToRead = !clickToRead;
+        store('clickRead', clickToRead ? '1' : '0');
+        applyClickMode();
+        if (!isOn) say(hint());
+    };
+
+    function attachClicks() {
+        readableNodes().forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                if (!clickToRead) return;
+                if (e.target.closest('a')) return;
+                if (window.getSelection && String(window.getSelection()).length) return;
+                build();
+                var i = -1;
+                for (var k = 0; k < chunks.length; k++) if (chunks[k].el === el) { i = k; break; }
+                if (i >= 0) startFrom(i);
+            });
+        });
+        applyClickMode();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            if (isOn && !paused) {
+                autoPaused = true; token++; stopWatchdog(); synth.cancel();
+            }
+        } else if (autoPaused) {
+            autoPaused = false; token++;
+            setBtn('⏸ השהה', true);
+            say('מקריא...');
+            speak();
+            setTimeout(function () {
+                if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+                    token++; stopWatchdog(); synth.cancel();
+                    paused = true;
+                    setBtn('▶ המשך', false);
+                    say('ההקראה הופסקה כשהמסך ננעל — הקש ▶ המשך');
+                }
+            }, 1000);
+        } else if (isOn && !paused && !synth.speaking && !synth.pending && !synth.paused) {
+            token++; speak();
+        }
+    });
+
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) { token++; stopWatchdog(); synth.cancel(); reset(true); }
+    });
+    window.addEventListener('pagehide', function () { token++; stopWatchdog(); synth.cancel(); });
+
+    var FS_MIN = 0.85, FS_MAX = 1.75, FS_STEP = 0.15, fontScale = 1;
+
+    function applyFontScale() {
+        document.documentElement.style.setProperty('--fs', String(fontScale));
+        var out = document.getElementById('fontScaleValue');
+        if (out) out.textContent = Math.round(fontScale * 100) + '%';
+        var dec = document.getElementById('fontSmaller'), inc = document.getElementById('fontBigger');
+        if (dec) dec.disabled = fontScale <= FS_MIN + 0.001;
+        if (inc) inc.disabled = fontScale >= FS_MAX - 0.001;
+    }
+
+    window.setFontScale = function (dir) {
+        fontScale = Math.min(FS_MAX, Math.max(FS_MIN, +(fontScale + dir * FS_STEP).toFixed(2)));
+        store('fs', String(fontScale));
+        applyFontScale();
+    };
+
+    function init() {
+        clickToRead = store('clickRead') !== '0';
+        attachClicks();
+        var savedRate = parseFloat(store('rate') || '1');
+        if (savedRate >= 0.5 && savedRate <= 2) rate = savedRate;
+        if ($rate) { $rate.value = rate; $rate.setAttribute('aria-valuetext', 'מהירות ' + rate.toFixed(1)); }
+        if ($rateVal) $rateVal.textContent = rate.toFixed(1) + '×';
+        var savedFs = parseFloat(store('fs') || '1');
+        if (savedFs >= FS_MIN && savedFs <= FS_MAX) fontScale = savedFs;
+        applyFontScale();
+        if (readPos() > 0) say('יש סימנייה שמורה — לחיצה על "האזן" תמשיך מהמקום שבו הפסקת');
+        else say(hint());
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+})();
+</script>
+
+<script data-audio-cues="" type="application/json">{"01":[0.1,2.25,4.45,6.15,11.08,16.1,19.55,24.41,27.78,60.29,74.03,75.64,79.22,83.05,85.94,88.33,103.11,107.36,110.88,115.18,120.76,122.36,139.78,166.93,193.32,231.02,273.67,298.34,314.4,330.99,391.64,395.48,443.1,447.18,487.75,489.99,491.69,497.05,501.31,505.13,509.29,513.49,518.3,534.29,535.91,539.66,541.86,546.84,550.85,554.89,558.73,563.28,566.74,571.11,575.81,580.78,582.53,623.89,647.84,696.41,713.73,751.77,768.24,804.57,830.47,881.32,902.54,951.33,955.02,956.84,962.35,968.44,972.35,977.07,982.47,1033.94,1035.6,1042.16,1046.44,1056.41,1060.36,1066.9,1072.1,1075.34,1078.67,1084.71,1092.55,1103.11,1106.91,1111.55,1115.21,1120.1,1121.7,1151.19,1174.9,1204.76,1231.8,1273.29,1300.22,1328.81,1354.3,1366.8,1402.02,1429.55,1449.92,1470.01,1481.32,1515.99,1519.99,1521.84,1527.39,1531.67,1535.12,1539.32,1556.63,1558.24,1565.33,1572.52,1578.31,1584.54,1590.02,1599.17,1608.92,1613.58,1617.56,1623.36,1629.72,1631.32,1667.36,1684.04,1707.44,1742.51,1766.26,1832.8,1850.36,1869.2,1888.92,1915.86,1938.68,1941.83,2004.16,2007.91,2009.61,2012.67,2015.95,2020.63,2025.25,2051.02,2052.68,2059.25,2062.55,2069.09,2079.24,2085.2,2094.85,2096.45,2120.09,2139.75,2161.93,2189.72,2208.39,2229.92,2233.25,2234.92,2238.73,2242.4,2244.03,2248.6,2253.67,2255.4,2299.3,2350.23,2354.29,2355.94,2359.78,2364.9,2369.2,2374.05,2427.62,2429.23,2432.99,2438.84,2443.37,2448.65,2455.91,2460.13,2467.48,2472.68,2481.83,2485.68,2487.28,2540.08,2585.46,2621.19,2653.44,2676.95,2717.89,2742.11,2762.74,2780.28]}</script><script data-audio-player="">
+/* =============================================================================
+   audio-player.js — נגן ההקלטה (MP3 שהופק מראש ב-edge-tts)
+   הדבק מילה במילה. נפרד לגמרי מ-tts.js (ההקראה החיה של הדפדפן).
+   ============================================================================= */
+(function () {
+    var box = document.querySelector('.audio-player');
+    if (!box) return;
+
+    var audio  = box.querySelector('audio');
+    var select = box.querySelector('.audio-chapter-select');
+    if (!audio || !select) return;
+
+    var KEY = 'koltoda.audio.ch.' + (document.title || '');
+
+    /* מפת תזמונים: { "01": [0, 3.2, 9.7, ...] } — זמן תחילת כל פסקה בקטע.
+       נוצרת ב-make-audio.mjs מקובצי ה-SRT של edge-tts. */
+    var CUES = {};
+    var tag = document.querySelector('script[data-audio-cues]');
+    if (tag) { try { CUES = JSON.parse(tag.textContent || '{}'); } catch (e) {} }
+
+    var seg = null;      // מזהה הקטע הפעיל, למשל "01"
+    var line = -1;       // אינדקס הפסקה המודגשת
+
+    /* ---------- הדגשה ---------- */
+    function clearHighlight() {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev) prev.classList.remove('reading-highlight');
+        line = -1;
+    }
+
+    function highlight(el) {
+        var prev = document.querySelector('.reading-highlight');
+        if (prev === el) return;
+        if (prev) prev.classList.remove('reading-highlight');
+        if (!el) return;
+        el.classList.add('reading-highlight');
+
+        /* בספר מתחלף — מדפדפים לעמוד של הפסקה, כמו בהקראה החיה */
+        var pg = el.closest ? el.closest('.page') : null;
+        if (pg && !pg.classList.contains('active') && window.bookGo) {
+            var pages = [].slice.call(document.querySelectorAll('#book .page'));
+            var i = pages.indexOf(pg);
+            if (i > -1) { window.bookGo(i); return; }
+        }
+
+        /* גוללים רק אם הפסקה מחוץ למסך, כדי לא לחטוף את הדף מהקורא */
+        var r = el.getBoundingClientRect ? el.getBoundingClientRect() : null;
+        var h = window.innerHeight || 800;
+        if (!r || r.top < 60 || r.bottom > h - 60) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    /* איזו פסקה נאמרת עכשיו — האחרונה שזמן ההתחלה שלה כבר עבר */
+    function lineAt(starts, t) {
+        var lo = 0, hi = starts.length - 1, ans = 0;
+        while (lo <= hi) {
+            var mid = (lo + hi) >> 1;
+            if (starts[mid] <= t) { ans = mid; lo = mid + 1; } else { hi = mid - 1; }
+        }
+        return ans;
+    }
+
+    audio.addEventListener('timeupdate', function () {
+        var starts = CUES[seg];
+        if (!starts || !starts.length) return;
+        var i = lineAt(starts, audio.currentTime);
+        if (i === line) return;
+        line = i;
+        var el = document.querySelector('[data-a="' + seg + '-' + i + '"]');
+        if (el) highlight(el);
+    });
+
+    /* ---------- קבצים שנבחרו מהמחשב ----------
+       דפדפן לא יכול לקרוא נתיב מקומי מעצמו (תיקיית ההורדות חסומה לו), אבל
+       קובץ שהמשתמש בוחר בעצמו מותר. ממפים לפי שם הקובץ, כך שאפשר לבחור את
+       כל פרקי הספר בבת אחת. ההדגשה עובדת גם ככה — התזמונים כבר בדף. */
+    var picked = {};
+    var note   = box.querySelector('.audio-note');
+    var input  = box.querySelector('.audio-pick-input');
+    var pickBtn = box.querySelector('.audio-pick-btn');
+
+    function say(msg) { if (note) note.textContent = msg || ''; }
+
+    /* קישור הורדה שלא מולא עדיין מוסתר מהקורא — אין טעם ב"לחץ כאן" מת.
+       הבדיקה היא על ה-href עצמו, כך שברגע שמדביקים כתובת הוא מופיע לבד. */
+    var dl = box.querySelector('.audio-download');
+    if (dl && (dl.getAttribute('href') || '#') === '#') dl.style.display = 'none';
+
+    function baseName(u) {
+        try { u = decodeURIComponent(u); } catch (e) {}
+        return u.split('/').pop();
+    }
+
+    function srcFor(opt) {
+        return picked[baseName(opt.value)] || opt.value;
+    }
+
+    if (pickBtn && input) {
+        pickBtn.addEventListener('click', function () { input.click(); });
+        input.addEventListener('change', function () {
+            var files = [].slice.call(input.files || []);
+            if (!files.length) return;
+            var names = {};
+            for (var i = 0; i < select.options.length; i++) names[baseName(select.options[i].value)] = true;
+
+            var matched = 0, spare = [];
+            files.forEach(function (f) {
+                if (names[f.name]) { picked[f.name] = URL.createObjectURL(f); matched++; }
+                else spare.push(f);
+            });
+            /* קובץ יחיד בשם אחר — מניחים שהוא של הפרק המוצג */
+            if (!matched && spare.length === 1) {
+                picked[baseName(select.options[select.selectedIndex].value)] = URL.createObjectURL(spare[0]);
+                matched = 1;
+            }
+            say(matched ? 'נטענו ' + matched + ' קבצים מהמחשב.' : 'שמות הקבצים לא תואמים לפרקים.');
+            if (matched) load(select.selectedIndex, true);
+        });
+    }
+
+    /* הקובץ לא נמצא בנתיב היחסי — מכוונים להורדה ולבחירה ידנית */
+    audio.addEventListener('error', function () {
+        if (!audio.getAttribute('src')) return;
+        say('קובץ השמע לא נמצא לצד הדף. הורד אותו ואז בחר אותו כאן.');
+    });
+
+    /* ---------- ניווט בין פרקים ---------- */
+    function load(i, autoplay) {
+        var opt = select.options[i];
+        if (!opt) return;
+        select.selectedIndex = i;
+        seg = opt.getAttribute('data-seg');
+        clearHighlight();
+        audio.src = srcFor(opt);
+        try { localStorage.setItem(KEY, String(i)); } catch (e) {}
+        if (autoplay) {
+            var p = audio.play();
+            /* דפדפן שחוסם ניגון אוטומטי זורק — לא נשאיר Promise תלוי */
+            if (p && p.catch) p.catch(function () {});
+        }
+    }
+
+    select.addEventListener('change', function () { load(select.selectedIndex, true); });
+
+    /* סיום פרק — מנקה הדגשה וממשיך לבא אחריו מעצמו, כמו בהקראה החיה.
+       (השהיה לעומת זאת משאירה את ההדגשה — היא מסמנת איפה עצרנו.) */
+    audio.addEventListener('ended', function () {
+        clearHighlight();
+        if (select.selectedIndex < select.options.length - 1) {
+            load(select.selectedIndex + 1, true);
+        } else {
+            try { localStorage.removeItem(KEY); } catch (e) {}
+        }
+    });
+
+    /* חוזרים לפרק שבו עצרנו — בלי לנגן מעצמו */
+    var saved = 0;
+    try { saved = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (e) {}
+    if (saved < 0 || saved >= select.options.length) saved = 0;
+    load(saved, false);
+})();
+
+</script></body>
+</html>
