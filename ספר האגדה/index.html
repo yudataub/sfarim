@@ -76980,13 +76980,48 @@ function getSnippet(text, hit) {
        + (end < text.length ? '...' : '');
 }
 
+// The cards are drawn only near the screen (content-visibility, 313px guessed for each card not drawn yet) and the
+// page's CSS makes every scroll smooth, so a long scroll chased a moving target and stopped thousands of pixels
+// short (19.10: the search result, a story in the contents and a shared #story link all landed elsewhere).
+// Jump instantly, and jump again for a second and a half while the cards around it are drawn; scrolling stops it.
+function goToCard(el) {
+  let tries = 0;
+  const stop = () => { tries = 99; };
+  addEventListener('wheel', stop, {once: true, passive: true});
+  addEventListener('touchstart', stop, {once: true, passive: true});
+  addEventListener('keydown', stop, {once: true});
+  const settle = () => {
+    if (tries++ > 15) return;
+    el.scrollIntoView({block: 'start', behavior: 'instant'});
+    setTimeout(settle, 100);
+  };
+  settle();
+}
+
+// a link to a story inside the page (the contents, "הבא", "הקודם") goes through goToCard too
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href^="#story-"]');
+  if (!a || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  const el = document.getElementById(a.getAttribute('href').slice(1));
+  if (!el) return;
+  e.preventDefault();
+  history.pushState(null, '', a.getAttribute('href'));
+  goToCard(el);
+  revealInToc(tocChapterFor(el.id), false);
+});
+// a shared link to a story (…/#story-36): the browser's own jump on load lands short as well
+addEventListener('load', () => {
+  const id = location.hash.slice(1);
+  if (id.startsWith('story-') && document.getElementById(id)) goToCard(document.getElementById(id));
+});
+
 function jumpTo(id) {
   document.getElementById('searchResults').style.display = 'none';
   document.getElementById('searchBox').value = '';
   const el = document.getElementById(id);
   if (!el) return;
   el.querySelectorAll('.reference-details').forEach(d => { d.open = true; });
-  el.scrollIntoView({behavior:'smooth', block:'start'});
+  goToCard(el);
   el.classList.add('highlight-story');
   setTimeout(() => el.classList.remove('highlight-story'), 2200);
   // Open the sage's chapter alongside, so the reader lands on their story and
