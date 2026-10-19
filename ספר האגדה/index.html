@@ -76834,30 +76834,48 @@ const NIKUD = /[֑-ׇ]/;
 // dropped from both sides, which brings the two spellings together.
 const MATRES = /[וי]/;
 
+// A word-final ה and ת are one letter in the loose spelling: the construct form (עֲקֵדַת יִצְחָק) is the same word
+// as the plain one (עקידה), as שמחת is שמחה (19.10).
+const FINAL_HT = /[הת]/;
+const HEB = /[\u05d0-\u05ea]/;
 function fold(text, loose) {
   let plain = '';
   const map = [];
   for (let i = 0; i < text.length; i++) {
-    const ch = text[i];
+    let ch = text[i];
     if (NIKUD.test(ch)) continue;
     if (loose && MATRES.test(ch)) continue;
+    if (loose && FINAL_HT.test(ch)) {
+      let j = i + 1;
+      while (j < text.length && NIKUD.test(text[j])) j++;
+      if (j >= text.length || !HEB.test(text[j])) ch = 'ה';
+    }
     plain += ch; map.push(i);
   }
   map.push(text.length);
   return { plain, map };
 }
 
+// Each text is folded once (both spellings) and kept: the search reads every story on every key, 4.7M characters.
+const FOLDED = [new Map(), new Map()];
+function foldedPlain(text, loose) {
+  const m = FOLDED[loose ? 1 : 0];
+  let p = m.get(text);
+  if (p === undefined) { p = fold(text, loose).plain; m.set(text, p); }
+  return p;
+}
+
 function findFolded(text, query, loose) {
-  const f = fold(text, loose);
-  const i = f.plain.indexOf(query);
+  const i = foldedPlain(text, loose).indexOf(query);
   if (i < 0) return null;
+  const f = fold(text, loose);   // the position map only for a match, to mark it
   return { start: f.map[i], end: f.map[i + query.length] };
 }
 
 // The loose spelling of the query, used only as a second chance: on its own it
 // is too blunt a key to search by.
 function looseQuery(query) {
-  const bare = query.replace(/[וי]/g, '');
+  const bare = query.replace(/[וי]/g, '').replace(/[הת](?=[^\u05d0-\u05ea]|$)/g, 'ה');
   return bare.length >= 3 ? bare : null;
 }
 function matchIn(text, query, loose) {
@@ -76909,13 +76927,21 @@ function doSearch(raw) {
     .filter(s => s.hit)
     .slice(0, 3);
 
+  // every story is checked; a story whose title matches comes before one that only mentions the word (19.10)
+  // the book writes ר' for רבי (רַ' עֲקִיבָא): "רבי עקיבא" looks for that too
+  const alt = query.replace(/(^|\s)רבי(?=\s)/g, "$1ר'"), altLoose = alt !== query ? looseQuery(alt) : null;
+  const find = t => matchIn(t, query, loose) || (alt !== query ? matchIn(t, alt, altLoose) : null);
   const hits = [];
   for (const d of searchData) {
-    const inTitle = matchIn(d.title, query, loose);
-    const inBody = matchIn(d.body, query, loose);
-    if (inTitle || inBody) hits.push({ d, inTitle, inBody });
-    if (hits.length >= 20) break;
+    const inTitle = find(d.title);
+    const inBody = find(d.body);
+    if (inTitle || inBody) hits.push({ d, inTitle, inBody, exact: !!(inTitle && (findFolded(d.title, query) || (alt !== query && findFolded(d.title, alt)))) });
   }
+  // the title spelled as typed, then the title in the other spelling, then the text; the introduction and the
+  // notes mention everything: after the stories
+  const tier = h => (h.exact ? 0 : h.inTitle ? 1 : 3) + (/^(הערות וביאורים|פתיחה)/.test(h.d.title) ? 1 : 0);
+  hits.sort((a, b) => tier(a) - tier(b));
+  hits.splice(20);
 
   if (!sages.length && !hits.length) {
     box.innerHTML = '<div class="sr-item">לא נמצאו תוצאות</div>';
