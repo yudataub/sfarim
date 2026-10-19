@@ -77322,5 +77322,163 @@ window.addEventListener('afterprint',()=>{printDisclosures.forEach(d=>d.open=fal
 
 </script>
 <div class="kt-archive" style="direction:rtl;max-width:900px;margin:32px auto 18px;padding:16px 20px;border-radius:14px;background:linear-gradient(135deg,#eef2ff,#fef3c7);border:1px solid #c7d2fe;font:16px/1.7 Heebo,Arial,sans-serif;color:#1f2937;text-align:center">📚 עוד חומרי לימוד על גדולי ישראל וסיפורי חז״ל – חינם, במאגר הקול החמישי: <a href="https://www.kol-toda.co.il/gedolim/" style="color:#4338ca;font-weight:700">www.kol-toda.co.il/gedolim</a><br>המאגר המלא: <a href="https://www.kol-toda.co.il/" style="color:#4338ca;font-weight:700">www.kol-toda.co.il</a></div>
+<script id="kt-search-fix">
+/* kt-search-fix v1 (19.10.2026) – the search and the jump to a story, for every story book on the storybook template.
+ * Added at the end of the page by apply_search_fix.py; it replaces the page's doSearch and wraps its jumpTo.
+ *  - Vowel marks never matter. The loose spelling (the default) also drops ו/י, folds a word-final ה/ת into one
+ *    letter (עקידה finds עֲקֵדַת יִצְחָק, אהבה finds אהבת תורה) and reads "רבי" as "ר'" too.
+ *  - "חיפוש מדויק" (a box under the search, remembered in this browser): only the letters as typed.
+ *  - Every story is checked; the title spelled as typed comes first, then the title in the other spelling, then the
+ *    text; the introduction and the notes last. The list shows 20.
+ *  - Reaching a story lands on it: the cards are drawn only near the screen and the page scrolls smoothly, so a long
+ *    scroll stopped thousands of pixels short. An instant jump, repeated for 1.5s while the cards around it are drawn
+ *    (scrolling by hand stops it) – for a search result, a link in the contents and a shared #story link. */
+(function () {
+  if (typeof searchData === 'undefined' || !Array.isArray(searchData) || !document.getElementById('searchBox')) return;
+  var NK = /[֑-ׇ]/, NKG = /[֑-ׇ]/g, HEB = /[א-ת]/, MATRES = /[וי]/, HT = /[הת]/;
+
+  function fold(text, loose) {
+    var plain = '', map = [];
+    for (var i = 0; i < text.length; i++) {
+      var ch = text[i];
+      if (NK.test(ch)) continue;
+      if (loose && MATRES.test(ch)) continue;
+      if (loose && HT.test(ch)) {
+        var j = i + 1;
+        while (j < text.length && NK.test(text[j])) j++;
+        if (j >= text.length || !HEB.test(text[j])) ch = 'ה';
+      }
+      plain += ch; map.push(i);
+    }
+    map.push(text.length);
+    return { plain: plain, map: map };
+  }
+  var cache = [new Map(), new Map()];
+  function plainOf(text, loose) {
+    var m = cache[loose ? 1 : 0], p = m.get(text);
+    if (p === undefined) { p = fold(text, loose).plain; m.set(text, p); }
+    return p;
+  }
+  function find(text, q, loose) {
+    if (!q || !text) return null;
+    var i = plainOf(text, loose).indexOf(q);
+    if (i < 0) return null;
+    var f = fold(text, loose);
+    return { start: f.map[i], end: f.map[i + q.length] };
+  }
+  function looseOf(q) {
+    var b = q.replace(/[וי]/g, '').replace(/[הת](?=[^א-ת]|$)/g, 'ה');
+    return b.length >= 3 ? b : null;
+  }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function mark(text, hit) {
+    if (!hit) return esc(text);
+    return esc(text.slice(0, hit.start)) + '<mark>' + esc(text.slice(hit.start, hit.end)) + '</mark>' + esc(text.slice(hit.end));
+  }
+  function snippet(text, hit) {
+    if (!hit) return esc(text.slice(0, 80)) + '...';
+    var s = Math.max(0, hit.start - 30), e = Math.min(text.length, hit.end + 50);
+    return (s > 0 ? '...' : '') + esc(text.slice(s, hit.start)) + '<mark>' + esc(text.slice(hit.start, hit.end)) + '</mark>'
+      + esc(text.slice(hit.end, e)) + (e < text.length ? '...' : '');
+  }
+
+  // the exact-search box, under the search field
+  var exact = false;
+  try { exact = localStorage.getItem('kt-exact-search') === '1'; } catch (e) {}
+  var input = document.getElementById('searchBox');
+  var wrap = input.closest('.search-wrap') || input.parentElement;
+  var lab = document.createElement('label');
+  lab.className = 'kt-exact';
+  lab.innerHTML = '<input type="checkbox"' + (exact ? ' checked' : '') + '> חיפוש מדויק (רק האותיות שהוקלדו)';
+  lab.style.cssText = 'display:flex;align-items:center;gap:.4rem;font-size:.82rem;margin:-.5rem .2rem .9rem;cursor:pointer;color:inherit;opacity:.85;user-select:none';
+  wrap.parentNode.insertBefore(lab, wrap.nextSibling);
+  lab.querySelector('input').addEventListener('change', function (e) {
+    exact = e.target.checked;
+    try { localStorage.setItem('kt-exact-search', exact ? '1' : '0'); } catch (err) {}
+    if (input.value.trim().length >= 2) window.doSearch(input.value);
+    input.focus();
+  });
+
+  var V = (typeof VOCAB !== 'undefined' && VOCAB) || {};
+  window.doSearch = function (raw) {
+    var box = document.getElementById('searchResults');
+    var q = String(raw || '').trim().replace(NKG, '');
+    if (q.length < 2) { box.style.display = 'none'; return; }
+    var alt = exact ? q : q.replace(/(^|\s)רבי(?=\s)/g, "$1ר'");
+    var l = exact ? null : looseOf(q), altL = (!exact && alt !== q) ? looseOf(alt) : null;
+    function strict(t) { return find(t, q, false) || (alt !== q ? find(t, alt, false) : null); }
+    function any(t) { return strict(t) || (l ? find(t, l, true) : null) || (altL ? find(t, altL, true) : null); }
+    var sages = [];
+    if (typeof sageChapters === 'function') {
+      try {
+        sages = sageChapters().map(function (c) { return { c: c, hit: any(c.name) }; }).filter(function (s) { return s.hit; }).slice(0, 3);
+      } catch (e) { sages = []; }
+    }
+    var hits = [];
+    for (var i = 0; i < searchData.length; i++) {
+      var d = searchData[i];
+      var inTitle = any(d.title), inBody = any(d.body);
+      if (inTitle || inBody) hits.push({ d: d, inTitle: inTitle, inBody: inBody, ex: !!(inTitle && strict(d.title)), n: i });
+    }
+    function tier(h) { return (h.ex ? 0 : h.inTitle ? 1 : 3) + (/^(הערות וביאורים|פתיחה)/.test(h.d.title) ? 1 : 0); }
+    hits.sort(function (a, b) { return tier(a) - tier(b) || a.n - b.n; });
+    hits = hits.slice(0, 20);
+    if (!sages.length && !hits.length) {
+      box.innerHTML = '<div class="sr-item">לא נמצאו תוצאות' + (exact ? ' – נסו בלי "חיפוש מדויק"' : '') + '</div>';
+      box.style.display = 'block';
+      return;
+    }
+    box.innerHTML = sages.map(function (s) {
+      return '<div class="sr-item sr-chapter" onclick="openChapterInToc(\'' + s.c.href + '\')"><strong>📚 ' + mark(s.c.name, s.hit)
+        + '</strong> — ' + (s.c.count === 1 ? (V.one || 'סיפור אחד') : s.c.count + ' ' + (V.plural || 'סיפורים'))
+        + '<br><small>' + (V.openPrompt || '') + '</small></div>';
+    }).join('') + hits.map(function (h) {
+      return '<div class="sr-item" onclick="jumpTo(\'' + h.d.id + '\')"><strong>' + mark(h.d.title, h.inTitle)
+        + '</strong><br><small>' + snippet(h.d.body, h.inBody) + '</small></div>';
+    }).join('');
+    box.style.display = 'block';
+  };
+
+  // reaching a story lands on it
+  function goToCard(el) {
+    var tries = 0;
+    function stop() { tries = 99; }
+    addEventListener('wheel', stop, { once: true, passive: true });
+    addEventListener('touchstart', stop, { once: true, passive: true });
+    addEventListener('keydown', stop, { once: true });
+    (function settle() {
+      if (tries++ > 15) return;
+      el.scrollIntoView({ block: 'start', behavior: 'instant' });
+      setTimeout(settle, 100);
+    })();
+  }
+  if (typeof window.jumpTo === 'function') {
+    var orig = window.jumpTo;
+    window.jumpTo = function (id) {
+      orig(id);
+      var el = document.getElementById(id);
+      if (el) goToCard(el);
+    };
+  }
+  if (typeof window.goToCard !== 'function') {   // a page patched before (Sefer HaAggadah) already does this
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#story-"]');
+      if (!a || e.ctrlKey || e.metaKey || e.shiftKey) return;
+      var el = document.getElementById(a.getAttribute('href').slice(1));
+      if (!el) return;
+      e.preventDefault();
+      history.pushState(null, '', a.getAttribute('href'));
+      goToCard(el);
+      if (typeof revealInToc === 'function' && typeof tocChapterFor === 'function') {
+        try { revealInToc(tocChapterFor(el.id), false); } catch (err) {}
+      }
+    });
+    addEventListener('load', function () {
+      var id = location.hash.slice(1);
+      if (id.indexOf('story-') === 0 && document.getElementById(id)) goToCard(document.getElementById(id));
+    });
+  }
+})();
+</script>
 </body>
 </html>
